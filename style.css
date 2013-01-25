@@ -278,7 +278,7 @@ textarea {
 #top-nav a{
     display: block;
     padding: 6px 20px;
-    background: #022538;
+    background: #000000;
     background-color: rgba(8,32,50,0.85);
     background: -webkit-gradient(linear, 0 0, 0 90%, from(rgba(12,46,65,0.7)), to(rgba(0,35,54,0.9)));
     border: 1px solid #3A4D5B;
