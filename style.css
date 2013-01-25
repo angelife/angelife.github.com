@@ -279,9 +279,9 @@ textarea {
     display: block;
     padding: 6px 20px;
     background: #000000;
-    background-color: #000666;
-    background: -webkit-gradient(linear, 0 0, 0 90%,rom(#000000), to(#000309) ;
-    border: 1px solid #3A4D5B;
+    background-color: #202020;
+    background: -webkit-gradient(linear, 0 0, 0 90%,rom(#000000), to(#202020) ;
+    border: 1px solid #202020;
     border: 1px solid rgba(255,255,255,0.2);
     border-radius: 1px;
     -moz-border-radius: 1px;
