@@ -296,8 +296,8 @@ textarea {
 
 #top-nav a:hover, #top-nav a:focus {
     color: #f3f3f3;
-    border-color: rgba(255,255,255,0.35);
-    background: -webkit-gradient(linear, 0 0, 0 95%, from(rgba(20,56,76,0.8)), to(rgba(0,40,60,1)));
+    border-color:#202020;
+    background: -webkit-gradient(linear, 0 0, 0 95%, from(#000000), to(#202020);
     box-shadow: 0 1px 0px rgba(10,10,0,0.6);
     -webkit-box-shadow: 0 1px 0px rgba(10,10,0,0.6);
     -moz-box-shadow: 0 1px 0px rgba(10,10,0,0.6);
