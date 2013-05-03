@@ -1,8 +1,8 @@
 html {
     color: #cad3d6;
     min-height: 100%;
-    background: -webkit-gradient(linear , 0 100, 0 98%, from(#000000), to(#202020) );
-    background-color: #202;
+    background: -webkit-gradient(linear , 0 100, 0 98%, from(#163346), to(#000309) );
+    background-color: #123;
     padding: 0;
     margin: 0;
 }
@@ -196,8 +196,8 @@ textarea {
     border-radius: 0 0 1px 1px;
     -moz-border-radius: 0 0 1px 1px;
     color: #999;
-    background: #202020;
-    background: #202020;
+    background: #0C1F2C;
+    background: rgba(10,30,40,0.85);
     padding: 12px;
     box-shadow: 0 1px 8px #000;
     -webkit-box-shadow: 0 1px 8px #000;
@@ -278,10 +278,10 @@ textarea {
 #top-nav a{
     display: block;
     padding: 6px 20px;
-    background: #000000;
-    background-color: #202020;
-    background: -webkit-gradient(linear, 0 0, 0 90%,rom(#000000), to(#202020) ;
-    border: 1px solid #202020;
+    background: #022538;
+    background-color: rgba(8,32,50,0.85);
+    background: -webkit-gradient(linear, 0 0, 0 90%, from(rgba(12,46,65,0.7)), to(rgba(0,35,54,0.9)));
+    border: 1px solid #3A4D5B;
     border: 1px solid rgba(255,255,255,0.2);
     border-radius: 1px;
     -moz-border-radius: 1px;
@@ -296,8 +296,8 @@ textarea {
 
 #top-nav a:hover, #top-nav a:focus {
     color: #f3f3f3;
-    border-color:#202020;
-    background: -webkit-gradient(linear, 0 0, 0 95%, from(#000000), to(#202020);
+    border-color: rgba(255,255,255,0.35);
+    background: -webkit-gradient(linear, 0 0, 0 95%, from(rgba(20,56,76,0.8)), to(rgba(0,40,60,1)));
     box-shadow: 0 1px 0px rgba(10,10,0,0.6);
     -webkit-box-shadow: 0 1px 0px rgba(10,10,0,0.6);
     -moz-box-shadow: 0 1px 0px rgba(10,10,0,0.6);
