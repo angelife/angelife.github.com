@@ -45,7 +45,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     font-size: 1.7em;
     padding-bottom: 0.1em;
-    color: #f37;
+    color: #004444;
     margin-bottom: 0.5em;
     margin-top: 0;
 }
@@ -53,13 +53,13 @@ h2 {
     font-size: 1.52em;
     /*border-bottom: 1px solid #29362E;*/
     /*border-bottom: 1px solid rgba(255,230,0,0.1);*/
-    color: #fd5;
+    color: #003333;
     margin-top: 1em;
 
 }
 h3 {
     font-size: 1.22em;
-    color: #df5;
+    color: #002222;
     width: 80%;
     /*border-bottom: 1px dashed #29362E;*/
     /*border-bottom: 1px dashed  rgba(255,230,0,0.1);*/
@@ -68,13 +68,13 @@ h3 {
 }
 h4 {
     font-size: 1.15em;
-    color: #6d9;
+    color: #001111;
     margin-top: 0.8em;
 
 }
 h5 {
     font-size: 1.05em;
-    color: #e3e3f3;
+    color: #000000;
 
 }
 h6 {
