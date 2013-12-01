@@ -18,17 +18,17 @@ p, ul, li, table {
 }
 
 a {
-    color: #0df;
-    text-decoration: none;
+    color: #00DDFF;
     padding-bottom: 1px;
+    text-decoration: none;
 }
 a:hover {
-    color: #5ef;
+    border-bottom: 1px solid #446688;
+    color: #000000;
     padding-bottom: 0;
-    border-bottom: 1px solid #468;
 }
 a:visited {
-    color: #6ac;
+    color: #EE5C42;
 }
 
 input:focus, a:focus, button:focus {
