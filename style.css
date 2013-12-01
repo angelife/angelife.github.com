@@ -204,10 +204,10 @@ textarea {
 .tocWrap .toggler {
     text-align: center;
     font-size: 12px;
-    background: #F0C81E;
+    background: #000000;
     border-radius: 2px 2px 0 0;
     -moz-border-radius: 2px 2px 0 0;
-    color: #122;
+    color: #FFFFFF;
     position: relative;
     z-index: 101;
     cursor: pointer;
