@@ -104,6 +104,11 @@ img {
     border: none;
 
 }
+img.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 code {
     padding: 2px 4px;
