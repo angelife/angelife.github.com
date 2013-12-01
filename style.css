@@ -18,7 +18,7 @@ p, ul, li, table {
 }
 
 a {
-    color: #00DDFF;
+    color: #EE5C42;
     padding-bottom: 1px;
     text-decoration: none;
 }
@@ -28,7 +28,7 @@ a:hover {
     padding-bottom: 0;
 }
 a:visited {
-    color: #EE5C42;
+    color: #000000;
 }
 
 input:focus, a:focus, button:focus {
@@ -45,7 +45,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     font-size: 1.7em;
     padding-bottom: 0.1em;
-    color: #004444;
+    color: #000000;
     margin-bottom: 0.5em;
     margin-top: 0;
 }
