@@ -19,16 +19,13 @@ p, ul, li, table {
 
 a {
     color: #EE5C42;
-    padding-bottom: 1px;
     text-decoration: none;
 }
 a:hover {
-    border-bottom: 1px solid #446688;
     color: #000000;
-    padding-bottom: 0;
+    text-decoration: underline;
 }
-a:visited {
-    color: #000000;
+
 }
 
 input:focus, a:focus, button:focus {
@@ -53,13 +50,13 @@ h2 {
     font-size: 1.52em;
     /*border-bottom: 1px solid #29362E;*/
     /*border-bottom: 1px solid rgba(255,230,0,0.1);*/
-    color: #003333;
+    color: #000033;
     margin-top: 1em;
 
 }
 h3 {
     font-size: 1.22em;
-    color: #002222;
+    color: #000022;
     width: 80%;
     /*border-bottom: 1px dashed #29362E;*/
     /*border-bottom: 1px dashed  rgba(255,230,0,0.1);*/
@@ -68,7 +65,7 @@ h3 {
 }
 h4 {
     font-size: 1.15em;
-    color: #001111;
+    color: #000011;
     margin-top: 0.8em;
 
 }
