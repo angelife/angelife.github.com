@@ -295,11 +295,13 @@ textarea {
 }
 
 #footer {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-image: none;
     margin-top: 20px;
     text-align: center;
-    border: 5px solid #75143F;
-    border: 5px solid rgba(255,0,80,0.42);
-    border-width: 5px 10px;
 }
 
 #footer p{
