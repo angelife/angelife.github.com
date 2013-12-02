@@ -166,8 +166,8 @@ del {
     opacity: 0.6;
 }
 strong, b {
+    color: #000222;
     font-weight: 600;
-    color: #eef;
 }
 em, i {
     font-family: Candara, "Microsoft Yahei", sans-serif;
