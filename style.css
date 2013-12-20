@@ -346,7 +346,7 @@ iframe {
 
 /*google cse*/
 #cse {
-    position: absolute;
+    position: static;
     right: 10px;
     top: 10px;
     width: 100%;
