@@ -344,4 +344,122 @@ iframe {
     position: relative;
 }
 
+/*google cse*/
+#cse {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 100%;
+}
+#cse .gsc-branding {
+    display: none;
+}
+#cse .gsc-adBlock {
+    display: none;
+}
+#cse td {
+    border: 0;
+}
+#cse .gsc-search-button {
+    display: none;
+}
+div.gsc-clear-button {
+    opacity: 0.6;
+    margin: 0;
+}
+#cse .gsc-control-cse div {
+}
+#cse .gsc-control-cse div.gsc-resultsbox-visible {
+    width: 61.8%;
+    position: absolute;
+    z-index: 300;
+    right: -5px;
+    top: 50px;
+    background: #E3E6E8;
+    background: rgba(255,255,255,0.88);
+    border: 5px solid #125C39;
+    border: 0 solid rgba(0,0,0,0);
+    outline: 5px solid rgba(10,190,30,0.3);
+    color: #222;
+    padding: 15px;
+}
+#cse .gs-result .gs-title, .gs-result .gs-title *{
+    text-decoration: none;
+    background: #fff;
+    padding: 2px 3px;
+    margin-bottom: 2px;
+    color: #369;
+    font-size: 14px;
+}
+#cse .gs-result .gs-title *:hover {
+    color: #fff;
+    background: #246;
+}
+#cse .gsc-resultsHeader {
+    display: none;
+}
+#cse .gsc-results {
+    width: 100%;
+}
+#cse .gsc-result {
+    margin: 0;
+}
+#cse .gs-no-results-result {
+    text-align: center;
+}
+#cse table.gsc-search-box {
+    width: 15em;
+    float: right;
+}
+#cse input.gsc-input {
+    background: #1D3148;
+    background: rgba(140,180,255,0.1);
+    border: 1px solid #134;
+    padding: 4px 5px;
+    color: #eef;
+    outline: 0;
+    width: 12em;
+}
+
+#cse .gs-result b {
+    color: #c30;
+}
+#cse .gs-result .gs-title b {
+    font-weight: bold;
+}
+#cse .gs-result a.gs-visibleUrl, .gs-result .gs-visibleUrl {
+    margin-bottom: 10px;
+}
+#cse .gsc-resultsHeader {
+    border: 0;
+}
+
+#cse .gsc-cursor-box {
+    margin: 10px 0 5px;
+}
+
+#cse .gsc-results .gsc-cursor-box .gsc-cursor-page {
+    padding: 0.2em 0.5em;
+    text-decoration: none;
+    border: 1px solid #e83;
+    color: #a33;
+    background: #ffe;
+}
+#cse .gsc-results .gsc-cursor-box .gsc-cursor-page:hover {
+    background: #ffd;
+}
+#cse .gsc-results .gsc-cursor-box .gsc-cursor-current-page {
+    cursor: default;
+    border: 1px solid #ea9;
+    background: rgba(255,255,255,0.4);
+}
+#cse .gsc-results .gsc-cursor-box .gsc-cursor-current-page:hover {
+    background: rgba(255,255,240,0.2);
+}
+
+#cse input.cesbg {
+    background-repeat: no-repeat;
+    background-position: 5px 50%;
+}
+
 
