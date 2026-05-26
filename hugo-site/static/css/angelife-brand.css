@@ -94,21 +94,26 @@ body.dark {
 }
 
 .home-hero {
-  margin-bottom: 2rem;
-  padding: clamp(2.4rem, 7vw, 5.4rem) 1.5rem clamp(2.2rem, 5vw, 3.8rem);
-  border-bottom: 1px solid var(--al-line);
-  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  max-width: 1240px;
+  min-height: 420px;
+  margin: 1.4rem auto 2rem;
+  padding: clamp(2rem, 4vw, 4rem);
+  border: 1px solid rgba(20, 35, 60, 0.12);
+  border-radius: 24px;
   background-image:
-    linear-gradient(90deg, rgba(247, 244, 236, 0.97), rgba(247, 244, 236, 0.72)),
+    linear-gradient(90deg, rgba(247, 244, 236, 0.94) 0%, rgba(247, 244, 236, 0.82) 42%, rgba(247, 244, 236, 0.28) 100%),
     url("/images/brand/home-hero-wuxing.png");
   background-position: center right;
   background-repeat: no-repeat;
   background-size: cover;
+  box-shadow: 0 16px 42px rgba(15, 30, 55, 0.08);
   text-align: left;
 }
 
 .home-hero-inner {
-  max-width: 760px;
+  max-width: 620px;
   margin: 0;
 }
 
@@ -116,9 +121,9 @@ body.dark {
   margin: 0;
   color: var(--al-ink);
   font-family: "Songti SC", "STSong", "Noto Serif CJK SC", serif;
-  font-size: clamp(3rem, 7vw, 6rem);
+  font-size: clamp(3.2rem, 6vw, 6.8rem);
   font-weight: 700;
-  line-height: 1.08;
+  line-height: 0.95;
 }
 
 .home-hero__subtitle {
@@ -128,7 +133,7 @@ body.dark {
 }
 
 .home-hero p:not(.panel-kicker) {
-  max-width: 660px;
+  max-width: 600px;
   margin: 1.35rem auto 0;
   color: var(--al-muted);
   font-size: clamp(1rem, 1.6vw, 1.18rem);
@@ -159,15 +164,17 @@ body.dark {
 .home-phase-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 1rem;
-  margin-bottom: 3rem;
+  gap: 14px;
+  max-width: 1240px;
+  margin: 2rem auto 3rem;
 }
 
 .home-phase-card {
   display: grid;
+  min-width: 0;
   overflow: hidden;
   border: 1px solid var(--al-line);
-  border-radius: 16px;
+  border-radius: 18px;
   background: #fff;
   box-shadow: 0 12px 32px rgba(15, 30, 55, 0.06);
   transition: transform 160ms ease, box-shadow 160ms ease;
@@ -181,21 +188,22 @@ body.dark {
 .home-phase-card__image {
   display: block;
   width: 100%;
-  height: 170px;
+  height: 190px;
   object-fit: cover;
+  object-position: center;
 }
 
 .home-phase-card__body {
   display: grid;
   gap: 0.45rem;
-  padding: 1rem;
+  padding: 1rem 1.1rem 1.15rem;
   border-top: 3px solid currentColor;
 }
 
 .home-phase-card__body strong {
   font-family: "Songti SC", "STSong", serif;
-  font-size: 1.28rem;
-  line-height: 1.2;
+  font-size: 1.35rem;
+  line-height: 1.25;
 }
 
 .home-phase-card__body span {
@@ -205,14 +213,16 @@ body.dark {
 }
 
 .home-phase-sections {
-  margin-bottom: 3rem;
+  max-width: 1240px;
+  margin: 0 auto 3rem;
 }
 
 .home-system-flow {
   display: grid;
   grid-template-columns: minmax(280px, 0.9fr) 1.1fr;
   gap: 1.5rem;
-  margin-bottom: 3rem;
+  max-width: 1240px;
+  margin: 0 auto 3rem;
   padding: 1.5rem;
   border: 1px solid var(--al-line);
   border-radius: 16px;
@@ -296,11 +306,12 @@ body.dark {
 }
 
 .home-latest-voice {
-  margin-bottom: 3rem;
+  max-width: 1240px;
+  margin: 0 auto 3rem;
 }
 
 .home-latest-voice > p {
-  max-width: 760px;
+  max-width: 900px;
   margin: -0.2rem auto 1.35rem;
   color: var(--al-muted);
   text-align: center;
@@ -348,10 +359,12 @@ body.dark {
 }
 
 .brand-home {
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: clamp(1.25rem, 3vw, 2.5rem) 1.25rem 2.5rem;
+  width: min(1240px, calc(100vw - 2.5rem));
+  max-width: 1240px;
+  margin: 0 0 0 50%;
+  padding: clamp(0.75rem, 2vw, 1.5rem) 1.25rem 2.5rem;
   color: var(--al-ink);
+  transform: translateX(-50%);
 }
 
 .brand-hero {
@@ -653,6 +666,8 @@ body.dark {
 
 @media (max-width: 760px) {
   .brand-home {
+    width: calc(100vw - 1.25rem);
+    margin-left: 50%;
     padding-top: 2.5rem;
   }
 
@@ -706,11 +721,17 @@ body.dark {
   }
 
   .home-hero {
-    padding-top: 2rem;
+    min-height: auto;
+    margin-top: 0.75rem;
+    padding: 2rem 1.25rem;
     background-image:
       linear-gradient(rgba(247, 244, 236, 0.94), rgba(247, 244, 236, 0.94)),
       url("/images/brand/home-hero-wuxing.png");
     background-position: center top;
+  }
+
+  .home-hero h1 {
+    font-size: clamp(2.6rem, 13vw, 4.4rem);
   }
 
   .home-hexagram-note {
@@ -719,7 +740,7 @@ body.dark {
   }
 
   .home-phase-card__image {
-    height: 190px;
+    height: 160px;
   }
 
   .brand-pillars a {
