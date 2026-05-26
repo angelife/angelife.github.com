@@ -87,7 +87,7 @@
   </section>
   {{ end }}
 
-  {{ $latest := where site.RegularPages "Type" "in" (slice "series" "posts") }}
+  {{ $latest := where site.RegularPages "Type" "in" (slice "series" "posts" "projects") }}
   {{ if $latest }}
   <section class="article-section latest-section">
     <div class="section-heading">
@@ -96,7 +96,7 @@
       <span></span>
     </div>
     <div class="latest-list">
-      {{ range first 8 $latest.ByDate.Reverse }}
+      {{ range first 12 $latest.ByDate.Reverse }}
       <a href="{{ .RelPermalink }}">
         <time>{{ .Date.Format "2006-01-02" }}</time>
         <strong>{{ .Title }}</strong>
