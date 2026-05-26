@@ -2,41 +2,26 @@
   --al-ink: #0b1d3a;
   --al-blue: #1e5bff;
   --al-cyan: #0fa3a3;
-  --al-line: rgba(11, 29, 58, 0.18);
-  --al-muted: rgba(11, 29, 58, 0.66);
+  --al-line: #dbe2ec;
+  --al-muted: #5d6b80;
   --al-paper: #fbfcff;
 }
 
-body {
-  --theme: #fbfcff;
-  --entry: #ffffff;
-  --primary: #0b1d3a;
-  --secondary: rgba(11, 29, 58, 0.66);
-  --tertiary: rgba(11, 29, 58, 0.1);
-  --content: #172747;
-  --border: rgba(11, 29, 58, 0.14);
-  background:
-    radial-gradient(circle at 50% 0, rgba(30, 91, 255, 0.07), transparent 32rem),
-    linear-gradient(180deg, #fff 0%, var(--al-paper) 100%);
-  color: var(--al-ink);
-}
-
+body,
 body.dark {
   --theme: #fbfcff;
   --entry: #ffffff;
   --primary: #0b1d3a;
-  --secondary: rgba(11, 29, 58, 0.66);
-  --tertiary: rgba(11, 29, 58, 0.1);
-  --content: #172747;
-  --border: rgba(11, 29, 58, 0.14);
-  background:
-    radial-gradient(circle at 50% 0, rgba(30, 91, 255, 0.07), transparent 32rem),
-    linear-gradient(180deg, #fff 0%, var(--al-paper) 100%);
+  --secondary: #5d6b80;
+  --tertiary: #eef2f7;
+  --content: #1f2937;
+  --border: #dbe2ec;
+  background: var(--al-paper);
   color: var(--al-ink);
 }
 
 .nav {
-  max-width: 1200px;
+  max-width: 1120px;
 }
 
 .logo-switches {
@@ -48,131 +33,127 @@ body.dark {
   color: var(--al-ink);
 }
 
+#menu {
+  gap: 0.35rem;
+}
+
+#menu a {
+  font-size: 0.92rem;
+}
+
 .brand-home {
-  max-width: 1200px;
+  width: min(1120px, calc(100vw - 2.5rem));
+  max-width: none;
   margin: 0 auto;
-  padding: 4.5rem 1.25rem 2.5rem;
+  padding: clamp(2.5rem, 7vw, 5.25rem) 1.25rem 3rem;
   color: var(--al-ink);
 }
 
 .brand-hero {
   display: grid;
-  grid-template-columns: minmax(210px, 330px) 1px minmax(320px, 1fr);
+  grid-template-columns: minmax(180px, 260px) 1px minmax(0, 1fr);
   align-items: center;
-  gap: clamp(2rem, 5vw, 4.25rem);
-  min-height: 310px;
-}
-
-.brand-mark-wrap {
-  justify-self: end;
+  gap: clamp(1.6rem, 4vw, 3rem);
+  max-width: 860px;
+  margin: 0 auto;
 }
 
 .brand-mark {
   display: block;
-  width: min(30vw, 330px);
-  min-width: 220px;
+  width: min(24vw, 250px);
+  min-width: 170px;
+}
+
+.brand-divider,
+.brand-rule {
+  background: var(--al-line);
 }
 
 .brand-divider {
   width: 1px;
-  height: 210px;
-  background: var(--al-line);
+  height: 220px;
 }
 
 .brand-title-block h1 {
   margin: 0;
   font-family: "Songti SC", "STSong", "Noto Serif CJK SC", serif;
-  font-size: clamp(5rem, 11vw, 10.5rem);
+  font-size: clamp(4.5rem, 9vw, 8.5rem);
   font-weight: 700;
-  line-height: 0.95;
-  letter-spacing: 0;
+  line-height: 0.98;
   color: var(--al-ink);
+  white-space: nowrap;
 }
 
 .brand-subtitle {
   display: flex;
   align-items: center;
-  gap: 1.4rem;
-  margin-top: 1.2rem;
+  gap: 1.1rem;
+  margin-top: 1rem;
+  white-space: nowrap;
 }
 
 .brand-en {
   font-family: Inter, ui-sans-serif, system-ui, sans-serif;
-  font-size: clamp(2.25rem, 4.5vw, 4.3rem);
+  font-size: clamp(2rem, 3.5vw, 3.4rem);
   line-height: 1;
   color: var(--al-ink);
+  white-space: nowrap;
 }
 
 .brand-cn {
   font-family: "Songti SC", "STSong", serif;
-  font-size: clamp(2rem, 3.6vw, 3.4rem);
+  font-size: clamp(1.8rem, 3vw, 2.9rem);
   color: var(--al-cyan);
+  white-space: nowrap;
 }
 
 .brand-rule {
   width: 1px;
-  height: 3.6rem;
-  background: var(--al-line);
+  height: 2.8rem;
 }
 
-.brand-tagline {
-  display: grid;
-  grid-template-columns: minmax(80px, 1fr) auto minmax(80px, 1fr);
-  align-items: center;
-  gap: 1.5rem;
-  max-width: 760px;
-  margin: 1.8rem auto 4.2rem;
+.brand-title-block p {
+  margin: 1.15rem 0 0;
   color: var(--al-muted);
-}
-
-.brand-tagline span,
-.mono-tagline span {
-  height: 1px;
-  background: var(--al-line);
-}
-
-.brand-tagline strong {
-  font-size: clamp(1rem, 2vw, 1.35rem);
-  font-weight: 500;
-  letter-spacing: 0.55em;
-  white-space: nowrap;
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
+  letter-spacing: 0.32em;
 }
 
 .brand-actions {
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  margin: -2.4rem auto 3rem;
+  gap: 0.85rem;
+  margin: 2.2rem 0 3rem;
 }
 
 .brand-actions a {
-  min-width: 7.5rem;
-  padding: 0.78rem 1.2rem;
+  min-width: 8rem;
+  padding: 0.78rem 1.15rem;
   border: 1px solid var(--al-line);
   color: var(--al-ink);
   text-align: center;
+  background: #fff;
   font-size: 0.95rem;
-  background: rgba(255, 255, 255, 0.72);
 }
 
-.brand-actions a:hover {
+.brand-actions a:hover,
+.core-entry-grid a:hover,
+.article-grid a:hover,
+.latest-list a:hover {
   border-color: var(--al-blue);
   color: var(--al-blue);
 }
 
 .site-intro {
-  max-width: 840px;
-  margin: 0 auto 3rem;
-  padding: 1.6rem 2rem;
-  border-top: 1px solid var(--al-line);
-  border-bottom: 1px solid var(--al-line);
+  max-width: 780px;
+  margin: 0 auto 2.6rem;
   text-align: center;
 }
 
 .site-intro p {
   margin: 0;
   color: var(--al-muted);
-  font-size: 1.06rem;
+  font-size: 1.03rem;
   line-height: 1.9;
 }
 
@@ -180,38 +161,32 @@ body.dark {
   margin-top: 0.45rem;
   color: var(--al-ink);
   font-family: "Songti SC", "STSong", serif;
-  font-size: 1.16rem;
+  font-size: 1.12rem;
 }
 
 .core-entry-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  margin-bottom: 3rem;
-  background: var(--al-line);
-  border: 1px solid var(--al-line);
+  gap: 1rem;
+  margin-bottom: 2.8rem;
 }
 
 .core-entry-grid a,
 .article-grid a {
   display: grid;
   gap: 0.65rem;
-  min-height: 150px;
-  padding: 1.45rem;
-  background: rgba(255, 255, 255, 0.82);
-  color: var(--al-ink);
-}
-
-.core-entry-grid a:hover,
-.article-grid a:hover,
-.latest-list a:hover {
+  min-height: 136px;
+  padding: 1.3rem;
+  border: 1px solid var(--al-line);
   background: #fff;
+  color: var(--al-ink);
 }
 
 .core-entry-grid strong,
 .article-grid strong {
   font-family: "Songti SC", "STSong", serif;
-  font-size: 1.5rem;
+  font-size: 1.35rem;
+  line-height: 1.35;
 }
 
 .core-entry-grid span,
@@ -223,12 +198,19 @@ body.dark {
 
 .workflow-panel {
   display: grid;
-  grid-template-columns: minmax(260px, 0.8fr) 1.2fr;
-  gap: 2rem;
-  margin: 0 0 3.2rem;
-  padding: clamp(1.5rem, 3vw, 2.4rem);
+  grid-template-columns: minmax(260px, 0.85fr) 1.15fr;
+  gap: 1.5rem;
+  margin-bottom: 2.8rem;
+  padding: 1.5rem;
   border: 1px solid var(--al-line);
-  background: linear-gradient(135deg, rgba(30, 91, 255, 0.07), rgba(15, 163, 163, 0.06));
+  background: #fff;
+}
+
+.panel-kicker {
+  margin: 0 0 0.8rem;
+  color: var(--al-blue);
+  font-size: 0.88rem;
+  font-weight: 700;
 }
 
 .workflow-panel h2,
@@ -236,18 +218,19 @@ body.dark {
   margin: 0;
   color: var(--al-ink);
   font-family: "Songti SC", "STSong", serif;
-  font-size: clamp(1.8rem, 3.4vw, 3rem);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
   line-height: 1.18;
 }
 
 .workflow-panel p {
+  margin-bottom: 0;
   color: var(--al-muted);
   line-height: 1.8;
 }
 
 .workflow-panel ol {
   display: grid;
-  gap: 0.7rem;
+  gap: 0.55rem;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -255,58 +238,55 @@ body.dark {
 
 .workflow-panel li {
   display: grid;
-  grid-template-columns: 3.2rem 1fr;
+  grid-template-columns: 3rem 1fr;
   align-items: center;
-  gap: 0.9rem;
-  padding: 0.85rem 1rem;
-  border: 1px solid rgba(11, 29, 58, 0.1);
-  background: rgba(255, 255, 255, 0.68);
+  gap: 0.8rem;
+  padding: 0.75rem 0.85rem;
+  border: 1px solid var(--al-line);
   color: var(--al-ink);
 }
 
 .workflow-panel li span {
   display: grid;
   place-items: center;
-  min-width: 2.6rem;
-  height: 2.2rem;
+  height: 2rem;
   color: #fff;
   background: var(--al-ink);
+  font-size: 0.8rem;
   font-weight: 700;
-  font-size: 0.82rem;
 }
 
 .article-section {
-  margin: 0 0 3rem;
+  margin-bottom: 2.8rem;
 }
 
 .section-heading {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  display: flex;
   align-items: center;
-  gap: 1.2rem;
-  margin-bottom: 1.4rem;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
-.section-heading span {
+.section-heading::before,
+.section-heading::after {
+  content: "";
   height: 1px;
+  flex: 1;
   background: var(--al-line);
 }
 
 .article-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 1px;
-  background: var(--al-line);
-  border: 1px solid var(--al-line);
+  gap: 1rem;
 }
 
 .article-grid a {
-  min-height: 180px;
+  min-height: 170px;
 }
 
 .article-grid strong {
-  font-size: 1.18rem;
-  line-height: 1.45;
+  font-size: 1.08rem;
 }
 
 .latest-list {
@@ -318,7 +298,7 @@ body.dark {
   display: grid;
   grid-template-columns: 8rem 1fr;
   gap: 1rem;
-  padding: 0.95rem 0.3rem;
+  padding: 0.9rem 0.2rem;
   border-bottom: 1px solid var(--al-line);
   color: var(--al-ink);
 }
@@ -328,195 +308,17 @@ body.dark {
   font-variant-numeric: tabular-nums;
 }
 
-.brand-system {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr 1.08fr;
-  border-top: 1px solid var(--al-line);
-  border-bottom: 1px solid var(--al-line);
-}
-
-.brand-panel {
-  min-height: 290px;
-  padding: 1.75rem clamp(1.2rem, 2.4vw, 2.8rem);
-  border-right: 1px solid var(--al-line);
-}
-
-.brand-panel:last-child {
-  border-right: 0;
-}
-
-.panel-kicker {
-  margin: 0 0 1.8rem;
-  font-size: 0.92rem;
-  font-weight: 600;
-  color: var(--al-ink);
-}
-
-.icon-stage {
-  display: grid;
-  gap: 1.2rem;
-  justify-items: center;
-}
-
-.app-icon {
-  display: grid;
-  place-items: center;
-  background: #fff;
-  border: 1px solid rgba(11, 29, 58, 0.08);
-  box-shadow: 0 16px 34px rgba(11, 29, 58, 0.13);
-}
-
-.app-icon.large {
-  width: 150px;
-  aspect-ratio: 1;
-  border-radius: 28px;
-}
-
-.app-icon.small,
-.app-icon.mini,
-.app-icon.tiny {
-  border-radius: 12px;
-}
-
-.app-icon.small {
-  width: 62px;
-  aspect-ratio: 1;
-}
-
-.app-icon.mini {
-  width: 46px;
-  aspect-ratio: 1;
-}
-
-.app-icon.tiny {
-  width: 34px;
-  aspect-ratio: 1;
-}
-
-.app-icon img {
-  width: 78%;
-}
-
-.icon-row {
-  display: flex;
-  align-items: end;
-  gap: 2.3rem;
-}
-
-.mono-panel {
-  display: grid;
-  align-content: center;
-}
-
-.mono-lockup {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.4rem;
-  filter: grayscale(1);
-}
-
-.mono-lockup img {
-  width: 150px;
-}
-
-.mono-lockup strong {
-  display: block;
-  font-family: "Songti SC", "STSong", serif;
-  font-size: clamp(3rem, 5vw, 5rem);
-  line-height: 1;
-  color: #222;
-}
-
-.mono-lockup span {
-  display: block;
-  margin-top: 0.6rem;
-  font-size: clamp(1.2rem, 2vw, 2rem);
-  color: #222;
-}
-
-.mono-tagline {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-  gap: 0.9rem;
-  margin-top: 1.2rem;
-  color: var(--al-muted);
-  font-size: 0.92rem;
-  letter-spacing: 0.35em;
-}
-
-.palette {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  padding-bottom: 1.7rem;
-  border-bottom: 1px solid var(--al-line);
-}
-
-.palette span {
-  display: grid;
-  justify-items: center;
-  gap: 0.75rem;
-  text-align: center;
-}
-
-.palette b {
-  width: 66px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: var(--swatch);
-  box-shadow: 0 12px 22px rgba(11, 29, 58, 0.16);
-}
-
-.palette em,
-.type-row em {
-  font-style: normal;
-  color: var(--al-muted);
-  font-size: 0.84rem;
-  line-height: 1.55;
-}
-
-.typography-title {
-  margin-top: 1.7rem;
-}
-
-.type-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.type-row span {
-  display: grid;
-  gap: 0.35rem;
-  padding-right: 1.5rem;
-}
-
-.type-row span + span {
-  border-left: 1px solid var(--al-line);
-  padding-left: 1.5rem;
-}
-
-.type-row strong {
-  font-size: 1.45rem;
-  font-weight: 500;
-}
-
-.type-row span:first-child strong {
-  font-family: "Songti SC", "STSong", serif;
-}
-
 .brand-pillars {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 0;
+  border-top: 1px solid var(--al-line);
   border-bottom: 1px solid var(--al-line);
 }
 
 .brand-pillars a {
   display: grid;
   gap: 0.35rem;
-  padding: 1.8rem 2rem;
+  padding: 1.3rem 1rem;
   border-right: 1px solid var(--al-line);
   color: var(--al-ink);
 }
@@ -526,141 +328,79 @@ body.dark {
 }
 
 .brand-pillars b {
-  font-size: 1.15rem;
+  font-size: 1.02rem;
 }
 
 .brand-pillars span {
   color: var(--al-muted);
-  font-size: 0.86rem;
+  font-size: 0.84rem;
 }
 
-@media (max-width: 880px) {
+@media (max-width: 960px) {
+  .core-entry-grid,
+  .article-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
   .brand-home {
     padding-top: 2.5rem;
   }
 
   .brand-hero {
     grid-template-columns: 1fr;
-    gap: 1.1rem;
+    gap: 1rem;
     text-align: center;
   }
 
-  .brand-mark-wrap {
-    justify-self: center;
+  .brand-mark {
+    width: 180px;
+    min-width: 0;
+    margin: 0 auto;
   }
 
   .brand-divider {
-    width: min(340px, 78vw);
+    width: min(300px, 76vw);
     height: 1px;
-    justify-self: center;
+    margin: 0 auto;
+  }
+
+  .brand-title-block h1 {
+    font-size: 4.2rem;
   }
 
   .brand-subtitle {
     justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .brand-rule {
-    height: 2.2rem;
-  }
-
-  .brand-tagline {
-    margin-top: 1.5rem;
-    margin-bottom: 3.2rem;
-  }
-
-  .brand-tagline strong {
-    letter-spacing: 0.18em;
-  }
-
-  .brand-system {
-    grid-template-columns: 1fr;
-  }
-
-  .core-entry-grid,
-  .workflow-panel,
-  .article-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .article-grid a {
-    min-height: 130px;
-  }
-
-  .brand-panel {
-    border-right: 0;
-    border-bottom: 1px solid var(--al-line);
-  }
-
-  .brand-panel:last-child {
-    border-bottom: 0;
-  }
-
-  .brand-pillars {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .brand-pillars a:nth-child(2n) {
-    border-right: 0;
-  }
-}
-
-@media (max-width: 560px) {
-  .brand-title-block h1 {
-    font-size: 4.4rem;
+    flex-wrap: nowrap;
   }
 
   .brand-en {
-    font-size: 2.15rem;
+    font-size: 2rem;
   }
 
   .brand-cn {
-    font-size: 1.95rem;
+    font-size: 1.85rem;
   }
 
-  .brand-tagline {
-    grid-template-columns: 1fr;
-    gap: 0.9rem;
-    text-align: center;
+  .brand-title-block p {
+    letter-spacing: 0.12em;
   }
 
-  .brand-tagline span {
-    width: min(220px, 64vw);
-    justify-self: center;
-  }
-
-  .brand-actions,
-  .icon-row {
-    gap: 0.75rem;
-  }
-
-  .mono-lockup {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .mono-tagline {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .mono-tagline span {
-    width: min(180px, 55vw);
-    justify-self: center;
-  }
-
-  .palette,
+  .workflow-panel,
+  .core-entry-grid,
+  .article-grid,
   .brand-pillars {
     grid-template-columns: 1fr;
-  }
-
-  .latest-list a {
-    grid-template-columns: 1fr;
-    gap: 0.2rem;
   }
 
   .brand-pillars a {
     border-right: 0;
     border-bottom: 1px solid var(--al-line);
+  }
+
+  .latest-list a {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
   }
 }
