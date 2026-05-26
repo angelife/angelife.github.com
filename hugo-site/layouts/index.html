@@ -3,18 +3,19 @@
   <section class="home-hero" aria-label="site introduction">
     <div class="home-hero-inner">
       <p class="panel-kicker">AI时代的正见与系统化</p>
-      <h1>
-        <span>五行为骨架</span>
-        <span>AI为炉火</span>
-        <span>正见为根基</span>
-        <span>系统而不玄</span>
-      </h1>
-      <p>在信息洪流中保持清醒，在变化时代中守住正见，用 AI 炼化知识，沉淀作品。</p>
+      <h1>决旧局，立乾道</h1>
+      <p class="home-hero__subtitle">以五行为骨架，以 AI 为炉火，以正见为根基，以作品为证。</p>
+      <p>这里记录一个人如何借助 AI 整理旧经验、重建知识系统、辨识信息环境与时代变化，并把散乱经验沉淀为可复用、可更新、可公开检验的长期作品。</p>
       <div class="brand-actions" aria-label="primary link">
         <a href="/about/">了解本站</a>
       </div>
     </div>
   </section>
+
+  <aside class="home-hexagram-note" aria-label="hexagram note">
+    <strong>夬之乾：决断旧局，自强成系。</strong>
+    <span>上六“无号”提醒：系统不能沉默，作品必须持续发声。</span>
+  </aside>
 
   <section class="home-phase-grid" aria-label="five phase sections">
     <a class="home-phase-card phase-metal" href="/series/information-judgment/">
@@ -52,6 +53,23 @@
         <span>承载、秩序、落地、作品</span>
       </div>
     </a>
+  </section>
+
+  <section class="home-system-flow" aria-label="knowledge system flow">
+    <div>
+      <p class="panel-kicker">从旧材料到乾道系统</p>
+      <h2>从旧材料到长期作品</h2>
+      <p>夬，是把旧材料从混乱中切开；乾，是让整理后的系统持续运转。这个网站真正要做的，不是堆文章，而是建立一条能长期出作品的生产线。</p>
+    </div>
+    <ol>
+      <li>旧站 / 聊天 / 读书 / 项目</li>
+      <li>Inbox 收集</li>
+      <li>AI 初炼</li>
+      <li>Obsidian 内库</li>
+      <li>Hugo 外站</li>
+      <li>Git 保存</li>
+      <li>作品持续更新</li>
+    </ol>
   </section>
 
   <section class="home-phase-sections" aria-label="featured by phase">
@@ -134,10 +152,29 @@
     </div>
   </section>
 
+  {{ $latest := where site.RegularPages "Type" "in" (slice "series" "posts" "projects") }}
+  {{ if $latest }}
+  <section class="home-latest-voice" aria-label="latest voice">
+    <div class="section-heading">
+      <span></span>
+      <h2>最新发声</h2>
+      <span></span>
+    </div>
+    <p>这个网站不是一次性作品。它需要持续整理旧材料、持续发布新文章、持续修正判断。只有不断出声、不断成文、不断复盘，旧经验才不会再次散乱。</p>
+    <div class="latest-list">
+      {{ range first 12 $latest.ByDate.Reverse }}
+      <a href="{{ .RelPermalink }}">
+        <time>{{ .Date.Format "2006-01-02" }}</time>
+        <strong>{{ .Title }}</strong>
+      </a>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
   <section class="home-about-card" aria-label="about angelife">
     <h2>关于本站</h2>
     <p>安知生 angelife 是我的长期作品化之路。五行为骨架，AI 为炉火，正见为根基，系统而不玄。</p>
-    <a href="/about/">了解本站</a>
   </section>
 </section>
 {{ end }}
