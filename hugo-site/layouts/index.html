@@ -72,109 +72,111 @@
     </ol>
   </section>
 
-  <section class="home-phase-sections" aria-label="featured by phase">
-    <div class="section-heading">
-      <span></span>
-      <h2>各栏目精选</h2>
-      <span></span>
-    </div>
+  <section class="home-bottom-grid" aria-label="home summary panels">
+    <section class="home-phase-sections" aria-label="featured by phase">
+      <div class="section-heading">
+        <span></span>
+        <h2>各栏目精选</h2>
+        <span></span>
+      </div>
 
-    <div class="home-phase-section-grid">
-      {{ $metalPages := slice }}
-      {{ range site.RegularPages }}
-        {{ if or (hasPrefix .RelPermalink "/series/information-judgment/") (hasPrefix .RelPermalink "/series/anti-populism/") }}
-          {{ $metalPages = $metalPages | append . }}
+      <div class="home-phase-section-grid">
+        {{ $metalPages := slice }}
+        {{ range site.RegularPages }}
+          {{ if or (hasPrefix .RelPermalink "/series/information-judgment/") (hasPrefix .RelPermalink "/series/anti-populism/") }}
+            {{ $metalPages = $metalPages | append . }}
+          {{ end }}
         {{ end }}
-      {{ end }}
-      <section class="home-phase-column phase-metal">
-        <h3>金·判断</h3>
-        {{ range first 3 (sort $metalPages "Date" "desc") }}
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        {{ end }}
-        <a class="home-phase-column__more" href="/series/information-judgment/">查看全部文章</a>
-      </section>
+        <section class="home-phase-column phase-metal">
+          <h3>金·判断</h3>
+          {{ range first 3 (sort $metalPages "Date" "desc") }}
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          {{ end }}
+          <a class="home-phase-column__more" href="/series/information-judgment/">查看全部文章</a>
+        </section>
 
-      {{ $woodPages := slice }}
-      {{ range site.RegularPages }}
-        {{ if hasPrefix .RelPermalink "/series/chan-shi-lu/" }}
-          {{ $woodPages = $woodPages | append . }}
+        {{ $woodPages := slice }}
+        {{ range site.RegularPages }}
+          {{ if hasPrefix .RelPermalink "/series/chan-shi-lu/" }}
+            {{ $woodPages = $woodPages | append . }}
+          {{ end }}
         {{ end }}
-      {{ end }}
-      <section class="home-phase-column phase-wood">
-        <h3>木·蝉识</h3>
-        {{ range first 3 (sort $woodPages "Date" "desc") }}
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        {{ end }}
-        <a class="home-phase-column__more" href="/series/chan-shi-lu/">查看全部文章</a>
-      </section>
+        <section class="home-phase-column phase-wood">
+          <h3>木·蝉识</h3>
+          {{ range first 3 (sort $woodPages "Date" "desc") }}
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          {{ end }}
+          <a class="home-phase-column__more" href="/series/chan-shi-lu/">查看全部文章</a>
+        </section>
 
-      {{ $waterPages := slice }}
-      {{ range site.RegularPages }}
-        {{ if hasPrefix .RelPermalink "/series/yi-notes/" }}
-          {{ $waterPages = $waterPages | append . }}
+        {{ $waterPages := slice }}
+        {{ range site.RegularPages }}
+          {{ if hasPrefix .RelPermalink "/series/yi-notes/" }}
+            {{ $waterPages = $waterPages | append . }}
+          {{ end }}
         {{ end }}
-      {{ end }}
-      <section class="home-phase-column phase-water">
-        <h3>水·易理</h3>
-        {{ range first 3 (sort $waterPages "Date" "desc") }}
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        {{ end }}
-        <a class="home-phase-column__more" href="/series/yi-notes/">查看全部文章</a>
-      </section>
+        <section class="home-phase-column phase-water">
+          <h3>水·易理</h3>
+          {{ range first 3 (sort $waterPages "Date" "desc") }}
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          {{ end }}
+          <a class="home-phase-column__more" href="/series/yi-notes/">查看全部文章</a>
+        </section>
 
-      {{ $firePages := slice }}
-      {{ range site.RegularPages }}
-        {{ if hasPrefix .RelPermalink "/series/ai-bu-yin/" }}
-          {{ $firePages = $firePages | append . }}
+        {{ $firePages := slice }}
+        {{ range site.RegularPages }}
+          {{ if hasPrefix .RelPermalink "/series/ai-bu-yin/" }}
+            {{ $firePages = $firePages | append . }}
+          {{ end }}
         {{ end }}
-      {{ end }}
-      <section class="home-phase-column phase-fire">
-        <h3>火·AI</h3>
-        {{ range first 3 (sort $firePages "Date" "desc") }}
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        {{ end }}
-        <a class="home-phase-column__more" href="/series/ai-bu-yin/">查看全部文章</a>
-      </section>
+        <section class="home-phase-column phase-fire">
+          <h3>火·AI</h3>
+          {{ range first 3 (sort $firePages "Date" "desc") }}
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          {{ end }}
+          <a class="home-phase-column__more" href="/series/ai-bu-yin/">查看全部文章</a>
+        </section>
 
-      {{ $earthPages := slice }}
-      {{ range site.RegularPages }}
-        {{ if or (hasPrefix .RelPermalink "/series/confucian-framework/") (hasPrefix .RelPermalink "/projects/") }}
-          {{ $earthPages = $earthPages | append . }}
+        {{ $earthPages := slice }}
+        {{ range site.RegularPages }}
+          {{ if or (hasPrefix .RelPermalink "/series/confucian-framework/") (hasPrefix .RelPermalink "/projects/") }}
+            {{ $earthPages = $earthPages | append . }}
+          {{ end }}
         {{ end }}
-      {{ end }}
-      <section class="home-phase-column phase-earth">
-        <h3>土·正见</h3>
-        {{ range first 3 (sort $earthPages "Date" "desc") }}
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        <section class="home-phase-column phase-earth">
+          <h3>土·正见</h3>
+          {{ range first 3 (sort $earthPages "Date" "desc") }}
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          {{ end }}
+          <a class="home-phase-column__more" href="/series/confucian-framework/">查看全部文章</a>
+        </section>
+      </div>
+    </section>
+
+    {{ $latest := where site.RegularPages "Type" "in" (slice "series" "posts" "projects") }}
+    {{ if $latest }}
+    <section class="home-latest-voice" aria-label="latest voice">
+      <div class="section-heading">
+        <span></span>
+        <h2>最新发声</h2>
+        <span></span>
+      </div>
+      <p>持续整理旧材料，持续发布新文章，持续修正判断。</p>
+      <div class="latest-list">
+        {{ range first 8 $latest.ByDate.Reverse }}
+        <a href="{{ .RelPermalink }}">
+          <time>{{ .Date.Format "2006-01-02" }}</time>
+          <strong>{{ .Title }}</strong>
+        </a>
         {{ end }}
-        <a class="home-phase-column__more" href="/series/confucian-framework/">查看全部文章</a>
-      </section>
-    </div>
-  </section>
+      </div>
+    </section>
+    {{ end }}
 
-  {{ $latest := where site.RegularPages "Type" "in" (slice "series" "posts" "projects") }}
-  {{ if $latest }}
-  <section class="home-latest-voice" aria-label="latest voice">
-    <div class="section-heading">
-      <span></span>
-      <h2>最新发声</h2>
-      <span></span>
-    </div>
-    <p>这个网站不是一次性作品。它需要持续整理旧材料、持续发布新文章、持续修正判断。只有不断出声、不断成文、不断复盘，旧经验才不会再次散乱。</p>
-    <div class="latest-list">
-      {{ range first 12 $latest.ByDate.Reverse }}
-      <a href="{{ .RelPermalink }}">
-        <time>{{ .Date.Format "2006-01-02" }}</time>
-        <strong>{{ .Title }}</strong>
-      </a>
-      {{ end }}
-    </div>
-  </section>
-  {{ end }}
-
-  <section class="home-about-card" aria-label="about angelife">
-    <h2>关于本站</h2>
-    <p>安知生 angelife 是我的长期作品化之路。五行为骨架，AI 为炉火，正见为根基，系统而不玄。</p>
+    <section class="home-about-card" aria-label="about angelife">
+      <h2>关于本站</h2>
+      <p>安知生 angelife 是我的长期作品化之路。五行为骨架，AI 为炉火，正见为根基，系统而不玄。</p>
+    </section>
   </section>
 </section>
 {{ end }}
