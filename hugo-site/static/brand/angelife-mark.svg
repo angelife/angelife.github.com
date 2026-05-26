@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 360" role="img" aria-labelledby="title desc">
+  <title id="title">Angelife cicada book mark</title>
+  <desc id="desc">A line-art cicada rising from an open book.</desc>
+  <defs>
+    <linearGradient id="wing" x1="120" y1="40" x2="390" y2="260" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0B1D3A"/>
+      <stop offset=".58" stop-color="#1E5BFF"/>
+      <stop offset="1" stop-color="#0FA3A3"/>
+    </linearGradient>
+    <filter id="soft" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#0B1D3A" flood-opacity=".14"/>
+    </filter>
+  </defs>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#soft)">
+    <path d="M74 277c52-20 113-18 181 12 68-30 129-32 183-12" stroke="#0B1D3A" stroke-width="9"/>
+    <path d="M92 301c48-15 103-11 163 14 60-25 115-29 165-14" stroke="#1E5BFF" stroke-width="7"/>
+    <path d="M112 326c42-9 90-4 143 16 53-20 101-25 145-16" stroke="#0B1D3A" stroke-width="5"/>
+    <path d="M255 87c-41 29-66 83-70 167 33-9 56-28 70-58 14 30 37 49 72 58-5-84-31-138-72-167Z" fill="#0B1D3A" stroke="#0B1D3A" stroke-width="5"/>
+    <path d="M255 91v202" stroke="#fff" stroke-width="8"/>
+    <path d="M225 119c19-8 40-8 61 0" stroke="#fff" stroke-width="8"/>
+    <circle cx="255" cy="213" r="11" stroke="#fff" stroke-width="7"/>
+    <path d="M209 94c16-18 75-18 92 0" stroke="#0B1D3A" stroke-width="8"/>
+    <path d="M205 82l-24-26M305 82l25-26" stroke="#0B1D3A" stroke-width="9"/>
+    <path d="M197 111c-54 11-99 57-112 143 56 7 101-17 135-72" stroke="url(#wing)" stroke-width="7"/>
+    <path d="M313 111c55 11 100 57 113 143-57 7-102-17-136-72" stroke="url(#wing)" stroke-width="7"/>
+    <path d="M167 123c-24 34-41 72-50 114M344 123c24 34 41 72 50 114" stroke="#1E5BFF" stroke-width="5"/>
+    <path d="M140 177c24 6 43 18 57 37M371 177c-24 6-43 18-57 37" stroke="#0B1D3A" stroke-width="4"/>
+    <path d="M138 219v29M171 200v41M205 177v42M374 219v29M341 200v41M307 177v42" stroke="#0FA3A3" stroke-width="4"/>
+    <circle cx="138" cy="255" r="6" stroke="#0FA3A3" stroke-width="4"/>
+    <circle cx="171" cy="247" r="6" stroke="#0FA3A3" stroke-width="4"/>
+    <circle cx="205" cy="226" r="6" stroke="#0FA3A3" stroke-width="4"/>
+    <circle cx="374" cy="255" r="6" stroke="#0FA3A3" stroke-width="4"/>
+    <circle cx="341" cy="247" r="6" stroke="#0FA3A3" stroke-width="4"/>
+    <circle cx="307" cy="226" r="6" stroke="#0FA3A3" stroke-width="4"/>
+  </g>
+</svg>

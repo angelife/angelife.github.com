@@ -8,7 +8,7 @@ hasCJKLanguage = true
 summaryLength = 120
 
 [params]
-  defaultTheme = "auto"
+  defaultTheme = "light"
   ShowReadingTime = true
   ShowBreadCrumbs = true
   ShowPostNavLinks = true
