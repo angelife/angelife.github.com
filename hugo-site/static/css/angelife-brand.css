@@ -406,3 +406,30 @@ body.dark {
     gap: 0.15rem;
   }
 }
+
+.section-banner {
+  max-width: 1120px;
+  margin: 1.5rem auto 2.5rem;
+  padding: 0 1rem;
+}
+
+.section-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 22px;
+  border: 1px solid rgba(20, 35, 60, 0.12);
+  box-shadow: 0 18px 42px rgba(15, 30, 55, 0.08);
+  background: #f7f2e8;
+}
+
+@media (max-width: 720px) {
+  .section-banner {
+    margin: 1rem auto 1.75rem;
+    padding: 0 0.75rem;
+  }
+
+  .section-banner img {
+    border-radius: 16px;
+  }
+}
