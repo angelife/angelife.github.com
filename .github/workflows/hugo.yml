@@ -1,4 +1,4 @@
-name: Deploy Hugo site to GitHub Pages
+name: Check Hugo site
 
 on:
   push:
@@ -8,11 +8,9 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: pages
+  group: hugo-check
   cancel-in-progress: false
 
 jobs:
@@ -29,19 +27,4 @@ jobs:
           hugo-version: latest
           extended: true
       - name: Build
-        run: hugo --source hugo-site --minify
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: hugo-site/public
-
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+        run: hugo --source hugo-site --destination /tmp/angelife-hugo-check --minify
