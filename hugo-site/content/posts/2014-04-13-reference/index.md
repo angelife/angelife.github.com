@@ -1,15 +1,11 @@
 ---
-title: 2014-04-13-reference
+title: "退教参考手册 2011版"
+slug: "2014-04-13-reference"
 date: 2025-10-08
 draft: false
-categories: [_posts]
----
-
----
-layout: post
-title: "退教参考手册 2011版"
 description: "东方闪电退教参考手册"
 tags: [手册]
+categories: [文章]
 ---
 
  本文档为退教参考手册（2011版），与之后各个版本做一个比对性参考。

@@ -1,15 +1,11 @@
 ---
-title: 2014-04-16-ref2
+title: "退教参考手册 2014版"
+slug: "2014-04-16-ref2"
 date: 2025-10-08
 draft: false
-categories: [_posts]
----
-
----
-layout: post
-title: "退教参考手册 2014版"
 description: "东方闪电退教参考手册"
 tags: [手册]
+categories: [文章]
 ---
 
  本文档提供东方闪电退教的详细说明， 建议你在阅读本文档之前，先阅读东方闪电退教手册使用指南来快速了解东方闪电退教参考手册。
