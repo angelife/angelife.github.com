@@ -1,6 +1,6 @@
 ---
 title: "Kindle、KOReader 与 AI：新的阅读闭环"
-date: 2026-05-27T02:50:00+08:00
+date: 2026-05-27T01:00:00+08:00
 draft: false
 summary: "电子书设备的价值不只是便宜或护眼，而是帮助人建立低干扰、可沉淀、可输出的阅读系统。"
 tags: ["Kindle", "KOReader", "AI阅读", "知识管理"]
