@@ -2,6 +2,8 @@
 
 This repository publishes the site at https://angelife.github.io/.
 
+The legacy static site is preserved at https://angelife.github.io/old-site/.
+
 ## Workflow
 
 1. Write in Obsidian using the vault at `hugo-site`.

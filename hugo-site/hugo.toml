@@ -15,6 +15,16 @@ summaryLength = 120
   ShowCodeCopyButtons = true
   DateFormat = "2006-01-02"
 
+[[menu.main]]
+  name = "文章"
+  url = "/posts/"
+  weight = 10
+
+[[menu.main]]
+  name = "旧站"
+  url = "/old-site/"
+  weight = 20
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]

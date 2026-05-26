@@ -1,0 +1,46 @@
+markdown: rdiscount
+pygments: true
+plugins: ./_plugins
+paginate: 8
+
+safe: false
+
+#站点基础配置
+title: 心灵之光
+subTitle: 闲谈，阅读，整理，思考，沉淀
+description: 学习与思考
+url: http://localhost:4000
+feed: /atom.xml
+
+#菜单配置
+nav:
+  - text: 首页
+    url: /index.html
+    icon: icon-home
+    class: home
+  - text: 文章归档
+    url: /archives.html
+    icon: icon-reorder
+    class: none
+  - text: 关于我
+    url: /contact.html
+    icon: icon-envelope-alt
+    class: none
+  - text: 联系我
+    url: http://angelife.org
+    icon: icon-heart
+    class: none
+
+page:
+  - text: 文章分类
+    url: /archives.html
+    last: true
+  - text: 友情链接
+    url: /links.html
+    last: true
+  - text: 关于我
+    url: /contact.html
+    last: false
+
+author:
+  name: angelife.org
