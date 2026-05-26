@@ -4,7 +4,7 @@ description: "以格物致知、正名、修身、中庸和仁义礼智信统一
 phase: "earth"
 phaseName: "土"
 phaseLabel: "土·正见"
-banner: "/images/sections/confucian-right-view.png"
+banner: "/images/sections/earth-right-view.png"
 bannerAlt: "儒家与正见栏目主题图"
 ---
 

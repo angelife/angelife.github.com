@@ -4,7 +4,7 @@ description: "长期蛰伏、破土蜕壳、以识见鸣。"
 phase: "wood"
 phaseName: "木"
 phaseLabel: "木·蝉识"
-banner: "/images/sections/chan-shi-lu.png"
+banner: "/images/sections/wood-growth.png"
 bannerAlt: "蝉识录栏目主题图"
 ---
 

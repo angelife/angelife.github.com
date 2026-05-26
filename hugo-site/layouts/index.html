@@ -1,111 +1,143 @@
 {{ define "main" }}
-<section class="brand-home" aria-label="Angelife brand home">
-  <div class="brand-hero">
-    <div class="brand-mark-wrap">
-      <img src="/brand/angelife-mark.svg" alt="安知生蝉识录标识" class="brand-mark">
-    </div>
-    <div class="brand-divider" aria-hidden="true"></div>
-    <div class="brand-title-block">
-      <h1>安知生</h1>
-      <div class="brand-subtitle">
-        <span class="brand-en">angelife</span>
-        <span class="brand-rule"></span>
-        <span class="brand-cn">蝉识录</span>
+<section class="brand-home" aria-label="Angelife five phases home">
+  <section class="home-hero" aria-label="site introduction">
+    <div class="home-hero-inner">
+      <p class="panel-kicker">AI时代的正见与系统化</p>
+      <h1>
+        <span>五行为骨架</span>
+        <span>AI为炉火</span>
+        <span>正见为根基</span>
+        <span>系统而不玄</span>
+      </h1>
+      <p>在信息洪流中保持清醒，在变化时代中守住正见，用 AI 炼化知识，沉淀作品。</p>
+      <div class="brand-actions" aria-label="primary link">
+        <a href="/about/">了解本站</a>
       </div>
-      <p>AI时代的正见与系统化</p>
     </div>
-  </div>
+  </section>
 
-  <div class="brand-actions" aria-label="primary links">
+  <section class="home-phase-grid" aria-label="five phase sections">
+    <a class="home-phase-card phase-metal" href="/series/information-judgment/">
+      <img class="home-phase-card__image" src="/images/sections/metal-judgment.png" alt="金·判断栏目图">
+      <div class="home-phase-card__body">
+        <strong>金·判断</strong>
+        <span>辨伪、裁断、边界、去噪</span>
+      </div>
+    </a>
+    <a class="home-phase-card phase-wood" href="/series/chan-shi-lu/">
+      <img class="home-phase-card__image" src="/images/sections/wood-growth.png" alt="木·蝉识栏目图">
+      <div class="home-phase-card__body">
+        <strong>木·蝉识</strong>
+        <span>生长、复盘、积累、系统化</span>
+      </div>
+    </a>
+    <a class="home-phase-card phase-water" href="/series/yi-notes/">
+      <img class="home-phase-card__image" src="/images/sections/water-yi.png" alt="水·易理栏目图">
+      <div class="home-phase-card__body">
+        <strong>水·易理</strong>
+        <span>流动、观察、变化、沉淀</span>
+      </div>
+    </a>
+    <a class="home-phase-card phase-fire" href="/series/ai-bu-yin/">
+      <img class="home-phase-card__image" src="/images/sections/fire-ai.png" alt="火·AI栏目图">
+      <div class="home-phase-card__body">
+        <strong>火·AI</strong>
+        <span>炼化、生成、工具、生产力</span>
+      </div>
+    </a>
+    <a class="home-phase-card phase-earth" href="/series/confucian-framework/">
+      <img class="home-phase-card__image" src="/images/sections/earth-right-view.png" alt="土·正见栏目图">
+      <div class="home-phase-card__body">
+        <strong>土·正见</strong>
+        <span>承载、秩序、落地、作品</span>
+      </div>
+    </a>
+  </section>
+
+  <section class="home-phase-sections" aria-label="featured by phase">
+    <div class="section-heading">
+      <span></span>
+      <h2>各栏目精选</h2>
+      <span></span>
+    </div>
+
+    <div class="home-phase-section-grid">
+      {{ $metalPages := slice }}
+      {{ range site.RegularPages }}
+        {{ if or (hasPrefix .RelPermalink "/series/information-judgment/") (hasPrefix .RelPermalink "/series/anti-populism/") }}
+          {{ $metalPages = $metalPages | append . }}
+        {{ end }}
+      {{ end }}
+      <section class="home-phase-column phase-metal">
+        <h3>金·判断</h3>
+        {{ range first 3 (sort $metalPages "Date" "desc") }}
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{ end }}
+        <a class="home-phase-column__more" href="/series/information-judgment/">查看全部文章</a>
+      </section>
+
+      {{ $woodPages := slice }}
+      {{ range site.RegularPages }}
+        {{ if hasPrefix .RelPermalink "/series/chan-shi-lu/" }}
+          {{ $woodPages = $woodPages | append . }}
+        {{ end }}
+      {{ end }}
+      <section class="home-phase-column phase-wood">
+        <h3>木·蝉识</h3>
+        {{ range first 3 (sort $woodPages "Date" "desc") }}
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{ end }}
+        <a class="home-phase-column__more" href="/series/chan-shi-lu/">查看全部文章</a>
+      </section>
+
+      {{ $waterPages := slice }}
+      {{ range site.RegularPages }}
+        {{ if hasPrefix .RelPermalink "/series/yi-notes/" }}
+          {{ $waterPages = $waterPages | append . }}
+        {{ end }}
+      {{ end }}
+      <section class="home-phase-column phase-water">
+        <h3>水·易理</h3>
+        {{ range first 3 (sort $waterPages "Date" "desc") }}
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{ end }}
+        <a class="home-phase-column__more" href="/series/yi-notes/">查看全部文章</a>
+      </section>
+
+      {{ $firePages := slice }}
+      {{ range site.RegularPages }}
+        {{ if hasPrefix .RelPermalink "/series/ai-bu-yin/" }}
+          {{ $firePages = $firePages | append . }}
+        {{ end }}
+      {{ end }}
+      <section class="home-phase-column phase-fire">
+        <h3>火·AI</h3>
+        {{ range first 3 (sort $firePages "Date" "desc") }}
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{ end }}
+        <a class="home-phase-column__more" href="/series/ai-bu-yin/">查看全部文章</a>
+      </section>
+
+      {{ $earthPages := slice }}
+      {{ range site.RegularPages }}
+        {{ if or (hasPrefix .RelPermalink "/series/confucian-framework/") (hasPrefix .RelPermalink "/projects/") }}
+          {{ $earthPages = $earthPages | append . }}
+        {{ end }}
+      {{ end }}
+      <section class="home-phase-column phase-earth">
+        <h3>土·正见</h3>
+        {{ range first 3 (sort $earthPages "Date" "desc") }}
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{ end }}
+        <a class="home-phase-column__more" href="/series/confucian-framework/">查看全部文章</a>
+      </section>
+    </div>
+  </section>
+
+  <section class="home-about-card" aria-label="about angelife">
+    <h2>关于本站</h2>
+    <p>安知生 angelife 是我的长期作品化之路。五行为骨架，AI 为炉火，正见为根基，系统而不玄。</p>
     <a href="/about/">了解本站</a>
-  </div>
-
-  <section class="site-intro">
-    <p>这里记录一个人如何借助 AI 整理旧经验、重建知识系统、辨识信息环境与时代变化，并把散乱经验沉淀为可复用的方法论。</p>
-    <p>儒家为体，AI 为用，易理为象，技术为器，作品为证。</p>
   </section>
-
-  <div class="core-entry-grid" aria-label="core sections">
-    <a href="/series/information-judgment/">
-      <strong>金·判断</strong>
-      <span>辨伪、裁断、边界、去噪。</span>
-    </a>
-    <a href="/series/chan-shi-lu/">
-      <strong>木·蝉识</strong>
-      <span>生长、复盘、积累、系统化。</span>
-    </a>
-    <a href="/series/yi-notes/">
-      <strong>水·易理</strong>
-      <span>流动、观察、变化、沉淀。</span>
-    </a>
-    <a href="/series/ai-bu-yin/">
-      <strong>火·AI</strong>
-      <span>炼化、生成、工具、生产力。</span>
-    </a>
-    <a href="/series/confucian-framework/">
-      <strong>土·正见</strong>
-      <span>承载、秩序、落地、作品。</span>
-    </a>
-  </div>
-
-  <section class="workflow-panel" aria-label="AI native knowledge workflow">
-    <div>
-      <p class="panel-kicker">AI 原生知识生产线</p>
-      <h2>从旧材料到正式作品</h2>
-      <p>所有原始材料先进入 Inbox，经 AI 初步分类、摘要与提炼后，沉入 Obsidian 主知识库；成熟内容再整理为发布稿，最终发布到 Hugo，并由 Git 保存版本。</p>
-    </div>
-    <ol>
-      <li><span>00</span>Inbox 原始材料入口</li>
-      <li><span>AI</span>分类、摘要、提炼、打标签</li>
-      <li><span>库</span>Obsidian 主知识库长期沉淀</li>
-      <li><span>稿</span>60_网站发布稿成熟成文</li>
-      <li><span>站</span>Hugo 发布，Git 保存版本</li>
-    </ol>
-  </section>
-
-  {{ $featured := where site.RegularPages "Params.featured" true }}
-  {{ if $featured }}
-  <section class="article-section">
-    <div class="section-heading">
-      <span></span>
-      <h2>重点注意 / 精选文章</h2>
-      <span></span>
-    </div>
-    <div class="article-grid">
-      {{ range first 5 $featured }}
-      <a href="{{ .RelPermalink }}">
-        <strong>{{ .Title }}</strong>
-        <em>{{ .Summary | plainify | htmlUnescape | truncate 88 }}</em>
-      </a>
-      {{ end }}
-    </div>
-  </section>
-  {{ end }}
-
-  {{ $latest := where site.RegularPages "Type" "in" (slice "series" "posts" "projects") }}
-  {{ if $latest }}
-  <section class="article-section latest-section">
-    <div class="section-heading">
-      <span></span>
-      <h2>最新文章</h2>
-      <span></span>
-    </div>
-    <div class="latest-list">
-      {{ range first 12 $latest.ByDate.Reverse }}
-      <a href="{{ .RelPermalink }}">
-        <time>{{ .Date.Format "2006-01-02" }}</time>
-        <strong>{{ .Title }}</strong>
-      </a>
-      {{ end }}
-    </div>
-  </section>
-  {{ end }}
-
-  <div class="brand-pillars" aria-label="site concepts">
-    <a href="/series/information-judgment/"><b>金·判断</b><span>辨伪 · 裁断 · 去噪</span></a>
-    <a href="/series/chan-shi-lu/"><b>木·蝉识</b><span>生长 · 复盘 · 积累</span></a>
-    <a href="/series/ai-bu-yin/"><b>火·AI</b><span>炼化 · 生成 · 工具</span></a>
-    <a href="/about/"><b>关 于</b><span>定位 · 协作 · 维护</span></a>
-  </div>
 </section>
 {{ end }}
