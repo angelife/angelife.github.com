@@ -30,6 +30,12 @@ body.dark {
   color: var(--al-ink);
 }
 
+main.main:has(.home-page) {
+  max-width: none;
+  width: 100%;
+  padding: 0;
+}
+
 .nav {
   max-width: 1180px;
   padding: 0 24px;
@@ -383,12 +389,11 @@ body.dark {
 
 .brand-home {
   box-sizing: border-box;
-  width: min(1360px, calc(100vw - 1.5rem));
+  width: min(1360px, calc(100vw - 16px));
   max-width: 1360px;
-  margin: 0 0 0 50%;
+  margin: 0 auto;
   padding: 0.65rem 0 2rem;
   color: var(--al-ink);
-  transform: translateX(-50%);
 }
 
 .brand-hero {
@@ -699,8 +704,7 @@ body.dark {
 @media (max-width: 760px) {
   .brand-home {
     width: calc(100vw - 1.25rem);
-    margin-left: 50%;
-    padding-top: 2.5rem;
+    padding-top: 0.75rem;
   }
 
   .brand-hero {
