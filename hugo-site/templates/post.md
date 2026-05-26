@@ -3,14 +3,27 @@ title = "{{title}}"
 date = "{{date:YYYY-MM-DD}}"
 draft = true
 tags = []
+categories = []
+series = []
 slug = ""
 +++
 
-## 摘要
+# 结论
 
 
-## 正文
+# 背景
 
 
-## 参考
+# 核心判断
 
+
+# 依据
+
+
+# 常见误区
+
+
+# 方法论
+
+
+# 结语

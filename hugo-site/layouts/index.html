@@ -22,56 +22,99 @@
   </div>
 
   <div class="brand-actions" aria-label="primary links">
-    <a href="/posts/">进入文章</a>
+    <a href="/series/">进入知识系统</a>
     <a href="/old-site/">回到旧站</a>
   </div>
 
-  <div class="brand-system">
-    <section class="brand-panel">
-      <p class="panel-kicker">图标 / Favicon / App Icon</p>
-      <div class="icon-stage">
-        <div class="app-icon large">
-          <img src="/brand/angelife-mark.svg" alt="">
-        </div>
-        <div class="icon-row">
-          <span class="app-icon small"><img src="/brand/angelife-mark.svg" alt=""></span>
-          <span class="app-icon mini"><img src="/brand/angelife-mark.svg" alt=""></span>
-          <span class="app-icon tiny"><img src="/brand/angelife-mark.svg" alt=""></span>
-        </div>
-      </div>
-    </section>
+  <section class="site-intro">
+    <p>这里记录一个人如何借 AI 整理旧经验、重建知识系统、辨识信息与时代，最终把散乱经验变成可复用的方法论。</p>
+    <p>儒家为体，AI 为用，易理为象，技术为器，作品为证。</p>
+  </section>
 
-    <section class="brand-panel mono-panel">
-      <p class="panel-kicker">单色版本 / Monochrome</p>
-      <div class="mono-lockup">
-        <img src="/brand/angelife-mark.svg" alt="">
-        <div>
-          <strong>安知生</strong>
-          <span>angelife | 蝉识录</span>
-        </div>
-      </div>
-      <div class="mono-tagline"><span></span>AI时代的正见与系统化<span></span></div>
-    </section>
-
-    <section class="brand-panel spec-panel">
-      <p class="panel-kicker">品牌色彩 / Color Palette</p>
-      <div class="palette">
-        <span style="--swatch:#0B1D3A"><b></b><em>#0B1D3A<br>深海蓝</em></span>
-        <span style="--swatch:#1E5BFF"><b></b><em>#1E5BFF<br>智识蓝</em></span>
-        <span style="--swatch:#0FA3A3"><b></b><em>#0FA3A3<br>灵思青</em></span>
-      </div>
-      <p class="panel-kicker typography-title">字体规范 / Typography</p>
-      <div class="type-row">
-        <span><strong>思源宋体</strong><em>中文标题</em></span>
-        <span><strong>Inter</strong><em>英文字体</em></span>
-      </div>
-    </section>
+  <div class="core-entry-grid" aria-label="core sections">
+    <a href="/series/chan-shi-lu/">
+      <strong>蝉识录</strong>
+      <span>核心思想文集：认知复盘、人生经验、系统化思考。</span>
+    </a>
+    <a href="/series/ai-bu-yin/">
+      <strong>AI补印</strong>
+      <span>AI 工作流、知识整理、写作降噪与 Obsidian 主库。</span>
+    </a>
+    <a href="/series/information-judgment/">
+      <strong>信息判断</strong>
+      <span>信息源评分、叙事陷阱、账号质量与认知防污染。</span>
+    </a>
+    <a href="/series/anti-populism/">
+      <strong>反民粹与反邪</strong>
+      <span>反操弄，不反民众；反仇恨，不反真实困境。</span>
+    </a>
+    <a href="/series/confucian-framework/">
+      <strong>儒家与正见</strong>
+      <span>格物致知、正名、修身、中庸、仁义礼智信。</span>
+    </a>
+    <a href="/projects/">
+      <strong>项目与工具</strong>
+      <span>网站、脚本、课程、工具与长期建设记录。</span>
+    </a>
   </div>
 
+  <section class="workflow-panel" aria-label="AI native knowledge workflow">
+    <div>
+      <p class="panel-kicker">AI 原生知识生产线</p>
+      <h2>从旧材料到正式作品</h2>
+      <p>所有材料先进 Inbox，所有整理先过 AI，所有知识沉入 Obsidian，所有成熟内容发到 Hugo。</p>
+    </div>
+    <ol>
+      <li><span>00</span>Inbox 原始材料入口</li>
+      <li><span>AI</span>分类、摘要、提炼、打标签</li>
+      <li><span>库</span>Obsidian 主知识库长期沉淀</li>
+      <li><span>稿</span>60_网站发布稿成熟成文</li>
+      <li><span>站</span>Hugo 发布，Git 备份护法</li>
+    </ol>
+  </section>
+
+  {{ $featured := where site.RegularPages "Params.featured" true }}
+  {{ if $featured }}
+  <section class="article-section">
+    <div class="section-heading">
+      <span></span>
+      <h2>重点注意 / 精选文章</h2>
+      <span></span>
+    </div>
+    <div class="article-grid">
+      {{ range first 5 $featured }}
+      <a href="{{ .RelPermalink }}">
+        <strong>{{ .Title }}</strong>
+        <em>{{ .Summary | plainify | htmlUnescape | truncate 88 }}</em>
+      </a>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  {{ $latest := where site.RegularPages "Type" "in" (slice "series" "posts") }}
+  {{ if $latest }}
+  <section class="article-section latest-section">
+    <div class="section-heading">
+      <span></span>
+      <h2>最新文章</h2>
+      <span></span>
+    </div>
+    <div class="latest-list">
+      {{ range first 8 $latest.ByDate.Reverse }}
+      <a href="{{ .RelPermalink }}">
+        <time>{{ .Date.Format "2006-01-02" }}</time>
+        <strong>{{ .Title }}</strong>
+      </a>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
   <div class="brand-pillars" aria-label="site concepts">
-    <a href="/posts/"><b>知 识</b><span>求知 · 记录 · 体系化</span></a>
-    <a href="/posts/"><b>系 统</b><span>结构 · 连接 · 智能化</span></a>
-    <a href="/posts/"><b>洞 见</b><span>辨识 · 正见 · 长期主义</span></a>
+    <a href="/series/"><b>知 识</b><span>求知 · 记录 · 体系化</span></a>
+    <a href="/series/ai-bu-yin/"><b>系 统</b><span>结构 · 连接 · 智能化</span></a>
+    <a href="/series/information-judgment/"><b>洞 见</b><span>辨识 · 正见 · 长期主义</span></a>
     <a href="/old-site/"><b>旧 站</b><span>保存 · 追溯 · 历史版本</span></a>
   </div>
 </section>

@@ -160,6 +160,174 @@ body.dark {
   color: var(--al-blue);
 }
 
+.site-intro {
+  max-width: 840px;
+  margin: 0 auto 3rem;
+  padding: 1.6rem 2rem;
+  border-top: 1px solid var(--al-line);
+  border-bottom: 1px solid var(--al-line);
+  text-align: center;
+}
+
+.site-intro p {
+  margin: 0;
+  color: var(--al-muted);
+  font-size: 1.06rem;
+  line-height: 1.9;
+}
+
+.site-intro p + p {
+  margin-top: 0.45rem;
+  color: var(--al-ink);
+  font-family: "Songti SC", "STSong", serif;
+  font-size: 1.16rem;
+}
+
+.core-entry-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  margin-bottom: 3rem;
+  background: var(--al-line);
+  border: 1px solid var(--al-line);
+}
+
+.core-entry-grid a,
+.article-grid a {
+  display: grid;
+  gap: 0.65rem;
+  min-height: 150px;
+  padding: 1.45rem;
+  background: rgba(255, 255, 255, 0.82);
+  color: var(--al-ink);
+}
+
+.core-entry-grid a:hover,
+.article-grid a:hover,
+.latest-list a:hover {
+  background: #fff;
+}
+
+.core-entry-grid strong,
+.article-grid strong {
+  font-family: "Songti SC", "STSong", serif;
+  font-size: 1.5rem;
+}
+
+.core-entry-grid span,
+.article-grid em {
+  color: var(--al-muted);
+  font-style: normal;
+  line-height: 1.7;
+}
+
+.workflow-panel {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.8fr) 1.2fr;
+  gap: 2rem;
+  margin: 0 0 3.2rem;
+  padding: clamp(1.5rem, 3vw, 2.4rem);
+  border: 1px solid var(--al-line);
+  background: linear-gradient(135deg, rgba(30, 91, 255, 0.07), rgba(15, 163, 163, 0.06));
+}
+
+.workflow-panel h2,
+.section-heading h2 {
+  margin: 0;
+  color: var(--al-ink);
+  font-family: "Songti SC", "STSong", serif;
+  font-size: clamp(1.8rem, 3.4vw, 3rem);
+  line-height: 1.18;
+}
+
+.workflow-panel p {
+  color: var(--al-muted);
+  line-height: 1.8;
+}
+
+.workflow-panel ol {
+  display: grid;
+  gap: 0.7rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.workflow-panel li {
+  display: grid;
+  grid-template-columns: 3.2rem 1fr;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid rgba(11, 29, 58, 0.1);
+  background: rgba(255, 255, 255, 0.68);
+  color: var(--al-ink);
+}
+
+.workflow-panel li span {
+  display: grid;
+  place-items: center;
+  min-width: 2.6rem;
+  height: 2.2rem;
+  color: #fff;
+  background: var(--al-ink);
+  font-weight: 700;
+  font-size: 0.82rem;
+}
+
+.article-section {
+  margin: 0 0 3rem;
+}
+
+.section-heading {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.4rem;
+}
+
+.section-heading span {
+  height: 1px;
+  background: var(--al-line);
+}
+
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  background: var(--al-line);
+  border: 1px solid var(--al-line);
+}
+
+.article-grid a {
+  min-height: 180px;
+}
+
+.article-grid strong {
+  font-size: 1.18rem;
+  line-height: 1.45;
+}
+
+.latest-list {
+  display: grid;
+  border-top: 1px solid var(--al-line);
+}
+
+.latest-list a {
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+  gap: 1rem;
+  padding: 0.95rem 0.3rem;
+  border-bottom: 1px solid var(--al-line);
+  color: var(--al-ink);
+}
+
+.latest-list time {
+  color: var(--al-muted);
+  font-variant-numeric: tabular-nums;
+}
+
 .brand-system {
   display: grid;
   grid-template-columns: 1fr 1.5fr 1.08fr;
@@ -409,6 +577,16 @@ body.dark {
     grid-template-columns: 1fr;
   }
 
+  .core-entry-grid,
+  .workflow-panel,
+  .article-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .article-grid a {
+    min-height: 130px;
+  }
+
   .brand-panel {
     border-right: 0;
     border-bottom: 1px solid var(--al-line);
@@ -474,6 +652,11 @@ body.dark {
   .palette,
   .brand-pillars {
     grid-template-columns: 1fr;
+  }
+
+  .latest-list a {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
   }
 
   .brand-pillars a {

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 520" role="img" aria-labelledby="title desc">
+  <title id="title">旧系统失败循环</title>
+  <desc id="desc">个人洞察直接输出，进入争论和消耗，缺少沉淀后再次从头开始。</desc>
+  <defs>
+    <style>
+      text{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Noto Sans CJK SC",sans-serif;fill:#0B1D3A}
+      .box{fill:#fff;stroke:#D7DEE9;stroke-width:2}
+      .warn{fill:#FFF7ED;stroke:#FDBA74}
+      .label{font-weight:700;font-size:22px}
+      .note{fill:#536179;font-size:16px}
+      .arrow{stroke:#1E5BFF;stroke-width:4;fill:none;marker-end:url(#arrow)}
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#1E5BFF"/>
+    </marker>
+  </defs>
+  <rect width="1100" height="520" fill="#FBFCFF"/>
+  <text x="60" y="62" font-size="34" font-weight="700">从战斗型系统到沉淀型系统</text>
+  <text x="60" y="98" class="note">旧问题不是没有判断，而是流量很猛，存量太薄。</text>
+  <g transform="translate(90 150)">
+    <rect class="box" x="0" y="0" width="210" height="92" rx="8"/>
+    <text class="label" x="24" y="40">个人洞察与热血</text>
+    <text class="note" x="24" y="68">判断强，但承载弱</text>
+    <path class="arrow" d="M220 46H310"/>
+    <rect class="box" x="330" y="0" width="210" height="92" rx="8"/>
+    <text class="label" x="354" y="40">直接输出参战</text>
+    <text class="note" x="354" y="68">行动快于系统</text>
+    <path class="arrow" d="M550 46H640"/>
+    <rect class="warn" x="660" y="0" width="230" height="92" rx="8"/>
+    <text class="label" x="684" y="40">争论与消耗</text>
+    <text class="note" x="684" y="68">成果外流，风险上升</text>
+    <path class="arrow" d="M775 102v70"/>
+    <rect class="warn" x="660" y="190" width="230" height="92" rx="8"/>
+    <text class="label" x="684" y="230">没有沉淀成存量</text>
+    <text class="note" x="684" y="258">下一轮再从头来</text>
+    <path class="arrow" d="M650 236H550"/>
+    <rect class="box" x="330" y="190" width="210" height="92" rx="8"/>
+    <text class="label" x="354" y="230">新杠杆</text>
+    <text class="note" x="354" y="258">作品库 / 知识库 / 方法论</text>
+    <path class="arrow" d="M320 236H210"/>
+    <rect class="box" x="0" y="190" width="210" height="92" rx="8"/>
+    <text class="label" x="24" y="230">沉淀型系统</text>
+    <text class="note" x="24" y="258">经验变系统，输出成复利</text>
+  </g>
+</svg>

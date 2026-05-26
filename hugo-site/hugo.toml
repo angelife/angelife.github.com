@@ -1,7 +1,8 @@
 baseURL = "https://angelife.github.io/"
 languageCode = "zh-cn"
-title = "Angelife Notes"
+title = "安知生 angelife"
 theme = "PaperMod"
+copyright = "© 2009–2026 angelife / 安知生"
 
 enableRobotsTXT = true
 hasCJKLanguage = true
@@ -14,16 +15,67 @@ summaryLength = 120
   ShowPostNavLinks = true
   ShowCodeCopyButtons = true
   DateFormat = "2006-01-02"
+  mainSections = ["series", "posts"]
 
 [[menu.main]]
-  name = "文章"
-  url = "/posts/"
+  identifier = "home"
+  name = "首页"
+  url = "/"
   weight = 10
 
 [[menu.main]]
+  identifier = "series-chan-shi-lu"
+  name = "蝉识录"
+  url = "/series/chan-shi-lu/"
+  weight = 20
+
+[[menu.main]]
+  identifier = "series-ai-bu-yin"
+  name = "AI补印"
+  url = "/series/ai-bu-yin/"
+  weight = 30
+
+[[menu.main]]
+  identifier = "series-information-judgment"
+  name = "信息判断"
+  url = "/series/information-judgment/"
+  weight = 40
+
+[[menu.main]]
+  identifier = "series-anti-populism"
+  name = "反民粹与反邪"
+  url = "/series/anti-populism/"
+  weight = 50
+
+[[menu.main]]
+  identifier = "series-confucian-framework"
+  name = "儒家与正见"
+  url = "/series/confucian-framework/"
+  weight = 60
+
+[[menu.main]]
+  identifier = "series-yi-notes"
+  name = "易理笔记"
+  url = "/series/yi-notes/"
+  weight = 70
+
+[[menu.main]]
+  identifier = "projects"
+  name = "项目"
+  url = "/projects/"
+  weight = 80
+
+[[menu.main]]
+  identifier = "about"
+  name = "关于"
+  url = "/about/"
+  weight = 90
+
+[[menu.main]]
+  identifier = "old-site"
   name = "旧站"
   url = "/old-site/"
-  weight = 20
+  weight = 100
 
 [markup]
   [markup.goldmark]
