@@ -95,14 +95,21 @@ body.dark {
 
 .home-hero {
   margin-bottom: 2rem;
-  padding: clamp(2.2rem, 7vw, 5rem) 1rem clamp(2rem, 5vw, 3.5rem);
+  padding: clamp(2.4rem, 7vw, 5.4rem) 1.5rem clamp(2.2rem, 5vw, 3.8rem);
   border-bottom: 1px solid var(--al-line);
-  text-align: center;
+  border-radius: 18px;
+  background-image:
+    linear-gradient(90deg, rgba(247, 244, 236, 0.97), rgba(247, 244, 236, 0.72)),
+    url("/images/brand/home-hero-wuxing.png");
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: left;
 }
 
 .home-hero-inner {
   max-width: 760px;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .home-hero h1 {
@@ -700,6 +707,10 @@ body.dark {
 
   .home-hero {
     padding-top: 2rem;
+    background-image:
+      linear-gradient(rgba(247, 244, 236, 0.94), rgba(247, 244, 236, 0.94)),
+      url("/images/brand/home-hero-wuxing.png");
+    background-position: center top;
   }
 
   .home-hexagram-note {
