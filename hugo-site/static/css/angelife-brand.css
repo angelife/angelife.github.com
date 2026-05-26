@@ -21,7 +21,9 @@ body.dark {
 }
 
 .nav {
-  max-width: 1120px;
+  max-width: 1180px;
+  padding: 0 24px;
+  margin: 0 auto;
 }
 
 .logo-switches {
@@ -42,26 +44,25 @@ body.dark {
 }
 
 .brand-home {
-  width: min(1120px, calc(100vw - 2.5rem));
-  max-width: none;
+  max-width: 1180px;
   margin: 0 auto;
-  padding: clamp(2.5rem, 7vw, 5.25rem) 1.25rem 3rem;
+  padding: clamp(1.25rem, 3vw, 2.5rem) 1.25rem 2.5rem;
   color: var(--al-ink);
 }
 
 .brand-hero {
   display: grid;
-  grid-template-columns: minmax(180px, 260px) 1px minmax(0, 1fr);
+  grid-template-columns: minmax(160px, 220px) 1px minmax(0, 1fr);
   align-items: center;
-  gap: clamp(1.6rem, 4vw, 3rem);
-  max-width: 860px;
+  gap: clamp(1rem, 2.5vw, 2rem);
+  max-width: 960px;
   margin: 0 auto;
 }
 
 .brand-mark {
   display: block;
-  width: min(24vw, 250px);
-  min-width: 170px;
+  width: min(20vw, 220px);
+  min-width: 150px;
 }
 
 .brand-divider,
@@ -71,13 +72,13 @@ body.dark {
 
 .brand-divider {
   width: 1px;
-  height: 220px;
+  height: 130px;
 }
 
 .brand-title-block h1 {
   margin: 0;
   font-family: "Songti SC", "STSong", "Noto Serif CJK SC", serif;
-  font-size: clamp(4.5rem, 9vw, 8.5rem);
+  font-size: clamp(3.5rem, 6vw, 6rem);
   font-weight: 700;
   line-height: 0.98;
   color: var(--al-ink);
@@ -87,14 +88,14 @@ body.dark {
 .brand-subtitle {
   display: flex;
   align-items: center;
-  gap: 1.1rem;
-  margin-top: 1rem;
+  gap: 1rem;
+  margin-top: 0.5rem;
   white-space: nowrap;
 }
 
 .brand-en {
   font-family: Inter, ui-sans-serif, system-ui, sans-serif;
-  font-size: clamp(2rem, 3.5vw, 3.4rem);
+  font-size: clamp(1.5rem, 2.8vw, 2.6rem);
   line-height: 1;
   color: var(--al-ink);
   white-space: nowrap;
@@ -102,7 +103,7 @@ body.dark {
 
 .brand-cn {
   font-family: "Songti SC", "STSong", serif;
-  font-size: clamp(1.8rem, 3vw, 2.9rem);
+  font-size: clamp(1.4rem, 2.5vw, 2.2rem);
   color: var(--al-cyan);
   white-space: nowrap;
 }
@@ -113,17 +114,17 @@ body.dark {
 }
 
 .brand-title-block p {
-  margin: 1.15rem 0 0;
+  margin: 0.6rem 0 0;
   color: var(--al-muted);
-  font-size: clamp(1rem, 1.8vw, 1.25rem);
-  letter-spacing: 0.32em;
+  font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+  letter-spacing: 0.28em;
 }
 
 .brand-actions {
   display: flex;
   justify-content: center;
   gap: 0.85rem;
-  margin: 2.2rem 0 3rem;
+  margin: 1.2rem 0 1.8rem;
 }
 
 .brand-actions a {
@@ -145,8 +146,8 @@ body.dark {
 }
 
 .site-intro {
-  max-width: 780px;
-  margin: 0 auto 2.6rem;
+  max-width: 760px;
+  margin: 0 auto 1.8rem;
   text-align: center;
 }
 
@@ -168,6 +169,7 @@ body.dark {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
+  margin-top: 0.5rem;
   margin-bottom: 2.8rem;
 }
 
