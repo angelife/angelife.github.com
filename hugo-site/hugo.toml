@@ -1,0 +1,24 @@
+baseURL = "https://angelife.github.io/"
+languageCode = "zh-cn"
+title = "Angelife Notes"
+theme = "PaperMod"
+
+enableRobotsTXT = true
+hasCJKLanguage = true
+summaryLength = 120
+
+[params]
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowBreadCrumbs = true
+  ShowPostNavLinks = true
+  ShowCodeCopyButtons = true
+  DateFormat = "2006-01-02"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[permalinks]
+  posts = "/posts/:slug/"

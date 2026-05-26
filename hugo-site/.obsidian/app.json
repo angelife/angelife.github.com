@@ -1,0 +1,9 @@
+{
+  "alwaysUpdateLinks": true,
+  "attachmentFolderPath": "static/uploads",
+  "newFileLocation": "folder",
+  "newFileFolderPath": "content/posts",
+  "promptDelete": false,
+  "showInlineTitle": true,
+  "useMarkdownLinks": true
+}

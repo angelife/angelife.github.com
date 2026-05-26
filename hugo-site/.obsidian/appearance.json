@@ -1,0 +1,9 @@
+{
+  "accentColor": "#2f6f6d",
+  "baseFontSize": 16,
+  "cssTheme": "",
+  "enabledCssSnippets": [
+    "writing-focus"
+  ],
+  "theme": "obsidian"
+}

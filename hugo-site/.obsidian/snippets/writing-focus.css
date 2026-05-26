@@ -1,0 +1,8 @@
+.markdown-source-view,
+.markdown-preview-view {
+  --file-line-width: 820px;
+}
+
+.markdown-preview-view img {
+  max-width: 100%;
+}

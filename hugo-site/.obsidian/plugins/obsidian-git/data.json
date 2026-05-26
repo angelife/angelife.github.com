@@ -1,0 +1,16 @@
+{
+  "autoCommitMessage": "vault: {{date}}",
+  "autoSaveInterval": 10,
+  "autoPullInterval": 0,
+  "autoPushInterval": 0,
+  "commitMessage": "vault: update notes",
+  "dateFormat": "YYYY-MM-DD HH:mm",
+  "disablePush": false,
+  "lineAuthor": {
+    "show": false
+  },
+  "listChangedFilesInMessageBody": false,
+  "pullBeforePush": true,
+  "showStatusBar": true,
+  "syncMethod": "merge"
+}
