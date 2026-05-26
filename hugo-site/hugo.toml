@@ -18,46 +18,34 @@ summaryLength = 120
   mainSections = ["series", "posts"]
 
 [[menu.main]]
-  identifier = "home"
-  name = "首页"
-  url = "/"
-  weight = 10
-
-[[menu.main]]
   identifier = "phase-metal"
   name = "金·判断"
   url = "/series/information-judgment/"
-  weight = 20
+  weight = 10
 
 [[menu.main]]
   identifier = "phase-wood"
   name = "木·蝉识"
   url = "/series/chan-shi-lu/"
-  weight = 30
+  weight = 20
 
 [[menu.main]]
   identifier = "phase-water"
   name = "水·易理"
   url = "/series/yi-notes/"
-  weight = 40
+  weight = 30
 
 [[menu.main]]
   identifier = "phase-fire"
   name = "火·AI"
   url = "/series/ai-bu-yin/"
-  weight = 50
+  weight = 40
 
 [[menu.main]]
   identifier = "phase-earth"
   name = "土·正见"
   url = "/series/confucian-framework/"
-  weight = 60
-
-[[menu.main]]
-  identifier = "about"
-  name = "关于"
-  url = "/about/"
-  weight = 70
+  weight = 50
 
 [markup]
   [markup.goldmark]
