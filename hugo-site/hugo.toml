@@ -24,58 +24,40 @@ summaryLength = 120
   weight = 10
 
 [[menu.main]]
-  identifier = "series-chan-shi-lu"
-  name = "蝉识录"
-  url = "/series/chan-shi-lu/"
+  identifier = "phase-metal"
+  name = "金·判断"
+  url = "/series/information-judgment/"
   weight = 20
 
 [[menu.main]]
-  identifier = "series-ai-bu-yin"
-  name = "AI补印"
-  url = "/series/ai-bu-yin/"
+  identifier = "phase-wood"
+  name = "木·蝉识"
+  url = "/series/chan-shi-lu/"
   weight = 30
 
 [[menu.main]]
-  identifier = "series-information-judgment"
-  name = "信息判断"
-  url = "/series/information-judgment/"
+  identifier = "phase-water"
+  name = "水·易理"
+  url = "/series/yi-notes/"
   weight = 40
 
 [[menu.main]]
-  identifier = "series-anti-populism"
-  name = "反民粹与反邪"
-  url = "/series/anti-populism/"
+  identifier = "phase-fire"
+  name = "火·AI"
+  url = "/series/ai-bu-yin/"
   weight = 50
 
 [[menu.main]]
-  identifier = "series-confucian-framework"
-  name = "儒家与正见"
+  identifier = "phase-earth"
+  name = "土·正见"
   url = "/series/confucian-framework/"
   weight = 60
-
-[[menu.main]]
-  identifier = "series-yi-notes"
-  name = "易理笔记"
-  url = "/series/yi-notes/"
-  weight = 70
-
-[[menu.main]]
-  identifier = "projects"
-  name = "项目"
-  url = "/projects/"
-  weight = 80
 
 [[menu.main]]
   identifier = "about"
   name = "关于"
   url = "/about/"
-  weight = 90
-
-[[menu.main]]
-  identifier = "old-site"
-  name = "旧站"
-  url = "/old-site/"
-  weight = 100
+  weight = 70
 
 [markup]
   [markup.goldmark]
