@@ -2,3 +2,4 @@
 *.swp
 *.tmp
 Thumbs.db
+_incoming/
