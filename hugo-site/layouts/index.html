@@ -103,7 +103,7 @@
 
         {{ $firePages := slice }}
         {{ range site.RegularPages }}
-          {{ if hasPrefix .RelPermalink "/series/ai-bu-yin/" }}
+          {{ if or (hasPrefix .RelPermalink "/series/ai-bu-yin/") (in (.Params.categories | default slice) "火·AI") }}
             {{ $firePages = $firePages | append . }}
           {{ end }}
         {{ end }}
