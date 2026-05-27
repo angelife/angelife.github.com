@@ -25,6 +25,21 @@ summaryLength = 120
     threshold = 0.4
     ignoreLocation = true
 
+  [params.giscus]
+    enabled = false
+    repo = "angelife/angelife.github.com"
+    repoId = ""
+    category = "General"
+    categoryId = ""
+    mapping = "pathname"
+    strict = "0"
+    reactionsEnabled = "1"
+    emitMetadata = "0"
+    inputPosition = "bottom"
+    theme = "preferred_color_scheme"
+    lang = "zh-CN"
+    loading = "lazy"
+
 [[menu.main]]
   identifier = "phase-metal"
   name = "金·判断"

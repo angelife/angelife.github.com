@@ -3,7 +3,7 @@
   {{- if and (not .Params.searchHidden) (ne .Layout `archives`) (ne .Layout `search`) }}
     {{- $tags := delimit (.Params.tags | default slice) " " -}}
     {{- $categories := delimit (.Params.categories | default slice) " " -}}
-    {{- $.Scratch.Add "index" (dict "title" .Title "content" .Plain "permalink" .Permalink "summary" .Summary "tags" $tags "categories" $categories) -}}
+    {{- $.Scratch.Add "index" (dict "title" .Title "content" .Plain "permalink" .Permalink "summary" .Summary "description" .Description "tags" $tags "categories" $categories) -}}
   {{- end }}
 {{- end -}}
 {{- $.Scratch.Get "index" | jsonify -}}

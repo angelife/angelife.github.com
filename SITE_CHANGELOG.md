@@ -2,6 +2,80 @@
 
 本文件用于 AI 接手时查看详细版本演化。公开版本摘要见 `/changelog/` 和 `hugo-site/data/changelog.yaml`。
 
+## v0.6.0｜改用 SemVer、增强搜索并预留 GitHub 评论
+
+日期：2026-05-27  
+执行者：Codex  
+发布方式：本地 Hugo 生成 -> rsync 到仓库根目录 -> commit -> push -> git tag  
+commit：提交后以 tag `v0.6.0` 指向的 release commit 为准  
+tag：v0.6.0
+
+### 本次目标
+
+- 将版本号从日期流水切换为 SemVer。
+- 增强站内搜索，加入命中词高亮、上下文摘要和更合理排序。
+- 预留 giscus 评论系统，未来可通过 GitHub Discussions 启用文章评论。
+- 尝试补上 `/site-workflow/` 的项目总控流程图。
+- 同步更新公开 changelog、内部日志、每日工作日志和项目总控进度。
+
+### 修改文件
+
+- `BUILD_HANDOFF.md`
+- `AI_WORK_RULES.md`
+- `SITE_STYLE_GUIDE.md`
+- `SITE_CHANGELOG.md`
+- `DAILY_WORK_LOG.md`
+- `PROJECT_STATUS.md`
+- `hugo-site/data/changelog.yaml`
+- `hugo-site/content/site-workflow.md`
+- `hugo-site/layouts/_default/index.json`
+- `hugo-site/layouts/_default/search.html`
+- `hugo-site/layouts/partials/comments.html`
+- `hugo-site/static/css/angelife-brand.css`
+- `hugo-site/hugo.toml`
+
+### 具体修改
+
+- 写明 `v2026.05.27-05` 及以前为日期流水版本，自 `v0.6.0` 起改用 SemVer：`vMAJOR.MINOR.PATCH`。
+- 搜索索引增加 `description` 字段，搜索范围覆盖标题、摘要、正文、分类、标签和链接。
+- 搜索结果支持 `<mark>` 高亮、命中上下文摘要、无结果提示和更合理排序。
+- 新增 `layouts/partials/comments.html`，按 giscus 参数和页面类型安全渲染评论。
+- 在 `hugo.toml` 预留 `[params.giscus]`，默认 `enabled = false`。
+- 在治理文档和 `/site-workflow/` 中写入评论启用条件和维护规则。
+
+### 构建与发布
+
+- Hugo 构建命令：`hugo --cleanDestinationDir --minify`
+- 发布命令：`rsync -av hugo-site/public/ ./`
+- 构建结果：Hugo `v0.147.4` 构建通过，174 pages，0 errors。
+- rsync：已完成，`hugo-site/public/` 已同步到仓库根目录。
+
+### 线上验证
+
+- `/search/`：本地静态产物已验证，测试关键词均命中新文章。
+- `/changelog/`：本地生成产物已验证。
+- `/site-workflow/`：本地生成产物已验证。
+
+### 遇到的问题
+
+- 本轮未在指定位置找到 `site-control-map.png` 或 `网站项目总控流程可视化图.png`，因此 `/site-workflow/` 继续保留流程图 TODO。
+- giscus 需要 GitHub Discussions、giscus 授权、`repoId` 和 `categoryId`，本轮只能安全预留，不能正式显示。
+
+### 已解决
+
+- SemVer 规则已写入治理文档和公开 changelog 数据。
+- 搜索体验已增强。
+- 评论系统已有可配置、可隐藏的 giscus 预留实现。
+
+### 未完成
+
+- 上传并接入 `hugo-site/static/images/workflow/site-control-map.png`。
+- 正式启用 GitHub Discussions 和 giscus，并填写 `repoId` / `categoryId`。
+
+### 下次接手注意
+
+先读 `PROJECT_STATUS.md`，再读 `BUILD_HANDOFF.md`、`AI_WORK_RULES.md`、`SITE_STYLE_GUIDE.md`、`SITE_CHANGELOG.md`、`DAILY_WORK_LOG.md`、`hugo-site/data/changelog.yaml`。不要切换发布方式，不要提交 `_incoming/`。
+
 ## v2026.05.27-05｜建立统一 AI 接手规范与项目进度体系
 
 日期：2026-05-27  

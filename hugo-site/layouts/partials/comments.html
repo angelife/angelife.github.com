@@ -1,0 +1,30 @@
+{{- $giscus := site.Params.giscus -}}
+{{- $enabled := false -}}
+{{- with $giscus }}{{ $enabled = .enabled }}{{ end -}}
+{{- $repoId := "" -}}
+{{- $categoryId := "" -}}
+{{- with $giscus -}}
+  {{- $repoId = or (index . "repoId") (index . "repoid") "" -}}
+  {{- $categoryId = or (index . "categoryId") (index . "categoryid") "" -}}
+{{- end -}}
+{{- $isArticle := and .IsPage (not .IsHome) (not (in (slice "search" "changelog") .Layout)) (not (in (slice "search" "changelog" "site-workflow") .File.BaseFileName)) -}}
+{{- if and $enabled $repoId $categoryId $isArticle (ne .Params.comments false) -}}
+<section class="post-comments" aria-label="comments">
+  <script src="https://giscus.app/client.js"
+    data-repo="{{ $giscus.repo }}"
+    data-repo-id="{{ $repoId }}"
+    data-category="{{ $giscus.category }}"
+    data-category-id="{{ $categoryId }}"
+    data-mapping="{{ $giscus.mapping | default "pathname" }}"
+    data-strict="{{ $giscus.strict | default "0" }}"
+    data-reactions-enabled="{{ or (index $giscus "reactionsEnabled") (index $giscus "reactionsenabled") "1" }}"
+    data-emit-metadata="{{ or (index $giscus "emitMetadata") (index $giscus "emitmetadata") "0" }}"
+    data-input-position="{{ or (index $giscus "inputPosition") (index $giscus "inputposition") "bottom" }}"
+    data-theme="{{ $giscus.theme | default "preferred_color_scheme" }}"
+    data-lang="{{ $giscus.lang | default "zh-CN" }}"
+    data-loading="{{ $giscus.loading | default "lazy" }}"
+    crossorigin="anonymous"
+    async>
+  </script>
+</section>
+{{- end -}}

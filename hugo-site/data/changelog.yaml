@@ -1,3 +1,20 @@
+- version: "v0.6.0"
+  date: "2026-05-27"
+  title: "改用 SemVer、增强搜索并预留 GitHub 评论"
+  commit: "以 tag v0.6.0 指向的 release commit 为准"
+  tag: "v0.6.0"
+  summary:
+    - "版本号从日期流水切换为 SemVer，历史日期版本保留。"
+    - "增强站内搜索，支持命中词高亮、上下文摘要与更合理排序。"
+    - "预留 giscus 评论系统，未来可通过 GitHub Discussions 启用文章评论。"
+    - "补充 /site-workflow/ 项目总控流程图；本轮因本地未找到图片素材，页面继续保留 TODO。"
+    - "同步更新 AI 接手规范、风格规范、内部日志、每日工作日志与项目总控进度。"
+  changed:
+    - "/search/"
+    - "/site-workflow/"
+    - "/changelog/"
+  rollback_note: "可通过 Git tag v0.6.0 回退到本版本：git checkout v0.6.0 -- . && git commit -m 'Rollback site to v0.6.0' && git push origin master"
+
 - version: "v2026.05.27-05"
   date: "2026-05-27"
   title: "建立统一 AI 接手规范与项目进度体系"

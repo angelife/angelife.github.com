@@ -36,6 +36,24 @@
 本地 Hugo 生成 -> rsync 到仓库根目录 -> commit -> push -> git tag
 ```
 
+## 版本号规则
+
+`v2026.05.27-05` 及以前为日期流水版本；自 `v0.6.0` 起，angelife 网站改用 SemVer：`vMAJOR.MINOR.PATCH`。
+
+- `MAJOR`：网站架构、发布方式、主题结构发生破坏性变化。
+- `MINOR`：新增功能、栏目、搜索、评论、日志系统、内容体系。
+- `PATCH`：修复样式、错字、链接、图片、分类、小 bug。
+
+每次提交后必须创建对应 Git tag。
+
+## 搜索与评论规则
+
+- 维护搜索时必须确认 `/search/` 可打开，关键词能命中文章，并有上下文摘要。
+- 搜索索引应覆盖 `title`、`summary` / `description`、`content`、`categories`、`tags`、`permalink`。
+- 评论系统优先 giscus，不准引入 Disqus。
+- giscus 未配置 `repoId` / `categoryId` 时，评论区必须默认隐藏。
+- `comments: true` / `comments: false` 应由文章 front matter 控制；旧日志、资料归档、短日课默认不开。
+
 ## 每轮收工必须输出
 
 - 版本号。

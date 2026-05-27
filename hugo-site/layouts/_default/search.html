@@ -32,7 +32,7 @@
   const results = document.getElementById("searchResults");
   if (!input || !results) return;
 
-  const normalize = (value) => (value || "").toLowerCase().replace(/\s+/g, "");
+  const normalize = (value) => stripHtml(value).toLowerCase().replace(/\s+/g, "");
   const stripHtml = (value) => (value || "").replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim();
   const escapeHtml = (value) => stripHtml(value).replace(/[&<>"']/g, (char) => ({
     "&": "&amp;",
@@ -41,6 +41,42 @@
     "\"": "&quot;",
     "'": "&#39;"
   }[char]));
+  const escapeRegExp = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const findNeedle = (text, needle) => {
+    const normalizedNeedle = normalize(needle);
+    if (!normalizedNeedle) return -1;
+    const plain = stripHtml(text).toLowerCase();
+    let compact = "";
+    const map = [];
+
+    Array.from(plain).forEach((char, index) => {
+      if (/\s/.test(char)) return;
+      compact += char;
+      map.push(index);
+    });
+
+    const compactIndex = compact.indexOf(normalizedNeedle);
+    return compactIndex >= 0 ? map[compactIndex] : -1;
+  };
+  const highlight = (text, query) => {
+    const safe = escapeHtml(text);
+    const chars = Array.from(stripHtml(query)).filter((char) => !/\s/.test(char));
+    if (!chars.length) return safe;
+    const pattern = chars.map(escapeRegExp).join("\\s*");
+    return safe.replace(new RegExp(`(${pattern})`, "gi"), "<mark>$1</mark>");
+  };
+  const excerpt = (page, query) => {
+    const fields = [page.description, page.summary, page.content, page.tags, page.categories, page.permalink];
+    const source = fields.find((field) => findNeedle(field, query) >= 0) || page.summary || page.content || "";
+    const plain = stripHtml(source);
+    const hit = findNeedle(plain, query);
+    const radius = 56;
+    const start = hit >= 0 ? Math.max(0, hit - radius) : 0;
+    const end = hit >= 0 ? Math.min(plain.length, hit + stripHtml(query).length + radius) : Math.min(plain.length, 132);
+    const prefix = start > 0 ? "..." : "";
+    const suffix = end < plain.length ? "..." : "";
+    return `${prefix}${plain.slice(start, end)}${suffix}`;
+  };
 
   let pages = [];
 
@@ -54,20 +90,24 @@
     const matches = pages
       .map((page) => {
         const title = normalize(page.title);
+        const permalink = normalize(page.permalink);
+        const description = normalize(page.description);
         const tags = normalize(page.tags);
         const categories = normalize(page.categories);
         const summary = normalize(page.summary);
         const content = normalize(page.content);
-        const haystack = `${title} ${tags} ${categories} ${summary} ${content}`;
+        const haystack = `${title} ${permalink} ${description} ${summary} ${tags} ${categories} ${content}`;
 
         if (!haystack.includes(needle)) return null;
 
         let score = 0;
-        if (title.includes(needle)) score += 6;
-        if (tags.includes(needle)) score += 4;
-        if (categories.includes(needle)) score += 4;
-        if (summary.includes(needle)) score += 2;
-        if (content.includes(needle)) score += 1;
+        if (title.includes(needle)) score += 80;
+        if (description.includes(needle)) score += 55;
+        if (summary.includes(needle)) score += 50;
+        if (tags.includes(needle)) score += 42;
+        if (categories.includes(needle)) score += 40;
+        if (permalink.includes(needle)) score += 18;
+        if (content.includes(needle)) score += 12;
 
         return { page, score };
       })
@@ -75,10 +115,15 @@
       .sort((a, b) => b.score - a.score)
       .slice(0, 12);
 
+    if (!matches.length) {
+      results.innerHTML = `<li class="search-empty">没有找到相关内容，可以换一个关键词试试。</li>`;
+      return;
+    }
+
     results.innerHTML = matches.map(({ page }) => {
-      const summary = escapeHtml(page.summary || page.content).slice(0, 120);
+      const summary = highlight(excerpt(page, query), query);
       return `<li class="post-entry search-entry">
-        <header class="entry-header"><h2><a href="${page.permalink}">${escapeHtml(page.title)}</a></h2></header>
+        <header class="entry-header"><h2><a href="${page.permalink}">${highlight(page.title, query)}</a></h2></header>
         ${summary ? `<div class="entry-content"><p>${summary}</p></div>` : ""}
       </li>`;
     }).join("");

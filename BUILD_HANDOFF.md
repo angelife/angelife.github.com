@@ -60,6 +60,24 @@ git push origin VERSION
 - `rsync -av hugo-site/public/ ./` 到仓库根目录。
 - 提交后创建 Git tag。
 
+## 版本号规则
+
+`v2026.05.27-05` 及以前为日期流水版本；自 `v0.6.0` 起，angelife 网站改用 SemVer：`vMAJOR.MINOR.PATCH`。
+
+- `MAJOR`：网站架构、发布方式、主题结构发生破坏性变化，例如 `v1.0.0`、`v2.0.0`。
+- `MINOR`：新增功能、栏目、搜索、评论、日志系统、内容体系，例如 `v0.6.0`。
+- `PATCH`：修复样式、错字、链接、图片、分类、小 bug，例如 `v0.6.1`。
+
+每次发布必须创建同名 Git tag，tag 是可回退备份点。
+
+## 搜索与评论维护
+
+- 站内搜索依赖首页 JSON 输出与 `/search/` 页面，搜索索引必须包含标题、摘要、正文、分类、标签和链接。
+- 搜索增强应保持轻量，不要引入复杂后端。
+- 评论系统优先预留 giscus，基于 GitHub Discussions。
+- giscus 未配置 `repoId` / `categoryId` 前必须隐藏评论区，不得显示空白报错区。
+- 正式启用评论前，需要用户在 GitHub 仓库开启 Discussions，安装/授权 giscus，并提供 `repoId` / `categoryId`。
+
 ## 回退方式
 
 统一使用非破坏式回退：
