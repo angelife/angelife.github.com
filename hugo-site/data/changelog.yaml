@@ -1,0 +1,18 @@
+- version: "v2026.05.27-05"
+  date: "2026-05-27"
+  title: "建立统一 AI 接手规范与项目进度体系"
+  commit: "以 tag v2026.05.27-05 指向的 release commit 为准"
+  tag: "v2026.05.27-05"
+  summary:
+    - "新增 BUILD_HANDOFF.md，固定 angelife 网站建站交接流程。"
+    - "新增 AI_WORK_RULES.md，统一所有 AI 的工作规则。"
+    - "新增 SITE_STYLE_GUIDE.md，明确首页、文章页、栏目与配图规范。"
+    - "新增 SITE_CHANGELOG.md，记录内部详细版本日志。"
+    - "新增 DAILY_WORK_LOG.md，每日/每轮收工必须写交接日志。"
+    - "新增 PROJECT_STATUS.md，形成总控项目进度视图。"
+    - "明确每次修改必须生成版本号、更新日志并创建 Git tag。"
+    - "明确继续使用本地 Hugo 生成 + rsync 根目录发布方式。"
+  changed:
+    - "/changelog/"
+    - "/site-workflow/"
+  rollback_note: "git checkout v2026.05.27-05 -- . && git commit -m \"Rollback site to v2026.05.27-05\" && git push origin master"

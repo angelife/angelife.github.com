@@ -1,0 +1,73 @@
+# angelife 建站交接手册
+
+本文件是任何 AI 接手 angelife 网站前必须阅读的建站交接手册。
+
+## 当前固定发布方式
+
+固定流程：
+
+1. 在 `hugo-site/` 本地运行 Hugo 构建。
+2. 将 `hugo-site/public/` 用 `rsync` 同步到仓库根目录。
+3. 提交源文件和根目录静态产物。
+4. `git push origin master`。
+5. 创建并推送 Git tag，作为可回退备份点。
+
+标准命令：
+
+```bash
+cd /Users/macos/angelife.github.com/hugo-site
+hugo --cleanDestinationDir --minify
+
+cd /Users/macos/angelife.github.com
+rsync -av hugo-site/public/ ./
+touch .nojekyll
+
+git status --short
+git commit -m "..."
+git push origin master
+git tag -a VERSION -m "VERSION: ..."
+git push origin VERSION
+```
+
+## 当前不优先使用 GitHub Actions 在线构建
+
+当前不默认切换到 GitHub Actions 在线构建。原因：
+
+- 线上实际读取的是仓库根目录静态产物。
+- 本地 Hugo `v0.147.4` 构建稳定。
+- GitHub Actions 曾因 `Hugo latest` / PaperMod `rss.xml` 兼容问题失败。
+
+除非用户明确授权，不要临时切换部署模式，不要修改 workflow。
+
+## 目录职责
+
+- `hugo-site/`：Hugo 源站目录。
+- 仓库根目录：GitHub Pages 实际发布目录。
+- `hugo-site/public/`：本地构建产物，构建后通过 `rsync` 同步到仓库根目录。
+- `_incoming/`：临时素材区，不提交、不发布。
+- `old-site/`：旧站历史版本，保留用于追溯，不随意删除。
+
+## 每轮修改要求
+
+每次修改必须：
+
+- 更新版本号。
+- 更新 `SITE_CHANGELOG.md`。
+- 更新 `DAILY_WORK_LOG.md`。
+- 更新 `PROJECT_STATUS.md` 中的当前状态。
+- 如影响公开站点，更新 `hugo-site/data/changelog.yaml`。
+- 运行 `hugo --cleanDestinationDir --minify`，必须 0 errors。
+- `rsync -av hugo-site/public/ ./` 到仓库根目录。
+- 提交后创建 Git tag。
+
+## 回退方式
+
+统一使用非破坏式回退：
+
+```bash
+git checkout VERSION -- .
+git commit -m "Rollback site to VERSION"
+git push origin master
+```
+
+不要使用 force push 回退，除非用户明确要求。

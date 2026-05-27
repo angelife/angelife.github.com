@@ -65,6 +65,12 @@ summaryLength = 120
   identifier = "search"
   name = "搜索"
   url = "/search/"
+  weight = 80
+
+[[menu.main]]
+  identifier = "changelog"
+  name = "更新"
+  url = "/changelog/"
   weight = 70
 
 [markup]

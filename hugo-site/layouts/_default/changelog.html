@@ -1,0 +1,51 @@
+{{ define "main" }}
+<article class="post-single changelog-page">
+  <header class="post-header">
+    {{ partial "breadcrumbs.html" . }}
+    <h1 class="post-title">{{ .Title }}</h1>
+    {{ with .Summary }}
+    <div class="post-description">{{ . }}</div>
+    {{ end }}
+  </header>
+
+  {{ with .Content }}
+  <div class="post-content">
+    {{ . }}
+  </div>
+  {{ end }}
+
+  <section class="changelog-list" aria-label="site changelog">
+    {{ range site.Data.changelog }}
+    <article class="changelog-entry">
+      <header>
+        <p class="changelog-version">{{ .version }}</p>
+        <h2>{{ .title }}</h2>
+        <p class="changelog-meta">{{ .date }} · tag: {{ .tag }} · commit: {{ .commit }}</p>
+      </header>
+
+      {{ with .summary }}
+      <ul>
+        {{ range . }}
+        <li>{{ . }}</li>
+        {{ end }}
+      </ul>
+      {{ end }}
+
+      {{ with .changed }}
+      <p class="changelog-label">影响页面</p>
+      <ul class="changelog-links">
+        {{ range . }}
+        <li><a href="{{ . }}">{{ . }}</a></li>
+        {{ end }}
+      </ul>
+      {{ end }}
+
+      {{ with .rollback_note }}
+      <p class="changelog-label">回退说明</p>
+      <pre><code>{{ . }}</code></pre>
+      {{ end }}
+    </article>
+    {{ end }}
+  </section>
+</article>
+{{ end }}

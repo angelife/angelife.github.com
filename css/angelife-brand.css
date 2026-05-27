@@ -987,3 +987,51 @@ article.post-single > .entry-cover figcaption {
   color: var(--al-muted);
   line-height: 1.7;
 }
+
+.changelog-list {
+  margin-top: 2rem;
+}
+
+.changelog-entry {
+  margin: 0 0 2rem;
+  padding: 0 0 2rem;
+  border-bottom: 1px solid rgba(15, 30, 55, 0.12);
+}
+
+.changelog-entry:last-child {
+  border-bottom: 0;
+}
+
+.changelog-version,
+.changelog-label {
+  margin: 0 0 0.35rem;
+  color: var(--al-muted);
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+}
+
+.changelog-entry h2 {
+  margin: 0 0 0.5rem;
+  color: var(--al-ink);
+  font-family: "Songti SC", "STSong", "Noto Serif CJK SC", serif;
+  font-size: 1.55rem;
+  line-height: 1.35;
+}
+
+.changelog-meta {
+  margin: 0 0 1rem;
+  color: #7a8494;
+  font-size: 0.9rem;
+}
+
+.changelog-entry ul {
+  padding-left: 1.25rem;
+}
+
+.changelog-links {
+  margin-top: 0.2rem;
+}
+
+.changelog-entry pre {
+  white-space: pre-wrap;
+}
