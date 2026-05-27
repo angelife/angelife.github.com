@@ -813,3 +813,118 @@ main.main:has(.home-page) {
     border-radius: 14px;
   }
 }
+
+article.post-single {
+  max-width: 780px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+article.post-single .post-header,
+article.post-single .post-content,
+article.post-single .post-footer,
+article.post-single > .entry-cover {
+  max-width: 780px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+article.post-single .post-header {
+  margin-bottom: 1.75rem;
+}
+
+article.post-single .post-title {
+  color: var(--al-ink);
+  font-family: "Songti SC", "STSong", "Noto Serif CJK SC", serif;
+  font-size: clamp(2.2rem, 4vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+article.post-single .post-description {
+  margin-top: 0.7rem;
+  color: var(--al-muted);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+article.post-single .post-meta {
+  margin-top: 0.85rem;
+  color: #7a8494;
+  font-size: 0.9rem;
+}
+
+article.post-single .post-content {
+  color: #202938;
+  font-size: 18px;
+  letter-spacing: 0.01em;
+  line-height: 1.9;
+}
+
+article.post-single .post-content p,
+article.post-single .post-content figure,
+article.post-single .post-content ul,
+article.post-single .post-content ol {
+  margin-bottom: 1.2em;
+}
+
+article.post-single .post-content h2 {
+  margin-top: 2.6em;
+  margin-bottom: 0.85em;
+  color: var(--al-ink);
+  font-family: "Songti SC", "STSong", "Noto Serif CJK SC", serif;
+  font-size: 1.55rem;
+  line-height: 1.35;
+}
+
+article.post-single .post-content h3 {
+  margin-top: 2.2em;
+  margin-bottom: 0.75em;
+  color: var(--al-ink);
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
+article.post-single .post-content blockquote {
+  margin: 1.5em 0;
+  padding: 0.2rem 0 0.2rem 1.05rem;
+  border-left: 3px solid var(--phase-metal-accent);
+  color: #4d5969;
+  background: transparent;
+}
+
+article.post-single .post-content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.3rem auto;
+  border-radius: 12px;
+}
+
+article.post-single > .entry-cover {
+  margin-bottom: 2rem;
+}
+
+article.post-single > .entry-cover img {
+  width: 100%;
+  max-height: 480px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+article.post-single > .entry-cover figcaption {
+  color: #7a8494;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 720px) {
+  article.post-single .post-title {
+    font-size: clamp(1.8rem, 8vw, 2rem);
+    line-height: 1.24;
+  }
+
+  article.post-single .post-content {
+    font-size: 17px;
+    line-height: 1.86;
+  }
+}

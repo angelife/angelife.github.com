@@ -52,6 +52,11 @@
 
 {{- $pages := union .RegularPages .Sections }}
 
+{{- if and (eq .Kind "section") (eq .RelPermalink "/series/ai-bu-yin/") }}
+{{- $firePosts := where site.RegularPages "Params.categories" "intersect" (slice "火·AI") }}
+{{- $pages = union $pages $firePosts }}
+{{- end }}
+
 {{- if .IsHome }}
 {{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
 {{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true"  }}
