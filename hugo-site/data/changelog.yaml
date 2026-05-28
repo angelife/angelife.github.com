@@ -1,3 +1,18 @@
+- version: "v0.6.5"
+  date: "2026-05-28"
+  title: "发布高速公路与泥巴地文章"
+  commit: "以 tag v0.6.5 指向的 release commit 为准"
+  tag: "v0.6.5"
+  summary:
+    - "新增文章《高速公路与泥巴地：AI时代的本土化生存》。"
+    - "讨论中国复杂技术环境中的本土化生存策略：法拉利与越野车的比喻、系统韧性、身份偷换陷阱、三层判断框架。"
+    - "封面状态：prompt_ready，待真实封面图生成后接入。"
+    - "继续使用本地 Hugo 生成、rsync 到仓库根目录、commit、push、tag 的固定发布流程。"
+  changed:
+    - "/posts/highway-and-muddy-road-ai-localization/"
+    - "/changelog/"
+  rollback_note: "可通过 Git tag v0.6.5 回退到本版本：git checkout v0.6.5 -- . && git commit -m 'Rollback site to v0.6.5' && git push origin master"
+
 - version: "v0.6.4"
   date: "2026-05-28"
   title: "接入付费墙与迷雾墙文章封面图"

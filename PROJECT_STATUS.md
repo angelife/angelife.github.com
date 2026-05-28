@@ -10,10 +10,10 @@
 
 ## 当前版本状态
 
-- 当前版本：v0.6.4
-- 最新 commit：提交后以 tag `v0.6.4` 指向的 release commit 为准
-- 最新 tag：v0.6.4
-- 线上状态：本轮发布《付费墙与迷雾墙：AI时代真正昂贵的是判断》；本地 Hugo 构建和 rsync 已完成，push 后等待 GitHub Pages 线上刷新。
+- 当前版本：v0.6.5
+- 最新 commit：提交后以 tag `v0.6.5` 指向的 release commit 为准
+- 最新 tag：v0.6.5
+- 线上状态：本轮发布《高速公路与泥巴地：AI时代的本土化生存》；封面状态 prompt_ready；本地 Hugo 构建和 rsync 已完成，push 后等待 GitHub Pages 线上刷新。
 
 ## 版本号规则
 
