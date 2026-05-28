@@ -10,9 +10,9 @@
 
 ## 当前版本状态
 
-- 当前版本：v0.6.17
-- 最新 commit：提交后以 tag v0.6.17 指向的 release commit 为准
-- 最新 tag：v0.6.17
+- 当前版本：v0.6.18
+- 最新 commit：提交后以 tag v0.6.18 指向的 release commit 为准
+- 最新 tag：v0.6.18
 - 线上状态：关于页已更新，反映当前真实建站工作流（剑妈总编 → 蝉师傅 → Hermes → Reasonix → Hugo → rsync → Git → GitHub Pages）。Obsidian 和 Codex 不再被过度描述。
 
 ## 版本号规则
@@ -41,9 +41,11 @@
 - AI 时代经验瓶颈文章上线。
 - `publish.sh` 已保护根目录治理文档，避免后续 `rsync --delete` 误删。
 - About 页更新，反映当前真实建站工作流。
+- 受控发布脚本 `tools/angelife-release` 已创建。
 
 ## 进行中
 
+- 受控发布脚本已写入，后续发布必须使用 `tools/angelife-release`。
 - 评论正式启用，等待 GitHub Discussions / giscus 参数。
 - 公开 changelog 持续维护。
 - 内部日志持续维护。
@@ -72,6 +74,9 @@
 - 不要忘记每轮更新日志和创建 Git tag。
 - giscus 未配置前不应显示评论区。
 - 不要切换发布方式。
+- 正式发布必须使用 `tools/angelife-release` 脚本。
+- Reasonix 不直接裸跑 git push/tag。
+- Hermes 不自行拼接发布流程。
 - 本轮新文章为正式发布内容，不进入 `_incoming/`。
 - 当前版本号规则为 SemVer，本轮使用 `v0.6.2`，不是日期流水版本。
 

@@ -1,3 +1,20 @@
+- version: "v0.6.18"
+  date: "2026-05-29"
+  title: "新增受控发布脚本 tools/angelife-release"
+  commit: "以 tag v0.6.18 指向的 release commit 为准"
+  tag: "v0.6.18"
+  summary:
+    - "新增 tools/angelife-release 受控发布脚本，统一执行正式发布流程。"
+    - "以后 Hermes 或 Reasonix 不应自由发挥发布命令，而应在用户授权后调用这个脚本。"
+    - "Reasonix 不直接裸跑 git push/tag。"
+    - "Hermes 不自行拼接发布流程。"
+    - "发布权交给用户授权 + 固定脚本。"
+    - "写入 AI_WORK_RULES.md、BUILD_HANDOFF.md、PROJECT_STATUS.md。"
+    - "纯治理 + 脚本新增轮，无模板/CSS/内容变更。"
+  changed:
+    - "/changelog/"
+  rollback_note: "可通过 Git tag v0.6.18 回退到本版本：git checkout v0.6.18 -- . && git commit -m 'Rollback site to v0.6.18' && git push origin master"
+
 - version: "v0.6.17"
   date: "2026-05-29"
   title: "更新 about 页以反映当前真实建站工作流"

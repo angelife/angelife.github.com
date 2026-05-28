@@ -1,5 +1,44 @@
 # angelife 每日工作日志
 
+## 2026-05-29｜v0.6.18｜新增受控发布脚本 tools/angelife-release
+
+### 今天做了什么
+
+- 创建 `tools/angelife-release` 受控发布脚本。
+- 脚本内部自动执行：目录检查 → 分支检查 → Hugo 清洁构建 → rsync → 精准 git add → commit → tag → push。
+- 明确禁止 `git add .`、禁止提交 `_incoming/` 和 `.reasonix/`。
+- 写入 AI_WORK_RULES.md：受控发布脚本规则 + Reasonix/Hermes 发布约束。
+- 更新 BUILD_HANDOFF.md：新增受控发布脚本节，标注版本号 v0.6.18。
+- 更新 PROJECT_STATUS.md：版本号、已完成项、进行中项、注意事项。
+- 更新 SITE_CHANGELOG.md、DAILY_WORK_LOG.md、hugo-site/data/changelog.yaml。
+- `chmod +x tools/angelife-release` 已执行。
+
+### 修改文件
+
+- 新增：`tools/angelife-release` — 受控发布脚本
+- `AI_WORK_RULES.md` — 新增受控发布脚本规则 + 硬性禁止新增
+- `BUILD_HANDOFF.md` — 版本号 v0.6.18 + 新增受控发布脚本说明
+- `PROJECT_STATUS.md` — 版本号更新 + 新增受控脚本相关条目
+- `SITE_CHANGELOG.md` — 新增 v0.6.18 版本日志
+- `DAILY_WORK_LOG.md` — 新增今日日志
+- `hugo-site/data/changelog.yaml` — 新增 v0.6.18 公开日志
+
+### 核心规则变更
+
+以后正式发布优先使用 `tools/angelife-release`：
+- Reasonix 不直接裸跑 git push/tag。
+- Hermes 不自行拼接发布流程。
+- 发布权交给用户授权 + 固定脚本。
+- Hermes 只负责代跑脚本，不得自行 patch 或修复 Reasonix 输出。
+
+### 构建状态
+
+待执行 Hugo 构建并通过脚本发布。
+
+### 版本号
+
+v0.6.18
+
 ## 2026-05-29｜v0.6.17｜更新 about 页以反映当前真实建站工作流
 
 ### 今天做了什么

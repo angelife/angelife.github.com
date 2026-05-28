@@ -2,6 +2,63 @@
 
 本文件用于 AI 接手时查看详细版本演化。公开版本摘要见 `/changelog/` 和 `hugo-site/data/changelog.yaml`。
 
+## v0.6.18｜新增受控发布脚本 tools/angelife-release
+
+日期：2026-05-29
+执行者：Reasonix
+发布方式：受控发布脚本 tools/angelife-release
+commit：提交后以 tag `v0.6.18` 指向的 release commit 为准
+tag：v0.6.18
+
+### 本次目标
+
+- 新增 `tools/angelife-release` 受控发布脚本，统一执行 angelife 项目的正式发布流程。
+- 以后 Hermes 或 Reasonix 不应自由发挥发布命令，而应在用户授权后调用这个脚本。
+- 写入项目治理文档：Reasonix 不直接裸跑 git push/tag，Hermes 不自行拼接发布流程。
+- 更新所有治理文档版本号至 v0.6.18。
+
+### 修改文件
+
+- 新增：`tools/angelife-release` — 受控发布脚本
+- `AI_WORK_RULES.md` — 新增受控发布脚本规则 + 硬性禁止新增
+- `BUILD_HANDOFF.md` — 版本号 v0.6.18 + 新增受控发布脚本说明
+- `PROJECT_STATUS.md` — 版本号更新 + 新增受控脚本相关条目
+- `SITE_CHANGELOG.md` — 新增 v0.6.18 版本日志
+- `DAILY_WORK_LOG.md` — 新增今日日志
+- `hugo-site/data/changelog.yaml` — 新增 v0.6.18 公开日志
+
+### 脚本功能
+
+`tools/angelife-release <version> '<commit message>'`
+
+1. 检查当前目录必须是 `/Users/macos/angelife.github.com`。
+2. 检查当前分支必须是 master。
+3. 检查 version 参数不能为空。
+4. 检查 commit message 参数不能为空。
+5. 禁止 `git add .`（通过精准逐个添加替代）。
+6. 禁止提交 `_incoming/`。
+7. 禁止提交 `.reasonix/`。
+8. 执行 Hugo 清洁构建：`hugo --gc --cleanDestinationDir --minify -s hugo-site`。
+9. rsync Hugo 产物到仓库根目录。
+10. 精准 git add 本轮修改内容，显式排除 `_incoming/` 和 `.reasonix/`。
+11. git commit 使用传入 commit message。
+12. git tag 使用传入 version。
+13. git push origin master。
+14. git push origin <version>。
+15. 输出收工确认信息。
+
+### 构建与发布
+
+- 纯治理 + 脚本新增轮，Hugo 构建通过脚本自动执行。
+- `tools/angelife-release` 已 chmod +x。
+
+### 线上验证
+
+- 无模板/CSS/内容变更，纯治理文件 + 新增脚本。
+- 线上站点不受影响。
+
+## v0.6.17｜更新 about 页以反映当前真实建站工作流
+
 ## v0.6.16｜固化 Hermes / Reasonix 手机远控分工规则
 
 日期：2026-05-28

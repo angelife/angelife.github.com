@@ -12,9 +12,24 @@
 4. `git push origin master`。
 5. 创建并推送 Git tag，作为可回退备份点。
 
-当前最新版本：`v0.6.17`。
+当前最新版本：`v0.6.18`。
 
-标准命令：
+## 受控发布脚本（v0.6.18+）
+
+从 v0.6.18 起，正式发布必须使用受控发布脚本：
+
+```bash
+cd /Users/macos/angelife.github.com
+./tools/angelife-release v0.6.18 'chore: add controlled release workflow'
+```
+
+脚本内部自动执行：目录检查 → 分支检查 → Hugo 清洁构建 → rsync → 精准 git add → commit → tag → push。
+
+以后 Hermes 或 Reasonix 不应自由发挥发布命令，而应在用户授权后调用这个脚本。
+
+### 标准命令（手工备选）
+
+仅在无法使用脚本时手工执行：
 
 ```bash
 cd /Users/macos/angelife.github.com/hugo-site

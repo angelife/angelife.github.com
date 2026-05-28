@@ -30,14 +30,54 @@
 - 不准破坏 Kindle 阅读模式的独立输出。Kindle 版是独立阅读输出，不是普通页面的 CSS 隐藏变体。修改 header、footer、baseof、single、list、outputFormats 或导航模板时，必须同时验收普通版和 Kindle 版。不得让 `/kindle/` 或 `/kindle/posts/<slug>/` 输出 PaperMod 普通导航、普通 footer 或桌面站点 chrome。
 
 - Hermes 是手机远程总控和 Telegram 入口。Reasonix 是项目执行工。Hermes 默认不得直接修改项目文件，不得自行 patch，不得自行扩大 git add，不得擅自 commit/tag/push。当 Reasonix 在 headless/MCP 场景下无法执行 shell 命令时，Hermes 可以作为 terminal 手臂代跑 shell，但必须严格执行 Reasonix 明确列出的命令，不得自由发挥。
+- 正式发布必须使用 `tools/angelife-release` 脚本，Reasonix 不直接裸跑 git push/tag，Hermes 不自行拼接发布流程。
 
 ## 固定发布流程
 
-继续使用：
+继续使用受控发布脚本：
+
+```bash
+./tools/angelife-release <version> '<commit message>'
+```
+
+等价于以下标准流程：
 
 ```text
 本地 Hugo 生成 -> rsync 到仓库根目录 -> commit -> push -> git tag
 ```
+
+## 受控发布脚本规则（v0.6.18+）
+
+- 以后正式发布优先使用 `tools/angelife-release`。
+- Reasonix 不直接裸跑 `git push` / `git tag`。
+- Hermes 不自行拼接发布流程。
+- 发布权交给用户授权 + 固定脚本。
+- Hermes 只负责代跑脚本，不得自行 patch 或修复 Reasonix 输出。
+- Reasonix 输出修改后如需代跑，应直接输出 `./tools/angelife-release <version> '<commit message>'` 命令。
+
+调用方式：
+
+```bash
+cd /Users/macos/angelife.github.com
+./tools/angelife-release v0.6.18 'chore: add controlled release workflow'
+```
+
+脚本内部已实现：
+1. 检查当前目录必须是 `/Users/macos/angelife.github.com`。
+2. 检查当前分支必须是 master。
+3. 检查 version 参数不能为空。
+4. 检查 commit message 参数不能为空。
+5. 禁止 `git add .`（通过精准逐个添加替代）。
+6. 禁止提交 `_incoming/`。
+7. 禁止提交 `.reasonix/`。
+8. 执行 Hugo 清洁构建：`hugo --gc --cleanDestinationDir --minify -s hugo-site`。
+9. rsync Hugo 产物到仓库根目录。
+10. 精准 git add 本轮修改内容，显式排除 `_incoming/` 和 `.reasonix/`。
+11. git commit 使用传入 commit message。
+12. git tag 使用传入 version。
+13. git push origin master。
+14. git push origin <version>。
+15. 输出收工确认信息。
 
 ## 版本号规则
 
