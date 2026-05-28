@@ -1,3 +1,13 @@
+- version: "v0.6.21"
+  date: "2026-05-29"
+  title: "第二阶段：angelife-release --yes 非交互参数"
+  commit: "尚未发布"
+  tag: "v0.6.21"
+  summary:
+    - "tools/angelife-release 新增 --yes 参数，跳过确认提示。"
+    - "适用于 Hermes Gateway Telegram 非交互调用。"
+    - "本阶段尚未发布、未 commit、未 push。"
+
 - version: "v0.6.20"
   date: "2026-05-29"
   title: "第一阶段：新增工具脚本套件"

@@ -2,6 +2,30 @@
 
 本文件用于 AI 接手时查看详细版本演化。公开版本摘要见 `/changelog/` 和 `hugo-site/data/changelog.yaml`。
 
+## v0.6.21｜第二阶段：angelife-release --yes 非交互参数
+
+日期：2026-05-29
+执行者：Hermes（直接）
+发布方式：尚未发布
+
+### 本次目标
+
+- tools/angelife-release 新增 `--yes` 参数，跳过确认提示
+- 适用于 Hermes Gateway 通过 Telegram 管道调用
+- 更新治理文档
+
+### 修改文件
+
+- `tools/angelife-release` — 新增 `--yes` 参数解析 + 跳过所有 read
+- `AI_WORK_RULES.md` — 白名单 + 用法说明
+- `BUILD_HANDOFF.md` — 用法 + --yes 说明
+- `PROJECT_STATUS.md` — 版本号
+- `DAILY_WORK_LOG.md`
+- `SITE_CHANGELOG.md`
+- `hugo-site/data/changelog.yaml`
+
+### 本阶段不发布、不 commit、不 push
+
 ## v0.6.20｜第一阶段：新增工具脚本套件
 
 日期：2026-05-29

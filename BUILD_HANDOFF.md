@@ -32,11 +32,19 @@
 ```bash
 cd /Users/macos/angelife.github.com
 ./tools/angelife-release v0.6.18 'chore: add controlled release workflow'
+./tools/angelife-release --yes v0.6.21 'chore: update release'
 ```
 
 脚本内部自动执行：目录检查 → 分支检查 → Hugo 清洁构建 → rsync → 精准 git add → commit → tag → push。
 
 以后 Hermes 或 Reasonix 不应自由发挥发布命令，而应在用户授权后调用这个脚本。
+
+> **远程 / 非交互调用**：使用 `--yes` 参数跳过所有确认提示：
+> ```bash
+> cd /Users/macos/angelife.github.com
+> ./tools/angelife-release --yes v0.6.21 'chore: update release'
+> ```
+> 用于 Hermes Gateway 通过 Telegram 管道调用，避免卡在 `read` 等待输入。
 
 ### 标准命令（手工备选）
 

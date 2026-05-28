@@ -37,7 +37,7 @@
 继续使用受控发布脚本：
 
 ```bash
-./tools/angelife-release <version> '<commit message>'
+./tools/angelife-release [--yes] <version> '<commit message>'
 ```
 
 等价于以下标准流程：
@@ -45,6 +45,8 @@
 ```text
 本地 Hugo 生成 -> rsync 到仓库根目录 -> commit -> push -> git tag
 ```
+
+使用 `--yes` 可跳过两次确认提示，用于 Hermes 远程非交互发布（如 Telegram 管道调用）。
 
 ## 受控发布脚本规则（v0.6.18+）
 
@@ -177,7 +179,11 @@ cd /Users/macos/angelife.github.com
 
 手机 Telegram → Hermes 总控 → terminal → reasonix run → Reasonix 执行 → Hermes 按 Reasonix 明确命令代跑 shell → Hugo 构建 → rsync → 精准 git add → commit → tag → push
 
-Hermes 代跑 shell 白名单：\n\npwd、ls、cat、grep、rg、git status、git diff、git log、hugo --gc --cleanDestinationDir --minify -s hugo-site、rsync -av hugo-site/public/ ./、精准 git add <文件列表>、git commit、git tag、git push、./tools/angelife-status、./tools/angelife-check、./tools/angelife-cost-log
+
+
+Hermes 代跑 shell 白名单：
+
+pwd、ls、cat、grep、rg、git status、git diff、git log、hugo --gc --cleanDestinationDir --minify -s hugo-site、rsync -av hugo-site/public/ ./、精准 git add <文件列表>、git commit、git tag、git push、./tools/angelife-status、./tools/angelife-check、./tools/angelife-cost-log
 
 任何超出白名单的命令必须先汇报并等待用户确认。
 

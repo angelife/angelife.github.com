@@ -1,5 +1,26 @@
 # angelife 每日工作日志
 
+## 2026-05-29｜v0.6.21｜第二阶段：angelife-release --yes 非交互参数
+
+### 今天做了什么（第二阶段，未发布）
+
+- tools/angelife-release：新增 `--yes` 参数，跳过两次确认提示
+- 非交互用法：`./tools/angelife-release --yes v0.6.21 "chore: message"`
+- 适用于 Hermes Gateway 通过 Telegram 管道调用（避免卡 read）
+- 更新 AI_WORK_RULES.md：白名单 + 用法说明
+- 更新 BUILD_HANDOFF.md：用法 + --yes 说明
+- 更新 PROJECT_STATUS.md：版本号 + 已完成列表
+- 更新 DAILY_WORK_LOG.md、SITE_CHANGELOG.md、hugo-site/data/changelog.yaml
+- 脚本已 chmod +x（执行位保留）
+
+### 当日 AI 成本
+
+- 模型：deepseek-v4-flash（Hermes 直接执行）
+- 估算 token：未获取精确值
+- 费用估算：flash 档位，规模小
+
+### 本阶段不发布、不 commit、不 push
+
 ## 2026-05-29｜v0.6.20｜第一阶段：新增工具脚本套件
 
 ### 今天做了什么（第一阶段，未发布）

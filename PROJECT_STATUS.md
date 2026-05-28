@@ -42,7 +42,7 @@
 - `publish.sh` 已保护根目录治理文档，避免后续 `rsync --delete` 误删。
 - About 页更新，反映当前真实建站工作流。
 - 受控发布脚本 `tools/angelife-release` 已创建。
-- 受控发布脚本套件 `tools/angelife-{status,check,cost-log,release}` 已创建。
+- 受控发布脚本套件 `tools/angelife-{status,check,cost-log,release}` 已创建（含 `--yes` 非交互参数）
 - AI 消耗记录制度已加入项目治理体系。
 
 ## 进行中

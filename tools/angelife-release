@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # angelife 受控发布脚本
 # 用法: ./tools/angelife-release <version> '<commit message>'
+#        ./tools/angelife-release --yes <version> '<commit message>'
 #
 # 统一执行 angelife 项目的正式发布流程。
 # 以后 Hermes 或 Reasonix 不应自由发挥发布命令，
@@ -8,6 +9,7 @@
 #
 # 示例:
 #   ./tools/angelife-release v0.6.18 'chore: add controlled release script'
+#   ./tools/angelife-release --yes v0.6.21 'chore: update release'    # 跳过确认
 #
 set -euo pipefail
 
@@ -26,11 +28,19 @@ log_warn()  { echo -e "${YELLOW}[WARN]${NC}  $*"; }
 log_error() { echo -e "${RED}[ERROR]${NC} $*"; }
 
 # ──────────────────────────────────────────────
-# 1. 检查参数
+# 1. 检查参数（支持 --yes 跳过确认）
 # ──────────────────────────────────────────────
+YES_FLAG=false
+
+if [ "${1:-}" = "--yes" ]; then
+    YES_FLAG=true
+    shift
+fi
+
 if [ $# -ne 2 ]; then
-    log_error "用法: ./tools/angelife-release <version> '<commit message>'"
+    log_error "用法: ./tools/angelife-release [--yes] <version> '<commit message>'"
     log_error "示例: ./tools/angelife-release v0.6.18 'chore: add controlled release script'"
+    log_error "      ./tools/angelife-release --yes v0.6.21 'chore: update'"
     exit 1
 fi
 
@@ -103,7 +113,13 @@ echo -e "  分支:       $CURRENT_BRANCH"
 echo -e "${CYAN}═══════════════════════════════════════════════════════${NC}"
 echo ""
 echo -e "是否确认发布？(y/N)"
-read -r CONFIRM
+if [ "$YES_FLAG" = true ]; then
+    echo ""
+    echo -e "${YELLOW}  --yes 模式：自动确认${NC}"
+    CONFIRM="y"
+else
+    read -r CONFIRM
+fi
 if [ "$CONFIRM" != "y" ] && [ "$CONFIRM" != "Y" ]; then
     log_info "已取消发布"
     exit 0
@@ -119,10 +135,14 @@ if [ -f "./tools/angelife-check" ]; then
         log_ok "前置检查通过"
     else
         log_warn "前置检查有失败项，是否继续？(y/N)"
-        read -r CHECK_CONFIRM
-        if [ "$CHECK_CONFIRM" != "y" ] && [ "$CHECK_CONFIRM" != "Y" ]; then
-            log_info "已取消发布"
-            exit 0
+        if [ "$YES_FLAG" = true ]; then
+            CONFIRM="y"
+        else
+            read -r CHECK_CONFIRM
+            if [ "$CHECK_CONFIRM" != "y" ] && [ "$CHECK_CONFIRM" != "Y" ]; then
+                log_info "已取消发布"
+                exit 0
+            fi
         fi
     fi
 fi
