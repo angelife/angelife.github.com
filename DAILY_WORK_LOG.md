@@ -32,6 +32,24 @@ v0.6.23
 - 精确 token：未获取
 - 费用估算：flash 档位，中等规模
 
+## 2026-05-29｜v0.6.23｜发布新文章：自费蒸馏
+
+### 今天做了什么
+
+- 发布文章《自费蒸馏：我们正在花钱训练替代自己的人》
+- slug: `ai-self-distillation-electronic-donkey`，分类：AI时代
+- 封面图已接入：`cover.png`（image_ready）
+- Hugo 223 pages，361 static files，0 errors
+- 已通过受控流程发布 v0.6.23
+
+### 修改文件
+
+- 文章 + 封面图 + 治理文档 + changelog.yaml
+
+### 版本号
+
+v0.6.23
+
 ## 2026-05-29｜v0.6.22｜发布新文章：能干的驴
 
 ### 今天做了什么
