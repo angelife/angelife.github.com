@@ -1,3 +1,19 @@
+- version: "v0.6.6"
+  date: "2026-05-28"
+  title: "接入高速公路与泥巴地文章封面图"
+  commit: "以 tag v0.6.6 指向的 release commit 为准"
+  tag: "v0.6.6"
+  summary:
+    - "为《高速公路与泥巴地：AI时代的本土化生存》接入 ChatGPT 生成的封面图。"
+    - "封面图路径：hugo-site/static/images/posts/highway-and-muddy-road-ai-localization/cover.png。"
+    - "更新文章 front matter 加入 cover 字段：image、alt、caption。"
+    - "视觉资产状态更新为 cover_status: image_ready。"
+    - "继续使用本地 Hugo 生成、rsync 到仓库根目录、commit、push、tag 的固定发布流程。"
+  changed:
+    - "/posts/highway-and-muddy-road-ai-localization/"
+    - "/changelog/"
+  rollback_note: "可通过 Git tag v0.6.6 回退到本版本：git checkout v0.6.6 -- . && git commit -m 'Rollback site to v0.6.6' && git push origin master"
+
 - version: "v0.6.5"
   date: "2026-05-28"
   title: "发布高速公路与泥巴地文章"

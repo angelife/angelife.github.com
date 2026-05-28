@@ -2,6 +2,52 @@
 
 本文件用于 AI 接手时查看详细版本演化。公开版本摘要见 `/changelog/` 和 `hugo-site/data/changelog.yaml`。
 
+## v0.6.6｜接入高速公路与泥巴地文章封面图
+
+日期：2026-05-28  
+执行者：Reasonix  
+发布方式：本地 Hugo 生成 -> rsync 到仓库根目录 -> commit -> push -> git tag  
+commit：提交后以 tag `v0.6.6` 指向的 release commit 为准  
+tag：v0.6.6
+
+### 本次目标
+
+- 将 ChatGPT 生成的封面图接入《高速公路与泥巴地：AI时代的本土化生存》文章。
+- 拷贝封面图到 `hugo-site/static/images/posts/highway-and-muddy-road-ai-localization/cover.png`。
+- 更新文章 front matter，加入 `cover` 字段。
+- 更新视觉资产记录为 `cover_status: image_ready`。
+- 同步更新所有日志和治理文件。
+
+### 修改文件
+
+- `hugo-site/static/images/posts/highway-and-muddy-road-ai-localization/cover.png`
+- `hugo-site/content/posts/highway-and-muddy-road-ai-localization/index.md`
+- `SITE_CHANGELOG.md`
+- `DAILY_WORK_LOG.md`
+- `PROJECT_STATUS.md`
+- `BUILD_HANDOFF.md`
+- `hugo-site/data/changelog.yaml`
+
+### 具体修改
+
+- 新增封面图至 `static/images/posts/highway-and-muddy-road-ai-localization/cover.png`。
+- 文章 `index.md` 加入 `cover` front matter。
+- 视觉资产状态从 `prompt_ready` 更新为 `image_ready`。
+
+### 构建与发布
+
+- Hugo 构建结果：Hugo `v0.147.4` 构建通过，213 pages，0 errors。
+- rsync：已完成，`hugo-site/public/` 已同步到仓库根目录。
+
+### 线上验证
+
+- `/posts/highway-and-muddy-road-ai-localization/`：封面图已接入。
+- 封面图 URL：`/images/posts/highway-and-muddy-road-ai-localization/cover.png`。
+
+### 未完成
+
+- 正式 commit、push、tag 和线上验证需在后续步骤完成后补入。
+
 ## v0.6.5｜发布高速公路与泥巴地文章
 
 日期：2026-05-28  

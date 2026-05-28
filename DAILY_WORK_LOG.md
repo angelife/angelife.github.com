@@ -1,19 +1,18 @@
 # angelife 每日工作日志
 
-## 2026-05-28｜v0.6.5｜发布高速公路与泥巴地文章
+## 2026-05-28｜v0.6.6｜接入高速公路与泥巴地文章封面图
 
 ### 今天做了什么
 
-- 将用户提供的《高速公路与泥巴地：AI时代的本土化生存》整理为 Hugo 正式文章。
-- 按 slug `highway-and-muddy-road-ai-localization` 创建文章 bundle。
-- 归入 `AI时代`。
-- 添加 `AI工作流`、`本土化`、`国产替代`、`判断力`、`系统韧性`、`不失正见` 标签。
-- 封面状态记录为 `cover_status: prompt_ready`，未写入 front matter cover 字段。
+- 将 ChatGPT 生成的封面图接入已发布的《高速公路与泥巴地：AI时代的本土化生存》。
+- 拷贝封面图到 `hugo-site/static/images/posts/highway-and-muddy-road-ai-localization/cover.png`。
+- 更新 front matter 接入 `cover` 字段：图片路径、alt 文本、caption。
+- 更新视觉资产记录为 `cover_status: image_ready`。
 - 更新公开 changelog、内部详细日志、每日工作日志、交接日志和项目状态文件。
 
 ### 做到什么程度
 
-文章已进入正式发布流，作为公开长文发布，不放入 `_incoming/`。
+文章封面图已正式接入，作为 `v0.6.6` 发布。
 
 ### 遇到什么问题
 
@@ -21,19 +20,19 @@
 
 ### 已解决什么
 
-- 按既定流程完成构建、rsync、日志更新。
+- 封面图已成功部署，Hugo 构建 213 pages, 0 errors。
 
 ### 未完成什么
 
 - commit、push、tag 和线上验证在后续步骤完成后补入最终收工报告。
-- 封面图待 ChatGPT 生成后接入。
 
 ### 下一个 AI 应该从哪里接手
 
-先读 `PROJECT_STATUS.md` 和 `AI_WORK_RULES.md`。本轮文章已经正式发布，不需要再从 `_incoming/` 处理。
+先读 `PROJECT_STATUS.md` 和 `AI_WORK_RULES.md`。本轮封面图已接入发布，`_incoming/` 不纳入提交范围。
 
 ### 修改文件
 
+- `hugo-site/static/images/posts/highway-and-muddy-road-ai-localization/cover.png`
 - `hugo-site/content/posts/highway-and-muddy-road-ai-localization/index.md`
 - `SITE_CHANGELOG.md`
 - `DAILY_WORK_LOG.md`
@@ -43,17 +42,19 @@
 
 ### 构建状态
 
-Hugo `v0.147.4` 构建通过，213 pages，0 errors。
+Hugo `v0.147.4` 构建通过，213 pages，0 errors。静态文件 358。
 
 ### 发布状态
 
-已按固定方式执行 rsync，根目录静态产物已更新。`_incoming/` 不纳入提交范围。
+已按固定方式执行 rsync，根目录静态产物已更新。
 
 ### commit / tag / 版本号
 
-- 版本号：v0.6.5
-- commit：提交后以 tag `v0.6.5` 指向的 release commit 为准
-- tag：v0.6.5
+- 版本号：v0.6.6
+- commit：提交后以 tag `v0.6.6` 指向的 release commit 为准
+- tag：v0.6.6
+
+## 2026-05-28｜v0.6.5｜发布高速公路与泥巴地文章
 
 ## 2026-05-28｜v0.6.4｜接入付费墙与迷雾墙文章封面图
 
