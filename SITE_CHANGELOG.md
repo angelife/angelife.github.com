@@ -2,6 +2,20 @@
 
 本文件用于 AI 接手时查看详细版本演化。公开版本摘要见 `/changelog/` 和 `hugo-site/data/changelog.yaml`。
 
+## v0.6.29｜更新 about 页面工作流
+
+日期：2026-05-29
+执行者：Hermes
+发布方式：直接操作
+变更：
+- 更新 `hugo-site/content/about/index.md` — 由剑妈提供
+- 明确文章和图片由 ChatGPT / 剑妈生成
+- 明确 Hermes 只负责落盘、接图、构建、rsync、精确 git add、commit/tag/push
+- 明确 DeepSeek 只是低成本模型能力
+- 明确固定发布流程
+- 明确微信认证文件保护
+- 版本从 v0.6.28 顺延至 v0.6.29
+
 ## v0.6.27｜新增 Hermes 省 Token 执行规则
 
 日期：2026-05-29

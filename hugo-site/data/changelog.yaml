@@ -1,3 +1,16 @@
+- version: "v0.6.29"
+  date: "2026-05-29"
+  title: "更新 about 页面工作流"
+  commit: "提交后以 tag v0.6.29 指向的 release commit 为准"
+  tag: "v0.6.29"
+  summary:
+    - "更新 about 页面，明确文章和图片由 ChatGPT / 剑妈生成，Hermes 只负责落盘构建发布。"
+    - "明确 DeepSeek 为低成本模型能力。"
+    - "明确固定发布流程和微信认证文件保护。"
+  changed:
+    - "/about/"
+    - "/changelog/"
+
 - version: "v0.6.28"
   date: "2026-05-29"
   title: "微信认证文件保护规则"
