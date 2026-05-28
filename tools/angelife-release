@@ -1,0 +1,239 @@
+#!/usr/bin/env bash
+# angelife 受控发布脚本
+# 用法: ./tools/angelife-release <version> '<commit message>'
+#
+# 统一执行 angelife 项目的正式发布流程。
+# 以后 Hermes 或 Reasonix 不应自由发挥发布命令，
+# 而应在用户授权后调用这个脚本。
+#
+# 示例:
+#   ./tools/angelife-release v0.6.18 'chore: add controlled release script'
+#
+set -euo pipefail
+
+# ──────────────────────────────────────────────
+# 0. 颜色定义
+# ──────────────────────────────────────────────
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+CYAN='\033[0;36m'
+NC='\033[0m' # No Color
+
+log_info()  { echo -e "${CYAN}[INFO]${NC}  $*"; }
+log_ok()    { echo -e "${GREEN}[OK]${NC}    $*"; }
+log_warn()  { echo -e "${YELLOW}[WARN]${NC}  $*"; }
+log_error() { echo -e "${RED}[ERROR]${NC} $*"; }
+
+# ──────────────────────────────────────────────
+# 1. 检查参数
+# ──────────────────────────────────────────────
+if [ $# -ne 2 ]; then
+    log_error "用法: ./tools/angelife-release <version> '<commit message>'"
+    log_error "示例: ./tools/angelife-release v0.6.18 'chore: add controlled release script'"
+    exit 1
+fi
+
+VERSION="$1"
+COMMIT_MESSAGE="$2"
+
+# 检查 version 不能为空
+if [ -z "$VERSION" ]; then
+    log_error "version 参数不能为空"
+    exit 1
+fi
+
+# 检查 commit message 不能为空
+if [ -z "$COMMIT_MESSAGE" ]; then
+    log_error "commit message 参数不能为空"
+    exit 1
+fi
+
+# ──────────────────────────────────────────────
+# 2. 检查当前目录
+# ──────────────────────────────────────────────
+EXPECTED_DIR="/Users/macos/angelife.github.com"
+CURRENT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+
+if [ "$CURRENT_DIR" != "$EXPECTED_DIR" ]; then
+    log_error "当前目录不是 $EXPECTED_DIR"
+    log_error "请先 cd $EXPECTED_DIR 再运行本脚本"
+    exit 1
+fi
+
+log_ok "当前目录: $CURRENT_DIR"
+
+# ──────────────────────────────────────────────
+# 3. 检查当前分支
+# ──────────────────────────────────────────────
+CURRENT_BRANCH="$(git rev-parse --abbrev-ref HEAD)"
+if [ "$CURRENT_BRANCH" != "master" ]; then
+    log_error "当前分支是 '$CURRENT_BRANCH'，不是 master"
+    log_error "请先切换到 master 分支: git checkout master"
+    exit 1
+fi
+
+log_ok "当前分支: $CURRENT_BRANCH"
+
+# ──────────────────────────────────────────────
+# 4. 检查是否有未提交的修改（非 _incoming/ / .reasonix/）
+# ──────────────────────────────────────────────
+DIRTY_FILES=$(git status --porcelain | grep -v '^?? _incoming/' | grep -v '^?? .reasonix/' || true)
+if [ -z "$DIRTY_FILES" ]; then
+    log_warn "没有检测到需要提交的修改"
+    log_warn "确认要继续吗？(y/N)"
+    read -r CONFIRM
+    if [ "$CONFIRM" != "y" ] && [ "$CONFIRM" != "Y" ]; then
+        log_info "已取消发布"
+        exit 0
+    fi
+fi
+
+# ──────────────────────────────────────────────
+# 5. 摘要确认
+# ──────────────────────────────────────────────
+echo ""
+echo -e "${CYAN}═══════════════════════════════════════════════════════${NC}"
+echo -e "${CYAN}  angelife 受控发布确认${NC}"
+echo -e "${CYAN}═══════════════════════════════════════════════════════${NC}"
+echo -e "  版本号:     ${GREEN}$VERSION${NC}"
+echo -e "  Commit:     ${GREEN}$COMMIT_MESSAGE${NC}"
+echo -e "  目录:       $CURRENT_DIR"
+echo -e "  分支:       $CURRENT_BRANCH"
+echo -e "${CYAN}═══════════════════════════════════════════════════════${NC}"
+echo ""
+echo -e "是否确认发布？(y/N)"
+read -r CONFIRM
+if [ "$CONFIRM" != "y" ] && [ "$CONFIRM" != "Y" ]; then
+    log_info "已取消发布"
+    exit 0
+fi
+
+# ──────────────────────────────────────────────
+# 6. 执行 Hugo 清洁构建
+# ──────────────────────────────────────────────
+echo ""
+log_info "步骤 1/9: Hugo 清洁构建..."
+HUGO_BIN="${HUGO_BIN:-hugo}"
+if ! command -v "$HUGO_BIN" &>/dev/null; then
+    log_error "找不到 Hugo 可执行文件: $HUGO_BIN"
+    log_error "请设置 HUGO_BIN 环境变量或安装 Hugo"
+    exit 1
+fi
+
+"$HUGO_BIN" --gc --cleanDestinationDir --minify -s hugo-site
+log_ok "Hugo 清洁构建完成"
+
+# ──────────────────────────────────────────────
+# 7. rsync Hugo 产物到仓库根目录
+# ──────────────────────────────────────────────
+log_info "步骤 2/9: rsync Hugo 产物到仓库根目录..."
+rsync -av hugo-site/public/ ./
+log_ok "rsync 完成"
+
+# ──────────────────────────────────────────────
+# 8. 精准 git add（排除 _incoming/ 和 .reasonix/）
+# ──────────────────────────────────────────────
+log_info "步骤 3/9: 精准 git add..."
+
+# 先显示当前状态
+echo ""
+echo -e "${YELLOW}当前 git 状态（已排除 _incoming/ 和 .reasonix/）:${NC}"
+git status --short | grep -v '^?? _incoming/' | grep -v '^?? .reasonix/' || echo "  (无修改)"
+
+echo ""
+
+# 精准添加: 治理文档、hugo 源文件、静态产物
+# 使用 git add 逐个添加改动的文件，而不是 git add .
+CHANGED=$(git diff --name-only && git diff --name-only --cached) || true
+# 去重
+CHANGED=$(echo "$CHANGED" | sort -u | grep -v '^_incoming/' | grep -v '^\.reasonix/' || true)
+
+if [ -z "$CHANGED" ]; then
+    log_warn "没有要添加的文件"
+else
+    # 使用 --ignore-errors 避免单个文件问题中断
+    echo "$CHANGED" | while read -r file; do
+        if [ -n "$file" ]; then
+            git add "$file"
+            echo "  + $file"
+        fi
+    done
+    log_ok "git add 完成"
+fi
+
+# 安全确认：检查是否错误地添加了 _incoming/ 或 .reasonix/
+STAGED_INCOMING=$(git diff --cached --name-only | grep '^_incoming/' || true)
+STAGED_REASONIX=$(git diff --cached --name-only | grep '^\.reasonix/' || true)
+if [ -n "$STAGED_INCOMING" ] || [ -n "$STAGED_REASONIX" ]; then
+    log_error "检测到被禁止的文件被暂存！"
+    [ -n "$STAGED_INCOMING" ] && echo "  _incoming/: $STAGED_INCOMING" && git reset -- "$STAGED_INCOMING"
+    [ -n "$STAGED_REASONIX" ] && echo "  .reasonix/: $STAGED_REASONIX" && git reset -- "$STAGED_REASONIX"
+    log_error "已取消暂存违规文件，请检查后重试"
+    exit 1
+fi
+
+# 检查是否使用了 git add .（由脚本确保不会发生，但这是个额外检查）
+ADD_DOT_CHECK=$(git diff --cached --name-only | head -1 || true)
+if [ -z "$ADD_DOT_CHECK" ]; then
+    log_warn "暂存区为空，没有文件被添加"
+fi
+
+# ──────────────────────────────────────────────
+# 9. git commit
+# ──────────────────────────────────────────────
+log_info "步骤 4/9: git commit..."
+git commit -m "$COMMIT_MESSAGE"
+COMMIT_HASH=$(git rev-parse HEAD)
+log_ok "git commit 完成: $COMMIT_HASH"
+
+# ──────────────────────────────────────────────
+# 10. git tag
+# ──────────────────────────────────────────────
+log_info "步骤 5/9: git tag..."
+if git tag | grep -q "^${VERSION}$"; then
+    log_warn "tag '$VERSION' 已存在，覆盖？(y/N)"
+    read -r TAG_CONFIRM
+    if [ "$TAG_CONFIRM" = "y" ] || [ "$TAG_CONFIRM" = "Y" ]; then
+        git tag -f -a "$VERSION" -m "$VERSION: $COMMIT_MESSAGE"
+        log_ok "git tag 已强制更新: $VERSION"
+    else
+        log_error "已取消 tag 操作，请手动处理"
+        exit 1
+    fi
+else
+    git tag -a "$VERSION" -m "$VERSION: $COMMIT_MESSAGE"
+    log_ok "git tag 创建: $VERSION"
+fi
+
+# ──────────────────────────────────────────────
+# 11. git push origin master
+# ──────────────────────────────────────────────
+log_info "步骤 6/9: git push origin master..."
+git push origin master
+log_ok "git push master 完成"
+
+# ──────────────────────────────────────────────
+# 12. git push origin <version>
+# ──────────────────────────────────────────────
+log_info "步骤 7/9: git push origin $VERSION..."
+git push origin "$VERSION"
+log_ok "git push tag $VERSION 完成"
+
+# ──────────────────────────────────────────────
+# 13. 收工确认
+# ──────────────────────────────────────────────
+echo ""
+echo -e "${GREEN}═══════════════════════════════════════════════════════${NC}"
+echo -e "${GREEN}  ✅ angelife 发布完成${NC}"
+echo -e "${GREEN}═══════════════════════════════════════════════════════${NC}"
+echo -e "  版本号:     $VERSION"
+echo -e "  Commit:     $COMMIT_MESSAGE"
+echo -e "  Commit:     $COMMIT_HASH"
+echo -e "  Tag:        $VERSION"
+echo -e "  分支:       master"
+echo -e "  目录:       $CURRENT_DIR"
+echo -e "  未提交:     _incoming/ ❌   .reasonix/ ❌"
+echo -e "${GREEN}═══════════════════════════════════════════════════════${NC}"
+echo ""
+log_ok "收工！"
