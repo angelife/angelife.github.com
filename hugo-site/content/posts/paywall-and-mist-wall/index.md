@@ -13,6 +13,10 @@ tags:
   - "现实规则"
   - "不失正见"
 comments: true
+cover:
+  image: "/images/posts/paywall-and-mist-wall/cover.png"
+  alt: "AI时代的付费墙与迷雾墙：一边是清晰的价格门槛，一边是模糊的现实边界。"
+  caption: "答案越来越便宜，判断越来越昂贵。"
 ---
 
 AI时代最容易让人误判的一点是：写作好像不需要人了，答案好像越来越便宜了。

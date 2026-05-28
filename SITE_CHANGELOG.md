@@ -2,6 +2,65 @@
 
 本文件用于 AI 接手时查看详细版本演化。公开版本摘要见 `/changelog/` 和 `hugo-site/data/changelog.yaml`。
 
+## v0.6.4｜接入付费墙与迷雾墙文章封面图
+
+日期：2026-05-28  
+执行者：Reasonix  
+发布方式：本地 Hugo 生成 -> rsync 到仓库根目录 -> commit -> push -> git tag  
+commit：提交后以 tag `v0.6.4` 指向的 release commit 为准  
+tag：v0.6.4
+
+### 本次目标
+
+- 将 ChatGPT 生成的封面图接入《付费墙与迷雾墙：AI时代真正昂贵的是判断》文章。
+- 拷贝封面图到 `hugo-site/static/images/posts/paywall-and-mist-wall/cover.png`。
+- 更新文章 front matter，加入 `cover` 字段。
+- 更新视觉资产记录为 `cover_status: image_ready`。
+- 同步更新所有日志和治理文件。
+
+### 修改文件
+
+- `hugo-site/static/images/posts/paywall-and-mist-wall/cover.png`
+- `hugo-site/content/posts/paywall-and-mist-wall/index.md`
+- `SITE_CHANGELOG.md`
+- `DAILY_WORK_LOG.md`
+- `PROJECT_STATUS.md`
+- `BUILD_HANDOFF.md`
+- `hugo-site/data/changelog.yaml`
+
+### 具体修改
+
+- 新增封面图至 `static/images/posts/paywall-and-mist-wall/cover.png`。
+- 文章 `index.md` 加入 `cover` front matter：`image: "/images/posts/paywall-and-mist-wall/cover.png"`。
+- 视觉资产状态从 `prompt_ready` 更新为 `image_ready`。
+
+### 构建与发布
+
+- Hugo 构建命令：`hugo --source hugo-site --destination hugo-site/public --cleanDestinationDir --minify`
+- 构建结果：Hugo `v0.147.4` 构建通过，206 pages，0 errors。静态文件 356 → 357（封面图）。
+- rsync：已完成，`hugo-site/public/` 已同步到仓库根目录。
+
+### 线上验证
+
+- `/posts/paywall-and-mist-wall/`：封面图已接入，静态产物验证通过。
+- 封面图 URL：`/images/posts/paywall-and-mist-wall/cover.png`。
+
+### 遇到的问题
+
+- `~` 在 shell 命令中未展开，改用完整路径 `/Users/macos/Downloads/` 后正常。
+
+### 已解决
+
+- 封面图已成功接入文章。
+
+### 未完成
+
+- 正式 commit、push、tag 和线上验证需在后续步骤完成后补入。
+
+### 下次接手注意
+
+先读 `PROJECT_STATUS.md`，再读 `BUILD_HANDOFF.md`、`AI_WORK_RULES.md`、`SITE_STYLE_GUIDE.md`、`SITE_CHANGELOG.md`、`DAILY_WORK_LOG.md`、`hugo-site/data/changelog.yaml`。继续使用本地 Hugo 生成 + rsync 根目录发布，不要切 GitHub Actions，不要提交 `_incoming/`。
+
 ## v0.6.3｜发布付费墙与迷雾墙文章
 
 日期：2026-05-28  
