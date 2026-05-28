@@ -1,5 +1,60 @@
 # angelife 每日工作日志
 
+## 2026-05-29｜v0.6.19｜加入 AI token 与费用记录制度
+
+### 今天做了什么
+
+- 新增 AI 消耗记录规则到项目治理体系。
+- AI_WORK_RULES.md：新增「AI 消耗记录规则」章节，包含记录原则（6 条）、成本优化原则（4 条）、安全红线（2 条）。
+- 每轮收工要求新增「AI 消耗记录」条目。
+- BUILD_HANDOFF.md：每轮修改要求新增 AI 消耗记录 + DAILY_WORK_LOG 含 AI 成本小节。
+- DAILY_WORK_LOG.md：新增「当日 AI 成本」小节。
+- PROJECT_STATUS.md：版本号更新至 v0.6.19。
+- SITE_CHANGELOG.md、hugo-site/data/changelog.yaml：新增 v0.6.19 日志。
+- tools/angelife-release：输出部分新增 AI 消耗记录占位符提示。
+
+### 当日 AI 成本
+
+- 模型：deepseek-v4-flash（当前轮次）
+- 估算 token：暂无法获取精确值（DeepSeek 未开放单次会话 token 明细 API）
+- 估算费用：使用 flash 模型，成本较低
+- 余额差值法：未记录（本轮为治理文档编写，规模较小）
+
+### 修改文件
+
+- `AI_WORK_RULES.md` — 新增 AI 消耗记录规则章节 + 收工报告新增条目
+- `BUILD_HANDOFF.md` — 版本号 v0.6.19 + 新增 AI 消耗记录要求
+- `DAILY_WORK_LOG.md` — 新增今日日志 + 当日 AI 成本小节
+- `PROJECT_STATUS.md` — 版本号更新至 v0.6.19
+- `SITE_CHANGELOG.md` — 新增 v0.6.19 版本日志
+- `hugo-site/data/changelog.yaml` — 新增 v0.6.19 公开日志
+- `tools/angelife-release` — 输出部分新增 AI 消耗占位符
+
+### 核心规则变更
+
+- 每轮 AI 任务必须记录 token 消耗与费用。
+- shell 命令不计 token。
+- 收工报告新增「AI 消耗记录」条目。
+- 不可编造精确 token，无法获取则如实说明。
+- Daily 日志增加「当日 AI 成本」小节。
+- 建议大任务前后记录 DeepSeek 控制台余额做差值。
+- 默认 flash，复杂才用 pro。
+- 严禁日志中出现 API key / token 等敏感信息。
+
+### AI 消耗记录
+
+- 模型：deepseek-v4-flash
+- 估算 token：未获取精确值（本平台未提供单会话 token 明细）
+- 费用估算：flash 档位，治理文档编写规模小
+
+### 构建状态
+
+待执行 Hugo 构建并通过脚本发布。纯治理文档变更，不影响站点内容。
+
+### 版本号
+
+v0.6.19
+
 ## 2026-05-29｜v0.6.18｜新增受控发布脚本 tools/angelife-release
 
 ### 今天做了什么

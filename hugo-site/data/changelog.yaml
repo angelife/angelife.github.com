@@ -1,3 +1,21 @@
+- version: "v0.6.19"
+  date: "2026-05-29"
+  title: "新增 AI token 与费用记录制度"
+  commit: "以 tag v0.6.19 指向的 release commit 为准"
+  tag: "v0.6.19"
+  summary:
+    - "新增 AI 消耗记录规则到项目治理体系。"
+    - "每轮 AI 任务必须记录 token 消耗与费用。"
+    - "收工报告新增 AI 消耗记录条目。"
+    - "Daily 日志增加当日 AI 成本小节。"
+    - "成本优化：默认 flash，复杂才用 pro。"
+    - "严禁日志中出现 API key/token 等敏感信息。"
+    - "写入 AI_WORK_RULES.md、BUILD_HANDOFF.md、DAILY_WORK_LOG.md、PROJECT_STATUS.md。"
+    - "纯治理轮，无模板/CSS/内容变更。"
+  changed:
+    - "/changelog/"
+  rollback_note: "可通过 Git tag v0.6.19 回退到本版本：git checkout v0.6.19 -- . && git commit -m 'Rollback site to v0.6.19' && git push origin master"
+
 - version: "v0.6.18"
   date: "2026-05-29"
   title: "新增受控发布脚本 tools/angelife-release"

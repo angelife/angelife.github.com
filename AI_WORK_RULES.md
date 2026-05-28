@@ -79,6 +79,32 @@ cd /Users/macos/angelife.github.com
 14. git push origin <version>。
 15. 输出收工确认信息。
 
+## AI 消耗记录规则（v0.6.19+）
+
+每轮 AI 任务必须记录 AI token 消耗与费用。
+
+### 记录原则
+
+1. **每轮必记** — 每轮 AI 任务（Reasonix 每次 run）必须记录 token 消耗与费用。
+2. **shell 不计** — shell 命令本身的 token 消耗不单独记录。
+3. **收工必报** — 收工报告必须新增「AI 消耗记录」条目。
+4. **不编造精确值** — 如果无法获取精确 token 数，如实说明原因（如：DeepSeek 控制台未开放 token 明细 API）。
+5. **每日汇总** — Daily 工作日志增加「当日 AI 成本」小节。
+6. **余额差值法** — 建议大任务前后记录 DeepSeek 控制台余额，用差值估算成本。
+
+### 成本优化原则
+
+- 默认使用 flash 模型（低成本）。
+- 仅复杂任务（跨文件架构重构、并发安全分析等）使用 pro 模型。
+- 避免重复全量读仓库；优先精确读取目标文件或搜索定位。
+- 长任务拆段执行，避免单轮上下文过长导致重复计费。
+
+### 安全红线
+
+- 日志中严禁出现 API key、token（认证令牌）、密钥等敏感信息。
+- 不得在日志、commit message、公开 changelog 中泄露任何凭证。
+- 模型名称（如 DeepSeek Chat / deepseek-v4-flash）可以记录。
+
 ## 版本号规则
 
 `v2026.05.27-05` 及以前为日期流水版本；自 `v0.6.0` 起，angelife 网站改用 SemVer：`vMAJOR.MINOR.PATCH`。
@@ -142,6 +168,7 @@ cd /Users/macos/angelife.github.com
 - git tag。
 - 是否未提交 `_incoming`。
 - 线上验证结果。
+- AI 消耗记录（模型、估算 token、费用或说明无法获取）。
 - 下轮接手提示。
 
 ## Hermes / Reasonix 手机远控工作流

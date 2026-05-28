@@ -12,7 +12,7 @@
 4. `git push origin master`。
 5. 创建并推送 Git tag，作为可回退备份点。
 
-当前最新版本：`v0.6.18`。
+当前最新版本：`v0.6.19`。
 
 ## 受控发布脚本（v0.6.18+）
 
@@ -70,7 +70,8 @@ git push origin VERSION
 
 - 更新版本号。
 - 更新 `SITE_CHANGELOG.md`。
-- 更新 `DAILY_WORK_LOG.md`。
+- 更新 `DAILY_WORK_LOG.md`（含「当日 AI 成本」小节）。
+- 记录本轮 AI 消耗（模型、估算 token、费用或说明无法获取）。
 - 更新 `PROJECT_STATUS.md` 中的当前状态。
 - 如影响公开站点，更新 `hugo-site/data/changelog.yaml`。
 - 运行 `hugo --cleanDestinationDir --minify`，必须 0 errors。

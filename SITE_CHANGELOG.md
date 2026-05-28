@@ -2,6 +2,49 @@
 
 本文件用于 AI 接手时查看详细版本演化。公开版本摘要见 `/changelog/` 和 `hugo-site/data/changelog.yaml`。
 
+## v0.6.19｜加入 AI token 与费用记录制度
+
+日期：2026-05-29
+执行者：Reasonix
+发布方式：受控发布脚本 tools/angelife-release
+commit：提交后以 tag `v0.6.19` 指向的 release commit 为准
+tag：v0.6.19
+
+### 本次目标
+
+- 新增 AI 消耗记录规则到项目治理体系。
+- 每轮 AI 任务必须记录 token 消耗与费用。
+- 收工报告新增「AI 消耗记录」条目。
+- Daily 日志增加「当日 AI 成本」小节。
+- 成本优化原则：默认 flash，复杂才用 pro。
+- 安全红线：日志中严禁出现 API key / token 等敏感信息。
+
+### 修改文件
+
+- `AI_WORK_RULES.md` — 新增「AI 消耗记录规则」章节 + 收工报告新增条目
+- `BUILD_HANDOFF.md` — 版本号 v0.6.19 + 新增 AI 消耗记录要求
+- `DAILY_WORK_LOG.md` — 新增今日日志 + 当日 AI 成本小节
+- `PROJECT_STATUS.md` — 版本号更新至 v0.6.19，已完成/进行中列表更新
+- `SITE_CHANGELOG.md` — 新增 v0.6.19 版本日志
+- `hugo-site/data/changelog.yaml` — 新增 v0.6.19 公开日志
+- `tools/angelife-release` — 输出部分新增 AI 消耗记录占位符提示
+
+### AI 消耗记录
+
+- 模型：deepseek-v4-flash
+- 估算 token：未获取精确值（本平台未提供单会话 token 明细）
+- 费用估算：flash 档位，纯治理文档编写
+
+### 构建与发布
+
+- 纯治理 + 脚本新增轮，Hugo 构建通过脚本自动执行。
+- 无模板/CSS/内容变更，纯治理文件更新。
+
+### 线上验证
+
+- 无模板/CSS/内容变更，纯治理文件更新。
+- 线上站点不受影响。
+
 ## v0.6.18｜新增受控发布脚本 tools/angelife-release
 
 日期：2026-05-29
