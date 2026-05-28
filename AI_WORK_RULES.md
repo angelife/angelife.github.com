@@ -12,6 +12,7 @@
 - `SITE_STYLE_GUIDE.md`
 - `SITE_CHANGELOG.md`
 - `DAILY_WORK_LOG.md`
+- `HERMES_COST_RULES.md`
 - `hugo-site/data/changelog.yaml`
 
 ## 硬性禁止

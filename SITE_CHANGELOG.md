@@ -2,6 +2,15 @@
 
 本文件用于 AI 接手时查看详细版本演化。公开版本摘要见 `/changelog/` 和 `hugo-site/data/changelog.yaml`。
 
+## v0.6.27｜新增 Hermes 省 Token 执行规则
+
+日期：2026-05-29
+执行者：Hermes
+发布方式：直接操作
+变更：
+- 新增 `HERMES_COST_RULES.md`
+- `AI_WORK_RULES.md` 接手必读列表添加引用
+
 ## v0.6.25｜恢复本地静态发布 + 禁用 GitHub Actions 在线构建
 
 日期：2026-05-29

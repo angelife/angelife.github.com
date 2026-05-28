@@ -1,5 +1,12 @@
 # angelife 每日工作日志
 
+## 2026-05-29｜v0.6.27｜新增 Hermes 省 Token 执行规则
+
+### 今天做了什么
+- 新增 `HERMES_COST_RULES.md`
+- 在 `AI_WORK_RULES.md` 接手必读列表中添加引用
+- 版本从 v0.6.26 顺延至 v0.6.27
+
 ## 2026-05-29｜v0.6.25｜恢复本地静态发布 + 禁用 GitHub Actions 在线构建
 
 ### 今天做了什么

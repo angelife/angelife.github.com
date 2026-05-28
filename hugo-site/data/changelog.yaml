@@ -1,3 +1,13 @@
+- version: "v0.6.27"
+  date: "2026-05-29"
+  title: "新增 Hermes 省 Token 执行规则"
+  commit: "提交后以 tag v0.6.27 指向的 release commit 为准"
+  tag: "v0.6.27"
+  summary:
+    - "新增 HERMES_COST_RULES.md，定义省 Token 执行规范。"
+  changed:
+    - "新增：HERMES_COST_RULES.md"
+
 - version: "v0.6.25"
   date: "2026-05-29"
   title: "恢复本地静态发布 + 禁用 GitHub Actions 在线构建"
