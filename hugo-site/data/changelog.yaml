@@ -1,3 +1,14 @@
+- version: "v0.6.24"
+  date: "2026-05-29"
+  title: "添加微信域名验证"
+  commit: "提交后以 tag v0.6.24 指向的 release commit 为准"
+  tag: "v0.6.24"
+  summary:
+    - "在站点根目录添加微信域名验证文件 0847745cb78663855a3a1732c9c6a130.txt。"
+    - "发布方式：Hugo 构建 → rsync → Git commit/push。"
+  changed:
+    - "新增：hugo-site/static/0847745cb78663855a3a1732c9c6a130.txt"
+
 - version: "v0.6.23"
   date: "2026-05-29"
   title: "发布新文章：自费蒸馏"
