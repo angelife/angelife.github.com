@@ -12,7 +12,7 @@
 4. `git push origin master`。
 5. 创建并推送 Git tag，作为可回退备份点。
 
-当前最新版本：`v0.6.13`。
+当前最新版本：`v0.6.14`。
 
 标准命令：
 
@@ -83,6 +83,17 @@ git push origin VERSION
 - Kindle 阅读版 `/kindle/posts/<slug>/`
 
 封面图只服务普通版。发布验收必须同时检查两个版本。
+
+## Kindle 接手交接确认（v0.6.14+）
+
+Kindle 阅读模式规则已固化到 `AI_WORK_RULES.md` 和 `SITE_STYLE_GUIDE.md`。
+
+- 修改 layout/header/footer/baseof/single/list/outputFormats 前必须先读 `AI_WORK_RULES.md` 中的 Kindle 不可破坏规则和验收要求。
+- 每次发布文章后必须验收普通版和 Kindle 版。
+- Kindle 版是独立输出（Hugo outputFormat），不是 CSS 隐藏变体。
+- 不得提交 `_incoming/`。
+- 不得提交 `.reasonix/`。
+- 不得 `git add .`。
 
 ## 搜索与评论维护
 

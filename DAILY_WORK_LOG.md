@@ -1,5 +1,39 @@
 # angelife 每日工作日志
 
+## 2026-05-28｜v0.6.14｜固化 Kindle 阅读模式治理规则
+
+### 今天做了什么
+
+- 治理固化轮，无模板/CSS/内容变更。
+- AI_WORK_RULES.md：新增 Kindle 不可破坏规则 + 验收强制要求。
+- SITE_STYLE_GUIDE.md：新增 Kindle 阅读模式独立小节（5 条核心原则）。
+- BUILD_HANDOFF.md：新增 Kindle 接手交接确认。
+- PROJECT_STATUS.md、SITE_CHANGELOG.md、DAILY_WORK_LOG.md、changelog.yaml 同步更新。
+
+### 修改文件
+
+- `AI_WORK_RULES.md`
+- `SITE_STYLE_GUIDE.md`
+- `BUILD_HANDOFF.md`
+- `PROJECT_STATUS.md`
+- `SITE_CHANGELOG.md`
+- `DAILY_WORK_LOG.md`
+- `hugo-site/data/changelog.yaml`
+
+### 构建状态
+
+Hugo `v0.147.4` 构建通过，223 pages，0 errors。
+
+### 版本号
+
+v0.6.14，tag v0.6.14
+
+### 验收
+
+- Kindle 目录页：无导航词 ✓（此前已固化）
+- Kindle 文章页：无导航词和 footer ✓（此前已固化）
+- 普通首页：导航完整保留 ✓
+
 ## 2026-05-28｜v0.6.13｜修复 Kindle 文章页外层 PaperMod 壳
 
 ### 今天做了什么

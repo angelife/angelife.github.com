@@ -10,10 +10,10 @@
 
 ## 当前版本状态
 
-- 当前版本：v0.6.13
-- 最新 commit：提交后以 tag `v0.6.13` 指向的 release commit 为准
-- 最新 tag：v0.6.13
-- 线上状态：本轮修复 Kindle 文章页外层 PaperMod 壳问题，改用 $isKindle 多条件变量控制 header/footer 渲染；本地 Hugo 构建和 rsync 已完成，push 后等待 GitHub Pages 线上刷新。
+- 当前版本：v0.6.14
+- 最新 commit：提交后以 tag `v0.6.14` 指向的 release commit 为准
+- 最新 tag：v0.6.14
+- 线上状态：本轮为治理固化轮——将 Kindle 阅读模式规则正式写入 AI_WORK_RULES.md（不可破坏规则 + 验收强制要求）、SITE_STYLE_GUIDE.md（Kindle 阅读模式独立输出原则）。Kindle 阅读模式已进入定型规则。
 
 ## 版本号规则
 

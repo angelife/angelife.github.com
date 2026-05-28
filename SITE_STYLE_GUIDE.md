@@ -78,6 +78,18 @@
 
 封面图只服务普通图文版。不为 Kindle 版单独维护图片。
 
+## Kindle 阅读模式
+
+Kindle 阅读模式的目标是干净阅读，不输出普通站点导航、footer、复杂卡片和无关 chrome。
+
+核心原则：
+
+1. **独立输出，不是 CSS 隐藏。** Kindle 版是 Hugo outputFormat 独立生成的 HTML 页面，不是普通页面的 `display:none` 变体。模板层（baseof.html）已通过 `$isKindle` 三重条件判断跳过 PaperMod header 和 footer。
+2. **普通版和 Kindle 版属于同一文章源文件的双输出。** 不维护两份正文，不为 Kindle 版单独写内容。
+3. **普通页面保留完整站点视觉系统。** 首页宽屏、五行卡片、导航、封面图、标签、评论、分享均不受影响。
+4. **Kindle 页面优先保证纯净、轻量、可读性。** serif 字体、黑白高对比、无装饰、无封面图、无标签/评论/分享。
+5. **修改全局 layout 时必须双版本回归测试。** 修改 header、footer、baseof、single、list、outputFormats 或导航模板后，必须同时检查普通版和 Kindle 版。
+
 ## 版本号
 
 `v2026.05.27-05` 及以前为日期流水版本；自 `v0.6.0` 起，angelife 网站改用 SemVer：`vMAJOR.MINOR.PATCH`。

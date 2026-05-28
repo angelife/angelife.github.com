@@ -27,6 +27,7 @@
 - 不准只提交 Hugo 源文件而忘记 `rsync` 根目录静态产物。
 - 不准大范围重写文章正文，除非用户明确要求。
 - 不准删除 `old-site/`、`themes/`、`public/` 历史内容，除非用户明确要求。
+- 不准破坏 Kindle 阅读模式的独立输出。Kindle 版是独立阅读输出，不是普通页面的 CSS 隐藏变体。修改 header、footer、baseof、single、list、outputFormats 或导航模板时，必须同时验收普通版和 Kindle 版。不得让 `/kindle/` 或 `/kindle/posts/<slug>/` 输出 PaperMod 普通导航、普通 footer 或桌面站点 chrome。
 
 ## 固定发布流程
 
@@ -75,6 +76,16 @@
 | 标签/评论/分享 | 正常 | 不显示 |
 
 封面图只服务普通图文版；不为 Kindle 版单独维护图片或第二份正文。
+
+### Kindle 验收强制要求
+
+每次修改后必须执行以下验收：
+
+1. `/kindle/` 目录页无普通导航（grep 金·判断/木·蝉识/搜索/id="menu" /kindle/index.html 应为 0）
+2. `/kindle/posts/<slug>/` 文章页无普通导航和 footer（grep Powered by/PaperMod/id="menu" 应为 0）
+3. `/posts/<slug>/` 普通文章页必须保留正常导航
+4. 首页普通导航必须保留
+5. 不得通过 `display:none` 临时遮挡来伪造 Kindle 模式——模板层必须已剥离
 
 ## 每轮收工必须输出
 

@@ -2,6 +2,51 @@
 
 本文件用于 AI 接手时查看详细版本演化。公开版本摘要见 `/changelog/` 和 `hugo-site/data/changelog.yaml`。
 
+## v0.6.14｜固化 Kindle 阅读模式治理规则
+
+日期：2026-05-28  
+执行者：Reasonix  
+发布方式：本地 Hugo 生成 -> rsync 到仓库根目录 -> commit -> push -> git tag  
+commit：提交后以 tag `v0.6.14` 指向的 release commit 为准  
+tag：v0.6.14
+
+### 本次目标
+
+- 将 Kindle 阅读模式规则正式写入项目治理文档和风格规范。
+- 不修改任何模板、CSS 或文章内容——纯治理固化轮。
+
+### 修改文件
+
+- `AI_WORK_RULES.md` — 新增 Kindle 不可破坏规则 + Kindle 验收强制要求
+- `SITE_STYLE_GUIDE.md` — 新增「Kindle 阅读模式」独立小节
+- `PROJECT_STATUS.md` — 更新版本号与项目状态
+- `BUILD_HANDOFF.md` — 新增 Kindle 接手交接确认 + 版本号更新
+- `SITE_CHANGELOG.md`
+- `DAILY_WORK_LOG.md`
+- `hugo-site/data/changelog.yaml`
+
+### 具体修改
+
+**AI_WORK_RULES.md：**
+- 硬性禁止新增：不得破坏 Kindle 独立输出
+- 文章双版本规则下新增 Kindle 验收强制要求（5 条）
+
+**SITE_STYLE_GUIDE.md：**
+- 新增 Kindle 阅读模式小节（5 条核心原则）
+
+**BUILD_HANDOFF.md：**
+- 新增 Kindle 接手交接确认小节
+
+### 构建与发布
+
+- Hugo 构建结果：Hugo `v0.147.4` 构建通过，223 pages，0 errors。
+- rsync：已完成。
+
+### 线上验证
+
+- 无模板/CSS/内容变更，纯治理文件更新。
+- /kindle/、/kindle/posts/<slug>/、/posts/<slug>/、首页均不受影响。
+
 ## v0.6.13｜修复 Kindle 文章页外层 PaperMod 壳
 
 日期：2026-05-28  

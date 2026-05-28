@@ -1,3 +1,17 @@
+- version: "v0.6.14"
+  date: "2026-05-28"
+  title: "固化 Kindle 阅读模式治理规则"
+  commit: "以 tag v0.6.14 指向的 release commit 为准"
+  tag: "v0.6.14"
+  summary:
+    - "将 Kindle 阅读模式规则写入 AI_WORK_RULES.md（不可破坏规则 + 验收强制要求）。"
+    - "写入 SITE_STYLE_GUIDE.md（Kindle 阅读模式独立输出原则）。"
+    - "写入 BUILD_HANDOFF.md（Kindle 接手交接确认）。"
+    - "纯治理固化轮，无模板/CSS/内容变更。"
+  changed:
+    - "/changelog/"
+  rollback_note: "可通过 Git tag v0.6.14 回退到本版本：git checkout v0.6.14 -- . && git commit -m 'Rollback site to v0.6.14' && git push origin master"
+
 - version: "v0.6.13"
   date: "2026-05-28"
   title: "修复 Kindle 文章页外层 PaperMod 壳"
