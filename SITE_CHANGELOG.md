@@ -2,6 +2,33 @@
 
 本文件用于 AI 接手时查看详细版本演化。公开版本摘要见 `/changelog/` 和 `hugo-site/data/changelog.yaml`。
 
+## v0.6.15｜收尾提交：Kindle 治理固化后的静态产物同步
+
+日期：2026-05-28
+执行者：Hermes / Reasonix
+发布方式：本地 Hugo 生成 -> rsync 到仓库根目录 -> commit -> push -> git tag
+commit：提交后以 tag `v0.6.15` 指向的 release commit 为准
+tag：v0.6.15
+
+### 本次目标
+
+- v0.6.14 治理文件更新后的静态产物全量提交。
+- 确保 GitHub Pages 线上站点与本地治理文件更新一致。
+- 无模板/CSS/内容变更。
+
+### 修改文件
+
+- Hugo 重新生成的全部静态产物（约 115 个文件）。
+- 日志/治理文件：SITE_CHANGELOG.md、DAILY_WORK_LOG.md、PROJECT_STATUS.md、BUILD_HANDOFF.md、hugo-site/data/changelog.yaml
+
+### Hugo 构建结果
+
+223 pages，0 errors。
+
+### git status 最终状态
+
+仅剩 `.reasonix/` 和 `_incoming/` 未提交。
+
 ## v0.6.14｜固化 Kindle 阅读模式治理规则
 
 日期：2026-05-28  

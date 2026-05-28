@@ -10,10 +10,10 @@
 
 ## 当前版本状态
 
-- 当前版本：v0.6.14
-- 最新 commit：提交后以 tag `v0.6.14` 指向的 release commit 为准
-- 最新 tag：v0.6.14
-- 线上状态：本轮为治理固化轮——将 Kindle 阅读模式规则正式写入 AI_WORK_RULES.md（不可破坏规则 + 验收强制要求）、SITE_STYLE_GUIDE.md（Kindle 阅读模式独立输出原则）。Kindle 阅读模式已进入定型规则。
+- 当前版本：v0.6.15
+- 最新 commit：提交后以 tag `v0.6.15` 指向的 release commit 为准
+- 最新 tag：v0.6.15
+- 线上状态：Kindle 阅读模式已定型。v0.6.14 完成治理规则固化，v0.6.15 为静态产物收尾同步提交。
 
 ## 版本号规则
 

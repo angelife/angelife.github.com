@@ -1,3 +1,16 @@
+- version: "v0.6.15"
+  date: "2026-05-28"
+  title: "收尾提交：Kindle 治理固化后静态产物同步"
+  commit: "以 tag v0.6.15 指向的 release commit 为准"
+  tag: "v0.6.15"
+  summary:
+    - "v0.6.14 治理文件更新后静态产物全量提交。"
+    - "Kindle 阅读模式已完全定型并固化为项目规范。"
+    - "无模板/CSS/内容变更，纯治理固化 + 收尾提交。"
+  changed:
+    - "/changelog/"
+  rollback_note: "可通过 Git tag v0.6.15 回退到本版本：git checkout v0.6.15 -- . && git commit -m 'Rollback site to v0.6.15' && git push origin master"
+
 - version: "v0.6.14"
   date: "2026-05-28"
   title: "固化 Kindle 阅读模式治理规则"
