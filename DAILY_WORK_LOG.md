@@ -1,5 +1,40 @@
 # angelife 每日工作日志
 
+## 2026-05-29｜v0.6.22｜发布新文章：能干的驴
+
+### 今天做了什么
+
+- 新增文章《能干的驴：AI放大能力，但不改变物种》
+- slug: `capable-donkey-ai-amplifies-but-does-not-transform`
+- 分类：AI时代
+- 标签：AI写作、自动化、判断力、技术与规则、不失正见
+- 封面状态：cover_status: prompt_ready（未接入封面图）
+- 更新 DAILY_WORK_LOG.md、SITE_CHANGELOG.md、hugo-site/data/changelog.yaml、PROJECT_STATUS.md、BUILD_HANDOFF.md
+- Hugo 构建验证通过后发布
+
+### 修改文件
+
+- `hugo-site/content/posts/capable-donkey-ai-amplifies-but-does-not-transform/index.md`（新增）
+- `PROJECT_STATUS.md`
+- `BUILD_HANDOFF.md`
+- `DAILY_WORK_LOG.md`
+- `SITE_CHANGELOG.md`
+- `hugo-site/data/changelog.yaml`
+
+### 构建状态
+
+待 Hugo 构建
+
+### 版本号
+
+v0.6.22
+
+### 当日 AI 成本
+
+- 模型：deepseek-v4-flash（Hermes 直接执行）
+- 精确 token：未获取
+- 费用估算：flash 档位，规模小
+
 ## 2026-05-29｜v0.6.21｜第二阶段：angelife-release --yes 非交互参数
 
 ### 今天做了什么（第二阶段，未发布）

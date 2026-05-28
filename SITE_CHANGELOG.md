@@ -2,6 +2,30 @@
 
 本文件用于 AI 接手时查看详细版本演化。公开版本摘要见 `/changelog/` 和 `hugo-site/data/changelog.yaml`。
 
+## v0.6.22｜发布新文章：能干的驴
+
+日期：2026-05-29
+执行者：Hermes（直接）
+发布方式：受控发布脚本
+
+### 本次目标
+
+- 发布新文章《能干的驴：AI放大能力，但不改变物种》
+- 封面状态：prompt_ready，未接入封面图
+
+### 修改文件
+
+- `hugo-site/content/posts/capable-donkey-ai-amplifies-but-does-not-transform/index.md` — 新增
+- `PROJECT_STATUS.md`
+- `BUILD_HANDOFF.md`
+- `DAILY_WORK_LOG.md`
+- `SITE_CHANGELOG.md`
+- `hugo-site/data/changelog.yaml`
+
+### 构建与发布
+
+- Hugo 构建后通过受控脚本发布
+
 ## v0.6.21｜第二阶段：angelife-release --yes 非交互参数
 
 日期：2026-05-29

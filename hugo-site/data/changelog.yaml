@@ -1,3 +1,18 @@
+- version: "v0.6.22"
+  date: "2026-05-29"
+  title: "发布新文章：能干的驴"
+  commit: "以 tag v0.6.22 指向的 release commit 为准"
+  tag: "v0.6.22"
+  summary:
+    - "新增文章《能干的驴：AI放大能力，但不改变物种》。"
+    - "讨论工具放大能力但不改变物种，人的意义在于判断与承担。"
+    - "归入 AI时代，标签：AI写作、自动化、判断力、技术与规则、不失正见。"
+    - "封面状态：prompt_ready，待真实封面图生成后接入。"
+  changed:
+    - "/posts/capable-donkey-ai-amplifies-but-does-not-transform/"
+    - "/changelog/"
+  rollback_note: "可通过 Git tag v0.6.22 回退到本版本：git checkout v0.6.22 -- . && git commit -m 'Rollback site to v0.6.22' && git push origin master"
+
 - version: "v0.6.21"
   date: "2026-05-29"
   title: "第二阶段：angelife-release --yes 非交互参数"
