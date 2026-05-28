@@ -1,3 +1,19 @@
+- version: "v0.6.11"
+  date: "2026-05-28"
+  title: "Kindle/手机自动跳转阅读模式 + 双版本发布规则固化"
+  commit: "以 tag v0.6.11 指向的 release commit 为准"
+  tag: "v0.6.11"
+  summary:
+    - "Kindle 设备与手机用户自动跳转至 Kindle 阅读版。"
+    - "新增 ?normal=1 出口可返回图文版并记录偏好。"
+    - "固化双版本发布规则：一份 Markdown 源文件 → 普通版 + Kindle 版。"
+    - "封面图只服务普通图文版。"
+  changed:
+    - "/kindle/"
+    - "/kindle/posts/*/"
+    - "/changelog/"
+  rollback_note: "可通过 Git tag v0.6.11 回退到本版本：git checkout v0.6.11 -- . && git commit -m 'Rollback site to v0.6.11' && git push origin master"
+
 - version: "v0.6.10"
   date: "2026-05-28"
   title: "Kindle 阅读模式细化：模板层移除导航"

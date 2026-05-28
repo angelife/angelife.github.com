@@ -1,5 +1,43 @@
 # angelife 每日工作日志
 
+## 2026-05-28｜v0.6.11｜Kindle/手机自动跳转 + 双版本规则固化
+
+### 今天做了什么
+
+- 创建 `reader-redirect.js`：Kindle 设备/手机用户自动跳转 Kindle 阅读版。
+- 条件加载脚本：仅非 Kindle 页面加载，Kindle 页面不重复加载。
+- `?normal=1` 出口：Kindle 页面可返回图文版，记录偏好后不再自动跳走。
+- `?reader=1`/`?kindle=1` 入口：可强制进入阅读模式。
+- 更新 Kindle 模板页脚：文章页增加「本文图文版」链接，目录页增加「返回首页图文版」。
+- 固化双版本发布规则到 `AI_WORK_RULES.md`、`SITE_STYLE_GUIDE.md`、`BUILD_HANDOFF.md`。
+- 更新公开 changelog、内部详细日志、项目状态。
+
+### 验收结果
+
+- Kindle 页面无普通导航 ✓
+- 普通页面保留完整导航 ✓
+- JS 已部署到 /js/reader-redirect.js ✓
+- 正常页面已加载脚本 ✓
+- /kindle/ 和 /kindle/posts/<slug>/ 均可打开 ✓
+
+### 修改文件
+
+- 新增：`hugo-site/static/js/reader-redirect.js`
+- 修改：`hugo-site/layouts/partials/extend_head.html`
+- 修改：`hugo-site/layouts/_default/single.kindle.html`
+- 修改：`hugo-site/layouts/kindle/list.html`
+- 修改：`AI_WORK_RULES.md`、`SITE_STYLE_GUIDE.md`、`BUILD_HANDOFF.md`、`PROJECT_STATUS.md`
+- 修改：`SITE_CHANGELOG.md`、`DAILY_WORK_LOG.md`、`hugo-site/data/changelog.yaml`
+
+### 构建状态
+
+Hugo `v0.147.4` 构建通过，223 pages，0 errors。
+
+### commit / tag / 版本号
+
+- 版本号：v0.6.11
+- tag：v0.6.11
+
 ## 2026-05-28｜v0.6.10｜Kindle 阅读模式细化：模板层移除导航
 
 ### 今天做了什么

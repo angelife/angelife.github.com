@@ -1,2 +1,5 @@
 <link rel="stylesheet" href="/css/angelife-brand.css">
 <link rel="stylesheet" href="/css/kindle.css">
+{{- if not (hasPrefix .RelPermalink "/kindle/") -}}
+<script src="/js/reader-redirect.js" defer></script>
+{{- end -}}

@@ -69,6 +69,15 @@
 - 文章页窄栏 CSS 只作用于 `article.post-single` / `.post-content` 等文章上下文。
 - 不要改主题源码 `themes/`，优先使用 layout override、CSS override 和内容层配置。
 
+## 文章双版本规则
+
+从 v0.6.11 起，每篇文章自动生成两个版本：
+
+- 普通图文版 `/posts/<slug>/`：有封面图、有导航、有标签/评论/分享
+- Kindle 阅读版 `/kindle/posts/<slug>/`：纯文字、无封面、无导航、无标签/评论/分享
+
+封面图只服务普通图文版。不为 Kindle 版单独维护图片。
+
 ## 版本号
 
 `v2026.05.27-05` 及以前为日期流水版本；自 `v0.6.0` 起，angelife 网站改用 SemVer：`vMAJOR.MINOR.PATCH`。

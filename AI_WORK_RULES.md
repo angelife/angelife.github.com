@@ -54,6 +54,28 @@
 - giscus 未配置 `repoId` / `categoryId` 时，评论区必须默认隐藏。
 - `comments: true` / `comments: false` 应由文章 front matter 控制；旧日志、资料归档、短日课默认不开。
 
+## 文章双版本发布规则（v0.6.11 起固化）
+
+每篇文章只维护一份 Markdown 源文件，Hugo 自动输出两个版本：
+
+- 普通图文版：`/posts/<slug>/`
+- Kindle 阅读版：`/kindle/posts/<slug>/`
+
+由 `content/posts/_index.md` 的 `cascade` 配置自动控制：
+
+[cascade]
+  outputs = ["HTML", "Kindle"]
+
+发布验收必须同时检查两个版本：
+
+| 检查项 | 普通图文版 | Kindle 阅读版 |
+|--------|-----------|--------------|
+| 封面图 | 正常显示 | 不显示 |
+| 导航 | 完整导航 | 无主导航/搜索/分类导航 |
+| 标签/评论/分享 | 正常 | 不显示 |
+
+封面图只服务普通图文版；不为 Kindle 版单独维护图片或第二份正文。
+
 ## 每轮收工必须输出
 
 - 版本号。

@@ -2,6 +2,61 @@
 
 本文件用于 AI 接手时查看详细版本演化。公开版本摘要见 `/changelog/` 和 `hugo-site/data/changelog.yaml`。
 
+## v0.6.11｜Kindle/手机自动跳转阅读模式 + 双版本发布规则固化
+
+日期：2026-05-28  
+执行者：Reasonix  
+发布方式：本地 Hugo 生成 -> rsync 到仓库根目录 -> commit -> push -> git tag  
+commit：提交后以 tag `v0.6.11` 指向的 release commit 为准  
+tag：v0.6.11
+
+### 本次目标
+
+- 新增 Kindle / 手机用户自动跳转阅读模式。
+- 新增 `?normal=1` 出口，可返回图文版并记录偏好。
+- 固化文章双版本发布规则：一份 Markdown 源文件 → 普通版 + Kindle 版。
+- 更新治理文档写入双版本规则。
+
+### 新增文件
+
+- `hugo-site/static/js/reader-redirect.js` — 前端自动跳转脚本
+
+### 修改文件
+
+- `hugo-site/layouts/partials/extend_head.html` — 条件加载 reader-redirect.js
+- `hugo-site/layouts/_default/single.kindle.html` — 页脚加入图文版出口链接
+- `hugo-site/layouts/kindle/list.html` — 页脚加入图文版出口链接
+- `AI_WORK_RULES.md` — 新增双版本发布规则章节
+- `SITE_STYLE_GUIDE.md` — 新增双版本规则
+- `BUILD_HANDOFF.md` — 新增双版本维护说明
+- `PROJECT_STATUS.md` — 更新版本号
+- `SITE_CHANGELOG.md`
+- `DAILY_WORK_LOG.md`
+- `hugo-site/data/changelog.yaml`
+
+### 自动跳转规则
+
+- Kindle 设备访问首页 → 跳转 `/kindle/`
+- Kindle 设备访问文章页 → 跳转 `/kindle/posts/<slug>/`
+- 手机端访问首页 → 跳转 `/kindle/`
+- 手机端访问文章页 → 跳转 `/kindle/posts/<slug>/`
+- 已存 `normal` 模式 → 不跳转
+- 已在 `/kindle/` 路径 → 不跳转
+- 桌面端 → 不跳转
+
+### 双版本发布规则
+
+每篇文章只维护一份 Markdown 源文件，Hugo 自动输出：
+
+- 普通图文版：`/posts/<slug>/`
+- Kindle 阅读版：`/kindle/posts/<slug>/`
+
+封面图只服务普通版。发布验收必须同时检查两个版本。
+
+### Hugo 构建
+
+223 pages，0 errors
+
 ## v0.6.10｜Kindle 阅读模式细化：模板层移除导航
 
 日期：2026-05-28  
