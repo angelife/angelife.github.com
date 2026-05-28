@@ -1,3 +1,14 @@
+- version: "v0.6.28"
+  date: "2026-05-29"
+  title: "微信认证文件保护规则"
+  commit: "提交后以 tag v0.6.28 指向的 release commit 为准"
+  tag: "v0.6.28"
+  summary:
+    - "新增微信域名验证文件保护规则至项目治理体系。"
+    - "HERMES_COST_RULES.md、AI_WORK_RULES.md、BUILD_HANDOFF.md 同步更新。"
+  changed:
+    - "/changelog/"
+
 - version: "v0.6.27"
   date: "2026-05-29"
   title: "新增 Hermes 省 Token 执行规则"
