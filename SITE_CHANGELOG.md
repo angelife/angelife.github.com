@@ -2,6 +2,47 @@
 
 本文件用于 AI 接手时查看详细版本演化。公开版本摘要见 `/changelog/` 和 `hugo-site/data/changelog.yaml`。
 
+## v0.6.7｜发布机器执行经验指挥文章并修复 404
+
+日期：2026-05-28  
+执行者：Reasonix  
+发布方式：本地 Hugo 生成 -> rsync 到仓库根目录 -> commit -> push -> git tag  
+commit：提交后以 tag `v0.6.7` 指向的 release commit 为准  
+tag：v0.6.7
+
+### 本次目标
+
+- 将长期滞留于 untracked 状态的文章《机器执行，经验指挥：AI 时代真正昂贵的东西》正式纳入 git 跟踪并发布上线。
+- 修复线上 `/posts/ai-machine-executes-experience-commands/` 404 问题。
+- 同步更新所有日志和治理文件。
+
+### 修改文件
+
+- `hugo-site/content/posts/ai-machine-executes-experience-commands/index.md`
+- `posts/ai-machine-executes-experience-commands/index.html`
+- `SITE_CHANGELOG.md`
+- `DAILY_WORK_LOG.md`
+- `PROJECT_STATUS.md`
+- `BUILD_HANDOFF.md`
+- `hugo-site/data/changelog.yaml`
+
+### 具体修改
+
+- 将 untracked 状态的文章源文件及静态产物正式提交到 git。
+- 文章 slug：`ai-machine-executes-experience-commands`。
+- 分类：`火·AI`、`AI时代`。
+- 标签：`AI工作流`、`自动化`、`经验`、`AI时代`、`个人系统`、`托管人生`。
+- 封面状态：`cover_status: prompt_ready`，封面图待后续接入。
+
+### 构建与发布
+
+- Hugo 构建结果：Hugo `v0.147.4` 构建通过，213 pages，0 errors。
+- rsync：已完成，`hugo-site/public/` 已同步到仓库根目录。
+
+### 线上验证
+
+- `/posts/ai-machine-executes-experience-commands/`：静态产物已生成并验证目标路径，不再 404。
+
 ## v0.6.6｜接入高速公路与泥巴地文章封面图
 
 日期：2026-05-28  

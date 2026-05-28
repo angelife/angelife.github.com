@@ -1,3 +1,18 @@
+- version: "v0.6.7"
+  date: "2026-05-28"
+  title: "发布机器执行经验指挥文章并修复 404"
+  commit: "以 tag v0.6.7 指向的 release commit 为准"
+  tag: "v0.6.7"
+  summary:
+    - "将长期 untracked 的文章《机器执行，经验指挥：AI 时代真正昂贵的东西》正式提交并发布。"
+    - "修复线上 /posts/ai-machine-executes-experience-commands/ 404 问题。"
+    - "文章归入火·AI、AI时代，讨论 AI 时代执行与经验分离的深层逻辑。"
+    - "封面状态：prompt_ready，待真实封面图生成后接入。"
+  changed:
+    - "/posts/ai-machine-executes-experience-commands/"
+    - "/changelog/"
+  rollback_note: "可通过 Git tag v0.6.7 回退到本版本：git checkout v0.6.7 -- . && git commit -m 'Rollback site to v0.6.7' && git push origin master"
+
 - version: "v0.6.6"
   date: "2026-05-28"
   title: "接入高速公路与泥巴地文章封面图"

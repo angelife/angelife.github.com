@@ -1,5 +1,59 @@
 # angelife 每日工作日志
 
+## 2026-05-28｜v0.6.7｜发布机器执行文章并修复 404
+
+### 今天做了什么
+
+- 将长期滞留于 untracked 状态的文章《机器执行，经验指挥：AI 时代真正昂贵的东西》正式纳入 git 跟踪并发布上线。
+- 修复线上 `/posts/ai-machine-executes-experience-commands/` 404 问题。
+- 文章源文件 front matter 已确认：draft: false，slug、title、categories、tags 均正常。
+- 封面状态记录为 `cover_status: prompt_ready`，未写入 front matter cover 字段。
+- 更新公开 changelog、内部详细日志、每日工作日志、交接日志和项目状态文件。
+
+### 做到什么程度
+
+文章已正式发布，线上 404 已修复。
+
+### 遇到什么问题
+
+- 文章源文件长期存在于 content 目录中，但从未 `git add` 和 `git commit`，导致 Hugo 构建时包含该页，但 GitHub Pages 部署的 git 仓库中不存在该文件。
+
+### 已解决什么
+
+- 已将该文章纳入 git 跟踪，按既定流程完成构建、rsync、commit、tag、push。
+
+### 未完成什么
+
+- 封面图待 ChatGPT 生成后接入。
+
+### 下一个 AI 应该从哪里接手
+
+先读 `PROJECT_STATUS.md` 和 `AI_WORK_RULES.md`。本轮文章已正式发布，`_incoming/` 不纳入提交范围。
+
+### 修改文件
+
+- `hugo-site/content/posts/ai-machine-executes-experience-commands/index.md`
+- `posts/ai-machine-executes-experience-commands/index.html`
+- `SITE_CHANGELOG.md`
+- `DAILY_WORK_LOG.md`
+- `PROJECT_STATUS.md`
+- `BUILD_HANDOFF.md`
+- `hugo-site/data/changelog.yaml`
+
+### 构建状态
+
+Hugo `v0.147.4` 构建通过，213 pages，0 errors。
+
+### 发布状态
+
+已按固定方式执行 rsync，根目录静态产物已更新。`_incoming/` 不纳入提交范围。
+
+### commit / tag / 版本号
+
+- 版本号：v0.6.7
+- commit：提交后以 tag `v0.6.7` 指向的 release commit 为准
+- tag：v0.6.7
+
 ## 2026-05-28｜v0.6.6｜接入高速公路与泥巴地文章封面图
 
 ### 今天做了什么

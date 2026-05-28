@@ -10,10 +10,10 @@
 
 ## 当前版本状态
 
-- 当前版本：v0.6.6
-- 最新 commit：提交后以 tag `v0.6.6` 指向的 release commit 为准
-- 最新 tag：v0.6.6
-- 线上状态：本轮为《高速公路与泥巴地：AI时代的本土化生存》接入封面图；封面状态 image_ready；本地 Hugo 构建和 rsync 已完成，push 后等待 GitHub Pages 线上刷新。
+- 当前版本：v0.6.7
+- 最新 commit：提交后以 tag `v0.6.7` 指向的 release commit 为准
+- 最新 tag：v0.6.7
+- 线上状态：本轮修复《机器执行，经验指挥》文章 404 问题；封面状态 prompt_ready；本地 Hugo 构建和 rsync 已完成，push 后等待 GitHub Pages 线上刷新。
 
 ## 版本号规则
 
