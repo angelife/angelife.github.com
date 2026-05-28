@@ -49,6 +49,68 @@ tag：v0.6.16
 - 无模板/CSS/内容变更，纯治理文件更新。
 - 线上站点不受影响。
 
+## v0.6.17｜更新 about 页以反映当前真实建站工作流
+
+日期：2026-05-29
+执行者：Reasonix
+发布方式：本地 Hugo 生成 -> rsync 到仓库根目录 -> commit -> push -> git tag
+commit：提交后以 tag `v0.6.17` 指向的 release commit 为准
+tag：v0.6.17
+
+### 本次目标
+
+- 更新 /about/ 页面，反映当前真实建站工作流。
+- Obsidian 不再被表述为深度接入自动化流程。
+- Codex 不再被表述为当前主施工流。
+- 新增当前真实链路展示：剑妈总编 → 蝉师傅 → Hermes → Reasonix → Hugo → rsync → Git → GitHub Pages。
+- 同步更新所有治理文件和公开 changelog。
+
+### 修改文件
+
+- `hugo-site/content/about.md` — 完全重写 about 页正文
+- `PROJECT_STATUS.md` — 版本号更新
+- `BUILD_HANDOFF.md` — 版本号更新
+- `SITE_CHANGELOG.md`
+- `DAILY_WORK_LOG.md`
+- `hugo-site/data/changelog.yaml`
+
+### 具体修改
+
+**about.md：**
+- 删除旧版中 Obsidian 深度参与建造的描述（Obsidian 当前不是主流程）。
+- 删除旧版中 Codex 作为当前施工队的描述（Codex 不再是当前主施工流）。
+- 删除旧版 5 层维护体系（日常收集/定期整理/Obsidian 内库/Hugo 外站/Git 部署），改为更平实的表述。
+- 新增当前真实工作流链路。
+- 新增角色分工描述：剑妈（总编）、蝉师傅（Telegram 入口）、Hermes（远程总控）、Reasonix（执行工）、DeepSeek（背后模型）、用户（最终决策）。
+- 更新 Mermaid 流程图，反映当前真实链路。
+- 注明 Obsidian 为未来方向，当前未深度接入。
+
+**PROJECT_STATUS.md：**
+- 版本从 v0.6.16 → v0.6.17
+- 线上状态描述更新
+- 已完成列表增加 About 页更新
+
+**BUILD_HANDOFF.md：**
+- 版本号更新至 v0.6.17
+
+### 构建与发布
+
+- Hugo 构建结果：待构建后确认
+- rsync：待执行
+
+### 线上验证
+
+- /about/ 页面需要阅读确认工作流描述准确
+- 治理文档版本号一致
+
+### 未完成
+
+- 无
+
+### 下次接手注意
+
+先读 `PROJECT_STATUS.md`，再读 `BUILD_HANDOFF.md`、`AI_WORK_RULES.md`、`SITE_STYLE_GUIDE.md`、`SITE_CHANGELOG.md`、`DAILY_WORK_LOG.md`、`hugo-site/data/changelog.yaml`。
+
 ## v0.6.15｜收尾提交：Kindle 治理固化后的静态产物同步
 
 日期：2026-05-28
@@ -494,6 +556,68 @@ tag：v0.6.5
 
 - 正式 commit、push、tag 和线上验证需在后续步骤完成后补入。
 - 封面图未接入，`cover_status: prompt_ready`。
+
+### 下次接手注意
+
+先读 `PROJECT_STATUS.md`，再读 `BUILD_HANDOFF.md`、`AI_WORK_RULES.md`、`SITE_STYLE_GUIDE.md`、`SITE_CHANGELOG.md`、`DAILY_WORK_LOG.md`、`hugo-site/data/changelog.yaml`。
+
+## v0.6.17｜更新 about 页以反映当前真实建站工作流
+
+日期：2026-05-29
+执行者：Reasonix
+发布方式：本地 Hugo 生成 -> rsync 到仓库根目录 -> commit -> push -> git tag
+commit：提交后以 tag `v0.6.17` 指向的 release commit 为准
+tag：v0.6.17
+
+### 本次目标
+
+- 更新 /about/ 页面，反映当前真实建站工作流。
+- obsidian 不再被表述为深度接入自动化流程。
+- Codex 不再被表述为当前主施工流。
+- 新增当前真实链路展示：剑妈总编 → 蝉师傅 → Hermes → Reasonix → Hugo → rsync → Git → GitHub Pages。
+- 同步更新所有治理文件和公开 changelog。
+
+### 修改文件
+
+- `hugo-site/content/about.md` — 完全重写 about 页正文
+- `PROJECT_STATUS.md` — 版本号更新
+- `BUILD_HANDOFF.md` — 版本号更新
+- `SITE_CHANGELOG.md`
+- `DAILY_WORK_LOG.md`
+- `hugo-site/data/changelog.yaml`
+
+### 具体修改
+
+**about.md：**
+- 删除旧版中 Obsidian 深度参与建造的描述（Obsidian 当前不是主流程）。
+- 删除旧版中 Codex 作为当前施工队的描述（Codex 不再是当前主施工流）。
+- 删除旧版 5 层维护体系（日常收集/定期整理/Obsidian 内库/Hugo 外站/Git 部署）——趋向平实。
+- 新增当前真实工作流链路。
+- 新增角色分工描述：剑妈（总编）、蝉师傅（Telegram 入口）、Hermes（远程总控）、Reasonix（执行工）、DeepSeek（背后模型）、用户（最终决策）。
+- 更新 Mermaid 流程图，反映当前真实链路。
+- 注明 Obsidian 为未来方向，当前未深度接入。
+
+**PROJECT_STATUS.md：**
+- 版本从 v0.6.16 → v0.6.17
+- 线上状态描述更新
+- 已完成列表增加 About 页更新
+
+**BUILD_HANDOFF.md：**
+- 版本号更新至 v0.6.17
+
+### 构建与发布
+
+- Hugo 构建结果：待构建后确认
+- rsync：待执行
+
+### 线上验证
+
+- /about/ 页面需要阅读确认工作流描述准确
+- 治理文档版本号一致
+
+### 未完成
+
+- 无
 
 ### 下次接手注意
 

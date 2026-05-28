@@ -1,3 +1,21 @@
+- version: "v0.6.17"
+  date: "2026-05-29"
+  title: "更新 about 页以反映当前真实建站工作流"
+  commit: "以 tag v0.6.17 指向的 release commit 为准"
+  tag: "v0.6.17"
+  summary:
+    - "完全重写 /about/ 页面，反映当前真实建站工作流。"
+    - "Obsidian 不再被表述为深度接入自动化流程（当前不是主流程）。"
+    - "Codex 不再被表述为当前主施工流。"
+    - "新增当前真实链路：剑妈总编 → 蝉师傅 → Hermes → Reasonix → Hugo → rsync → Git → GitHub Pages。"
+    - "新增角色分工：剑妈（总编）、蝉师傅（Telegram 入口）、Hermes（远程总控）、Reasonix（执行工）、DeepSeek（背后模型）、用户（最终决策）。"
+    - "更新 Mermaid 流程图。"
+    - "注明 Obsidian 为未来方向，当前未深度接入。"
+  changed:
+    - "/about/"
+    - "/changelog/"
+  rollback_note: "可通过 Git tag v0.6.17 回退到本版本：git checkout v0.6.17 -- . && git commit -m 'Rollback site to v0.6.17' && git push origin master"
+
 - version: "v0.6.16"
   date: "2026-05-28"
   title: "固化 Hermes / Reasonix 手机远控分工规则"

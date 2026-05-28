@@ -1,5 +1,40 @@
 # angelife 每日工作日志
 
+## 2026-05-29｜v0.6.17｜更新 about 页以反映当前真实建站工作流
+
+### 今天做了什么
+
+- 完全重写 /about/ 页面，反映当前真实建站工作流。
+- Obsidian 不再被表述为深度接入自动化流程（当前不是主流程）。
+- Codex 不再被表述为当前主施工流。
+- 新增当前真实链路展示：剑妈总编 → 蝉师傅 → Hermes → Reasonix → Hugo → rsync → Git → GitHub Pages。
+- 新增角色分工描述：剑妈（总编）、蝉师傅（Telegram 入口）、Hermes（远程总控）、Reasonix（执行工）、DeepSeek（背后模型）、用户（最终决策）。
+- 更新 Mermaid 流程图，反映当前真实链路。
+- 注明 Obsidian 为未来方向，当前未深度接入。
+- 同步更新 PROJECT_STATUS.md、BUILD_HANDOFF.md、SITE_CHANGELOG.md、DAILY_WORK_LOG.md、hugo-site/data/changelog.yaml。
+- 确认 .gitignore 已包含 .reasonix/。
+
+### 修改文件
+
+- `hugo-site/content/about.md` — 完全重写 about 页正文
+- `PROJECT_STATUS.md` — 版本号更新，已完成列表增加
+- `BUILD_HANDOFF.md` — 版本号更新
+- `SITE_CHANGELOG.md` — 新增 v0.6.17 版本日志
+- `DAILY_WORK_LOG.md` — 新增今日日志
+- `hugo-site/data/changelog.yaml` — 新增 v0.6.17 公开日志
+
+### 构建状态
+
+待执行 Hugo 构建。
+
+### 版本号
+
+v0.6.17
+
+### 验收
+
+- about.md 正文已准确反映当前工作流，无误导性描述。
+
 ## 2026-05-28 - Hermes / Reasonix 手机远控链路打通与权限边界调整
 
 今日完成：
