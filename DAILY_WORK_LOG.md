@@ -1,5 +1,67 @@
 # angelife 每日工作日志
 
+## 2026-05-28｜v0.6.1｜发布 ChatGPT 高反馈系统文章
+
+### 今天做了什么
+
+- 将用户提供的《和 ChatGPT 在一起，我重新找回了天天进步的感觉》整理为 Hugo 正式文章。
+- 按建议 slug 创建文章 bundle：`chatgpt-daily-progress-feedback-system`。
+- 归入 `火·AI`、`日课`、`AI时代`、`个人知识资产`。
+- 添加 `ChatGPT`、`AI陪练`、`个人成长`、`高反馈环境`、`知识系统` 标签。
+- 使用 imagegen 生成并接入文章封面图。
+- 修正 `publish.sh` 排除清单，防止发布时误删根目录治理文档和站点校验 txt 文件。
+- 更新公开 changelog、内部详细日志、每日工作日志、交接日志和项目状态文件。
+
+### 做到什么程度
+
+文章已进入正式发布流，作为公开长文发布，不放入 `_incoming/`，也不作为未发布储备稿处理。
+
+### 遇到什么问题
+
+- 默认 Codex 工作目录为空且不是 Git 仓库，需要重新定位到 `/Users/macos/angelife.github.com`。
+- 首次运行发布脚本后发现 `rsync --delete` 会删除根目录治理文档，需要补充排除项。
+- 文章初始发布时间写在本机当前时间之后，Hugo 未将其输出；已改为 `2026-05-28T12:20:00+08:00`。
+
+### 已解决什么
+
+- 已确认 angelife 仓库、Hugo 源站、发布脚本、版本规则和日志要求。
+- 已按 SemVer 规则生成本轮版本号 `v0.6.1`。
+- 已恢复根目录治理文档，并更新 `publish.sh` 防止后续重复误删。
+
+### 未完成什么
+
+- commit、push、tag 和线上验证在后续步骤完成后补入最终收工报告。
+
+### 下一个 AI 应该从哪里接手
+
+先读 `PROJECT_STATUS.md` 和 `AI_WORK_RULES.md`。本轮文章已经正式发布，不需要再从 `_incoming/` 处理。
+
+### 修改文件
+
+- `BUILD_HANDOFF.md`
+- `SITE_CHANGELOG.md`
+- `DAILY_WORK_LOG.md`
+- `PROJECT_STATUS.md`
+- `publish.sh`
+- `hugo-site/CODEX_HANDOFF.md`
+- `hugo-site/data/changelog.yaml`
+- `hugo-site/content/posts/chatgpt-daily-progress-feedback-system/index.md`
+- `hugo-site/content/posts/chatgpt-daily-progress-feedback-system/cover.png`
+
+### 构建状态
+
+Hugo `v0.147.4` 构建通过，183 pages，0 errors。
+
+### 发布状态
+
+已按固定方式执行 `./publish.sh`，根目录静态产物已更新。`_incoming/` 已加入脚本排除项，未纳入提交范围。
+
+### commit / tag / 版本号
+
+- 版本号：v0.6.1
+- commit：提交后以 tag `v0.6.1` 指向的 release commit 为准
+- tag：v0.6.1
+
 ## 2026-05-27｜v0.6.0｜改用 SemVer、增强搜索并预留 GitHub 评论
 
 ### 今天做了什么

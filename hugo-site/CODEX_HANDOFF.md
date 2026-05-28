@@ -45,7 +45,9 @@ AI时代的正见与系统化。
    - Kindle / KOReader / AI 阅读闭环
    - 不失正见
 6. 首页宽屏排版已收紧。
-7. Hugo 构建通过，最近一次构建约 145 页，0 错误。
+7. Hugo 构建通过，最近一次构建 183 页，0 错误。
+8. 2026-05-28 新增文章《和 ChatGPT 在一起，我重新找回了天天进步的感觉》，版本 `v0.6.1`。
+9. `publish.sh` 已补充根目录治理文档和 `*.txt` 排除项，避免 rsync 删除非发布产物。
 
 ## 当前工作流
 
@@ -66,9 +68,11 @@ rsync -av hugo-site/public/ ./
 git status --short
 git diff --stat
 
-git add -A
+git add <明确文件列表>
 git commit -m "..."
 git push origin master
+git tag -a VERSION -m "VERSION: ..."
+git push origin VERSION
 
 ## 重要规则
 
@@ -77,6 +81,7 @@ git push origin master
 - themes/
 - public/，除非是最终部署步骤
 - 已经整理好的文章，除非明确要求
+- _incoming/，不提交、不发布
 
 谨慎修改：
 - layouts/
@@ -147,4 +152,4 @@ rg -n "<li>|</ul>|</tr>|<tbody>" content/posts/2014-04-13-reference content/post
 - hugo --minify
 - find content/series content/projects content/posts -maxdepth 3 -type f -name "*.md" | sort
 
-然后给出计划，再等待确认。
+然后给出计划，再等待确认。若用户明确要求发布，按 `AI_WORK_RULES.md` 执行：本地 Hugo 生成、rsync 到仓库根目录、精确 git add、commit、push、创建并推送 tag。

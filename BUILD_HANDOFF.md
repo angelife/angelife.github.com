@@ -12,6 +12,8 @@
 4. `git push origin master`。
 5. 创建并推送 Git tag，作为可回退备份点。
 
+当前最新版本：`v0.6.1`。
+
 标准命令：
 
 ```bash
@@ -59,6 +61,8 @@ git push origin VERSION
 - 运行 `hugo --cleanDestinationDir --minify`，必须 0 errors。
 - `rsync -av hugo-site/public/ ./` 到仓库根目录。
 - 提交后创建 Git tag。
+
+注意：推荐使用仓库根目录 `./publish.sh`。脚本已排除根目录治理文档、站点校验 txt、Git 元数据和 Hugo 源站目录，避免 `rsync --delete` 误删非发布产物。
 
 ## 版本号规则
 

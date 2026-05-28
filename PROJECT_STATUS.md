@@ -10,10 +10,10 @@
 
 ## 当前版本状态
 
-- 当前版本：v0.6.0
-- 最新 commit：提交后以 tag `v0.6.0` 指向的 release commit 为准
-- 最新 tag：v0.6.0
-- 线上状态：本轮已生成并同步 `/search/`、`/changelog/`、`/site-workflow/`；推送后等待 GitHub Pages 线上刷新。
+- 当前版本：v0.6.1
+- 最新 commit：提交后以 tag `v0.6.1` 指向的 release commit 为准
+- 最新 tag：v0.6.1
+- 线上状态：本轮发布《和 ChatGPT 在一起，我重新找回了天天进步的感觉》；本地 Hugo 构建和 rsync 已完成，push 后等待 GitHub Pages 线上刷新。
 
 ## 版本号规则
 
@@ -37,6 +37,8 @@
 - SemVer 版本号规则。
 - 搜索增强：高亮、上下文摘要、排序优化。
 - giscus 评论系统预留。
+- ChatGPT 高反馈系统文章上线。
+- `publish.sh` 已保护根目录治理文档，避免后续 `rsync --delete` 误删。
 
 ## 进行中
 
@@ -68,6 +70,7 @@
 - 不要忘记每轮更新日志和创建 Git tag。
 - giscus 未配置前不应显示评论区。
 - 不要切换发布方式。
+- 本轮新文章为正式发布内容，不进入 `_incoming/`。
 
 ## 下一步优先级
 

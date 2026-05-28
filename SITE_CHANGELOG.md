@@ -2,6 +2,74 @@
 
 本文件用于 AI 接手时查看详细版本演化。公开版本摘要见 `/changelog/` 和 `hugo-site/data/changelog.yaml`。
 
+## v0.6.1｜发布 ChatGPT 高反馈系统文章并保护根目录治理文档
+
+日期：2026-05-28  
+执行者：Codex  
+发布方式：本地 Hugo 生成 -> rsync 到仓库根目录 -> commit -> push -> git tag  
+commit：提交后以 tag `v0.6.1` 指向的 release commit 为准  
+tag：v0.6.1
+
+### 本次目标
+
+- 将用户提供的 ChatGPT 高反馈系统文章整理为 Hugo 正式文章。
+- 按既定流程生成封面图、构建站点、同步根目录静态产物并发布。
+- 修正 `publish.sh` 排除清单，避免 `rsync --delete` 删除根目录治理文档和站点校验 txt 文件。
+- 同步更新公开 changelog、内部日志、每日工作日志、交接日志和项目状态文件。
+
+### 修改文件
+
+- `BUILD_HANDOFF.md`
+- `SITE_CHANGELOG.md`
+- `DAILY_WORK_LOG.md`
+- `PROJECT_STATUS.md`
+- `publish.sh`
+- `hugo-site/CODEX_HANDOFF.md`
+- `hugo-site/data/changelog.yaml`
+- `hugo-site/content/posts/chatgpt-daily-progress-feedback-system/index.md`
+- `hugo-site/content/posts/chatgpt-daily-progress-feedback-system/cover.png`
+
+### 具体修改
+
+- 新增正式文章《和 ChatGPT 在一起，我重新找回了天天进步的感觉》。
+- 文章 slug：`chatgpt-daily-progress-feedback-system`。
+- 分类：`火·AI`、`日课`、`AI时代`、`个人知识资产`。
+- 标签：`ChatGPT`、`AI陪练`、`个人成长`、`高反馈环境`、`知识系统`。
+- 使用 imagegen 生成克制的编辑类封面图，并复制到文章 bundle 内。
+- `publish.sh` 增加根目录治理文档和 `*.txt` 排除项。
+
+### 构建与发布
+
+- Hugo 构建命令：`./publish.sh`
+- 发布命令：`./publish.sh` 内执行 `rsync -a --delete hugo-site/public/ ./`
+- 构建结果：Hugo `v0.147.4` 构建通过，183 pages，0 errors。
+- rsync：已完成，`hugo-site/public/` 已同步到仓库根目录。
+
+### 线上验证
+
+- `/posts/chatgpt-daily-progress-feedback-system/`：本地静态产物已生成并验证目标路径。
+- `/changelog/`：本地生成产物已包含 `v0.6.1`。
+
+### 遇到的问题
+
+- 当前 Codex 工作目录不是 angelife 仓库，实际仓库位于 `/Users/macos/angelife.github.com`。
+- 原 `publish.sh` 排除清单不完整，`rsync --delete` 会删除根目录治理文档；本轮已修复脚本并恢复文档。
+- 文章初始发布时间晚于本机当前时间，Hugo 默认不发布未来文章；已将发布时间调为 `2026-05-28T12:20:00+08:00` 后重新构建。
+
+### 已解决
+
+- 已定位正确仓库和 Hugo 源站目录。
+- 已按现有 SemVer 规范选择 `v0.6.1`。
+- 已保护根目录治理文档和站点校验 txt 文件。
+
+### 未完成
+
+- 正式 commit、push、tag 和线上验证需在提交后完成。
+
+### 下次接手注意
+
+先读 `PROJECT_STATUS.md`，再读 `BUILD_HANDOFF.md`、`AI_WORK_RULES.md`、`SITE_STYLE_GUIDE.md`、`SITE_CHANGELOG.md`、`DAILY_WORK_LOG.md`、`hugo-site/data/changelog.yaml`。继续使用本地 Hugo 生成 + rsync 根目录发布，不要切 GitHub Actions，不要提交 `_incoming/`。
+
 ## v0.6.0｜改用 SemVer、增强搜索并预留 GitHub 评论
 
 日期：2026-05-27  
