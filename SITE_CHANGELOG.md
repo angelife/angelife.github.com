@@ -2,6 +2,18 @@
 
 本文件用于 AI 接手时查看详细版本演化。公开版本摘要见 `/changelog/` 和 `hugo-site/data/changelog.yaml`。
 
+## v0.6.31｜增强自费蒸馏文章：新增学徒期小节
+
+日期：2026-05-29
+执行者：Hermes
+发布方式：直接操作
+变更：
+- `hugo-site/content/posts/ai-self-distillation-electronic-donkey/index.md`：
+  - 在「程序员只是第一个样本」后新增「没有学徒期，就没有高级工」小节
+  - 结尾增加插入句：「它可以替你完成任务，但不能替你经历学徒期……」
+  - tags 新增「学徒期」
+- 版本从 v0.6.30 顺延至 v0.6.31
+
 ## v0.6.29｜更新 about 页面工作流
 
 日期：2026-05-29

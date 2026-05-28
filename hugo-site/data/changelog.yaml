@@ -1,3 +1,16 @@
+- version: "v0.6.31"
+  date: "2026-05-29"
+  title: "增强自费蒸馏文章：新增学徒期小节"
+  commit: "提交后以 tag v0.6.31 指向的 release commit 为准"
+  tag: "v0.6.31"
+  summary:
+    - "在《自费蒸馏》文中新增「没有学徒期，就没有高级工」小节。"
+    - "结尾增加插入句。"
+    - "tags 新增「学徒期」。"
+  changed:
+    - "/posts/ai-self-distillation-electronic-donkey/"
+    - "/changelog/"
+
 - version: "v0.6.29"
   date: "2026-05-29"
   title: "更新 about 页面工作流"

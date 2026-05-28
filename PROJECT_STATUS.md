@@ -10,9 +10,9 @@
 
 ## 当前版本状态
 
-- 当前版本：v0.6.29
-- 最新 commit：提交后以 tag v0.6.29 指向的 release commit 为准
-- 最新 tag：v0.6.29
+- 当前版本：v0.6.31
+- 最新 commit：提交后以 tag v0.6.31 指向的 release commit 为准
+- 最新 tag：v0.6.31
 - 线上状态：关于页已更新，反映当前真实建站工作流（剑妈总编 → 蝉师傅 → Hermes → Reasonix → Hugo → rsync → Git → GitHub Pages）。Obsidian 和 Codex 不再被过度描述。
 
 ## 版本号规则
