@@ -1,0 +1,42 @@
+{{ define "main" }}
+<article class="post-single kindle-page">
+  <header class="post-header">
+    <h1 class="post-title">{{ .Title }}</h1>
+    {{ with .Description }}
+    <div class="post-description">{{ . }}</div>
+    {{ end }}
+  </header>
+
+  {{ with .Content }}
+  <div class="post-content">
+    {{ . }}
+  </div>
+  {{ end }}
+
+  <section class="kindle-article-list" aria-label="article list for Kindle">
+    {{ $pages := where site.RegularPages "Type" "in" (slice "posts") }}
+    {{ $pages = sort $pages "Date" "desc" }}
+    {{ range $pages }}
+    <article class="kindle-entry">
+      <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      <div class="kindle-entry-meta">
+        <time>{{ .Date.Format "2006-01-02" }}</time>
+        {{ with .Params.categories }}
+        <span class="kindle-entry-categories">
+          {{ range $i, $cat := . }}{{ if $i }} / {{ end }}{{ $cat }}{{ end }}
+        </span>
+        {{ end }}
+      </div>
+      {{ with .Description }}
+      <p class="kindle-entry-summary">{{ . }}</p>
+      {{ end }}
+      <a class="kindle-read-link" href="{{ .RelPermalink }}">阅读全文 →</a>
+    </article>
+    {{ end }}
+  </section>
+
+  <footer class="kindle-footer">
+    <p><a href="/">← 返回 angelife 首页</a></p>
+  </footer>
+</article>
+{{ end }}

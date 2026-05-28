@@ -77,6 +77,12 @@ summaryLength = 120
   weight = 60
 
 [[menu.main]]
+  identifier = "kindle"
+  name = "Kindle版"
+  url = "/kindle/"
+  weight = 75
+
+[[menu.main]]
   identifier = "search"
   name = "搜索"
   url = "/search/"

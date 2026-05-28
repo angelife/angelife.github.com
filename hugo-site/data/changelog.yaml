@@ -1,3 +1,18 @@
+- version: "v0.6.8"
+  date: "2026-05-28"
+  title: "新增 Kindle Paperwhite 阅读模式"
+  commit: "以 tag v0.6.8 指向的 release commit 为准"
+  tag: "v0.6.8"
+  summary:
+    - "为网站增加 Kindle KPW5 / 电子墨水屏阅读优化模式。"
+    - "新增 /kindle/ 入口页面、独立 kindle.css 样式文件、导航入口。"
+    - "全站通过 @media (monochrome) 条件激活 Kindle 优化：黑白高对比、大字号、去装饰、下划线链接。"
+    - "普通桌面和手机端不受影响。"
+  changed:
+    - "/kindle/"
+    - "/changelog/"
+  rollback_note: "可通过 Git tag v0.6.8 回退到本版本：git checkout v0.6.8 -- . && git commit -m 'Rollback site to v0.6.8' && git push origin master"
+
 - version: "v0.6.7"
   date: "2026-05-28"
   title: "发布机器执行经验指挥文章并修复 404"

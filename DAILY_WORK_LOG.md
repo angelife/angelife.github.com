@@ -1,5 +1,60 @@
 # angelife 每日工作日志
 
+## 2026-05-28｜v0.6.8｜新增 Kindle Paperwhite 阅读模式
+
+### 今天做了什么
+
+- 为 angelife 网站增加 Kindle KPW5 / 电子墨水屏阅读优化模式。
+- 新增 `/kindle/` 入口：文章列表按日期倒序，无封面大图，黑白高对比。
+- 创建 `hugo-site/static/css/kindle.css`，通过 `@media (monochrome)` 条件激活全站 Kindle 优化。
+- 创建 `hugo-site/layouts/section/kindle.html` 作为 `/kindle/` 页面模板。
+- 创建 `hugo-site/content/kindle/_index.md` 内容页。
+- 在 `hugo.toml` 主导航增加「Kindle版」条目。
+- 在 `extend_head.html` 中加载 `kindle.css`。
+
+### 做到什么程度
+
+Kindle 阅读模式已创建并发布。普通桌面端、手机端不受影响。
+
+### 遇到什么问题
+
+- 最初将模板放在 `layouts/page/` 目录，但 `content/kindle/_index.md` 是 section 类型。将模板移到 `layouts/section/` 后正常渲染。
+
+### 已解决什么
+
+- Kindle 页面已正常生成，包含 9 篇文章列表。
+
+### 未完成什么
+
+- 无。
+
+### 修改文件
+
+- 新增：`hugo-site/content/kindle/_index.md`
+- 新增：`hugo-site/layouts/section/kindle.html`
+- 新增：`hugo-site/static/css/kindle.css`
+- 修改：`hugo-site/hugo.toml`
+- 修改：`hugo-site/layouts/partials/extend_head.html`
+- 修改：`SITE_CHANGELOG.md`
+- 修改：`DAILY_WORK_LOG.md`
+- 修改：`PROJECT_STATUS.md`
+- 修改：`BUILD_HANDOFF.md`
+- 修改：`hugo-site/data/changelog.yaml`
+
+### 构建状态
+
+Hugo `v0.147.4` 构建通过，215 pages，0 errors。
+
+### 发布状态
+
+已按固定方式执行 rsync，根目录静态产物已更新。
+
+### commit / tag / 版本号
+
+- 版本号：v0.6.8
+- commit：提交后以 tag `v0.6.8` 指向的 release commit 为准
+- tag：v0.6.8
+
 ## 2026-05-28｜v0.6.7｜发布机器执行文章并修复 404
 
 ### 今天做了什么

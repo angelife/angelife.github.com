@@ -10,10 +10,10 @@
 
 ## 当前版本状态
 
-- 当前版本：v0.6.7
-- 最新 commit：提交后以 tag `v0.6.7` 指向的 release commit 为准
-- 最新 tag：v0.6.7
-- 线上状态：本轮修复《机器执行，经验指挥》文章 404 问题；封面状态 prompt_ready；本地 Hugo 构建和 rsync 已完成，push 后等待 GitHub Pages 线上刷新。
+- 当前版本：v0.6.8
+- 最新 commit：提交后以 tag `v0.6.8` 指向的 release commit 为准
+- 最新 tag：v0.6.8
+- 线上状态：本轮新增 Kindle KPW5 阅读模式，新增 `/kindle/` 入口和独立 CSS；本地 Hugo 构建和 rsync 已完成，push 后等待 GitHub Pages 线上刷新。
 
 ## 版本号规则
 

@@ -2,6 +2,49 @@
 
 本文件用于 AI 接手时查看详细版本演化。公开版本摘要见 `/changelog/` 和 `hugo-site/data/changelog.yaml`。
 
+## v0.6.8｜新增 Kindle Paperwhite 阅读模式
+
+日期：2026-05-28  
+执行者：Reasonix  
+发布方式：本地 Hugo 生成 -> rsync 到仓库根目录 -> commit -> push -> git tag  
+commit：提交后以 tag `v0.6.8` 指向的 release commit 为准  
+tag：v0.6.8
+
+### 本次目标
+
+- 为 angelife 网站增加 Kindle KPW5 / 电子墨水屏阅读优化模式。
+- 新增 `/kindle/` 入口页面：黑白高对比、大字号、文章列表优先、无封面图、无复杂装饰。
+- 新增 `kindle.css`：通过 `@media (monochrome)` 条件激活，全站生效但仅在 Kindle 浏览器或窄屏下改变样式。
+- 新增主导航入口。
+- 同步更新所有日志和治理文件。
+
+### 新增文件
+
+- `hugo-site/content/kindle/_index.md`
+- `hugo-site/layouts/section/kindle.html`
+- `hugo-site/static/css/kindle.css`
+
+### 修改文件
+
+- `hugo-site/hugo.toml` — 新增 Kindle版 导航条目
+- `hugo-site/layouts/partials/extend_head.html` — 加载 kindle.css
+- `SITE_CHANGELOG.md`
+- `DAILY_WORK_LOG.md`
+- `PROJECT_STATUS.md`
+- `BUILD_HANDOFF.md`
+- `hugo-site/data/changelog.yaml`
+
+### 构建与发布
+
+- Hugo 构建结果：Hugo `v0.147.4` 构建通过，215 pages，0 errors。
+- rsync：已完成。
+
+### 线上验证
+
+- `/kindle/`：已生成，包含 9 篇最新文章列表，无封面图，简单条目布局。
+- `/css/kindle.css`：已部署。
+- 普通首页和文章页不受影响。
+
 ## v0.6.7｜发布机器执行经验指挥文章并修复 404
 
 日期：2026-05-28  
