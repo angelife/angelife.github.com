@@ -1,6 +1,31 @@
 # angelife AI 工作规则
 
-本文件适用于所有接手 angelife 网站的 AI，包括 ChatGPT、Codex、Claude、DeepSeek、Reasonix 或其他 AI。
+本文件适用于所有接手 angelife 网站的 AI 执行代理，包括 OpenClaw/龙虾、Hermes/Hermers、Docker Hermes、Reasonix、Codex、Claude Code 或其他 AI 执行代理。
+
+ChatGPT / 剑妈是总控，不属于 AI 执行代理；DeepSeek 是模型后端，不属于 AI 执行代理。
+
+## 执行代理同级原则
+
+龙虾、Hermes、Docker Hermes、Reasonix、Codex、Claude Code 都是同级 AI 执行代理。
+没有阶级差异，只有工具特长、成本、稳定性、界面和模型后端的差异。
+
+- **OpenClaw / 龙虾**：目标逐步接 Codex 的主力施工位，适合网页可视化、长会话、真实仓库施工。
+- **Hermes（本机）**：手机远控和 Telegram 入口（执行代理）
+- **NVIDIA（Docker Hermes）**：NVIDIA API / NIM + Minimax 免费练功房，高 token 累活执行代理，适合长文档处理、规则整理、日志补账。不污染本机蝉师傅 Hermes 和 DeepSeek 旧配置。
+- **Reasonix**：项目执行工，配合总控（人类+剑妈）完成发布流程。
+- **Codex**：主力施工代理（过渡期，目标由 OpenClaw/龙虾逐步接替）。
+- **Claude Code**：复杂推理与代码修改。
+
+所有代理必须遵守同一仓库、同一流程、同一时间单代理操作原则。
+
+## 统一工地
+
+所有 AI 执行代理默认操作同一个本地仓库：
+
+- macOS 主机：`/Users/macos/angelife.github.com`
+- OpenClaw 容器内：`/home/node/.openclaw/workspace/angelife.github.com`
+
+不得各自创建独立流程、独立目录、独立发布方式。
 
 ## 接手前必读
 
@@ -9,11 +34,14 @@
 - `PROJECT_STATUS.md`
 - `BUILD_HANDOFF.md`
 - `AI_WORK_RULES.md`
+- `AI_EXECUTION_AGENTS.md`
+- `HERMES_COST_RULES.md`
 - `SITE_STYLE_GUIDE.md`
 - `SITE_CHANGELOG.md`
 - `DAILY_WORK_LOG.md`
-- `HERMES_COST_RULES.md`
 - `hugo-site/data/changelog.yaml`
+
+> 所有 AI 执行代理接手前必须读取并遵守 `AI_EXECUTION_AGENTS.md`。OpenClaw/龙虾、Hermes/Hermers、Reasonix、Codex、Claude Code 等工具同属 AI 执行代理，只有特长差异，没有阶级高低；它们统一使用同一个本地仓库和同一套发布流程。
 
 ## 硬性禁止
 
@@ -30,7 +58,8 @@
 - 不准删除 `old-site/`、`themes/`、`public/` 历史内容，除非用户明确要求。
 - 不准破坏 Kindle 阅读模式的独立输出。Kindle 版是独立阅读输出，不是普通页面的 CSS 隐藏变体。修改 header、footer、baseof、single、list、outputFormats 或导航模板时，必须同时验收普通版和 Kindle 版。不得让 `/kindle/` 或 `/kindle/posts/<slug>/` 输出 PaperMod 普通导航、普通 footer 或桌面站点 chrome。
 
-- Hermes 是手机远程总控和 Telegram 入口。Reasonix 是项目执行工。Hermes 默认不得直接修改项目文件，不得自行 patch，不得自行扩大 git add，不得擅自 commit/tag/push。当 Reasonix 在 headless/MCP 场景下无法执行 shell 命令时，Hermes 可以作为 terminal 手臂代跑 shell，但必须严格执行 Reasonix 明确列出的命令，不得自由发挥。
+- 人类用户 + ChatGPT / 剑妈负责总控、定稿、边界和验收。Hermes / Docker Hermes / 龙虾 / Reasonix / Codex / Claude Code 都是 AI 执行代理。
+- Hermes 是手机远控和 Telegram 入口（执行代理）。Reasonix 是项目执行工。Hermes 默认不得直接修改项目文件，不得自行 patch，不得自行扩大 git add，不得擅自 commit/tag/push。当 Reasonix 在 headless/MCP 场景下无法执行 shell 命令时，Hermes 可以作为 terminal 手臂代跑 shell，但必须严格执行 Reasonix 明确列出的命令，不得自由发挥。
 - 正式发布必须使用 `tools/angelife-release` 脚本，Reasonix 不直接裸跑 git push/tag，Hermes 不自行拼接发布流程。
 
 ## 固定发布流程
@@ -178,15 +207,32 @@ cd /Users/macos/angelife.github.com
 
 固定链路：
 
-手机 Telegram → Hermes 总控 → terminal → reasonix run → Reasonix 执行 → Hermes 按 Reasonix 明确命令代跑 shell → Hugo 构建 → rsync → 精准 git add → commit → tag → push
+手机 Telegram → Hermes（远控+Telegram入口）→ 总控（人类+剑妈） → terminal → reasonix run → Reasonix 执行 → Hermes 按 Reasonix 明确命令代跑 shell → Hugo 构建 → rsync → 精准 git add → commit → tag → push
 
 
 
 Hermes 代跑 shell 白名单：
 
-pwd、ls、cat、grep、rg、git status、git diff、git log、hugo --gc --cleanDestinationDir --minify -s hugo-site、rsync -av hugo-site/public/ ./、精准 git add <文件列表>、git commit、git tag、git push、./tools/angelife-status、./tools/angelife-check、./tools/angelife-cost-log
+pwd、ls、cat、grep、rg、git status、git diff、git log、hugo --gc --cleanDestinationDir --minify -s hugo-site、安全 rsync（见下方安全排除规则）、精准 git add <文件列表>、git commit、git tag、git push、./tools/angelife-status、./tools/angelife-check、./tools/angelife-cost-log
+
+**安全 rsync 规则：** 禁止使用裸 `rsync -av hugo-site/public/ ./`。正式 rsync 必须至少排除治理文档、微信认证文件、Git 元数据和 `_incoming/`。具体排除清单见 `AI_EXECUTION_AGENTS.md` 第 11 节。
 
 任何超出白名单的命令必须先汇报并等待用户确认。
+
+## 署名追责规则
+
+所有 AI 执行代理接手、修改、构建、发布、排障，都必须署名留痕。报告中必须写清：
+
+- 执行代理名称（龙虾 / 蝉师傅 / NVIDIA / Reasonix / Codex / Claude Code）
+- 执行环境（macOS 本机 / Docker 容器 / Telegram 远控 / 手工终端）
+- 模型后端（DeepSeek / NVIDIA API / NIM + Minimax / OpenAI / Claude）
+- 修改文件（精确到文件名）
+- 是否构建（Hugo 构建结果）
+- 是否 rsync
+- 是否 git add / commit / tag / push
+- 是否发布线上
+
+禁止匿名施工。禁止只写"已完成"而不写执行者。禁止多个代理共同操作但不区分责任。
 
 ## Git 添加规则
 
@@ -201,3 +247,28 @@ git diff --cached --name-only | rg '^_incoming|^\.github/workflows/'
 ```
 
 如果发现 `_incoming/` 或未授权 workflow 修改，必须取消暂存并重新检查。
+
+## 同一时间只能一个代理操作仓库
+
+不得多个 AI 执行代理同时操作同一个 angelife 仓库。
+
+当前代理接手 → 读取规则 → 执行任务 → 输出改动报告 → 停止等待确认 → 下一个代理再接手。
+
+禁止并发修改同一批文件。
+
+## 小改不单独发布
+
+互链修正、标签调整、轻量补充等小改动，不单独发布。
+
+应保留为本地待发布改动，等形成一批成熟改动后，再统一 Hugo 构建、rsync、commit、tag、push。
+
+## 微信认证文件保护
+
+微信认证文件必须永久保护。
+
+- 源文件：`hugo-site/static/0847745cb78663855a3a1732c9c6a130.txt`
+- 根目录文件：`0847745cb78663855a3a1732c9c6a130.txt`
+- 内容：`01413348ab0d5b381a2e7099ba2600ed57ad50d3`
+- 线上地址：`https://angelife.github.io/0847745cb78663855a3a1732c9c6a130.txt`
+
+任何构建、rsync、清理、发布，都不得删除或覆盖该文件。

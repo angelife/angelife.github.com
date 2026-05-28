@@ -1,3 +1,19 @@
+- version: "v0.6.32"
+  date: "2026-05-29"
+  title: "更新 about 页面与 AI 执行代理规则"
+  commit: "提交后以 release commit 为准"
+  tag: "v0.6.32"
+  summary:
+    - "/about/ 页面更新为最新版说明，明确「本地为主场，AI 为外援」，Obsidian 是草稿炉，Hugo 网站是成品库，文章和图片由剑妈定稿后交由执行代理落盘。"
+    - "接入 about 页面封面图 /images/about/cover.png。"
+    - "新增 AI_EXECUTION_AGENTS.md，统一龙虾、蝉师傅、NVIDIA、Reasonix、Codex、Claude Code 等执行代理规则。"
+    - "明确总控是人类用户 + ChatGPT / 剑妈，所有执行代理同级，无阶级差异，只有工具特长不同。"
+    - "NVIDIA 定位为 NVIDIA API / NIM + Minimax 免费练功房，高 token / 免费 token 累活执行代理；免费 token 可以大胆练，但不能大胆破坏，本机 Hermes / 蝉师傅配置不得污染。"
+    - "补充安全 rsync 排除项，保护 .gitignore、.gitmodules、publish.sh、tools/ 发布脚本；新增操作署名与追责规则，禁止 AI 执行代理匿名施工。"
+  changed:
+    - "/about/"
+    - "/changelog/"
+
 - version: "v0.6.31"
   date: "2026-05-29"
   title: "增强自费蒸馏文章：新增学徒期小节"

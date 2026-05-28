@@ -2,6 +2,34 @@
 
 本文件用于 AI 接手时查看详细版本演化。公开版本摘要见 `/changelog/` 和 `hugo-site/data/changelog.yaml`。
 
+## v0.6.32｜更新 about 页面与 AI 执行代理规则
+
+日期：2026-05-29
+执行者：NVIDIA（Docker Hermes 独立实例）
+发布方式：待发布（提交后以 release commit 为准）
+变更：
+
+**主线一：about 页面更新**
+- `hugo-site/content/about/index.md`：更新为剑妈最新版说明，明确「本地为主场，AI 为外援」，Obsidian 是草稿炉，Hugo 网站是成品库，文章和图片由剑妈定稿后交由执行代理落盘
+- 接入 about 封面图 `/images/about/cover.png`
+
+**主线二：AI 执行代理规则更新**
+- `AI_EXECUTION_AGENTS.md`：新增完整执行代理身份规则，统一龙虾、蝉师傅、NVIDIA、Reasonix、Codex、Claude Code 同级原则；NVIDIA 独立实例正式命名为核心执行代理，高 token 累活定位
+- `AI_WORK_RULES.md`：NVIDIA 描述更新为高 token 累活执行代理
+- `HERMES_COST_RULES.md`：§9 新增 NVIDIA 练功房隔离要求；§10 更新执行代理同级原则包含 NVIDIA
+- `BUILD_HANDOFF.md`：版本号更新为 v0.6.32，新增本轮工作说明
+- `SITE_CHANGELOG.md`、`DAILY_WORK_LOG.md`、`PROJECT_STATUS.md`、`hugo-site/data/changelog.yaml`：日志补全
+
+版本从 v0.6.31 顺延至 v0.6.32
+
+本次为规则一致性整理轮，NVIDIA 统一了 Docker Hermes 独立实例的名称为"NVIDIA"，明确了 NVIDIA 是高 token 累活执行代理。本轮尚未 Hugo 构建，尚未发布。
+
+**v0.6.32 发布前安全规则补全（第二阶段）：**
+- 发现并修复安全 rsync 排除项漏洞：原排除项缺少 .gitignore、.gitmodules、publish.sh、tools/，rsync --delete 模式曾误删上述文件，已由用户 git restore 恢复
+- 新增 .gitignore、.gitmodules、publish.sh、tools/ 到安全 rsync 排除清单
+- 新增操作署名与追责规则（AI_EXECUTION_AGENTS.md §13、AI_WORK_RULES.md、BUILD_HANDOFF.md、HERMES_COST_RULES.md）
+- 所有 AI 执行代理操作必须署名留痕，禁止匿名施工
+
 ## v0.6.31｜增强自费蒸馏文章：新增学徒期小节
 
 日期：2026-05-29

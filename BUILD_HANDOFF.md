@@ -2,17 +2,42 @@
 
 本文件是任何 AI 接手 angelife 网站前必须阅读的建站交接手册。
 
+所有 AI 执行代理（OpenClaw/龙虾、Hermes/Hermers、Docker Hermes、Reasonix、Codex、Claude Code 等）统一工作在同一个本地仓库。
+
+Docker Hermes（NVIDIA API / NIM + Minimax 免费练功房）是 angelife 项目的专用练功房，与本机 Hermes 配置、Telegram bot token、DeepSeek 旧配置严格隔离。
+
+所有执行代理同级，没有阶级差异，只有工具特长不同。详见 `AI_EXECUTION_AGENTS.md` 第 14 节。
+
+- macOS 主機：`/Users/macos/angelife.github.com`
+- OpenClaw 容器內：`/home/node/.openclaw/workspace/angelife.github.com`
+
+不得各自创建独立流程、独立目录、独立发布方式。
+
 ## 当前固定发布方式
 
 固定流程：
 
 1. 在 `hugo-site/` 本地运行 Hugo 构建。
-2. 将 `hugo-site/public/` 用 `rsync` 同步到仓库根目录。
+2. **安全 rsync** 到仓库根目录（禁止使用裸 rsync，必须保护治理文档和微信文件）。
 3. 提交源文件和根目录静态产物。
 4. `git push origin master`。
 5. 创建并推送 Git tag，作为可回退备份点。
 
-当前最新版本：`v0.6.31`。
+当前最新版本：`v0.6.32 待发布`。本地有待发布改动，包含 about 页面定稿、封面图接入、治理文件规则完善等。
+
+## 接手前必读文件
+
+所有 AI 执行代理接手前必须读取：
+
+- `PROJECT_STATUS.md` — 项目总控进度
+- `BUILD_HANDOFF.md` — 建站交接手册（本文件）
+- `AI_WORK_RULES.md` — AI 工作规则
+- `AI_EXECUTION_AGENTS.md` — AI 执行代理统一身份、权限、边界和协作规则
+- `HERMES_COST_RULES.md` — 省 Token 执行规则（适用于所有执行代理）
+- `SITE_STYLE_GUIDE.md` — 网站风格规范
+- `SITE_CHANGELOG.md` — 内部版本日志
+- `DAILY_WORK_LOG.md` — 每日工作日志
+- `hugo-site/data/changelog.yaml` — 公开 changelog
 
 ## 受控脚本套件（v0.6.20+）
 
@@ -55,7 +80,9 @@ cd /Users/macos/angelife.github.com/hugo-site
 hugo --cleanDestinationDir --minify
 
 cd /Users/macos/angelife.github.com
-rsync -av hugo-site/public/ ./
+# ⚠️ 禁止使用裸 rsync -av hugo-site/public/ ./
+# 必须使用安全排除规则，至少排除治理文档、微信文件、_incoming/ 等
+# 完整排除清单见 AI_EXECUTION_AGENTS.md 第 11 节
 touch .nojekyll
 
 git status --short
@@ -94,10 +121,10 @@ git push origin VERSION
 - 更新 `PROJECT_STATUS.md` 中的当前状态。
 - 如影响公开站点，更新 `hugo-site/data/changelog.yaml`。
 - 运行 `hugo --cleanDestinationDir --minify`，必须 0 errors。
-- `rsync -av hugo-site/public/ ./` 到仓库根目录。
+- **安全 rsync**（禁止裸 `rsync -av hugo-site/public/ ./`；必须排除治理文档、微信认证文件、`_incoming/`、Git 元数据等；完整排除清单见 `AI_EXECUTION_AGENTS.md` 第 11 节）。
 - 提交后创建 Git tag。
 
-注意：推荐使用仓库根目录 `./publish.sh`。脚本已排除根目录治理文档、站点校验 txt、Git 元数据和 Hugo 源站目录，避免 `rsync --delete` 误删非发布产物。
+注意：推荐使用 `publish.sh` 或 `tools/angelife-release`。这些脚本已内置治理文档和微信文件保护。
 
 ## 版本号规则
 
@@ -161,5 +188,51 @@ hermes gateway run --replace
 
 不要在后台 launchd 启动，因为默认目录不是项目目录。
 Telegram 中执行任务时，Hermes 必须先确认 pwd 为 `/Users/macos/angelife.github.com`。
-Hermes 不得夺权，Reasonix 为执行工，Hermes 为总控和 terminal 手臂。
+人类用户 + ChatGPT / 剑妈负责总控、定稿、边界和验收。Reasonix 为执行工，Hermes 为远控+Telegram入口（执行代理）和 terminal 手臂。
 如果 Reasonix 无法直接执行 git/Hugo/shell，Hermes 只可按 Reasonix 明确命令代跑。
+
+## 同一时间只能一个代理操作仓库
+
+不得多个 AI 执行代理同时操作 angelife 仓库。当前代理完成并输出报告后，下一个代理才能接手。
+
+## 小改不单独发布
+
+互链修正、标签调整、轻量补充等小改动，保留为本地改动，等形成一批成熟改动后再统一构建发布。
+
+## 本轮 v0.6.32 工作说明
+
+本轮由 NVIDIA（Docker Hermes 独立实例）执行规则一致性整理与日志补全。
+
+**本轮修正内容：**
+- Docker Hermes 独立实例正式命名为"NVIDIA"
+- 明确 NVIDIA 是 NVIDIA API / NIM + Minimax 免费练功房，高 token 累活执行代理
+- 明确 NVIDIA 不是总控代理（总控：人类用户 + ChatGPT / 剑妈）
+- 明确所有 AI 执行代理同级，无阶级差异，只有工具特长不同
+
+**本轮修改文件：**
+`AI_EXECUTION_AGENTS.md`、`AI_WORK_RULES.md`、`HERMES_COST_RULES.md`、`BUILD_HANDOFF.md`、`SITE_CHANGELOG.md`、`DAILY_WORK_LOG.md`、`PROJECT_STATUS.md`、`hugo-site/data/changelog.yaml`
+
+**当前状态：尚未 commit、尚未 tag、尚未发布。下一步由指定执行代理统一构建发布。**
+
+## 微信认证文件保护
+
+微信认证文件（`hugo-site/static/...` 和根目录 `0847745cb78663855a3a1732c9c6a130.txt`，内容 `01413348ab0d5b381a2e7099ba2600ed57ad50d3`）永久受保护。任何构建、rsync、清理、发布不得删除或覆盖。
+
+## 接手报告与交接报告执行链格式
+
+每轮交接必须包含以下执行链信息：
+
+```
+- 总控 / 验收：人类用户 + ChatGPT / 剑妈
+- 执行代理：（龙虾 / 蝉师傅 / NVIDIA / Reasonix / Codex / Claude Code）
+- 执行环境：（macOS 本机 / Docker 容器 / OpenClaw 容器 / Telegram 远控 / 手工终端）
+- 模型后端：（DeepSeek / NVIDIA API / NIM + Minimax / OpenAI / Claude）
+- 修改文件：（精确列出文件名）
+- 是否构建：（Hugo 构建结果或"未构建"）
+- 是否 rsync：（是/否，如是说明排除项是否完整）
+- 是否提交：（commit hash 或"未提交"）
+- 是否发布：（是/否，如否则说明原因）
+- 异常与风险：（无 / 有问题需说明）
+```
+
+禁止匿名交接。禁止只写"已完成"不附执行链。

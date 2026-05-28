@@ -1,5 +1,108 @@
 # angelife 每日工作日志
 
+## 2026-05-29｜v0.6.32｜NVIDIA 补全日志与规则一致性整理
+
+### 执行链
+
+- 总控 / 验收：人类用户 + ChatGPT / 剑妈
+- 累活整理与规则补账：NVIDIA（Docker Hermes 独立实例）
+- 执行环境：Docker 容器（NVIDIA 独立实例）
+- 模型后端：NVIDIA API / NIM + Minimax（免费练功房）
+- 修改文件：AI_EXECUTION_AGENTS.md、AI_WORK_RULES.md、HERMES_COST_RULES.md、BUILD_HANDOFF.md、SITE_CHANGELOG.md、DAILY_WORK_LOG.md、PROJECT_STATUS.md、hugo-site/data/changelog.yaml
+- 是否构建：否
+- 是否 rsync：否
+- 是否提交：否（待本轮规则补全后统一发布）
+- 是否发布：否
+- 异常与风险：无
+
+### 今天做了什么（NVIDIA 接手）
+
+本轮 NVIDIA 正式接手 angelife 仓库，执行规则一致性整理与 v0.6.32 日志补全。
+
+**修正错误表述：**
+- 将所有治理文件中的"Docker Hermes"独立实例正式命名为"NVIDIA"
+- 明确 NVIDIA 是 NVIDIA API / NIM + Minimax 免费练功房，是高 token 累活执行代理
+- 明确 NVIDIA 不是总控代理（总控：人类用户 + ChatGPT / 剑妈）
+- 明确所有 AI 执行代理同级，无阶级差异，只有工具特长不同
+- 明确 NVIDIA 适合：长文档处理、规则整理、日志补账、跨文件一致性检查、低风险治理施工
+- 明确 NVIDIA 禁止：git add / commit / tag / push / rsync / Hugo 构建 / 删除文件 / 触碰密钥
+- 明确 NVIDIA 是免费练功房，可以大胆学，不可以大胆破坏
+
+**修改文件：**
+- `AI_EXECUTION_AGENTS.md` — NVIDIA 完整描述 + 表格式更新 + 核心原则更新
+- `AI_WORK_RULES.md` — Docker Hermes → NVIDIA（Docker Hermes）
+- `HERMES_COST_RULES.md` — 抬头引用 + §9 NVIDIA 练功房隔离要求 + §10 执行代理同级原则
+- `BUILD_HANDOFF.md` — 版本号更新为 v0.6.32 待发布
+- `SITE_CHANGELOG.md` — 新增 v0.6.32 版本日志
+- `DAILY_WORK_LOG.md` — 新增本条
+- `PROJECT_STATUS.md` — 版本更新为 v0.6.32 待发布
+- `hugo-site/data/changelog.yaml` — 新增 v0.6.32 公开 changelog 条目
+
+**当前 git status 待发布文件清单（未 commit、待发布）：**
+- AI_EXECUTION_AGENTS.md（M）
+- AI_WORK_RULES.md（M）
+- HERMES_COST_RULES.md（M）
+- BUILD_HANDOFF.md（M）
+- SITE_CHANGELOG.md（M）
+- DAILY_WORK_LOG.md（M）
+- PROJECT_STATUS.md（M）
+- hugo-site/data/changelog.yaml（M）
+- hugo-site/content/about/index.md（M，上轮遗留）
+- hugo-site/content/posts/ai-self-distillation-electronic-donkey/index.md（M，上轮遗留）
+- hugo-site/content/posts/highway-and-muddy-road-ai-localization/index.md（M，上轮遗留）
+
+**本轮不进行 Hugo 构建，不发布，不 commit，不 tag，不 push。**
+
+**下一步：**
+- 等待用户授权后，由指定执行代理使用 `./tools/angelife-release v0.6.32 '<commit message>'` 统一发布本轮所有改动
+- 发布前先运行 `git status --short` 确认待发布文件清单
+
+**版本号：**
+
+v0.6.32（待发布）
+
+**当日 AI 成本**
+
+- 模型：NVIDIA API / NIM + Minimax 免费练功房（免费 token）
+- 估算 token：高 token 消耗（跨文件规则一致性检查、长文档处理）
+- 费用：免费
+
+### v0.6.32 发布前安全规则补全（第二阶段）
+
+**执行链：**
+- 总控 / 验收：人类用户 + ChatGPT / 剑妈
+- 安全规则补账：NVIDIA（Docker Hermes 独立实例）
+- 本机构建与 rsync：macOS 终端手工执行，剑妈实时指挥
+- 上轮文章互链：龙虾遗留改动
+- 执行环境：Docker 容器（NVIDIA） + macOS 终端（手工）
+- 模型后端：NVIDIA API / NIM + Minimax（免费） + DeepSeek（手工终端）
+
+**发现并修复安全 rsync 排除项漏洞：**
+- v0.6.32 构建 + rsync 过程中发现原安全 rsync 排除项缺少 .gitignore、.gitmodules、publish.sh、tools/
+- rsync 曾将上述文件标记为删除（--delete 模式误删）
+- 已由用户执行 git restore 恢复
+- 本轮补齐规则：新增 .gitignore、.gitmodules、publish.sh、tools/ 到排除清单
+
+**新增操作署名与追责规则：**
+- AI_EXECUTION_AGENTS.md：新增 §13 操作署名与追责规则（执行代理名称、执行环境、模型后端、操作范围、总控与验收、异常追责）
+- AI_WORK_RULES.md：新增署名追责规则节
+- BUILD_HANDOFF.md：新增接手报告与交接报告执行链格式
+- HERMES_COST_RULES.md：明确免费 token 也必须署名留痕
+
+**当前 git status 待发布文件清单（补全后）：**
+- AI_EXECUTION_AGENTS.md（M，安全 rsync 排除项 + §13 署名追责）
+- AI_WORK_RULES.md（M，署名追责规则节）
+- BUILD_HANDOFF.md（M，执行链格式 + 本轮工作说明）
+- HERMES_COST_RULES.md（M，免费 token 署名要求）
+- SITE_CHANGELOG.md（M，本轮安全规则补全记录）
+- DAILY_WORK_LOG.md（M，执行链 + 事故记录）
+- PROJECT_STATUS.md（M，安全 rsync 漏洞修复说明）
+- hugo-site/data/changelog.yaml（M，新增安全规则补全描述）
+
+**版本号：**
+
+v0.6.32（待发布，已完成构建和 rsync，尚未 commit / tag / push）
+
 ## 2026-05-29｜v0.6.31｜增强自费蒸馏文章：新增学徒期小节
 
 ### 今天做了什么
