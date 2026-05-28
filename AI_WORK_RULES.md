@@ -177,9 +177,7 @@ cd /Users/macos/angelife.github.com
 
 手机 Telegram → Hermes 总控 → terminal → reasonix run → Reasonix 执行 → Hermes 按 Reasonix 明确命令代跑 shell → Hugo 构建 → rsync → 精准 git add → commit → tag → push
 
-Hermes 代跑 shell 白名单：
-
-pwd、ls、cat、grep、rg、git status、git diff、git log、hugo --gc --cleanDestinationDir --minify -s hugo-site、rsync -av hugo-site/public/ ./、精准 git add <文件列表>、git commit、git tag、git push
+Hermes 代跑 shell 白名单：\n\npwd、ls、cat、grep、rg、git status、git diff、git log、hugo --gc --cleanDestinationDir --minify -s hugo-site、rsync -av hugo-site/public/ ./、精准 git add <文件列表>、git commit、git tag、git push、./tools/angelife-status、./tools/angelife-check、./tools/angelife-cost-log
 
 任何超出白名单的命令必须先汇报并等待用户确认。
 

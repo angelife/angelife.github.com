@@ -12,7 +12,18 @@
 4. `git push origin master`。
 5. 创建并推送 Git tag，作为可回退备份点。
 
-当前最新版本：`v0.6.19`。
+当前最新版本：`v0.6.20`。
+
+## 受控脚本套件（v0.6.20+）
+
+从 v0.6.20 起，项目工具套件包含 4 个脚本：
+
+| 脚本 | 用途 |
+|------|------|
+| `tools/angelife-status` | 快速查看项目状态（版本、分支、clean 状态、远程对比） |
+| `tools/angelife-check` | 发布前置检查（目录/分支/Hugo 构建/Kindle 验收/git 状态） |
+| `tools/angelife-cost-log` | AI 成本记录模板（手动填写后粘贴到 DAILY_WORK_LOG.md） |
+| `tools/angelife-release` | 受控发布（含前置检查集成 + 成本记录占位符） |
 
 ## 受控发布脚本（v0.6.18+）
 

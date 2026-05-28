@@ -1,5 +1,30 @@
 # angelife 每日工作日志
 
+## 2026-05-29｜v0.6.20｜第一阶段：新增工具脚本套件
+
+### 今天做了什么（第一阶段，未发布）
+
+- 新增 3 个工具脚本：
+  - `tools/angelife-status` — 项目状态概览
+  - `tools/angelife-check` — 发布前置检查（含 Kindle 验收）
+  - `tools/angelife-cost-log` — AI 成本记录模板
+- 更新 `tools/angelife-release` — 集成前置检查调用 + 成本记录占位符优化
+- 更新 Hermes 代跑白名单，加入 3 个新脚本
+- 更新 BUILD_HANDOFF.md — 版本号 v0.6.20 + 新增脚本套件说明
+- 更新 PROJECT_STATUS.md — 版本号 + 已完成列表
+- 更新 DAILY_WORK_LOG.md — 新增日志
+- 更新 SITE_CHANGELOG.md — 新增 v0.6.20 版本日志
+- 更新 hugo-site/data/changelog.yaml — 新增 v0.6.20 公开 changelog
+- 所有脚本已 chmod +x
+
+### 当日 AI 成本
+
+- 模型：deepseek-v4-flash（Hermes 直接执行）
+- 估算 token：未获取精确值
+- 费用估算：flash 档位，规模较小
+
+### 本阶段不发布、不 commit、不 push
+
 ## 2026-05-29｜v0.6.19｜加入 AI token 与费用记录制度
 
 ### 今天做了什么

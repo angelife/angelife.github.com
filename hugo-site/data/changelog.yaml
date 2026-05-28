@@ -1,3 +1,13 @@
+- version: "v0.6.20"
+  date: "2026-05-29"
+  title: "第一阶段：新增工具脚本套件"
+  commit: "尚未发布"
+  tag: "v0.6.20"
+  summary:
+    - "新增 tools/angelife-{status,check,cost-log} 3 个受控脚本。"
+    - "angelife-release 集成前置检查。"
+    - "本阶段尚未发布、未 commit、未 push。"
+
 - version: "v0.6.19"
   date: "2026-05-29"
   title: "新增 AI token 与费用记录制度"

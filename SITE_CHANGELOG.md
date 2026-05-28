@@ -2,6 +2,41 @@
 
 本文件用于 AI 接手时查看详细版本演化。公开版本摘要见 `/changelog/` 和 `hugo-site/data/changelog.yaml`。
 
+## v0.6.20｜第一阶段：新增工具脚本套件
+
+日期：2026-05-29
+执行者：Hermes（直接）
+发布方式：尚未发布
+
+### 本次目标
+
+- 新增 3 个受控工具脚本
+- 更新 angelife-release 集成前置检查
+- 更新治理文档并记录工作日志
+
+### 新增脚本
+
+| 脚本 | 用途 |
+|------|------|
+| `tools/angelife-status` | 项目状态概览（版本/分支/clean 状态/远程对比） |
+| `tools/angelife-check` | 发布前置检查（目录/分支/Hugo 构建/Kindle 验收） |
+| `tools/angelife-cost-log` | AI 成本记录模板 |
+
+### 修改文件
+
+- `tools/angelife-status` — 新增
+- `tools/angelife-check` — 新增
+- `tools/angelife-cost-log` — 新增
+- `tools/angelife-release` — 集成前置检查 + 成本记录提示优化
+- `AI_WORK_RULES.md` — 白名单新增 3 个脚本
+- `BUILD_HANDOFF.md` — 版本号 + 脚本套件说明
+- `PROJECT_STATUS.md` — 版本号
+- `DAILY_WORK_LOG.md`
+- `SITE_CHANGELOG.md`
+- `hugo-site/data/changelog.yaml`
+
+### 本阶段不发布、不 commit、不 push
+
 ## v0.6.19｜加入 AI token 与费用记录制度
 
 日期：2026-05-29
