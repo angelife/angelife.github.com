@@ -2,6 +2,36 @@
 
 本文件用于 AI 接手时查看详细版本演化。公开版本摘要见 `/changelog/` 和 `hugo-site/data/changelog.yaml`。
 
+## v0.6.13｜修复 Kindle 文章页外层 PaperMod 壳
+
+日期：2026-05-28  
+执行者：Reasonix  
+发布方式：本地 Hugo 生成 -> rsync 到仓库根目录 -> commit -> push -> git tag  
+commit：提交后以 tag `v0.6.13` 指向的 release commit 为准  
+tag：v0.6.13
+
+### 本次目标
+
+- 修复 Kindle 文章页（/kindle/posts/<slug>/）仍输出普通导航和 PaperMod footer 的问题。
+- /kindle/ 目录页已干净，但文章页仍走普通 baseof/header/footer 包裹。
+- 原因：baseof.html 中 `hasPrefix .RelPermalink "/kindle/"` 条件在某些构建场景下对 KindlePage outputFormat 未生效。
+- 修复：改用 `$isKindle` 多条件变量（RelPermalink / Section / Layout 三重判断），统一控制 header/footer 渲染。
+
+### 修改文件
+
+- `hugo-site/layouts/_default/baseof.html` — 多条件 $isKindle 变量替代单条件 hasPrefix
+- 日志/治理文件
+
+### 验收
+
+- Kindle 文章页：0 导航词、0 Powered by
+- Kindle 目录页：0 导航词
+- 普通首页：导航完整保留
+
+### Hugo 构建
+
+223 pages，0 errors
+
 ## v0.6.12｜重新同步 Kindle 线上静态产物
 
 日期：2026-05-28  

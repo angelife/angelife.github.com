@@ -1,5 +1,27 @@
 # angelife 每日工作日志
 
+## 2026-05-28｜v0.6.13｜修复 Kindle 文章页外层 PaperMod 壳
+
+### 今天做了什么
+
+- 根因：baseof.html 用 `hasPrefix .RelPermalink "/kindle/"` 判断 Kindle 页面，单条件在 KindlePage outputFormat 下偶发不匹配。
+- 修复：改为 `$isKindle` 变量，三重判断（RelPermalink / Section / Layout），统一控制 body class、header、footer 渲染。
+- 验证：Kindle 文章页和目录页均无导航词和 Powered by。
+
+### 修改文件
+
+- `hugo-site/layouts/_default/baseof.html`
+- `SITE_CHANGELOG.md`、`DAILY_WORK_LOG.md`、`PROJECT_STATUS.md`、`BUILD_HANDOFF.md`、`hugo-site/data/changelog.yaml`
+
+### 构建状态
+
+Hugo `v0.147.4` 构建通过，223 pages，0 errors。
+
+### commit / tag / 版本号
+
+- 版本号：v0.6.13
+- tag：v0.6.13
+
 ## 2026-05-28｜v0.6.12｜重新同步 Kindle 线上静态产物
 
 ### 今天做了什么

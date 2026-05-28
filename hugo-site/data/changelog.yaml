@@ -1,3 +1,18 @@
+- version: "v0.6.13"
+  date: "2026-05-28"
+  title: "修复 Kindle 文章页外层 PaperMod 壳"
+  commit: "以 tag v0.6.13 指向的 release commit 为准"
+  tag: "v0.6.13"
+  summary:
+    - "修复 Kindle 文章页仍输出普通导航和 PaperMod footer 的问题。"
+    - "baseof.html 改用 $isKindle 多条件变量（RelPermalink/Section/Layout 三重判断）。"
+    - "/kindle/ 目录页和 /kindle/posts/ 文章页全部干净。"
+  changed:
+    - "/kindle/"
+    - "/kindle/posts/*/"
+    - "/changelog/"
+  rollback_note: "可通过 Git tag v0.6.13 回退到本版本：git checkout v0.6.13 -- . && git commit -m 'Rollback site to v0.6.13' && git push origin master"
+
 - version: "v0.6.12"
   date: "2026-05-28"
   title: "重新同步 Kindle 线上静态产物"

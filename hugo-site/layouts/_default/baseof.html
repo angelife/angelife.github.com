@@ -2,6 +2,12 @@
 {{- errorf "=> hugo v0.146.0 or greater is required for hugo-PaperMod to build " }}
 {{- end -}}
 
+{{- /* 判断当前页面是否为 Kindle 阅读模式 */}}
+{{- $isKindle := false }}
+{{- if hasPrefix .RelPermalink "/kindle/" }}{{ $isKindle = true }}{{ end }}
+{{- if eq .Section "kindle" }}{{ $isKindle = true }}{{ end }}
+{{- if eq .Layout "kindle" }}{{ $isKindle = true }}{{ end }}
+
 <!DOCTYPE html>
 <html lang="{{ site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}">
 
@@ -16,17 +22,17 @@
 {{- if eq site.Params.defaultTheme `dark` -}}
 {{- print " dark" }}
 {{- end -}}
-{{- if hasPrefix .RelPermalink "/kindle/" -}}
+{{- if $isKindle -}}
 {{- print " kindle-mode" }}
 {{- end -}}
 " id="top">
-    {{- if not (hasPrefix .RelPermalink "/kindle/") -}}
+    {{- if not $isKindle -}}
     {{- partialCached "header.html" . .Page -}}
     {{- end -}}
     <main class="main">
         {{- block "main" . }}{{ end }}
     </main>
-    {{- if not (hasPrefix .RelPermalink "/kindle/") -}}
+    {{- if not $isKindle -}}
     {{ partialCached "footer.html" . .Layout .Kind (.Param "hideFooter") (.Param "ShowCodeCopyButtons") -}}
     {{- end -}}
 </body>

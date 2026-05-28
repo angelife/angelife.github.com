@@ -10,10 +10,10 @@
 
 ## 当前版本状态
 
-- 当前版本：v0.6.12
-- 最新 commit：提交后以 tag `v0.6.12` 指向的 release commit 为准
-- 最新 tag：v0.6.12
-- 线上状态：本轮执行强制清洁构建并全量重新同步 Kindle 静态产物，确保线上 Kindle 页面无导航残留；普通页面不受影响；本地 Hugo 构建和 rsync 已完成，push 后等待 GitHub Pages 线上刷新。
+- 当前版本：v0.6.13
+- 最新 commit：提交后以 tag `v0.6.13` 指向的 release commit 为准
+- 最新 tag：v0.6.13
+- 线上状态：本轮修复 Kindle 文章页外层 PaperMod 壳问题，改用 $isKindle 多条件变量控制 header/footer 渲染；本地 Hugo 构建和 rsync 已完成，push 后等待 GitHub Pages 线上刷新。
 
 ## 版本号规则
 
