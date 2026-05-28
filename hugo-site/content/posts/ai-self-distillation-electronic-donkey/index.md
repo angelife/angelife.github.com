@@ -4,6 +4,7 @@ date: 2026-05-28
 draft: false
 slug: "ai-self-distillation-electronic-donkey"
 categories:
+  - "火·AI"
   - "AI时代"
 tags:
   - "AI写作"
