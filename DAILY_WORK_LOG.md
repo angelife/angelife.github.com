@@ -1,5 +1,17 @@
 # angelife 每日工作日志
 
+## 2026-05-29｜v0.6.25｜恢复本地静态发布 + 禁用 GitHub Actions 在线构建
+
+### 今天做了什么
+- **禁用 GitHub Actions 在线 Hugo 构建**：将 `.github/workflows/hugo.yml` 移至 `docs/disabled-workflows/hugo.yml.disabled`
+- 本地 Hugo 构建 → rsync 到仓库根 → commit → push
+- 更新版本治理文档
+- 版本从 v0.6.24 顺延至 v0.6.25
+
+### 核心规则更新
+- 禁止新增 `.github/workflows/hugo.yml` 类在线构建 workflow
+- GitHub Pages 必须设置为 "Deploy from a branch" → Branch: master, Folder: / (root)
+
 ## 2026-05-29｜v0.6.24｜添加微信域名验证
 
 ### 今天做了什么

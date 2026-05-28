@@ -16,8 +16,8 @@
 
 ## 硬性禁止
 
-- 不准临时切换 GitHub Actions 在线构建。
-- 不准修改 workflow，除非用户明确要求。
+- 不准修改 `.github/workflows/` 或新增任何 GitHub Actions 构建 workflow。
+- 不准切换 GitHub Actions 在线构建。
 - 不准 `git add .`。
 - 不准提交 `_incoming/`。
 - 不准发布 `_incoming/`。

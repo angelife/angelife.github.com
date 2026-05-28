@@ -2,6 +2,18 @@
 
 本文件用于 AI 接手时查看详细版本演化。公开版本摘要见 `/changelog/` 和 `hugo-site/data/changelog.yaml`。
 
+## v0.6.25｜恢复本地静态发布 + 禁用 GitHub Actions 在线构建
+
+日期：2026-05-29
+执行者：Hermes
+发布方式：直接操作
+变更：
+- **禁用 GitHub Actions 在线 Hugo 构建**：将 `.github/workflows/hugo.yml` 移至 `docs/disabled-workflows/hugo.yml.disabled`
+- **恢复本地 Hugo 构建**：本地 `hugo --gc --cleanDestinationDir --minify` → rsync 到仓库根目录 → commit → push → Git tag
+- **删除仓库根多余静态文件**：`--delete` 清理 rsync 不同步的旧文件
+- **核心规则**：以后禁止新增 `.github/workflows/hugo.yml` 类在线构建 workflow。angelife 网站使用本地 Hugo 构建，静态文件从 master/root 分支发布。
+- **GitHub Pages 设置要求**：Settings → Pages → Source: "Deploy from a branch" → Branch: master, Folder: / (root)
+
 ## v0.6.24｜添加微信域名验证
 
 日期：2026-05-29
