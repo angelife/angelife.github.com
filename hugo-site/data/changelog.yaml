@@ -1,3 +1,19 @@
+- version: "v0.6.10"
+  date: "2026-05-28"
+  title: "Kindle 阅读模式细化：模板层移除导航"
+  commit: "以 tag v0.6.10 指向的 release commit 为准"
+  tag: "v0.6.10"
+  summary:
+    - "Kindle 页面在模板层面移除完整主导航、搜索入口、分类导航。"
+    - "顶部只保留「安知生 angelife／Kindle 阅读版」。"
+    - "页脚保留极简版权和返回链接。"
+    - "普通页面不受影响。"
+  changed:
+    - "/kindle/"
+    - "/kindle/posts/*/"
+    - "/changelog/"
+  rollback_note: "可通过 Git tag v0.6.10 回退到本版本：git checkout v0.6.10 -- . && git commit -m 'Rollback site to v0.6.10' && git push origin master"
+
 - version: "v0.6.9"
   date: "2026-05-28"
   title: "重构为独立 Kindle 电子书阅读模式"

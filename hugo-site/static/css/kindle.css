@@ -204,24 +204,65 @@ body.kindle-mode .entry-footer {
   color: #333 !important;
 }
 
-/* ===== 9. footer ===== */
-body.kindle-mode .footer {
-  background: #fff !important;
-  color: #444 !important;
-  border-top: 1px solid #ccc;
-  font-size: 0.85em;
-  max-width: 42em;
-  margin: 0 auto;
-  padding: 0.8em 1em;
-}
-
-body.kindle-mode .footer a {
-  color: #444 !important;
-}
-
-/* ===== 10. 隐藏首页复杂区块 ===== */
+/* ===== 9. 隐藏首页复杂区块 ===== */
 body.kindle-mode .home-page.brand-home section:not(.kindle-page) {
   display: none !important;
+}
+
+/* ============================================================
+   Kindle 通用组件
+   ============================================================ */
+
+/* Kindle 顶栏：站点名 / 版块名 */
+.kindle-topbar {
+  max-width: 42em;
+  margin: 0.5em auto 0;
+  padding: 0.4em 0.8em;
+  border-bottom: 1px solid #ccc;
+  font-size: 0.9em;
+}
+
+.kindle-topbar-site a,
+.kindle-topbar-section a {
+  color: #000;
+  text-decoration: none;
+}
+
+.kindle-topbar-site a:hover,
+.kindle-topbar-section a:hover {
+  text-decoration: underline;
+}
+
+.kindle-topbar-sep {
+  color: #999;
+  margin: 0 0.3em;
+}
+
+.kindle-topbar-section {
+  color: #333;
+}
+
+/* Kindle 页脚 */
+.kindle-footer {
+  max-width: 42em;
+  margin: 0 auto;
+  padding: 1em 0.8em 2em;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  font-size: 0.85em;
+}
+
+.kindle-footer p {
+  margin: 0.3em 0;
+}
+
+.kindle-footer a {
+  color: #000;
+  text-decoration: underline;
+}
+
+.kindle-footer-copy {
+  color: #888;
 }
 
 /* ============================================================
@@ -300,19 +341,6 @@ body.kindle-mode .home-page.brand-home section:not(.kindle-page) {
   color: #000;
   text-decoration: underline;
   margin-top: 0.2em;
-}
-
-.kindle-footer {
-  margin-top: 2em;
-  padding-top: 1em;
-  border-top: 1px solid #ddd;
-  text-align: center;
-  font-size: 0.9em;
-}
-
-.kindle-footer a {
-  color: #000;
-  text-decoration: underline;
 }
 
 /* ============================================================

@@ -1,4 +1,10 @@
 {{- define "main" }}
+<div class="kindle-topbar">
+  <span class="kindle-topbar-site"><a href="/">安知生 angelife</a></span>
+  <span class="kindle-topbar-sep">／</span>
+  <span class="kindle-topbar-section"><a href="/kindle/">Kindle 阅读版</a></span>
+</div>
+
 <article class="kindle-article">
   <header class="kindle-article-header">
     <h1 class="kindle-article-title">{{ .Title }}</h1>
@@ -36,4 +42,9 @@
     </div>
   </nav>
 </article>
+
+<div class="kindle-footer">
+  <p><a href="/kindle/">← Kindle 目录</a> · <a href="/">返回首页</a></p>
+  <p class="kindle-footer-copy">© 2009–2026 angelife / 安知生</p>
+</div>
 {{- end }}

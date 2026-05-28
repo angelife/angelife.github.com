@@ -1,5 +1,36 @@
 # angelife 每日工作日志
 
+## 2026-05-28｜v0.6.10｜Kindle 阅读模式细化：模板层移除导航
+
+### 今天做了什么
+
+- 修改 `baseof.html`：Kindle 页面跳过 PaperMod 完整导航和页脚渲染。
+- Kindle 文章页模板和目录页模板加入简约顶栏：`安知生 angelife ／ Kindle 阅读版`。
+- 页脚改为纯文字极简版权 + 返回链接。
+- 清理 `kindle.css`：删除不再使用的 `.footer` 和重复的 `.kindle-footer` 样式。
+
+### 验收结果
+
+- Kindle 目录页和文章页源代码中无 `id=menu`、无 `nav`、无导航词。
+- 普通页面导航完整保留。
+
+### 修改文件
+
+- `hugo-site/layouts/_default/baseof.html`
+- `hugo-site/layouts/_default/single.kindle.html`
+- `hugo-site/layouts/kindle/list.html`
+- `hugo-site/static/css/kindle.css`
+- 日志/治理文件
+
+### 构建状态
+
+Hugo `v0.147.4` 构建通过，223 pages，0 errors。
+
+### commit / tag / 版本号
+
+- 版本号：v0.6.10
+- tag：v0.6.10
+
 ## 2026-05-28｜v0.6.9｜重构为独立 Kindle 电子书阅读模式
 
 ### 今天做了什么

@@ -2,6 +2,38 @@
 
 本文件用于 AI 接手时查看详细版本演化。公开版本摘要见 `/changelog/` 和 `hugo-site/data/changelog.yaml`。
 
+## v0.6.10｜Kindle 阅读模式细化：模板层移除导航
+
+日期：2026-05-28  
+执行者：Reasonix  
+发布方式：本地 Hugo 生成 -> rsync 到仓库根目录 -> commit -> push -> git tag  
+commit：提交后以 tag `v0.6.10` 指向的 release commit 为准  
+tag：v0.6.10
+
+### 本次目标
+
+- 在模板层面完全移除 Kindle 页面的主导航、搜索入口、分类导航等不必要 HTML。
+- 顶部只保留：站点名「安知生 angelife」 + 版块名「Kindle 阅读版」。
+- 页脚只保留简版权和返回链接。
+- 确认普通桌面端、手机端不受影响。
+
+### 修改文件
+
+- `hugo-site/layouts/_default/baseof.html` — Kindle 路径跳过 `partialCached "header.html"` 和 `footer.html`
+- `hugo-site/layouts/_default/single.kindle.html` — 加入 `kindle-topbar` 和 `kindle-footer`
+- `hugo-site/layouts/kindle/list.html` — 加入 `kindle-topbar` 和 `kindle-footer`
+- `hugo-site/static/css/kindle.css` — 新增 `kindle-topbar` / `kindle-footer` 样式，删除不再使用的 CSS
+- `SITE_CHANGELOG.md`、`DAILY_WORK_LOG.md`、`PROJECT_STATUS.md`、`BUILD_HANDOFF.md`、`hugo-site/data/changelog.yaml`
+
+### 验收
+
+- 查看 Kindle 页面源代码：无 `id=menu`、无 `class=.nav`、无「金·判断」「木·蝉识」「搜索」等导航词
+- 普通页面导航完整保留
+
+### Hugo 构建
+
+223 pages，0 errors
+
 ## v0.6.9｜重构为独立 Kindle 电子书阅读模式
 
 日期：2026-05-28  

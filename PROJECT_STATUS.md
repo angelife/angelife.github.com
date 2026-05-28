@@ -10,10 +10,10 @@
 
 ## 当前版本状态
 
-- 当前版本：v0.6.9
-- 最新 commit：提交后以 tag `v0.6.9` 指向的 release commit 为准
-- 最新 tag：v0.6.9
-- 线上状态：本轮重构 Kindle 阅读模式为独立电子书入口 — 新增独立文章页 `/kindle/posts/<slug>/`、body.kindle-mode 类、serif 字体、纯文字目录；本地 Hugo 构建和 rsync 已完成，push 后等待 GitHub Pages 线上刷新。
+- 当前版本：v0.6.10
+- 最新 commit：提交后以 tag `v0.6.10` 指向的 release commit 为准
+- 最新 tag：v0.6.10
+- 线上状态：本轮细化 Kindle 阅读模式 — 模板层移除导航、搜索入口、分类导航；顶部只保留站点名和版块名；普通页面不受影响；本地 Hugo 构建和 rsync 已完成，push 后等待 GitHub Pages 线上刷新。
 
 ## 版本号规则
 
