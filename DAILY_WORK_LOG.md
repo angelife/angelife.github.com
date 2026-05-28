@@ -1,5 +1,37 @@
 # angelife 每日工作日志
 
+## 2026-05-28｜v0.6.12｜重新同步 Kindle 线上静态产物
+
+### 今天做了什么
+
+- 本地 Kindle 模板已正确，但线上 GitHub Pages 有导航残留。
+- 执行 `hugo --gc --cleanDestinationDir --minify` 强制清洁构建。
+- 全量 rsync 覆盖根目录静态产物。
+- 排除 `.reasonix/` 避免 rsync 警告。
+- 重新 push 确保线上部署的是完全清洁的 Kindle 产物。
+
+### 验收结果
+
+- Kindle 目录/文章页：无导航词、无 Powered by、无 id=menu ✓
+- 普通页面：导航完整保留 ✓
+
+### 修改文件
+
+- `SITE_CHANGELOG.md`
+- `DAILY_WORK_LOG.md`
+- `PROJECT_STATUS.md`
+- `BUILD_HANDOFF.md`
+- `hugo-site/data/changelog.yaml`
+
+### 构建状态
+
+Hugo `v0.147.4` 构建通过，223 pages，0 errors。
+
+### commit / tag / 版本号
+
+- 版本号：v0.6.12
+- tag：v0.6.12
+
 ## 2026-05-28｜v0.6.11｜Kindle/手机自动跳转 + 双版本规则固化
 
 ### 今天做了什么

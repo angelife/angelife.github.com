@@ -1,3 +1,18 @@
+- version: "v0.6.12"
+  date: "2026-05-28"
+  title: "重新同步 Kindle 线上静态产物"
+  commit: "以 tag v0.6.12 指向的 release commit 为准"
+  tag: "v0.6.12"
+  summary:
+    - "强制清洁构建并全量重新同步 Kindle 静态产物。"
+    - "清除线上 Kindle 页面导航残留。"
+    - "rsync 增加 .reasonix/ 排除项。"
+  changed:
+    - "/kindle/"
+    - "/kindle/posts/*/"
+    - "/changelog/"
+  rollback_note: "可通过 Git tag v0.6.12 回退到本版本：git checkout v0.6.12 -- . && git commit -m 'Rollback site to v0.6.12' && git push origin master"
+
 - version: "v0.6.11"
   date: "2026-05-28"
   title: "Kindle/手机自动跳转阅读模式 + 双版本发布规则固化"

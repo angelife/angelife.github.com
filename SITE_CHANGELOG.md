@@ -2,6 +2,31 @@
 
 本文件用于 AI 接手时查看详细版本演化。公开版本摘要见 `/changelog/` 和 `hugo-site/data/changelog.yaml`。
 
+## v0.6.12｜重新同步 Kindle 线上静态产物
+
+日期：2026-05-28  
+执行者：Reasonix  
+发布方式：本地 Hugo 生成 -> rsync 到仓库根目录 -> commit -> push -> git tag  
+commit：提交后以 tag `v0.6.12` 指向的 release commit 为准  
+tag：v0.6.12
+
+### 本次目标
+
+- 本地 Kindle 产物已验证干净，但线上出现导航残留。
+- 执行强制清洁构建（`--gc --cleanDestinationDir`）并全量 rsync 覆盖根目录静态产物。
+- 重新推送确保 GitHub Pages 部署的是完全清洁的 Kindle 模板。
+- 在 rsync 中增加 `.reasonix/` 排除项。
+
+### 验收
+
+- Kindle 目录页和文章页：无导航词、无 Powered by、无 id=menu
+- 普通页面：导航完整保留
+- rsync 已排除 `.reasonix/`
+
+### Hugo 构建
+
+223 pages，0 errors
+
 ## v0.6.11｜Kindle/手机自动跳转阅读模式 + 双版本发布规则固化
 
 日期：2026-05-28  
