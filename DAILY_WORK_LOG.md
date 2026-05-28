@@ -1,5 +1,62 @@
 # angelife 每日工作日志
 
+## 2026-05-28｜v0.6.9｜重构为独立 Kindle 电子书阅读模式
+
+### 今天做了什么
+
+- 将 Kindle 模式从"网页兼容"重构为"独立电子书阅读模式"。
+- 使用 Hugo output format 为每篇文章自动生成独立 Kindle 文章页 `/kindle/posts/<slug>/`。
+- 创建 `layouts/_default/single.kindle.html`：纯文字、无封面、无标签、无分享、无评论，只有标题+日期+正文+上一篇/下一篇。
+- 创建 `layouts/kindle/list.html`：纯文字文章目录，链接到 Kindle 独立文章页。
+- 创建 `layouts/_default/baseof.html`：通过 `hasPrefix .RelPermalink "/kindle/"` 自动注入 `body.kindle-mode`。
+- 完全重写 `static/css/kindle.css`：使用 `body.kindle-mode` 选择器，serif 字体，强制去掉所有装饰。
+- 更新 `hugo.toml`、`content/posts/_index.md` cascade 配置。
+
+### 做到什么程度
+
+Kindle 阅读模式从"微调兼容"变成了"独立电子书入口"：
+- 目录页像 Kindle 书架
+- 文章页像纯电子书正文
+- 所有 Kindle 页面自动带 `kindle-mode` class
+
+### 遇到什么问题
+
+- `.OutputFormat.Name` 在 Hugo v0.147 的某些 page 类型中不可用，改用 `.RelPermalink` 前缀判断。
+- `layouts/section/kindle.html` 未被 Hugo 识别，移至 `layouts/kindle/list.html` 后正常。
+
+### 已解决什么
+
+- 独立 Kindle 文章页正常渲染，目录链接指向 Kindle 文章页。
+
+### 未完成什么
+
+- 无。
+
+### 修改文件
+
+- 新增：`hugo-site/layouts/_default/single.kindle.html`
+- 新增：`hugo-site/layouts/kindle/list.html`
+- 新增：`hugo-site/layouts/_default/baseof.html`
+- 修改：`hugo-site/static/css/kindle.css`
+- 修改：`hugo-site/content/kindle/_index.md`
+- 修改：`hugo-site/content/posts/_index.md`
+- 修改：`hugo-site/hugo.toml`
+- 修改：`SITE_CHANGELOG.md`、`DAILY_WORK_LOG.md`、`PROJECT_STATUS.md`、`BUILD_HANDOFF.md`、`hugo-site/data/changelog.yaml`
+
+### 构建状态
+
+Hugo `v0.147.4` 构建通过，223 pages，0 errors。
+
+### 发布状态
+
+已按固定方式执行 rsync，根目录静态产物已更新。
+
+### commit / tag / 版本号
+
+- 版本号：v0.6.9
+- commit：提交后以 tag `v0.6.9` 指向的 release commit 为准
+- tag：v0.6.9
+
 ## 2026-05-28｜v0.6.8｜新增 Kindle Paperwhite 阅读模式
 
 ### 今天做了什么

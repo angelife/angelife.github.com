@@ -1,6 +1,5 @@
 ---
 title: "Kindle 阅读版"
-layout: "kindle"
 description: "为 Kindle Paperwhite 和电子墨水屏优化的 angelife 文章阅读入口。黑白高对比、大字号、低干扰。"
 ---
 

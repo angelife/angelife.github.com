@@ -2,6 +2,53 @@
 
 本文件用于 AI 接手时查看详细版本演化。公开版本摘要见 `/changelog/` 和 `hugo-site/data/changelog.yaml`。
 
+## v0.6.9｜重构为独立 Kindle 电子书阅读模式
+
+日期：2026-05-28  
+执行者：Reasonix  
+发布方式：本地 Hugo 生成 -> rsync 到仓库根目录 -> commit -> push -> git tag  
+commit：提交后以 tag `v0.6.9` 指向的 release commit 为准  
+tag：v0.6.9
+
+### 本次目标
+
+- 将 Kindle 模式从"网页兼容"重构为"独立电子书入口"。
+- 新增独立 Kindle 文章页 `/kindle/posts/<slug>/`，通过 Hugo output format 自动生成。
+- 目录页链接指向 Kindle 独立文章页。
+- 使用 `body.kindle-mode` 类强制激活 Kindle CSS，不依赖 monochrome 媒体查询。
+- 完整隐藏封面图、标签、分享、评论、装饰性元素。
+
+### 技术方案
+
+- Hugo `[outputFormats.Kindle]` — 自动为每篇 post 生成 `/kindle/posts/<slug>/index.html`
+- `content/posts/_index.md` — cascade 设置 `outputs = ["HTML", "Kindle"]`
+- `layouts/_default/single.kindle.html` — Kindle 文章页模板（纯文字、无装饰、上一篇/下一篇导航）
+- `layouts/kindle/list.html` — Kindle 目录模板（文章列表，链接到 Kindle 文章页）
+- `layouts/_default/baseof.html` — 通过 `hasPrefix .RelPermalink "/kindle/"` 注入 `kindle-mode` 类
+- `static/css/kindle.css` — 完全重写，使用 `body.kindle-mode` 选择器，serif 字体
+
+### 修改文件
+
+- 新增：`hugo-site/layouts/_default/single.kindle.html`
+- 新增：`hugo-site/layouts/kindle/list.html`
+- 新增：`hugo-site/layouts/_default/baseof.html`
+- 修改：`hugo-site/static/css/kindle.css`（完全重写）
+- 修改：`hugo-site/content/kindle/_index.md`（移除 layout 字段）
+- 修改：`hugo-site/content/posts/_index.md`（添加 cascade outputs）
+- 修改：`hugo-site/hugo.toml`（添加 outputFormats.Kindle）
+- 修改：`SITE_CHANGELOG.md`、`DAILY_WORK_LOG.md`、`PROJECT_STATUS.md`、`BUILD_HANDOFF.md`、`hugo-site/data/changelog.yaml`
+
+### 构建与发布
+
+- Hugo 构建结果：Hugo `v0.147.4` 构建通过，223 pages，0 errors。
+- rsync：已完成。
+
+### 线上验证
+
+- `/kindle/` — 纯文字目录页，无封面图、无卡片、无装饰
+- `/kindle/posts/<slug>/` — 独立 Kindle 文章页，body.kindle-mode 类激活
+- 普通桌面页、手机页不受影响
+
 ## v0.6.8｜新增 Kindle Paperwhite 阅读模式
 
 日期：2026-05-28  

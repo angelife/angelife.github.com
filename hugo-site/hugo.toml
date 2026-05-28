@@ -11,6 +11,15 @@ summaryLength = 120
 [outputs]
   home = ["HTML", "RSS", "JSON"]
 
+[outputFormats]
+  [outputFormats.Kindle]
+    mediaType = "text/html"
+    path = "kindle"
+    baseName = "index"
+    isHTML = true
+    permalinkable = true
+    noUgly = true
+
 [params]
   defaultTheme = "light"
   ShowReadingTime = true

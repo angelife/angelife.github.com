@@ -1,0 +1,39 @@
+{{- define "main" }}
+<article class="kindle-article">
+  <header class="kindle-article-header">
+    <h1 class="kindle-article-title">{{ .Title }}</h1>
+    <div class="kindle-article-meta">
+      <time>{{ .Date.Format "2006-01-02" }}</time>
+      {{ with .Params.categories }}
+      <span class="kindle-article-categories">
+        {{ range $i, $cat := . }}{{ if $i }} / {{ end }}{{ $cat }}{{ end }}
+      </span>
+      {{ end }}
+    </div>
+  </header>
+
+  {{ if .Params.description }}
+  <div class="kindle-article-description">
+    {{ .Params.description }}
+  </div>
+  {{ end }}
+
+  <div class="kindle-article-content">
+    {{ .Content }}
+  </div>
+
+  <nav class="kindle-article-nav">
+    <div class="kindle-nav-back">
+      <a href="/kindle/">← Kindle 目录</a>
+    </div>
+    <div class="kindle-nav-prevnext">
+      {{ with .PrevInSection }}
+      <span class="kindle-nav-prev">上一篇：<a href="{{ .RelPermalink }}">{{ .Title }}</a></span>
+      {{ end }}
+      {{ with .NextInSection }}
+      <span class="kindle-nav-next">下一篇：<a href="{{ .RelPermalink }}">{{ .Title }}</a></span>
+      {{ end }}
+    </div>
+  </nav>
+</article>
+{{- end }}

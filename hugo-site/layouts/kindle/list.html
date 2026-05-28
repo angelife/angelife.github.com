@@ -1,24 +1,18 @@
 {{ define "main" }}
-<article class="post-single kindle-page">
-  <header class="post-header">
-    <h1 class="post-title">{{ .Title }}</h1>
+<section class="kindle-page" aria-label="Kindle reading edition">
+  <header class="kindle-page-header">
+    <h1 class="kindle-page-title">{{ .Title }}</h1>
     {{ with .Description }}
-    <div class="post-description">{{ . }}</div>
+    <p class="kindle-page-description">{{ . }}</p>
     {{ end }}
   </header>
 
-  {{ with .Content }}
-  <div class="post-content">
-    {{ . }}
-  </div>
-  {{ end }}
-
-  <section class="kindle-article-list" aria-label="article list for Kindle">
+  <section class="kindle-article-list" aria-label="article list">
     {{ $pages := where site.RegularPages "Type" "in" (slice "posts") }}
     {{ $pages = sort $pages "Date" "desc" }}
     {{ range $pages }}
     <article class="kindle-entry">
-      <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      <h2><a href="/kindle/posts/{{ .Params.slug }}/">{{ .Title }}</a></h2>
       <div class="kindle-entry-meta">
         <time>{{ .Date.Format "2006-01-02" }}</time>
         {{ with .Params.categories }}
@@ -30,7 +24,7 @@
       {{ with .Description }}
       <p class="kindle-entry-summary">{{ . }}</p>
       {{ end }}
-      <a class="kindle-read-link" href="{{ .RelPermalink }}">阅读全文 →</a>
+      <a class="kindle-read-link" href="/kindle/posts/{{ .Params.slug }}/">阅读全文 →</a>
     </article>
     {{ end }}
   </section>
@@ -38,5 +32,5 @@
   <footer class="kindle-footer">
     <p><a href="/">← 返回 angelife 首页</a></p>
   </footer>
-</article>
+</section>
 {{ end }}

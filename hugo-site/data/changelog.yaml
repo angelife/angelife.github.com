@@ -1,3 +1,20 @@
+- version: "v0.6.9"
+  date: "2026-05-28"
+  title: "重构为独立 Kindle 电子书阅读模式"
+  commit: "以 tag v0.6.9 指向的 release commit 为准"
+  tag: "v0.6.9"
+  summary:
+    - "重构 Kindle 模式为独立电子书阅读入口。"
+    - "新增独立文章页 /kindle/posts/<slug>/（Hugo output format 自动生成）。"
+    - "目录页链接指向 Kindle 独立文章页。"
+    - "使用 body.kindle-mode 类强制激活，serif 字体、纯黑白、无封面无装饰。"
+    - "普通桌面和手机端不受影响。"
+  changed:
+    - "/kindle/"
+    - "/kindle/posts/*/"
+    - "/changelog/"
+  rollback_note: "可通过 Git tag v0.6.9 回退到本版本：git checkout v0.6.9 -- . && git commit -m 'Rollback site to v0.6.9' && git push origin master"
+
 - version: "v0.6.8"
   date: "2026-05-28"
   title: "新增 Kindle Paperwhite 阅读模式"
