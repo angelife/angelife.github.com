@@ -1,3 +1,17 @@
+- version: "v0.6.23"
+  date: "2026-05-29"
+  title: "发布新文章：自费蒸馏"
+  commit: "以 tag v0.6.23 指向的 release commit 为准"
+  tag: "v0.6.23"
+  summary:
+    - "新增文章《自费蒸馏：我们正在花钱训练替代自己的人》。"
+    - "封面图已接入。"
+    - "归入 AI时代，标签：AI写作、自我蒸馏、电子驴、失业、判断力、自动化、不失正见。"
+  changed:
+    - "/posts/ai-self-distillation-electronic-donkey/"
+    - "/changelog/"
+  rollback_note: "可通过 Git tag v0.6.23 回退到本版本：git checkout v0.6.23 -- . && git commit -m 'Rollback site to v0.6.23' && git push origin master"
+
 - version: "v0.6.22"
   date: "2026-05-29"
   title: "发布新文章：能干的驴"

@@ -1,5 +1,37 @@
 # angelife 每日工作日志
 
+## 2026-05-29｜v0.6.23｜发布新文章：自费蒸馏
+
+### 今天做了什么
+
+- 新增文章《自费蒸馏：我们正在花钱训练替代自己的人》
+- slug: `ai-self-distillation-electronic-donkey`
+- 分类：AI时代
+- 标签：AI写作、自我蒸馏、电子驴、失业、判断力、自动化、不失正见
+- 封面图已接入：`/images/posts/ai-self-distillation-electronic-donkey/cover.png`
+- Hugo 222→223 pages，静态文件 360→361（新增封面图）
+- 已通过受控发布脚本发布 v0.6.23
+
+### 修改文件
+
+- `hugo-site/content/posts/ai-self-distillation-electronic-donkey/index.md`（新增）
+- `hugo-site/static/images/posts/ai-self-distillation-electronic-donkey/cover.png`（新增）
+- `PROJECT_STATUS.md`
+- `BUILD_HANDOFF.md`
+- `DAILY_WORK_LOG.md`
+- `SITE_CHANGELOG.md`
+- `hugo-site/data/changelog.yaml`
+
+### 版本号
+
+v0.6.23
+
+### 当日 AI 成本
+
+- 模型：deepseek-v4-flash（Hermes 直接执行）
+- 精确 token：未获取
+- 费用估算：flash 档位，中等规模
+
 ## 2026-05-29｜v0.6.22｜发布新文章：能干的驴
 
 ### 今天做了什么

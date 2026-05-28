@@ -2,6 +2,28 @@
 
 本文件用于 AI 接手时查看详细版本演化。公开版本摘要见 `/changelog/` 和 `hugo-site/data/changelog.yaml`。
 
+## v0.6.23｜发布新文章：自费蒸馏
+
+日期：2026-05-29
+执行者：Hermes（直接）
+发布方式：受控发布脚本
+
+### 本次目标
+
+- 发布新文章《自费蒸馏：我们正在花钱训练替代自己的人》
+- 封面图已接入：`cover.png`（image_ready）
+- Hugo 223 pages，361 static files，0 errors
+
+### 修改文件
+
+- `hugo-site/content/posts/ai-self-distillation-electronic-donkey/index.md` — 新增
+- `hugo-site/static/images/posts/ai-self-distillation-electronic-donkey/cover.png` — 新增封面图
+- `PROJECT_STATUS.md` — 版本号
+- `BUILD_HANDOFF.md` — 版本号
+- `DAILY_WORK_LOG.md`
+- `SITE_CHANGELOG.md`
+- `hugo-site/data/changelog.yaml`
+
 ## v0.6.22｜发布新文章：能干的驴
 
 日期：2026-05-29
