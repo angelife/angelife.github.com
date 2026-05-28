@@ -2,6 +2,53 @@
 
 本文件用于 AI 接手时查看详细版本演化。公开版本摘要见 `/changelog/` 和 `hugo-site/data/changelog.yaml`。
 
+## v0.6.16｜固化 Hermes / Reasonix 手机远控分工规则
+
+日期：2026-05-28
+执行者：Reasonix
+发布方式：本地 Hugo 生成 -> rsync 到仓库根目录 -> commit -> push -> git tag
+commit：提交后以 tag `v0.6.16` 指向的 release commit 为准
+tag：v0.6.16
+
+### 本次目标
+
+- 固化 Hermes / Reasonix 手机远控分工规则。
+- 写入 Hermes 不得夺权、Reasonix 为执行工、Hermes 为总控和 terminal 手臂的正式分工。
+- 定义 Hermes 代跑 shell 白名单。
+- 记录手机远控链路打通全流程经验。
+- 无模板/CSS/内容变更——纯治理固化轮。
+
+### 修改文件
+
+- `AI_WORK_RULES.md` — 新增第 14 条硬性禁止 + Hermes/Reasonix 手机远控工作流小节
+- `BUILD_HANDOFF.md` — 新增手机远控操作指南小节
+- `PROJECT_STATUS.md` — 更新版本号
+- `SITE_CHANGELOG.md`
+- `DAILY_WORK_LOG.md` — 新增详细 Hermes/Reasonix 经验日志
+- `hugo-site/data/changelog.yaml`
+
+### 具体修改
+
+**AI_WORK_RULES.md：**
+- 硬性禁止新增第 14 条：Hermes 是总控入口，Reasonix 是执行工，Hermes 不得自行 patch/git add/commit/tag/push。
+- 新增「Hermes / Reasonix 手机远控工作流」小节：固定链路、代跑 shell 白名单。
+
+**BUILD_HANDOFF.md：**
+- 新增「手机远控操作指南（v0.6.16+）」小节：前台运行方式、目录确认、权限边界。
+
+**DAILY_WORK_LOG.md：**
+- 新增 2026-05-28 Hermes/Reasonix 手机远控链路打通与权限边界调整日志。
+
+### 构建与发布
+
+- 纯治理文件更新，无 Hugo 构建变更。
+- 不涉及 Hugo 构建和 rsync。
+
+### 线上验证
+
+- 无模板/CSS/内容变更，纯治理文件更新。
+- 线上站点不受影响。
+
 ## v0.6.15｜收尾提交：Kindle 治理固化后的静态产物同步
 
 日期：2026-05-28

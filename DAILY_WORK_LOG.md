@@ -1,5 +1,44 @@
 # angelife 每日工作日志
 
+## 2026-05-28 - Hermes / Reasonix 手机远控链路打通与权限边界调整
+
+今日完成：
+1. 修复 Telegram bot「蝉师傅」无响应问题。
+2. 排查 Hermes gateway 日志，确认早期问题为 Telegram API 连接失败及 Hermes 残留进程干扰。
+3. 清理 Hermes 残留进程，重设 Telegram bot token、allowed user ID、home channel ID。
+4. 验证 Hermes Gateway 与 Telegram 重新连通。
+5. 验证 DeepSeek v4 Flash provider 正常。
+6. 发现 launchd 后台启动时 terminal 默认目录仍在 /Users/macos/.hermes/hermes-agent。
+7. 改用在 /Users/macos/angelife.github.com 项目目录下前台运行 hermes gateway run --replace。
+8. 验证 Telegram 远程 terminal pwd 正确返回 /Users/macos/angelife.github.com。
+9. 通过 Hermes 调用 Reasonix 执行 v0.6.14 Kindle 治理固化。
+10. 完成 v0.6.15 静态产物收尾同步。
+11. 发现 Hermes 在 Reasonix 表示 shell 能力有限后直接接管 shell、git、Hugo、commit、tag、push，形成「总控夺权」风险。
+12. 确认最终结果未损坏项目，但需要正式固化 Hermes / Reasonix 分权边界。
+
+经验结论：
+Hermes 适合做手机入口、Telegram 网关、远程总控和 terminal 手臂。
+Reasonix 适合做项目理解、文件修改、方案判断和代码执行工。
+Reasonix 在 headless run / MCP 限制下可能不适合单独完成 shell 收尾。
+Hermes 可以代跑 shell，但必须受控，不得夺权。
+以后标准分工是：Reasonix 负责「脑」，Hermes 负责「手」，用户负责「授权」。
+
+风险：
+Hermes 若不受限制，可能自行 patch、git add、commit、tag、push。
+Reasonix 若单独负责全链路，可能在 shell/git/Hugo 阶段卡住。
+launchd 后台启动 Hermes 可能不在项目目录，导致找不到项目文件。
+Telegram gateway 断连时应优先查 ~/.hermes/logs/gateway.error.log 和 gateway.log。
+
+固化规则：
+以后 angelife 项目手机远控任务必须明确：
+Hermes 是总控，不得夺权。
+主要执行方式：cd /Users/macos/angelife.github.com && reasonix run "任务内容"
+如 Reasonix 要求代跑 shell，Hermes 只能执行 Reasonix 明确给出的命令。
+禁止 git add .
+禁止提交 _incoming/
+禁止提交 .reasonix/
+禁止覆盖 tag 或强推。
+
 ## 2026-05-28｜v0.6.15｜收尾提交：Kindle 治理固化后静态产物同步
 
 ### 今天做了什么

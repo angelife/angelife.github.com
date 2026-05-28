@@ -1,3 +1,19 @@
+- version: "v0.6.16"
+  date: "2026-05-28"
+  title: "固化 Hermes / Reasonix 手机远控分工规则"
+  commit: "以 tag v0.6.16 指向的 release commit 为准"
+  tag: "v0.6.16"
+  summary:
+    - "固化 Hermes / Reasonix 手机远控分工规则到治理文档。"
+    - "Hermes 为总控和 terminal 手臂，不得夺权。"
+    - "Reasonix 为执行工，Hermes 只可按明确命令代跑 shell。"
+    - "定义 Hermes 代跑 shell 白名单。"
+    - "记录手机远控链路打通全流程经验与风险。"
+    - "纯治理固化轮，无模板/CSS/内容变更。"
+  changed:
+    - "/changelog/"
+  rollback_note: "可通过 Git tag v0.6.16 回退到本版本：git checkout v0.6.16 -- . && git commit -m 'Rollback site to v0.6.16' && git push origin master"
+
 - version: "v0.6.15"
   date: "2026-05-28"
   title: "收尾提交：Kindle 治理固化后静态产物同步"

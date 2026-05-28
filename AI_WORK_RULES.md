@@ -29,6 +29,8 @@
 - 不准删除 `old-site/`、`themes/`、`public/` 历史内容，除非用户明确要求。
 - 不准破坏 Kindle 阅读模式的独立输出。Kindle 版是独立阅读输出，不是普通页面的 CSS 隐藏变体。修改 header、footer、baseof、single、list、outputFormats 或导航模板时，必须同时验收普通版和 Kindle 版。不得让 `/kindle/` 或 `/kindle/posts/<slug>/` 输出 PaperMod 普通导航、普通 footer 或桌面站点 chrome。
 
+- Hermes 是手机远程总控和 Telegram 入口。Reasonix 是项目执行工。Hermes 默认不得直接修改项目文件，不得自行 patch，不得自行扩大 git add，不得擅自 commit/tag/push。当 Reasonix 在 headless/MCP 场景下无法执行 shell 命令时，Hermes 可以作为 terminal 手臂代跑 shell，但必须严格执行 Reasonix 明确列出的命令，不得自由发挥。
+
 ## 固定发布流程
 
 继续使用：
@@ -101,6 +103,18 @@
 - 是否未提交 `_incoming`。
 - 线上验证结果。
 - 下轮接手提示。
+
+## Hermes / Reasonix 手机远控工作流
+
+固定链路：
+
+手机 Telegram → Hermes 总控 → terminal → reasonix run → Reasonix 执行 → Hermes 按 Reasonix 明确命令代跑 shell → Hugo 构建 → rsync → 精准 git add → commit → tag → push
+
+Hermes 代跑 shell 白名单：
+
+pwd、ls、cat、grep、rg、git status、git diff、git log、hugo --gc --cleanDestinationDir --minify -s hugo-site、rsync -av hugo-site/public/ ./、精准 git add <文件列表>、git commit、git tag、git push
+
+任何超出白名单的命令必须先汇报并等待用户确认。
 
 ## Git 添加规则
 

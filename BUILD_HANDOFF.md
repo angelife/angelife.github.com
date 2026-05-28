@@ -114,3 +114,17 @@ git push origin master
 ```
 
 不要使用 force push 回退，除非用户明确要求。
+
+## 手机远控操作指南（v0.6.16+）
+
+推荐启动方式（前台，项目目录运行）：
+
+```bash
+cd /Users/macos/angelife.github.com
+hermes gateway run --replace
+```
+
+不要在后台 launchd 启动，因为默认目录不是项目目录。
+Telegram 中执行任务时，Hermes 必须先确认 pwd 为 `/Users/macos/angelife.github.com`。
+Hermes 不得夺权，Reasonix 为执行工，Hermes 为总控和 terminal 手臂。
+如果 Reasonix 无法直接执行 git/Hugo/shell，Hermes 只可按 Reasonix 明确命令代跑。

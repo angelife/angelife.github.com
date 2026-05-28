@@ -10,10 +10,10 @@
 
 ## 当前版本状态
 
-- 当前版本：v0.6.15
-- 最新 commit：提交后以 tag `v0.6.15` 指向的 release commit 为准
-- 最新 tag：v0.6.15
-- 线上状态：Kindle 阅读模式已定型。v0.6.14 完成治理规则固化，v0.6.15 为静态产物收尾同步提交。
+- 当前版本：v0.6.16
+- 最新 commit：提交后以 tag v0.6.16 指向的 release commit 为准
+- 最新 tag：v0.6.16
+- 线上状态：Kindle 阅读模式已定型。今日完成手机远控全链路定型（Hermes 总控 + Reasonix 执行 + Telegram 远程）。
 
 ## 版本号规则
 
