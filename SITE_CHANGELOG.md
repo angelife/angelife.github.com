@@ -2,6 +2,72 @@
 
 本文件用于 AI 接手时查看详细版本演化。公开版本摘要见 `/changelog/` 和 `hugo-site/data/changelog.yaml`。
 
+## v0.6.2｜发布 AI 时代经验瓶颈文章
+
+日期：2026-05-28  
+执行者：Codex  
+发布方式：本地 Hugo 生成 -> rsync 到仓库根目录 -> commit -> push -> git tag  
+commit：提交后以 tag `v0.6.2` 指向的 release commit 为准  
+tag：v0.6.2
+
+### 本次目标
+
+- 将用户提供的《AI时代，经验才是最大的瓶颈》整理为 Hugo 正式文章。
+- 按既定流程生成封面图、构建站点、同步根目录静态产物并发布。
+- 同步更新公开 changelog、内部日志、每日工作日志、交接日志和项目状态文件。
+
+### 修改文件
+
+- `BUILD_HANDOFF.md`
+- `SITE_CHANGELOG.md`
+- `DAILY_WORK_LOG.md`
+- `PROJECT_STATUS.md`
+- `hugo-site/CODEX_HANDOFF.md`
+- `hugo-site/data/changelog.yaml`
+- `hugo-site/content/posts/ai-era-experience-is-the-bottleneck/index.md`
+- `hugo-site/content/posts/ai-era-experience-is-the-bottleneck/cover.png`
+
+### 具体修改
+
+- 新增正式文章《AI时代，经验才是最大的瓶颈》。
+- 文章 slug：`ai-era-experience-is-the-bottleneck`。
+- 分类：`火·AI`、`AI时代`。
+- 标签：`AI`、`经验`、`判断力`、`信息筛选`、`方法论`、`个人知识系统`。
+- 使用 imagegen 生成克制的编辑类封面图，并复制到文章 bundle 内。
+- 按当前 Hugo 文章格式使用 front matter 渲染标题，正文不重复插入一级标题。
+
+### 构建与发布
+
+- Hugo 构建命令：`./publish.sh`
+- 发布命令：`./publish.sh` 内执行 `rsync -a --delete hugo-site/public/ ./`
+- 构建结果：Hugo `v0.147.4` 构建通过，192 pages，0 errors。
+- rsync：已完成，`hugo-site/public/` 已同步到仓库根目录。
+
+### 线上验证
+
+- `/posts/ai-era-experience-is-the-bottleneck/`：本地静态产物已生成并验证目标路径。
+- `/changelog/`：本地生成产物已包含 `v0.6.2`。
+
+### 遇到的问题
+
+- 当前 Codex 工作目录不是 angelife 仓库，实际仓库位于 `/Users/macos/angelife.github.com`。
+- 实际仓库不在当前 writable sandbox root 内，写入时按权限流程执行。
+- 文章初始发布时间晚于本机当前时间，Hugo 默认不发布未来文章；已将发布时间调为 `2026-05-28T12:40:00+08:00` 后重新构建。
+
+### 已解决
+
+- 已定位正确仓库和 Hugo 源站目录。
+- 已确认当前版本号规则为 SemVer，本轮使用 `v0.6.2`。
+- 已按文章页规范避免正文重复一级标题。
+
+### 未完成
+
+- 正式 commit、push、tag 和线上验证需在提交后完成。
+
+### 下次接手注意
+
+先读 `PROJECT_STATUS.md`，再读 `BUILD_HANDOFF.md`、`AI_WORK_RULES.md`、`SITE_STYLE_GUIDE.md`、`SITE_CHANGELOG.md`、`DAILY_WORK_LOG.md`、`hugo-site/data/changelog.yaml`。继续使用本地 Hugo 生成 + rsync 根目录发布，不要切 GitHub Actions，不要提交 `_incoming/`。
+
 ## v0.6.1｜发布 ChatGPT 高反馈系统文章并保护根目录治理文档
 
 日期：2026-05-28  

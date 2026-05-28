@@ -1,3 +1,19 @@
+- version: "v0.6.2"
+  date: "2026-05-28"
+  title: "发布 AI 时代经验瓶颈文章"
+  commit: "以 tag v0.6.2 指向的 release commit 为准"
+  tag: "v0.6.2"
+  summary:
+    - "新增文章《AI时代，经验才是最大的瓶颈》。"
+    - "文章归入火·AI、AI时代，补充经验、判断力、信息筛选、方法论和个人知识系统主题。"
+    - "为文章生成并接入项目内封面图。"
+    - "继续使用本地 Hugo 生成、rsync 到仓库根目录、commit、push、tag 的固定发布流程。"
+    - "同步更新公开 changelog、内部版本日志、每日工作日志、交接日志和项目状态文件。"
+  changed:
+    - "/posts/ai-era-experience-is-the-bottleneck/"
+    - "/changelog/"
+  rollback_note: "可通过 Git tag v0.6.2 回退到本版本：git checkout v0.6.2 -- . && git commit -m 'Rollback site to v0.6.2' && git push origin master"
+
 - version: "v0.6.1"
   date: "2026-05-28"
   title: "发布 ChatGPT 高反馈系统文章并保护根目录治理文档"

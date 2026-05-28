@@ -1,5 +1,65 @@
 # angelife 每日工作日志
 
+## 2026-05-28｜v0.6.2｜发布 AI 时代经验瓶颈文章
+
+### 今天做了什么
+
+- 将用户提供的《AI时代，经验才是最大的瓶颈》整理为 Hugo 正式文章。
+- 按建议 slug 创建文章 bundle：`ai-era-experience-is-the-bottleneck`。
+- 归入 `火·AI`、`AI时代`。
+- 添加 `AI`、`经验`、`判断力`、`信息筛选`、`方法论`、`个人知识系统` 标签。
+- 使用 imagegen 生成并接入文章封面图。
+- 更新公开 changelog、内部详细日志、每日工作日志、交接日志和项目状态文件。
+
+### 做到什么程度
+
+文章已进入正式发布流，作为公开长文发布，不放入 `_incoming/`，也不作为未发布储备稿处理。
+
+### 遇到什么问题
+
+- 默认 Codex 工作目录为空且不是 Git 仓库，需要重新定位到 `/Users/macos/angelife.github.com`。
+- 实际仓库不在当前 writable sandbox root 内，写入时需要按权限流程执行。
+- 文章初始发布时间写在本机当前时间之后，Hugo 未将其输出；已改为 `2026-05-28T12:40:00+08:00`。
+
+### 已解决什么
+
+- 已确认 angelife 仓库、Hugo 源站、发布脚本、版本规则和日志要求。
+- 已按 SemVer 规则生成本轮版本号 `v0.6.2`。
+- 已按当前文章格式保留 front matter 标题，正文不重复插入一级标题。
+
+### 未完成什么
+
+- commit、push、tag 和线上验证在后续步骤完成后补入最终收工报告。
+
+### 下一个 AI 应该从哪里接手
+
+先读 `PROJECT_STATUS.md` 和 `AI_WORK_RULES.md`。本轮文章已经正式发布，不需要再从 `_incoming/` 处理。
+
+### 修改文件
+
+- `BUILD_HANDOFF.md`
+- `SITE_CHANGELOG.md`
+- `DAILY_WORK_LOG.md`
+- `PROJECT_STATUS.md`
+- `hugo-site/CODEX_HANDOFF.md`
+- `hugo-site/data/changelog.yaml`
+- `hugo-site/content/posts/ai-era-experience-is-the-bottleneck/index.md`
+- `hugo-site/content/posts/ai-era-experience-is-the-bottleneck/cover.png`
+
+### 构建状态
+
+Hugo `v0.147.4` 构建通过，192 pages，0 errors。
+
+### 发布状态
+
+已按固定方式执行 `./publish.sh`，根目录静态产物已更新。`_incoming/` 不纳入提交范围。
+
+### commit / tag / 版本号
+
+- 版本号：v0.6.2
+- commit：提交后以 tag `v0.6.2` 指向的 release commit 为准
+- tag：v0.6.2
+
 ## 2026-05-28｜v0.6.1｜发布 ChatGPT 高反馈系统文章
 
 ### 今天做了什么
