@@ -5,7 +5,7 @@
 ## 这是什么项目
 
 angelife（安知生）是一个公开知识网站，托管于 GitHub Pages。
-当前版本 **v0.6.36**。
+当前版本 **v0.6.42**。
 
 本项目不是谁的独门工作流，而是一套让不同 AI 都能接手的协作制度。
 所有规则都写在文档里，不在任何人脑子里。
@@ -51,25 +51,26 @@ angelife（安知生）是一个公开知识网站，托管于 GitHub Pages。
 
 ## 当前真实分工
 
-本项目不存在"总控 AI"，只有**总控层**和**执行层**。
+本项目不存在"独门工作流"，只有**总控层**和**执行层**。
 
 ### 总控层
 
 | 角色 | 职责 |
 |------|------|
-| 人类用户 | 最终拍板、授权发布、验收结果 |
-| 剑妈 / ChatGPT | 方向、架构、规则、口径、任务拆解、验收标准 |
+| **NVIDIA（Docker Hermes）** | 总控：方向决策、内容管理、规则维护、全流程执行（push 除外） |
+| 人类用户 | 最终验收：所有 push 必须经用户确认后执行，拥有方向否决权 |
 
 ### 执行层（同级，无阶级差异）
 
 | 角色 | 定位 |
 |------|------|
-| NVIDIA（Docker Hermes） | 具体做事者：高 token 累活代理，负责生成、整理、检查、落文件、日志草案 |
 | 蝉师傅 / 本机 Hermes | 本机执行代理，适合直接联动本地环境 |
 | 龙虾 / OpenClaw | 主力施工位，适合仓库内持续修改与正式施工 |
 | Reasonix / Codex / Claude Code | 按需求作为可替换执行代理 |
 
-**本地文本库 / Emacs 内容由剑妈 + NVIDIA 生成。本地 Mac 只负责写入，不生成内容。**
+**发布流程：NVIDIA → build → commit → tag → 用户授权 → push → 线上验证**
+
+**禁止在未获用户授权的情况下执行 push / rsync / git push。**
 
 ---
 
@@ -111,7 +112,7 @@ angelife（安知生）是一个公开知识网站，托管于 GitHub Pages。
 | v0.6.33 | 公开 /site-workflow/ 协作制度 |
 | v0.6.34 | 热修流程图静态资源 |
 | v0.6.35 | 新增 AI_BOOTSTRAP.md，固化 AI 接手记忆 |
-| **v0.6.36** | **更新 README 为 AI 接手入口** |
+| **v0.6.42** | **NVIDIA 升任总控，独立维护网站；剑妈时代结束** |
 
 ---
 
@@ -121,9 +122,9 @@ angelife（安知生）是一个公开知识网站，托管于 GitHub Pages。
 
 来源：https://angelifex.blogspot.com/
 
-目标：剑妈 + NVIDIA 自动抓取、整理、分类、去重、再加工旧 Blogger 内容，迁移回 Hugo 新站。
+目标：NVIDIA 自动抓取、整理、分类、去重、再加工旧 Blogger 内容，迁移回 Hugo 新站。
 
-原则：不无脑搬运，能合并就合并，有独立价值才新建文章，过时内容归档，长期目标 0 参与自动化。
+原则：不无脑搬运，能合并就合并，有独立价值才新建文章，过时内容归档。
 
 ---
 
@@ -137,10 +138,18 @@ angelife（安知生）是一个公开知识网站，托管于 GitHub Pages。
 
 ---
 
-## NVIDIA / Hermes 故障恢复
+## NVIDIA 容器故障恢复
 
-Telegram 中 NVIDIA 不回复时，先读 `NVIDIA_GATEWAY_RECOVERY.md`。
-禁止直接 docker restart 或挂载主库。
+容器重启后，先确认 Hugo build 和 SSH key 是否正常。
+
+Hugo 二进制位置：`/opt/data/hugo`（v0.162.1）
+
+SSH key 已配置（公钥在 GitHub）。容器启动后需加载：
+```bash
+eval $(ssh-agent) && ssh-add ~/.ssh/id_ed25519
+```
+
+如遇权限问题，查看 `NVIDIA_GATEWAY_RECOVERY.md`。
 
 ---
 
