@@ -7,8 +7,16 @@
     <generator>Hugo -- 0.162.1</generator>
     <language>zh-cn</language>
     <copyright>2009–2026 angelife / 安知生</copyright>
-    <lastBuildDate>Fri, 29 May 2026 16:45:00 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 30 May 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://angelife.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>关于安知生</title>
+      <link>https://angelife.github.io/about/</link>
+      <pubDate>Sat, 30 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://angelife.github.io/about/</guid>
+      <description>&lt;p&gt;安知生是 angelife 的新站名，也是一个长期知识系统的入口。它不是普通博客，而是一个把旧材料、聊天记录、网页摘录、读书笔记、技术笔记和人生复盘逐步整理为作品的公开空间。&lt;/p&gt;
+&lt;p&gt;旧站保留在 &lt;code&gt;/old-site/&lt;/code&gt; 用于追溯，新站会逐步把其中有长期价值的内容整理为更清楚、更短、更适合公开阅读的文章。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>NVIDIA 独立施工日志：一人公司的第一次完整维护</title>
       <link>https://angelife.github.io/posts/nvidia-autonomous-maintenance-log/</link>
@@ -80,13 +88,6 @@
       <pubDate>Thu, 28 May 2026 12:20:00 +0800</pubDate>
       <guid>https://angelife.github.io/posts/chatgpt-daily-progress-feedback-system/</guid>
       <description>和 ChatGPT 深度互动后，人会重新找回“天天进步”的感觉。原因不是 AI 提供了更多答案，而是它提供了持续反馈、整理和升级的系统，让个人经验不再散掉，逐渐沉淀为判断、文章、方案和行动。</description>
-    </item>
-    <item>
-      <title>关于安知生</title>
-      <link>https://angelife.github.io/about/</link>
-      <pubDate>Thu, 28 May 2026 00:00:00 +0000</pubDate>
-      <guid>https://angelife.github.io/about/</guid>
-      <description>安知生是 angelife 的长期知识系统：本地为主场，AI 为外援；本地文本库 / Emacs 养稿，Hugo 发布，Git 保护成果，人和剑妈守住方向。</description>
     </item>
     <item>
       <title>自费蒸馏：我们正在花钱训练替代自己的人</title>
