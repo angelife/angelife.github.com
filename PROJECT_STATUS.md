@@ -254,3 +254,31 @@ v0.7.0：旧 Blogger 内容回流工程。来源：https://angelifex.blogspot.co
 - 线上验证：/posts/zhen-to-sui-touching-the-pattern/ / changelog/ 微信认证文件
 
 **发布授权**：❌ 未授权
+
+## v0.6.41-hotfix — 2026-05-29
+
+**状态**：✅ 内容就绪，待发布授权
+
+**本轮完成**：
+- Emacs/Markdown 主工作流迁移（AI_BOOTSTRAP.md / README.md / AI_EXECUTION_AGENTS.md / Hugo 公开内容）
+- 事故归档体系建立（_private/INCIDENT_REPORTS/ + INCIDENT_REPORTS_PUBLIC/）
+- .gitignore 新增 _private/ 保护
+- workflow 图片替换为 Emacs 版本
+- 新增 SEVERITY_RULES.md
+
+**当前主工作流**：
+- 本地文本库 / Emacs 是草稿炉（Markdown 为准）
+- Hugo 是公开成品库
+- Git 是回滚保护
+- Obsidian 降级为可选工具
+
+**NVIDIA 当前权限**：
+- 直接写入 /repo 文件：✅
+- git / release：❌ 禁止
+
+**本地 Mac 职责**：
+- Hugo 构建
+- tools/angelife-release（待授权）
+- git push（待授权）
+
+**发布授权**：❌ 未授权

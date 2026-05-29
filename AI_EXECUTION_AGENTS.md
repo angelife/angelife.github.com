@@ -122,13 +122,13 @@ Deploy from branch / master / root
 
 ## 7. 内容流程
 
-Obsidian 是草稿炉。
+本地文本库 / Emacs 是草稿炉。
 
 angelife Hugo 网站是成品库。
 
 网站只发定稿。
 
-日常碎片、半成品、小补充、相似观点，应先在 Obsidian 或本地文件中整理、合并、打磨。
+日常碎片、半成品、小补充、相似观点，应先在本地文本库 / Emacs 或本地文件中整理、合并、打磨。
 
 观念雷同，只合并，不另开。
 
@@ -140,7 +140,7 @@ angelife Hugo 网站是成品库。
 
 - 读取项目规则；
 - 读取 Hugo 正式文章；
-- 读取 Obsidian 草稿；
+- 读取本地文本库 / Emacs 草稿；
 - 判断相似观点应并入哪篇旧文；
 - 修改 Hugo 源文件；
 - 修正 front matter、标签、分类；

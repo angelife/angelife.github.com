@@ -2,7 +2,7 @@
 title: "关于安知生"
 date: 2026-05-28
 draft: false
-description: "安知生是 angelife 的长期知识系统：本地为主场，AI 为外援；Obsidian 养稿，Hugo 发布，Git 保护成果，人和剑妈守住方向。"
+description: "安知生是 angelife 的长期知识系统：本地为主场，AI 为外援；本地文本库 / Emacs 养稿，Hugo 发布，Git 保护成果，人和剑妈守住方向。"
 cover:
   image: /images/about/cover.png
   alt: 关于安知生：本地为主场，AI 为外援。图中以 Obsidian、ChatGPT / 剑妈、Hermes、Hugo、Git 和人的判断构成一条从草稿到发布的知识工作流。
@@ -23,9 +23,9 @@ cover:
 
 angelife 当前的工作流已经调整为：
 
-**Obsidian 是草稿炉，Hugo 网站是成品库。**
+**本地文本库 / Emacs 是草稿炉，Hugo 网站是成品库。**
 
-日常碎片、微信聊天、临时想法、未成熟判断，先进入本地 Obsidian。相似观点先合并，重复内容先沉淀，半成品不急着发布。只有当一组观点已经想清楚、整理好、形成定稿，才进入 Hugo 网站。
+日常碎片、微信聊天、临时想法、未成熟判断，先进入本地文本库 / Emacs。相似观点先合并，重复内容先沉淀，半成品不急着发布。只有当一组观点已经想清楚、整理好、形成定稿，才进入 Hugo 网站。
 
 网站只发定稿。
 

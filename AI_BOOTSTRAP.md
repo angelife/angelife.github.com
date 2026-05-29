@@ -55,7 +55,7 @@ Docker Hermes 独立实例，NVIDIA API / NIM + Minimax 免费模型，高 token
 - 内容整理
 - 规则一致性检查
 - 日志草案
-- Obsidian 记录内容
+- 本地文本库记录内容
 - Hugo 源文件内容准备
 - 交接报告
 - 环境障碍识别
@@ -66,7 +66,7 @@ NVIDIA 当前限制：
 - 不直接 rsync
 - 不 git add / commit / tag / push
 - 不直接线上验证
-- 不直接写入本地 Obsidian Vault
+- 不直接写入本地文本库 / Emacs Vault
 
 ### 本地 Mac
 
@@ -75,28 +75,30 @@ NVIDIA 当前限制：
 本地 Mac 只负责完成 NVIDIA 因 Docker 限制做不了的本机动作：
 - 访问本地仓库
 - 复制已生成文件进仓库
-- 把剑妈 / NVIDIA 生成好的 Obsidian 内容写入 Vault
+- 把剑妈 / NVIDIA 生成好的本地文本库 / Emacs 内容写入 Vault
 - 运行 Hugo
 - 安全 rsync / release
 - 执行 git add / commit / tag / push
 - curl 线上验证
 - 检查本地保护文件
 
-### Obsidian
+### 本地文本库 / Emacs
 
-Obsidian 是本地低成本工作台，不是内容生产者，不是 AI 执行代理。
+本地文本库（Emacs）是我的本地低成本工作台，不是内容生产者，不是 AI 执行代理。
 
-Obsidian 用于：
+本地文本库用于：
 - 查看
 - 检查
 - 轻修改
 - 归档
-- 上传
 - 中转
 - 自动归档
 
-Obsidian 内容由剑妈 + NVIDIA 生成。  
+本地文本库内容由剑妈 + NVIDIA 生成。
 本地 Mac 只负责写入，不生成内容。
+
+> **Obsidian 降级为可选工具，不再是项目核心依赖。**
+> **项目长期记忆以 Markdown 文件为准。**
 
 ### 后备工具
 
@@ -122,8 +124,8 @@ angelife 项目实行：
 - 内容生成者
 - 包检查者
 - 文件落盘者
-- Obsidian 内容生成者
-- Obsidian 实际写入者
+- 本地文本库内容生成者
+- 本地文本库实际写入者
 - Hugo 构建者
 - rsync 执行者
 - git add 执行者
@@ -213,7 +215,7 @@ https://angelife.github.io/0847745cb78663855a3a1732c9c6a130.txt
 ## 6. 内容工作流
 
 内容流转规则：
-- 碎片和半成品先进入本地整理层 / Obsidian
+- 碎片和半成品先进入本地整理层 / 本地文本库 / Emacs
 - 剑妈负责观点定稿和结构判断
 - NVIDIA 负责生成、整理、分类、日志草案和交接
 - Hugo 只接收定稿

@@ -10,7 +10,7 @@ angelife 当前采用的不是“想到哪改到哪”，而是一套逐渐稳�
 
 这套模式的核心只有一句话：**本地为主场，AI 为外援。**
 
-Obsidian 是草稿炉，Hugo 网站是成品库；人类用户与剑妈负责总控、定稿与验收；龙虾、蝉师傅、NVIDIA、Reasonix、Codex、Claude Code 等都属于 **AI 执行代理**，负责在统一规则下施工、构建、落盘与发布。
+本地文本库 / Emacs 是草稿炉，Hugo 网站是成品库；人类用户与剑妈负责总控、定稿与验收；龙虾、蝉师傅、NVIDIA、Reasonix、Codex、Claude Code 等都属于 **AI 执行代理**，负责在统一规则下施工、构建、落盘与发布。
 
 ## 当前固定发布方式
 
@@ -139,7 +139,7 @@ angelife 当前采用 **本地优先、批量发布** 的内容流程：
 
 ![angelife 项目总控流程图](/images/workflow/site-control-map.png)
 
-*图：angelife 项目总控流程图。总控在人类用户与剑妈，执行层由不同 AI 执行代理接手；Obsidian 是草稿炉，Hugo 网站是成品库，本地 Hugo 构建与安全 rsync 构成固定发布链路。*
+*图：angelife 项目总控流程图。总控在人类用户与剑妈，执行层由不同 AI 执行代理接手；本地文本库 / Emacs 是草稿炉，Hugo 网站是成品库，本地 Hugo 构建与安全 rsync 构成固定发布链路。*
 
 ## 最后的原则
 

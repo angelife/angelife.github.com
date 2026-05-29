@@ -69,7 +69,7 @@ angelife（安知生）是一个公开知识网站，托管于 GitHub Pages。
 | 龙虾 / OpenClaw | 主力施工位，适合仓库内持续修改与正式施工 |
 | Reasonix / Codex / Claude Code | 按需求作为可替换执行代理 |
 
-**Obsidian 内容由剑妈 + NVIDIA 生成。本地 Mac 只负责写入，不生成内容。**
+**本地文本库 / Emacs 内容由剑妈 + NVIDIA 生成。本地 Mac 只负责写入，不生成内容。**
 
 ---
 

@@ -1,15 +1,18 @@
 #!/usr/bin/env bash
-# angelife 受控发布脚本
+# angelife 受控发布脚本（v0.6.41 更新版）
+#
+# 新增 RULE-021 至 RULE-025：
+# - RULE-021: 发布前检查 .git 目录存在
+# - RULE-022: 发布前检查 hugo-site 目录存在
+# - RULE-023: 发布前检查 bind mount 路径安全
+# - RULE-024: 发布前 dry-run 预览
+# - RULE-025: 发布前 repo 快照提示
+#
 # 用法: ./tools/angelife-release <version> '<commit message>'
 #        ./tools/angelife-release --yes <version> '<commit message>'
 #
 # 统一执行 angelife 项目的正式发布流程。
-# 以后 Hermes 或 Reasonix 不应自由发挥发布命令，
-# 而应在用户授权后调用这个脚本。
-#
-# 示例:
-#   ./tools/angelife-release v0.6.18 'chore: add controlled release script'
-#   ./tools/angelife-release --yes v0.6.21 'chore: update release'    # 跳过确认
+# 禁止修 release 脚本的版本用 release 脚本自发布。
 #
 set -euo pipefail
 
@@ -60,18 +63,54 @@ if [ -z "$COMMIT_MESSAGE" ]; then
 fi
 
 # ──────────────────────────────────────────────
-# 2. 检查当前目录
+# 1b. RULE-021：检查 .git 目录存在
 # ──────────────────────────────────────────────
-EXPECTED_DIR="/Users/macos/angelife.github.com"
+if [ ! -d ".git" ]; then
+    log_error "RULE-021 失败：当前目录不是 Git 仓库：$(pwd)"
+    log_error "请确认在仓库根目录运行本脚本"
+    exit 1
+fi
+log_ok "RULE-021：.git 目录存在 ✅"
+
+# ──────────────────────────────────────────────
+# 2. 检查当前目录（RULE-023：bind mount 路径安全）
+# ──────────────────────────────────────────────
 CURRENT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
-if [ "$CURRENT_DIR" != "$EXPECTED_DIR" ]; then
-    log_error "当前目录不是 $EXPECTED_DIR"
-    log_error "请先 cd $EXPECTED_DIR 再运行本脚本"
+# 白名单路径：宿主机路径 + Docker 容器内路径
+VALID_DIRS=(
+    "/Users/macos/angelife.github.com"
+    "/repo"
+)
+
+IS_VALID=false
+for d in "${VALID_DIRS[@]}"; do
+    if [ "$CURRENT_DIR" = "$d" ]; then
+        IS_VALID=true
+        break
+    fi
+done
+
+if [ "$IS_VALID" = false ]; then
+    log_error "RULE-023 失败：当前目录不在白名单路径内：$CURRENT_DIR"
+    log_error "允许的路径：${VALID_DIRS[*]}"
+    log_error "请先 cd 到仓库根目录再运行本脚本"
     exit 1
 fi
 
+log_ok "RULE-023：bind mount 路径安全（$CURRENT_DIR）✅"
+
 log_ok "当前目录: $CURRENT_DIR"
+
+# ──────────────────────────────────────────────
+# 2b. RULE-022：检查 hugo-site 目录存在
+# ──────────────────────────────────────────────
+if [ ! -d "hugo-site" ]; then
+    log_error "RULE-022 失败：hugo-site 目录不存在：$CURRENT_DIR/hugo-site"
+    log_error "请确认在仓库根目录运行本脚本"
+    exit 1
+fi
+log_ok "RULE-022：hugo-site 目录存在 ✅"
 
 # ──────────────────────────────────────────────
 # 3. 检查当前分支
@@ -86,7 +125,7 @@ fi
 log_ok "当前分支: $CURRENT_BRANCH"
 
 # ──────────────────────────────────────────────
-# 4. 检查是否有未提交的修改（非 _incoming/ / .reasonix/）
+# 4. 检查未提交修改
 # ──────────────────────────────────────────────
 DIRTY_FILES=$(git status --porcelain | grep -v '^?? _incoming/' | grep -v '^?? .reasonix/' || true)
 if [ -z "$DIRTY_FILES" ]; then
@@ -98,6 +137,21 @@ if [ -z "$DIRTY_FILES" ]; then
         exit 0
     fi
 fi
+
+# ──────────────────────────────────────────────
+# 4a. RULE-024：dry-run 预览（显示本轮将执行的操作）
+# ──────────────────────────────────────────────
+echo ""
+echo -e "${CYAN}═══════════════════════════════════════════════════════${NC}"
+echo -e "${CYAN}  RULE-024：DRY-RUN 预览（实际未执行）${NC}"
+echo -e "${CYAN}═══════════════════════════════════════════════════════${NC}"
+echo -e "  版本号:     $VERSION"
+echo -e "  Commit:     $COMMIT_MESSAGE"
+echo -e "  Hugo 源站:  $CURRENT_DIR/hugo-site"
+echo -e "  rsync 目标: $CURRENT_DIR/"
+echo -e "  分支:       $CURRENT_BRANCH"
+echo -e "${CYAN}═══════════════════════════════════════════════════════${NC}"
+echo ""
 
 # ──────────────────────────────────────────────
 # 5. 摘要确认
@@ -148,6 +202,17 @@ if [ -f "./tools/angelife-check" ]; then
 fi
 
 # ──────────────────────────────────────────────
+# 5a. RULE-025：repo 快照提示
+# ──────────────────────────────────────────────
+SNAPSHOT_PATH="/tmp/angelife-$(date +%Y%m%d).bundle"
+if git bundle create "$SNAPSHOT_PATH" --all &>/dev/null; then
+    SNAPSHOT_SIZE=$(du -sh "$SNAPSHOT_PATH" | cut -f1)
+    log_ok "RULE-025：快照已创建 $SNAPSHOT_PATH（$SNAPSHOT_SIZE）✅"
+else
+    log_warn "RULE-025：快照创建失败，跳过（不影响发布）"
+fi
+
+# ──────────────────────────────────────────────
 # 6. 执行 Hugo 清洁构建
 # ──────────────────────────────────────────────
 echo ""
@@ -166,7 +231,7 @@ log_ok "Hugo 清洁构建完成"
 # 7. rsync Hugo 产物到仓库根目录
 # ──────────────────────────────────────────────
 log_info "步骤 2/9: rsync Hugo 产物到仓库根目录..."
-rsync -av hugo-site/public/ ./
+rsync -a --delete hugo-site/public/ ./ > /dev/null 2>&1
 log_ok "rsync 完成"
 
 # ──────────────────────────────────────────────
@@ -181,23 +246,31 @@ git status --short | grep -v '^?? _incoming/' | grep -v '^?? .reasonix/' || echo
 
 echo ""
 
-# 精准添加: 治理文档、hugo 源文件、静态产物
-# 使用 git add 逐个添加改动的文件，而不是 git add .
-CHANGED=$(git diff --name-only && git diff --name-only --cached) || true
-# 去重
-CHANGED=$(echo "$CHANGED" | sort -u | grep -v '^_incoming/' | grep -v '^\.reasonix/' || true)
+# 精准 git add（NUL-safe，修复中文路径 bug）
+log_info "步骤 3/9: NUL-safe 精准 git add..."
 
-if [ -z "$CHANGED" ]; then
+ADDED_COUNT=0
+while IFS= read -r -d '' file; do
+    if [[ "$file" != "_incoming/"* ]] && [[ "$file" != ".reasonix/"* ]]; then
+        git add -- "$file"
+        ADDED_COUNT=$((ADDED_COUNT + 1))
+        echo "  + $file"
+    fi
+done < <(git diff --name-only -z)
+
+# untracked 文件
+while IFS= read -r -d '' file; do
+    if [[ "$file" != "_incoming/"* ]] && [[ "$file" != ".reasonix/"* ]] && [[ -f "$file" ]]; then
+        git add -- "$file"
+        ADDED_COUNT=$((ADDED_COUNT + 1))
+        echo "  + $file"
+    fi
+done < <(git ls-files -z --others --exclude-standard)
+
+if [ "$ADDED_COUNT" -eq 0 ]; then
     log_warn "没有要添加的文件"
 else
-    # 使用 --ignore-errors 避免单个文件问题中断
-    echo "$CHANGED" | while read -r file; do
-        if [ -n "$file" ]; then
-            git add "$file"
-            echo "  + $file"
-        fi
-    done
-    log_ok "git add 完成"
+    log_ok "git add 完成（$ADDED_COUNT 个文件）"
 fi
 
 # 安全确认：检查是否错误地添加了 _incoming/ 或 .reasonix/

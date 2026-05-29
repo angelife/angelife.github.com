@@ -503,3 +503,35 @@ docker exec hermes-minimaxlab ls /repo/README.md
 **交接方**：NVIDIA
 **接收方**：本地 Mac
 **验收方**：人类用户 + ChatGPT / 剑妈
+
+## v0.6.41-hotfix 构建交接 — 2026-05-29
+
+**版本**：v0.6.41-hotfix
+**目标**：Emacs/Markdown 主工作流迁移 + 事故归档体系完善 + release 安全增强
+
+**NVIDIA 已完成**：
+- Emacs 口径迁移（AI_BOOTSTRAP.md / README.md / AI_EXECUTION_AGENTS.md）
+- Hugo 公开内容同步（site-workflow.md / about/index.md / 文章）
+- 事故归档体系（_private/INCIDENT_REPORTS/ + INCIDENT_REPORTS_PUBLIC/）
+- .gitignore 新增 _private/ 保护
+- workflow 图片替换为 Emacs 版本
+- 新增 SEVERITY_RULES.md（待补充）
+
+**本地 Mac 接收检查清单**：
+
+□ git status -sb 确认改动范围
+□ git diff 检查每处 Emacs 替换是否正确
+□ Hugo 构建验证：hugo --gc --cleanDestinationDir --minify -s hugo-site
+□ tools/angelife-release --yes v0.6.41 "v0.6.41-hotfix: Emacs 迁移 + 事故归档体系"（待授权）
+□ git push && git push --tags（待授权）
+□ 线上验证 /site-workflow/ 返回 200
+□ 微信认证文件仍存在
+
+**发布前必须停下的条件**：
+- Hugo 构建报错
+- tools/angelife-release 不可用
+- 微信认证文件缺失
+
+**交接方**：NVIDIA
+**接收方**：本地 Mac
+**验收方**：人类用户 + ChatGPT / 剑妈

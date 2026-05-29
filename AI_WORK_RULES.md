@@ -272,3 +272,34 @@ git diff --cached --name-only | rg '^_incoming|^\.github/workflows/'
 - 线上地址：`https://angelife.github.io/0847745cb78663855a3a1732c9c6a130.txt`
 
 任何构建、rsync、清理、发布，都不得删除或覆盖该文件。
+
+## 发布前安全检查规则（RULE-021 至 RULE-025，v0.6.41+）
+
+所有正式发布前必须通过以下检查：
+
+**RULE-021：.git 目录存在检查**
+- 发布前必须验证当前目录是 Git 仓库
+- 验证命令：`test -d ".git" && echo "OK" || echo "FAIL"`
+- 失败处理：`log_error` 并 exit 1
+
+**RULE-022：hugo-site 目录存在检查**
+- 发布前必须验证 Hugo 源站存在
+- 验证命令：`test -d "hugo-site" && echo "OK" || echo "FAIL"`
+- 失败处理：`log_error` 并 exit 1
+
+**RULE-023：bind mount 路径安全检查**
+- 当前目录必须在白名单路径内：`/Users/macos/angelife.github.com` 或 `/repo`
+- 禁止在非白名单目录执行 rsync 或 release
+- 失败处理：`log_error` 并 exit 1
+
+**RULE-024：dry-run 预览**
+- 实际执行前必须输出本轮将执行的操作预览
+- 包括：Hugo 源站路径、rsync 目标路径、版本号、Commit 信息
+- 预览不等于执行，用于操作者确认
+
+**RULE-025：repo 快照提示**
+- 发布前提示创建快照：`git bundle create /tmp/angelife-$(date +%Y%m%d).bundle --all`
+- 快照为可选操作，但推荐执行
+- 快照可以防范 rsync --delete 误删等不可逆操作
+
+完整规则见 `RELEASE_SCRIPT_SAFETY_RULES.md`。

@@ -3,6 +3,7 @@
 *.tmp
 Thumbs.db
 _incoming/
-
+_reasonix/
+_private/
 # Local Reasonix state
 .reasonix/

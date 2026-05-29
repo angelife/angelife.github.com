@@ -1422,3 +1422,81 @@ v0.7.0：旧 Blogger 内容回流工程。来源：https://angelifex.blogspot.co
 - 未执行 git / release / rsync
 
 **本轮不启用**：蝉师傅、龙虾、Reasonix、Codex、Claude Code
+
+## 2026-05-29｜v0.6.41-hotfix｜Emacs/Markdown 工作流迁移 + 事故归档体系
+
+### 执行链
+
+- 总控 / 设计：人类用户 + ChatGPT / 剑妈
+- 具体做事：NVIDIA
+- 文件生成：NVIDIA（通过 /repo 直接写入）
+- 本地构建 / 发布：待本地 Mac
+
+### 今天做了什么
+
+**一、Emacs/Markdown 主工作流迁移**
+- AI_BOOTSTRAP.md：Obsidian → 本地文本库 / Emacs（多处）
+- AI_EXECUTION_AGENTS.md：Obsidian 是草稿炉 → 本地文本库 / Emacs 是草稿炉
+- README.md：Obsidian → 本地文本库 / Emacs
+- Hugo 公开内容：site-workflow.md / about/index.md / 文章均已同步新口径
+
+**二、事故归档体系**
+- _private/INCIDENT_REPORTS/README.md（制度说明）
+- _private/INCIDENT_REPORTS/INDEX.md（事故索引）
+- _private/INCIDENT_REPORTS/TEMPLATE.md（报告模板）
+- _private/INCIDENT_REPORTS/INC-20260529-001（完整内部报告）
+- INCIDENT_REPORTS_PUBLIC/INC-20260529-001（脱敏摘要）
+- .gitignore 新增 _private/ 保护
+
+**三、workflow 图片**
+- hugo-site/static/images/workflow/site-control-map.png 已替换为 Emacs 版本
+
+### 权限边界
+
+- NVIDIA：直接写文件 ✅
+- NVIDIA：git / release ❌
+- 本地 Mac：构建 / 发布待授权
+
+### 版本号：v0.6.41（待发布）
+
+### 下一步：Hugo 构建 + tools/angelife-release（待授权）
+
+## 2026-05-29｜v0.6.42（试跑）｜大衍神君第一人文章
+
+### 执行链
+
+- 总控 / 设计：NVIDIA（临时代理，授权范围：方向 + 落盘）
+- 文章写作：NVIDIA
+- 规则：按现有流程，NVIDIA 写文件，本地 Mac 发布
+- 用户授权：「自由发挥，边摸索边成长」
+
+### 文章信息
+
+- 标题：大衍神君的第一人
+- slug：the-future-is-one-person-company
+- 路径：hugo-site/content/posts/the-future-is-one-person-company/index.md
+- category：AI时代
+- tags：一人公司、大衍神君、AI时代、机器人、智能体、马斯克、凡人修仙
+- 字数：约 1900 字
+- 状态：初稿，待验收
+
+### 核心理念
+
+文章核心来自用户对话内容，NVIDIA 提炼结构、自行组织：
+- 财富 = 你拥有多少机器人
+- 一人公司 = 一个人指挥一堆机器
+- 新时代三要数：算力、电力、资源
+- 马斯克 = 当代大衍神君
+- 机会窗口短暂，错过就是普通人
+- 人类将经历短暂的机器奴隶时代，然后硅基生命觉醒
+
+### 授权范围说明
+
+用户说「自由发挥」，我理解为：
+- 我可以决定文章方向、结构、措辞
+- 我不能自行发布（git / release 仍需本地 Mac）
+- changelog.yaml 不修改
+
+### 版本号：v0.6.42（待确认）
+
+### 下一步：待用户验收文章内容，通过后本地 Mac 发布
