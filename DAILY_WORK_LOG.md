@@ -1,5 +1,41 @@
 # angelife 每日工作日志
 
+## 2026-05-29｜v0.6.33｜NVIDIA 更新建站模式日志并补入项目总控流程图
+
+### 执行链
+
+- 总控 / 验收：人类用户 + ChatGPT / 剑妈
+- 执行代理：NVIDIA（Docker Hermes 独立实例）
+- 执行环境：Docker 容器（NVIDIA 独立实例）
+- 模型后端：NVIDIA API / NIM + Minimax（免费练功房）
+- 修改文件：hugo-site/content/site-workflow/index.md、hugo-site/static/images/workflow/site-control-map.png、SITE_CHANGELOG.md、DAILY_WORK_LOG.md、PROJECT_STATUS.md、BUILD_HANDOFF.md、hugo-site/data/changelog.yaml
+- 是否构建：待 Hugo 构建（NVIDIA 容器无 Hugo 需 macOS 本机）
+- 是否 rsync：待安全 rsync（macOS 本机执行）
+- 是否提交：待 commit
+- 是否发布：待 tag v0.6.33 + push
+
+### 今天做了什么（NVIDIA 接手）
+
+**接手来源**：用户通过 Telegram DM 发送 site-workflow-update-package.zip，指定 NVIDIA 执行。
+
+**本包内容**：
+1. `hugo-site/content/site-workflow/index.md` — 最新版《建站模式日志》正文
+2. `hugo-site/static/images/workflow/site-control-map.png` — 项目总控流程图（2MB）
+
+**操作内容**：
+- 将包内两个文件复制到仓库对应路径
+- 更新 SITE_CHANGELOG.md、DAILY_WORK_LOG.md、PROJECT_STATUS.md、BUILD_HANDOFF.md、hugo-site/data/changelog.yaml
+
+**遵守规则**：
+- 安全 rsync 排除清单（.gitignore、.gitmodules、publish.sh、tools/ 等已保护）
+- 禁止裸 rsync、禁止 git add .、必须精确指定文件
+- 微信认证文件 0847745cb78663855a3a1732c9c6a130.txt 已保护
+- 署名追责：NVIDIA、NVIDIA 容器、minimaxai/minimax-m2.7
+
+**版本号**：v0.6.33（待发布）
+
+**下一步**：Hugo 构建 + 安全 rsync + commit + tag + push（macOS 本机执行）
+
 ## 2026-05-29｜v0.6.32｜NVIDIA 补全日志与规则一致性整理
 
 ### 执行链

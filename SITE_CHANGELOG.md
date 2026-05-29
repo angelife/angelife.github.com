@@ -2,6 +2,25 @@
 
 本文件用于 AI 接手时查看详细版本演化。公开版本摘要见 `/changelog/` 和 `hugo-site/data/changelog.yaml`。
 
+## v0.6.33｜更新建站模式日志并补入项目总控流程图
+
+日期：2026-05-29
+执行者：NVIDIA（Docker Hermes 独立实例）
+发布方式：本地 Hugo 构建 -> 安全 rsync -> 精确 git add -> commit -> push -> tag v0.6.33
+变更：
+
+**主线一：site-workflow 页面更新**
+- `hugo-site/content/site-workflow/index.md`：更新为最新版《建站模式日志》，明确「本地为主场，AI 为外援」原则
+- 补入项目总控流程图 `/images/workflow/site-control-map.png`
+
+**主线二：执行代理体系明确**
+- 统一龙虾、蝉师傅、NVIDIA、Reasonix、Codex、Claude Code 等执行代理定位
+- 明确总控层与 AI 执行代理分工
+
+**主线三：规则强化**
+- 安全 rsync、署名留痕、单代理施工与本地优先发布规则进一步强化
+- 遵守 v0.6.32 建立的署名追责制度，禁止匿名施工
+
 ## v0.6.32｜更新 about 页面与 AI 执行代理规则
 
 日期：2026-05-29

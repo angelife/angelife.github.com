@@ -23,7 +23,7 @@ Docker Hermes（NVIDIA API / NIM + Minimax 免费练功房）是 angelife 项目
 4. `git push origin master`。
 5. 创建并推送 Git tag，作为可回退备份点。
 
-当前最新版本：`v0.6.32 待发布`。本地有待发布改动，包含 about 页面定稿、封面图接入、治理文件规则完善等。
+当前最新版本：`v0.6.33 待发布`。本地有待发布改动，包含 site-workflow 页面更新、流程图接入、日志补全等。
 
 ## 接手前必读文件
 
@@ -198,6 +198,34 @@ Telegram 中执行任务时，Hermes 必须先确认 pwd 为 `/Users/macos/angel
 ## 小改不单独发布
 
 互链修正、标签调整、轻量补充等小改动，保留为本地改动，等形成一批成熟改动后再统一构建发布。
+
+## 本轮 v0.6.33 工作说明
+
+本轮由 NVIDIA（Docker Hermes 独立实例）执行 site-workflow 页面更新与日志补全。
+
+**执行链：**
+- 总控 / 验收：人类用户 + ChatGPT / 剑妈
+- 执行代理：NVIDIA
+- 执行环境：Docker 容器（NVIDIA 独立实例）
+- 模型后端：NVIDIA API / NIM + Minimax（免费练功房）
+- 修改文件：hugo-site/content/site-workflow/index.md、hugo-site/static/images/workflow/site-control-map.png、SITE_CHANGELOG.md、DAILY_WORK_LOG.md、PROJECT_STATUS.md、BUILD_HANDOFF.md、hugo-site/data/changelog.yaml
+- 是否构建：待 Hugo 构建（NVIDIA 容器无 Hugo 需 macOS 本机）
+- 是否 rsync：待安全 rsync（macOS 本机执行）
+- 是否提交：待 commit
+- 是否发布：待 tag v0.6.33 + push
+
+**本轮更新内容：**
+- site-workflow 页面更新为最新版《建站模式日志》
+- 补入项目总控流程图 `/images/workflow/site-control-map.png`（2MB）
+- 更新所有日志文件
+
+**遵守规则：**
+- 安全 rsync 排除清单已完整（.gitignore、.gitmodules、publish.sh、tools/ 等已保护）
+- 禁止裸 rsync、禁止 git add .、必须精确指定文件
+- 微信认证文件 0847745cb78663855a3a1732c9c6a130.txt 已保护
+- 署名追责：NVIDIA、NVIDIA 容器、minimaxai/minimax-m2.7
+
+**当前状态：尚未 Hugo 构建、尚未 rsync、尚未 commit、尚未 tag、尚未发布。**
 
 ## 本轮 v0.6.32 工作说明
 

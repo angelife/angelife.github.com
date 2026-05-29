@@ -1,3 +1,18 @@
+- version: "v0.6.33"
+  date: "2026-05-29"
+  title: "更新建站模式日志并补入项目总控流程图"
+  commit: "提交后以 release commit 为准"
+  tag: "v0.6.33"
+  summary:
+    - "/site-workflow/ 页面更新为最新版建站说明，明确「本地为主场，AI 为外援」。"
+    - "补入项目总控流程图 /images/workflow/site-control-map.png。"
+    - "明确总控层与 AI 执行代理分工，统一龙虾、蝉师傅、NVIDIA 等执行代理定位。"
+    - "明确安全 rsync、署名留痕、单代理施工与本地优先发布规则。"
+  changed:
+    - "/site-workflow/"
+    - "/images/workflow/site-control-map.png"
+    - "/changelog/"
+
 - version: "v0.6.32"
   date: "2026-05-29"
   title: "更新 about 页面与 AI 执行代理规则"

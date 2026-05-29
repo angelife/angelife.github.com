@@ -10,25 +10,18 @@
 
 ## 当前版本状态
 
-- 当前版本：v0.6.32 待发布
+- 当前版本：v0.6.33 待发布
 - 最新 commit：尚未 commit
 - 最新 tag：尚未 tag
-- 线上状态：v0.6.31 已发布；本地有待发布改动（about 页面定稿+封面图、AI 执行代理规则一致性整理、日志补全）
+- 线上状态：v0.6.31 已发布；本地有待发布改动（site-workflow 页面更新 + 流程图接入 + 日志补全）
 
-### v0.6.32 待发布内容
+### v0.6.33 待发布内容
 
-- **about 页面定稿**：更新 `hugo-site/content/about/index.md`，由剑妈提供最新版说明，包含封面图接入（/images/about/cover.png）
-- **AI 执行代理规则完善**：`AI_EXECUTION_AGENTS.md` 新增 NVIDIA 执行代理完整描述；`HERMES_COST_RULES.md` 新增 NVIDIA 练功房隔离要求；各治理文件统一"NVIDIA"名称和执行代理同级原则
-- **规则一致性整理**：统一所有文件中的"NVIDIA"称呼和执行代理同级原则描述
+- **site-workflow 页面更新**：`hugo-site/content/site-workflow/index.md` 更新为最新版《建站模式日志》，明确「本地为主场，AI 为外援」
+- **项目总控流程图接入**：`hugo-site/static/images/workflow/site-control-map.png`（2MB），路径 `/images/workflow/site-control-map.png`
 - **日志补全**：更新 `SITE_CHANGELOG.md`、`DAILY_WORK_LOG.md`、`PROJECT_STATUS.md`、`BUILD_HANDOFF.md`、`hugo-site/data/changelog.yaml`
-- **尚未 Hugo 构建**：待发布前执行 `hugo --gc --cleanDestinationDir --minify -s hugo-site`
-- **尚未 commit / tag / push**：等待用户授权后由指定执行代理使用 `./tools/angelife-release v0.6.32 '<commit message>'` 统一发布
-
-### v0.6.32 安全规则补全说明
-
-- **安全 rsync 漏洞已修复**：原排除项缺少 .gitignore、.gitmodules、publish.sh、tools/，rsync --delete 模式曾误删，已由用户 git restore 恢复，本轮补齐排除清单
-- **后续发布必须保护**：.gitignore、.gitmodules、publish.sh、tools/，禁止裸 rsync
-- **所有执行代理必须署名留痕**：禁止匿名施工，禁止只写"已完成"不写执行者
+- **尚未 Hugo 构建**：待 macOS 本机执行 `hugo --gc --cleanDestinationDir --minify -s hugo-site`
+- **尚未 rsync / commit / tag / push**：等待 macOS 本机执行安全 rsync 后由指定执行代理发布
 
 ## 版本号规则
 
