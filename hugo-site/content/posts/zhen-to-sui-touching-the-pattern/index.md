@@ -6,7 +6,9 @@ slug: "zhen-to-sui-touching-the-pattern"
 description: "震之随六五变提醒人：摸到规律不是宣布无敌，而是在反复惊动中不失主线，把经验固定成可重复的系统。"
 categories: ["易理"]
 tags: ["易经", "震卦", "随卦", "判断力", "AI时代", "不失正见"]
-cover_status: "prompt_ready"
+cover:
+  image: /images/posts/zhen-to-sui-touching-the-pattern/cover.png
+  alt: "惊雷裂空，中心不动——震卦在震动中守住主线"
 ---
 
 ## 震之随六五：在惊动中摸到规律
