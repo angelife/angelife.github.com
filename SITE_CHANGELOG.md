@@ -1359,4 +1359,29 @@ tag：v2026.05.27-05
 
 **总控 / 设计**：人类用户 + ChatGPT / 剑妈
 **具体做事**：NVIDIA
+**执行环境**：Docker Hermes（NVIDIA）/ macOS（本地 Mac 补完）## v0.6.37 — 2026-05-29
+
+**标题**：固化 NVIDIA Gateway 恢复 SOP 与 YAML 写入规则
+
+**摘要**：
+- 新增 `NVIDIA_GATEWAY_RECOVERY.md`：Telegram Gateway 故障恢复 SOP，写明诊断步骤、禁止事项、标准恢复命令。
+- 新增 `CHANGELOG_YAML_RULES.md`：固化 changelog.yaml 写入规则，禁止 AI 自由追加，必须构建验证。
+- 新增 `NVIDIA_MAIN_REPO_MOUNT_PLAN.md`：记录主库挂载三阶段规划，本轮不执行。
+- `AI_BOOTSTRAP.md` 与 `README.md` 追加相关文档引用。
+- 内部日志文件追加 v0.6.37 记录。
+
+**修改文件**：
+- `NVIDIA_GATEWAY_RECOVERY.md`（新增）
+- `CHANGELOG_YAML_RULES.md`（新增）
+- `NVIDIA_MAIN_REPO_MOUNT_PLAN.md`（新增）
+- `AI_BOOTSTRAP.md`（追加）
+- `README.md`（追加）
+- `DAILY_WORK_LOG.md`（追加）
+- `SITE_CHANGELOG.md`（追加）
+- `PROJECT_STATUS.md`（追加）
+- `BUILD_HANDOFF.md`（追加）
+- `hugo-site/data/changelog.yaml`（追加 YAML 块，待本地 Mac 插入）
+
+**总控 / 设计**：人类用户 + ChatGPT / 剑妈
+**具体做事**：NVIDIA
 **执行环境**：Docker Hermes（NVIDIA）/ macOS（本地 Mac 补完）

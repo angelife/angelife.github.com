@@ -329,4 +329,50 @@ Telegram 中执行任务时，Hermes 必须先确认 pwd 为 `/Users/macos/angel
 
 **交接方**：NVIDIA
 **接收方**：本地 Mac
+**验收方**：人类用户 + ChatGPT / 剑妈## v0.6.37 构建交接 — 2026-05-29
+
+**版本**：v0.6.37
+**目标**：固化 NVIDIA Gateway 恢复 SOP 与 YAML 写入规则
+
+**上游交付物**：
+- `NVIDIA_GATEWAY_RECOVERY.md`（新增，SOP 全文）
+- `CHANGELOG_YAML_RULES.md`（新增，规则全文）
+- `NVIDIA_MAIN_REPO_MOUNT_PLAN.md`（新增，规划全文）
+- `AI_BOOTSTRAP_APPEND.md`（追加块）
+- `README_APPEND.md`（追加块）
+- `DAILY_WORK_LOG_APPEND.md`（日志追加块）
+- `SITE_CHANGELOG_APPEND.md`（changelog 追加块）
+- `PROJECT_STATUS_APPEND.md`（状态追加块）
+- `BUILD_HANDOFF_APPEND.md`（本文件）
+- `changelog_yaml_block.yaml`（标准 YAML 块）
+
+**本地 Mac 接收检查清单**：
+
+□ 追加 AI_BOOTSTRAP.md（将 AI_BOOTSTRAP_APPEND.md 内容追加到文件末尾）
+□ 追加 README.md（将 README_APPEND.md 内容追加到文件末尾）
+□ 追加 DAILY_WORK_LOG.md（追加 v0.6.37 记录）
+□ 追加 SITE_CHANGELOG.md（追加 v0.6.37 记录）
+□ 追加 PROJECT_STATUS.md（追加 v0.6.37 记录）
+□ 追加 BUILD_HANDOFF.md（追加本记录）
+□ **插入** changelog_yaml_block.yaml 内容到 hugo-site/data/changelog.yaml（注意是插入，非追加）
+□ Hugo 构建验证：`hugo --gc --cleanDestinationDir --minify -s hugo-site`
+□ tools/angelife-release v0.6.37（待授权）
+□ git add 精确指定文件（不用 git add .）
+□ git commit -m 含版本号 v0.6.37
+□ git tag v0.6.37 已推送
+□ 线上验证 /site-workflow/ 返回 200
+□ 微信认证文件仍存在
+
+**changelog_yaml_block.yaml 插入注意**：
+- 该文件为标准 YAML 块，不能直接 cat >> 拼接
+- 必须按 CHANGELOG_YAML_RULES.md 模板插入
+- 插入后必须 Hugo 构建验证
+
+**发布前必须停下的条件**：
+- Hugo 构建报错（尤其是 YAML 格式）
+- tools/angelife-release 不可用
+- 微信认证文件缺失
+
+**交接方**：NVIDIA
+**接收方**：本地 Mac
 **验收方**：人类用户 + ChatGPT / 剑妈

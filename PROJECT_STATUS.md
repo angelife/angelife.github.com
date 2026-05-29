@@ -151,4 +151,32 @@ v0.7.0：旧 Blogger 内容回流工程。来源：https://angelifex.blogspot.co
 
 **发布授权**：❌ 未授权
 
+**后续任务**：v0.7.0 旧 Blogger 内容回流工程（见 BUILD_HANDOFF.md）## v0.6.37 — 2026-05-29
+
+**状态**：✅ 内容就绪，待发布授权
+
+**本轮完成**：
+- `NVIDIA_GATEWAY_RECOVERY.md` 新增（SOP 文档）
+- `CHANGELOG_YAML_RULES.md` 新增（YAML 写入规则）
+- `NVIDIA_MAIN_REPO_MOUNT_PLAN.md` 新增（挂载规划）
+- `AI_BOOTSTRAP.md` 追加（新增文档引用）
+- `README.md` 追加（新增文档引用）
+- 内部日志文件草案（NVIDIA）
+- `changelog_yaml_block.yaml` 标准块（NVIDIA）
+
+**待本地 Mac 执行**：
+- 将追加内容合并入 AI_BOOTSTRAP.md / README.md 末尾
+- 将日志块追加入对应文件
+- 将 `changelog_yaml_block.yaml` 插入 `hugo-site/data/changelog.yaml`
+- Hugo 构建
+- tools/angelife-release v0.6.37（待授权）
+- git add / commit / tag / push（待授权）
+- 线上验证（待授权）
+
+**本轮不启用**：蝉师傅、龙虾、Reasonix、Codex、Claude Code
+
+**主库挂载**：本轮不执行，见 `NVIDIA_MAIN_REPO_MOUNT_PLAN.md`
+
+**发布授权**：❌ 未授权
+
 **后续任务**：v0.7.0 旧 Blogger 内容回流工程（见 BUILD_HANDOFF.md）

@@ -131,4 +131,27 @@ angelife（安知生）是一个公开知识网站，托管于 GitHub Pages。
 
 - 公开站点：https://angelife.github.io/
 - 建站模式日志：https://angelife.github.io/site-workflow/
-- 项目 GitHub：https://github.com/angelife/angelife.github.com
+- 项目 GitHub：https://github.com/angelife/angelife.github.com# README.md 追加内容
+
+> 以下内容追加到 README.md 末尾，不要重写全文。
+
+---
+
+## NVIDIA / Hermes 故障恢复
+
+Telegram 中 NVIDIA 不回复时，先读 `NVIDIA_GATEWAY_RECOVERY.md`。
+禁止直接 docker restart 或挂载主库。
+
+---
+
+## changelog.yaml 写入规则
+
+changelog.yaml 修改必须遵守 `CHANGELOG_YAML_RULES.md`。
+NVIDIA 只生成 YAML 块草案，本地 Mac 构建验证通过后才能 release。
+
+---
+
+## 主库挂载规划
+
+当前 NVIDIA 无主库访问权限。详见 `NVIDIA_MAIN_REPO_MOUNT_PLAN.md`。
+三阶段规划：只写文件 → 可 commit/tag → 完整 release。

@@ -291,3 +291,39 @@ NVIDIA 干活。
 本地 Mac 补完。  
 谁干活，谁署名。  
 谁出问题，能回溯。
+# AI_BOOTSTRAP.md 追加内容
+
+> 以下内容追加到 AI_BOOTSTRAP.md 末尾，不要重写全文。
+
+---
+
+## NVIDIA 故障恢复
+
+遇到 NVIDIA / Hermes Telegram Gateway 无响应时：
+1. 先读 `NVIDIA_GATEWAY_RECOVERY.md`
+2. 不要直接 docker restart 或挂载主库
+3. 按 SOP 分层诊断：容器 → Hermes → gateway → s6
+
+---
+
+## changelog.yaml 写入规则
+
+修改 `hugo-site/data/changelog.yaml` 必须遵守 `CHANGELOG_YAML_RULES.md`：
+
+- NVIDIA 只生成 YAML 块草案
+- 本地 Mac 按模板插入
+- 插入后必须 Hugo 构建验证
+- Hugo 通过后才能 release
+- 报错时先 `git restore --source=HEAD -- hugo-site/data/changelog.yaml`
+
+---
+
+## 主库挂载规划
+
+NVIDIA 当前无主库访问权限。`NVIDIA_MAIN_REPO_MOUNT_PLAN.md` 记录了三阶段规划：
+
+- 阶段一：NVIDIA 只写文件，本地 Mac commit/push
+- 阶段二：NVIDIA 可 commit/tag，本地 Mac push
+- 阶段三：NVIDIA 完整 release（稳定后）
+
+本轮不执行任何挂载。

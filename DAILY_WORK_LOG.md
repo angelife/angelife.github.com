@@ -1303,4 +1303,35 @@ v0.7.0：旧 Blogger 内容回流工程。来源：https://angelifex.blogspot.co
 - Docker 无仓库访问权 → 本地 Mac 补完
 - 发布需用户明确授权
 
+**后续任务**：v0.7.0 旧 Blogger 内容回流工程（来源：https://angelifex.blogspot.com/）## 2026-05-29 — v0.6.37 发布
+
+**本轮目标**：固化 NVIDIA Gateway 恢复 SOP、changelog.yaml 写入规则、主库挂载规划。
+
+**版本**：
+- 当前：v0.6.36（已发布）
+- 目标：v0.6.37
+
+**三者分工**：
+- 剑妈 = 设计师 + 总控：方向、架构、规则、口径、验收标准
+- NVIDIA = 具体做事者：生成 SOP、整理规则文档、输出追加块
+- 本地 Mac = 上传发布手臂：复制文件、合并追加内容、Hugo 构建、release、git 操作、线上验证
+
+**执行链**：
+- 方向/架构/规则：人类用户 + ChatGPT / 剑妈
+- SOP 文档生成：NVIDIA
+- 规则文档生成：NVIDIA
+- 文件生成：NVIDIA
+- 本地合并：待本地 Mac 执行
+- Hugo 构建：待本地 Mac 执行
+- release / git：待用户授权后本地 Mac 执行
+
+**发布授权**：❌ 未授权
+
+**本轮不启用**：蝉师傅、龙虾、Reasonix、Codex、Claude Code
+
+**本轮风险**：
+- 主库尚未挂载，NVIDIA 无法直接写仓库
+- 发布需用户明确授权
+- 本轮不执行挂载，不重启容器
+
 **后续任务**：v0.7.0 旧 Blogger 内容回流工程（来源：https://angelifex.blogspot.com/）
