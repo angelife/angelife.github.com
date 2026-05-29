@@ -1,1 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>复杂时代 on 安知生 angelife</title><link>https://angelife.github.io/tags/%E5%A4%8D%E6%9D%82%E6%97%B6%E4%BB%A3/</link><description>Recent content in 复杂时代 on 安知生 angelife</description><generator>Hugo -- 0.147.4</generator><language>zh-cn</language><copyright>2009–2026 angelife / 安知生</copyright><lastBuildDate>Wed, 27 May 2026 01:00:00 +0800</lastBuildDate><atom:link href="https://angelife.github.io/tags/%E5%A4%8D%E6%9D%82%E6%97%B6%E4%BB%A3/index.xml" rel="self" type="application/rss+xml"/><item><title>不失正见：复杂时代的个人守则</title><link>https://angelife.github.io/series/confucian-framework/right-view-in-complex-age/</link><pubDate>Wed, 27 May 2026 01:00:00 +0800</pubDate><guid>https://angelife.github.io/series/confucian-framework/right-view-in-complex-age/</guid><description>复杂时代最难的不是获得信息，而是在信息、情绪和利益之间保持事实感、边界感和作品感。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>复杂时代 on 安知生 angelife</title>
+    <link>https://angelife.github.io/tags/%E5%A4%8D%E6%9D%82%E6%97%B6%E4%BB%A3/</link>
+    <description>Recent content in 复杂时代 on 安知生 angelife</description>
+    <generator>Hugo -- 0.162.1</generator>
+    <language>zh-cn</language>
+    <copyright>2009–2026 angelife / 安知生</copyright>
+    <lastBuildDate>Wed, 27 May 2026 01:00:00 +0800</lastBuildDate>
+    <atom:link href="https://angelife.github.io/tags/%E5%A4%8D%E6%9D%82%E6%97%B6%E4%BB%A3/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>不失正见：复杂时代的个人守则</title>
+      <link>https://angelife.github.io/series/confucian-framework/right-view-in-complex-age/</link>
+      <pubDate>Wed, 27 May 2026 01:00:00 +0800</pubDate>
+      <guid>https://angelife.github.io/series/confucian-framework/right-view-in-complex-age/</guid>
+      <description>复杂时代最难的不是获得信息，而是在信息、情绪和利益之间保持事实感、边界感和作品感。</description>
+    </item>
+  </channel>
+</rss>

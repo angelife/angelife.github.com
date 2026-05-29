@@ -1,1 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>蝉识录 on 安知生 angelife</title><link>https://angelife.github.io/categories/%E8%9D%89%E8%AF%86%E5%BD%95/</link><description>Recent content in 蝉识录 on 安知生 angelife</description><generator>Hugo -- 0.147.4</generator><language>zh-cn</language><copyright>2009–2026 angelife / 安知生</copyright><lastBuildDate>Tue, 26 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://angelife.github.io/categories/%E8%9D%89%E8%AF%86%E5%BD%95/index.xml" rel="self" type="application/rss+xml"/><item><title>AI 原生知识系统：从散乱材料到长期作品</title><link>https://angelife.github.io/series/chan-shi-lu/ai-native-knowledge-system/</link><pubDate>Tue, 26 May 2026 00:00:00 +0000</pubDate><guid>https://angelife.github.io/series/chan-shi-lu/ai-native-knowledge-system/</guid><description>这篇文章讨论如何把聊天记录、旧笔记、网页摘录、读书笔记和临时灵感，通过 AI、Obsidian、Hugo 与 Git 整理成可检索、可复盘、可发布的长期知识资产。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>蝉识录 on 安知生 angelife</title>
+    <link>https://angelife.github.io/categories/%E8%9D%89%E8%AF%86%E5%BD%95/</link>
+    <description>Recent content in 蝉识录 on 安知生 angelife</description>
+    <generator>Hugo -- 0.162.1</generator>
+    <language>zh-cn</language>
+    <copyright>2009–2026 angelife / 安知生</copyright>
+    <lastBuildDate>Tue, 26 May 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://angelife.github.io/categories/%E8%9D%89%E8%AF%86%E5%BD%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI 原生知识系统：从散乱材料到长期作品</title>
+      <link>https://angelife.github.io/series/chan-shi-lu/ai-native-knowledge-system/</link>
+      <pubDate>Tue, 26 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://angelife.github.io/series/chan-shi-lu/ai-native-knowledge-system/</guid>
+      <description>这篇文章讨论如何把聊天记录、旧笔记、网页摘录、读书笔记和临时灵感，通过 AI、Obsidian、Hugo 与 Git 整理成可检索、可复盘、可发布的长期知识资产。</description>
+    </item>
+  </channel>
+</rss>

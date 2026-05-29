@@ -1,1 +1,41 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>正见 on 安知生 angelife</title><link>https://angelife.github.io/tags/%E6%AD%A3%E8%A7%81/</link><description>Recent content in 正见 on 安知生 angelife</description><generator>Hugo -- 0.147.4</generator><language>zh-cn</language><copyright>2009–2026 angelife / 安知生</copyright><lastBuildDate>Wed, 27 May 2026 01:00:00 +0800</lastBuildDate><atom:link href="https://angelife.github.io/tags/%E6%AD%A3%E8%A7%81/index.xml" rel="self" type="application/rss+xml"/><item><title>不失正见：复杂时代的个人守则</title><link>https://angelife.github.io/series/confucian-framework/right-view-in-complex-age/</link><pubDate>Wed, 27 May 2026 01:00:00 +0800</pubDate><guid>https://angelife.github.io/series/confucian-framework/right-view-in-complex-age/</guid><description>复杂时代最难的不是获得信息，而是在信息、情绪和利益之间保持事实感、边界感和作品感。</description></item><item><title>信息质量判断框架：先看来源，再看叙事</title><link>https://angelife.github.io/series/information-judgment/information-quality-framework/</link><pubDate>Tue, 26 May 2026 00:00:00 +0000</pubDate><guid>https://angelife.github.io/series/information-judgment/information-quality-framework/</guid><description>判断信息质量不能只看观点是否顺耳，而要看来源、证据、叙事方式、利益位置和纠错机制。真正好的信息源，经得起追问。</description></item><item><title>儒家为体，AI 为用</title><link>https://angelife.github.io/series/confucian-framework/confucianism-as-base-ai-as-use/</link><pubDate>Tue, 26 May 2026 00:00:00 +0000</pubDate><guid>https://angelife.github.io/series/confucian-framework/confucianism-as-base-ai-as-use/</guid><description>技术可以提高效率，但不能替人安放价值。儒家为体、AI 为用，是让工具服务于正见，而不是让效率放大偏见。</description></item><item><title>反民粹，不反民众</title><link>https://angelife.github.io/series/anti-populism/anti-populism-not-anti-people/</link><pubDate>Tue, 26 May 2026 00:00:00 +0000</pubDate><guid>https://angelife.github.io/series/anti-populism/anti-populism-not-anti-people/</guid><description>反民粹不是反普通人，而是反对把真实痛苦加工成仇恨、把复杂问题简化成敌我动员、把民众当作情绪燃料。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>正见 on 安知生 angelife</title>
+    <link>https://angelife.github.io/tags/%E6%AD%A3%E8%A7%81/</link>
+    <description>Recent content in 正见 on 安知生 angelife</description>
+    <generator>Hugo -- 0.162.1</generator>
+    <language>zh-cn</language>
+    <copyright>2009–2026 angelife / 安知生</copyright>
+    <lastBuildDate>Wed, 27 May 2026 01:00:00 +0800</lastBuildDate>
+    <atom:link href="https://angelife.github.io/tags/%E6%AD%A3%E8%A7%81/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>不失正见：复杂时代的个人守则</title>
+      <link>https://angelife.github.io/series/confucian-framework/right-view-in-complex-age/</link>
+      <pubDate>Wed, 27 May 2026 01:00:00 +0800</pubDate>
+      <guid>https://angelife.github.io/series/confucian-framework/right-view-in-complex-age/</guid>
+      <description>复杂时代最难的不是获得信息，而是在信息、情绪和利益之间保持事实感、边界感和作品感。</description>
+    </item>
+    <item>
+      <title>信息质量判断框架：先看来源，再看叙事</title>
+      <link>https://angelife.github.io/series/information-judgment/information-quality-framework/</link>
+      <pubDate>Tue, 26 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://angelife.github.io/series/information-judgment/information-quality-framework/</guid>
+      <description>判断信息质量不能只看观点是否顺耳，而要看来源、证据、叙事方式、利益位置和纠错机制。真正好的信息源，经得起追问。</description>
+    </item>
+    <item>
+      <title>儒家为体，AI 为用</title>
+      <link>https://angelife.github.io/series/confucian-framework/confucianism-as-base-ai-as-use/</link>
+      <pubDate>Tue, 26 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://angelife.github.io/series/confucian-framework/confucianism-as-base-ai-as-use/</guid>
+      <description>技术可以提高效率，但不能替人安放价值。儒家为体、AI 为用，是让工具服务于正见，而不是让效率放大偏见。</description>
+    </item>
+    <item>
+      <title>反民粹，不反民众</title>
+      <link>https://angelife.github.io/series/anti-populism/anti-populism-not-anti-people/</link>
+      <pubDate>Tue, 26 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://angelife.github.io/series/anti-populism/anti-populism-not-anti-people/</guid>
+      <description>反民粹不是反普通人，而是反对把真实痛苦加工成仇恨、把复杂问题简化成敌我动员、把民众当作情绪燃料。</description>
+    </item>
+  </channel>
+</rss>

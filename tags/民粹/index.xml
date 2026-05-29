@@ -1,1 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>民粹 on 安知生 angelife</title><link>https://angelife.github.io/tags/%E6%B0%91%E7%B2%B9/</link><description>Recent content in 民粹 on 安知生 angelife</description><generator>Hugo -- 0.147.4</generator><language>zh-cn</language><copyright>2009–2026 angelife / 安知生</copyright><lastBuildDate>Wed, 27 May 2026 01:00:00 +0800</lastBuildDate><atom:link href="https://angelife.github.io/tags/%E6%B0%91%E7%B2%B9/index.xml" rel="self" type="application/rss+xml"/><item><title>公共理性：反操弄，而不是反普通人</title><link>https://angelife.github.io/series/anti-populism/public-reason-against-manipulation/</link><pubDate>Wed, 27 May 2026 01:00:00 +0800</pubDate><guid>https://angelife.github.io/series/anti-populism/public-reason-against-manipulation/</guid><description>反操弄的核心不是轻视普通人，而是拒绝把普通人的痛苦加工成仇恨、口号和敌我动员。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>民粹 on 安知生 angelife</title>
+    <link>https://angelife.github.io/tags/%E6%B0%91%E7%B2%B9/</link>
+    <description>Recent content in 民粹 on 安知生 angelife</description>
+    <generator>Hugo -- 0.162.1</generator>
+    <language>zh-cn</language>
+    <copyright>2009–2026 angelife / 安知生</copyright>
+    <lastBuildDate>Wed, 27 May 2026 01:00:00 +0800</lastBuildDate>
+    <atom:link href="https://angelife.github.io/tags/%E6%B0%91%E7%B2%B9/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>公共理性：反操弄，而不是反普通人</title>
+      <link>https://angelife.github.io/series/anti-populism/public-reason-against-manipulation/</link>
+      <pubDate>Wed, 27 May 2026 01:00:00 +0800</pubDate>
+      <guid>https://angelife.github.io/series/anti-populism/public-reason-against-manipulation/</guid>
+      <description>反操弄的核心不是轻视普通人，而是拒绝把普通人的痛苦加工成仇恨、口号和敌我动员。</description>
+    </item>
+  </channel>
+</rss>

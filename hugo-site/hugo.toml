@@ -7,6 +7,7 @@ copyright = "© 2009–2026 angelife / 安知生"
 enableRobotsTXT = true
 hasCJKLanguage = true
 summaryLength = 120
+buildFuture = true
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]

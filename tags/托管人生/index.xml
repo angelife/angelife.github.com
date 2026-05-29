@@ -1,1 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>托管人生 on 安知生 angelife</title><link>https://angelife.github.io/tags/%E6%89%98%E7%AE%A1%E4%BA%BA%E7%94%9F/</link><description>Recent content in 托管人生 on 安知生 angelife</description><generator>Hugo -- 0.147.4</generator><language>zh-cn</language><copyright>2009–2026 angelife / 安知生</copyright><lastBuildDate>Thu, 28 May 2026 13:05:00 +0800</lastBuildDate><atom:link href="https://angelife.github.io/tags/%E6%89%98%E7%AE%A1%E4%BA%BA%E7%94%9F/index.xml" rel="self" type="application/rss+xml"/><item><title>机器执行，经验指挥：AI 时代真正昂贵的东西</title><link>https://angelife.github.io/posts/ai-machine-executes-experience-commands/</link><pubDate>Thu, 28 May 2026 13:05:00 +0800</pubDate><guid>https://angelife.github.io/posts/ai-machine-executes-experience-commands/</guid><description>AI 时代，机器越来越便宜，执行越来越自动化。真正稀缺的不再是工具，而是能把 AI、Codex、自动化和发布流程组织成系统的经验。未来的核心竞争力，不是亲自做完所有事，而是设计流程、判断结果、守住方向。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>托管人生 on 安知生 angelife</title>
+    <link>https://angelife.github.io/tags/%E6%89%98%E7%AE%A1%E4%BA%BA%E7%94%9F/</link>
+    <description>Recent content in 托管人生 on 安知生 angelife</description>
+    <generator>Hugo -- 0.162.1</generator>
+    <language>zh-cn</language>
+    <copyright>2009–2026 angelife / 安知生</copyright>
+    <lastBuildDate>Thu, 28 May 2026 13:05:00 +0800</lastBuildDate>
+    <atom:link href="https://angelife.github.io/tags/%E6%89%98%E7%AE%A1%E4%BA%BA%E7%94%9F/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>机器执行，经验指挥：AI 时代真正昂贵的东西</title>
+      <link>https://angelife.github.io/posts/ai-machine-executes-experience-commands/</link>
+      <pubDate>Thu, 28 May 2026 13:05:00 +0800</pubDate>
+      <guid>https://angelife.github.io/posts/ai-machine-executes-experience-commands/</guid>
+      <description>AI 时代，机器越来越便宜，执行越来越自动化。真正稀缺的不再是工具，而是能把 AI、Codex、自动化和发布流程组织成系统的经验。未来的核心竞争力，不是亲自做完所有事，而是设计流程、判断结果、守住方向。</description>
+    </item>
+  </channel>
+</rss>
