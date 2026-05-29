@@ -14,7 +14,9 @@ tags:
   - 智能体
   - 马斯克
   - 凡人修仙
-cover_status: prompt_ready
+cover:
+  image: /images/posts/the-future-is-one-person-company.png
+  alt: "大衍神君孤身立于虚空，万千机械傀儡环绕发光"
 ---
 
 ## 开头
