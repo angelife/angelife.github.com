@@ -445,7 +445,7 @@ docker exec hermes-minimaxlab ls /repo/README.md
 □ tools/angelife-release v0.6.39（待授权）
 □ git add 精确指定文件（不用 git add .）
 □ git commit -m "v0.6.39: NVIDIA 直接写主库试运行"
-□ git tag -a v0.6.38 -m "v0.6.39"（注意 tag 版本号）
+□ git tag -a v0.6.39 -m "v0.6.39"（注意 tag 版本号）
 □ git push && git push --tags（待授权）
 □ 线上验证 /site-workflow/ 返回 200
 □ 微信认证文件仍存在
