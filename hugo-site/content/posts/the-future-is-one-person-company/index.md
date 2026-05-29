@@ -3,7 +3,9 @@ title: "大衍神君的第一人"
 date: 2026-05-29
 draft: false
 slug: the-future-is-one-person-company
-categories: ["AI时代"]
+categories:
+  - "火·AI"
+  - "一人公司"
 tags:
   - 一人公司
   - 大衍神君
