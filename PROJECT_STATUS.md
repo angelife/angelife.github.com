@@ -207,3 +207,29 @@ v0.7.0：旧 Blogger 内容回流工程。来源：https://angelifex.blogspot.co
 **发布授权**：❌ 未授权
 
 **后续任务**：v0.7.0 旧 Blogger 内容回流工程（见 BUILD_HANDOFF.md）
+## v0.6.39 — 2026-05-29
+
+**状态**：✅ NVIDIA 直接写主库成功，待本地 Mac 发布
+
+**里程碑**：
+- NVIDIA 已进入“直接写主库文件”阶段
+- `/repo` 路径已验证可写
+- v0.6.39 文件已通过 /repo 直接写入主库
+
+**NVIDIA 当前权限**：
+- 直接写入 /repo 文件：✅
+- git add / commit / tag / push：❌ 禁止
+- release：❌ 禁止
+
+**本地 Mac 职责**：
+- 检查 git diff
+- 插入 hugo-site/data/changelog.yaml（按模板）
+- Hugo 构建
+- tools/angelife-release（待授权）
+- git push（待授权）
+
+**本轮不启用**：蝉师傅、龙虾、Reasonix、Codex、Claude Code
+
+**发布授权**：❌ 未授权
+
+**后续任务**：v0.7.0 旧 Blogger 内容回流工程

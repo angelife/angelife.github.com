@@ -1369,3 +1369,34 @@ v0.7.0：旧 Blogger 内容回流工程。来源：https://angelifex.blogspot.co
 - 主库已挂载，NVIDIA 可直接访问 `/workspace/angelife.github.com`
 
 **后续任务**：v0.7.0 旧 Blogger 内容回流工程（来源：https://angelifex.blogspot.com/）
+## 2026-05-29 — v0.6.39 发布
+
+**本轮目标**：NVIDIA 直接写主库试运行
+
+**版本**：
+- 当前：v0.6.38（已发布）
+- 目标：v0.6.39
+
+**三者分工**：
+- 剑妈 = 设计师 + 总控：方向、架构、口径、验收标准
+- NVIDIA = 具体做事者：通过 /repo 直接写入主库文件
+- 本地 Mac = 发布手臂：构建、release、git 操作
+
+**执行链**：
+- 方向/架构/口径：人类用户 + ChatGPT / 剑妈
+- 文件生成：NVIDIA（通过 /repo 直接写入）
+- git add / commit / tag / push：❌ 本轮禁止
+- Hugo 构建：待本地 Mac 执行
+- release：待本地 Mac 执行（待授权）
+- 线上验证：待本地 Mac 执行
+
+**发布授权**：❌ 未授权
+
+**本轮不启用**：蝉师傅、龙虾、Reasonix、Codex、Claude Code
+
+**关键里程碑**：
+- NVIDIA 已进入“直接写主库”阶段
+- /repo 路径已就绪并验证可写
+- 权限边界：NVIDIA 写文件，本地 Mac 发布
+
+**后续任务**：v0.7.0 旧 Blogger 内容回流工程

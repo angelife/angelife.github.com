@@ -426,3 +426,44 @@ docker exec hermes-minimaxlab ls /repo/README.md
 **交接方**：NVIDIA
 **接收方**：本地 Mac
 **验收方**：人类用户 + ChatGPT / 剑妈
+## v0.6.39 构建交接 — 2026-05-29
+
+**版本**：v0.6.39
+**目标**：NVIDIA 直接写主库试运行验证
+
+**NVIDIA 已完成**：
+- 通过 /repo 直接写入主库文件
+- 新增 NVIDIA_DIRECT_WRITE_TRIAL.md
+- 追加 DAILY_WORK_LOG.md / SITE_CHANGELOG.md / PROJECT_STATUS.md / BUILD_HANDOFF.md
+
+**本地 Mac 接收检查清单**：
+
+□ 检查 git diff：确认 NVIDIA 直接写入的文件
+□ 确认无意外修改（old-site/ / themes/ / _incoming/ / .reasonix/ 未触碰）
+□ 插入 hugo-site/data/changelog.yaml（changelog_yaml_block.yaml 按模板插入）
+□ Hugo 构建验证：hugo --gc --cleanDestinationDir --minify -s hugo-site
+□ tools/angelife-release v0.6.39（待授权）
+□ git add 精确指定文件（不用 git add .）
+□ git commit -m "v0.6.39: NVIDIA 直接写主库试运行"
+□ git tag -a v0.6.38 -m "v0.6.39"（注意 tag 版本号）
+□ git push && git push --tags（待授权）
+□ 线上验证 /site-workflow/ 返回 200
+□ 微信认证文件仍存在
+
+**NVIDIA 写入的新文件**：
+- NVIDIA_DIRECT_WRITE_TRIAL.md（untracked）
+
+**NVIDIA 修改的文件**：
+- DAILY_WORK_LOG.md
+- SITE_CHANGELOG.md
+- PROJECT_STATUS.md
+- BUILD_HANDOFF.md
+
+**发布前必须停下的条件**：
+- Hugo 构建报错
+- tools/angelife-release 不可用
+- 微信认证文件缺失
+
+**交接方**：NVIDIA
+**接收方**：本地 Mac
+**验收方**：人类用户 + ChatGPT / 剑妈

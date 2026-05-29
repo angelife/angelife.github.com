@@ -1410,3 +1410,23 @@ tag：v2026.05.27-05
 **总控 / 设计**：人类用户 + ChatGPT / 剑妈
 **具体做事**：NVIDIA
 **配置分析**：NVIDIA
+
+## v0.6.39 — 2026-05-29
+
+**标题**：NVIDIA 直接写主库试运行
+
+**摘要**：
+- 验证 NVIDIA 已可通过 `/repo` 直接写入主库文件，无需交接包。
+- 新增 `NVIDIA_DIRECT_WRITE_TRIAL.md`，记录试运行结果与权限边界。
+- 日志文件追加 v0.6.39 记录。
+- 保持权限边界：NVIDIA 写文件，本地 Mac 发布。
+
+**修改文件**：
+- `NVIDIA_DIRECT_WRITE_TRIAL.md`（新增）
+- `DAILY_WORK_LOG.md`（追加）
+- `SITE_CHANGELOG.md`（追加）
+- `PROJECT_STATUS.md`（追加）
+- `BUILD_HANDOFF.md`（追加）
+
+**总控 / 设计**：人类用户 + ChatGPT / 剑妈
+**具体做事**：NVIDIA（通过 /repo 直接写入）

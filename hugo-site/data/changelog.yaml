@@ -1,3 +1,21 @@
+- version: "v0.6.39"
+  date: "2026-05-29"
+  title: "NVIDIA 直接写主库试运行"
+  commit: "提交后以 tag v0.6.39 指向的 release commit 为准"
+  tag: "v0.6.39"
+  summary:
+    - "新增 NVIDIA_DIRECT_WRITE_TRIAL.md，记录 NVIDIA 直接写入 /repo 主库的试运行结果。"
+    - "验证 NVIDIA 已可通过 /repo 直接写入主库文件。"
+    - "保持权限边界：NVIDIA 写文件，本地 Mac 构建、发布、commit、tag、push。"
+    - "本轮 NVIDIA 未执行 git add / commit / tag / push / release。"
+  changed:
+    - "NVIDIA_DIRECT_WRITE_TRIAL.md"
+    - "DAILY_WORK_LOG.md"
+    - "SITE_CHANGELOG.md"
+    - "PROJECT_STATUS.md"
+    - "BUILD_HANDOFF.md"
+    - "hugo-site/data/changelog.yaml"
+
 - version: "v0.6.38"
   date: "2026-05-29"
   title: "新增 NVIDIA 主库挂载 Runbook"
