@@ -34,7 +34,7 @@ Hugo 构建 → Git commit / tag → 用户授权 → push → GitHub Pages
 
 **用户**：最终验收。所有 push/rsync 必须经用户确认后执行，拥有方向否决权。
 
-**DeepSeek v4 Flash**：NVIDIA 背后的执行模型，承担持续施工。
+**MiniMax M2.7（NVIDIA NIM + Minimax 免费练功房）**：NVIDIA 背后的执行模型，承担持续施工。
 
 **Hugo + GitHub Pages**：静态站生成与发布。本地构建后同步到发布目录，不依赖 GitHub Actions 在线构建。
 
