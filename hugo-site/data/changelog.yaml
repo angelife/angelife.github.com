@@ -1,3 +1,21 @@
+- version: "v0.6.36"
+  date: "2026-05-29"
+  title: "更新 GitHub README 为 AI 接手入口"
+  commit: "提交后以 tag v0.6.36 指向的 release commit 为准"
+  tag: "v0.6.36"
+  summary:
+    - "更新 README.md，使 GitHub 仓库首页成为 AI 接手入口。"
+    - "明确任何 AI 开工前必须先读 AI_BOOTSTRAP.md 和项目交接文件。"
+    - "简要展示剑妈、NVIDIA、本地 Mac、Obsidian 的真实分工。"
+    - "登记 v0.7.0 旧 Blogger 内容回流工程。"
+  changed:
+    - "README.md"
+    - "DAILY_WORK_LOG.md"
+    - "SITE_CHANGELOG.md"
+    - "PROJECT_STATUS.md"
+    - "BUILD_HANDOFF.md"
+    - "hugo-site/data/changelog.yaml"
+
 - version: "v0.6.35"
   date: "2026-05-29"
   title: "固化 AI 接手记忆与项目规则"

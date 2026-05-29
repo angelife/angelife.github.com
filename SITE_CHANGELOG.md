@@ -1340,3 +1340,23 @@ tag：v2026.05.27-05
 - 固化发布规则、保护文件、署名追责、文章包规则和后续 v0.7.0 Blogger 回流任务。
 - 明确任何 AI 开工前必须先读项目规则文件。
 
+## v0.6.36 — 2026-05-29
+
+**标题**：更新 GitHub README 为 AI 接手入口
+
+**摘要**：
+- README.md 改为项目 AI 接手入口页，写清必读清单、次序、三者分工。
+- 明确 AI_BOOTSTRAP.md 是完整记忆恢复入口。
+- 写明安全红线、发布链路、版本演进、下一阶段目标。
+- 删除旧版 README 中的冗余结构，改为以规则为导向的入口文档。
+
+**修改文件**：
+- README.md（重写）
+- DAILY_WORK_LOG.md（追加 v0.6.36 记录）
+- PROJECT_STATUS.md（更新当前版本状态）
+- BUILD_HANDOFF.md（追加 v0.6.36 构建交接记录）
+- hugo-site/data/changelog.yaml（追加 v0.6.36 条目）
+
+**总控 / 设计**：人类用户 + ChatGPT / 剑妈
+**具体做事**：NVIDIA
+**执行环境**：Docker Hermes（NVIDIA）/ macOS（本地 Mac 补完）

@@ -1275,3 +1275,32 @@ v0.6.34：流程图静态资源热修。
 v0.7.0：旧 Blogger 内容回流工程。来源：https://angelifex.blogspot.com/  
 由剑妈 + NVIDIA 生成迁移策略、分类、去重、再加工内容；本地 Mac 负责实际写入、构建和发布。
 
+## 2026-05-29 — v0.6.36 发布
+
+**本轮目标**：更新 README.md 为 GitHub 项目 AI 接手入口。
+
+**版本**：
+- 当前：v0.6.35（已发布）
+- 目标：v0.6.36
+
+**三者分工**：
+- 剑妈 = 设计师 + 总控：方向、架构、口径、验收标准
+- NVIDIA = 具体做事者：生成 README.md、整理日志草案
+- 本地 Mac = 上传发布手臂：复制文件、Hugo 构建、release、git 操作、线上验证
+
+**执行链**：
+- 方向/架构/口径：人类用户 + ChatGPT / 剑妈
+- README.md 内容生成：剑妈 + NVIDIA
+- 文件生成：NVIDIA
+- 精确 git add / commit / tag / push：本地 Mac（待授权）
+- 线上验证：本地 Mac（待授权）
+
+**发布授权**：❌ 未授权
+
+**本轮不启用**：蝉师傅、龙虾、Reasonix、Codex、Claude Code
+
+**本轮风险**：
+- Docker 无仓库访问权 → 本地 Mac 补完
+- 发布需用户明确授权
+
+**后续任务**：v0.7.0 旧 Blogger 内容回流工程（来源：https://angelifex.blogspot.com/）

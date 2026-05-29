@@ -131,3 +131,24 @@
 
 v0.7.0：旧 Blogger 内容回流工程。来源：https://angelifex.blogspot.com/
 
+## v0.6.36 — 2026-05-29
+
+**状态**：✅ 内容就绪，待发布授权
+
+**本轮完成**：
+- README.md 重写为 AI 接手入口（剑妈 + NVIDIA）
+- 内部日志块草案（NVIDIA）
+- 最终交接报告（NVIDIA）
+
+**待本地 Mac 执行**：
+- 复制 README.md 等文件到仓库对应路径
+- Hugo 构建
+- tools/angelife-release v0.6.36 "Update README as AI onboarding entry point"（待授权）
+- git add / commit / tag / push（待授权）
+- 线上验证（待授权）
+
+**本轮不启用**：蝉师傅、龙虾、Reasonix、Codex、Claude Code
+
+**发布授权**：❌ 未授权
+
+**后续任务**：v0.7.0 旧 Blogger 内容回流工程（见 BUILD_HANDOFF.md）

@@ -294,3 +294,39 @@ Telegram 中执行任务时，Hermes 必须先确认 pwd 为 `/Users/macos/angel
 谁操作，谁负责。  
 谁出问题，能回溯。
 
+## v0.6.36 构建交接 — 2026-05-29
+
+**版本**：v0.6.36
+**目标**：更新 README.md 为 GitHub 项目 AI 接手入口
+
+**上游交付物**：
+- README.md（已生成，重写为 AI 接手入口）
+- DAILY_WORK_LOG.md 草案（已生成）
+- SITE_CHANGELOG.md 追加（已生成）
+- PROJECT_STATUS.md 追加（已生成）
+- BUILD_HANDOFF.md 追加（已生成）
+- hugo-site/data/changelog.yaml 追加（已生成）
+
+**本地 Mac 接收检查清单**：
+□ 确认仓库根目录的 README.md 被覆盖替换为新版本
+□ 确认 DAILY_WORK_LOG.md 追加了 v0.6.36 记录
+□ 确认 SITE_CHANGELOG.md 追加了 v0.6.36 记录
+□ 确认 PROJECT_STATUS.md 当前版本更新为 v0.6.36
+□ 确认 BUILD_HANDOFF.md 追加了 v0.6.36 构建交接记录
+□ 确认 hugo-site/data/changelog.yaml 追加了 v0.6.36 条目
+□ Hugo 构建无报错
+□ tools/angelife-release v0.6.36（待授权）
+□ git add 精确指定文件（不用 git add .）
+□ git commit -m 含版本号 v0.6.36
+□ git tag v0.6.33 已推送
+□ 线上验证 README.md 返回 200
+□ 微信认证文件仍存在
+
+**发布前必须停下的条件**：
+- tools/angelife-release 不可用
+- Hugo 构建报错
+- 微信认证文件缺失
+
+**交接方**：NVIDIA
+**接收方**：本地 Mac
+**验收方**：人类用户 + ChatGPT / 剑妈
