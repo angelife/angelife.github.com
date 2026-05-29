@@ -1328,3 +1328,15 @@ tag：v2026.05.27-05
 ### 下次接手注意
 
 先读 `PROJECT_STATUS.md`，再读 `BUILD_HANDOFF.md`、`AI_WORK_RULES.md`、`SITE_STYLE_GUIDE.md`、`SITE_CHANGELOG.md`、`DAILY_WORK_LOG.md`、`hugo-site/data/changelog.yaml`。
+
+## v0.6.35 — 2026-05-29
+
+**标题**：固化 AI 接手记忆与项目规则
+
+**摘要**：
+- 新增 `AI_BOOTSTRAP.md` 作为 AI 接手启动说明。
+- 统一文字化剑妈、NVIDIA、本地 Mac、Obsidian 的真实分工。
+- 补齐 v0.6.33 / v0.6.34 的执行链与责任追踪记录。
+- 固化发布规则、保护文件、署名追责、文章包规则和后续 v0.7.0 Blogger 回流任务。
+- 明确任何 AI 开工前必须先读项目规则文件。
+

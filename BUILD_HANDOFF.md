@@ -264,3 +264,33 @@ Telegram 中执行任务时，Hermes 必须先确认 pwd 为 `/Users/macos/angel
 ```
 
 禁止匿名交接。禁止只写"已完成"不附执行链。
+
+## v0.6.35 交接记录
+
+新增 `AI_BOOTSTRAP.md`。
+
+以后任何 AI 接手 angelife 项目前，必须先读：
+
+1. `AI_BOOTSTRAP.md`
+2. `PROJECT_STATUS.md`
+3. `BUILD_HANDOFF.md`
+4. `AI_WORK_RULES.md`
+5. `AI_EXECUTION_AGENTS.md`
+6. `DAILY_WORK_LOG.md`
+7. `SITE_CHANGELOG.md`
+8. `hugo-site/data/changelog.yaml`
+
+本文件用于防止新聊天、新机器人、新执行环境遗忘项目规则。
+
+### 三者分工
+
+- 剑妈：设计师 + 总控
+- NVIDIA：具体做事者
+- 本地 Mac：补完 NVIDIA 因 Docker 限制无法完成的本机动作
+
+### 责任规则
+
+谁干活，谁署名。  
+谁操作，谁负责。  
+谁出问题，能回溯。
+

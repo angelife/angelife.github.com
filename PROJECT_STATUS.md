@@ -105,3 +105,29 @@
 ## 下个 AI 接手第一步
 
 先读 `PROJECT_STATUS.md`，再读 `BUILD_HANDOFF.md`、`AI_WORK_RULES.md`、`SITE_STYLE_GUIDE.md`、`SITE_CHANGELOG.md`、`DAILY_WORK_LOG.md`、`hugo-site/data/changelog.yaml`。
+
+## v0.6.35 状态更新
+
+本轮新增 `AI_BOOTSTRAP.md`，用于 AI 接手时恢复项目记忆。
+
+当前核心分工：
+
+- 剑妈：设计师 + 总控
+- NVIDIA：具体做事者
+- 本地 Mac：补完 NVIDIA 因 Docker 限制无法完成的本机动作
+- Obsidian：本地低成本查看、检查、轻修改、上传、中转和自动归档工作台
+
+责任规则：
+
+谁设计，谁署名。  
+谁生成，谁署名。  
+谁写入，谁署名。  
+谁构建，谁署名。  
+谁发布，谁署名。  
+谁验证，谁署名。  
+谁出问题，能回溯。
+
+后续任务：
+
+v0.7.0：旧 Blogger 内容回流工程。来源：https://angelifex.blogspot.com/
+

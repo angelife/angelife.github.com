@@ -1233,3 +1233,45 @@ Hugo `v0.147.4` 构建通过，174 pages，0 errors。
 - 版本号：v2026.05.27-05
 - commit：提交后以 tag `v2026.05.27-05` 指向的 release commit 为准
 - tag：v2026.05.27-05
+
+## 2026-05-29 — v0.6.35 — 固化 AI 接手记忆与项目规则
+
+### 本轮目标
+
+新增 `AI_BOOTSTRAP.md`，作为 angelife 项目的 AI 接手启动说明。  
+所有规则文字化，方便任意 AI 读取后恢复项目记忆。
+
+### 执行链 / 署名追责
+
+- 总控 / 设计：人类用户 + ChatGPT / 剑妈
+- 规则整理：ChatGPT / 剑妈
+- 文件写入：本地 Mac
+- Hugo 构建：本地 Mac
+- 安全 rsync：本地 Mac
+- git add / commit / tag / push：本地 Mac
+- 线上验证：本地 Mac
+- 发布授权：人类用户
+
+### v0.6.33 / v0.6.34 责任链补账
+
+v0.6.33：`/site-workflow/` 页面发布。  
+- 总控 / 设计：人类用户 + ChatGPT / 剑妈
+- 具体做事：NVIDIA
+- 包检查：NVIDIA
+- 环境障碍识别：NVIDIA
+- 文件落盘：本地 Mac
+- Hugo 构建：本地 Mac
+- release / git / tag / push：本地 Mac
+
+v0.6.34：流程图静态资源热修。  
+- 问题：线上 `/images/workflow/site-control-map.png` 返回 404
+- 原因：v0.6.33 发布时新建图片目录未进入 commit
+- 修复：本地 Mac 补提交图片源文件与根目录静态产物
+- commit：966b9c9
+- tag：v0.6.34
+
+### 后续登记
+
+v0.7.0：旧 Blogger 内容回流工程。来源：https://angelifex.blogspot.com/  
+由剑妈 + NVIDIA 生成迁移策略、分类、去重、再加工内容；本地 Mac 负责实际写入、构建和发布。
+
