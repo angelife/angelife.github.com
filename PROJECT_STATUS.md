@@ -233,3 +233,24 @@ v0.7.0：旧 Blogger 内容回流工程。来源：https://angelifex.blogspot.co
 **发布授权**：❌ 未授权
 
 **后续任务**：v0.7.0 旧 Blogger 内容回流工程
+
+## v0.6.40 — 2026-05-29
+
+**状态**：✅ 文章已落盘，待本地 Mac 发布
+
+**里程碑**：
+- NVIDIA 已进入“直接写 Hugo 正式文章源文件”试运行阶段
+- 本轮文章 slug：zhen-to-sui-touching-the-pattern
+- 封面状态：cover_status: prompt_ready
+
+**NVIDIA 当前权限**：
+- 直接写入 /repo/hugo-site/content/posts/：✅
+- git / release：❌ 禁止
+
+**本地 Mac 职责**：
+- Hugo 构建
+- tools/angelife-release（待授权）
+- git push（待授权）
+- 线上验证：/posts/zhen-to-sui-touching-the-pattern/ / changelog/ 微信认证文件
+
+**发布授权**：❌ 未授权

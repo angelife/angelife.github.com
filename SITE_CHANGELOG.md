@@ -1430,3 +1430,24 @@ tag：v2026.05.27-05
 
 **总控 / 设计**：人类用户 + ChatGPT / 剑妈
 **具体做事**：NVIDIA（通过 /repo 直接写入）
+
+## v0.6.40 — 2026-05-29
+
+**标题**：发布文章《震之随六五：在惊动中摸到规律》
+
+**摘要**：
+- 新增易理文章《震之随六五：在惊动中摸到规律》。
+- 验证 NVIDIA 已可通过 /repo 直接写入 Hugo 正式文章源文件。
+- 文章暂不接入封面图，标记 cover_status: prompt_ready。
+- 保持权限边界：NVIDIA 写文件，本地 Mac 发布。
+
+**修改文件**：
+- `hugo-site/content/posts/zhen-to-sui-touching-the-pattern/index.md`（新增）
+- `DAILY_WORK_LOG.md`（追加）
+- `SITE_CHANGELOG.md`（追加）
+- `PROJECT_STATUS.md`（追加）
+- `BUILD_HANDOFF.md`（追加）
+
+**总控 / 设计**：人类用户 + ChatGPT / 剑妈
+**文章原文**：人类用户
+**Hugo 源文件写入**：NVIDIA

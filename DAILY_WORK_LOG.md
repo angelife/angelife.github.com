@@ -1400,3 +1400,25 @@ v0.7.0：旧 Blogger 内容回流工程。来源：https://angelifex.blogspot.co
 - 权限边界：NVIDIA 写文件，本地 Mac 发布
 
 **后续任务**：v0.7.0 旧 Blogger 内容回流工程
+
+## 2026-05-29 — v0.6.40 发布
+
+**本轮目标**：发布文章《震之随六五：在惊动中摸到规律》
+
+**版本**：v0.6.40
+
+**执行链**：
+- 总控 / 设计：人类用户 + ChatGPT / 剑妈
+- 文章原文提供：人类用户
+- Hugo 源文件落盘：NVIDIA（通过 /repo 直接写入）
+- 本地构建 / 发布：待本地 Mac
+- 最终验收：人类用户 + ChatGPT / 剑妈
+
+**说明**：
+- 本轮验证 NVIDIA 直接写正式 Hugo 文章源文件
+- 文章 slug：zhen-to-sui-touching-the-pattern
+- 封面状态：cover_status: prompt_ready，未接入真实封面图
+- 未修改 changelog.yaml
+- 未执行 git / release / rsync
+
+**本轮不启用**：蝉师傅、龙虾、Reasonix、Codex、Claude Code

@@ -467,3 +467,39 @@ docker exec hermes-minimaxlab ls /repo/README.md
 **交接方**：NVIDIA
 **接收方**：本地 Mac
 **验收方**：人类用户 + ChatGPT / 剑妈
+
+## v0.6.40 构建交接 — 2026-05-29
+
+**版本**：v0.6.40
+**目标**：发布文章《震之随六五：在惊动中摸到规律》
+
+**NVIDIA 已完成**：
+- 通过 /repo 直接写入 Hugo 文章源文件
+- 新增 hugo-site/content/posts/zhen-to-sui-touching-the-pattern/index.md
+
+**本地 Mac 接收检查清单**：
+
+□ 检查 git diff：确认文章源文件已新增
+□ 确认无意外修改（old-site/ / themes/ / _incoming/ / .reasonix/ 未触碰）
+□ changelog_yaml_block.yaml → 插入 hugo-site/data/changelog.yaml（按模板）
+□ Hugo 构建验证：hugo --gc --cleanDestinationDir --minify -s hugo-site
+□ tools/angelife-release v0.6.40（待授权）
+□ git add 精确指定文件（不用 git add .）
+□ git commit -m "v0.6.40: 发布文章《震之随六五：在惊动中摸到规律》"
+□ git tag -a v0.6.40 -m "v0.6.40"
+□ git push && git push --tags（待授权）
+□ 线上验证 /posts/zhen-to-sui-touching-the-pattern/ 返回 200
+□ 线上验证 /changelog/ 返回 200
+□ 微信认证文件仍存在
+
+**NVIDIA 写入的新文件**：
+- hugo-site/content/posts/zhen-to-sui-touching-the-pattern/index.md（untracked）
+
+**发布前必须停下的条件**：
+- Hugo 构建报错
+- tools/angelife-release 不可用
+- 微信认证文件缺失
+
+**交接方**：NVIDIA
+**接收方**：本地 Mac
+**验收方**：人类用户 + ChatGPT / 剑妈
