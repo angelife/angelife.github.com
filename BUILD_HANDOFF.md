@@ -375,4 +375,54 @@ Telegram 中执行任务时，Hermes 必须先确认 pwd 为 `/Users/macos/angel
 
 **交接方**：NVIDIA
 **接收方**：本地 Mac
+**验收方**：人类用户 + ChatGPT / 剑妈## v0.6.38 构建交接 — 2026-05-29
+
+**版本**：v0.6.38
+**目标**：主库挂载预检完成，安全启动方案就绪
+
+**关键发现（请本地 Mac 确认）**：
+- 主库已挂载到 `/workspace/angelife.github.com`
+- `/repo` 路径在容器内不存在
+- Telegram gateway 正常运行
+
+**上游交付物**：
+- `NVIDIA_REPO_MOUNT_RUNBOOK.md`（完整 RUNBOOK）
+- `DAILY_WORK_LOG_APPEND.md`（日志追加块）
+- `SITE_CHANGELOG_APPEND.md`（changelog 追加块）
+- `PROJECT_STATUS_APPEND.md`（状态追加块）
+- `BUILD_HANDOFF_APPEND.md`（本文件）
+- `changelog_yaml_block.yaml`（标准 YAML 块）
+
+**本地 Mac /repo 路径方案选择**：
+
+方案一（立即可用，临时，重启丢失）：
+```bash
+docker exec hermes-minimaxlab ln -sf /workspace/angelife.github.com /repo
+docker exec hermes-minimaxlab ls /repo/README.md
+```
+
+方案二（推荐，等授权后执行，新建容器）：
+- 按 `NVIDIA_REPO_MOUNT_RUNBOOK.md` 中的完整 docker run 命令
+- 同时保留 `/repo` 和 `/workspace/angelife.github.com` 两种挂载
+- 验证 Telegram gateway 在新容器中正常
+
+**本地 Mac 接收检查清单**：
+
+□ 读取 NVIDIA_REPO_MOUNT_RUNBOOK.md
+□ 选择 /repo 路径方案（symlink 或新容器）
+□ 执行方案一（symlink）或方案二（新容器，等授权）
+□ 验证 /repo/README.md 可访问
+□ 验证 git status -sb 可执行
+□ 追加日志文件
+□ Hugo 构建验证（后续）
+□ tools/angelife-release v0.6.38（待授权）
+□ git add / commit / tag / push（待授权）
+
+**发布前必须停下的条件**：
+- /repo 路径不可访问
+- Telegram gateway 在新容器中异常
+- Hugo 构建报错
+
+**交接方**：NVIDIA
+**接收方**：本地 Mac
 **验收方**：人类用户 + ChatGPT / 剑妈

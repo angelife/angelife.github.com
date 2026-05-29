@@ -1,3 +1,21 @@
+- version: "v0.6.38"
+  date: "2026-05-29"
+  title: "新增 NVIDIA 主库挂载 Runbook"
+  commit: "提交后以 tag v0.6.38 指向的 release commit 为准"
+  tag: "v0.6.38"
+  summary:
+    - "新增 NVIDIA_REPO_MOUNT_RUNBOOK.md，记录 NVIDIA 主库挂载预检与安全启动方案。"
+    - "确认当前主库已挂载到容器 /workspace/angelife.github.com。"
+    - "建立 /repo 软链接，作为 NVIDIA 后续直接操作主库的统一入口。"
+    - "本轮不重启容器、不重建容器、不授予 NVIDIA 发布权。"
+  changed:
+    - "NVIDIA_REPO_MOUNT_RUNBOOK.md"
+    - "DAILY_WORK_LOG.md"
+    - "SITE_CHANGELOG.md"
+    - "PROJECT_STATUS.md"
+    - "BUILD_HANDOFF.md"
+    - "hugo-site/data/changelog.yaml"
+
 - version: "v0.6.37"
   date: "2026-05-29"
   title: "固化 NVIDIA Gateway 恢复 SOP 与 YAML 写入规则"

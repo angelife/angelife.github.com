@@ -179,4 +179,31 @@ v0.7.0：旧 Blogger 内容回流工程。来源：https://angelifex.blogspot.co
 
 **发布授权**：❌ 未授权
 
+**后续任务**：v0.7.0 旧 Blogger 内容回流工程（见 BUILD_HANDOFF.md）## v0.6.38 — 2026-05-29
+
+**状态**：✅ RUNBOOK 就绪，待 /repo 路径方案确认
+
+**本轮完成**：
+- 容器配置完整分析（docker ps / inspect / logs / env / ps / services）
+- `NVIDIA_REPO_MOUNT_RUNBOOK.md` 生成
+- 内部日志文件草案
+
+**关键发现**：
+- 主库已挂载至 `/workspace/angelife.github.com`
+- `/repo` 路径不存在，需通过 symlink 创建或修改容器启动参数
+- Telegram gateway 运行正常（PID 207）
+- s6 supervise 正常工作，无 down 文件
+- Docker 镜像落后 1 个 commit（warning 提示）
+
+**待本地 Mac 执行**：
+- 决定 /repo 路径方案（symlink 或新容器）
+- 如选 symlink：`docker exec hermes-minimaxlab ln -sf /workspace/angelife.github.com /repo`
+- Hugo 构建验证（后续）
+- tools/angelife-release（待授权）
+- git 操作（待授权）
+
+**本轮不启用**：蝉师傅、龙虾、Reasonix、Codex、Claude Code
+
+**发布授权**：❌ 未授权
+
 **后续任务**：v0.7.0 旧 Blogger 内容回流工程（见 BUILD_HANDOFF.md）

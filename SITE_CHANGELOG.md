@@ -1384,4 +1384,29 @@ tag：v2026.05.27-05
 
 **总控 / 设计**：人类用户 + ChatGPT / 剑妈
 **具体做事**：NVIDIA
-**执行环境**：Docker Hermes（NVIDIA）/ macOS（本地 Mac 补完）
+**执行环境**：Docker Hermes（NVIDIA）/ macOS（本地 Mac 补完）## v0.6.38 — 2026-05-29
+
+**标题**：生成主库挂载预检与安全启动方案
+
+**摘要**：
+- 分析当前容器实际配置（启动参数、挂载、env、进程、service 状态）
+- 确认主库已挂载于 `/workspace/angelife.github.com`（非 `/repo`）
+- 生成 `NVIDIA_REPO_MOUNT_RUNBOOK.md`：预检结果、安全启动方案、/repo 别名方案、回滚方案
+- 更新日志文件
+
+**关键发现**：
+- 主库已挂载至 `/workspace/angelife.github.com`
+- `/repo` 路径在容器内不存在
+- gateway 进程运行正常，s6 supervise 无 down 文件
+
+**修改文件**：
+- `NVIDIA_REPO_MOUNT_RUNBOOK.md`（新增）
+- `DAILY_WORK_LOG.md`（追加）
+- `SITE_CHANGELOG.md`（追加）
+- `PROJECT_STATUS.md`（追加）
+- `BUILD_HANDOFF.md`（追加）
+- `hugo-site/data/changelog.yaml`（追加 YAML 块，待插入）
+
+**总控 / 设计**：人类用户 + ChatGPT / 剑妈
+**具体做事**：NVIDIA
+**配置分析**：NVIDIA

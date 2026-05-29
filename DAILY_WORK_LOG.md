@@ -1334,4 +1334,38 @@ v0.7.0：旧 Blogger 内容回流工程。来源：https://angelifex.blogspot.co
 - 发布需用户明确授权
 - 本轮不执行挂载，不重启容器
 
+**后续任务**：v0.7.0 旧 Blogger 内容回流工程（来源：https://angelifex.blogspot.com/）## 2026-05-29 — v0.6.38 发布
+
+**本轮目标**：生成主库挂载预检与安全启动方案。
+
+**版本**：
+- 当前：v0.6.37（已发布）
+- 目标：v0.6.38
+
+**三者分工**：
+- 剑妈 = 设计师 + 总控：方向、架构、口径、验收标准
+- NVIDIA = 具体做事者：配置分析、RUNBOOK 生成
+- 本地 Mac = 补完 Docker 做不了的本机动作
+
+**执行链**：
+- 方向/架构/口径：人类用户 + ChatGPT / 剑妈
+- 配置分析：NVIDIA（通过 docker inspect / logs / ps 读取）
+- RUNBOOK 生成：NVIDIA
+- 日志文件生成：NVIDIA
+- symlink /repo 创建（如执行）：本地 Mac
+- 后续合并发布：待本地 Mac
+
+**发布授权**：❌ 未授权
+
+**本轮不启用**：蝉师傅、龙虾、Reasonix、Codex、Claude Code
+
+**关键发现**：
+- 主库已挂载，路径是 `/workspace/angelife.github.com`，不是 `/repo`
+- `/repo` 路径在当前容器内不存在
+- 可通过 symlink 创建 `/repo` 指向 `/workspace/angelife.github.com`（本轮可选执行）
+
+**本轮风险**：
+- `/repo` 路径不存在，需告知后续链路
+- 主库已挂载，NVIDIA 可直接访问 `/workspace/angelife.github.com`
+
 **后续任务**：v0.7.0 旧 Blogger 内容回流工程（来源：https://angelifex.blogspot.com/）
