@@ -1,5 +1,6 @@
 ---
 title: "志愿者管理流程"
+slug: "志愿者管理流程"
 date: 2012-02-03T07:43:00.000-08:00
 draft: false
 description: "Blogger 迁移文章：志愿者管理流程"

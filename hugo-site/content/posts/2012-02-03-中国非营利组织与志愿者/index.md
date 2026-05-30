@@ -1,5 +1,6 @@
 ---
 title: "中国非营利组织与志愿者"
+slug: "中国非营利组织与志愿者"
 date: 2012-02-03T07:55:00.000-08:00
 draft: false
 description: "Blogger 迁移文章：中国非营利组织与志愿者"

@@ -1,5 +1,6 @@
 ---
 title: "志愿服务立法研究"
+slug: "志愿服务立法研究"
 date: 2012-02-03T07:46:00.000-08:00
 draft: false
 description: "Blogger 迁移文章：志愿服务立法研究"

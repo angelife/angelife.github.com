@@ -1,5 +1,6 @@
 ---
 title: "自信与自卑心理学"
+slug: "自信与自卑心理学"
 date: 2012-01-30T06:54:00.000-08:00
 draft: false
 description: "Blogger 迁移文章：自信与自卑心理学"

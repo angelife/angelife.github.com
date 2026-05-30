@@ -1,5 +1,6 @@
 ---
 title: "东方闪电问题分析图"
+slug: "东方闪电问题分析图"
 date: 2012-06-30T23:59:00.000-07:00
 draft: false
 description: "Blogger 迁移文章：东方闪电问题分析图"

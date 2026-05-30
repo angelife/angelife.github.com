@@ -1,5 +1,6 @@
 ---
 title: "公益咨询小结"
+slug: "公益咨询小结"
 date: 2011-10-16T05:00:00.000-07:00
 draft: false
 description: "Blogger 迁移文章：公益咨询小结"

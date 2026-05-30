@@ -1,5 +1,6 @@
 ---
 title: "说信仰 说邪教(郭德纲)"
+slug: "说信仰-说邪教-郭德纲"
 date: 2012-06-15T21:28:00.000-07:00
 draft: false
 description: "Blogger 迁移文章：说信仰 说邪教(郭德纲)"

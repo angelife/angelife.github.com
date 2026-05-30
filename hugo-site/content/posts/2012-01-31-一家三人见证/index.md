@@ -1,5 +1,6 @@
 ---
 title: "一家三人见证"
+slug: "一家三人见证"
 date: 2012-01-31T13:19:00.000-08:00
 draft: false
 description: "Blogger 迁移文章：一家三人见证"

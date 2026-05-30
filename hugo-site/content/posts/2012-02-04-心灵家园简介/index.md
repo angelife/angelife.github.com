@@ -1,5 +1,6 @@
 ---
 title: "心灵家园简介"
+slug: "心灵家园简介"
 date: 2012-02-04T04:38:00.000-08:00
 draft: false
 description: "Blogger 迁移文章：心灵家园简介"

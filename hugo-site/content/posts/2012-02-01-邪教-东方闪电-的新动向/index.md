@@ -1,5 +1,6 @@
 ---
 title: "邪教“东方闪电”的新动向"
+slug: "邪教-东方闪电-的新动向"
 date: 2012-02-01T07:51:00.000-08:00
 draft: false
 description: "Blogger 迁移文章：邪教“东方闪电”的新动向"

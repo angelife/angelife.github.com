@@ -1,5 +1,6 @@
 ---
 title: "扑克牌测试法"
+slug: "扑克牌测试法"
 date: 2011-10-19T17:32:00.000-07:00
 draft: false
 description: "Blogger 迁移文章：扑克牌测试法"

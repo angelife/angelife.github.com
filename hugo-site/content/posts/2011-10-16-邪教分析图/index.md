@@ -1,5 +1,6 @@
 ---
 title: "邪教分析图"
+slug: "邪教分析图"
 date: 2011-10-16T19:51:00.000-07:00
 draft: false
 description: "Blogger 迁移文章：邪教分析图"

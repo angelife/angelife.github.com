@@ -1,5 +1,6 @@
 ---
 title: "改变"
+slug: "改变"
 date: 2011-10-16T17:54:00.000-07:00
 draft: false
 description: "Blogger 迁移文章：改变"

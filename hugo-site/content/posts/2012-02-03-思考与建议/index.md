@@ -1,5 +1,6 @@
 ---
 title: "思考与建议"
+slug: "思考与建议"
 date: 2012-02-03T07:44:00.000-08:00
 draft: false
 description: "Blogger 迁移文章：思考与建议"

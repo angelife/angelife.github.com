@@ -1,5 +1,6 @@
 ---
 title: "无标题"
+slug: "无标题"
 date: 2012-02-09T14:00:00.000-08:00
 draft: false
 description: "Blogger 迁移文章：无标题"

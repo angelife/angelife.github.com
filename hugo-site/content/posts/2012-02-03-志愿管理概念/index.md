@@ -1,5 +1,6 @@
 ---
 title: "志愿管理概念"
+slug: "志愿管理概念"
 date: 2012-02-03T07:39:00.000-08:00
 draft: false
 description: "Blogger 迁移文章：志愿管理概念"

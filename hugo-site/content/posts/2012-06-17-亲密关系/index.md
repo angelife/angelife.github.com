@@ -1,5 +1,6 @@
 ---
 title: "亲密关系"
+slug: "亲密关系"
 date: 2012-06-17T10:45:00.000-07:00
 draft: false
 description: "Blogger 迁移文章：亲密关系"

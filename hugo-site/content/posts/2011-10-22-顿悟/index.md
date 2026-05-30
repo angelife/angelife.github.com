@@ -1,5 +1,6 @@
 ---
 title: "顿悟"
+slug: "顿悟"
 date: 2011-10-22T04:20:00.000-07:00
 draft: false
 description: "Blogger 迁移文章：顿悟"

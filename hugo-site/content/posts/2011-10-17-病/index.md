@@ -1,5 +1,6 @@
 ---
 title: "病"
+slug: "病"
 date: 2011-10-17T17:57:00.000-07:00
 draft: false
 description: "Blogger 迁移文章：病"

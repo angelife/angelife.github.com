@@ -1,5 +1,6 @@
 ---
 title: "全新的你"
+slug: "全新的你"
 date: 2012-02-16T03:15:00.000-08:00
 draft: false
 description: "Blogger 迁移文章：全新的你"

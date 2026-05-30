@@ -17,8 +17,12 @@
     {{ $pages := where site.RegularPages "Type" "in" (slice "posts") }}
     {{ $pages = sort $pages "Date" "desc" }}
     {{ range $pages }}
+    {{ $slug := .Params.slug }}
+    {{ if not $slug }}
+      {{ $slug = index (last 1 (split .RelPermalink "/")) 0 }}
+    {{ end }}
     <article class="kindle-entry">
-      <h2><a href="/kindle/posts/{{ .Params.slug }}/">{{ .Title }}</a></h2>
+      <h2><a href="/kindle/posts/{{ $slug }}/">{{ .Title }}</a></h2>
       <div class="kindle-entry-meta">
         <time>{{ .Date.Format "2006-01-02" }}</time>
         {{ with .Params.categories }}
@@ -30,7 +34,7 @@
       {{ with .Description }}
       <p class="kindle-entry-summary">{{ . }}</p>
       {{ end }}
-      <a class="kindle-read-link" href="/kindle/posts/{{ .Params.slug }}/">阅读全文 →</a>
+      <a class="kindle-read-link" href="/kindle/posts/{{ $slug }}/">阅读全文 →</a>
     </article>
     {{ end }}
   </section>

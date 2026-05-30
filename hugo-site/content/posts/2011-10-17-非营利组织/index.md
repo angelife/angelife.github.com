@@ -1,5 +1,6 @@
 ---
 title: "非营利组织"
+slug: "非营利组织"
 date: 2011-10-17T01:17:00.000-07:00
 draft: false
 description: "Blogger 迁移文章：非营利组织"

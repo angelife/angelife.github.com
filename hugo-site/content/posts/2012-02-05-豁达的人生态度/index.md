@@ -1,5 +1,6 @@
 ---
 title: "豁达的人生态度"
+slug: "豁达的人生态度"
 date: 2012-02-05T05:02:00.000-08:00
 draft: false
 description: "Blogger 迁移文章：豁达的人生态度"

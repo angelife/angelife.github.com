@@ -1,5 +1,6 @@
 ---
 title: "[推荐]懂得爱"
+slug: "推荐-懂得爱"
 date: 2012-06-17T10:25:00.000-07:00
 draft: false
 description: "Blogger 迁移文章：[推荐]懂得爱"

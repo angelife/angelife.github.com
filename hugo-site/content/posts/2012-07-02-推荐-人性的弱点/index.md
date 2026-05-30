@@ -1,5 +1,6 @@
 ---
 title: "[推荐]人性的弱点"
+slug: "推荐-人性的弱点"
 date: 2012-07-02T15:38:00.000-07:00
 draft: false
 description: "Blogger 迁移文章：[推荐]人性的弱点"

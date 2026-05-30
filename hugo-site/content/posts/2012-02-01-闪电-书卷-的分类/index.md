@@ -1,5 +1,6 @@
 ---
 title: "闪电“书卷”的分类"
+slug: "闪电-书卷-的分类"
 date: 2012-02-01T09:05:00.000-08:00
 draft: false
 description: "Blogger 迁移文章：闪电“书卷”的分类"

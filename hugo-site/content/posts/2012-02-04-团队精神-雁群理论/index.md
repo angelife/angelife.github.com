@@ -1,5 +1,6 @@
 ---
 title: "团队精神－雁群理论"
+slug: "团队精神-雁群理论"
 date: 2012-02-04T04:13:00.000-08:00
 draft: false
 description: "Blogger 迁移文章：团队精神－雁群理论"
