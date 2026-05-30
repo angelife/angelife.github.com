@@ -5,7 +5,7 @@ date: 2012-02-08T11:35:00.000-08:00
 draft: false
 description: "Blogger 迁移文章：试析克尔凯郭尔的“孤独个体”概念"
 categories:
-  - "哲学"
+  - "金·判断"
 tags:
   - "Blogger迁移"
   - "v0.7.0"

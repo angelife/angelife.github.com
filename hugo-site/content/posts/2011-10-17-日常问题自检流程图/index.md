@@ -5,7 +5,7 @@ date: 2011-10-17T22:11:00.000-07:00
 draft: false
 description: "Blogger 迁移文章：日常问题自检流程图"
 categories:
-  - "分析"
+  - "金·判断"
 tags:
   - "Blogger迁移"
   - "v0.7.0"

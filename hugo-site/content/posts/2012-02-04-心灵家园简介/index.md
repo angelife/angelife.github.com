@@ -5,7 +5,7 @@ date: 2012-02-04T04:38:00.000-08:00
 draft: false
 description: "Blogger 迁移文章：心灵家园简介"
 categories:
-  - "信仰"
+  - "土·正见"
 tags:
   - "Blogger迁移"
   - "v0.7.0"

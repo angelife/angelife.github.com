@@ -5,7 +5,7 @@ date: 2012-06-10T00:12:00.000-07:00
 draft: false
 description: "Blogger 迁移文章：退教工作的五条基本建议"
 categories:
-  - "方法"
+  - "金·判断"
 tags:
   - "Blogger迁移"
   - "v0.7.0"

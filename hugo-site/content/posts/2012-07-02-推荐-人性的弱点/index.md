@@ -5,7 +5,7 @@ date: 2012-07-02T15:38:00.000-07:00
 draft: false
 description: "Blogger 迁移文章：[推荐]人性的弱点"
 categories:
-  - "推荐"
+  - "金·判断"
 tags:
   - "Blogger迁移"
   - "v0.7.0"

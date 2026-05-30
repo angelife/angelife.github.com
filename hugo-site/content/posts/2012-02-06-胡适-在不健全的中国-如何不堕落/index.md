@@ -5,7 +5,7 @@ date: 2012-02-06T06:12:00.000-08:00
 draft: false
 description: "Blogger 迁移文章：胡适：在不健全的中国，如何不堕落"
 categories:
-  - "社会"
+  - "金·判断"
 tags:
   - "Blogger迁移"
   - "v0.7.0"

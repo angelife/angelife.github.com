@@ -5,7 +5,7 @@ date: 2012-02-01T09:05:00.000-08:00
 draft: false
 description: "Blogger 迁移文章：闪电“书卷”的分类"
 categories:
-  - "信仰"
+  - "土·正见"
 tags:
   - "Blogger迁移"
   - "v0.7.0"

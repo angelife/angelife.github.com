@@ -5,7 +5,7 @@ date: 2012-06-30T23:59:00.000-07:00
 draft: false
 description: "Blogger 迁移文章：东方闪电问题分析图"
 categories:
-  - "分析"
+  - "金·判断"
 tags:
   - "Blogger迁移"
   - "v0.7.0"

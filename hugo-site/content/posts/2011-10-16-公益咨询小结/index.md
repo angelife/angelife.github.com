@@ -5,7 +5,7 @@ date: 2011-10-16T05:00:00.000-07:00
 draft: false
 description: "Blogger 迁移文章：公益咨询小结"
 categories:
-  - "笔记"
+  - "金·判断"
 tags:
   - "Blogger迁移"
   - "v0.7.0"

@@ -5,7 +5,7 @@ date: 2012-06-15T21:18:00.000-07:00
 draft: false
 description: "Blogger 迁移文章：邪教問題的現狀、成因及對策"
 categories:
-  - "信仰"
+  - "土·正见"
 tags:
   - "Blogger迁移"
   - "v0.7.0"

@@ -5,7 +5,7 @@ date: 2012-07-02T05:24:00.000-07:00
 draft: false
 description: "Blogger 迁移文章：湖南钟山评高考制度"
 categories:
-  - "社会"
+  - "金·判断"
 tags:
   - "Blogger迁移"
   - "v0.7.0"

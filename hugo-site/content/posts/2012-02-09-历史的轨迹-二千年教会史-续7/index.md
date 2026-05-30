@@ -5,7 +5,7 @@ date: 2012-02-09T12:41:00.000-08:00
 draft: false
 description: "Blogger 迁移文章：历史的轨迹 — 二千年教会史（续7）"
 categories:
-  - "教会史"
+  - "木·蝉识"
 tags:
   - "Blogger迁移"
   - "v0.7.0"

@@ -5,7 +5,7 @@ date: 2012-02-03T07:54:00.000-08:00
 draft: false
 description: "Blogger 迁移文章：志愿服务"
 categories:
-  - "志愿服务"
+  - "金·判断"
 tags:
   - "Blogger迁移"
   - "v0.7.0"

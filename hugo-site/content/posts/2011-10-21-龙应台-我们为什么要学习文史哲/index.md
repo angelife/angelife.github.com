@@ -5,7 +5,7 @@ date: 2011-10-21T02:12:00.000-07:00
 draft: false
 description: "Blogger 迁移文章：龙应台：我们为什么要学习文史哲"
 categories:
-  - "社会"
+  - "金·判断"
 tags:
   - "Blogger迁移"
   - "v0.7.0"

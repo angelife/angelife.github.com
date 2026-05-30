@@ -5,7 +5,7 @@ date: 2012-06-17T10:45:00.000-07:00
 draft: false
 description: "Blogger 迁移文章：亲密关系"
 categories:
-  - "分析"
+  - "金·判断"
 tags:
   - "Blogger迁移"
   - "v0.7.0"

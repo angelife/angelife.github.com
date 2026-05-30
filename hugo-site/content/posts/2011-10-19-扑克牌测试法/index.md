@@ -5,7 +5,7 @@ date: 2011-10-19T17:32:00.000-07:00
 draft: false
 description: "Blogger 迁移文章：扑克牌测试法"
 categories:
-  - "方法"
+  - "金·判断"
 tags:
   - "Blogger迁移"
   - "v0.7.0"

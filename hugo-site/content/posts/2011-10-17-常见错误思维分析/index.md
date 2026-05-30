@@ -5,7 +5,7 @@ date: 2011-10-17T23:54:00.000-07:00
 draft: false
 description: "Blogger 迁移文章：常见错误思维分析"
 categories:
-  - "分析"
+  - "金·判断"
 tags:
   - "Blogger迁移"
   - "v0.7.0"

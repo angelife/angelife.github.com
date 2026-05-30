@@ -5,7 +5,7 @@ date: 2011-10-19T17:55:00.000-07:00
 draft: false
 description: "Blogger 迁移文章：心灵家园,援助受害者的灯塔"
 categories:
-  - "信仰"
+  - "土·正见"
 tags:
   - "Blogger迁移"
   - "v0.7.0"

@@ -5,7 +5,7 @@ date: 2011-10-22T19:23:00.000-07:00
 draft: false
 description: "Blogger 迁移文章：咨询工作小结"
 categories:
-  - "方法"
+  - "金·判断"
 tags:
   - "Blogger迁移"
   - "v0.7.0"

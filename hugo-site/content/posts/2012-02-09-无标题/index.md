@@ -5,7 +5,7 @@ date: 2012-02-09T14:00:00.000-08:00
 draft: false
 description: "Blogger 迁移文章：无标题"
 categories:
-  - "杂文"
+  - "金·判断"
 tags:
   - "Blogger迁移"
   - "v0.7.0"
