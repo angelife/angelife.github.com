@@ -5,7 +5,7 @@ date: 2012-05-04T14:27:00.000-07:00
 draft: false
 description: "Blogger 迁移文章：信徒如何乘風破浪﹖黃子嘉牧師首講「快樂之道」"
 categories:
-  - "杂文"
+  - "信仰"
 tags:
   - "Blogger迁移"
   - "v0.7.0"

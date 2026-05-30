@@ -5,7 +5,7 @@ date: 2011-10-16T17:54:00.000-07:00
 draft: false
 description: "Blogger 迁移文章：改变"
 categories:
-  - "杂文"
+  - "方法"
 tags:
   - "Blogger迁移"
   - "v0.7.0"

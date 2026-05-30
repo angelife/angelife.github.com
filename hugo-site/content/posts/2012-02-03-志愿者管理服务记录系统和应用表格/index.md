@@ -5,7 +5,7 @@ date: 2012-02-03T07:52:00.000-08:00
 draft: false
 description: "Blogger 迁移文章：志愿者管理服务记录系统和应用表格"
 categories:
-  - "杂文"
+  - "志愿服务"
 tags:
   - "Blogger迁移"
   - "v0.7.0"

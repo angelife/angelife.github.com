@@ -5,7 +5,7 @@ date: 2012-01-31T15:23:00.000-08:00
 draft: false
 description: "Blogger 迁移文章：要警惕幸福婚姻的“绊脚石”"
 categories:
-  - "杂文"
+  - "心理学"
 tags:
   - "Blogger迁移"
   - "v0.7.0"

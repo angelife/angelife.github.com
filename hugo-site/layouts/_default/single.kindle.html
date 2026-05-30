@@ -28,6 +28,12 @@
     {{ .Content }}
   </div>
 
+  {{- if .Param "source.blogger_url" }}
+  <div class="kindle-source-link">
+    📎 原文：<a href="{{ .Param "source.blogger_url" }}" target="_blank" rel="noopener noreferrer">{{ .Param "source.blogger_url" }}</a>
+  </div>
+  {{- end }}
+
   <nav class="kindle-article-nav">
     <div class="kindle-nav-back">
       <a href="/kindle/">← Kindle 目录</a>

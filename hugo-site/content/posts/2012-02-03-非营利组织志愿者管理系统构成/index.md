@@ -5,7 +5,7 @@ date: 2012-02-03T07:41:00.000-08:00
 draft: false
 description: "Blogger 迁移文章：非营利组织志愿者管理系统构成"
 categories:
-  - "杂文"
+  - "志愿服务"
 tags:
   - "Blogger迁移"
   - "v0.7.0"

@@ -5,7 +5,7 @@ date: 2012-01-30T06:54:00.000-08:00
 draft: false
 description: "Blogger 迁移文章：自信与自卑心理学"
 categories:
-  - "杂文"
+  - "心理学"
 tags:
   - "Blogger迁移"
   - "v0.7.0"

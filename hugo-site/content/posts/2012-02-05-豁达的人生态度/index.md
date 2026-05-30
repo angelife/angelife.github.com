@@ -5,7 +5,7 @@ date: 2012-02-05T05:02:00.000-08:00
 draft: false
 description: "Blogger 迁移文章：豁达的人生态度"
 categories:
-  - "杂文"
+  - "哲学"
 tags:
   - "Blogger迁移"
   - "v0.7.0"

@@ -5,7 +5,7 @@ date: 2011-10-21T05:15:00.000-07:00
 draft: false
 description: "Blogger 迁移文章：白岩松：不平静，就不会幸福"
 categories:
-  - "杂文"
+  - "社会"
 tags:
   - "Blogger迁移"
   - "v0.7.0"

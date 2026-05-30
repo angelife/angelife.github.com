@@ -1,0 +1,65 @@
+{{- define "main" }}
+
+<article class="post-single">
+  <header class="post-header">
+    {{- partial "breadcrumbs.html" . }}
+    <h1 class="post-title entry-hint-parent">{{ .Title }}</h1>
+    {{- if .Description }}
+    <div class="post-description">{{ .Description }}</div>
+    {{- end }}
+    {{- if not (.Param "hideMeta") }}
+    <div class="post-meta">
+      {{- partial "post_meta.html" . -}}
+      {{- partial "translation_list.html" . -}}
+      {{- partial "edit_post.html" . -}}
+      {{- partial "post_canonical.html" . -}}
+    </div>
+    {{- end }}
+  </header>
+  {{- $isHidden := (.Param "cover.hiddenInSingle") | default (.Param "cover.hidden") | default false }}
+  {{- partial "cover.html" (dict "cxt" . "IsSingle" true "isHidden" $isHidden) }}
+  {{- if (.Param "ShowToc") }}{{- partial "toc.html" . }}{{- end }}
+  <div class="post-content">
+    {{- if not (.Param "disableAnchoredHeadings") }}{{- partial "anchored_headings.html" .Content -}}{{- else }}{{ .Content }}{{ end }}
+  </div>
+
+  <footer class="post-footer">
+    {{- if .Param "source.blogger_url" }}
+    <div class="post-source-link">
+      <span class="source-label">📎 原文：</span>
+      <a href="{{ .Param "source.blogger_url" }}" target="_blank" rel="noopener noreferrer">{{ .Param "source.blogger_url" }}</a>
+    </div>
+    {{- end }}
+    {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
+    <ul class="post-tags">
+      {{- range ($.GetTerms $tags) }}
+      <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+      {{- end }}
+    </ul>
+    {{- if (.Param "ShowPostNavLinks") }}{{- partial "post_nav_links.html" . }}{{- end }}
+    {{- if (and site.Params.ShowShareButtons (ne .Params.disableShare true)) }}{{- partial "share_icons.html" . -}}{{- end }}
+  </footer>
+
+  {{- if (.Param "comments") }}{{- partial "comments.html" . }}{{- end }}
+</article>
+
+<style>
+.post-source-link {
+  margin-bottom: 1.5rem;
+  padding: 0.6rem 1rem;
+  background: #f8f9fa;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  color: #555;
+}
+.post-source-link .source-label {
+  font-weight: 600;
+  color: #333;
+}
+.post-source-link a {
+  color: #1a73e8;
+  word-break: break-all;
+}
+</style>
+
+{{- end }}{{/* end main */}}

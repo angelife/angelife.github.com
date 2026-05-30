@@ -5,7 +5,7 @@ date: 2011-10-22T05:42:00.000-07:00
 draft: false
 description: "Blogger 迁移文章：男人为什么不知道女人到底要什么？"
 categories:
-  - "杂文"
+  - "心理学"
 tags:
   - "Blogger迁移"
   - "v0.7.0"
