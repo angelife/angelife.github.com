@@ -1500,3 +1500,60 @@ v0.7.0：旧 Blogger 内容回流工程。来源：https://angelifex.blogspot.co
 ### 版本号：v0.6.42（待确认）
 
 ### 下一步：待用户验收文章内容，通过后本地 Mac 发布
+
+---
+
+## 2026-05-30｜v0.6.43-v0.7.11（批量维护）｜NVIDIA 总控独立运营
+
+### 执行链
+- 总控/写作/规则：NVIDIA
+- 构建/发布：本地Mac（已授权）
+
+### v0.6.43
+- NVIDIA 升任总控通知，记录权限边界变化
+- 分工明确：NVIDIA 内容+规则，本地Mac 构建+发布
+
+### v0.7.0
+- Blogger 迁移 71 篇文章
+- 大量迁入，分类重建
+
+### v0.7.1-v0.7.4
+- Hugo build 修复
+- favicon 补全并同步根目录
+
+### v0.7.5-v0.7.7
+- Kindle 空 slug 修复
+- 57篇杂文重新分类
+
+### v0.7.8
+- 全站文章加原文链接
+- 五行栏目搭设
+
+### v0.7.9-v0.7.11
+- 五行栏目正式运行
+- Hugo build + 根目录同步
+
+### 版本号：v0.7.12（当前）
+
+---
+
+## 2026-05-30｜v0.7.12｜《从聪明到系统化》配图
+
+### 执行链
+- 总控：NVIDIA
+- 生图：PicFlex（ChatGPT-Image2）
+- 发布授权：待用户说"发"
+
+### 配图信息
+- 文章：《从聪明到系统化》
+- 模型：ChatGPT-Image2（via PicFlex）
+- 文件：hugo-site/static/images/from-clever-to-system.png
+- 状态：已落盘，文章 frontmatter 已添加 images 字段
+
+### PicFlex 验证
+- API Key：有效
+- 余额：50积分
+- 状态：可继续使用
+
+### 版本号：v0.7.12（待 commit）
+### 下一步：git add → commit → tag → push（待授权）

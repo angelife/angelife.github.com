@@ -6,6 +6,7 @@ summary: "聪明可以解决一时问题，系统化才能产生长期复利。�
 tags: ["系统化", "认知升级", "长期积累", "作品"]
 series: ["蝉识录"]
 slug: "from-clever-to-system"
+images: ["/images/from-clever-to-system.png"]
 ---
 
 聪明很容易被高估。反应快、观点多、即兴表达能力强——这些确实是优势，但它们有一个共同问题：不可积累。
