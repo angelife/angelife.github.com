@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2011/10/blog-post_1712.html"
   blogger_id: "3575324623499355636"
+cover:
+  image: /images/posts/2011-10-17-常见错误思维分析/cover.png
+  alt: "常见错误思维分析"
+
 ---
 
 根据《[病](http://1.angelife.sinaapp.com/?p=102)》一文中，我们可以看到一个看待问题主观，无法接受不同的意见，思维能力低，情绪控制能力差的样子，那么她们常见的错误思维背后的因素是什么呢？本文尝试加以分析总结。

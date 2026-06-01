@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2011/10/blog-post_8577.html"
   blogger_id: "8362732625321208394"
+cover:
+  image: /images/posts/2011-10-22-咨询工作小结/cover.png
+  alt: "咨询工作小结"
+
 ---
 
 这周除了搭建这个网站外,主动帮助群里的受害者家属解决心理问题,联络了8个,陆续提供帮助10多个,相关体会如下:

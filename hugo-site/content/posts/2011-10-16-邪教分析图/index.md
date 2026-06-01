@@ -12,4 +12,8 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2011/10/blog-post_9814.html"
   blogger_id: "7123506610180490647"
+cover:
+  image: /images/posts/2011-10-16-邪教分析图/cover.png
+  alt: "邪教分析图"
+
 ---

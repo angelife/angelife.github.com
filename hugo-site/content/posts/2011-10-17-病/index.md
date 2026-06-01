@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2011/10/blog-post_2630.html"
   blogger_id: "2547091331275679506"
+cover:
+  image: /images/posts/2011-10-17-病/cover.png
+  alt: "病"
+
 ---
 
 **常见症状**

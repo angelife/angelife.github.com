@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2011/10/blog-post_8461.html"
   blogger_id: "4613167075529663287"
+cover:
+  image: /images/posts/2011-10-22-男人为什么不知道女人到底要什么/cover.png
+  alt: "男人为什么不知道女人到底要什么？"
+
 ---
 
 刚开始学习进化心理学的朋友往往会有这样一个疑问：进化心理学非常有趣，能给一些司空见惯的事情提供独特的解读视角，但是仅仅只是解释而已吗？能不能提供一些比较实用的建议帮助我们更好的工作和生活呢？当然有。­

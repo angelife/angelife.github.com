@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2011/10/blog-post.html"
   blogger_id: "1740753294305786065"
+cover:
+  image: /images/posts/2011-10-16-公益咨询小结/cover.png
+  alt: "公益咨询小结"
+
 ---
 
 本人尝试以自己的学习生活中的经验,帮助一些朋友来摆脱被东方闪电设局所破坏的尴尬局面.因为自己本身也有一个文化程度,理解能力都不高的母亲,深切知道其中的难办之处.以下尝试整理出来,供大家参考:

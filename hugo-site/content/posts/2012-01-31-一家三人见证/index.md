@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/01/blog-post_31.html"
   blogger_id: "8804432778256504255"
+cover:
+  image: /images/posts/2012-01-31-一家三人见证/cover.png
+  alt: "一家三人见证"
+
 ---
 
 [http://www.tudou.com/v/1b56Ph6Ifpo/&rpid=41575171&resourceId=41575171_05_05_99/v.swf](http://www.tudou.com/v/1b56Ph6Ifpo/&rpid=41575171&resourceId=41575171_05_05_99/v.swf)

@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/01/blog-post.html"
   blogger_id: "3910132738188281769"
+cover:
+  image: /images/posts/2012-01-30-自信与自卑心理学/cover.png
+  alt: "自信与自卑心理学"
+
 ---
 
 | 

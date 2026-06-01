@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/02/blog-post_01.html"
   blogger_id: "6494949341554452550"
+cover:
+  image: /images/posts/2012-02-01-邪教-东方闪电-的新动向/cover.png
+  alt: "邪教“东方闪电”的新动向"
+
 ---
 
 据我所知和所观察，目前的“东方闪电”已经发展到了第四个阶段，并即将进入第五个阶段。

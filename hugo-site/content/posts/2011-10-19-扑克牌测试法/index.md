@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2011/10/blog-post_19.html"
   blogger_id: "2873050844898092706"
+cover:
+  image: /images/posts/2011-10-19-扑克牌测试法/cover.png
+  alt: "扑克牌测试法"
+
 ---
 
 [caption id="attachment_169" align="alignnone" width="150" caption="正面因素"][![]( http://angelife-wordpress.stor.sinaapp.com/uploads/2011/10/正面因素-150x150.png )](http://angelife-wordpress.stor.sinaapp.com/uploads/2011/10/正面因素.png)[/caption]

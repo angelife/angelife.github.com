@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2011/10/blog-post_17.html"
   blogger_id: "7995991233331425299"
+cover:
+  image: /images/posts/2011-10-17-非营利组织/cover.png
+  alt: "非营利组织"
+
 ---
 摘自《非营利组织的管理》德鲁克
 

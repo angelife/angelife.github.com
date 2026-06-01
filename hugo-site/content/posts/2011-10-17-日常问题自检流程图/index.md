@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2011/10/blog-post_4634.html"
   blogger_id: "6310414503154777062"
+cover:
+  image: /images/posts/2011-10-17-日常问题自检流程图/cover.png
+  alt: "日常问题自检流程图"
+
 ---
 
 - 事实描述用椭圆形表示

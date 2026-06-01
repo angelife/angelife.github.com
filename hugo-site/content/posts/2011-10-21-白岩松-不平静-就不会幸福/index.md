@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2011/10/blog-post_3653.html"
   blogger_id: "512874647764987872"
+cover:
+  image: /images/posts/2011-10-21-白岩松-不平静-就不会幸福/cover.png
+  alt: "白岩松：不平静，就不会幸福"
+
 ---
 
 http://book.sina.com.cn  2010年09月09日 09:27  新浪读书

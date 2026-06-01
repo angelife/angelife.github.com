@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2011/10/blog-post_6295.html"
   blogger_id: "7775855158836119695"
+cover:
+  image: /images/posts/2011-10-19-心灵家园-援助受害者的灯塔/cover.png
+  alt: "心灵家园,援助受害者的灯塔"
+
 ---
 
 傍晚，一只羊独自在山坡上玩，突然从树木中窜出一只狼来，要吃羊，羊跳起来，拼命用角抵抗，并大声向朋友们求救。 

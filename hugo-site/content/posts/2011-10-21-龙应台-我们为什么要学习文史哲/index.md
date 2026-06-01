@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2011/10/blog-post_21.html"
   blogger_id: "7765411899749030528"
+cover:
+  image: /images/posts/2011-10-21-龙应台-我们为什么要学习文史哲/cover.png
+  alt: "龙应台：我们为什么要学习文史哲"
+
 ---
 来源：南方周末 作者：龙应台
 

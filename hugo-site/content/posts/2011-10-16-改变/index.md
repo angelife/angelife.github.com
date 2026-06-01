@@ -12,5 +12,9 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2011/10/blog-post_16.html"
   blogger_id: "6218418299958872625"
+cover:
+  image: /images/posts/2011-10-16-改变/cover.png
+  alt: "改变"
+
 ---
 摘自《改变-问题形成和解决的原则》

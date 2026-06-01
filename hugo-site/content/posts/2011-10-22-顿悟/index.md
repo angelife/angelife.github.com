@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2011/10/blog-post_22.html"
   blogger_id: "1625735442260541428"
+cover:
+  image: /images/posts/2011-10-22-顿悟/cover.png
+  alt: "顿悟"
+
 ---
 
 把自己的事情做好，改变自会发生。你想影响别人，是影响不了的，别人觉得你想影响他，就不接受了。只有在生活放弃一定要改善生活的企图，我们才有可能真的进入生活之中，看到它的本来面目和背后的必然性
