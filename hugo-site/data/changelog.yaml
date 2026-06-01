@@ -20,6 +20,179 @@
     - "hugo-site/layouts/_default/rss.xml"
     - "about/index.html"
     - "hugo-site/data/changelog.yaml"
+- version: "v0.7.13"
+  date: "2026-06-01"
+  title: "移除posts中7篇失效sinaapp外链图，安装会话记忆系统，确立长期合作者原则"
+  commit: "以 tag v0.7.13 指向的 release commit 为准"
+  tag: "v0.7.13"
+  summary:
+    - "移除 7 篇 posts 中的失效外部图片引用（stor.sinaapp.com 已停止服务）"
+    - "安装 session memory skill，每次启动加载最近3个已归档会话"
+    - "确立长期执行型合作者原则：任务前必读项目上下文，能直接完成的就直接完成"
+    - "changelog 三文件（site/daily/yaml）补齐 v0.6.43-v0.7.12 欠缺的版本日志"
+  changed:
+    - "hugo-site/content/posts/（7篇失效图片清理）"
+    - "/repo/session_archives/"
+    - "SITE_CHANGELOG.md"
+    - "DAILY_WORK_LOG.md"
+    - "hugo-site/data/changelog.yaml"
+
+- version: "v0.7.12"
+  date: "2026-05-30"
+  title: "《从聪明到系统化》配图生成，日志补齐v0.6.43-v0.7.11"
+  commit: "以 tag v0.7.12 指向的 release commit 为准"
+  tag: "v0.7.12"
+  summary:
+    - "使用 PicFlex（ChatGPT-Image2）生成文章配图并接入 frontmatter"
+    - "补全 changelog 三文件从 v0.6.42 到 v0.7.11 的版本日志"
+    - "NVIDIA vision 方案落地：python3 /opt/data/vision_client.py 调用 Llama 3.2 11B vision"
+    - "安装 PicFlex Hermes skill，验证 API key（余额50积分）"
+  changed:
+    - "hugo-site/content/series/chan-shi-lu/from-clever-to-system.md"
+    - "hugo-site/static/images/from-clever-to-system.png"
+    - "SITE_CHANGELOG.md"
+    - "DAILY_WORK_LOG.md"
+    - "hugo-site/data/changelog.yaml"
+
+- version: "v0.7.11"
+  date: "2026-05-30"
+  title: "五行栏目 build 产物同步（分类页重建）"
+  commit: "以 tag v0.7.11 指向的 release commit 为准"
+  tag: "v0.7.11"
+  summary:
+    - "Hugo build + 同步到根目录"
+    - "分类页重建（五行栏目）"
+  changed:
+    - "（Hugo build 产物同步）"
+
+- version: "v0.7.10"
+  date: "2026-05-30"
+  title: "全站文章归入金木水火土五行栏目（木蝉识/金判断/土正见/火AI/易理）"
+  commit: "以 tag v0.7.10 指向的 release commit 为准"
+  tag: "v0.7.10"
+  summary:
+    - "全站文章归入金木水火土五行栏目体系"
+    - "木蝉识：信仰/教会史/志愿服务；金判断：判断力/方法论/信息筛选"
+    - "土正见：哲学/心理学/社会观察；火AI：AI时代/个人知识系统；易理：易经/传统智慧"
+  changed:
+    - "hugo-site/content/（全部文章重新分类）"
+
+- version: "v0.7.9"
+  date: "2026-05-30"
+  title: "Hugo build 产物同步（新增分类页 + 分类重建 + 模板更新）"
+  commit: "以 tag v0.7.9 指向的 release commit 为准"
+  tag: "v0.7.9"
+  summary:
+    - "Hugo build 产物同步"
+    - "新增分类页"
+    - "分类重建"
+    - "模板更新"
+  changed:
+    - "（Hugo build 产物）"
+
+- version: "v0.7.8"
+  date: "2026-05-30"
+  title: "每篇文章加原文链接 + 57篇杂文重新分类"
+  commit: "以 tag v0.7.8 指向的 release commit 为准"
+  tag: "v0.7.8"
+  summary:
+    - "每篇文章添加原文链接（指向原始 Blogger 来源）"
+    - "57篇杂文重新分类：信仰/教会史/志愿服务/心理学/哲学/方法/社会"
+  changed:
+    - "hugo-site/content/posts/（57篇）"
+
+- version: "v0.7.7"
+  date: "2026-05-30"
+  title: "kindle/posts 全部 slug 修正后重新同步"
+  commit: "以 tag v0.7.7 指向的 release commit 为准"
+  tag: "v0.7.7"
+  summary:
+    - "kindle/posts 全部 slug 修正后重新同步"
+  changed:
+    - "kindle/posts/（slug 修正）"
+
+- version: "v0.7.6"
+  date: "2026-05-30"
+  title: "修复历史轨迹/推荐等文章 slug hyphen 问题，确保 URL 匹配 Hugo 生成"
+  commit: "以 tag v0.7.6 指向的 release commit 为准"
+  tag: "v0.7.6"
+  summary:
+    - "修复历史轨迹/推荐等文章 slug 中的 hyphen 问题"
+    - "确保 URL 匹配 Hugo 生成的 slug"
+  changed:
+    - "hugo-site/content/posts/（slug 修复）"
+
+- version: "v0.7.5"
+  date: "2026-05-30"
+  title: "修复 kindle 列表页空 slug 链接 + 71 篇旧文章补 slug"
+  commit: "以 tag v0.7.5 指向的 release commit 为准"
+  tag: "v0.7.5"
+  summary:
+    - "修复 kindle 列表页空 slug 链接问题"
+    - "71 篇旧文章补充 slug 字段"
+  changed:
+    - "kindle/"
+    - "hugo-site/content/posts/（71篇）"
+
+- version: "v0.7.4"
+  date: "2026-05-30"
+  title: "favicon 文件同步到 repo 根目录（GitHub Pages 直接服务）"
+  commit: "以 tag v0.7.4 指向的 release commit 为准"
+  tag: "v0.7.4"
+  summary:
+    - "favicon 文件同步到 repo 根目录"
+    - "确保 GitHub Pages 可直接服务 favicon"
+  changed:
+    - "favicon.ico"
+    - "apple-touch-icon.png"
+    - "favicon-16x16.png"
+    - "favicon-32x32.png"
+    - "safari-pinned-tab.svg"
+
+- version: "v0.7.3"
+  date: "2026-05-30"
+  title: "添加全部 5 个 favicon 文件 (ico, png x3, svg)"
+  commit: "以 tag v0.7.3 指向的 release commit 为准"
+  tag: "v0.7.3"
+  summary:
+    - "添加全部 5 个 favicon 文件"
+    - "ico, png x3, svg 各规格完整"
+  changed:
+    - "（新增 favicon 文件组）"
+
+- version: "v0.7.2"
+  date: "2026-05-30"
+  title: "正确 Hugo build，posts 同步"
+  commit: "以 tag v0.7.2 指向的 release commit 为准"
+  tag: "v0.7.2"
+  summary:
+    - "正确执行 Hugo build"
+    - "posts 目录同步"
+  changed:
+    - "（Hugo build 产物）"
+
+- version: "v0.7.1"
+  date: "2026-05-30"
+  title: "Hugo build 重建，修复 posts/ 404"
+  commit: "以 tag v0.7.1 指向的 release commit 为准"
+  tag: "v0.7.1"
+  summary:
+    - "Hugo build 重建"
+    - "修复 posts/ 404 问题"
+  changed:
+    - "（Hugo build 重建）"
+
+- version: "v0.7.0"
+  date: "2026-05-29"
+  title: "Blogger 迁移 71 篇文章；vault 归档上下文；修正 about 页面模型描述"
+  commit: "以 tag v0.7.0 指向的 release commit 为准"
+  tag: "v0.7.0"
+  summary:
+    - "从 Blogger（angelifex.blogspot.com）迁移 71 篇文章到 Hugo"
+    - "vault 操作记录归档本次迁移上下文（2026-05-30 02:48:20）"
+    - "about 页面模型描述修正：MiniMax M2.7 而非 DeepSeek"
+  changed:
+    - "hugo-site/content/posts/（71篇 Blogger 迁移文章）"
 
 - version: "v0.6.40"
   date: "2026-05-29"
