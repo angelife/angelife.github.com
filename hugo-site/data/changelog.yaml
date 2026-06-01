@@ -23,7 +23,7 @@
 - version: "v0.7.16"
   date: "2026-06-02"
   title: "83篇系列归类完成；series→columns架构分离；菜单URL重构"
-  commit: "<pending-commit>"
+  commit: "9565e9b"
   tag: "v0.7.17"
   summary:
     - "所有 83 篇 posts 已补全 series frontmatter，对应五大栏目（信息判断/蝉识录/易理/AI补印/正见）。"
