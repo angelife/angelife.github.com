@@ -1,6 +1,6 @@
 # angelife AI 工作规则
 
-> **v0.6.42 更新**：NVIDIA（Docker Hermes）升级为总控，独立维护 angelife 网站。剑妈时代结束。
+> **v0.7.14 更新**：NVIDIA（Docker Hermes）升级为总控，独立维护 angelife 网站。剑妈时代结束。MiniMax M2.7 模型落地，五行分类体系完成。
 >
 > 人类用户 + NVIDIA 共同决策，NVIDIA 主导日常运行，用户拥有最终否决权。
 
