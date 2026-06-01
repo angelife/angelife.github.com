@@ -1,0 +1,39 @@
+{{- /* layouts/columns/list.html — 聚合 series Section 内容 + posts */ -}}
+{{- define "main" -}}
+<main class="main" id="main">
+  <div class="post-entry">
+    {{- $sectionName := .Title -}}
+
+    {{- /* 1. Section 本身的直接子页面 */ -}}
+    {{- range .Data.Pages -}}
+    <article class="entry-item">
+      <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+      <time>{{ .Date.Format "2006-01-02" }}</time>
+      {{- if .Description -}}<p>{{ .Description }}</p>{{- end -}}
+    </article>
+    {{- end -}}
+
+    {{- /* 2. posts 中 series frontmatter 匹配当前系列名称的 */ -}}
+    {{- $matched := slice -}}
+    {{- range site.Pages -}}
+      {{- if and (eq .Type "posts") .Params.series -}}
+        {{- $s := .Params.series -}}
+        {{- if in $s $sectionName -}}
+          {{- $matched = $matched | append . -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+    {{- range sort $matched "Date" -}}
+    <article class="entry-item">
+      <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+      <time>{{ .Date.Format "2006-01-02" }}</time>
+      {{- if .Description -}}<p>{{ .Description }}</p>{{- end -}}
+    </article>
+    {{- end -}}
+
+    {{- if and (eq (len .Data.Pages) 0) (eq (len $matched) 0) -}}
+    <p>暂无内容。</p>
+    {{- end -}}
+  </div>
+</main>
+{{- end -}}

@@ -9,6 +9,9 @@ hasCJKLanguage = true
 summaryLength = 120
 buildFuture = true
 
+[taxonomies]
+  series = "series"
+
 [outputs]
   home = ["HTML", "RSS", "JSON"]
 
@@ -28,7 +31,7 @@ buildFuture = true
   ShowPostNavLinks = true
   ShowCodeCopyButtons = true
   DateFormat = "2006-01-02"
-  mainSections = ["series", "posts"]
+  mainSections = ["columns", "posts"]
 
   [params.fuseOpts]
     keys = ["title", "permalink", "summary", "content", "tags", "categories"]
@@ -53,31 +56,31 @@ buildFuture = true
 [[menu.main]]
   identifier = "phase-metal"
   name = "金·判断"
-  url = "/series/information-judgment/"
+  url = "/columns/information-judgment/"
   weight = 10
 
 [[menu.main]]
   identifier = "phase-wood"
   name = "木·蝉识"
-  url = "/series/chan-shi-lu/"
+  url = "/columns/chan-shi-lu/"
   weight = 20
 
 [[menu.main]]
   identifier = "phase-water"
   name = "水·易理"
-  url = "/series/yi-notes/"
+  url = "/columns/yi-notes/"
   weight = 30
 
 [[menu.main]]
   identifier = "phase-fire"
   name = "火·AI"
-  url = "/series/ai-bu-yin/"
+  url = "/columns/ai-bu-yin/"
   weight = 40
 
 [[menu.main]]
   identifier = "phase-earth"
   name = "土·正见"
-  url = "/series/confucian-framework/"
+  url = "/columns/confucian-framework/"
   weight = 50
 
 [[menu.main]]
