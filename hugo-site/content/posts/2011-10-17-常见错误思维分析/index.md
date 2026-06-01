@@ -16,13 +16,7 @@ source:
 
 根据《[病](http://1.angelife.sinaapp.com/?p=102)》一文中，我们可以看到一个看待问题主观，无法接受不同的意见，思维能力低，情绪控制能力差的样子，那么她们常见的错误思维背后的因素是什么呢？本文尝试加以分析总结。
 我们看到一个理性的解决问题的人，他们的思考模式是这样的：
-
-[![]( http://angelife-wordpress.stor.sinaapp.com/uploads/2011/10/diagram1.png ) ](http://angelife-wordpress.stor.sinaapp.com/uploads/2011/10/diagram1.png)
-
 而一个非理性的人他们解决问题的思考模式又是怎样的呢？请看下图：
-
-[![]( http://angelife-wordpress.stor.sinaapp.com/uploads/2011/10/diagram2-150x150.png )](http://angelife-wordpress.stor.sinaapp.com/uploads/2011/10/diagram2.png)
-
 我们尝试比较两者的不同。发现前者是以理性为主要思维模式的，后者则是以情绪为主导解决问题的。由于思维模式的不同，其处理问题的方式也必然不同，导致的结果也不同。
 
 [caption id="attachment_137" align="alignnone" width="150" caption="日常问题判断流程比较图"][![]( http://angelife-wordpress.stor.sinaapp.com/uploads/2011/10/diagram3-150x150.png )](http://angelife-wordpress.stor.sinaapp.com/uploads/2011/10/diagram3.png)[/caption]

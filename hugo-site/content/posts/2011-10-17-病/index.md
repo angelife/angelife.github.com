@@ -65,7 +65,6 @@ source:
 
 不要对其产生正面的冲突，以思想教育为主，帮助其梳理问题，找出问题的真正原因。
 首先判断面临的问题，屏除干扰因素，找出根本问题，确定问题类型，找出已验证可采用的方法，绘制简单的流程图，引导其思维。
-[![]( http://angelife-wordpress.stor.sinaapp.com/uploads/2011/10/diagram1.png ) ](http://angelife-wordpress.stor.sinaapp.com/uploads/2011/10/diagram1.png)
 *具体参见: [日常问题自检流程图](http://1.angelife.sinaapp.com/?p=117)
 
 注意事项：

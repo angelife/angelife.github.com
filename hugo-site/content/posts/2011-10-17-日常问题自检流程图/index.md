@@ -21,9 +21,6 @@ source:
 	- 问题用菱形表示
 
 	- 箭头代表流动方向
-
-[![]( http://angelife-wordpress.stor.sinaapp.com/uploads/2011/10/diagram1.png ) ](http://angelife-wordpress.stor.sinaapp.com/uploads/2011/10/diagram1.png)
-
 [
 ](http://angelife-wordpress.stor.sinaapp.com/uploads/2011/10/diagram1.png)
 

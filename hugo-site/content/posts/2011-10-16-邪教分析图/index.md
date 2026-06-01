@@ -13,5 +13,3 @@ source:
   blogger_url: "https://angelifex.blogspot.com/2011/10/blog-post_9814.html"
   blogger_id: "7123506610180490647"
 ---
-
-[![]( http://angelife-wordpress.stor.sinaapp.com/uploads/2011/10/diagram.png )](http://angelife-wordpress.stor.sinaapp.com/uploads/2011/10/diagram.png)

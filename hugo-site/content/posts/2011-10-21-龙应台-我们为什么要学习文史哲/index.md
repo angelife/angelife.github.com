@@ -13,8 +13,6 @@ source:
   blogger_url: "https://angelifex.blogspot.com/2011/10/blog-post_21.html"
   blogger_id: "7765411899749030528"
 ---
-
-[![]( http://angelife-wordpress.stor.sinaapp.com/uploads/2011/10/Img317253878.jpg )](http://angelife-wordpress.stor.sinaapp.com/uploads/2011/10/Img317253878.jpg)
 来源：南方周末 作者：龙应台
 
 在台湾，我大概一年只做一次演讲。今天之所以愿意来跟法学院的同学谈谈人文素养的必要，主要是由於看到台湾解严以来变成政治淹盖一切的一个社会，而我又当然不能不注意到，要领导台湾进入二十一世纪的政治人物里有相当高的比例来自这个法学院。总统候选人也好，中央民意代表也好，不知道有多少是来自台大政治系、法律系，再不然就是农经系，李登辉是农经系，是不是？（笑声） 
