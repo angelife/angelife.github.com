@@ -15,6 +15,10 @@ tags:
   - "个人系统"
   - "托管人生"
 comments: true
+cover:
+  image: /images/posts/ai-machine-executes-experience-commands/cover.png
+  alt: "机器执行，经验指挥：AI 时代真正昂贵的东西"
+
 ---
 
 我最近越来越强烈地感到，AI 时代的工作节奏已经变了。
