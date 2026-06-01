@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/02/17.html"
   blogger_id: "5745564902606480911"
+cover:
+  image: /images/posts/2012-02-09-历史的轨迹-二千年教会史-续17/cover.png
+  alt: "历史的轨迹 — 二千年教会史（续17）"
+
 ---
 
 ### 第四十四章  十九世纪初期的教会

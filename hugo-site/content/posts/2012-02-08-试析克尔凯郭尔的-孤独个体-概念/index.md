@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/02/blog-post_08.html"
   blogger_id: "627839797024376971"
+cover:
+  image: /images/posts/2012-02-08-试析克尔凯郭尔的-孤独个体-概念/cover.png
+  alt: "试析克尔凯郭尔的“孤独个体”概念"
+
 ---
 
 ** **

@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/02/blog-post_4924.html"
   blogger_id: "430094438223372475"
+cover:
+  image: /images/posts/2012-02-03-非营利组织志愿者管理系统构成/cover.png
+  alt: "非营利组织志愿者管理系统构成"
+
 ---
 
 ## 非营利组织志愿者管理系统构成

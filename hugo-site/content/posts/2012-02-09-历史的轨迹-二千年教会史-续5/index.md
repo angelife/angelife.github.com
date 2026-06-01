@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/02/5.html"
   blogger_id: "6682119477073538456"
+cover:
+  image: /images/posts/2012-02-09-历史的轨迹-二千年教会史-续5/cover.png
+  alt: "历史的轨迹 -- 二千年教会史（续5）"
+
 ---
 
 ### 第十章  教皇权势的发展（461一1073）

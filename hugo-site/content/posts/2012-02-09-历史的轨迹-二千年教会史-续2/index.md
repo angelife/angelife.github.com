@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/02/2.html"
   blogger_id: "4443687890901340027"
+cover:
+  image: /images/posts/2012-02-09-历史的轨迹-二千年教会史-续2/cover.png
+  alt: "历史的轨迹 -- 二千年教会史（续2）"
+
 ---
 
 ### 第五章  教会日形稳固（325－451）

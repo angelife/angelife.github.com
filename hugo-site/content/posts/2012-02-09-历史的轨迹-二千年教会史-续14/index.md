@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/02/14.html"
   blogger_id: "7165201917140983481"
+cover:
+  image: /images/posts/2012-02-09-历史的轨迹-二千年教会史-续14/cover.png
+  alt: "历史的轨迹 — 二千年教会史（续14）"
+
 ---
 
 ## 第肆部  改教後的教会

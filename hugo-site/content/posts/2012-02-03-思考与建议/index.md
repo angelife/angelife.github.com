@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/02/blog-post_3516.html"
   blogger_id: "6893467143380509540"
+cover:
+  image: /images/posts/2012-02-03-思考与建议/cover.png
+  alt: "思考与建议"
+
 ---
 
 ## 6   思考与建议

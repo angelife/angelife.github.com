@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/02/blog-post_11.html"
   blogger_id: "5700284676863104389"
+cover:
+  image: /images/posts/2012-02-03-志愿服务立法研究/cover.png
+  alt: "志愿服务立法研究"
+
 ---
 
 **志愿服务立法研究******

@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/02/9.html"
   blogger_id: "6850145406955196818"
+cover:
+  image: /images/posts/2012-02-09-历史的轨迹-二千年教会史-续9/cover.png
+  alt: "历史的轨迹 — 二千年教会史（续9）"
+
 ---
 
 ### 第廿章  教会内部的困扰 （1200一1517）

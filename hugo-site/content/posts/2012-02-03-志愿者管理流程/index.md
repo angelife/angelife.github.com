@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/02/blog-post_1561.html"
   blogger_id: "5738748914815948446"
+cover:
+  image: /images/posts/2012-02-03-志愿者管理流程/cover.png
+  alt: "志愿者管理流程"
+
 ---
 
 ## 志愿者管理流程

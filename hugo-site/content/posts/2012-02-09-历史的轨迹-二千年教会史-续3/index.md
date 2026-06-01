@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/02/3.html"
   blogger_id: "5087007073910672298"
+cover:
+  image: /images/posts/2012-02-09-历史的轨迹-二千年教会史-续3/cover.png
+  alt: "历史的轨迹 -- 二千年教会史（续3）"
+
 ---
 
 ### 第七章  教会历劫而存，继续增长（376一754）

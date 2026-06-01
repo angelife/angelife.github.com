@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/02/15.html"
   blogger_id: "3352044955480741637"
+cover:
+  image: /images/posts/2012-02-09-历史的轨迹-二千年教会史-续15/cover.png
+  alt: "历史的轨迹 — 二千年教会史（续15）"
+
 ---
 
 ### 第三十五章   苏西尼主义, 神体一位论, 现代主义

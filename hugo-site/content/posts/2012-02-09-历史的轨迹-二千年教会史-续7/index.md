@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/02/7.html"
   blogger_id: "2895698836373369209"
+cover:
+  image: /images/posts/2012-02-09-历史的轨迹-二千年教会史-续7/cover.png
+  alt: "历史的轨迹 — 二千年教会史（续7）"
+
 ---
 
 ### 第十四章  教会为自由奋斗 （1049一1058）

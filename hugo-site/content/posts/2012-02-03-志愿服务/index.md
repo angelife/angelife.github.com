@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/02/blog-post_7306.html"
   blogger_id: "5136861267101725547"
+cover:
+  image: /images/posts/2012-02-03-志愿服务/cover.png
+  alt: "志愿服务"
+
 ---
 
 ## 2   志愿服务

@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/02/blog-post.html"
   blogger_id: "6572598566260606635"
+cover:
+  image: /images/posts/2012-02-04-心灵家园简介/cover.png
+  alt: "心灵家园简介"
+
 ---
 
 **[心灵家园](http://www.slideshare.net/angelifet/ss-11412165)**

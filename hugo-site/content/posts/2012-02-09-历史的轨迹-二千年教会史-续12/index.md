@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/02/12.html"
   blogger_id: "6892186828006896555"
+cover:
+  image: /images/posts/2012-02-09-历史的轨迹-二千年教会史-续12/cover.png
+  alt: "历史的轨迹 — 二千年教会史（续12）"
+
 ---
 
 ### 第二十六章   西欧的改教运动

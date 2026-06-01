@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/02/blog-post_5323.html"
   blogger_id: "160490987706583176"
+cover:
+  image: /images/posts/2012-02-03-志愿者是非营利组织中的宝贵资源/cover.png
+  alt: "志愿者是非营利组织中的宝贵资源"
+
 ---
 
 **志愿者是非营利组织中的宝贵资源******

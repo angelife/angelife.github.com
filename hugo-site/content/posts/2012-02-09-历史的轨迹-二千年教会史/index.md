@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/02/blog-post_1426.html"
   blogger_id: "7687932370224595378"
+cover:
+  image: /images/posts/2012-02-09-历史的轨迹-二千年教会史/cover.png
+  alt: "历史的轨迹 -- 二千年教会史"
+
 ---
 
 **历史的轨迹 -- 二千年教会史**

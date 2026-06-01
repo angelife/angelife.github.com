@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/02/blog-post_8520.html"
   blogger_id: "92711750912474134"
+cover:
+  image: /images/posts/2012-02-09-团队协作的五大障碍/cover.png
+  alt: "团队协作的五大障碍"
+
 ---
 
 《团队协作的五大障碍》         （美）帕特里克·兰西奥尼

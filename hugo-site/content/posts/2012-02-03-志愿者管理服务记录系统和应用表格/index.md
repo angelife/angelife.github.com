@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/02/blog-post_6518.html"
   blogger_id: "487582967237569092"
+cover:
+  image: /images/posts/2012-02-03-志愿者管理服务记录系统和应用表格/cover.png
+  alt: "志愿者管理服务记录系统和应用表格"
+
 ---
 
 **志愿者管理服务记录系统和应用表格******

@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/02/16.html"
   blogger_id: "4709962814858804767"
+cover:
+  image: /images/posts/2012-02-09-历史的轨迹-二千年教会史-续16/cover.png
+  alt: "历史的轨迹 — 二千年教会史（续16）"
+
 ---
 
 ## 第伍部   新大陆的教会

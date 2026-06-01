@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/02/blog-post_04.html"
   blogger_id: "7070448253033857616"
+cover:
+  image: /images/posts/2012-02-04-团队精神-雁群理论/cover.png
+  alt: "团队精神－雁群理论"
+
 ---
 
 ## 团队精神－雁群理论(人力资源网)

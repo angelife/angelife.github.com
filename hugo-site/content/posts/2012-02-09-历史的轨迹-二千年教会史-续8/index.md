@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/02/8.html"
   blogger_id: "1090565952316487486"
+cover:
+  image: /images/posts/2012-02-09-历史的轨迹-二千年教会史-续8/cover.png
+  alt: "历史的轨迹 — 二千年教会史（续8）"
+
 ---
 
 ### 第十七章  教会发起十字军运动 （1096一1291）

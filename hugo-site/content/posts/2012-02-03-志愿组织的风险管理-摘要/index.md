@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/02/blog-post_5854.html"
   blogger_id: "7481095922714028217"
+cover:
+  image: /images/posts/2012-02-03-志愿组织的风险管理-摘要/cover.png
+  alt: "《志愿组织的风险管理》摘要"
+
 ---
 
 **《志愿组织的风险管理》摘要**

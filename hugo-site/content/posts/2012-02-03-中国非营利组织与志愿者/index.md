@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/02/blog-post_6972.html"
   blogger_id: "4290193736744957732"
+cover:
+  image: /images/posts/2012-02-03-中国非营利组织与志愿者/cover.png
+  alt: "中国非营利组织与志愿者"
+
 ---
 
 ** **

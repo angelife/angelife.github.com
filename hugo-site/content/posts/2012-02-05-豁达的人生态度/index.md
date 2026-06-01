@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/02/blog-post_05.html"
   blogger_id: "8840793452158291718"
+cover:
+  image: /images/posts/2012-02-05-豁达的人生态度/cover.png
+  alt: "豁达的人生态度"
+
 ---
 
 遥望着苍穹，星星在闪烁着仿佛在述说着先人祈祷的呢喃，和虔诚的祷告。

@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/02/13.html"
   blogger_id: "7545841781429127710"
+cover:
+  image: /images/posts/2012-02-09-历史的轨迹-二千年教会史-续13/cover.png
+  alt: "历史的轨迹 — 二千年教会史（续13）"
+
 ---
 
 ### 第二十九章   罗马教会从事改革（1545一1563）

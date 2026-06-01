@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/02/11.html"
   blogger_id: "4731841659797278162"
+cover:
+  image: /images/posts/2012-02-09-历史的轨迹-二千年教会史-续11/cover.png
+  alt: "历史的轨迹 — 二千年教会史（续11）"
+
 ---
 
 ### 第二十三章   德国教会的改革

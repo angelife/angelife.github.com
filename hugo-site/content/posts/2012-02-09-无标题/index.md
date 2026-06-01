@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/02/1-2-3-4-5-6-1-1534cartierst.html"
   blogger_id: "2226364383418496263"
+cover:
+  image: /images/posts/2012-02-09-无标题/cover.png
+  alt: "无标题"
+
 ---
 
 ### 第四十七章  加拿大教会

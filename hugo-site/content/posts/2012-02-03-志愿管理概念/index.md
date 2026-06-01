@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/02/blog-post_03.html"
   blogger_id: "1313665743553991243"
+cover:
+  image: /images/posts/2012-02-03-志愿管理概念/cover.png
+  alt: "志愿管理概念"
+
 ---
 
 ## 3   志愿管理概念

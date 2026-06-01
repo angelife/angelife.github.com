@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/02/blog-post_4546.html"
   blogger_id: "1392078414898175644"
+cover:
+  image: /images/posts/2012-02-09-历史的轨迹-二千年教会史-续/cover.png
+  alt: "历史的轨迹 -- 二千年教会史（续）"
+
 ---
 
 ### 第三章  教会内部的成长（33－25）

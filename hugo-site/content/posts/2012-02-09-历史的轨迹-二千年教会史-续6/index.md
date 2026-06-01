@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/02/6.html"
   blogger_id: "717528728452069508"
+cover:
+  image: /images/posts/2012-02-09-历史的轨迹-二千年教会史-续6/cover.png
+  alt: "历史的轨迹 -- 二千年教会史（续6）"
+
 ---
 
 ### 第十二章  教会分裂（1054）

@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/02/19.html"
   blogger_id: "7449992595286930883"
+cover:
+  image: /images/posts/2012-02-09-历史的轨迹-二千年教会史-续19/cover.png
+  alt: "历史的轨迹 — 二千年教会史（续19）"
+
 ---
 
 ### 第四十九章  教会联盟与联合
