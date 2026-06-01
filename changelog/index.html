@@ -244,6 +244,452 @@
     
     <article class="changelog-entry">
       <header>
+        <p class="changelog-version">v0.7.13</p>
+        <h2>移除posts中7篇失效sinaapp外链图，安装会话记忆系统，确立长期合作者原则</h2>
+        <p class="changelog-meta">2026-06-01 · tag: v0.7.13 · commit: 以 tag v0.7.13 指向的 release commit 为准</p>
+      </header>
+
+      
+      <ul>
+        
+        <li>移除 7 篇 posts 中的失效外部图片引用（stor.sinaapp.com 已停止服务）</li>
+        
+        <li>安装 session memory skill，每次启动加载最近3个已归档会话</li>
+        
+        <li>确立长期执行型合作者原则：任务前必读项目上下文，能直接完成的就直接完成</li>
+        
+        <li>changelog 三文件（site/daily/yaml）补齐 v0.6.43-v0.7.12 欠缺的版本日志</li>
+        
+      </ul>
+      
+
+      
+      <p class="changelog-label">影响页面</p>
+      <ul class="changelog-links">
+        
+        <li><a href="hugo-site/content/posts/%ef%bc%887%e7%af%87%e5%a4%b1%e6%95%88%e5%9b%be%e7%89%87%e6%b8%85%e7%90%86%ef%bc%89">hugo-site/content/posts/（7篇失效图片清理）</a></li>
+        
+        <li><a href="/repo/session_archives/">/repo/session_archives/</a></li>
+        
+        <li><a href="SITE_CHANGELOG.md">SITE_CHANGELOG.md</a></li>
+        
+        <li><a href="DAILY_WORK_LOG.md">DAILY_WORK_LOG.md</a></li>
+        
+        <li><a href="hugo-site/data/changelog.yaml">hugo-site/data/changelog.yaml</a></li>
+        
+      </ul>
+      
+
+      
+    </article>
+    
+    <article class="changelog-entry">
+      <header>
+        <p class="changelog-version">v0.7.12</p>
+        <h2>《从聪明到系统化》配图生成，日志补齐v0.6.43-v0.7.11</h2>
+        <p class="changelog-meta">2026-05-30 · tag: v0.7.12 · commit: 以 tag v0.7.12 指向的 release commit 为准</p>
+      </header>
+
+      
+      <ul>
+        
+        <li>使用 PicFlex（ChatGPT-Image2）生成文章配图并接入 frontmatter</li>
+        
+        <li>补全 changelog 三文件从 v0.6.42 到 v0.7.11 的版本日志</li>
+        
+        <li>NVIDIA vision 方案落地：python3 /opt/data/vision_client.py 调用 Llama 3.2 11B vision</li>
+        
+        <li>安装 PicFlex Hermes skill，验证 API key（余额50积分）</li>
+        
+      </ul>
+      
+
+      
+      <p class="changelog-label">影响页面</p>
+      <ul class="changelog-links">
+        
+        <li><a href="hugo-site/content/series/chan-shi-lu/from-clever-to-system.md">hugo-site/content/series/chan-shi-lu/from-clever-to-system.md</a></li>
+        
+        <li><a href="hugo-site/static/images/from-clever-to-system.png">hugo-site/static/images/from-clever-to-system.png</a></li>
+        
+        <li><a href="SITE_CHANGELOG.md">SITE_CHANGELOG.md</a></li>
+        
+        <li><a href="DAILY_WORK_LOG.md">DAILY_WORK_LOG.md</a></li>
+        
+        <li><a href="hugo-site/data/changelog.yaml">hugo-site/data/changelog.yaml</a></li>
+        
+      </ul>
+      
+
+      
+    </article>
+    
+    <article class="changelog-entry">
+      <header>
+        <p class="changelog-version">v0.7.11</p>
+        <h2>五行栏目 build 产物同步（分类页重建）</h2>
+        <p class="changelog-meta">2026-05-30 · tag: v0.7.11 · commit: 以 tag v0.7.11 指向的 release commit 为准</p>
+      </header>
+
+      
+      <ul>
+        
+        <li>Hugo build &#43; 同步到根目录</li>
+        
+        <li>分类页重建（五行栏目）</li>
+        
+      </ul>
+      
+
+      
+      <p class="changelog-label">影响页面</p>
+      <ul class="changelog-links">
+        
+        <li><a href="%ef%bc%88Hugo%20build%20%e4%ba%a7%e7%89%a9%e5%90%8c%e6%ad%a5%ef%bc%89">（Hugo build 产物同步）</a></li>
+        
+      </ul>
+      
+
+      
+    </article>
+    
+    <article class="changelog-entry">
+      <header>
+        <p class="changelog-version">v0.7.10</p>
+        <h2>全站文章归入金木水火土五行栏目（木蝉识/金判断/土正见/火AI/易理）</h2>
+        <p class="changelog-meta">2026-05-30 · tag: v0.7.10 · commit: 以 tag v0.7.10 指向的 release commit 为准</p>
+      </header>
+
+      
+      <ul>
+        
+        <li>全站文章归入金木水火土五行栏目体系</li>
+        
+        <li>木蝉识：信仰/教会史/志愿服务；金判断：判断力/方法论/信息筛选</li>
+        
+        <li>土正见：哲学/心理学/社会观察；火AI：AI时代/个人知识系统；易理：易经/传统智慧</li>
+        
+      </ul>
+      
+
+      
+      <p class="changelog-label">影响页面</p>
+      <ul class="changelog-links">
+        
+        <li><a href="hugo-site/content/%ef%bc%88%e5%85%a8%e9%83%a8%e6%96%87%e7%ab%a0%e9%87%8d%e6%96%b0%e5%88%86%e7%b1%bb%ef%bc%89">hugo-site/content/（全部文章重新分类）</a></li>
+        
+      </ul>
+      
+
+      
+    </article>
+    
+    <article class="changelog-entry">
+      <header>
+        <p class="changelog-version">v0.7.9</p>
+        <h2>Hugo build 产物同步（新增分类页 &#43; 分类重建 &#43; 模板更新）</h2>
+        <p class="changelog-meta">2026-05-30 · tag: v0.7.9 · commit: 以 tag v0.7.9 指向的 release commit 为准</p>
+      </header>
+
+      
+      <ul>
+        
+        <li>Hugo build 产物同步</li>
+        
+        <li>新增分类页</li>
+        
+        <li>分类重建</li>
+        
+        <li>模板更新</li>
+        
+      </ul>
+      
+
+      
+      <p class="changelog-label">影响页面</p>
+      <ul class="changelog-links">
+        
+        <li><a href="%ef%bc%88Hugo%20build%20%e4%ba%a7%e7%89%a9%ef%bc%89">（Hugo build 产物）</a></li>
+        
+      </ul>
+      
+
+      
+    </article>
+    
+    <article class="changelog-entry">
+      <header>
+        <p class="changelog-version">v0.7.8</p>
+        <h2>每篇文章加原文链接 &#43; 57篇杂文重新分类</h2>
+        <p class="changelog-meta">2026-05-30 · tag: v0.7.8 · commit: 以 tag v0.7.8 指向的 release commit 为准</p>
+      </header>
+
+      
+      <ul>
+        
+        <li>每篇文章添加原文链接（指向原始 Blogger 来源）</li>
+        
+        <li>57篇杂文重新分类：信仰/教会史/志愿服务/心理学/哲学/方法/社会</li>
+        
+      </ul>
+      
+
+      
+      <p class="changelog-label">影响页面</p>
+      <ul class="changelog-links">
+        
+        <li><a href="hugo-site/content/posts/%ef%bc%8857%e7%af%87%ef%bc%89">hugo-site/content/posts/（57篇）</a></li>
+        
+      </ul>
+      
+
+      
+    </article>
+    
+    <article class="changelog-entry">
+      <header>
+        <p class="changelog-version">v0.7.7</p>
+        <h2>kindle/posts 全部 slug 修正后重新同步</h2>
+        <p class="changelog-meta">2026-05-30 · tag: v0.7.7 · commit: 以 tag v0.7.7 指向的 release commit 为准</p>
+      </header>
+
+      
+      <ul>
+        
+        <li>kindle/posts 全部 slug 修正后重新同步</li>
+        
+      </ul>
+      
+
+      
+      <p class="changelog-label">影响页面</p>
+      <ul class="changelog-links">
+        
+        <li><a href="kindle/posts/%ef%bc%88slug%20%e4%bf%ae%e6%ad%a3%ef%bc%89">kindle/posts/（slug 修正）</a></li>
+        
+      </ul>
+      
+
+      
+    </article>
+    
+    <article class="changelog-entry">
+      <header>
+        <p class="changelog-version">v0.7.6</p>
+        <h2>修复历史轨迹/推荐等文章 slug hyphen 问题，确保 URL 匹配 Hugo 生成</h2>
+        <p class="changelog-meta">2026-05-30 · tag: v0.7.6 · commit: 以 tag v0.7.6 指向的 release commit 为准</p>
+      </header>
+
+      
+      <ul>
+        
+        <li>修复历史轨迹/推荐等文章 slug 中的 hyphen 问题</li>
+        
+        <li>确保 URL 匹配 Hugo 生成的 slug</li>
+        
+      </ul>
+      
+
+      
+      <p class="changelog-label">影响页面</p>
+      <ul class="changelog-links">
+        
+        <li><a href="hugo-site/content/posts/%ef%bc%88slug%20%e4%bf%ae%e5%a4%8d%ef%bc%89">hugo-site/content/posts/（slug 修复）</a></li>
+        
+      </ul>
+      
+
+      
+    </article>
+    
+    <article class="changelog-entry">
+      <header>
+        <p class="changelog-version">v0.7.5</p>
+        <h2>修复 kindle 列表页空 slug 链接 &#43; 71 篇旧文章补 slug</h2>
+        <p class="changelog-meta">2026-05-30 · tag: v0.7.5 · commit: 以 tag v0.7.5 指向的 release commit 为准</p>
+      </header>
+
+      
+      <ul>
+        
+        <li>修复 kindle 列表页空 slug 链接问题</li>
+        
+        <li>71 篇旧文章补充 slug 字段</li>
+        
+      </ul>
+      
+
+      
+      <p class="changelog-label">影响页面</p>
+      <ul class="changelog-links">
+        
+        <li><a href="kindle/">kindle/</a></li>
+        
+        <li><a href="hugo-site/content/posts/%ef%bc%8871%e7%af%87%ef%bc%89">hugo-site/content/posts/（71篇）</a></li>
+        
+      </ul>
+      
+
+      
+    </article>
+    
+    <article class="changelog-entry">
+      <header>
+        <p class="changelog-version">v0.7.4</p>
+        <h2>favicon 文件同步到 repo 根目录（GitHub Pages 直接服务）</h2>
+        <p class="changelog-meta">2026-05-30 · tag: v0.7.4 · commit: 以 tag v0.7.4 指向的 release commit 为准</p>
+      </header>
+
+      
+      <ul>
+        
+        <li>favicon 文件同步到 repo 根目录</li>
+        
+        <li>确保 GitHub Pages 可直接服务 favicon</li>
+        
+      </ul>
+      
+
+      
+      <p class="changelog-label">影响页面</p>
+      <ul class="changelog-links">
+        
+        <li><a href="favicon.ico">favicon.ico</a></li>
+        
+        <li><a href="apple-touch-icon.png">apple-touch-icon.png</a></li>
+        
+        <li><a href="favicon-16x16.png">favicon-16x16.png</a></li>
+        
+        <li><a href="favicon-32x32.png">favicon-32x32.png</a></li>
+        
+        <li><a href="safari-pinned-tab.svg">safari-pinned-tab.svg</a></li>
+        
+      </ul>
+      
+
+      
+    </article>
+    
+    <article class="changelog-entry">
+      <header>
+        <p class="changelog-version">v0.7.3</p>
+        <h2>添加全部 5 个 favicon 文件 (ico, png x3, svg)</h2>
+        <p class="changelog-meta">2026-05-30 · tag: v0.7.3 · commit: 以 tag v0.7.3 指向的 release commit 为准</p>
+      </header>
+
+      
+      <ul>
+        
+        <li>添加全部 5 个 favicon 文件</li>
+        
+        <li>ico, png x3, svg 各规格完整</li>
+        
+      </ul>
+      
+
+      
+      <p class="changelog-label">影响页面</p>
+      <ul class="changelog-links">
+        
+        <li><a href="%ef%bc%88%e6%96%b0%e5%a2%9e%20favicon%20%e6%96%87%e4%bb%b6%e7%bb%84%ef%bc%89">（新增 favicon 文件组）</a></li>
+        
+      </ul>
+      
+
+      
+    </article>
+    
+    <article class="changelog-entry">
+      <header>
+        <p class="changelog-version">v0.7.2</p>
+        <h2>正确 Hugo build，posts 同步</h2>
+        <p class="changelog-meta">2026-05-30 · tag: v0.7.2 · commit: 以 tag v0.7.2 指向的 release commit 为准</p>
+      </header>
+
+      
+      <ul>
+        
+        <li>正确执行 Hugo build</li>
+        
+        <li>posts 目录同步</li>
+        
+      </ul>
+      
+
+      
+      <p class="changelog-label">影响页面</p>
+      <ul class="changelog-links">
+        
+        <li><a href="%ef%bc%88Hugo%20build%20%e4%ba%a7%e7%89%a9%ef%bc%89">（Hugo build 产物）</a></li>
+        
+      </ul>
+      
+
+      
+    </article>
+    
+    <article class="changelog-entry">
+      <header>
+        <p class="changelog-version">v0.7.1</p>
+        <h2>Hugo build 重建，修复 posts/ 404</h2>
+        <p class="changelog-meta">2026-05-30 · tag: v0.7.1 · commit: 以 tag v0.7.1 指向的 release commit 为准</p>
+      </header>
+
+      
+      <ul>
+        
+        <li>Hugo build 重建</li>
+        
+        <li>修复 posts/ 404 问题</li>
+        
+      </ul>
+      
+
+      
+      <p class="changelog-label">影响页面</p>
+      <ul class="changelog-links">
+        
+        <li><a href="%ef%bc%88Hugo%20build%20%e9%87%8d%e5%bb%ba%ef%bc%89">（Hugo build 重建）</a></li>
+        
+      </ul>
+      
+
+      
+    </article>
+    
+    <article class="changelog-entry">
+      <header>
+        <p class="changelog-version">v0.7.0</p>
+        <h2>Blogger 迁移 71 篇文章；vault 归档上下文；修正 about 页面模型描述</h2>
+        <p class="changelog-meta">2026-05-29 · tag: v0.7.0 · commit: 以 tag v0.7.0 指向的 release commit 为准</p>
+      </header>
+
+      
+      <ul>
+        
+        <li>从 Blogger（angelifex.blogspot.com）迁移 71 篇文章到 Hugo</li>
+        
+        <li>vault 操作记录归档本次迁移上下文（2026-05-30 02:48:20）</li>
+        
+        <li>about 页面模型描述修正：MiniMax M2.7 而非 DeepSeek</li>
+        
+      </ul>
+      
+
+      
+      <p class="changelog-label">影响页面</p>
+      <ul class="changelog-links">
+        
+        <li><a href="hugo-site/content/posts/%ef%bc%8871%e7%af%87%20Blogger%20%e8%bf%81%e7%a7%bb%e6%96%87%e7%ab%a0%ef%bc%89">hugo-site/content/posts/（71篇 Blogger 迁移文章）</a></li>
+        
+      </ul>
+      
+
+      
+    </article>
+    
+    <article class="changelog-entry">
+      <header>
         <p class="changelog-version">v0.6.40</p>
         <h2>发布文章《震之随六五：在惊动中摸到规律》</h2>
         <p class="changelog-meta">2026-05-29 · tag: v0.6.40 · commit: 提交后以 tag v0.6.40 指向的 release commit 为准</p>
