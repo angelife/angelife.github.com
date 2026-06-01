@@ -38,8 +38,8 @@
 旧站保留在 /old-site/ 用于追溯，新站会逐步把其中有长期价值的内容整理为更清楚、更短、更适合公开阅读的文章。">
   <meta property="og:locale" content="zh-cn">
   <meta property="og:type" content="article">
-    <meta property="article:published_time" content="2026-05-29T00:00:00+00:00">
-    <meta property="article:modified_time" content="2026-05-29T00:00:00+00:00">
+    <meta property="article:published_time" content="2026-05-30T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-05-30T00:00:00+00:00">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于安知生">
 <meta name="twitter:description" content="安知生是 angelife 的新站名，也是一个长期知识系统的入口。它不是普通博客，而是一个把旧材料、聊天记录、网页摘录、读书笔记、技术笔记和人生复盘逐步整理为作品的公开空间。
@@ -70,11 +70,11 @@
   "keywords": [
     
   ],
-  "articleBody": "安知生是 angelife 的新站名，也是一个长期知识系统的入口。它不是普通博客，而是一个把旧材料、聊天记录、网页摘录、读书笔记、技术笔记和人生复盘逐步整理为作品的公开空间。\n旧站保留在 /old-site/ 用于追溯，新站会逐步把其中有长期价值的内容整理为更清楚、更短、更适合公开阅读的文章。\n建站思路 这个新站不是一次性设计出来的，而是在真实的工作流中持续迭代出来的。\n建站的原则很简单：以 AI 辅助整理，以 Hugo 发布作品，以 Git 保护成果，以人掌握方向。\n当前工作流 当前的核心工作流是一条精简链路，已经跑通并稳定运行：\nChatGPT / 剑妈（总编·判断·拆解） ↓ Telegram 机器人「蝉师傅」（手机远程入口） ↓ Hermes Gateway（远程总控·消息中转·terminal 手臂） ↓ Reasonix（本地仓库执行工） ↓ Hugo 构建 → rsync 同步 → Git commit/tag/push → GitHub Pages 每层有明确分工，不越界。\n角色分工 ChatGPT / 剑妈：总编、判断、任务拆解、文章打磨、规则制定。负责决定做什么、做到什么程度、什么标准验收。\nTelegram 机器人「蝉师傅」：手机远程入口。通过 Telegram 发送指令，触发 Hermes Gateway 执行任务。\nHermes Gateway：远程总控、消息中转、terminal 手臂。接收 Telegram 指令，连接 DeepSeek，调度 Reasonix 执行，代跑 shell 命令。Hermes 是总控和 terminal 手臂，不自己 patch 文件或擅自 git add/commit/push。\nReasonix：本地仓库执行工。进入项目目录，读取文件，理解项目，修改文件，提出方案。它是真正操作仓库的 AI，也是本页面的作者之一。\nDeepSeek v4 Flash：Reasonix 和 Hermes 背后的执行模型，承担持续施工。\nHugo + rsync + GitHub Pages：静态站生成与发布。本地构建后再同步到发布目录，不依赖 GitHub Actions 在线构建。\n用户（你）：最终判断、授权、验收、发布责任人。每一次修改、每一次提交、每一次部署，都由人确认后才执行。\n不是 Obsidian 深度流程 Obsidian 是未来内库方向，但目前尚未深度接入自动化流程。当前网站材料来自旧文章、聊天记录、网页摘录和直接编辑，并非从 Obsidian 自动化处理。\n未来方向确实是 Obsidian 作为内库沉淀，但当前工作流以更直接的方式推进。\n已经稳定的部分 Hugo 站点基本搭建完成：首页五行栏目、文章页窄栏书页风格、搜索、Kindle 阅读模式均已定型。 发布流程固定：本地 Hugo 构建 → rsync → git add/commit/tag/push。 文章双版本发布规则：一篇源文件自动生成普通图文版和 Kindle 阅读版。 Kindle 阅读模式已固化为独立电子书输出，非 CSS 隐藏变体，有验收强制清单。 治理文档体系完整：PROJECT_STATUS、BUILD_HANDOFF、AI_WORK_RULES、SITE_STYLE_GUIDE、SITE_CHANGELOG、DAILY_WORK_LOG 每轮修改统一更新。 手机远控全链路已定型：Telegram → Hermes → Reasonix → Hugo → rsync → Git。 仍在推进的部分 评论系统（giscus）未启用，等待 GitHub Discussions 配置。 Obsidian 内库尚未深度接入自动化流程。 更多旧站内容迁移。 移动端细节检查。 Google Groups / Notion 内容整理。 工作流关系图 flowchart TD A[ChatGPT / 剑妈总编·判断·任务拆解] --\u003e B[任务分派] B --\u003e C[Telegram 蝉师傅手机远程入口] C --\u003e D[Hermes Gateway远程总控·消息中转] D --\u003e E[Reasonix本地执行工理解·修改·提案] E --\u003e F[Hugo 构建] F --\u003e G[rsync 同步到发布目录] G --\u003e H[Git commit / tag / push] H --\u003e I[GitHub Pages 发布] J[DeepSeek v4 FlashReasonix 背后模型] --\u003e E K[用户] --\u003e K1[授权·验收·发布] K -.-\u003e E K -.-\u003e H K -.-\u003e I 维护节奏 这套系统不是一次性工程。\n日常收集材料，定期整理为文章，构建后发布。核心是让系统持续运转——只要这条生产线还在运转，旧材料就会继续被整理，新判断会继续沉淀，网站也会继续生长。\n",
-  "wordCount" : "1492",
+  "articleBody": "安知生是 angelife 的新站名，也是一个长期知识系统的入口。它不是普通博客，而是一个把旧材料、聊天记录、网页摘录、读书笔记、技术笔记和人生复盘逐步整理为作品的公开空间。\n旧站保留在 /old-site/ 用于追溯，新站会逐步把其中有长期价值的内容整理为更清楚、更短、更适合公开阅读的文章。\n建站思路 这个新站不是一次性设计出来的，而是在真实的工作流中持续迭代出来的。\n建站的原则很简单：以 AI 辅助整理，以 Hugo 发布作品，以 Git 保护成果，以人掌握方向。\n当前工作流（v0.7.13 更新） 当前的核心工作流已经简化为一条精简链路：\n用户（最终验收） ↓ NVIDIA（总控：方向决策、内容管理、规则维护） ↓ MiniMax M2.7（NVIDIA NIM + Minimax 免费练功房） ↓ Hugo 构建 → Git commit / tag → push → GitHub Pages 每层有明确分工，不越界。push 指令必须经用户确认才能执行。\n角色分工 用户：最终验收。拥有方向否决权，所有 push/rsync 必须经确认后执行。\nNVIDIA（Docker Hermes）：总控。方向决策、内容管理、规则维护、全流程执行（生成、写作、Hugo 源文件修改、build、commit、tag）。push 必须等用户确认后执行。\nMiniMax M2.7（NVIDIA NIM + Minimax 免费练功房）：NVIDIA 背后的执行模型，承担持续施工。\nHugo + GitHub Pages：静态站生成与发布。本地构建后同步到发布目录，不依赖 GitHub Actions 在线构建。\n已稳定的部分 Hugo 站点基本搭建完成：首页五行栏目、文章页窄栏书页风格、搜索、Kindle 阅读模式均已定型。 发布流程固定：本地 Hugo 构建 → git add/commit/tag → 用户确认 → push。 文章双版本发布规则：一篇源文件自动生成普通图文版和 Kindle 阅读版。 Kindle 阅读模式已固化为独立电子书输出，非 CSS 隐藏变体，有验收强制清单。 治理文档体系完整：PROJECT_STATUS、AI_WORK_RULES、AI_EXECUTION_AGENTS、SITE_STYLE_GUIDE、SITE_CHANGELOG、DAILY_WORK_LOG 每轮修改统一更新。 容器内 Hugo build 已跑通：/opt/data/hugo v0.162.1。 五行栏目分类体系完整（金·判断、木·蝉识、水·易理、火·AI、土·正见）。 全站文章已完成五行归类。 会话记忆系统（Hindsight）已落地运行。 仍在推进的部分 评论系统（giscus）未启用，等待 GitHub Discussions 配置。 更多旧站内容迁移。 配图方案：Pollinations AI（免费）为主，升级路径待启用（PicFlex/Replicate）。 图片生成验证流程：生成后必须通过 vision_client.py 验证再落盘。 工作流关系图 flowchart TD U[用户最终验收·方向否决权] --\u003e N[NVIDIA总控·方向·内容·规则] N --\u003e M[MiniMax M2.7NVIDIA NIM 执行模型] M --\u003e H[Hugo 构建commit / tag] H --\u003e P{push} P --\u003e|用户确认| G[GitHub Pages 发布] P --\u003e|否决| W[暂停等待] W --\u003e N 维护节奏 这套系统不是一次性工程。\n日常收集材料，定期整理为文章，构建后发布。核心是让系统持续运转——只要这条生产线还在运转，旧材料就会继续被整理，新判断会继续沉淀，网站也会继续生长。\n",
+  "wordCount" : "1249",
   "inLanguage": "en",
-  "datePublished": "2026-05-29T00:00:00Z",
-  "dateModified": "2026-05-29T00:00:00Z",
+  "datePublished": "2026-05-30T00:00:00Z",
+  "dateModified": "2026-05-30T00:00:00Z",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://angelife.github.io/about/"
@@ -183,7 +183,7 @@
     <h1 class="post-title entry-hint-parent">
       关于安知生
     </h1>
-    <div class="post-meta"><span title='2026-05-29 00:00:00 +0000 UTC'>2026-05-29</span>&nbsp;·&nbsp;<span>3 min</span>
+    <div class="post-meta"><span title='2026-05-30 00:00:00 +0000 UTC'>2026-05-30</span>&nbsp;·&nbsp;<span>3 min</span>
 
 </div>
   </header> 
@@ -192,62 +192,49 @@
 <h2 id="建站思路">建站思路<a hidden class="anchor" aria-hidden="true" href="#建站思路">#</a></h2>
 <p>这个新站不是一次性设计出来的，而是在真实的工作流中持续迭代出来的。</p>
 <p>建站的原则很简单：<strong>以 AI 辅助整理，以 Hugo 发布作品，以 Git 保护成果，以人掌握方向。</strong></p>
-<h2 id="当前工作流">当前工作流<a hidden class="anchor" aria-hidden="true" href="#当前工作流">#</a></h2>
-<p>当前的核心工作流是一条精简链路，已经跑通并稳定运行：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>ChatGPT / 剑妈（总编·判断·拆解）
+<h2 id="当前工作流v0713-更新">当前工作流（v0.7.13 更新）<a hidden class="anchor" aria-hidden="true" href="#当前工作流v0713-更新">#</a></h2>
+<p>当前的核心工作流已经简化为一条精简链路：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>用户（最终验收）
 </span></span><span style="display:flex;"><span>    ↓
-</span></span><span style="display:flex;"><span>Telegram 机器人「蝉师傅」（手机远程入口）
+</span></span><span style="display:flex;"><span>NVIDIA（总控：方向决策、内容管理、规则维护）
 </span></span><span style="display:flex;"><span>    ↓
-</span></span><span style="display:flex;"><span>Hermes Gateway（远程总控·消息中转·terminal 手臂）
+</span></span><span style="display:flex;"><span>MiniMax M2.7（NVIDIA NIM + Minimax 免费练功房）
 </span></span><span style="display:flex;"><span>    ↓
-</span></span><span style="display:flex;"><span>Reasonix（本地仓库执行工）
-</span></span><span style="display:flex;"><span>    ↓
-</span></span><span style="display:flex;"><span>Hugo 构建 → rsync 同步 → Git commit/tag/push → GitHub Pages
-</span></span></code></pre></div><p>每层有明确分工，不越界。</p>
+</span></span><span style="display:flex;"><span>Hugo 构建 → Git commit / tag → push → GitHub Pages
+</span></span></code></pre></div><p>每层有明确分工，不越界。push 指令必须经用户确认才能执行。</p>
 <h3 id="角色分工">角色分工<a hidden class="anchor" aria-hidden="true" href="#角色分工">#</a></h3>
-<p><strong>ChatGPT / 剑妈</strong>：总编、判断、任务拆解、文章打磨、规则制定。负责决定做什么、做到什么程度、什么标准验收。</p>
-<p><strong>Telegram 机器人「蝉师傅」</strong>：手机远程入口。通过 Telegram 发送指令，触发 Hermes Gateway 执行任务。</p>
-<p><strong>Hermes Gateway</strong>：远程总控、消息中转、terminal 手臂。接收 Telegram 指令，连接 DeepSeek，调度 Reasonix 执行，代跑 shell 命令。Hermes 是总控和 terminal 手臂，不自己 patch 文件或擅自 git add/commit/push。</p>
-<p><strong>Reasonix</strong>：本地仓库执行工。进入项目目录，读取文件，理解项目，修改文件，提出方案。它是真正操作仓库的 AI，也是本页面的作者之一。</p>
-<p><strong>DeepSeek v4 Flash</strong>：Reasonix 和 Hermes 背后的执行模型，承担持续施工。</p>
-<p><strong>Hugo + rsync + GitHub Pages</strong>：静态站生成与发布。本地构建后再同步到发布目录，不依赖 GitHub Actions 在线构建。</p>
-<p><strong>用户（你）</strong>：最终判断、授权、验收、发布责任人。每一次修改、每一次提交、每一次部署，都由人确认后才执行。</p>
-<h3 id="不是-obsidian-深度流程">不是 Obsidian 深度流程<a hidden class="anchor" aria-hidden="true" href="#不是-obsidian-深度流程">#</a></h3>
-<p>Obsidian 是未来内库方向，但目前尚未深度接入自动化流程。当前网站材料来自旧文章、聊天记录、网页摘录和直接编辑，并非从 Obsidian 自动化处理。</p>
-<p>未来方向确实是 Obsidian 作为内库沉淀，但当前工作流以更直接的方式推进。</p>
-<h3 id="已经稳定的部分">已经稳定的部分<a hidden class="anchor" aria-hidden="true" href="#已经稳定的部分">#</a></h3>
+<p><strong>用户</strong>：最终验收。拥有方向否决权，所有 push/rsync 必须经确认后执行。</p>
+<p><strong>NVIDIA（Docker Hermes）</strong>：总控。方向决策、内容管理、规则维护、全流程执行（生成、写作、Hugo 源文件修改、build、commit、tag）。<strong>push 必须等用户确认后执行。</strong></p>
+<p><strong>MiniMax M2.7（NVIDIA NIM + Minimax 免费练功房）</strong>：NVIDIA 背后的执行模型，承担持续施工。</p>
+<p><strong>Hugo + GitHub Pages</strong>：静态站生成与发布。本地构建后同步到发布目录，不依赖 GitHub Actions 在线构建。</p>
+<h3 id="已稳定的部分">已稳定的部分<a hidden class="anchor" aria-hidden="true" href="#已稳定的部分">#</a></h3>
 <ul>
 <li>Hugo 站点基本搭建完成：首页五行栏目、文章页窄栏书页风格、搜索、Kindle 阅读模式均已定型。</li>
-<li>发布流程固定：本地 Hugo 构建 → rsync → git add/commit/tag/push。</li>
+<li>发布流程固定：本地 Hugo 构建 → git add/commit/tag → 用户确认 → push。</li>
 <li>文章双版本发布规则：一篇源文件自动生成普通图文版和 Kindle 阅读版。</li>
 <li>Kindle 阅读模式已固化为独立电子书输出，非 CSS 隐藏变体，有验收强制清单。</li>
-<li>治理文档体系完整：PROJECT_STATUS、BUILD_HANDOFF、AI_WORK_RULES、SITE_STYLE_GUIDE、SITE_CHANGELOG、DAILY_WORK_LOG 每轮修改统一更新。</li>
-<li>手机远控全链路已定型：Telegram → Hermes → Reasonix → Hugo → rsync → Git。</li>
+<li>治理文档体系完整：PROJECT_STATUS、AI_WORK_RULES、AI_EXECUTION_AGENTS、SITE_STYLE_GUIDE、SITE_CHANGELOG、DAILY_WORK_LOG 每轮修改统一更新。</li>
+<li>容器内 Hugo build 已跑通：/opt/data/hugo v0.162.1。</li>
+<li>五行栏目分类体系完整（金·判断、木·蝉识、水·易理、火·AI、土·正见）。</li>
+<li>全站文章已完成五行归类。</li>
+<li>会话记忆系统（Hindsight）已落地运行。</li>
 </ul>
 <h3 id="仍在推进的部分">仍在推进的部分<a hidden class="anchor" aria-hidden="true" href="#仍在推进的部分">#</a></h3>
 <ul>
 <li>评论系统（giscus）未启用，等待 GitHub Discussions 配置。</li>
-<li>Obsidian 内库尚未深度接入自动化流程。</li>
 <li>更多旧站内容迁移。</li>
-<li>移动端细节检查。</li>
-<li>Google Groups / Notion 内容整理。</li>
+<li>配图方案：Pollinations AI（免费）为主，升级路径待启用（PicFlex/Replicate）。</li>
+<li>图片生成验证流程：生成后必须通过 vision_client.py 验证再落盘。</li>
 </ul>
 <h3 id="工作流关系图">工作流关系图<a hidden class="anchor" aria-hidden="true" href="#工作流关系图">#</a></h3>
 <pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart TD
-    A[ChatGPT / 剑妈&lt;br/&gt;总编·判断·任务拆解] --&gt; B[任务分派]
-    B --&gt; C[Telegram 蝉师傅&lt;br/&gt;手机远程入口]
-    C --&gt; D[Hermes Gateway&lt;br/&gt;远程总控·消息中转]
-    D --&gt; E[Reasonix&lt;br/&gt;本地执行工&lt;br/&gt;理解·修改·提案]
-    E --&gt; F[Hugo 构建]
-    F --&gt; G[rsync 同步&lt;br/&gt;到发布目录]
-    G --&gt; H[Git commit / tag / push]
-    H --&gt; I[GitHub Pages 发布]
-
-    J[DeepSeek v4 Flash&lt;br/&gt;Reasonix 背后模型] --&gt; E
-    K[用户] --&gt; K1[授权·验收·发布]
-    K -.-&gt; E
-    K -.-&gt; H
-    K -.-&gt; I
+    U[用户&lt;br/&gt;最终验收·方向否决权] --&gt; N[NVIDIA&lt;br/&gt;总控·方向·内容·规则]
+    N --&gt; M[MiniMax M2.7&lt;br/&gt;NVIDIA NIM 执行模型]
+    M --&gt; H[Hugo 构建&lt;br/&gt;commit / tag]
+    H --&gt; P{push}
+    P --&gt;|用户确认| G[GitHub Pages 发布]
+    P --&gt;|否决| W[暂停等待]
+    W --&gt; N
 </code></pre><h3 id="维护节奏">维护节奏<a hidden class="anchor" aria-hidden="true" href="#维护节奏">#</a></h3>
 <p>这套系统不是一次性工程。</p>
 <p>日常收集材料，定期整理为文章，构建后发布。核心是让系统持续运转——只要这条生产线还在运转，旧材料就会继续被整理，新判断会继续沉淀，网站也会继续生长。</p>

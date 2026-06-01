@@ -6,6 +6,7 @@ draft: false
 description: "Blogger 迁移文章：东方闪电问题分析图"
 categories:
   - "金·判断"
+series: ["信息判断"]
 tags:
   - "Blogger迁移"
   - "v0.7.0"

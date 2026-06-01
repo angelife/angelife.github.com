@@ -6,6 +6,7 @@ draft: false
 description: "Blogger 迁移文章：《志愿组织的风险管理》摘要"
 categories:
   - "金·判断"
+series: ["信息判断"]
 tags:
   - "Blogger迁移"
   - "v0.7.0"

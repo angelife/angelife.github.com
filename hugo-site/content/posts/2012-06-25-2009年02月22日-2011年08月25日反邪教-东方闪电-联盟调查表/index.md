@@ -6,6 +6,7 @@ draft: false
 description: "Blogger 迁移文章：2009年02月22日～2011年08月25日反邪教（东方闪电）联盟调查表"
 categories:
   - "金·判断"
+series: ["信息判断"]
 tags:
   - "Blogger迁移"
   - "v0.7.0"

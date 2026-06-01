@@ -6,6 +6,7 @@ slug: "ai-self-distillation-electronic-donkey"
 categories:
   - "火·AI"
   - "AI时代"
+series: ["AI补印"]
 tags:
   - "AI写作"
   - "电子驴"

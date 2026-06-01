@@ -6,6 +6,7 @@ draft: false
 description: "Blogger 迁移文章：闪电“书卷”的分类"
 categories:
   - "土·正见"
+series: ["儒家与正见"]
 tags:
   - "Blogger迁移"
   - "v0.7.0"

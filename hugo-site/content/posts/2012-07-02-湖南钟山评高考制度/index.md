@@ -6,6 +6,7 @@ draft: false
 description: "Blogger 迁移文章：湖南钟山评高考制度"
 categories:
   - "金·判断"
+series: ["信息判断"]
 tags:
   - "Blogger迁移"
   - "v0.7.0"

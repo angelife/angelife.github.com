@@ -6,6 +6,7 @@ slug: the-future-is-one-person-company
 categories:
   - "火·AI"
   - "一人公司"
+series: ["AI补印"]
 tags:
   - 一人公司
   - 大衍神君

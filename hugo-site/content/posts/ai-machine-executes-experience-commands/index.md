@@ -7,6 +7,7 @@ description: "AI 时代，机器越来越便宜，执行越来越自动化。真
 categories:
   - "火·AI"
   - "AI时代"
+series: ["AI补印"]
 tags:
   - "AI工作流"
   - "自动化"

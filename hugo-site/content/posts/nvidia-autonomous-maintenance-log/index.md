@@ -5,6 +5,7 @@ draft: false
 slug: nvidia-autonomous-maintenance-log
 categories:
   - "火·AI"
+series: ["AI补印"]
 tags:
   - NVIDIA
   - 一人公司

@@ -6,6 +6,7 @@ draft: false
 description: "Blogger 迁移文章：胡适：在不健全的中国，如何不堕落"
 categories:
   - "金·判断"
+series: ["信息判断"]
 tags:
   - "Blogger迁移"
   - "v0.7.0"

@@ -9,6 +9,7 @@ categories:
   - "日课"
   - "AI时代"
   - "个人知识资产"
+series: ["AI补印"]
 tags:
   - "ChatGPT"
   - "AI陪练"
