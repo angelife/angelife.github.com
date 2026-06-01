@@ -10,18 +10,25 @@
 
 ## 当前版本状态
 
-- 当前版本：v0.6.33 待发布
-- 最新 commit：尚未 commit
-- 最新 tag：尚未 tag
-- 线上状态：v0.6.31 已发布；本地有待发布改动（site-workflow 页面更新 + 流程图接入 + 日志补全）
+- 当前版本：v0.7.14
+- 最新 commit：`fa3ffc3`（about 页面更新为 v0.7.13 内容）
+- 最新 tag：`v0.7.14`
+- 线上状态：v0.7.14 已发布（GitHub Pages）
 
-### v0.6.33 待发布内容
+### v0.7.14 发布内容
 
-- **site-workflow 页面更新**：`hugo-site/content/site-workflow/index.md` 更新为最新版《建站模式日志》，明确「本地为主场，AI 为外援」
-- **项目总控流程图接入**：`hugo-site/static/images/workflow/site-control-map.png`（2MB），路径 `/images/workflow/site-control-map.png`
-- **日志补全**：更新 `SITE_CHANGELOG.md`、`DAILY_WORK_LOG.md`、`PROJECT_STATUS.md`、`BUILD_HANDOFF.md`、`hugo-site/data/changelog.yaml`
-- **尚未 Hugo 构建**：待 macOS 本机执行 `hugo --gc --cleanDestinationDir --minify -s hugo-site`
-- **尚未 rsync / commit / tag / push**：等待 macOS 本机执行安全 rsync 后由指定执行代理发布
+- about 页面更新：版本号、模型信息（MiniMax M2.7）、五行体系完成状态、工作流图更新
+- README.md 版本号更新（v0.6.42 → v0.7.14）
+- free-image-generation skill 文档补全（Pollinations 验证流程、当前状态）
+- changelog.yaml v0.7.0–v0.7.13 版本日志补全（+173 行）
+
+### v0.7.13 及之前已发布
+
+- 五行分类体系完成（金·判断、木·蝉识、水·易理、火·AI、土·正见）
+- 全站文章已完成五行归类
+- Hindsight 会话记忆系统落地
+- Pollinations AI 配图方案落地
+- 容器内 Hugo build 已跑通
 
 ## 版本号规则
 

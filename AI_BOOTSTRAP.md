@@ -251,25 +251,16 @@ https://angelife.github.io/0847745cb78663855a3a1732c9c6a130.txt
 ## 8. 当前版本状态
 
 已发布：
-- v0.6.33：更新 /site-workflow/，公开当前协作制度
-- v0.6.34：热修流程图静态资源 404
+- v0.7.14：about 页面更新（MiniMax M2.7）、README.md 版本同步、五行体系完成
+- v0.7.13：changelog.yaml v0.7.0–v0.7.13 日志补全、posts 清理
+- v0.7.0–v0.7.12：五行分类体系建设、全站文章归类完成
 
-本轮：
-- v0.6.35：固化 AI 接手记忆与项目规则
+当前状态：v0.7.14，网站进入内容发布期，五行分类体系稳定运行。
 
 后续任务：
-- v0.7.0：旧 Blogger 内容回流工程
-- 来源：https://angelifex.blogspot.com/
-
-v0.7.0 原则：
-- 剑妈制定迁移策略和分类框架
-- NVIDIA 抓取、整理、分类、去重、再加工
-- 本地 Mac 实际写入 Hugo、构建、发布、验证
-- 不无脑搬运
-- 能合并就合并
-- 有独立价值才新建文章
-- 谁干活谁署名
-- 长期目标：人类参与降到最低，最终 0 参与自动化
+- 评论系统（giscus）启用
+- 更多旧 Blogger 内容迁移（来源：https://angelifex.blogspot.com/）
+- 配图方案升级路径（PicFlex / Replicate FLUX 待启用）
 
 ## 9. AI 开工前检查清单
 
