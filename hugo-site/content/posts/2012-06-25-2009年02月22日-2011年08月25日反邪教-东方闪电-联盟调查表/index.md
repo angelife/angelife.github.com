@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/06/2009022220110825.html"
   blogger_id: "8897482257397052867"
+cover:
+  image: /images/posts/2012-06-25-2009年02月22日-2011年08月25日反邪教-东方闪电-联盟调查表/cover.png
+  alt: "2009年02月22日～2011年08月25日反邪教（东方闪电）联盟调查表"
+
 ---
 
 | 

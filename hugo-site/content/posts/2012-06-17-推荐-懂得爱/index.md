@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/06/blog-post_17.html"
   blogger_id: "5356946578306517242"
+cover:
+  image: /images/posts/2012-06-17-推荐-懂得爱/cover.png
+  alt: "[推荐]懂得爱"
+
 ---
 
 ![懂得爱](http://img5.douban.com/mpic/s2525459.jpg)

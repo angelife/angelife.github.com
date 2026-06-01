@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/06/blog-post_5009.html"
   blogger_id: "443735155034869830"
+cover:
+  image: /images/posts/2012-06-15-说信仰-说邪教-郭德纲/cover.png
+  alt: "说信仰 说邪教(郭德纲)"
+
 ---
 
 [http://player.youku.com/player.php/sid/XMzA5NTEzOTky/v.swf](http://player.youku.com/player.php/sid/XMzA5NTEzOTky/v.swf)

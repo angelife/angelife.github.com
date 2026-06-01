@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/06/blog-post_15.html"
   blogger_id: "6271239400383248761"
+cover:
+  image: /images/posts/2012-06-15-邪教問題的現狀-成因及對策/cover.png
+  alt: "邪教問題的現狀、成因及對策"
+
 ---
 
 **邪教問題的現狀、成因及對策**

@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/06/blog-post.html"
   blogger_id: "320437469713887539"
+cover:
+  image: /images/posts/2012-06-10-退教工作的五条基本建议/cover.png
+  alt: "退教工作的五条基本建议"
+
 ---
 
 - 不对立

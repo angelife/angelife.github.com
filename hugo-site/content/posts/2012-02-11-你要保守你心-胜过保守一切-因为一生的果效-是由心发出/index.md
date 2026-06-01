@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/02/blog-post_772.html"
   blogger_id: "32287296183788084"
+cover:
+  image: /images/posts/2012-02-11-你要保守你心-胜过保守一切-因为一生的果效-是由心发出/cover.png
+  alt: "你要保守你心，胜过保守一切。因为一生的果效，是由心发出。"
+
 ---
 
 你要保守你心，胜过保守一切。因为一生的果效，是由心发出。

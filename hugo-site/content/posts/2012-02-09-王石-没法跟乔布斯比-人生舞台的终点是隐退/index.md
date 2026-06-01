@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/02/blog-post_09.html"
   blogger_id: "5247144697239622845"
+cover:
+  image: /images/posts/2012-02-09-王石-没法跟乔布斯比-人生舞台的终点是隐退/cover.png
+  alt: "王石：没法跟乔布斯比 人生舞台的终点是隐退"
+
 ---
 
 **王石：没法跟乔布斯比 人生舞台的终点是隐退**

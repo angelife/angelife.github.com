@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/07/blog-post.html"
   blogger_id: "424794553531352382"
+cover:
+  image: /images/posts/2012-07-02-湖南钟山评高考制度/cover.png
+  alt: "湖南钟山评高考制度"
+
 ---
 
 

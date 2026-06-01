@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/05/blog-post.html"
   blogger_id: "3224890172827356783"
+cover:
+  image: /images/posts/2012-05-04-信徒如何乘風破浪-黃子嘉牧師首講-快樂之道/cover.png
+  alt: "信徒如何乘風破浪﹖黃子嘉牧師首講「快樂之道」"
+
 ---
 
 信徒如何乘風破浪﹖黃子嘉牧師首講「快樂之道」

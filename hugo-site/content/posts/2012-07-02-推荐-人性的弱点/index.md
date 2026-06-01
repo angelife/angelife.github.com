@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/07/blog-post_02.html"
   blogger_id: "4721111182220391106"
+cover:
+  image: /images/posts/2012-07-02-推荐-人性的弱点/cover.png
+  alt: "[推荐]人性的弱点"
+
 ---
 
 ![人性的弱点](http://img3.douban.com/lpic/s1083685.jpg)

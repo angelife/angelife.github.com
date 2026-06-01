@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/06/blog-post_633.html"
   blogger_id: "1872465188424292813"
+cover:
+  image: /images/posts/2012-06-17-亲密关系/cover.png
+  alt: "亲密关系"
+
 ---
 
 那些离群索居的人，不管其自身愿不愿意，基于生物本能来讲他们也都是需要与他人感情的彼此依恋。才得以达到一种健康的心理状态。

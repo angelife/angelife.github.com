@@ -12,6 +12,10 @@ tags:
 source:
   blogger_url: "https://angelifex.blogspot.com/2012/06/blog-post_30.html"
   blogger_id: "7152967879546231746"
+cover:
+  image: /images/posts/2012-06-30-驭民宝典/cover.png
+  alt: "驭民宝典"
+
 ---
 
 可以和东方闪电的精神操纵手法对比参考
