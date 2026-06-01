@@ -14,25 +14,27 @@ draft: false
 
 建站的原则很简单：**以 AI 辅助整理，以 Hugo 发布作品，以 Git 保护成果，以人掌握方向。**
 
-## 当前工作流（v0.6.42 更新）
+## 当前工作流（v0.7.13 更新）
 
 当前的核心工作流已经简化为一条精简链路：
 
 ```text
+用户（最终验收）
+    ↓
 NVIDIA（总控：方向决策、内容管理、规则维护）
     ↓
-DeepSeek / NVIDIA NIM（模型后端）
+MiniMax M2.7（NVIDIA NIM + Minimax 免费练功房）
     ↓
-Hugo 构建 → Git commit / tag → 用户授权 → push → GitHub Pages
+Hugo 构建 → Git commit / tag → push → GitHub Pages
 ```
 
-每层有明确分工，不越界。发布（push）必须经用户确认才能执行。
+每层有明确分工，不越界。push 指令必须经用户确认才能执行。
 
 ### 角色分工
 
-**NVIDIA（Docker Hermes）**：总控。方向决策、内容管理、规则维护、全流程执行（生成、写作、Hugo 源文件修改、build、commit、tag）。**push 指令必须等用户确认后才能执行。**
+**用户**：最终验收。拥有方向否决权，所有 push/rsync 必须经确认后执行。
 
-**用户**：最终验收。所有 push/rsync 必须经用户确认后执行，拥有方向否决权。
+**NVIDIA（Docker Hermes）**：总控。方向决策、内容管理、规则维护、全流程执行（生成、写作、Hugo 源文件修改、build、commit、tag）。**push 必须等用户确认后执行。**
 
 **MiniMax M2.7（NVIDIA NIM + Minimax 免费练功房）**：NVIDIA 背后的执行模型，承担持续施工。
 
@@ -46,25 +48,28 @@ Hugo 构建 → Git commit / tag → 用户授权 → push → GitHub Pages
 - Kindle 阅读模式已固化为独立电子书输出，非 CSS 隐藏变体，有验收强制清单。
 - 治理文档体系完整：PROJECT_STATUS、AI_WORK_RULES、AI_EXECUTION_AGENTS、SITE_STYLE_GUIDE、SITE_CHANGELOG、DAILY_WORK_LOG 每轮修改统一更新。
 - 容器内 Hugo build 已跑通：/opt/data/hugo v0.162.1。
+- 五行栏目分类体系完整（金·判断、木·蝉识、水·易理、火·AI、土·正见）。
+- 全站文章已完成五行归类。
+- 会话记忆系统（Hindsight）已落地运行。
 
 ### 仍在推进的部分
 
 - 评论系统（giscus）未启用，等待 GitHub Discussions 配置。
 - 更多旧站内容迁移。
-- 移动端细节检查。
-- Google Groups / Notion 内容整理。
+- 配图方案：Pollinations AI（免费）为主，升级路径待启用（PicFlex/Replicate）。
+- 图片生成验证流程：生成后必须通过 vision_client.py 验证再落盘。
 
 ### 工作流关系图
 
 ```mermaid
 flowchart TD
-    A[NVIDIA<br/>总控·方向·内容·规则] --> B[DeepSeek v4 Flash<br/>模型后端]
-    B --> C[Hugo 构建<br/>commit / tag]
-    C --> D{用户授权}
-    D -->|确认| E[push]
-    E --> F[GitHub Pages 发布]
-    D -->|否决| G[暂停等待]
-    G --> A
+    U[用户<br/>最终验收·方向否决权] --> N[NVIDIA<br/>总控·方向·内容·规则]
+    N --> M[MiniMax M2.7<br/>NVIDIA NIM 执行模型]
+    M --> H[Hugo 构建<br/>commit / tag]
+    H --> P{push}
+    P -->|用户确认| G[GitHub Pages 发布]
+    P -->|否决| W[暂停等待]
+    W --> N
 ```
 
 ### 维护节奏
