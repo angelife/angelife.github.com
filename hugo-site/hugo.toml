@@ -31,7 +31,7 @@ buildFuture = true
   ShowPostNavLinks = true
   ShowCodeCopyButtons = true
   DateFormat = "2006-01-02"
-  mainSections = ["columns", "posts"]
+  mainSections = ["columns", "posts", "series"]
 
   [params.fuseOpts]
     keys = ["title", "permalink", "summary", "content", "tags", "categories"]
