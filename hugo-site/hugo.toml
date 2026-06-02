@@ -10,7 +10,7 @@ summaryLength = 120
 buildFuture = true
 
 [taxonomies]
-  series = "columns"
+  series = "series"
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
@@ -56,32 +56,38 @@ buildFuture = true
 [[menu.main]]
   identifier = "phase-metal"
   name = "金·判断"
-  url = "/columns/information-judgment/"
+  url = "/series/信息判断/"
   weight = 10
 
 [[menu.main]]
   identifier = "phase-wood"
   name = "木·蝉识"
-  url = "/columns/chan-shi-lu/"
+  url = "/series/蝉识录/"
   weight = 20
 
 [[menu.main]]
   identifier = "phase-water"
   name = "水·易理"
-  url = "/columns/yi-notes/"
+  url = "/series/易理笔记/"
   weight = 30
 
 [[menu.main]]
   identifier = "phase-fire"
   name = "火·AI"
-  url = "/columns/ai-bu-yin/"
+  url = "/series/ai补印/"
   weight = 40
 
 [[menu.main]]
   identifier = "phase-earth"
   name = "土·正见"
-  url = "/columns/confucian-framework/"
+  url = "/series/儒家与正见/"
   weight = 50
+
+[[menu.main]]
+  identifier = "phase-anti-populism"
+  name = "反民粹"
+  url = "/series/反民粹与反邪/"
+  weight = 15
 
 [[menu.main]]
   identifier = "daily"
