@@ -9,8 +9,12 @@ hasCJKLanguage = true
 summaryLength = 120
 buildFuture = true
 
+disablePathToLower = true
+
 [taxonomies]
   series = "series"
+  categories = "categories"
+  tags = "tags"
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
