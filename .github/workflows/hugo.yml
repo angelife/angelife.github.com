@@ -38,6 +38,8 @@ jobs:
       - name: Debug - verify build output
         id: debug
         working-directory: hugo-site
+        env:
+          HUGO_CACHEDIR: /tmp/hugo_cache
         run: |
           echo "=== ENVIRONMENT ==="
           echo "Hugo: $(hugo version)"
@@ -65,6 +67,9 @@ jobs:
           echo "=== BUILD STATS ==="
           find public -name '*.html' | wc -l | xargs echo "  Total HTML files:"
           ls public/series/information-judgment/page/ 2>/dev/null | grep -v '1$' | wc -l | xargs echo "  information-judgment paginated pages:"
+          echo "=== WRITING DIAGNOSTIC PAGE ==="
+          python3 scripts/write_ci_diagnostic.py
+          echo "Diagnostic page written."
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
