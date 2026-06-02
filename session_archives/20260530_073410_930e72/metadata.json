@@ -1,0 +1,12 @@
+{
+  "session_id": "20260530_073410_930e72",
+  "when": "May 30, 2026 at 05:57 AM",
+  "source": "telegram",
+  "title": "Testing Visibility Check",
+  "snippet": "Vision tool enabled via NVIDIA API, docker-vision-module skill created",
+  "bookend_start_count": 3,
+  "bookend_end_count": 3,
+  "full_messages_count": 0,
+  "archived_at": "2026-06-02T06:08:26.984618",
+  "match_message_id": null
+}

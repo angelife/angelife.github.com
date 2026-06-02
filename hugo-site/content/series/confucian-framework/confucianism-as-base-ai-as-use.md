@@ -3,7 +3,7 @@ title: "儒家为体，AI 为用"
 date: 2026-05-26
 tags: ["儒家", "正见", "AI补印", "方法论"]
 categories: ["儒家与正见"]
-series: ["儒家与正见"]
+series: ["confucian-framework"]
 draft: false
 featured: true
 slug: "confucianism-as-base-ai-as-use"
