@@ -43,9 +43,9 @@ jobs:
           echo "=== Hugo version ===" && hugo version
           echo "=== uglyURLs config ===" && grep uglyURLs hugo.toml
           echo "=== Series directory ===" && ls public/series/ | head -20
-          echo "=== HTML taxonomy pages ===" && ls public/series/*.html 2>/dev/null
-          echo "=== Content with series frontmatter ===" && grep -r "^series:" content/posts/ | wc -l
-          echo "=== Section pages with posts ===" && for f in public/series/*/index.html; do count=$(grep -c 'post-entry\|entry-hint' "$f" 2>/dev/null || echo 0); echo "$(basename $(dirname $f)): $count"; done
+          echo "=== HTML taxonomy pages ===" && ls public/series/*.html 2>/dev/null || echo "(none)"
+          echo "=== Posts with series frontmatter ===" && grep -r "^series:" content/posts/ | wc -l
+          echo "=== Section page article counts ===" && for d in public/series/*/; do if [ -f "${d}index.html" ]; then count=$(grep -c 'post-entry\|entry-hint' "${d}index.html" 2>/dev/null || echo 0); echo "$(basename $d): $count articles"; fi; done
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
@@ -55,10 +55,8 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
     steps:
       - name: Deploy to GitHub Pages
-        id: deployment
         uses: actions/deploy-pages@v4
