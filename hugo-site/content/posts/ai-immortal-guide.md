@@ -2,7 +2,7 @@
 title = "AI 時代的「底層修仙」指南：在異化、謊言與技術泡沫中覺醒與生存"
 date = 2026-06-02T19:00:00+08:00
 description = "面對 AI 引發的技術剝削與無產者危機，以及「說謊者更易成功」的冷酷權力秩序，普通人如何看穿「敘事經濟學」泡沫，巧妙利用免費工具實施「臥底生存」？"
-featured_image = "watermarked_img_2482642269171354926.png"
+featured_image = "images/watermarked_img_2482642269171354926.png"
 tags = ["AI異化", "敘事經濟學", "NPD人格", "法家秩序", "底層修仙", "賽博苦力"]
 categories = ["時代解構"]
 draft = false
