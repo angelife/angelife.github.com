@@ -56,37 +56,37 @@ buildFuture = true
 [[menu.main]]
   identifier = "phase-metal"
   name = "金·判断"
-  url = "/series/信息判断/"
+  url = "/series/information-judgment/"
   weight = 10
 
 [[menu.main]]
   identifier = "phase-wood"
   name = "木·蝉识"
-  url = "/series/蝉识录/"
+  url = "/series/chan-shi-lu/"
   weight = 20
 
 [[menu.main]]
   identifier = "phase-water"
   name = "水·易理"
-  url = "/series/易理笔记/"
+  url = "/series/yi-notes/"
   weight = 30
 
 [[menu.main]]
   identifier = "phase-fire"
   name = "火·AI"
-  url = "/series/ai补印/"
+  url = "/series/ai-bu-yin/"
   weight = 40
 
 [[menu.main]]
   identifier = "phase-earth"
   name = "土·正见"
-  url = "/series/儒家与正见/"
+  url = "/series/confucian-framework/"
   weight = 50
 
 [[menu.main]]
   identifier = "phase-anti-populism"
   name = "反民粹"
-  url = "/series/反民粹与反邪/"
+  url = "/series/anti-populism/"
   weight = 15
 
 [[menu.main]]
