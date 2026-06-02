@@ -59,7 +59,7 @@ jobs:
           echo "Posts remaining: $(find content/posts -name '*.md' 2>/dev/null | wc -l)"
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: hugo-site/public
 
@@ -71,4 +71,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
