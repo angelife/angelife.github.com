@@ -37,6 +37,16 @@ jobs:
         working-directory: hugo-site
         run: hugo --cleanDestinationDir --minify
 
+      - name: Debug - verify build output
+        working-directory: hugo-site
+        run: |
+          echo "=== Hugo version ===" && hugo version
+          echo "=== uglyURLs config ===" && grep uglyURLs hugo.toml
+          echo "=== Series directory ===" && ls public/series/ | head -20
+          echo "=== HTML taxonomy pages ===" && ls public/series/*.html 2>/dev/null
+          echo "=== Content with series frontmatter ===" && grep -r "^series:" content/posts/ | wc -l
+          echo "=== Section pages with posts ===" && for f in public/series/*/index.html; do count=$(grep -c 'post-entry\|entry-hint' "$f" 2>/dev/null || echo 0); echo "$(basename $(dirname $f)): $count"; done
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
