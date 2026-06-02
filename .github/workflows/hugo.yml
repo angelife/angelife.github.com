@@ -40,12 +40,19 @@ jobs:
       - name: Debug - verify build output
         working-directory: hugo-site
         run: |
-          echo "=== Hugo version ===" && hugo version
-          echo "=== uglyURLs config ===" && grep uglyURLs hugo.toml
-          echo "=== Series directory ===" && ls public/series/ | head -20
-          echo "=== HTML taxonomy pages ===" && ls public/series/*.html 2>/dev/null || echo "(none)"
-          echo "=== Posts with series frontmatter ===" && grep -r "^series:" content/posts/ | wc -l
-          echo "=== Section page article counts ===" && for d in public/series/*/; do if [ -f "${d}index.html" ]; then count=$(grep -c 'post-entry\|entry-hint' "${d}index.html" 2>/dev/null || echo 0); echo "$(basename $d): $count articles"; fi; done
+          echo "=== Hugo version ==="
+          hugo version
+          echo "=== Series directory ==="
+          ls public/series/ | head -20
+          echo "=== Section page article counts ==="
+          for d in public/series/*/; do
+            if [ -f "${d}index.html" ]; then
+              count=$(grep -c 'post-entry\|entry-hint' "${d}index.html" 2>/dev/null || true)
+              echo "$(basename $d): $count articles"
+            fi
+          done
+          echo "=== Posts remaining in content/posts ==="
+          find content/posts -name "*.md" | wc -l
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
