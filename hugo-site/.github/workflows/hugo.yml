@@ -1,0 +1,81 @@
+name: Deploy Hugo site
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.147.4'
+          extended: true
+
+      - name: Build
+        working-directory: hugo-site
+        run: hugo --cleanDestinationDir --minify
+
+      - name: Debug - verify build output
+        id: debug
+        working-directory: hugo-site
+        run: |
+          echo "debug_git_sha=$(git -C . rev-parse HEAD)" >> $GITHUB_OUTPUT
+          echo "debug_git_log=$(git -C . log --oneline -3 | tr '\n' '|')" >> $GITHUB_OUTPUT
+          echo "debug_hugo_version=$(hugo version)" >> $GITHUB_OUTPUT
+          echo "debug_series_dirs=$(ls public/series/ | tr '\n' ',')" >> $GITHUB_OUTPUT
+          echo "debug_ij_files=$(find public/series/information-judgment -type f 2>/dev/null | wc -l)" >> $GITHUB_OUTPUT
+          SECTION_COUNTS=""
+          for d in public/series/*/; do
+            slug=$(basename "$d")
+            count=$(grep -c 'post-entry\|entry-hint' "${d}index.html" 2>/dev/null || echo "0")
+            SECTION_COUNTS="${SECTION_COUNTS}${slug}:${count},"
+          done
+          echo "debug_section_counts=${SECTION_COUNTS}" >> $GITHUB_OUTPUT
+          echo "debug_posts_count=$(find content/posts -name '*.md' 2>/dev/null | wc -l)" >> $GITHUB_OUTPUT
+          echo "=== Build verification ==="
+          echo "Git SHA: $(git -C . rev-parse HEAD)"
+          echo "Git log: $(git -C . log --oneline -3)"
+          echo "Hugo: $(hugo version)"
+          echo "Series dirs: $(ls public/series/ | tr '\n' ' ')"
+          echo "IJ taxonomy page posts: $(grep -c 'post-entry\|entry-hint' public/series/information-judgment/index.html 2>/dev/null || echo 0)"
+          for d in public/series/*/; do
+            slug=$(basename "$d")
+            count=$(grep -c 'post-entry\|entry-hint' "${d}index.html" 2>/dev/null || echo "0")
+            echo "  $slug: $count articles"
+          done
+          echo "Posts remaining: $(find content/posts -name '*.md' 2>/dev/null | wc -l)"
+          echo "IJ taxonomy files: $(find public/series/information-judgment -type f | wc -l)"
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: hugo-site/public
+
+  deploy:
+    environment:
+      name: github-pages
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
