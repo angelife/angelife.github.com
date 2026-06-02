@@ -6,7 +6,7 @@ draft: false
 description: "Blogger 迁移文章：你要保守你心，胜过保守一切。因为一生的果效，是由心发出。"
 categories:
   - "土·正见"
-series: ["儒家与正见"]
+series: ["confucian-framework"]
 tags:
   - "Blogger迁移"
   - "v0.7.0"

@@ -6,7 +6,7 @@ draft: false
 description: "Blogger 迁移文章：非营利组织志愿者管理系统构成"
 categories:
   - "金·判断"
-series: ["信息判断"]
+series: ["information-judgment"]
 tags:
   - "Blogger迁移"
   - "v0.7.0"

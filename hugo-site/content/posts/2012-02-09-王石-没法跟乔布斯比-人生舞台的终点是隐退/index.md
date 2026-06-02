@@ -6,7 +6,7 @@ draft: false
 description: "Blogger 迁移文章：王石：没法跟乔布斯比 人生舞台的终点是隐退"
 categories:
   - "金·判断"
-series: ["信息判断"]
+series: ["information-judgment"]
 tags:
   - "Blogger迁移"
   - "v0.7.0"

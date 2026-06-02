@@ -7,7 +7,7 @@ description: "震之随六五变提醒人：摸到规律不是宣布无敌，而
 categories:
   - "易理"
   - "水·易理"
-series: ["易理笔记"]
+series: ["yi-notes"]
 tags: ["易经", "震卦", "随卦", "判断力", "AI时代", "不失正见"]
 cover:
   image: /images/posts/zhen-to-sui-touching-the-pattern/cover.png

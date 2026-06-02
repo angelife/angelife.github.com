@@ -6,7 +6,7 @@ draft: false
 description: "Blogger 迁移文章：中国非营利组织与志愿者"
 categories:
   - "金·判断"
-series: ["信息判断"]
+series: ["information-judgment"]
 tags:
   - "Blogger迁移"
   - "v0.7.0"

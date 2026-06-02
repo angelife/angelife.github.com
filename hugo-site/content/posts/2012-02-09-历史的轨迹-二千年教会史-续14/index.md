@@ -6,7 +6,7 @@ draft: false
 description: "Blogger 迁移文章：历史的轨迹 — 二千年教会史（续14）"
 categories:
   - "木·蝉识"
-series: ["蝉识录"]
+series: ["chan-shi-lu"]
 tags:
   - "Blogger迁移"
   - "v0.7.0"

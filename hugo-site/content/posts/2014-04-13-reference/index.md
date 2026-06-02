@@ -8,7 +8,7 @@ tags: [反操弄, 家庭支持, 信息判断]
 categories:
   - "金·判断"
   - "文章"
-series: ["信息判断"]
+series: ["information-judgment"]
 summary: "这篇文章由旧稿整理而来，讨论家人陷入高控制关系、情绪操弄或信息骗局时，普通家庭可以如何保持冷静、降低冲突、保护财产与关系，并逐步恢复现实生活。"
 cover:
   image: /images/posts/2014-04-13-reference/cover.png

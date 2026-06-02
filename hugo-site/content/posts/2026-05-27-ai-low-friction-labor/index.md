@@ -10,7 +10,7 @@ categories:
   - "AI时代"
   - "系统主控"
   - "个人知识资产"
-series: ["AI补印"]
+series: ["ai-bu-yin"]
 tags:
   - "AI工作流"
   - "一人公司"

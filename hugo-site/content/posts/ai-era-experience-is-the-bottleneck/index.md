@@ -7,7 +7,7 @@ description: "AI时代答案越来越便宜，真正稀缺的不是知识，而�
 categories:
   - "火·AI"
   - "AI时代"
-series: ["AI补印"]
+series: ["ai-bu-yin"]
 tags:
   - "AI"
   - "经验"

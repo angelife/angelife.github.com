@@ -6,7 +6,7 @@ draft: false
 description: "在中国复杂环境里，最好的技术不一定最能生存。AI时代真正可靠的系统，不是单点性能最强的法拉利，而是能适应泥地、封锁、降级和替代的越野车。"
 categories:
   - "火·AI"
-series: ["AI补印"]
+series: ["ai-bu-yin"]
 tags:
   - "AI工作流"
   - "本土化"

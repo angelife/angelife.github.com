@@ -6,7 +6,7 @@ draft: false
 description: "AI降低了写作和答案获取成本，却没有降低现实世界的判断成本。西方更多面对付费墙，中国更多面对迷雾墙。真正稀缺的不是文字，而是经验、边界感和不失正见的判断力。"
 categories:
   - "火·AI"
-series: ["AI补印"]
+series: ["ai-bu-yin"]
 tags:
   - "AI写作"
   - "判断力"
