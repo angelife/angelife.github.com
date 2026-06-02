@@ -13,7 +13,7 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -30,29 +30,33 @@ jobs:
           hugo-version: '0.147.4'
           extended: true
 
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
-
       - name: Build
         working-directory: hugo-site
         run: hugo --cleanDestinationDir --minify
 
       - name: Debug - verify build output
+        id: debug
         working-directory: hugo-site
         run: |
-          echo "=== Hugo version ==="
-          hugo version
-          echo "=== Series directory ==="
-          ls public/series/ | head -20
-          echo "=== Section page article counts ==="
+          echo "debug_hugo_version=$(hugo version)" >> $GITHUB_OUTPUT
+          echo "debug_series_dirs=$(ls public/series/ | tr '\n' ',')" >> $GITHUB_OUTPUT
+          SECTION_COUNTS=""
           for d in public/series/*/; do
-            if [ -f "${d}index.html" ]; then
-              count=$(grep -c 'post-entry\|entry-hint' "${d}index.html" 2>/dev/null || true)
-              echo "$(basename $d): $count articles"
-            fi
+            slug=$(basename "$d")
+            count=$(grep -c 'post-entry\|entry-hint' "${d}index.html" 2>/dev/null || echo "0")
+            SECTION_COUNTS="${SECTION_COUNTS}${slug}:${count},"
           done
-          echo "=== Posts remaining in content/posts ==="
-          find content/posts -name "*.md" | wc -l
+          echo "debug_section_counts=${SECTION_COUNTS}" >> $GITHUB_OUTPUT
+          echo "debug_posts_count=$(find content/posts -name '*.md' 2>/dev/null | wc -l)" >> $GITHUB_OUTPUT
+          echo "=== Build verification ==="
+          echo "Hugo: $(hugo version)"
+          echo "Series dirs: $(ls public/series/ | tr '\n' ' ')"
+          for d in public/series/*/; do
+            slug=$(basename "$d")
+            count=$(grep -c 'post-entry\|entry-hint' "${d}index.html" 2>/dev/null || echo "0")
+            echo "  $slug: $count articles"
+          done
+          echo "Posts remaining: $(find content/posts -name '*.md' 2>/dev/null | wc -l)"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
@@ -66,4 +70,5 @@ jobs:
     needs: build
     steps:
       - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
