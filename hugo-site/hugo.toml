@@ -10,7 +10,7 @@ summaryLength = 120
 buildFuture = true
 
 [taxonomies]
-  series = "series"
+  series = "columns"
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]

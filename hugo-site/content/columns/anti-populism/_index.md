@@ -1,6 +1,7 @@
 ---
 title: "反民粹与反邪"
 description: ""
+aliases: ["/series/anti-populism/"]
 banner: "/images/sections/anti-populism.png"
 bannerAlt: "反民粹与反邪栏目主题图"
 ---

@@ -1,6 +1,7 @@
 ---
 title: "儒家与正见"
 description: ""
+aliases: ["/series/confucian-framework/"]
 phase: "earth"
 phaseName: "土"
 phaseLabel: "土·正见"

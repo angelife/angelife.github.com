@@ -1,6 +1,7 @@
 ---
 title: "信息判断"
 description: ""
+aliases: ["/series/information-judgment/"]
 phase: "metal"
 phaseName: "金"
 phaseLabel: "金·判断"

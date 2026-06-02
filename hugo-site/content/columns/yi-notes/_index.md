@@ -1,6 +1,7 @@
 ---
 title: "易理笔记"
 description: ""
+aliases: ["/series/yi-notes/"]
 phase: "water"
 phaseName: "水"
 phaseLabel: "水·易理"

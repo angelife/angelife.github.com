@@ -1,6 +1,7 @@
 ---
 title: "蝉识录"
 description: ""
+aliases: ["/series/chan-shi-lu/"]
 phase: "wood"
 phaseName: "木"
 phaseLabel: "木·蝉识"

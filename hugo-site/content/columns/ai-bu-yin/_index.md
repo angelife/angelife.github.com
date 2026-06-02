@@ -1,6 +1,7 @@
 ---
 title: "AI补印"
 description: ""
+aliases: ["/series/ai-bu-yin/", "/series/ai-补印/", "/series/ai补印/"]
 phase: "fire"
 phaseName: "火"
 phaseLabel: "火·AI"
