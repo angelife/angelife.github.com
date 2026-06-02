@@ -41,46 +41,19 @@ jobs:
         env:
           HUGO_CACHEDIR: /tmp/hugo_cache
         run: |
-          echo "=== ENVIRONMENT ==="
           echo "Hugo: $(hugo version)"
-          echo "Commit: $(git rev-parse HEAD)"
-          echo ""
-          echo "=== TAXONOMY PAGE COUNTS (hugo list all) ==="
-          hugo list all 2>/dev/null | grep ',series,' | wc -l | xargs echo "Total series pages:"
-          hugo list all 2>/dev/null | grep ',series,' | grep 'information-judgment' | wc -l | xargs echo "  information-judgment articles:"
-          hugo list all 2>/dev/null | grep ',series,' | grep 'chan-shi-lu' | wc -l | xargs echo "  chan-shi-lu articles:"
-          hugo list all 2>/dev/null | grep ',series,' | grep 'confucian-framework' | wc -l | xargs echo "  confucian-framework articles:"
-          hugo list all 2>/dev/null | grep ',series,' | grep 'ai-bu-yin' | wc -l | xargs echo "  ai-bu-yin articles:"
-          hugo list all 2>/dev/null | grep ',series,' | grep 'yi-notes' | wc -l | xargs echo "  yi-notes articles:"
-          echo ""
-          echo "=== TAXONOMY INDEX HTML SIZES ==="
-          wc -c public/series/information-judgment/index.html 2>/dev/null || echo "  information-judgment/index.html: NOT FOUND"
-          wc -c public/series/chan-shi-lu/index.html 2>/dev/null || echo "  chan-shi-lu/index.html: NOT FOUND"
-          echo ""
-          echo "=== SERIES DIRECTORY FILES ==="
-          find content/series -name '*.md' | wc -l | xargs echo "  Total series .md files:"
-          for s in information-judgment chan-shi-lu confucian-framework ai-bu-yin yi-notes; do
-            count=$(find "content/series/$s" -name '*.md' 2>/dev/null | wc -l)
-            echo "    $s: $count files"
-          done
-          echo ""
-          echo "=== BUILD STATS ==="
-          find public -name '*.html' | wc -l | xargs echo "  Total HTML files:"
-          ls public/series/information-judgment/page/ 2>/dev/null | grep -v '1$' | wc -l | xargs echo "  information-judgment paginated pages:"
-          echo "=== WRITING DIAGNOSTIC PAGE ==="
-          hugo list all 2>/dev/null | grep ',series,' > /tmp/series_list.txt
-          IJ_COUNT=$(grep -c 'information-judgment' /tmp/series_list.txt || echo "0")
-          IJ_SIZE=$(wc -c < public/series/information-judgment/index.html 2>/dev/null || echo "0")
-          echo "=== CI DIAGNOSTIC ===" > public/_ci_diagnostic.txt
-          echo "Hugo: $(hugo version)" >> public/_ci_diagnostic.txt
-          echo "Commit: $(git rev-parse HEAD | cut -c1-7)" >> public/_ci_diagnostic.txt
-          echo "Series total lines: $(wc -l < /tmp/series_list.txt | tr -d ' ')" >> public/_ci_diagnostic.txt
-          echo "Lines with information-judgment: $IJ_COUNT" >> public/_ci_diagnostic.txt
-          echo "IJ index.html size: $IJ_SIZE bytes" >> public/_ci_diagnostic.txt
-          echo "" >> public/_ci_diagnostic.txt
-          echo "=== All series list ===" >> public/_ci_diagnostic.txt
-          cat /tmp/series_list.txt >> public/_ci_diagnostic.txt
-          echo "Diagnostic written: $(wc -c < public/_ci_diagnostic.txt) bytes, IJ count: $IJ_COUNT"
+          echo "Commit: $(git rev-parse HEAD | cut -c1-7)" || true
+          SERIES_COUNT=$(hugo list all 2>/dev/null | grep ',series,' | wc -l) || SERIES_COUNT=0
+          echo "Total series pages: $SERIES_COUNT"
+          echo "  information-judgment: $(hugo list all 2>/dev/null | grep 'information-judgment' | wc -l)"
+          echo "  chan-shi-lu: $(hugo list all 2>/dev/null | grep 'chan-shi-lu' | wc -l)"
+          echo "  confucian-framework: $(hugo list all 2>/dev/null | grep 'confucian-framework' | wc -l)"
+          echo "  ai-bu-yin: $(hugo list all 2>/dev/null | grep 'ai-bu-yin' | wc -l)"
+          echo "  yi-notes: $(hugo list all 2>/dev/null | grep 'yi-notes' | wc -l)"
+          echo "IJ index.html: $(wc -c < public/series/information-judgment/index.html 2>/dev/null || echo 0) bytes"
+          echo "Total HTML: $(find public -name '*.html' | wc -l)"
+          echo "IJ paginated pages: $(ls public/series/information-judgment/page/ 2>/dev/null | grep -v '1$' | wc -l)"
+          echo "DEBUG_DONE=true"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
