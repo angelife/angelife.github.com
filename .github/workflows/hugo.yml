@@ -68,8 +68,19 @@ jobs:
           find public -name '*.html' | wc -l | xargs echo "  Total HTML files:"
           ls public/series/information-judgment/page/ 2>/dev/null | grep -v '1$' | wc -l | xargs echo "  information-judgment paginated pages:"
           echo "=== WRITING DIAGNOSTIC PAGE ==="
-          python3 scripts/write_ci_diagnostic.py
-          echo "Diagnostic page written."
+          hugo list all 2>/dev/null | grep ',series,' > /tmp/series_list.txt
+          IJ_COUNT=$(grep -c 'information-judgment' /tmp/series_list.txt || echo "0")
+          IJ_SIZE=$(wc -c < public/series/information-judgment/index.html 2>/dev/null || echo "0")
+          echo "=== CI DIAGNOSTIC ===" > public/_ci_diagnostic.txt
+          echo "Hugo: $(hugo version)" >> public/_ci_diagnostic.txt
+          echo "Commit: $(git rev-parse HEAD | cut -c1-7)" >> public/_ci_diagnostic.txt
+          echo "Series total lines: $(wc -l < /tmp/series_list.txt | tr -d ' ')" >> public/_ci_diagnostic.txt
+          echo "Lines with information-judgment: $IJ_COUNT" >> public/_ci_diagnostic.txt
+          echo "IJ index.html size: $IJ_SIZE bytes" >> public/_ci_diagnostic.txt
+          echo "" >> public/_ci_diagnostic.txt
+          echo "=== All series list ===" >> public/_ci_diagnostic.txt
+          cat /tmp/series_list.txt >> public/_ci_diagnostic.txt
+          echo "Diagnostic written: $(wc -c < public/_ci_diagnostic.txt) bytes, IJ count: $IJ_COUNT"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
