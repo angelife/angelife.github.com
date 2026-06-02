@@ -11,6 +11,10 @@ buildFuture = true
 
 disablePathToLower = true
 
+[frontmatter]
+  categories = "keep"
+  series = "keep"
+
 [taxonomies]
   series = "series"
   categories = "categories"
