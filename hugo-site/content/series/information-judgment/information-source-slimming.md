@@ -4,7 +4,7 @@ date: 2026-05-27T01:50:00+08:00
 draft: false
 summary: "信息源不是越多越好。真正有价值的信息环境，应当减少噪音、提高密度，让注意力服务于长期判断。"
 tags: ["信息源", "注意力", "信息判断", "认知污染"]
-series: ["信息判断"]
+series: ["information-judgment"]
 slug: "information-source-slimming"
 ---
 

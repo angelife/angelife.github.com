@@ -4,7 +4,7 @@ date: 2026-05-27T01:00:00+08:00
 draft: false
 summary: "很多关系问题不是因为人不够善良，而是因为边界太弱。善意必须和规则、证据、距离配套。"
 tags: ["边界感", "处世", "关系", "心理成熟"]
-series: ["蝉识录"]
+series: ["chan-shi-lu"]
 slug: "boundary-first"
 ---
 

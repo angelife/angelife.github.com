@@ -8,7 +8,6 @@ enableRobotsTXT = true
 hasCJKLanguage = true
 summaryLength = 120
 buildFuture = true
-uglyURLs = true
 
 [taxonomies]
   series = "series"

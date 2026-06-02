@@ -4,7 +4,7 @@ date: 2026-05-27T01:30:00+08:00
 draft: false
 summary: "AI时代真正改变的不是某一个工具，而是普通人重新组织学习、判断和产出的方式。一个人能不能重新开局，取决于能否把工具纳入长期系统。"
 tags: ["AI时代", "个人成长", "系统化", "长期主义"]
-series: ["蝉识录"]
+series: ["chan-shi-lu"]
 slug: "ai-era-personal-restart"
 ---
 

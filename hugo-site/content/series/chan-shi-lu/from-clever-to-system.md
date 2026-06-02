@@ -4,7 +4,7 @@ date: 2026-05-27T01:40:00+08:00
 draft: false
 summary: "聪明可以解决一时问题，系统化才能产生长期复利。真正的成长，是从临场反应走向稳定结构。"
 tags: ["系统化", "认知升级", "长期积累", "作品"]
-series: ["蝉识录"]
+series: ["chan-shi-lu"]
 slug: "from-clever-to-system"
 images: ["/images/from-clever-to-system.png"]
 ---

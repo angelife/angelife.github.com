@@ -3,7 +3,7 @@ title: "AI 原生知识系统：从散乱材料到长期作品"
 date: 2026-05-26
 tags: ["蝉识录", "AI补印", "方法论", "网站发布"]
 categories: ["蝉识录"]
-series: ["蝉识录"]
+series: ["chan-shi-lu"]
 draft: false
 featured: true
 slug: "ai-native-knowledge-system"

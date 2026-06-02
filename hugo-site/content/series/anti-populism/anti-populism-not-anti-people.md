@@ -3,7 +3,7 @@ title: "反民粹，不反民众"
 date: 2026-05-26
 tags: ["反民粹", "反邪", "正见"]
 categories: ["反民粹与反邪"]
-series: ["反民粹与反邪"]
+series: ["anti-populism"]
 draft: false
 featured: true
 slug: "anti-populism-not-anti-people"

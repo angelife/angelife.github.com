@@ -3,7 +3,7 @@ title: "信息质量判断框架：先看来源，再看叙事"
 date: 2026-05-26
 tags: ["信息判断", "正见", "方法论"]
 categories: ["信息判断"]
-series: ["信息判断"]
+series: ["information-judgment"]
 draft: false
 featured: true
 slug: "information-quality-framework"
