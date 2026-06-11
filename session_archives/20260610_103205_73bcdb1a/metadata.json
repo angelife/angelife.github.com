@@ -1,0 +1,12 @@
+{
+  "session_id": "20260610_103205_73bcdb1a",
+  "when": "June 10, 2026 at 10:32 AM",
+  "source": "telegram",
+  "title": "Kindle固件更新排查 — 7z包损坏 & 固件源搜寻",
+  "snippet": "Kindle 3 固件更新排查。archive.org 7z包损坏（py7zr/ditto都解压失败），尝试从MobileRead帖子t=233932搜索固件附件（找到8个bin引用）。通过winbamstudios README找到KUAL+MKK下载源。最终切换思路直接评估Kindle当前状态。",
+  "bookend_start_count": 3,
+  "bookend_end_count": 0,
+  "full_messages_count": 0,
+  "archived_at": "2026-06-11T03:11:31.639669",
+  "match_message_id": null
+}

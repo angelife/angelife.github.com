@@ -1,0 +1,12 @@
+{
+  "session_id": "cron_48b63883d133_20260603_030100",
+  "when": "June 03, 2026 at 03:01 AM",
+  "source": "cron",
+  "title": "Session Memory Skill Invocation",
+  "snippet": "每日定时归档任务：归档 20260602_172419_0dfb05 和 cron_48b63883d133_20260602_030057，清理超30天归档（无删除）",
+  "bookend_start_count": 3,
+  "bookend_end_count": 3,
+  "full_messages_count": 0,
+  "archived_at": "2026-06-04T03:20:02.276142",
+  "match_message_id": null
+}

@@ -1,0 +1,12 @@
+{
+  "session_id": "20260610_040136_dd981966",
+  "when": "June 10, 2026 at 04:01 AM",
+  "source": "telegram",
+  "title": "接续Kindle K3越狱修复 — 证书过期诊断 & 文件传输",
+  "snippet": "Kindle K3 KUAL keystore过期诊断延续。确认7z包损坏，尝试从MobileRead t=233932找3.4.3固件。winbamstudios README不要求升级固件。Kindle当前有KUAL-KDK-1.0.azw2在documents/，无.bin在根目录。",
+  "bookend_start_count": 3,
+  "bookend_end_count": 3,
+  "full_messages_count": 0,
+  "archived_at": "2026-06-11T03:11:32.211993",
+  "match_message_id": null
+}
