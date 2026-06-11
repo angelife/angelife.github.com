@@ -2,6 +2,39 @@
 
 本文件用于 AI 接手时查看详细版本演化。公开版本摘要见 `/changelog/` 和 `hugo-site/data/changelog.yaml`。
 
+## v0.6.34｜CI 节点升级、series 定点还原与今日技术复盘
+
+日期：2026-06-02
+执行者：NVIDIA（Docker Hermes 独立实例，通过 GitHub SSH 克隆 repo 直接操作）
+发布方式：`.github/workflows/hugo.yml` 升级 + 文章新增 + changelog 更新 → git add → commit → push
+变更：
+
+**主线一：GitHub Actions 节点升级（消除 Node.js 20 弃用警告）**
+- `.github/workflows/hugo.yml`：`actions/upload-pages-artifact@v3` → `@v4`，`actions/deploy-pages@v4` → `@v5`
+- 原因：GitHub 公告 2026-06-16 强制执行 Node.js 24，v3/v4 使用 Node.js 20 的 Actions 将收到 deprecation 警告
+- `peaceiris/actions-hugo@v3` 保持 v0.147.4（已包含 Node 24 支持）
+
+**主线二：修复 CI working-directory 配置**
+- `.github/workflows/hugo.yml`：Build step 加入 `working-directory: hugo-site`
+- `.github/workflows/hugo.yml`：Upload artifact path 修正为 `hugo-site/public`
+- 根因：Hugo 项目位于 `hugo-site/` 子目录，CI 以前在 repo 根目录执行 `hugo`，等于对空目录编译，导致线上的 taxonomy 页面全部为空
+- 验证：本地 Hugo 0.147.4 构建，402 pages，0 errors，sitemap 收录 122 URL
+
+**主线三：mainSections 配置修复**
+- `hugo-site/hugo.toml`：在 `mainSections = ["columns", "posts"]` 中加入 `"series"`
+- 根因：PaperMod 主题按 mainSections 过滤内容，漏掉 "series" 导致 series taxonomy 页面全部为空
+
+**主线四：定点还原 series/ 下误删的 173 个 PRIMARY 档案**
+- 问题：误将 series/ 下的特製 PRIMARY 档案（与 posts/ 的 index.md MD5 不同，是专门为 series taxonomy 展示而特制的版本）判断为重复文件后批量删除
+- 抢救：使用 `git checkout fd8c614^ -- hugo-site/content/series/` 精准还原
+- 还原结果：information-judgment/ 97 个（96 articles + _index.md），chan-shi-lu/ 40 个，confucian-framework/ 20 个，ai-bu-yin/ 19 个，yi-notes/ 7 个，共 183 个 PRIMARY 档案完璧归位
+- 教训：判断「重复」必须比对 MD5，不能只凭「内容相似」或「目录重疊」
+
+**主线五：发布今日技术复盘文章**
+- `hugo-site/content/posts/2026-06-02-ci-recovery-and-taxonomy-fix/index.md`：新增 7000+ 字技术笔记
+- 记录：故障现场描述、CI 路径盲盒破案、mainSections 配置修复、误删抢修过程、定点还原原理
+- 沉淀四条核心教训：CI blind box、PRIMARY 档案判断准则、定点还原优于暴力回滚、mainSections 是生命线
+
 ## v0.6.33｜更新建站模式日志并补入项目总控流程图
 
 日期：2026-05-29
