@@ -1,160 +1,41 @@
 {{ define "main" }}
-<section class="home-page brand-home" aria-label="Angelife five phases home">
-  <section class="home-hero" aria-label="site introduction">
-    <div class="home-hero-inner">
-      <p class="panel-kicker">AI时代的正见与系统化</p>
-      <h1>决旧局，立乾道</h1>
-      <p class="home-hero__subtitle">以五行为骨架，以 AI 为炉火，以正见为根基，以作品为证。</p>
-      <p>这里记录一个人如何借助 AI 整理旧经验、重建知识系统、辨识信息环境与时代变化，并把散乱经验沉淀为可复用、可更新、可公开检验的长期作品。</p>
-      <div class="brand-actions" aria-label="primary link">
-        <a href="/about/">了解本站</a>
-      </div>
+<section class="home-page simple-home" aria-label="angelife home">
+  <div class="simple-header">
+    <h1>精于心，简于形</h1>
+    <p class="simple-subtitle">angelife / 安知生</p>
+  </div>
+
+  <div class="simple-content">
+    <div class="simple-section">
+      <h2>栏目</h2>
+      <ul class="simple-links">
+        <li><a href="/series/information-judgment/">金·判断</a></li>
+        <li><a href="/series/chan-shi-lu/">木·蝉识</a></li>
+        <li><a href="/series/yi-notes/">水·易理</a></li>
+        <li><a href="/series/ai-bu-yin/">火·AI</a></li>
+        <li><a href="/series/confucian-framework/">土·正见</a></li>
+        <li><a href="/series/anti-populism/">反民粹</a></li>
+      </ul>
     </div>
-  </section>
 
-  <section class="home-phase-grid" aria-label="five phase sections">
-    <a class="home-phase-card phase-metal" href="/series/information-judgment/">
-      <img class="home-phase-card__image" src="/images/sections/metal-judgment.png" alt="金·判断栏目图">
-      <div class="home-phase-card__body">
-        <strong>金·判断</strong>
-        <span>辨伪、裁断、边界、去噪</span>
-      </div>
-    </a>
-    <a class="home-phase-card phase-wood" href="/series/chan-shi-lu/">
-      <img class="home-phase-card__image" src="/images/sections/wood-growth.png" alt="木·蝉识栏目图">
-      <div class="home-phase-card__body">
-        <strong>木·蝉识</strong>
-        <span>生长、复盘、积累、系统化</span>
-      </div>
-    </a>
-    <a class="home-phase-card phase-water" href="/series/yi-notes/">
-      <img class="home-phase-card__image" src="/images/sections/water-yi.png" alt="水·易理栏目图">
-      <div class="home-phase-card__body">
-        <strong>水·易理</strong>
-        <span>流动、观察、变化、沉淀</span>
-      </div>
-    </a>
-    <a class="home-phase-card phase-fire" href="/series/ai-bu-yin/">
-      <img class="home-phase-card__image" src="/images/sections/fire-ai.png" alt="火·AI栏目图">
-      <div class="home-phase-card__body">
-        <strong>火·AI</strong>
-        <span>炼化、生成、工具、生产力</span>
-      </div>
-    </a>
-    <a class="home-phase-card phase-earth" href="/series/confucian-framework/">
-      <img class="home-phase-card__image" src="/images/sections/earth-right-view.png" alt="土·正见栏目图">
-      <div class="home-phase-card__body">
-        <strong>土·正见</strong>
-        <span>承载、秩序、落地、作品</span>
-      </div>
-    </a>
-  </section>
-
-  <section class="home-bottom-grid" aria-label="home summary panels">
-    <section class="home-phase-sections" aria-label="featured by phase">
-      <div class="section-heading">
-        <span></span>
-        <h2>各栏目精选</h2>
-        <span></span>
-      </div>
-
-      <div class="home-phase-section-grid">
-        {{ $metalPages := slice }}
-        {{ range site.RegularPages }}
-          {{ if or (hasPrefix .RelPermalink "/series/information-judgment/") (hasPrefix .RelPermalink "/series/anti-populism/") }}
-            {{ $metalPages = $metalPages | append . }}
-          {{ end }}
+    <div class="simple-section">
+      <h2>最新文章</h2>
+      <ul class="simple-posts">
+        {{ range first 10 (where site.RegularPages "Section" "posts") }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
         {{ end }}
-        <section class="home-phase-column phase-metal">
-          <h3>金·判断</h3>
-          {{ range first 3 (sort $metalPages "Date" "desc") }}
-          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-          {{ end }}
-          <a class="home-phase-column__more" href="/series/information-judgment/">查看全部文章</a>
-        </section>
+      </ul>
+    </div>
 
-        {{ $woodPages := slice }}
-        {{ range site.RegularPages }}
-          {{ if hasPrefix .RelPermalink "/series/chan-shi-lu/" }}
-            {{ $woodPages = $woodPages | append . }}
-          {{ end }}
-        {{ end }}
-        <section class="home-phase-column phase-wood">
-          <h3>木·蝉识</h3>
-          {{ range first 3 (sort $woodPages "Date" "desc") }}
-          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-          {{ end }}
-          <a class="home-phase-column__more" href="/series/chan-shi-lu/">查看全部文章</a>
-        </section>
-
-        {{ $waterPages := slice }}
-        {{ range site.RegularPages }}
-          {{ if hasPrefix .RelPermalink "/series/yi-notes/" }}
-            {{ $waterPages = $waterPages | append . }}
-          {{ end }}
-        {{ end }}
-        <section class="home-phase-column phase-water">
-          <h3>水·易理</h3>
-          {{ range first 3 (sort $waterPages "Date" "desc") }}
-          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-          {{ end }}
-          <a class="home-phase-column__more" href="/series/yi-notes/">查看全部文章</a>
-        </section>
-
-        {{ $firePages := slice }}
-        {{ range site.RegularPages }}
-          {{ if or (hasPrefix .RelPermalink "/series/ai-bu-yin/") (in (.Params.categories | default slice) "火·AI") }}
-            {{ $firePages = $firePages | append . }}
-          {{ end }}
-        {{ end }}
-        <section class="home-phase-column phase-fire">
-          <h3>火·AI</h3>
-          {{ range first 3 (sort $firePages "Date" "desc") }}
-          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-          {{ end }}
-          <a class="home-phase-column__more" href="/series/ai-bu-yin/">查看全部文章</a>
-        </section>
-
-        {{ $earthPages := slice }}
-        {{ range site.RegularPages }}
-          {{ if or (hasPrefix .RelPermalink "/series/confucian-framework/") (hasPrefix .RelPermalink "/projects/") }}
-            {{ $earthPages = $earthPages | append . }}
-          {{ end }}
-        {{ end }}
-        <section class="home-phase-column phase-earth">
-          <h3>土·正见</h3>
-          {{ range first 3 (sort $earthPages "Date" "desc") }}
-          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-          {{ end }}
-          <a class="home-phase-column__more" href="/series/confucian-framework/">查看全部文章</a>
-        </section>
-      </div>
-    </section>
-
-    {{ $latest := where site.RegularPages "Type" "in" (slice "series" "posts" "projects") }}
-    {{ if $latest }}
-    <section class="home-latest-voice" aria-label="latest voice">
-      <div class="section-heading">
-        <span></span>
-        <h2>最新发声</h2>
-        <span></span>
-      </div>
-      <p>持续整理旧材料，持续发布新文章，持续修正判断。</p>
-      <div class="latest-list">
-        {{ range first 8 $latest.ByDate.Reverse }}
-        <a href="{{ .RelPermalink }}">
-          <time>{{ .Date.Format "2006-01-02" }}</time>
-          <strong>{{ .Title }}</strong>
-        </a>
-        {{ end }}
-      </div>
-    </section>
-    {{ end }}
-
-    <section class="home-about-card" aria-label="about angelife">
-      <h2>关于本站</h2>
-      <p>安知生 angelife 是我的长期作品化之路。五行为骨架，AI 为炉火，正见为根基，系统而不玄。</p>
-    </section>
-  </section>
+    <div class="simple-section">
+      <h2>链接</h2>
+      <ul class="simple-links">
+        <li><a href="/about/">关于</a></li>
+        <li><a href="/changelog/">更新记录</a></li>
+        <li><a href="/kindle/">Kindle版</a></li>
+        <li><a href="/search/">搜索</a></li>
+      </ul>
+    </div>
+  </div>
 </section>
 {{ end }}
