@@ -1,6 +1,6 @@
 ---
-title: "精于心，简于形"
-description: "angelife / 安知生"
+title: "angelife / 安知生"
+description: ""
 ---
 
 ## 栏目
