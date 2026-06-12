@@ -1,41 +1,55 @@
 {{ define "main" }}
-<section class="home-page simple-home" aria-label="angelife home">
-  <div class="simple-header">
-    <h1>精于心，简于形</h1>
-    <p class="simple-subtitle">angelife / 安知生</p>
-  </div>
+{{- if (and site.Params.profileMode.enabled .IsHome) }}
+{{- partial "index_profile.html" . }}
+{{- else }}
+{{- if not .IsHome | and .Title }}
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+</header>
+{{- end }}
 
-  <div class="simple-content">
-    <div class="simple-section">
-      <h2>栏目</h2>
-      <ul class="simple-links">
-        <li><a href="/series/information-judgment/">金·判断</a></li>
-        <li><a href="/series/chan-shi-lu/">木·蝉识</a></li>
-        <li><a href="/series/yi-notes/">水·易理</a></li>
-        <li><a href="/series/ai-bu-yin/">火·AI</a></li>
-        <li><a href="/series/confucian-framework/">土·正见</a></li>
-        <li><a href="/series/anti-populism/">反民粹</a></li>
-      </ul>
-    </div>
+{{- if .Content }}
+<div class="post-content">
+  {{- if not (.Param "disableAnchoredHeadings") }}
+  {{- partial "anchored_headings.html" .Content -}}
+  {{- else }}{{ .Content }}{{ end }}
+</div>
+{{- end }}
 
-    <div class="simple-section">
-      <h2>最新文章</h2>
-      <ul class="simple-posts">
-        {{ range first 10 (where site.RegularPages "Section" "posts") }}
-        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-        {{ end }}
-      </ul>
-    </div>
+{{- $pages := union .RegularPages .Sections }}
+{{- if .IsHome }}
+{{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{- end }}
 
-    <div class="simple-section">
-      <h2>链接</h2>
-      <ul class="simple-links">
-        <li><a href="/about/">关于</a></li>
-        <li><a href="/changelog/">更新记录</a></li>
-        <li><a href="/kindle/">Kindle版</a></li>
-        <li><a href="/search/">搜索</a></li>
-      </ul>
-    </div>
-  </div>
-</section>
+{{- $paginator := .Paginate $pages }}
+
+{{- range $index, $page := $paginator.Pages }}
+{{- $class := "post-entry" }}
+<article class="{{ $class }}">
+  <header class="entry-header">
+    <h2>{{ .Title }}</h2>
+  </header>
+  <section class="entry-content">
+    <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}…{{ end }}</p>
+  </section>
+  <footer class="entry-footer">
+    <time>{{ .Date.Format "2006-01-02" }}</time>
+  </footer>
+  <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
+</article>
+{{- end }}
+
+{{- if gt $paginator.TotalPages 1 }}
+<footer class="page-footer">
+  <nav class="pagination">
+    {{- if $paginator.HasPrev }}
+    <a class="prev" href="{{ $paginator.Prev.URL }}">← 上一页</a>
+    {{- end }}
+    {{- if $paginator.HasNext }}
+    <a class="next" href="{{ $paginator.Next.URL }}">下一页 →</a>
+    {{- end }}
+  </nav>
+</footer>
+{{- end }}
+{{- end }}
 {{ end }}

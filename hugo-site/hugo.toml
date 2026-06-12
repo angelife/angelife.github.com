@@ -34,12 +34,11 @@ disablePathToLower = true
 
 [params]
   defaultTheme = "light"
-  ShowReadingTime = true
-  ShowBreadCrumbs = true
-  ShowPostNavLinks = true
-  ShowCodeCopyButtons = true
+  ShowBreadCrumbs = false
+  ShowPostNavLinks = false
+  ShowCodeCopyButtons = false
   DateFormat = "2006-01-02"
-  mainSections = ["columns", "posts", "series"]
+  mainSections = ["posts"]
 
   [params.fuseOpts]
     keys = ["title", "permalink", "summary", "content", "tags", "categories"]

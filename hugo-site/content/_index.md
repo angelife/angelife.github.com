@@ -1,18 +1,20 @@
 ---
-title: "安知生 angelife"
-description: "AI时代的正见与系统化"
+title: "精于心，简于形"
+description: "angelife / 安知生"
 ---
 
-这里记录一个人如何借助 AI 整理旧经验、重建知识系统、辨识信息环境与时代变化，并把散乱经验沉淀为可复用的方法论。
+## 栏目
 
-儒家为体，AI 为用，易理为象，技术为器，作品为证。
+[金·判断](/series/information-judgment/)
+[木·蝉识](/series/chan-shi-lu/)
+[水·易理](/series/yi-notes/)
+[火·AI](/series/ai-bu-yin/)
+[土·正见](/series/confucian-framework/)
+[反民粹](/series/anti-populism/)
 
-## 从旧材料到正式作品
+## 链接
 
-所有原始材料先进入 Inbox，经 AI 初步分类、摘要与提炼后，沉入 Obsidian 主知识库；成熟内容再整理为发布稿，最终发布到 Hugo，并由 Git 保存版本。
-
-1. `00_inbox`：原始材料入口
-2. AI 初炼：分类、摘要、提炼、打标签
-3. Obsidian 主库：长期沉淀和交叉连接
-4. `60_网站发布稿`：筛选成熟内容，整理为文章
-5. Hugo 发布：公开呈现，Git 保存版本
+[关于](/about/)
+[更新记录](/changelog/)
+[Kindle版](/kindle/)
+[搜索](/search/)
