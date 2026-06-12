@@ -1,0 +1,12 @@
+{
+  "session_id": "20260611_031835_7fe0d3",
+  "when": "June 11, 2026 at 03:00 AM",
+  "source": "cron",
+  "title": "session-archive-daily — 归档最近会话 (2026-06-11)",
+  "snippet": "Previous daily cron archive run. Archived 4 sessions and cleaned up old archives. Parent session: cron_48b63883d133_20260611_030005. 20 messages.",
+  "bookend_start_count": 3,
+  "bookend_end_count": 3,
+  "full_messages_count": 0,
+  "archived_at": "2026-06-12T03:19:56.938431",
+  "match_message_id": 14280
+}
