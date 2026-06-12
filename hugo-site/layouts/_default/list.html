@@ -31,7 +31,6 @@
 
 {{- range $index, $page := $paginator.Pages }}
 <article class="post-entry-simple">
-  <time>{{ $page.Date.Format "2006-01-02" }}</time>
   <a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a>
 </article>
 {{- end }}
