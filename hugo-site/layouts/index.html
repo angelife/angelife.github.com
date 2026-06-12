@@ -1,55 +1,26 @@
 {{ define "main" }}
-{{- if (and site.Params.profileMode.enabled .IsHome) }}
-{{- partial "index_profile.html" . }}
-{{- else }}
-{{- if not .IsHome | and .Title }}
-<header class="page-header">
-  <h1>{{ .Title }}</h1>
-</header>
-{{- end }}
-
-{{- if .Content }}
-<div class="post-content">
-  {{- if not (.Param "disableAnchoredHeadings") }}
-  {{- partial "anchored_headings.html" .Content -}}
-  {{- else }}{{ .Content }}{{ end }}
-</div>
-{{- end }}
-
-{{- $pages := union .RegularPages .Sections }}
-{{- if .IsHome }}
-{{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
-{{- end }}
-
-{{- $paginator := .Paginate $pages }}
-
-{{- range $index, $page := $paginator.Pages }}
-{{- $class := "post-entry" }}
-<article class="{{ $class }}">
-  <header class="entry-header">
-    <h2>{{ .Title }}</h2>
-  </header>
-  <section class="entry-content">
-    <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}…{{ end }}</p>
-  </section>
-  <footer class="entry-footer">
-    <time>{{ .Date.Format "2006-01-02" }}</time>
-  </footer>
-  <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
+<article class="home-simple">
+  <div class="home-simple-inner">
+    <h1 class="home-simple-title">精于心，简于形</h1>
+    <p class="home-simple-sub">angelife / 安知生</p>
+    <nav class="home-simple-nav">
+      <a href="/series/information-judgment/">金·判断</a>
+      <a href="/series/chan-shi-lu/">木·蝉识</a>
+      <a href="/series/yi-notes/">水·易理</a>
+      <a href="/series/ai-bu-yin/">火·AI</a>
+      <a href="/series/confucian-framework/">土·正见</a>
+      <a href="/series/anti-populism/">反民粹</a>
+      <a href="/categories/日课/">日课</a>
+    </nav>
+    <nav class="home-simple-nav home-simple-nav2">
+      <a href="/about/">关于</a>
+      <a href="/changelog/">更新</a>
+      <a href="/kindle/">Kindle版</a>
+      <a href="/search/">搜索</a>
+    </nav>
+    <footer class="home-simple-footer">
+      &copy; 2009–2026 angelife / 安知生
+    </footer>
+  </div>
 </article>
-{{- end }}
-
-{{- if gt $paginator.TotalPages 1 }}
-<footer class="page-footer">
-  <nav class="pagination">
-    {{- if $paginator.HasPrev }}
-    <a class="prev" href="{{ $paginator.Prev.URL }}">← 上一页</a>
-    {{- end }}
-    {{- if $paginator.HasNext }}
-    <a class="next" href="{{ $paginator.Next.URL }}">下一页 →</a>
-    {{- end }}
-  </nav>
-</footer>
-{{- end }}
-{{- end }}
 {{ end }}

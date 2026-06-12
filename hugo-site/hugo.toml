@@ -37,6 +37,7 @@ disablePathToLower = true
   ShowBreadCrumbs = false
   ShowPostNavLinks = false
   ShowCodeCopyButtons = false
+  ShowReadingTime = false
   DateFormat = "2006-01-02"
   mainSections = ["posts"]
 
