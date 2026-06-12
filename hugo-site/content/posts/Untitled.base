@@ -1,6 +1,9 @@
 views:
   - type: table
     name: Table
+    groupBy:
+      property: file.ext
+      direction: ASC
     order:
       - file.name
       - file.ctime
@@ -8,5 +11,3 @@ views:
     sort:
       - property: file.mtime
         direction: ASC
-      - property: file.ctime
-        direction: DESC
