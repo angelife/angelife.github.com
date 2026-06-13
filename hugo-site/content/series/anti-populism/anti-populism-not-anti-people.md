@@ -5,6 +5,9 @@ tags: ["反民粹", "反邪", "正见"]
 categories: ["反民粹与反邪"]
 series: ["anti-populism"]
 draft: false
+cover:
+  image: /images/posts/anti-populism-not-anti-people/cover.png
+  alt: 反民粹，不反民众
 featured: true
 slug: "anti-populism-not-anti-people"
 summary: "反民粹不是反普通人，而是反对把真实痛苦加工成仇恨、把复杂问题简化成敌我动员、把民众当作情绪燃料。"

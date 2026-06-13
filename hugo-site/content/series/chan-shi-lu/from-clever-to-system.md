@@ -2,6 +2,9 @@
 title: "从聪明到系统化：真正的分水岭"
 date: 2026-05-27T01:40:00+08:00
 draft: false
+cover:
+  image: /images/posts/from-clever-to-system/cover.png
+  alt: 从聪明到系统化：真正的分水岭
 summary: "聪明可以解决一时问题，系统化才能产生长期复利。真正的成长，是从临场反应走向稳定结构。"
 tags: ["系统化", "认知升级", "长期积累", "作品"]
 series: ["chan-shi-lu"]

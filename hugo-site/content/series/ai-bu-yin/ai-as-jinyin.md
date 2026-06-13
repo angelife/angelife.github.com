@@ -5,6 +5,9 @@ tags: ["AI补印", "方法论", "Obsidian"]
 categories: ["AI补印"]
 series: ["ai-bu-yin"]
 draft: false
+cover:
+  image: /images/posts/ai-as-jinyin/cover.png
+  alt: AI 补印：把 AI 当作后天系统能力
 featured: true
 slug: "ai-as-jinyin"
 summary: "AI 补印不是炫技，而是把 AI 当作后天补足认知、资料、表达和复盘能力的系统工具，让散乱经验能够持续沉淀。"

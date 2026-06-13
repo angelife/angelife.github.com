@@ -2,6 +2,9 @@
 title: "公共理性：反操弄，而不是反普通人"
 date: 2026-05-27T01:00:00+08:00
 draft: false
+cover:
+  image: /images/posts/public-reason-against-manipulation/cover.png
+  alt: 公共理性：反操弄，而不是反普通人
 summary: "反操弄的核心不是轻视普通人，而是拒绝把普通人的痛苦加工成仇恨、口号和敌我动员。"
 tags: ["公共理性", "反操弄", "民粹", "信息判断"]
 series: ["anti-populism"]

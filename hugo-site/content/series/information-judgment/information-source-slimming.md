@@ -2,6 +2,9 @@
 title: "信息源瘦身：为什么关注少一点，判断力更强"
 date: 2026-05-27T01:50:00+08:00
 draft: false
+cover:
+  image: /images/posts/information-source-slimming/cover.png
+  alt: 信息源瘦身：为什么关注少一点，判断力更强
 summary: "信息源不是越多越好。真正有价值的信息环境，应当减少噪音、提高密度，让注意力服务于长期判断。"
 tags: ["信息源", "注意力", "信息判断", "认知污染"]
 series: ["information-judgment"]

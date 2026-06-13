@@ -13,7 +13,7 @@ tags:
   - 教程
 series: []
 cover:
-  image: /images/posts/default-kindle.png
+  image: /images/posts/kindle-k3w-koreader-2026/cover.png
   alt: "Kindle Keyboard K3W 与 KOReader"
 ---
 

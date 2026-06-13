@@ -2,6 +2,9 @@
 title: "AI时代，一个普通人的重新开局"
 date: 2026-05-27T01:30:00+08:00
 draft: false
+cover:
+  image: /images/posts/ai-era-personal-restart/cover.png
+  alt: AI时代，一个普通人的重新开局
 summary: "AI时代真正改变的不是某一个工具，而是普通人重新组织学习、判断和产出的方式。一个人能不能重新开局，取决于能否把工具纳入长期系统。"
 tags: ["AI时代", "个人成长", "系统化", "长期主义"]
 series: ["chan-shi-lu"]

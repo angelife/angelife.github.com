@@ -2,6 +2,9 @@
 title: "结丹隐喻：从散乱经验到稳定内核"
 date: 2026-05-27T01:00:00+08:00
 draft: false
+cover:
+  image: /images/posts/jiedan-as-inner-system/cover.png
+  alt: 结丹隐喻：从散乱经验到稳定内核
 summary: "把结丹作为成长隐喻，它指的不是神秘体验，而是一个人开始形成稳定、可积累、可输出的内在系统。"
 tags: ["修行隐喻", "结丹", "系统化", "作品"]
 series: ["chan-shi-lu"]

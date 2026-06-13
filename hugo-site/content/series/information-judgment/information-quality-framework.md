@@ -5,6 +5,9 @@ tags: ["信息判断", "正见", "方法论"]
 categories: ["信息判断"]
 series: ["information-judgment"]
 draft: false
+cover:
+  image: /images/posts/information-quality-framework/cover.png
+  alt: 信息质量判断框架：先看来源，再看叙事
 featured: true
 slug: "information-quality-framework"
 summary: "判断信息质量不能只看观点是否顺耳，而要看来源、证据、叙事方式、利益位置和纠错机制。真正好的信息源，经得起追问。"

@@ -5,6 +5,9 @@ tags: ["儒家", "正见", "AI补印", "方法论"]
 categories: ["儒家与正见"]
 series: ["confucian-framework"]
 draft: false
+cover:
+  image: /images/posts/confucianism-as-base-ai-as-use/cover.png
+  alt: 儒家为体，AI 为用
 featured: true
 slug: "confucianism-as-base-ai-as-use"
 summary: "技术可以提高效率，但不能替人安放价值。儒家为体、AI 为用，是让工具服务于正见，而不是让效率放大偏见。"

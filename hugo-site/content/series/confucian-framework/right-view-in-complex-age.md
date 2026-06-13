@@ -2,6 +2,9 @@
 title: "不失正见：复杂时代的个人守则"
 date: 2026-05-27T01:00:00+08:00
 draft: false
+cover:
+  image: /images/posts/right-view-in-complex-age/cover.png
+  alt: 不失正见：复杂时代的个人守则
 summary: "复杂时代最难的不是获得信息，而是在信息、情绪和利益之间保持事实感、边界感和作品感。"
 tags: ["正见", "儒家框架", "复杂时代", "判断力"]
 series: ["confucian-framework"]

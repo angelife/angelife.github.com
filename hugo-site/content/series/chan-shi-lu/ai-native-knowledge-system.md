@@ -5,6 +5,9 @@ tags: ["蝉识录", "AI补印", "方法论", "网站发布"]
 categories: ["蝉识录"]
 series: ["chan-shi-lu"]
 draft: false
+cover:
+  image: /images/posts/ai-native-knowledge-system/cover.png
+  alt: AI 原生知识系统：从散乱材料到长期作品
 featured: true
 slug: "ai-native-knowledge-system"
 summary: "这篇文章讨论如何把聊天记录、旧笔记、网页摘录、读书笔记和临时灵感，通过 AI、Obsidian、Hugo 与 Git 整理成可检索、可复盘、可发布的长期知识资产。"

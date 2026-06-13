@@ -17,7 +17,7 @@ tags:
   - "高反馈环境"
   - "知识系统"
 cover:
-  image: "cover.png"
+  image: "/images/posts/chatgpt-daily-progress-feedback-system/cover.png"
   alt: "ChatGPT 作为个人成长的高反馈系统"
   caption: "让经验不再散掉"
   relative: true

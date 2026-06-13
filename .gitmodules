@@ -1,3 +1,6 @@
 [submodule "hugo-site/themes/PaperMod"]
 	path = hugo-site/themes/PaperMod
 	url = https://github.com/adityatelange/hugo-PaperMod.git
+[submodule "hugo-site/themes/polk-x"]
+	path = hugo-site/themes/polk-x
+	url = https://github.com/leviathan0992/hugo-theme-polk-x.git

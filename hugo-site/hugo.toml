@@ -1,8 +1,10 @@
 baseURL = "https://angelife.github.io/"
 languageCode = "zh-cn"
 title = "安知生 angelife"
-theme = "PaperMod"
+theme = "polk-x"
 copyright = "© 2009–2026 angelife / 安知生"
+
+mainSections = ["columns", "posts", "series"]
 
 enableRobotsTXT = true
 hasCJKLanguage = true
@@ -39,7 +41,6 @@ disablePathToLower = true
   ShowCodeCopyButtons = false
   ShowReadingTime = false
   DateFormat = "2006-01-02"
-  mainSections = ["posts"]
 
   [params.fuseOpts]
     keys = ["title", "permalink", "summary", "content", "tags", "categories"]
@@ -61,65 +62,9 @@ disablePathToLower = true
     lang = "zh-CN"
     loading = "lazy"
 
-[[menu.main]]
-  identifier = "phase-metal"
-  name = "金·判断"
-  url = "/series/information-judgment/"
-  weight = 10
-
-[[menu.main]]
-  identifier = "phase-wood"
-  name = "木·蝉识"
-  url = "/series/chan-shi-lu/"
-  weight = 20
-
-[[menu.main]]
-  identifier = "phase-water"
-  name = "水·易理"
-  url = "/series/yi-notes/"
-  weight = 30
-
-[[menu.main]]
-  identifier = "phase-fire"
-  name = "火·AI"
-  url = "/series/ai-bu-yin/"
-  weight = 40
-
-[[menu.main]]
-  identifier = "phase-earth"
-  name = "土·正见"
-  url = "/series/confucian-framework/"
-  weight = 50
-
-[[menu.main]]
-  identifier = "phase-anti-populism"
-  name = "反民粹"
-  url = "/series/anti-populism/"
-  weight = 15
-
-[[menu.main]]
-  identifier = "daily"
-  name = "日课"
-  url = "/categories/日课/"
-  weight = 60
-
-[[menu.main]]
-  identifier = "kindle"
-  name = "Kindle版"
-  url = "/kindle/"
-  weight = 75
-
-[[menu.main]]
-  identifier = "search"
-  name = "搜索"
-  url = "/search/"
-  weight = 80
-
-[[menu.main]]
-  identifier = "changelog"
-  name = "更新"
-  url = "/changelog/"
-  weight = 70
+# Menu removed — homepage is a garden entry, not a blog
+# Five-element navigation is in the homepage template
+# Footer has minimal links (archives, search, about)
 
 [markup]
   [markup.goldmark]

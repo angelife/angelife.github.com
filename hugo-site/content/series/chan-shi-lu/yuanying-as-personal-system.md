@@ -2,6 +2,9 @@
 title: "元婴隐喻：从个人作品到个人系统"
 date: 2026-05-27T01:00:00+08:00
 draft: false
+cover:
+  image: /images/posts/yuanying-as-personal-system/cover.png
+  alt: 元婴隐喻：从个人作品到个人系统
 summary: "如果结丹是形成核心作品，那么元婴就是形成能自我生长的个人系统。"
 tags: ["修行隐喻", "元婴", "个人系统", "长期作品"]
 series: ["chan-shi-lu"]

@@ -1,485 +1,339 @@
-/* angelife Kindle Paperwhite / 电子墨水屏阅读模式
-   ================================================
-   激活条件：body.kindle-mode（KindlePage output format 自动加载）
-   - /kindle/ 目录页：纯文字文章列表
-   - /kindle/posts/<slug>/：电子书正文页
-   不依赖 JS，不依赖 monochrome 媒体查询 */
+/* angelife 阅读版 — 极简风格 */
 
-/* ===== 1. Kindle 模式全局重置 ===== */
-body.kindle-mode {
-  background: #fff !important;
-  color: #000 !important;
-  font-family: Georgia, "Times New Roman", "Noto Serif SC", serif;
-  max-width: 100% !important;
-  padding: 0 !important;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  color: #233;
+  background: #fff;
 }
 
-/* ===== 2. 去掉所有装饰性元素 ===== */
-body.kindle-mode * {
-  box-shadow: none !important;
-  text-shadow: none !important;
-  animation: none !important;
-  transition: none !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  border-radius: 0 !important;
-  background-image: none !important;
+html, body, .container {
+  height: 100%;
 }
 
-body.kindle-mode img,
-body.kindle-mode .cover,
-body.kindle-mode .post-cover,
-body.kindle-mode .entry-cover,
-body.kindle-mode .home-hero,
-body.kindle-mode .home-phase-card__image,
-body.kindle-mode .section-banner,
-body.kindle-mode .decorative,
-body.kindle-mode .brand-actions {
-  display: none !important;
-}
-
-body.kindle-mode .home-hero,
-body.kindle-mode .home-phase-card,
-body.kindle-mode .home-about-card,
-body.kindle-mode section[class*="home-"] {
-  background: none !important;
-  background-color: #fff !important;
-}
-
-/* ===== 3. 隐藏干扰组件 ===== */
-body.kindle-mode .share-buttons,
-body.kindle-mode .comments,
-body.kindle-mode #comments,
-body.kindle-mode .giscus,
-body.kindle-mode .toc,
-body.kindle-mode #TableOfContents,
-body.kindle-mode .post-tags,
-body.kindle-mode .tag-entry,
-body.kindle-mode .paginav,
-body.kindle-mode .post-edit,
-body.kindle-mode .home-info,
-body.kindle-mode .home-phase-grid,
-body.kindle-mode .home-bottom-grid,
-body.kindle-mode .home-phase-sections,
-body.kindle-mode .home-phase-section-grid,
-body.kindle-mode .home-phase-column,
-body.kindle-mode .home-latest-voice,
-body.kindle-mode .home-about-card,
-body.kindle-mode .panel-kicker,
-body.kindle-mode .section-heading,
-body.kindle-mode .phase-badge,
-body.kindle-mode .theme-toggle,
-body.kindle-mode #theme-toggle {
-  display: none !important;
-}
-
-/* ===== 4. 简化导航 ===== */
-body.kindle-mode .nav {
-  background: #fff !important;
-  border-bottom: 1px solid #ccc !important;
-  padding: 0.4em 0.8em !important;
-}
-
-body.kindle-mode .logo a {
-  color: #000 !important;
-  text-decoration: none !important;
-  font-weight: bold;
-  font-size: 1.1em;
-}
-
-body.kindle-mode .menu {
-  display: none !important;
-}
-
-/* ===== 5. 主内容区：电子书页风格 ===== */
-body.kindle-mode .main,
-body.kindle-mode main {
-  max-width: 42em !important;
-  margin: 0 auto !important;
-  padding: 0.8em 1em 2em !important;
-  float: none !important;
-  width: auto !important;
-  background: #fff !important;
-}
-
-body.kindle-mode .post-content,
-body.kindle-mode .kindle-article-content {
-  font-size: 21px !important;
-  line-height: 1.85 !important;
-  color: #000 !important;
-}
-
-body.kindle-mode p,
-body.kindle-mode .kindle-article-content p {
-  margin: 1.15em 0;
-}
-
-body.kindle-mode h1,
-body.kindle-mode h2,
-body.kindle-mode h3,
-body.kindle-mode h4 {
-  font-weight: bold !important;
-  color: #000 !important;
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
-  border: none !important;
-}
-
-body.kindle-mode h1 { font-size: 1.6em; }
-body.kindle-mode h2 { font-size: 1.35em; }
-body.kindle-mode h3 { font-size: 1.15em; }
-body.kindle-mode h4 { font-size: 1.05em; }
-
-body.kindle-mode blockquote {
-  border-left: 3px solid #000 !important;
-  background: none !important;
-  color: #000 !important;
-  padding-left: 1em;
-  margin: 1em 0;
-  font-style: italic;
-}
-
-body.kindle-mode code {
-  background: #f0f0f0 !important;
-  color: #000 !important;
-  font-size: 0.88em;
-  border: 1px solid #bbb;
-  padding: 0.08em 0.3em;
-}
-
-body.kindle-mode pre {
-  background: #f5f5f5 !important;
-  border: 1px solid #aaa;
-  color: #000 !important;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  font-size: 0.82em;
-  padding: 0.8em;
-  line-height: 1.5;
-  font-family: "Courier New", Courier, monospace;
-}
-
-body.kindle-mode table {
-  overflow-x: auto;
-  display: block;
-  border-collapse: collapse;
-  font-size: 0.9em;
-}
-
-body.kindle-mode th,
-body.kindle-mode td {
-  border: 1px solid #666;
-  padding: 0.3em 0.6em;
-}
-
-body.kindle-mode hr {
-  border: none;
-  border-top: 1px solid #888;
-  margin: 1.5em 0;
-}
-
-/* ===== 6. 链接 ===== */
-body.kindle-mode a {
-  color: #000 !important;
-  text-decoration: underline !important;
-  text-underline-offset: 0.16em;
-  text-decoration-thickness: 1px;
-}
-
-body.kindle-mode a:hover,
-body.kindle-mode a:focus {
-  color: #000 !important;
-  text-decoration: underline !important;
-}
-
-/* ===== 7. 面包屑 ===== */
-body.kindle-mode .breadcrumbs {
-  display: none !important;
-}
-
-/* ===== 8. 文章元数据 ===== */
-body.kindle-mode .post-meta,
-body.kindle-mode .entry-footer {
-  font-size: 0.85em;
-  color: #333 !important;
-}
-
-/* ===== 9. 隐藏首页复杂区块 ===== */
-body.kindle-mode .home-page.brand-home section:not(.kindle-page) {
-  display: none !important;
-}
-
-/* ============================================================
-   Kindle 通用组件
-   ============================================================ */
-
-/* Kindle 顶栏：站点名 / 版块名 */
-.kindle-topbar {
-  max-width: 42em;
-  margin: 0.5em auto 0;
-  padding: 0.4em 0.8em;
-  border-bottom: 1px solid #ccc;
-  font-size: 0.9em;
-}
-
-.kindle-topbar-site a,
-.kindle-topbar-section a {
+a {
   color: #000;
   text-decoration: none;
 }
 
-.kindle-topbar-site a:hover,
-.kindle-topbar-section a:hover {
-  text-decoration: underline;
+a:hover {
+  color: #0065b3;
 }
 
-.kindle-topbar-sep {
-  color: #999;
-  margin: 0 0.3em;
+/* ===== 首页居中 ===== */
+.home {
+  display: table;
+  width: 100%;
+  height: 100%;
 }
 
-.kindle-topbar-section {
-  color: #333;
-}
-
-/* Kindle 页脚 */
-.kindle-footer {
-  max-width: 42em;
-  margin: 0 auto;
-  padding: 1em 0.8em 2em;
-  border-top: 1px solid #ddd;
+.home .info {
+  display: table-cell;
+  vertical-align: middle;
   text-align: center;
-  font-size: 0.85em;
 }
 
-.kindle-footer p {
-  margin: 0.3em 0;
+.home .info .logo {
+  font-size: 2em;
+  font-weight: bold;
 }
 
-.kindle-footer a {
+.home .info .subtitle {
+  font-size: 1em;
+  color: #808080;
+}
+
+.home .info .sns {
+  margin: 1em auto;
+}
+
+.home .info .sns a {
+  width: 55px;
+  color: #999;
+  display: inline-block;
+}
+
+.home .info .sns a:hover {
   color: #000;
-  text-decoration: underline;
 }
 
-.kindle-footer-copy {
+.home .info footer {
+  border: 0;
+  color: #000;
+  padding: 0;
+}
+
+/* ===== 内页头部 ===== */
+.header {
+  margin-bottom: 3em;
+  padding: 0 20px;
+}
+
+.header .blog-title {
+  font-size: 2em;
+  text-align: center;
+  padding-top: 0.5em;
+}
+
+.header .blog-title .logo {
+  font-size: 1em;
+  font-weight: bold;
+  color: #000;
+}
+
+.header .subtitle {
+  font-size: 14px;
+  color: #808080;
+}
+
+.header .menu {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #ccc;
+  margin-top: 20px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.header .menu .menu-item {
+  display: inline-block;
+}
+
+.header .menu .menu-item-link {
+  color: #999;
+}
+
+.header .menu .menu-item-link:hover {
+  color: #000;
+}
+
+/* ===== 归档列表 ===== */
+.archive {
+  padding: 0 20px;
+  margin-bottom: 1em;
+}
+
+.archive .post-archive {
+  list-style: none;
+  padding: 0;
+}
+
+.archive .post-archive .post-item {
+  margin: 6px 0;
+  line-height: 1.5;
+}
+
+.archive .post-archive .post-item .post-date {
+  float: right;
+  color: #999;
+}
+
+.archive .post-archive .post-item .post-title {
+  border-bottom: 0 dashed;
+}
+
+.archive .post-archive .post-item .post-title:hover {
+  border-bottom: 1px solid;
+}
+
+/* ===== 文章页 ===== */
+.post {
+  padding: 0 20px;
+}
+
+.post img {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+
+.post table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.post table td,
+.post table th {
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+}
+
+.post hr {
+  margin: 1.5em 0;
+}
+
+.post .post-content {
+  text-align: justify;
+}
+
+.post .post-content a {
+  color: #0065b3;
+}
+
+.post .post-content a:hover {
+  border-bottom: 1px solid;
+}
+
+.post .post-content ul,
+.post .post-content ol {
+  text-align: left;
+  padding-left: 2em;
+}
+
+.post .post-content ul li,
+.post .post-content ol li {
+  line-height: 1.5em;
+  margin-bottom: 0.5em;
+  font-size: 0.9em;
+}
+
+.post blockquote {
+  margin: 0;
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.post pre {
+  font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+  margin: 0;
+  overflow: auto;
+  line-height: 1.8;
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+}
+
+.post code {
+  background: #f7f7f7;
+  border: 1px solid #d6d6d6;
+  border-radius: 3px;
+  font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 85%;
+  margin: 3px;
+  padding: 0px 4px;
+}
+
+.post p {
+  line-height: 1.7em;
+}
+
+/* ===== 文章标题 ===== */
+.article-title {
+  margin-top: 10px;
+  font-size: 2em;
+  line-height: 1.2em;
+}
+
+.article-subtitle {
+  margin-top: -20px;
+  margin-bottom: 20px;
+  color: #808080;
+  font-size: 0.9em;
+}
+
+/* ===== 封面图 ===== */
+.post-cover {
+  margin: 1em 0;
+}
+
+.post-cover img {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+  border: 1px solid #eee;
+}
+
+/* ===== 页脚 ===== */
+footer {
+  margin: 0.5em 20px 0 20px;
+  border-top: 3px double #ccc;
+  padding: 1em 0 1em 0;
+  font-size: 80%;
   color: #888;
 }
 
-/* ============================================================
-   Kindle 目录页（/kindle/）专用样式
-   ============================================================ */
-
-.kindle-page {
-  max-width: 42em;
-  margin: 0 auto;
-  padding: 0.5em 0.8em 2em;
+footer .author {
+  color: #000;
 }
 
-.kindle-page-header {
-  margin-bottom: 1.2em;
-  border-bottom: 2px solid #000;
-  padding-bottom: 0.6em;
+/* ===== 搜索 ===== */
+#searchbox {
+  max-width: 500px;
+  margin: 1em 0;
 }
 
-.kindle-page-title {
-  font-size: 1.8em;
-  font-weight: bold;
-  margin: 0 0 0.2em;
+#searchInput {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-family: inherit;
+  box-sizing: border-box;
 }
 
-.kindle-page-description {
-  font-size: 0.95em;
-  color: #333;
+#searchInput:focus {
+  outline: none;
+  border-color: #999;
+}
+
+#searchResults {
+  list-style: none;
+  padding: 0;
+  margin: 1em 0;
+}
+
+#searchResults .post-item {
+  margin: 6px 0;
   line-height: 1.5;
 }
 
-/* Kindle 文章列表（目录页） */
-.kindle-article-list {
-  margin: 1.5em 0;
-}
-
-.kindle-entry {
-  border-bottom: 1px solid #ddd;
-  padding: 1em 0;
-}
-
-.kindle-entry h2 {
-  font-size: 1.25em;
-  margin: 0 0 0.25em;
-  font-weight: bold;
-}
-
-.kindle-entry h2 a {
+#searchResults .post-title {
   color: #000;
   text-decoration: none;
 }
 
-.kindle-entry h2 a:hover {
-  text-decoration: underline;
+#searchResults .post-title:hover {
+  border-bottom: 1px solid;
 }
 
-.kindle-entry-meta {
-  font-size: 0.82em;
-  color: #555;
-  margin-bottom: 0.4em;
+#searchResults .post-date {
+  float: right;
+  color: #999;
 }
 
-.kindle-entry-meta time {
-  margin-right: 0.6em;
-}
-
-.kindle-entry-summary {
-  font-size: 0.92em;
-  color: #222;
-  line-height: 1.55;
-  margin: 0.3em 0;
-}
-
-.kindle-read-link {
-  display: inline-block;
-  font-size: 0.85em;
-  color: #000;
-  text-decoration: underline;
-  margin-top: 0.2em;
-}
-
-/* ============================================================
-   Kindle 文章页（/kindle/posts/<slug>/）专用样式
-   ============================================================ */
-
-.kindle-article {
-  max-width: 42em;
-  margin: 0 auto;
-  padding: 0.3em 0.5em 2em;
-}
-
-.kindle-article-header {
-  margin-bottom: 1em;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 0.6em;
-}
-
-.kindle-article-title {
-  font-size: 1.6em;
-  font-weight: bold;
-  margin: 0 0 0.2em;
-  line-height: 1.3;
-}
-
-.kindle-article-meta {
-  font-size: 0.82em;
-  color: #555;
-}
-
-.kindle-article-meta time {
-  margin-right: 0.5em;
-}
-
-.kindle-article-description {
-  font-size: 0.95em;
-  color: #444;
-  line-height: 1.55;
-  margin-bottom: 1em;
-  padding: 0.6em 0.8em;
-  border-left: 3px solid #aaa;
-  font-style: italic;
-}
-
-.kindle-article-content {
-  font-size: 21px;
-  line-height: 1.85;
-  color: #000;
-}
-
-.kindle-article-content p {
-  margin: 1.15em 0;
-}
-
-.kindle-article-content h2 {
-  font-size: 1.35em;
-  font-weight: bold;
+/* ===== 关于页 ===== */
+.post .post-content h1,
+.post .post-content h2,
+.post .post-content h3 {
   margin-top: 1.5em;
   margin-bottom: 0.5em;
 }
 
-.kindle-article-content h3 {
-  font-size: 1.15em;
-  font-weight: bold;
-  margin-top: 1.3em;
-  margin-bottom: 0.4em;
+.post .post-content h2 {
+  font-size: 1.5em;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.3em;
 }
 
-.kindle-article-content blockquote {
-  border-left: 3px solid #000;
-  padding-left: 1em;
-  margin: 1em 0;
-  font-style: italic;
+.post .post-content h3 {
+  font-size: 1.2em;
 }
 
-.kindle-article-content code {
-  background: #f0f0f0;
-  font-size: 0.88em;
-  border: 1px solid #bbb;
-  padding: 0.08em 0.3em;
-}
+/* ===== 移动端适配 ===== */
+@media screen and (max-width: 425px) {
+  .archive .post-archive .post-item .post-date {
+    float: none;
+    margin-left: 0.5em;
+    font-size: 90%;
+    color: #999;
+  }
 
-.kindle-article-content pre {
-  background: #f5f5f5;
-  border: 1px solid #aaa;
-  overflow-x: auto;
-  font-size: 0.82em;
-  padding: 0.8em;
-  line-height: 1.5;
-}
-
-.kindle-article-content img {
-  max-width: 100%;
-  height: auto;
-}
-
-.kindle-article-content table {
-  overflow-x: auto;
-  display: block;
-  border-collapse: collapse;
-}
-
-.kindle-article-content th,
-.kindle-article-content td {
-  border: 1px solid #666;
-  padding: 0.3em 0.6em;
-}
-
-/* 文章导航 */
-.kindle-article-nav {
-  margin-top: 2.5em;
-  padding-top: 1em;
-  border-top: 1px solid #ccc;
-  font-size: 0.9em;
-}
-
-.kindle-nav-back {
-  margin-bottom: 0.8em;
-}
-
-.kindle-nav-back a {
-  color: #000;
-  text-decoration: underline;
-}
-
-.kindle-nav-prevnext {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3em;
-}
-
-.kindle-nav-prev,
-.kindle-nav-next {
-  display: block;
-  color: #333;
-}
-
-.kindle-nav-prev a,
-.kindle-nav-next a {
-  color: #000;
-  text-decoration: underline;
+  .header .menu {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 }

@@ -1,26 +1,34 @@
 {{ define "main" }}
-<article class="home-simple">
-  <div class="home-simple-inner">
-    <h1 class="home-simple-title">精于心，简于形</h1>
-    <p class="home-simple-sub">angelife / 安知生</p>
-    <nav class="home-simple-nav">
-      <a href="/series/information-judgment/">金·判断</a>
-      <a href="/series/chan-shi-lu/">木·蝉识</a>
-      <a href="/series/yi-notes/">水·易理</a>
-      <a href="/series/ai-bu-yin/">火·AI</a>
-      <a href="/series/confucian-framework/">土·正见</a>
-      <a href="/series/anti-populism/">反民粹</a>
-      <a href="/categories/日课/">日课</a>
-    </nav>
-    <nav class="home-simple-nav home-simple-nav2">
-      <a href="/about/">关于</a>
-      <a href="/changelog/">更新</a>
-      <a href="/kindle/">Kindle版</a>
-      <a href="/search/">搜索</a>
-    </nav>
-    <footer class="home-simple-footer">
-      &copy; 2009–2026 angelife / 安知生
-    </footer>
-  </div>
-</article>
+{{ partial "header.html" . }}
+
+<div class="home-garden">
+  <h1 class="home-title">{{ .Title }}</h1>
+
+  {{ if .Content }}
+  <div class="home-content">{{ .Content }}</div>
+  {{ end }}
+</div>
+
+<div class="page">
+  <ul class="post-archive">
+    {{- $all := where site.RegularPages "Section" "posts" }}
+    {{- $filtered := slice }}
+    {{- range $all }}
+      {{- if ne (partial "has_tag.html" (dict "page" . "tag" "draft")) "true" }}
+        {{- $filtered = $filtered | append . }}
+      {{- end }}
+    {{- end }}
+    {{- $filtered = sort $filtered "Date" "desc" }}
+    {{- $p := .Paginate $filtered }}
+    {{- range $p.Pages }}
+    <li class="post-item">
+      <time class="post-date">{{ .Date.Format "2006-01-02" }}</time>
+      <a class="post-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </li>
+    {{- end }}
+  </ul>
+  {{ partial "paginator.html" $p }}
+</div>
+
+{{ partial "footer.html" . }}
 {{ end }}

@@ -1,0 +1,56 @@
+baseURL: "https://angelife.github.io/"
+title: "安知生 angelife"
+theme: "polk-x"
+languageCode: "zh-CN"
+
+mainSections: ["columns", "posts", "series"]
+enableRobotsTXT: true
+hasCJKLanguage: true
+buildFuture: true
+disablePathToLower: true
+summaryLength: 120
+
+pagination:
+  pagerSize: 20
+
+params:
+  defaultTheme: "light"
+  showBreadCrumbs: false
+  showPostNavLinks: false
+  showCodeCopyButtons: false
+  showReadingTime: false
+  dateFormat: "2006-01-02"
+  disableSpecial1stPost: true
+  fuseOpts:
+    keys:
+      - "title"
+      - "permalink"
+      - "summary"
+      - "content"
+      - "tags"
+      - "categories"
+    threshold: 0.4
+    ignoreLocation: true
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+
+menu:
+  main:
+    - name: "归档"
+      url: "/archives/"
+      weight: 10
+    - name: "搜索"
+      url: "/search/"
+      weight: 20
+    - name: "关于"
+      url: "/about/"
+      weight: 30
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

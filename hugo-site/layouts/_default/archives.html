@@ -1,0 +1,22 @@
+{{ define "main" }}
+{{ partial "header.html" . }}
+
+<div class="page">
+  <h1>{{ .Title }}</h1>
+
+  {{- $pages := where site.RegularPages "Section" "!=" "posts" }}
+  {{- $pages = where $pages "Params.draft" "!=" true }}
+  {{- $pages = sort $pages "Date" "desc" }}
+
+  <ul class="post-archive">
+    {{- range $pages }}
+    <li class="post-item">
+      <time class="post-date">{{ .Date.Format "2006-01-02" }}</time>
+      <a class="post-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </li>
+    {{- end }}
+  </ul>
+</div>
+
+{{ partial "footer.html" . }}
+{{ end }}

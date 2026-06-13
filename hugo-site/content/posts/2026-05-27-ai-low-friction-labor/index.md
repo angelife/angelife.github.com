@@ -22,7 +22,7 @@ tags:
   - "知识资产"
   - "系统主控"
 cover:
-  image: "cover.png"
+  image: "/images/posts/2026-05-27-ai-low-friction-labor/cover.png"
   alt: "AI 时代低摩擦组织劳动力"
   caption: "从工资人到系统主控"
   relative: true
