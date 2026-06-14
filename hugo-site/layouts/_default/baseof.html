@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang | default "en" }}">
+  {{ partial "head.html" . }}
+  <body id="top">
+    <div class="container{{ if and .IsPage (eq .Type "posts") }} container-post{{ end }}">
+      {{ if not .IsHome }}{{ partial "header.html" . }}{{ end }}
+      {{ block "main" . }}{{ end }}
+    </div>
+    <script src="/js/main.js" defer></script>
+  </body>
+</html>

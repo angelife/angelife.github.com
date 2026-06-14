@@ -245,24 +245,6 @@ a:focus-visible {
   border-radius: 2px;
 }
 
-.theme-toggle {
-  appearance: none;
-  -webkit-appearance: none;
-  background: transparent;
-  border: 1px solid transparent;
-  padding: 6px;
-  cursor: pointer;
-  color: var(--c-toggle);
-  line-height: 1;
-  font-size: 16px;
-  opacity: 0.75;
-  border-radius: 999px;
-  position: absolute;
-  top: 0.95em;
-  right: 20px;
-  transition: color 0.2s ease, opacity 0.2s ease, background 0.2s ease;
-}
-
 .theme-toggle:hover {
   color: var(--c-link);
   opacity: 1;
@@ -769,14 +751,15 @@ a:focus-visible {
 }
 
 .archive .post-archive .post-item {
-  margin: 10px 0;
+  margin: 6px 0;
   line-height: 1.5;
 }
 
 .archive .post-archive .post-item .post-date {
   font-size: 80%;
   color: var(--c-muted-2);
-  font-family: Hiragino Sans GB, Microsoft YaHei, WenQuanYi, Airal, sans-serif;
+  float: right;
+  font-family: -apple-system, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
 }
 
 @media screen and (max-width: 425px) {
@@ -802,6 +785,65 @@ a:focus-visible {
   outline: 2px solid var(--c-focus);
   outline-offset: 2px;
   border-radius: 2px;
+}
+
+/* search page */
+.search-page {
+  padding: 0 20px;
+  margin-bottom: 2em;
+}
+.search-page .search-box {
+  margin: 1em 0;
+}
+.search-page #search-input {
+  width: 100%;
+  max-width: 500px;
+  padding: 0.6em 1em;
+  font-size: 1em;
+  border: 1px solid var(--c-border);
+  border-radius: 4px;
+  background: var(--c-bg);
+  color: var(--c-text);
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+.search-page #search-input:focus {
+  border-color: var(--c-focus);
+}
+
+/* home page (naosense style) */
+.home {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.home .info {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.home .info .logo {
+  font-size: 2em;
+  font-weight: bold;
+  font-family: -apple-system, Segoe UI, Helvetica, Arial, sans-serif;
+}
+.home .info .subtitle {
+  font-size: 1em;
+  color: #808080;
+  margin-top: 0.3em;
+}
+.home .info .sns {
+  margin: 1em auto;
+}
+.home .info .sns a {
+  width: 55px;
+  color: #999;
+  display: inline-block;
+  margin: 0 8px;
+  font-size: 0.95em;
+}
+.home .info .sns a:hover {
+  color: #000;
 }
 
 /* paginator */
@@ -874,4 +916,117 @@ footer a:focus-visible {
   .page {
     margin: 0 10px; /* Reduced page margin on mobile */
   }
+}
+
+/* Menu partial */
+.menu {
+display: flex;
+justify-content: center;
+gap: 12px;
+padding: 10px 0;
+}
+
+.menu-item {
+text-decoration: none;
+font-size: 14px;
+opacity: 0.85;
+}
+
+.menu-item:hover {
+opacity: 1;
+}
+
+/* Naosense-style home layout */
+.home {
+display: table;
+width: 100%;
+height: 80vh;
+}
+
+.home .info {
+display: table-cell;
+vertical-align: middle;
+text-align: center;
+}
+
+.post-item {
+margin: 6px 0;
+}
+
+.post-date {
+float: right;
+}
+
+section.archive {
+max-width: 720px;
+margin: 0 auto;
+}
+
+/* ===== CUSTOM OVERRIDES ===== */
+
+/* 去装饰：H2 竖条 */
+.post .post-content h2::before {
+  display: none !important;
+}
+
+/* 去装饰：引用块去背景和边框 */
+.post blockquote {
+  background: transparent !important;
+  border-left: none !important;
+  padding-left: 1.2em !important;
+  color: var(--c-muted) !important;
+}
+
+.post blockquote p {
+  margin: 0.3em 0 !important;
+}
+
+/* 隐藏右上角主题切换按钮 */
+/* TOC 隐藏兜底 */
+.toc {
+  display: none !important;
+}
+
+/* Menu partial */
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 10px 0;
+}
+
+.menu-item {
+  text-decoration: none;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.menu-item:hover {
+  opacity: 1;
+}
+
+/* Naosense-style home */
+.home {
+  display: table;
+  width: 100%;
+  height: 80vh;
+}
+
+.home .info {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.post-item {
+  margin: 6px 0;
+}
+
+.post-date {
+  float: right;
+}
+
+section.archive {
+  max-width: 720px;
+  margin: 0 auto;
 }

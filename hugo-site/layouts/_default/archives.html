@@ -1,22 +1,19 @@
 {{ define "main" }}
-{{ partial "header.html" . }}
 
-<div class="page">
-  <h1>{{ .Title }}</h1>
-
-  {{- $pages := where site.RegularPages "Section" "!=" "posts" }}
-  {{- $pages = where $pages "Params.draft" "!=" true }}
-  {{- $pages = sort $pages "Date" "desc" }}
-
+<section class="archive">
+  <h1 class="article-title">{{ .Title | default "Posts" }}</h1>
   <ul class="post-archive">
+    {{- $pages := where site.RegularPages "Section" "!=" "posts" }}
+    {{- $pages = where $pages "Params.draft" "!=" true }}
+    {{- $pages = sort $pages "Date" "desc" }}
     {{- range $pages }}
     <li class="post-item">
-      <time class="post-date">{{ .Date.Format "2006-01-02" }}</time>
       <a class="post-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+      <time class="post-date">{{ .Date.Format "2006-01-02" }}</time>
     </li>
     {{- end }}
   </ul>
-</div>
+</section>
 
 {{ partial "footer.html" . }}
 {{ end }}

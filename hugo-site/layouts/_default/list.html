@@ -1,6 +1,7 @@
 {{ define "main" }}
-{{ partial "header.html" . }}
 
+<section class="archive">
+  <h1 class="article-title">{{ .Title | default "Posts" }}</h1>
   <ul class="post-archive">
     {{- $all := where .Site.RegularPages "Section" "posts" }}
     {{- $filtered := slice }}
@@ -13,13 +14,13 @@
     {{- $p := .Paginate $filtered }}
     {{- range $p.Pages }}
     <li class="post-item">
-      <time class="post-date">{{ .Date.Format "2006-01-02" }}</time>
       <a class="post-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+      <time class="post-date">{{ .Date.Format "2006-01-02" }}</time>
     </li>
     {{- end }}
   </ul>
   {{ partial "paginator.html" $p }}
-</div>
+</section>
 
 {{ partial "footer.html" . }}
 {{ end }}

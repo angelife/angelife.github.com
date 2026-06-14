@@ -1,33 +1,18 @@
 {{ define "main" }}
-{{ partial "header.html" . }}
 
-<div class="home-garden">
-  <h1 class="home-title">{{ .Title }}</h1>
-
-  {{ if .Content }}
-  <div class="home-content">{{ .Content }}</div>
-  {{ end }}
-</div>
-
-<div class="page">
-  <ul class="post-archive">
-    {{- $all := where site.RegularPages "Section" "posts" }}
-    {{- $filtered := slice }}
-    {{- range $all }}
-      {{- if ne (partial "has_tag.html" (dict "page" . "tag" "draft")) "true" }}
-        {{- $filtered = $filtered | append . }}
-      {{- end }}
-    {{- end }}
-    {{- $filtered = sort $filtered "Date" "desc" }}
-    {{- $p := .Paginate $filtered }}
-    {{- range $p.Pages }}
-    <li class="post-item">
-      <time class="post-date">{{ .Date.Format "2006-01-02" }}</time>
-      <a class="post-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
-    </li>
-    {{- end }}
-  </ul>
-  {{ partial "paginator.html" $p }}
+<div class="home">
+  <div class="info">
+    <a href="{{ "/" | relLangURL }}" class="logo">{{ site.Title }}</a>
+    <div class="subtitle">付费墙与迷雾墙之间，寻找判断。</div>
+    <div class="sns">
+      <a href="/series/information-judgment/">金</a>
+      <a href="/series/chan-shi-lu/">木</a>
+      <a href="/series/yi-notes/">水</a>
+      <a href="/series/ai-bu-yin/">火</a>
+      <a href="/series/confucian-framework/">土</a>
+      <a href="/archives/">归档</a>
+    </div>
+  </div>
 </div>
 
 {{ partial "footer.html" . }}

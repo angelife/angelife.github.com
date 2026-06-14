@@ -14,6 +14,7 @@ pagination:
   pagerSize: 20
 
 params:
+  toc: false
   defaultTheme: "light"
   showBreadCrumbs: false
   showPostNavLinks: false
@@ -40,6 +41,21 @@ outputs:
 
 menu:
   main:
+    - name: "金"
+      url: "/series/information-judgment/"
+      weight: 1
+    - name: "木"
+      url: "/series/chan-shi-lu/"
+      weight: 2
+    - name: "水"
+      url: "/series/yi-notes/"
+      weight: 3
+    - name: "火"
+      url: "/series/ai-bu-yin/"
+      weight: 4
+    - name: "土"
+      url: "/series/confucian-framework/"
+      weight: 5
     - name: "归档"
       url: "/archives/"
       weight: 10

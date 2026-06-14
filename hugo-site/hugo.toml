@@ -62,8 +62,46 @@ disablePathToLower = true
     lang = "zh-CN"
     loading = "lazy"
 
-# Menu removed — homepage is a garden entry, not a blog
-# Five-element navigation is in the homepage template
+[[menu.main]]
+  name = "金"
+  url = "/series/information-judgment/"
+  weight = 1
+
+[[menu.main]]
+  name = "木"
+  url = "/series/chan-shi-lu/"
+  weight = 2
+
+[[menu.main]]
+  name = "水"
+  url = "/series/yi-notes/"
+  weight = 3
+
+[[menu.main]]
+  name = "火"
+  url = "/series/ai-bu-yin/"
+  weight = 4
+
+[[menu.main]]
+  name = "土"
+  url = "/series/confucian-framework/"
+  weight = 5
+
+[[menu.main]]
+  name = "归档"
+  url = "/archives/"
+  weight = 10
+
+[[menu.main]]
+  name = "搜索"
+  url = "/search/"
+  weight = 20
+
+[[menu.main]]
+  name = "关于"
+  url = "/about/"
+  weight = 30
+
 # Footer has minimal links (archives, search, about)
 
 [markup]
