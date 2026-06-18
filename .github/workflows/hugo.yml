@@ -1,0 +1,70 @@
+name: Deploy Hugo site to Pages
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  pages:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      - name: Build
+        working-directory: hugo-site
+        env:
+          HUGO_ENV: production
+        run: |
+          echo "=== Git & Hugo versions ==="
+          hugo version
+          git rev-parse HEAD
+          echo "=== Build start ==="
+          hugo --gc --minify --cleanDestinationDir
+          echo "=== Build complete ==="
+          echo "Total HTML files: $(find public -name '*.html' | wc -l)"
+
+      - name: Verify build output
+        run: |
+          echo "=== Taxonomy verification ==="
+          for tax in information-judgment chan-shi-lu confucian-framework ai-bu-yin yi-notes; do
+            size=$(wc -c < "public/series/$tax/index.html" 2>/dev/null || echo 0)
+            post_count=$(grep -c 'post-entry' "public/series/$tax/index.html" 2>/dev/null || echo 0)
+            echo "  $tax: ${size}b, post-entry=$post_count"
+          done
+          echo "=== Uploading artifact ==="
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: hugo-site/public
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Final status
+        run: |
+          echo "=== Deployment complete ==="
+          echo "Pages URL: ${{ steps.deployment.outputs.page_url }}"
+          echo "Run completed at: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
