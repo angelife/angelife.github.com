@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><title>知识管理 - 安知生 angelife</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script>
+    (() => {
+      const storageKey = 'theme';
+      let saved = null;
+      try {
+        saved = localStorage.getItem(storageKey);
+      } catch {}
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (saved === 'system') {
+        try {
+          localStorage.removeItem(storageKey);
+        } catch {}
+        saved = null;
+      }
+      if (saved !== 'dark' && saved !== 'light') saved = null;
+
+      const theme = saved ? saved : prefersDark ? 'dark' : 'light';
+      document.documentElement.dataset.themePref = saved ? theme : 'system';
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script><meta name="keywords" content=""><link rel="stylesheet" href="/css/style.css?v=1781761292">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+
+<style>
+ 
+
+ 
+.s3g-banner {
+  text-align: center;
+  padding: 18px 0 0 0;
+  margin-bottom: 8px;
+}
+
+.s3g-sitename {
+  font-family: "Ma Shan Zheng", "STKaiti", "KaiTi", "楷体", serif;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  margin: 0 0 14px 0;
+}
+.s3g-sitename a {
+  color: #000 !important;
+  text-decoration: none;
+  border-bottom: none !important;
+}
+
+.s3g-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+.s3g-nav a {
+  color: #999 !important;
+  text-decoration: none;
+  border-bottom: none !important;
+  transition: color 0.2s;
+}
+.s3g-nav a:hover {
+  color: #333 !important;
+}
+
+ 
+.archive {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.archive .article-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #223;
+  margin: 10px 0 22px 0;
+  text-align: left;
+  border: none;
+}
+
+.archive .archive-description {
+  font-size: 14px;
+  color: #888;
+  margin: -10px 0 24px 0;
+  line-height: 1.6;
+}
+
+.archive .archive-section-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #555;
+  margin: 28px 0 10px 0;
+}
+
+.archive .post-archive {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin: 20px 0 0 0;
+}
+.archive .post-archive .post-item {
+  list-style: none !important;
+  margin: 6px 0;
+  padding: 0;
+  line-height: 24px;
+  display: block;
+}
+.archive .post-archive .post-item::before {
+  content: none !important;
+}
+.archive .post-archive .post-title {
+  font-size: 16px;
+  color: #000 !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
+  line-height: 24px;
+}
+.archive .post-archive .post-title:hover {
+  color: #c00 !important;
+  text-decoration: none !important;
+}
+.archive .post-archive .post-date {
+  font-size: 13px;
+  color: #aaa;
+  margin-left: 10px;
+}
+
+.archive .archive-legacy {
+  margin-top: 28px;
+}
+.archive .archive-legacy summary {
+  font-size: 14px;
+  color: #888;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+.archive .archive-empty {
+  font-size: 15px;
+  color: #888;
+  line-height: 1.8;
+  margin-top: 30px;
+}
+
+ 
+.single, article {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+ 
+.s3g-footer {
+  max-width: 760px;
+  margin: 60px auto 30px auto;
+  padding: 18px 20px 0 20px;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 13px;
+  color: #999;
+}
+.s3g-footer .s3g-copy {
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+.s3g-footer .s3g-slogan {
+  font-family: "Ma Shan Zheng", "STKaiti", "KaiTi", "楷体", serif;
+  font-size: 18px;
+  color: #555;
+  letter-spacing: 0.08em;
+}
+
+ 
+.home-root .s3g-footer,
+body.home .s3g-footer {
+  border-top: none;
+  margin-top: 30px;
+}
+
+ 
+.archive .post-item time.post-date {   }
+
+ 
+.home .info .logo {
+  font-family: "Ma Shan Zheng", "STKaiti", "KaiTi", "楷体", serif !important;
+  font-size: 56px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.12em;
+  color: #1a1a1a !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+.home .info .sns {
+  margin-top: 24px !important;
+}
+.home .info .sns a {
+  width: auto !important;
+  font-size: 14px !important;
+  color: #aaa !important;
+  margin: 0 14px !important;
+  letter-spacing: 0.08em;
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+.home .info .sns a:hover {
+  color: #555 !important;
+}
+
+ 
+.post-single .article-title,
+.post-title .article-title,
+.post .article-title {
+  font-size: 36px !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  color: #1a1a1a !important;
+  margin: 32px 0 8px 0 !important;
+  letter-spacing: 0.01em;
+}
+.post-category {
+  font-size: 13px;
+  color: #999;
+  margin: 0 0 32px 0;
+  letter-spacing: 0.08em;
+}
+.section-subtitle {
+  text-align: left;
+  color: #999;
+  font-size: 14px;
+  margin: 0 0 36px 0;
+  line-height: 1.7;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.archive .article-title {
+  margin-bottom: 8px !important;
+}
+
+
+ 
+:root,
+html[data-theme="light"],
+html[data-theme="dark"],
+html:not([data-theme]) {
+  --c-bg: #FAFAF7 !important;
+  --c-text: #1a1a1a !important;
+  --c-link: #1a1a1a !important;
+  --c-heading: #1a1a1a !important;
+  --c-heading-border: #ECECEA !important;
+  --c-border: #ECECEA !important;
+  --c-border-soft: #F0EFEC !important;
+  --c-muted: #6B6B6B !important;
+  --c-muted-2: #999999 !important;
+  --c-subtitle: #6B6B6B !important;
+  --c-hr: #ECECEA !important;
+  --c-panel: #F4F2EC !important;
+  --c-pre-bg: #F4F2EC !important;
+  --c-inline-code-bg: #F4F2EC !important;
+  --c-quote-text: #6B6B6B !important;
+  --c-quote-bg: #F4F2EC !important;
+  --c-quote-border: #999999 !important;
+  --c-toggle: #999999 !important;
+  --c-archive-hover: #1a1a1a !important;
+}
+ 
+.container,
+.container.container-post,
+main,
+.main,
+article,
+.post,
+.page,
+.s3g-banner,
+.s3g-footer,
+.archive {
+  background: #FAFAF7 !important;
+}
+ 
+@media (prefers-color-scheme: dark) {
+  :root, html, html[data-theme="dark"] {
+    --c-bg: #FAFAF7 !important;
+    --c-text: #1a1a1a !important;
+    color-scheme: light !important;
+  }
+  html, body, .container { background: #FAFAF7 !important; color: #1a1a1a !important; }
+}
+
+ 
+:root {
+  --al-bg: #FAFAF7;         
+  --al-ink: #1a1a1a;        
+  --al-ink-soft: #222222;   
+  --al-mute: #ACACAC;       
+  --al-mute-deep: #9C9C9C;  
+  --al-slogan: #3F3C37;     
+  --al-line: #ECECEA;       
+}
+html, body {
+  background: #FAFAF7 !important;
+  color: #1a1a1a !important;
+}
+ 
+.s3g-banner,
+.s3g-banner a,
+.s3g-sitename,
+.s3g-sitename a {
+  background: transparent !important;
+  color: #1a1a1a !important;
+  border-bottom: none !important;
+}
+ 
+.s3g-nav a {
+  color: #999999 !important;
+}
+.s3g-nav a:hover,
+.s3g-nav a.active {
+  color: #1a1a1a !important;
+}
+ 
+.article-title,
+.post-single .article-title,
+.post-title .article-title,
+.archive .article-title {
+  color: #1a1a1a !important;
+}
+ 
+.post-archive .post-title,
+.post-archive .post-title:link,
+.post-archive .post-title:visited {
+  color: #222222 !important;
+}
+.post-archive .post-title:hover {
+  color: #000000 !important;
+}
+.post-archive .post-date {
+  color: #A8A8A8 !important;
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif !important;
+  font-variant-numeric: tabular-nums;
+}
+ 
+.section-subtitle {
+  color: #6B6B6B !important;
+}
+ 
+.post-category {
+  color: #ACACAC !important;
+}
+ 
+.post-content {
+  color: #222222 !important;
+  background: transparent !important;
+}
+.post-content a {
+  color: #1a1a1a;
+}
+ 
+.s3g-footer {
+  border-top: 1px solid #ECECEA !important;
+  background: transparent !important;
+}
+ 
+.s3g-footer .s3g-copy {
+  color: #A0A0A0 !important;
+  font-weight: 400 !important;
+}
+ 
+.s3g-footer .s3g-slogan {
+  color: #2A2A2A !important;
+  font-weight: 400 !important;
+  font-size: 19px !important;
+  letter-spacing: 0.02em;
+}
+ 
+.post-footer .post-time {
+  color: #A8A8A8 !important;
+}
+.post-footer .top {
+  color: #A8A8A8 !important;
+}
+.post-footer .top:hover {
+  color: #1a1a1a !important;
+}
+</style>
+
+</head>
+
+  <body id="top">
+    <div class="container">
+      <header class="s3g-banner"><div class="s3g-sitename">
+    <a href="/">安知生</a>
+  </div><nav class="s3g-nav"><a href="/series/information-judgment/">金</a><a href="/series/chan-shi-lu/">木</a><a href="/series/yi-notes/">水</a><a href="/series/ai-bu-yin/">火</a><a href="/series/confucian-framework/">土</a><a href="/archives/">归档</a><a href="/search/">搜索</a><a href="/about/">关于</a></nav>
+</header>
+
+      
+
+<section class="archive"><h1 class="article-title">知识管理</h1>
+  <ul class="post-archive">
+    <li class="post-item">
+      <a class="post-title" href="/posts/ai-self-distillation-electronic-donkey/">自费蒸馏：我们正在花钱训练替代自己的人</a>
+      <time class="post-date">2026-05-28</time>
+    </li>
+    <li class="post-item">
+      <a class="post-title" href="/series/ai-bu-yin/ai-self-distillation-electronic-donkey/">自费蒸馏：我们正在花钱训练替代自己的人</a>
+      <time class="post-date">2026-05-28</time>
+    </li>
+    <li class="post-item">
+      <a class="post-title" href="/posts/2026-05-27-ai-low-friction-labor/">AI 时代，真正赢的不是免费，而是低摩擦地组织劳动力</a>
+      <time class="post-date">2026-05-27</time>
+    </li>
+    <li class="post-item">
+      <a class="post-title" href="/series/ai-bu-yin/2026-05-27-ai-low-friction-labor/">AI 时代，真正赢的不是免费，而是低摩擦地组织劳动力</a>
+      <time class="post-date">2026-05-27</time>
+    </li>
+    <li class="post-item">
+      <a class="post-title" href="/series/information-judgment/information-source-slimming/">信息源瘦身：为什么关注少一点，判断力更强</a>
+      <time class="post-date">2026-05-27</time>
+    </li>
+    <li class="post-item">
+      <a class="post-title" href="/series/chan-shi-lu/from-clever-to-system/">从聪明到系统化：真正的分水岭</a>
+      <time class="post-date">2026-05-27</time>
+    </li>
+    <li class="post-item">
+      <a class="post-title" href="/series/chan-shi-lu/ai-era-personal-restart/">AI时代，一个普通人的重新开局</a>
+      <time class="post-date">2026-05-27</time>
+    </li>
+    <li class="post-item">
+      <a class="post-title" href="/series/ai-bu-yin/kindle-koreader-ai-reading-loop/">Kindle、KOReader 与 AI：新的阅读闭环</a>
+      <time class="post-date">2026-05-27</time>
+    </li>
+    <li class="post-item">
+      <a class="post-title" href="/series/confucian-framework/right-view-in-complex-age/">不失正见：复杂时代的个人守则</a>
+      <time class="post-date">2026-05-27</time>
+    </li>
+    <li class="post-item">
+      <a class="post-title" href="/series/chan-shi-lu/yuanying-as-personal-system/">元婴隐喻：从个人作品到个人系统</a>
+      <time class="post-date">2026-05-27</time>
+    </li>
+  </ul>
+  <nav class="page-nav"><a class="prev" href="/tags/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/page/2/">Prev</a><a class="page-number" href="/tags/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/">1</a><a class="page-number" href="/tags/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/tags/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/page/4/">4</a><a class="page-number" href="/tags/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/page/5/">5</a><a class="page-number" href="/tags/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/page/6/">6</a><a class="page-number" href="/tags/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/page/7/">7</a><a class="page-number" href="/tags/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/page/8/">8</a><a class="page-number" href="/tags/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/page/9/">9</a><a class="next" href="/tags/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/page/4/">Next</a></nav>
+</section>
+
+<footer class="s3g-footer">
+  <span class="s3g-copy">©2009&ndash;2026 angelife</span>
+  <span class="s3g-slogan">精于心，简于形</span>
+</footer>
+
+
+    </div>
+    <script src="/js/main.js" defer></script>
+  </body>
+</html>

@@ -1,7 +1,7 @@
 {{ define "main" }}
 <article class="post-single changelog-page">
   <header class="post-header">
-    {{ partial "breadcrumbs.html" . }}
+    {{/* breadcrumbs partial unavailable in polk-x */}}
     <h1 class="post-title">{{ .Title }}</h1>
     {{ with .Summary }}
     <div class="post-description">{{ . }}</div>

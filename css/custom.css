@@ -1,0 +1,30 @@
+/* =============================================
+   CUSTOM OVERRIDES — angelife site
+   ============================================= */
+
+/* 去装饰：H2 竖条（polk-x 主题 .post-content h2::before） */
+.post .post-content h2::before {
+  display: none !important;
+}
+
+/* 去装饰：引用块去背景和边框 */
+.post blockquote {
+  background: transparent !important;
+  border-left: none !important;
+  padding-left: 1.2em !important;
+  color: var(--c-muted) !important;
+}
+
+.post blockquote p {
+  margin: 0.3em 0 !important;
+}
+
+/* 隐藏右上角主题切换按钮 */
+.theme-toggle {
+  display: none !important;
+}
+
+/* .toc 隐藏（兜底） */
+.toc {
+  display: none !important;
+}

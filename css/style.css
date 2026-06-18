@@ -1,0 +1,1032 @@
+body {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light dark;
+}
+
+html[data-theme="light"] {
+  color-scheme: light;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+:root {
+  --c-bg: #fafafa;
+  /* Light theme text colors aligned with lutaonan.com */
+  --c-text: #1c2024;
+  --c-link: #000;
+  --c-focus: #0969da;
+  --c-border: #ccc;
+  --c-border-soft: #dfe2e5;
+  --c-muted: #60646c;
+  --c-muted-2: #80838d;
+  --c-subtitle: #80838d;
+  --c-heading: #1c2024;
+  --c-heading-border: #e1e4e8;
+  --c-hr: #ccc;
+  --c-panel: #f6f8fa;
+  --c-pre-bg: #f7f7f7;
+  --c-inline-code-bg: #f6f8fa;
+  --c-quote-text: #60646c;
+  --c-quote-bg: #f6f8fa;
+  --c-quote-border: #0969da;
+  --c-toggle: #666;
+  --c-toggle-hover-bg: rgba(127, 127, 127, 0.12);
+  --c-archive-hover: #000;
+  --c-top-hover: #000;
+  --c-footer-text: #888;
+  --c-code-text: #24292f;
+  --c-selection-bg: rgba(9, 105, 218, 0.18);
+  --c-selection-text: var(--c-text);
+  --c-scrollbar-track: rgba(0, 0, 0, 0.04);
+  --c-scrollbar-thumb: rgba(0, 0, 0, 0.22);
+  --c-scrollbar-thumb-hover: rgba(0, 0, 0, 0.32);
+
+  /* syntax highlighting (light) */
+  --syn-comment: #2f6f8f;
+  --syn-keyword: #cf222e;
+  --syn-string: #0a3069;
+  --syn-number: #0550ae;
+  --syn-func: #8250df;
+  --syn-type: #953800;
+  --syn-ident: #24292f;
+  --syn-var: #0550ae;
+  --syn-tag: #116329;
+  --syn-punct: #24292f;
+  --syn-error: #a40e26;
+  --syn-del-text: #a40e26;
+  --syn-del-bg: #ffebe9;
+  --syn-ins-text: #116329;
+  --syn-ins-bg: #dafbe1;
+  --code-line-hover-bg: rgba(175, 184, 193, 0.22);
+  --code-inset-border: rgba(27, 31, 36, 0.025);
+}
+
+html[data-theme="dark"] {
+  --c-bg: #121212;
+  --c-text: #e0e0e0;
+  --c-link: #f2f2f2;
+  --c-focus: #99d8ff;
+  --c-border: #2a2a2a;
+  --c-border-soft: #222222;
+  --c-muted: #b2b2b2; /* 次要文字（grey-70） */
+  --c-muted-2: #808080; /* 第三级文字（grey-50） */
+  --c-subtitle: #808080; /* 第三级文字（grey-50） */
+  --c-heading: #ffffff; /* 标题文字（grey-100，加粗文字） */
+  --c-heading-border: #262626;
+  --c-hr: #262626;
+  --c-panel: #1e1e1e;
+  --c-pre-bg: #1e1e1e;
+  --c-inline-code-bg: #1e1e1e;
+  --c-quote-text: #d9d9d9;
+  --c-quote-bg: #111111;
+  --c-quote-border: #fff100;
+  --c-toggle: #b2b2b2;
+  --c-toggle-hover-bg: rgba(255, 241, 0, 0.12);
+  --c-archive-hover: #fff100;
+  --c-top-hover: #fff100;
+  --c-footer-text: #b2b2b2;
+  --c-code-text: #e5e7eb;
+  --c-selection-bg: rgba(255, 241, 0, 0.22);
+  --c-selection-text: var(--c-text);
+  --c-scrollbar-track: rgba(255, 255, 255, 0.06);
+  --c-scrollbar-thumb: rgba(255, 255, 255, 0.22);
+  --c-scrollbar-thumb-hover: rgba(255, 241, 0, 0.35);
+
+  /* syntax highlighting (dark) */
+  --syn-comment: #9ca3af;
+  --syn-keyword: #ff7b72;
+  --syn-string: #a5d6ff;
+  --syn-number: #79c0ff;
+  --syn-func: #d2a8ff;
+  --syn-type: #ffa657;
+  --syn-ident: #e5e7eb;
+  --syn-var: #79c0ff;
+  --syn-tag: #7ee787;
+  --syn-punct: #e5e7eb;
+  --syn-error: #ffa198;
+  --syn-del-text: #ffa198;
+  --syn-del-bg: rgba(248, 81, 73, 0.15);
+  --syn-ins-text: #7ee787;
+  --syn-ins-bg: rgba(46, 160, 67, 0.15);
+  --code-line-hover-bg: rgba(110, 118, 129, 0.25);
+  --code-inset-border: rgba(110, 118, 129, 0.1);
+}
+
+::selection {
+  background: var(--c-selection-bg);
+  color: var(--c-selection-text);
+}
+
+::-moz-selection {
+  background: var(--c-selection-bg);
+  color: var(--c-selection-text);
+}
+
+/* Scrollbar (best-effort, keeps native look where unsupported) */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--c-scrollbar-thumb) var(--c-scrollbar-track);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--c-scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--c-scrollbar-thumb);
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--c-scrollbar-thumb-hover);
+  background-clip: content-box;
+}
+
+html,
+body,
+.container {
+  height: 100%;
+  max-height: 100%;
+  font-size: 16px;
+  /* Professional Chinese font stack for technical blogs */
+  /* Source Han Sans is ideal for technical content - modern, clean, professional */
+  font-family: "Source Han Sans SC", "Noto Sans SC", "PingFang SC",
+               "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  letter-spacing: 0.01rem;
+  line-height: 1.85rem;
+  color: var(--c-text);
+  background: var(--c-bg);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+a {
+  color: var(--c-link);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--c-focus);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.page {
+  margin: 0 20px;
+  margin-bottom: 2em;
+}
+
+.page p {
+  line-height: 1.5em;
+}
+
+/* header */
+.header {
+  margin-bottom: -0.5em;
+  padding: 0 20px;
+  position: relative;
+}
+
+.header .blog-title {
+  font-size: 2.5em;
+  text-align: center;
+  padding-top: 0.5em;
+}
+
+.header .subtitle {
+  font-size: 14px;
+  color: var(--c-subtitle);
+}
+
+.header .menu {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--c-border);
+  margin-top: 20px;
+}
+
+.header .menu .menu-item {
+  margin: 0 26px 0 0;
+  padding: 6px 0 6px 0;
+  float: inherit;
+  display: inline-block;
+}
+
+.header .menu .menu-item-link {
+  color: var(--c-muted);
+  transition: color 0.2s ease;
+}
+
+.header .menu .menu-item-link:hover {
+  color: var(--c-link);
+}
+
+.header .menu .menu-item-link:focus-visible {
+  outline: 2px solid var(--c-focus);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.theme-toggle:hover {
+  color: var(--c-link);
+  opacity: 1;
+  background: var(--c-toggle-hover-bg);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--c-focus);
+  outline-offset: 4px;
+}
+
+/* post */
+.post {
+  padding: 0 20px;
+  max-width: 1040px;
+  margin: 0 auto 1.5em;
+}
+
+.container.container-post {
+  max-width: 1100px;
+}
+
+.post img {
+  max-width: 100%;
+}
+
+.post table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.post table td,
+.post table th {
+  padding: 6px 13px;
+  border: 1px solid var(--c-border-soft);
+}
+
+.post hr {
+  margin: 1.5em 0;
+  border-color: var(--c-hr);
+}
+
+.post .post-content {
+  text-align: left;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  hyphens: auto;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+/* Heading hierarchy for clear visual structure */
+.post .post-content h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin: 1.2em 0 0.6em 0; /* Optimized spacing: more space above, less below */
+  line-height: 1.3;
+  color: var(--c-heading);
+  /* Add subtle bottom border for visual separation */
+  border-bottom: 1px solid var(--c-heading-border);
+  padding-bottom: 0.3em;
+}
+
+.post .post-content h2 {
+  font-size: 1.875rem;
+  font-weight: 600;
+  margin: 1.5em 0 0.6em 0;
+  line-height: 1.4;
+  color: var(--c-heading);
+  display: flex;
+  align-items: center;
+}
+
+.post .post-content h2::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 0.9em;
+  background: var(--c-quote-border);
+  margin-right: 12px;
+  border-radius: 2px;
+}
+
+.post .post-content h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0.9em 0 0.4em 0; /* Tighter spacing for subsections */
+  line-height: 1.4;
+  color: var(--c-heading);
+}
+
+.post .post-content h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0.8em 0 0.35em 0; /* Consistent with h3 but slightly tighter */
+  line-height: 1.4;
+  color: var(--c-heading);
+}
+
+.post .post-content h5,
+.post .post-content h6 {
+  font-size: 1em;
+  font-weight: 600;
+  margin: 0.7em 0 0.3em 0; /* Minimal spacing for minor headings */
+  line-height: 1.4;
+  color: var(--c-heading);
+}
+
+/* Inline code and code blocks */
+.post code {
+  font-family: "JetBrains Mono", "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  font-size: 15px;
+  background: var(--c-inline-code-bg);
+  color: var(--c-code-text);
+  margin: 0;
+  padding: 0 4px;
+  border-radius: 3px;
+  word-spacing: normal;
+  letter-spacing: normal;
+  white-space: pre-wrap;
+  display: inline;
+}
+
+.post .post-content a {
+  border-bottom: 1.5px solid var(--c-quote-border);
+  transition: all 0.2s ease;
+}
+
+.post .post-content a:hover {
+  background: var(--c-selection-bg);
+  border-bottom-color: var(--c-link);
+}
+
+.post .post-content a:focus-visible {
+  outline: 2px solid var(--c-focus);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.post .post-content ul,
+.post .post-content ol {
+  text-align: left;
+  margin: 1em 0; /* Consistent spacing around lists */
+  padding-left: 1.5em; /* Indent for better visual hierarchy */
+}
+
+.post .post-content ul {
+  list-style-type: disc; /* Clear disc markers */
+}
+
+.post .post-content ol {
+  list-style-type: decimal; /* Clear decimal markers */
+}
+
+.post .post-content ul li,
+.post .post-content ol li {
+  padding: 0;
+  line-height: 1.75; /* Consistent relative line height */
+  margin: 0.4em 0; /* Tighter spacing between list items */
+  /* Better spacing for nested lists */
+}
+
+.post .post-content ul ul,
+.post .post-content ol ol,
+.post .post-content ul ol,
+.post .post-content ol ul {
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+  padding-left: 1.2em; /* Nested list indentation */
+}
+
+.post figure {
+  margin: 0;
+}
+
+.post figure table {
+  width: 100%;
+}
+
+/* Code block styles use Hugo's native structure */
+
+.post blockquote {
+  margin: 1.2em 0; /* More breathing room around quotes */
+  padding: 0.8em 1.2em; /* Better padding for readability */
+  padding-left: 1.5em; /* Extra left padding for border */
+  color: var(--c-quote-text);
+  background-color: var(--c-quote-bg);
+  border-left: 4px solid var(--c-quote-border);
+  border-radius: 0 4px 4px 0; /* Rounded right corners for modern look */
+  font-style: normal; /* Keep normal style, color provides emphasis */
+  /* Ensure proper spacing for nested content */
+}
+
+.post blockquote p {
+  margin: 0.5em 0; /* Spacing for paragraphs inside blockquote */
+}
+
+.post blockquote p:first-child {
+  margin-top: 0; /* Remove top margin for first paragraph */
+}
+
+.post blockquote p:last-child {
+  margin-bottom: 0; /* Remove bottom margin for last paragraph */
+}
+
+.post pre {
+  margin: 0;
+  padding: 0.5em 1.5em;
+  overflow: auto;
+  font-size: 100%;
+  line-height: 1.5;
+  background-color: var(--c-pre-bg);
+}
+
+.post pre,
+.post code {
+  color: var(--c-code-text);
+}
+
+/* Fenced code blocks (Hugo native format): keep closer to original visual size. */
+.post .highlight pre,
+.post .highlight code {
+  font-size: 16px;
+}
+
+/* Code block readability tweaks (subtle, keep original look) */
+.post .highlight pre.chroma {
+  padding: 1em 1.2em;
+  line-height: 1.6;
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid var(--c-border-soft);
+}
+
+.chroma .lntd:first-child,
+.chroma .ln {
+  display: none !important;
+}
+
+.post .highlight pre.chroma code {
+  font-variant-ligatures: none;
+  font-feature-settings: "liga" 0, "calt" 0;
+  -moz-tab-size: 4;
+  tab-size: 4;
+  font-size: 16px;
+}
+
+/* Subtle line hover to aid scanning large blocks */
+.post .highlight .chroma .line {
+  display: block;
+}
+
+.post .highlight .chroma .line:hover {
+  background: var(--code-line-hover-bg);
+}
+
+/* Reset styles for code inside pre (code blocks) */
+.post pre code {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+  white-space: pre;
+  border-radius: 0;
+}
+
+/* GitHub VS Code Theme (GitHub Light Default) inspired syntax highlighting.
+   Reference: https://github.com/primer/github-vscode-theme
+   Scoped to code blocks only. */
+.post .highlight {
+  background: transparent;
+  border-radius: 0;
+}
+
+.post .highlight pre {
+  background: var(--c-panel); /* Slightly lighter, more modern background */
+}
+
+.post .highlight .chroma {
+  /* Darker base color for better contrast against light background */
+  color: var(--c-code-text);
+}
+
+/* comments */
+.post .highlight .chroma .c,
+.post .highlight .chroma .ch,
+.post .highlight .chroma .cm,
+.post .highlight .chroma .cp,
+.post .highlight .chroma .cpf,
+.post .highlight .chroma .c1,
+.post .highlight .chroma .cs {
+  /* More muted than code, but still readable on #f7f7f7 */
+  color: var(--syn-comment);
+  font-style: normal;
+}
+
+/* keywords */
+.post .highlight .chroma .k,
+.post .highlight .chroma .kc,
+.post .highlight .chroma .kd,
+.post .highlight .chroma .kn,
+.post .highlight .chroma .kp,
+.post .highlight .chroma .kr,
+.post .highlight .chroma .kt {
+  color: var(--syn-keyword);
+}
+
+/* strings */
+.post .highlight .chroma .s,
+.post .highlight .chroma .sa,
+.post .highlight .chroma .sb,
+.post .highlight .chroma .sc,
+.post .highlight .chroma .dl,
+.post .highlight .chroma .sd,
+.post .highlight .chroma .s2,
+.post .highlight .chroma .se,
+.post .highlight .chroma .sh,
+.post .highlight .chroma .si,
+.post .highlight .chroma .sx,
+.post .highlight .chroma .sr,
+.post .highlight .chroma .s1,
+.post .highlight .chroma .ss {
+  color: var(--syn-string);
+}
+
+/* numbers */
+.post .highlight .chroma .m,
+.post .highlight .chroma .mb,
+.post .highlight .chroma .mf,
+.post .highlight .chroma .mh,
+.post .highlight .chroma .mi,
+.post .highlight .chroma .il,
+.post .highlight .chroma .mo {
+  color: var(--syn-number);
+}
+
+/* function / method names (C++/Python/Go), SQL functions, shell builtins */
+.post .highlight .chroma .nf,
+.post .highlight .chroma .fm {
+  color: var(--syn-func);
+}
+
+/* types / classes / namespaces */
+.post .highlight .chroma .nc,
+.post .highlight .chroma .nn {
+  color: var(--syn-type);
+}
+
+/* variables/identifiers */
+.post .highlight .chroma .n,
+.post .highlight .chroma .nx,
+.post .highlight .chroma .py,
+.post .highlight .chroma .nb,
+.post .highlight .chroma .bp,
+.post .highlight .chroma .vc,
+.post .highlight .chroma .vg,
+.post .highlight .chroma .vi,
+.post .highlight .chroma .no,
+.post .highlight .chroma .na,
+.post .highlight .chroma .nl {
+  color: var(--syn-ident);
+}
+
+/* variables (make slightly more distinct, closer to editor feel) */
+.post .highlight .chroma .nv,
+.post .highlight .chroma .vc,
+.post .highlight .chroma .vg,
+.post .highlight .chroma .vi {
+  color: var(--syn-var);
+}
+
+/* tags / attributes */
+.post .highlight .chroma .nt {
+  color: var(--syn-tag);
+}
+
+/* operators / punctuation */
+.post .highlight .chroma .o,
+.post .highlight .chroma .ow,
+.post .highlight .chroma .p {
+  color: var(--syn-punct);
+}
+
+/* errors + diff-like tokens */
+.post .highlight .chroma .err {
+  color: var(--syn-error);
+  background: transparent;
+}
+
+.post .highlight .chroma .gd {
+  color: var(--syn-del-text);
+  background: var(--syn-del-bg);
+}
+
+.post .highlight .chroma .gi {
+  color: var(--syn-ins-text);
+  background: var(--syn-ins-bg);
+}
+
+.post p {
+  line-height: 1.75; /* Consistent relative line height */
+  /* Optimized paragraph spacing for technical content */
+  margin: 0 0 1.1em 0; /* Top: 0 (handled by previous element), Bottom: 1.1em for breathing room */
+}
+
+/* First paragraph after headings should have less top margin */
+.post .post-content h1 + p,
+.post .post-content h2 + p,
+.post .post-content h3 + p,
+.post .post-content h4 + p,
+.post .post-content h5 + p,
+.post .post-content h6 + p {
+  margin-top: 0; /* No extra space after headings */
+}
+
+/* Last paragraph in a section should have consistent bottom margin */
+.post .post-content p:last-child {
+  margin-bottom: 1.1em; /* Consistent with other paragraphs */
+}
+
+/* Paragraphs after lists or code blocks */
+.post .post-content ul + p,
+.post .post-content ol + p,
+.post .post-content pre + p,
+.post .post-content .highlight + p {
+  margin-top: 1.1em; /* Space after lists/code blocks */
+}
+
+.post .toc {
+  padding: 1em;
+  padding-bottom: 0.5em; /* Reduced bottom padding for less gap before title */
+  list-style-type: square;
+  margin-bottom: 0.5em; /* Reduced margin for less gap before title */
+}
+
+.post .toc-child {
+  list-style: square;
+}
+
+/* TOC: keep original style, just a tiny readability touch */
+.post .toc li,
+.post .toc-child li {
+  font-size: 1.05em; /* Larger font for TOC */
+  line-height: 1.85em;
+}
+
+.post .post-footer {
+  line-height: 1;
+  min-height: 1em;
+}
+
+.post .post-footer .top {
+  float: right;
+  color: var(--c-muted);
+  transition: color 0.2s ease;
+}
+
+.post .post-footer .top:hover {
+  color: var(--c-top-hover);
+}
+
+.post .post-footer .top:focus-visible {
+  outline: 2px solid var(--c-focus);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.post .post-footer .post-tag-list {
+  display: inline-block;
+  padding: 0;
+  margin: 0 0 0.5em 0;
+  color: var(--c-muted);
+}
+
+.post .post-footer .post-tag-list .post-tag-list-item {
+  display: inline-block;
+  margin: 0 1em 0 0;
+}
+
+.post .post-footer .post-tag-list .post-tag-list-item a {
+  font-size: 85%;
+  transition: color 0.2s ease;
+}
+
+.post .post-footer .post-tag-list .post-tag-list-item a:focus-visible {
+  outline: 2px solid var(--c-focus);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.post .post-footer .post-tag-list .post-tag-list-item:before {
+  content: "#";
+}
+
+/* archive */
+.archive {
+  padding: 0 20px;
+  margin-bottom: 1em;
+}
+
+.archive .post-archive {
+  list-style: none;
+  padding: 0;
+}
+
+.archive .post-archive .post-item {
+  margin: 6px 0;
+  line-height: 1.5;
+}
+
+.archive .post-archive .post-item .post-date {
+  font-size: 80%;
+  color: var(--c-muted-2);
+  float: right;
+  font-family: -apple-system, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+}
+
+@media screen and (max-width: 425px) {
+  .archive .post-archive .post-item .post-date {
+    float: none;
+    margin-left: 0.5em;
+    font-size: 90%;
+    color: var(--c-muted);
+  }
+}
+
+.archive .post-archive .post-item .post-title {
+  /* border-bottom: 1px dotted; */
+  text-decoration: none;
+  transition: border-bottom-color 0.2s ease;
+}
+
+.archive .post-archive .post-item .post-title:hover {
+  border-bottom: 1px solid;
+}
+
+.archive .post-archive .post-item .post-title:focus-visible {
+  outline: 2px solid var(--c-focus);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* search page */
+.search-page {
+  padding: 0 20px;
+  margin-bottom: 2em;
+}
+.search-page .search-box {
+  margin: 1em 0;
+}
+.search-page #search-input {
+  width: 100%;
+  max-width: 500px;
+  padding: 0.6em 1em;
+  font-size: 1em;
+  border: 1px solid var(--c-border);
+  border-radius: 4px;
+  background: var(--c-bg);
+  color: var(--c-text);
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+.search-page #search-input:focus {
+  border-color: var(--c-focus);
+}
+
+/* home page (naosense style) */
+.home {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.home .info {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.home .info .logo {
+  font-size: 2em;
+  font-weight: bold;
+  font-family: -apple-system, Segoe UI, Helvetica, Arial, sans-serif;
+}
+.home .info .subtitle {
+  font-size: 1em;
+  color: #808080;
+  margin-top: 0.3em;
+}
+.home .info .sns {
+  margin: 1em auto;
+}
+.home .info .sns a {
+  width: 55px;
+  color: #999;
+  display: inline-block;
+  margin: 0 8px;
+  font-size: 0.95em;
+}
+.home .info .sns a:hover {
+  color: #000;
+}
+
+/* paginator */
+.page-nav {
+  padding: 0 20px;
+}
+
+.page-nav .prev,
+.page-nav .page-number {
+  padding: 10px 20px 10px 0;
+}
+
+.page-nav .next {
+  float: right;
+}
+
+.page-nav a {
+  color: var(--c-muted);
+  transition: color 0.2s ease;
+}
+
+.page-nav a:hover {
+  color: var(--c-link);
+}
+
+.page-nav a:focus-visible {
+  outline: 2px solid var(--c-focus);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* footer */
+footer {
+  margin: 0.5em 20px 0 20px;
+  border-top: 3px double var(--c-border);
+  padding: 1em 0 1em 0;
+  font-size: 80%;
+  color: var(--c-footer-text);
+}
+
+footer .author {
+  color: var(--c-link);
+}
+
+footer a:focus-visible {
+  outline: 2px solid var(--c-focus);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Mobile optimizations for better readability on small screens */
+@media screen and (max-width: 768px) {
+  .post .post-content {
+    font-size: 0.95em; /* Slightly smaller font on mobile for better fit */
+  }
+
+  .post .highlight pre.chroma {
+    padding: 0.5em 1em; /* Reduced padding on mobile */
+    font-size: 15px; /* Fixed size to match desktop, consistent across devices */
+  }
+
+  .container {
+    padding: 0 10px; /* Reduced container padding on mobile */
+  }
+
+  .post {
+    padding: 0 10px; /* Reduced post padding on mobile */
+  }
+
+  .page {
+    margin: 0 10px; /* Reduced page margin on mobile */
+  }
+}
+
+/* Menu partial */
+.menu {
+display: flex;
+justify-content: center;
+gap: 12px;
+padding: 10px 0;
+}
+
+.menu-item {
+text-decoration: none;
+font-size: 14px;
+opacity: 0.85;
+}
+
+.menu-item:hover {
+opacity: 1;
+}
+
+/* Naosense-style home layout */
+.home {
+display: table;
+width: 100%;
+height: 80vh;
+}
+
+.home .info {
+display: table-cell;
+vertical-align: middle;
+text-align: center;
+}
+
+.post-item {
+margin: 6px 0;
+}
+
+.post-date {
+float: right;
+}
+
+section.archive {
+max-width: 720px;
+margin: 0 auto;
+}
+
+/* ===== CUSTOM OVERRIDES ===== */
+
+/* 去装饰：H2 竖条 */
+.post .post-content h2::before {
+  display: none !important;
+}
+
+/* 去装饰：引用块去背景和边框 */
+.post blockquote {
+  background: transparent !important;
+  border-left: none !important;
+  padding-left: 1.2em !important;
+  color: var(--c-muted) !important;
+}
+
+.post blockquote p {
+  margin: 0.3em 0 !important;
+}
+
+/* 隐藏右上角主题切换按钮 */
+/* TOC 隐藏兜底 */
+.toc {
+  display: none !important;
+}
+
+/* Menu partial */
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 10px 0;
+}
+
+.menu-item {
+  text-decoration: none;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.menu-item:hover {
+  opacity: 1;
+}
+
+/* Naosense-style home */
+.home {
+  display: table;
+  width: 100%;
+  height: 80vh;
+}
+
+.home .info {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.post-item {
+  margin: 6px 0;
+}
+
+.post-date {
+  float: right;
+}
+
+section.archive {
+  max-width: 720px;
+  margin: 0 auto;
+}

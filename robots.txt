@@ -1,3 +1,1 @@
 User-agent: *
-Disallow:
-Sitemap: https://angelife.github.io/sitemap.xml

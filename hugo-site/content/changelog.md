@@ -1,6 +1,6 @@
 ---
 title: "更新日志"
-layout: "single"
+layout: "changelog"
 url: "/changelog/"
 summary: "angelife 网站公开更新日志"
 ---

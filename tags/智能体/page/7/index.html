@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><title>智能体 - 安知生 angelife</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script>
+    (() => {
+      const storageKey = 'theme';
+      let saved = null;
+      try {
+        saved = localStorage.getItem(storageKey);
+      } catch {}
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (saved === 'system') {
+        try {
+          localStorage.removeItem(storageKey);
+        } catch {}
+        saved = null;
+      }
+      if (saved !== 'dark' && saved !== 'light') saved = null;
+
+      const theme = saved ? saved : prefersDark ? 'dark' : 'light';
+      document.documentElement.dataset.themePref = saved ? theme : 'system';
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script><meta name="keywords" content=""><link rel="stylesheet" href="/css/style.css?v=1781761292">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+
+<style>
+ 
+
+ 
+.s3g-banner {
+  text-align: center;
+  padding: 18px 0 0 0;
+  margin-bottom: 8px;
+}
+
+.s3g-sitename {
+  font-family: "Ma Shan Zheng", "STKaiti", "KaiTi", "楷体", serif;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  margin: 0 0 14px 0;
+}
+.s3g-sitename a {
+  color: #000 !important;
+  text-decoration: none;
+  border-bottom: none !important;
+}
+
+.s3g-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+.s3g-nav a {
+  color: #999 !important;
+  text-decoration: none;
+  border-bottom: none !important;
+  transition: color 0.2s;
+}
+.s3g-nav a:hover {
+  color: #333 !important;
+}
+
+ 
+.archive {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.archive .article-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #223;
+  margin: 10px 0 22px 0;
+  text-align: left;
+  border: none;
+}
+
+.archive .archive-description {
+  font-size: 14px;
+  color: #888;
+  margin: -10px 0 24px 0;
+  line-height: 1.6;
+}
+
+.archive .archive-section-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #555;
+  margin: 28px 0 10px 0;
+}
+
+.archive .post-archive {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin: 20px 0 0 0;
+}
+.archive .post-archive .post-item {
+  list-style: none !important;
+  margin: 6px 0;
+  padding: 0;
+  line-height: 24px;
+  display: block;
+}
+.archive .post-archive .post-item::before {
+  content: none !important;
+}
+.archive .post-archive .post-title {
+  font-size: 16px;
+  color: #000 !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
+  line-height: 24px;
+}
+.archive .post-archive .post-title:hover {
+  color: #c00 !important;
+  text-decoration: none !important;
+}
+.archive .post-archive .post-date {
+  font-size: 13px;
+  color: #aaa;
+  margin-left: 10px;
+}
+
+.archive .archive-legacy {
+  margin-top: 28px;
+}
+.archive .archive-legacy summary {
+  font-size: 14px;
+  color: #888;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+.archive .archive-empty {
+  font-size: 15px;
+  color: #888;
+  line-height: 1.8;
+  margin-top: 30px;
+}
+
+ 
+.single, article {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+ 
+.s3g-footer {
+  max-width: 760px;
+  margin: 60px auto 30px auto;
+  padding: 18px 20px 0 20px;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 13px;
+  color: #999;
+}
+.s3g-footer .s3g-copy {
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+.s3g-footer .s3g-slogan {
+  font-family: "Ma Shan Zheng", "STKaiti", "KaiTi", "楷体", serif;
+  font-size: 18px;
+  color: #555;
+  letter-spacing: 0.08em;
+}
+
+ 
+.home-root .s3g-footer,
+body.home .s3g-footer {
+  border-top: none;
+  margin-top: 30px;
+}
+
+ 
+.archive .post-item time.post-date {   }
+
+ 
+.home .info .logo {
+  font-family: "Ma Shan Zheng", "STKaiti", "KaiTi", "楷体", serif !important;
+  font-size: 56px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.12em;
+  color: #1a1a1a !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+.home .info .sns {
+  margin-top: 24px !important;
+}
+.home .info .sns a {
+  width: auto !important;
+  font-size: 14px !important;
+  color: #aaa !important;
+  margin: 0 14px !important;
+  letter-spacing: 0.08em;
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+.home .info .sns a:hover {
+  color: #555 !important;
+}
+
+ 
+.post-single .article-title,
+.post-title .article-title,
+.post .article-title {
+  font-size: 36px !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  color: #1a1a1a !important;
+  margin: 32px 0 8px 0 !important;
+  letter-spacing: 0.01em;
+}
+.post-category {
+  font-size: 13px;
+  color: #999;
+  margin: 0 0 32px 0;
+  letter-spacing: 0.08em;
+}
+.section-subtitle {
+  text-align: left;
+  color: #999;
+  font-size: 14px;
+  margin: 0 0 36px 0;
+  line-height: 1.7;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.archive .article-title {
+  margin-bottom: 8px !important;
+}
+
+
+ 
+:root,
+html[data-theme="light"],
+html[data-theme="dark"],
+html:not([data-theme]) {
+  --c-bg: #FAFAF7 !important;
+  --c-text: #1a1a1a !important;
+  --c-link: #1a1a1a !important;
+  --c-heading: #1a1a1a !important;
+  --c-heading-border: #ECECEA !important;
+  --c-border: #ECECEA !important;
+  --c-border-soft: #F0EFEC !important;
+  --c-muted: #6B6B6B !important;
+  --c-muted-2: #999999 !important;
+  --c-subtitle: #6B6B6B !important;
+  --c-hr: #ECECEA !important;
+  --c-panel: #F4F2EC !important;
+  --c-pre-bg: #F4F2EC !important;
+  --c-inline-code-bg: #F4F2EC !important;
+  --c-quote-text: #6B6B6B !important;
+  --c-quote-bg: #F4F2EC !important;
+  --c-quote-border: #999999 !important;
+  --c-toggle: #999999 !important;
+  --c-archive-hover: #1a1a1a !important;
+}
+ 
+.container,
+.container.container-post,
+main,
+.main,
+article,
+.post,
+.page,
+.s3g-banner,
+.s3g-footer,
+.archive {
+  background: #FAFAF7 !important;
+}
+ 
+@media (prefers-color-scheme: dark) {
+  :root, html, html[data-theme="dark"] {
+    --c-bg: #FAFAF7 !important;
+    --c-text: #1a1a1a !important;
+    color-scheme: light !important;
+  }
+  html, body, .container { background: #FAFAF7 !important; color: #1a1a1a !important; }
+}
+
+ 
+:root {
+  --al-bg: #FAFAF7;         
+  --al-ink: #1a1a1a;        
+  --al-ink-soft: #222222;   
+  --al-mute: #ACACAC;       
+  --al-mute-deep: #9C9C9C;  
+  --al-slogan: #3F3C37;     
+  --al-line: #ECECEA;       
+}
+html, body {
+  background: #FAFAF7 !important;
+  color: #1a1a1a !important;
+}
+ 
+.s3g-banner,
+.s3g-banner a,
+.s3g-sitename,
+.s3g-sitename a {
+  background: transparent !important;
+  color: #1a1a1a !important;
+  border-bottom: none !important;
+}
+ 
+.s3g-nav a {
+  color: #999999 !important;
+}
+.s3g-nav a:hover,
+.s3g-nav a.active {
+  color: #1a1a1a !important;
+}
+ 
+.article-title,
+.post-single .article-title,
+.post-title .article-title,
+.archive .article-title {
+  color: #1a1a1a !important;
+}
+ 
+.post-archive .post-title,
+.post-archive .post-title:link,
+.post-archive .post-title:visited {
+  color: #222222 !important;
+}
+.post-archive .post-title:hover {
+  color: #000000 !important;
+}
+.post-archive .post-date {
+  color: #A8A8A8 !important;
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif !important;
+  font-variant-numeric: tabular-nums;
+}
+ 
+.section-subtitle {
+  color: #6B6B6B !important;
+}
+ 
+.post-category {
+  color: #ACACAC !important;
+}
+ 
+.post-content {
+  color: #222222 !important;
+  background: transparent !important;
+}
+.post-content a {
+  color: #1a1a1a;
+}
+ 
+.s3g-footer {
+  border-top: 1px solid #ECECEA !important;
+  background: transparent !important;
+}
+ 
+.s3g-footer .s3g-copy {
+  color: #A0A0A0 !important;
+  font-weight: 400 !important;
+}
+ 
+.s3g-footer .s3g-slogan {
+  color: #2A2A2A !important;
+  font-weight: 400 !important;
+  font-size: 19px !important;
+  letter-spacing: 0.02em;
+}
+ 
+.post-footer .post-time {
+  color: #A8A8A8 !important;
+}
+.post-footer .top {
+  color: #A8A8A8 !important;
+}
+.post-footer .top:hover {
+  color: #1a1a1a !important;
+}
+</style>
+
+</head>
+
+  <body id="top">
+    <div class="container">
+      <header class="s3g-banner"><div class="s3g-sitename">
+    <a href="/">安知生</a>
+  </div><nav class="s3g-nav"><a href="/series/information-judgment/">金</a><a href="/series/chan-shi-lu/">木</a><a href="/series/yi-notes/">水</a><a href="/series/ai-bu-yin/">火</a><a href="/series/confucian-framework/">土</a><a href="/archives/">归档</a><a href="/search/">搜索</a><a href="/about/">关于</a></nav>
+</header>
+
+      
+
+<section class="archive"><h1 class="article-title">智能体</h1>
+  <ul class="post-archive">
+    <li class="post-item">
+      <a class="post-title" href="/series/information-judgment/%E5%BF%97%E6%84%BF%E7%BB%84%E7%BB%87%E7%9A%84%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86-%E6%91%98%E8%A6%81/">《志愿组织的风险管理》摘要</a>
+      <time class="post-date">2012-02-03</time>
+    </li>
+    <li class="post-item">
+      <a class="post-title" href="/series/information-judgment/%E5%BF%97%E6%84%BF%E8%80%85%E6%98%AF%E9%9D%9E%E8%90%A5%E5%88%A9%E7%BB%84%E7%BB%87%E4%B8%AD%E7%9A%84%E5%AE%9D%E8%B4%B5%E8%B5%84%E6%BA%90/">志愿者是非营利组织中的宝贵资源</a>
+      <time class="post-date">2012-02-03</time>
+    </li>
+    <li class="post-item">
+      <a class="post-title" href="/series/information-judgment/%E5%BF%97%E6%84%BF%E6%9C%8D%E5%8A%A1%E7%AB%8B%E6%B3%95%E7%A0%94%E7%A9%B6/">志愿服务立法研究</a>
+      <time class="post-date">2012-02-03</time>
+    </li>
+    <li class="post-item">
+      <a class="post-title" href="/series/information-judgment/%E6%80%9D%E8%80%83%E4%B8%8E%E5%BB%BA%E8%AE%AE/">思考与建议</a>
+      <time class="post-date">2012-02-03</time>
+    </li>
+    <li class="post-item">
+      <a class="post-title" href="/series/information-judgment/%E5%BF%97%E6%84%BF%E8%80%85%E7%AE%A1%E7%90%86%E6%B5%81%E7%A8%8B/">志愿者管理流程</a>
+      <time class="post-date">2012-02-03</time>
+    </li>
+    <li class="post-item">
+      <a class="post-title" href="/series/information-judgment/%E9%9D%9E%E8%90%A5%E5%88%A9%E7%BB%84%E7%BB%87%E5%BF%97%E6%84%BF%E8%80%85%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E6%9E%84%E6%88%90/">非营利组织志愿者管理系统构成</a>
+      <time class="post-date">2012-02-03</time>
+    </li>
+    <li class="post-item">
+      <a class="post-title" href="/series/information-judgment/%E5%BF%97%E6%84%BF%E7%AE%A1%E7%90%86%E6%A6%82%E5%BF%B5/">志愿管理概念</a>
+      <time class="post-date">2012-02-03</time>
+    </li>
+    <li class="post-item">
+      <a class="post-title" href="/series/confucian-framework/%E9%97%AA%E7%94%B5-%E4%B9%A6%E5%8D%B7-%E7%9A%84%E5%88%86%E7%B1%BB/">闪电“书卷”的分类</a>
+      <time class="post-date">2012-02-01</time>
+    </li>
+    <li class="post-item">
+      <a class="post-title" href="/series/information-judgment/%E8%A6%81%E8%AD%A6%E6%83%95%E5%B9%B8%E7%A6%8F%E5%A9%9A%E5%A7%BB%E7%9A%84-%E7%BB%8A%E8%84%9A%E7%9F%B3/">要警惕幸福婚姻的“绊脚石”</a>
+      <time class="post-date">2012-01-31</time>
+    </li>
+    <li class="post-item">
+      <a class="post-title" href="/series/information-judgment/%E8%87%AA%E4%BF%A1%E4%B8%8E%E8%87%AA%E5%8D%91%E5%BF%83%E7%90%86%E5%AD%A6/">自信与自卑心理学</a>
+      <time class="post-date">2012-01-30</time>
+    </li>
+  </ul>
+  <nav class="page-nav"><a class="prev" href="/tags/%E6%99%BA%E8%83%BD%E4%BD%93/page/6/">Prev</a><a class="page-number" href="/tags/%E6%99%BA%E8%83%BD%E4%BD%93/">1</a><a class="page-number" href="/tags/%E6%99%BA%E8%83%BD%E4%BD%93/page/2/">2</a><a class="page-number" href="/tags/%E6%99%BA%E8%83%BD%E4%BD%93/page/3/">3</a><a class="page-number" href="/tags/%E6%99%BA%E8%83%BD%E4%BD%93/page/4/">4</a><a class="page-number" href="/tags/%E6%99%BA%E8%83%BD%E4%BD%93/page/5/">5</a><a class="page-number" href="/tags/%E6%99%BA%E8%83%BD%E4%BD%93/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/tags/%E6%99%BA%E8%83%BD%E4%BD%93/page/8/">8</a><a class="page-number" href="/tags/%E6%99%BA%E8%83%BD%E4%BD%93/page/9/">9</a><a class="next" href="/tags/%E6%99%BA%E8%83%BD%E4%BD%93/page/8/">Next</a></nav>
+</section>
+
+<footer class="s3g-footer">
+  <span class="s3g-copy">©2009&ndash;2026 angelife</span>
+  <span class="s3g-slogan">精于心，简于形</span>
+</footer>
+
+
+    </div>
+    <script src="/js/main.js" defer></script>
+  </body>
+</html>
