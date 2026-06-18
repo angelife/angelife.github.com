@@ -4,3 +4,7 @@ public/
 resources/_gen/
 .obsidian/workspace*.json
 .obsidian/cache/
+
+# editor / process backups
+*.bak
+*.bak.*
