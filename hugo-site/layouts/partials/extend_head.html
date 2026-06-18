@@ -1,23 +1,164 @@
+{{- /* extend_head.html — Stage 3G: naosense 排版严格对照 */ -}}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+
 <style>
-.navbar .menu {
+/* ===== Stage 3G: naosense 极简对照排版 ===== */
+
+/* —— Banner: 站名 + 主导航 —— */
+.s3g-banner {
+  text-align: center;
+  padding: 18px 0 0 0;
+  margin-bottom: 8px;
+}
+
+.s3g-sitename {
+  font-family: "Ma Shan Zheng", "STKaiti", "KaiTi", "楷体", serif;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  margin: 0 0 14px 0;
+}
+.s3g-sitename a {
+  color: #000 !important;
+  text-decoration: none;
+  border-bottom: none !important;
+}
+
+.s3g-nav {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 4px 12px;
-  list-style: none;
-  margin: 0;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+.s3g-nav a {
+  color: #999 !important;
+  text-decoration: none;
+  border-bottom: none !important;
+  transition: color 0.2s;
+}
+.s3g-nav a:hover {
+  color: #333 !important;
+}
+
+/* —— Archive / List 页：严格 naosense 风格 —— */
+.archive {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.archive .article-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #223;
+  margin: 10px 0 22px 0;
+  text-align: left;
+  border: none;
+}
+
+.archive .archive-description {
+  font-size: 14px;
+  color: #888;
+  margin: -10px 0 24px 0;
+  line-height: 1.6;
+}
+
+.archive .archive-section-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #555;
+  margin: 28px 0 10px 0;
+}
+
+.archive .post-archive {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin: 20px 0 0 0;
+}
+.archive .post-archive .post-item {
+  list-style: none !important;
+  margin: 6px 0;
   padding: 0;
-  border-top: 1px solid #ccc;
-  padding-top: 10px;
+  line-height: 24px;
+  display: block;
 }
-.navbar .menu-item {
-  display: inline-block;
+.archive .post-archive .post-item::before {
+  content: none !important;
 }
-.navbar .menu-item-link {
+.archive .post-archive .post-title {
+  font-size: 16px;
+  color: #000 !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
+  line-height: 24px;
+}
+.archive .post-archive .post-title:hover {
+  color: #c00 !important;
+  text-decoration: none !important;
+}
+.archive .post-archive .post-date {
+  font-size: 13px;
+  color: #aaa;
+  margin-left: 10px;
+}
+
+.archive .archive-legacy {
+  margin-top: 28px;
+}
+.archive .archive-legacy summary {
+  font-size: 14px;
+  color: #888;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+.archive .archive-empty {
+  font-size: 15px;
+  color: #888;
+  line-height: 1.8;
+  margin-top: 30px;
+}
+
+/* —— 文章页 / 单页 —— */
+.single, article {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* —— Footer 翻转：左版权 / 右毛笔字 slogan —— */
+.s3g-footer {
+  max-width: 760px;
+  margin: 60px auto 30px auto;
+  padding: 18px 20px 0 20px;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 13px;
   color: #999;
-  font-size: 0.9em;
 }
-.navbar .menu-item-link:hover {
-  color: #000;
+.s3g-footer .s3g-copy {
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
 }
+.s3g-footer .s3g-slogan {
+  font-family: "Ma Shan Zheng", "STKaiti", "KaiTi", "楷体", serif;
+  font-size: 18px;
+  color: #555;
+  letter-spacing: 0.08em;
+}
+
+/* —— 首页（保持 home-* 体系不动），但 footer 也用 s3g 翻转规则 —— */
+.home-root .s3g-footer,
+body.home .s3g-footer {
+  border-top: none;
+  margin-top: 30px;
+}
+
+/* —— 隐藏旧的左右上下杂项 —— */
+.archive .post-item time.post-date { /* 已上面定义 */ }
 </style>
