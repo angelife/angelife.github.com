@@ -1,0 +1,391 @@
+{{- /* extend_head.html — Stage 3G: naosense 排版严格对照 */ -}}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+
+<style>
+/* ===== Stage 3G: naosense 极简对照排版 ===== */
+
+/* —— Banner: 站名 + 主导航 —— */
+.s3g-banner {
+  text-align: center;
+  padding: 18px 0 0 0;
+  margin-bottom: 8px;
+}
+
+.s3g-sitename {
+  font-family: "Ma Shan Zheng", "STKaiti", "KaiTi", "楷体", serif;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  margin: 0 0 14px 0;
+}
+.s3g-sitename a {
+  color: #000 !important;
+  text-decoration: none;
+  border-bottom: none !important;
+}
+
+.s3g-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+.s3g-nav a {
+  color: #999 !important;
+  text-decoration: none;
+  border-bottom: none !important;
+  transition: color 0.2s;
+}
+.s3g-nav a:hover {
+  color: #333 !important;
+}
+
+/* —— Archive / List 页：严格 naosense 风格 —— */
+.archive {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.archive .article-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #223;
+  margin: 10px 0 22px 0;
+  text-align: left;
+  border: none;
+}
+
+.archive .archive-description {
+  font-size: 14px;
+  color: #888;
+  margin: -10px 0 24px 0;
+  line-height: 1.6;
+}
+
+.archive .archive-section-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #555;
+  margin: 28px 0 10px 0;
+}
+
+.archive .post-archive {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin: 20px 0 0 0;
+}
+.archive .post-archive .post-item {
+  list-style: none !important;
+  margin: 6px 0;
+  padding: 0;
+  line-height: 24px;
+  display: block;
+}
+.archive .post-archive .post-item::before {
+  content: none !important;
+}
+.archive .post-archive .post-title {
+  font-size: 16px;
+  color: #000 !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
+  line-height: 24px;
+}
+.archive .post-archive .post-title:hover {
+  color: #c00 !important;
+  text-decoration: none !important;
+}
+.archive .post-archive .post-date {
+  font-size: 13px;
+  color: #aaa;
+  margin-left: 10px;
+}
+
+.archive .archive-legacy {
+  margin-top: 28px;
+}
+.archive .archive-legacy summary {
+  font-size: 14px;
+  color: #888;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+.archive .archive-empty {
+  font-size: 15px;
+  color: #888;
+  line-height: 1.8;
+  margin-top: 30px;
+}
+
+/* —— 文章页 / 单页 —— */
+.single, article {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* —— Footer 翻转：左版权 / 右毛笔字 slogan —— */
+.s3g-footer {
+  max-width: 760px;
+  margin: 60px auto 30px auto;
+  padding: 18px 20px 0 20px;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 13px;
+  color: #999;
+}
+.s3g-footer .s3g-copy {
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+.s3g-footer .s3g-slogan {
+  font-family: "Ma Shan Zheng", "STKaiti", "KaiTi", "楷体", serif;
+  font-size: 18px;
+  color: #555;
+  letter-spacing: 0.08em;
+}
+
+/* —— 首页（保持 home-* 体系不动），但 footer 也用 s3g 翻转规则 —— */
+.home-root .s3g-footer,
+body.home .s3g-footer {
+  border-top: none;
+  margin-top: 30px;
+}
+
+/* —— 隐藏旧的左右上下杂项 —— */
+.archive .post-item time.post-date { /* 已上面定义 */ }
+
+/* —— 首页极简毛笔风（图3 极简启动页效果） —— */
+.home .info .logo {
+  font-family: "Ma Shan Zheng", "STKaiti", "KaiTi", "楷体", serif !important;
+  font-size: 56px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.12em;
+  color: #1a1a1a !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+.home .info .sns {
+  margin-top: 24px !important;
+}
+.home .info .sns a {
+  width: auto !important;
+  font-size: 14px !important;
+  color: #aaa !important;
+  margin: 0 14px !important;
+  letter-spacing: 0.08em;
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+.home .info .sns a:hover {
+  color: #555 !important;
+}
+
+/* —— s3g-extra-typography: H1 大字 + 系列标签 + section 副标题 —— */
+.post-single .article-title,
+.post-title .article-title,
+.post .article-title {
+  font-size: 36px !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  color: #1a1a1a !important;
+  margin: 32px 0 8px 0 !important;
+  letter-spacing: 0.01em;
+}
+.post-category {
+  font-size: 13px;
+  color: #999;
+  margin: 0 0 32px 0;
+  letter-spacing: 0.08em;
+}
+.section-subtitle {
+  text-align: left;
+  color: #999;
+  font-size: 14px;
+  margin: 0 0 36px 0;
+  line-height: 1.7;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.archive .article-title {
+  margin-bottom: 8px !important;
+}
+
+
+/* —— s3g-theme-vars-override: 锁死主题 CSS 变量到暖纸色板，禁用 dark mode 切换 —— */
+:root,
+html[data-theme="light"],
+html[data-theme="dark"],
+html:not([data-theme]) {
+  --c-bg: #FAFAF7 !important;
+  --c-text: #1a1a1a !important;
+  --c-link: #1a1a1a !important;
+  --c-heading: #1a1a1a !important;
+  --c-heading-border: #ECECEA !important;
+  --c-border: #ECECEA !important;
+  --c-border-soft: #F0EFEC !important;
+  --c-muted: #6B6B6B !important;
+  --c-muted-2: #999999 !important;
+  --c-subtitle: #6B6B6B !important;
+  --c-hr: #ECECEA !important;
+  --c-panel: #F4F2EC !important;
+  --c-pre-bg: #F4F2EC !important;
+  --c-inline-code-bg: #F4F2EC !important;
+  --c-quote-text: #6B6B6B !important;
+  --c-quote-bg: #F4F2EC !important;
+  --c-quote-border: #999999 !important;
+  --c-toggle: #999999 !important;
+  --c-archive-hover: #1a1a1a !important;
+}
+/* 容器底色强制（防止主题在 dark 模式下把 .container 染黑） */
+.container,
+.container.container-post,
+main,
+.main,
+article,
+.post,
+.page,
+.s3g-banner,
+.s3g-footer,
+.archive {
+  background: #FAFAF7 !important;
+}
+/* 暗色模式偏好下也强制亮色（禁用主题的自动切换） */
+@media (prefers-color-scheme: dark) {
+  :root, html, html[data-theme="dark"] {
+    --c-bg: #FAFAF7 !important;
+    --c-text: #1a1a1a !important;
+    color-scheme: light !important;
+  }
+  html, body, .container { background: #FAFAF7 !important; color: #1a1a1a !important; }
+}
+
+/* —— s3g-color-unify v2: 暖纸感色板（按图3）—— */
+:root {
+  --al-bg: #FAFAF7;        /* 暖灰白纸感 */
+  --al-ink: #1a1a1a;       /* 主黑（H1/banner 用） */
+  --al-ink-soft: #222222;  /* 副黑（文章标题/正文用） */
+  --al-mute: #ACACAC;      /* 浅中灰（菜单/日期/©） */
+  --al-mute-deep: #9C9C9C; /* 中灰（副标题用，比菜单稍深） */
+  --al-slogan: #3F3C37;    /* 墨灰暖（毛笔 slogan 用） */
+  --al-line: #ECECEA;      /* 极浅灰分隔线 */
+}
+html, body {
+  background: #FAFAF7 !important;
+  color: #1a1a1a !important;
+}
+/* banner */
+.s3g-banner,
+.s3g-banner a,
+.s3g-sitename,
+.s3g-sitename a {
+  background: transparent !important;
+  color: #1a1a1a !important;
+  border-bottom: none !important;
+}
+/* nav */
+.s3g-nav a {
+  color: #999999 !important;
+}
+.s3g-nav a:hover,
+.s3g-nav a.active {
+  color: #1a1a1a !important;
+}
+/* H1 主标题 */
+.article-title,
+.post-single .article-title,
+.post-title .article-title,
+.archive .article-title {
+  color: #1a1a1a !important;
+}
+/* 文章列表标题 — 用稍浅的副黑 */
+.post-archive .post-title,
+.post-archive .post-title:link,
+.post-archive .post-title:visited {
+  color: #222222 !important;
+}
+.post-archive .post-title:hover {
+  color: #000000 !important;
+}
+.post-archive .post-date {
+  color: #A8A8A8 !important;
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif !important;
+  font-variant-numeric: tabular-nums;
+}
+/* 副标题 — 比菜单稍深 */
+.section-subtitle {
+  color: #6B6B6B !important;
+}
+/* 文章页系列标签 */
+.post-category {
+  color: #ACACAC !important;
+}
+/* 正文 */
+.post-content {
+  color: #222222 !important;
+  background: transparent !important;
+}
+.post-content a {
+  color: #1a1a1a;
+}
+/* 页脚分隔线 */
+.s3g-footer {
+  border-top: 1px solid #ECECEA !important;
+  background: transparent !important;
+}
+/* 页脚 ©版权 — 浅灰 */
+.s3g-footer .s3g-copy {
+  color: #A0A0A0 !important;
+  font-weight: 400 !important;
+}
+/* 页脚 slogan — 墨灰暖（毛笔字风格，要深要有墨韵） */
+.s3g-footer .s3g-slogan {
+  color: #2A2A2A !important;
+  font-weight: 400 !important;
+  font-size: 19px !important;
+  letter-spacing: 0.02em;
+}
+/* 文章页底部 meta */
+.post-footer .post-time {
+  color: #A8A8A8 !important;
+}
+.post-footer .top {
+  color: #A8A8A8 !important;
+}
+.post-footer .top:hover {
+  color: #1a1a1a !important;
+}
+
+/* —— s3g-post-cover: 文章页 280px 封面块 —— */
+.post-cover {
+  margin: 1.6em auto 1.4em;
+  max-width: 100%;
+  text-align: center;
+}
+.post-cover img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 280px;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  border-radius: 2px;
+  background: #ECECEA;
+}
+.post-cover figcaption {
+  margin-top: 0.6em;
+  font-size: 13px;
+  color: #999999;
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+</style>

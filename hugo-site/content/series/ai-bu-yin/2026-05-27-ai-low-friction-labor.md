@@ -22,17 +22,16 @@ tags:
   - "知识资产"
   - "系统主控"
 cover:
-  image: "cover.png"
+  image: "/images/posts/2026-05-27-ai-low-friction-labor/cover.png"
   alt: "AI 时代低摩擦组织劳动力"
   caption: "从工资人到系统主控"
-  relative: true
 ---
 
 ## 机器人喝咖啡，人类要饭：AI 收益归谁？
 
 今天聊到最后，最不能漏掉的其实是那幅图：**机器人坐着喝咖啡，人类在街边要饭。**
 
-![机器人喝咖啡，人类要饭](figures/robot-coffee-human-beggar.png)
+![机器人喝咖啡，人类要饭](/images/posts/2026-05-27-ai-low-friction-labor/figures/robot-coffee-human-beggar.png)
 
 这不是简单的科幻笑话，而是 AI 时代最残酷的问题：**AI 干完活以后，收益归谁？**
 
@@ -172,7 +171,7 @@ Mac 和 iPhone 适合做个人主控台；Linux 适合做后端、服务器、�
 
 我要走的是最后一条。
 
-![AI 时代的工作流地图](figures/ai-low-friction-map.png)
+![AI 时代的工作流地图](/images/posts/2026-05-27-ai-low-friction-labor/figures/ai-low-friction-map.png)
 
 ## 结论
 

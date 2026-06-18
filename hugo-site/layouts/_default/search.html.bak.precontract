@@ -1,0 +1,25 @@
+{{ define "main" }}
+<header class="header">
+  <div class="blog-title">
+    <a href="/" class="logo">安知生 angelife</a>
+    <div class="subtitle"></div>
+  </div>
+  <nav class="navbar">
+    <ul class="menu">
+      {{- range site.Menus.main }}
+      <li class="menu-item"><a href="{{ .URL }}" class="menu-item-link">{{ .Name }}</a></li>
+      {{- end }}
+    </ul>
+  </nav>
+</header>
+<section class="post">
+  <h1 class="article-title">{{ .Title }}</h1>
+  <div class="post-content">
+    {{ .Content }}
+  </div>
+</section>
+<footer>
+  © 2009–2026
+  <span class="author">angelife / 安知生</span>
+</footer>
+{{ end }}

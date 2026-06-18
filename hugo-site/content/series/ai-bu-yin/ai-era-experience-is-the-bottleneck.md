@@ -16,10 +16,9 @@ tags:
   - "方法论"
   - "个人知识系统"
 cover:
-  image: "cover.png"
+  image: "/images/posts/ai-era-experience-is-the-bottleneck/cover.png"
   alt: "AI时代经验与判断力成为真正瓶颈"
   caption: "答案变便宜以后，经验开始变贵"
-  relative: true
 comments: true
 ---
 
