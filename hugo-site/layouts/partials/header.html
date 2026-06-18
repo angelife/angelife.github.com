@@ -1,13 +1,13 @@
 <header class="s3g-banner">
-  {{- /* 首页不显示 banner（首页已有自己的毛笔字大标题） */ -}}
+  {{- /* 首页不显示 banner（首页有自己的毛笔字大标题 + 五行链接） */ -}}
   {{- if not .IsHome -}}
   <div class="s3g-sitename">
     <a href="{{ "/" | relURL }}">安知生</a>
   </div>
-  {{- end -}}
   <nav class="s3g-nav">
     {{- range site.Menus.main -}}
     <a href="{{ .URL | relURL }}">{{ .Name }}</a>
     {{- end -}}
   </nav>
+  {{- end -}}
 </header>

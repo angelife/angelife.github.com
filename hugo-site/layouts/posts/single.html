@@ -2,7 +2,36 @@
   <article class="post post-single">
     <div class="post-title">
       <h1 class="article-title">{{ .Title }}</h1>
+      {{- with .Params.categories }}
+      <div class="post-category">{{ index . 0 }}</div>
+      {{- end }}
     </div>
+
+    {{- /* —— 280px 封面（兼容 cover.image map 与 cover string 两种 frontmatter） —— */ -}}
+    {{- $coverSrc := "" }}
+    {{- $coverAlt := .Title }}
+    {{- $coverCaption := "" }}
+    {{- with .Params.cover }}
+      {{- if reflect.IsMap . }}
+        {{- $coverSrc = .image | default .src | default "" }}
+        {{- with .alt }}{{ $coverAlt = . }}{{ end }}
+        {{- with .caption }}{{ $coverCaption = . }}{{ end }}
+      {{- else }}
+        {{- $coverSrc = . }}
+      {{- end }}
+    {{- end }}
+    {{- /* page bundle 优先：若文章目录里有 cover.png/jpg/webp 则用它（覆盖 frontmatter） */ -}}
+    {{- $bundleCover := "" }}
+    {{- with .Resources.GetMatch "cover.{png,jpg,jpeg,webp}" }}
+      {{- $bundleCover = .RelPermalink }}
+    {{- end }}
+    {{- if $bundleCover }}{{ $coverSrc = $bundleCover }}{{ end }}
+    {{- if $coverSrc }}
+    <figure class="post-cover">
+      <img src="{{ $coverSrc | relURL }}" alt="{{ $coverAlt }}" loading="lazy">
+      {{- with $coverCaption }}<figcaption>{{ . }}</figcaption>{{ end }}
+    </figure>
+    {{- end }}
 
     {{- if .Params.toc | default false -}}
       {{ partial "toc.html" . }}

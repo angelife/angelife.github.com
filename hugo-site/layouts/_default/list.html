@@ -1,13 +1,39 @@
 {{ define "main" }}
 
 <section class="archive">
-  <h1 class="article-title">{{ .Title | default "Posts" }}</h1>
+  {{- /* 优先取 phaseLabel（火·AI / 金·判断 等），fallback 到 title */ -}}
+  <h1 class="article-title">{{ .Params.phaseLabel | default .Title | default "Posts" }}</h1>
+  {{- with .Description }}
+  <p class="section-subtitle">{{ . }}</p>
+  {{- end }}
   <ul class="post-archive">
-    {{- $all := where .Site.RegularPages "Section" "posts" }}
+    {{- /* 候选池：posts + series 子页（系列本体文章） */ -}}
+    {{- $pool := where .Site.RegularPages "Section" "in" (slice "posts" "series") }}
+    {{- $candidates := slice }}
+    {{- if eq .Section "series" }}
+      {{- with .File }}
+        {{- $slug := .ContentBaseName }}
+        {{- /* 1) posts 中 series 字段含本 slug 的，优先 */ -}}
+        {{- $candidates = where $pool "Params.series" "intersect" (slice $slug) }}
+        {{- /* 2) series/<slug>/ 目录下子页（系列独有的本体），追加 */ -}}
+        {{- range where (where $pool "Section" "series") "File.Dir" (printf "series/%s/" $slug) }}
+          {{- $candidates = $candidates | append . }}
+        {{- end }}
+      {{- end }}
+    {{- else }}
+      {{- $candidates = where $pool "Section" "posts" }}
+    {{- end }}
+    {{- /* 去重：以 ContentBaseName 为 key，先到先得（posts 在前） */ -}}
+    {{- $seen := slice }}
     {{- $filtered := slice }}
-    {{- range $all }}
-      {{- if ne (partial "has_tag.html" (dict "page" . "tag" "draft")) "true" }}
-        {{- $filtered = $filtered | append . }}
+    {{- range $candidates }}
+      {{- $key := "" }}
+      {{- with .File }}{{ $key = .ContentBaseName }}{{ end }}
+      {{- if and $key (not (in $seen $key)) }}
+        {{- $seen = $seen | append $key }}
+        {{- if ne (partial "has_tag.html" (dict "page" . "tag" "draft")) "true" }}
+          {{- $filtered = $filtered | append . }}
+        {{- end }}
       {{- end }}
     {{- end }}
     {{- $filtered = sort $filtered "Date" "desc" }}
