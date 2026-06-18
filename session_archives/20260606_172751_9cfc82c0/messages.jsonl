@@ -1,6 +1,0 @@
-{"id": 11985, "role": "user", "content": "你好", "timestamp": 1780886723.3170626}
-{"id": 11986, "role": "assistant", "content": "你好！大衍神君，有什么需要帮忙的？", "timestamp": 1780886723.3170636}
-{"id": 11987, "role": "user", "content": "你好", "timestamp": 1780886723.3170645}
-{"id": 12039, "role": "assistant", "content": "好！找到完整的配置了。现在一切都清楚了：\n\n1. **Hermes 的 Telegram Bot Token** 已配置\n2. **`TELEGRAM_EXCLUSIVE_BOT_MENTIONS=false`** 已设（刚才做的）\n3. **我的 Bot 是唯一对外发声的入口**\n\n现在开始构建 **Swarm Council", "timestamp": 1780887600.5005383}
-{"id": 12041, "role": "assistant", "content": "先把", "timestamp": 1780887600.5210054}
-{"id": 12042, "role": "tool", "content": "{\"output\": \"\", \"exit_code\": 0, \"error\": null}", "timestamp": 1780887600.5308201, "tool_name": "terminal"}

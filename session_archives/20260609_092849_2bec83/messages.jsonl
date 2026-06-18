@@ -1,6 +1,0 @@
-{"id": 12480, "role": "user", "content": "[Note: model was just switched from deepseek-ai/deepseek-v4-flash to deepseek-ai/deepseek-v4-pro via Nvidia.]\n\n你好"}
-{"id": 12481, "role": "assistant", "content": "你好！大衍神君。\n\n我是 Hermes，木同学。\n\n当前环境一切正常，Docker 容器运行稳定。有什么需要我处理的？"}
-{"id": 12482, "role": "user", "content": "你的telegram 机器人 还正常么"}
-{"id": 12564, "role": "assistant", "content": "API 正常，暂无未处理的消息。Gateway 已经在 long polling 了（getUpdates 被 Hermes 内部调用，外部调用也会返回空结果）。"}
-{"id": 12566, "role": "assistant", "content": "日志没有任何新条目，但进程还在运行。这可能是 s6 日志缓冲导致的。让我直接在"}
-{"id": 12568, "role": "assistant", "content": "运行正常（411 号进程，已运行 5 秒 CPU）。总结：\n\n---\n\n**Telegram 机器人已恢复**\n\n- Token 已解注释 → TELEGRAM_BOT_TOKEN=***\n- s6 自动重启 Gateway（进程 411，09:49 启动）\n- Bot 验证通过：@NVIDIA2012_bot（\"木\"），ID 8881645488\n- 模式：long polling（无 webhook）\n- 配置：exclusive_bot_mentions: false，require_mention: true\n\n去 Telegram 上 @NVIDIA2012_bot 发条消息试试？"}

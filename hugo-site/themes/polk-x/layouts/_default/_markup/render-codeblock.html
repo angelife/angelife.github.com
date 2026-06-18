@@ -1,0 +1,7 @@
+{{- /* Use Hugo's native highlight output format: <div class="highlight"><pre class="chroma"><code>...</code></pre></div> */ -}}
+{{- $lang := .Type | default "" -}}
+{{- $opts := dict "lineNos" false "noClasses" false -}}
+{{- $html := transform.Highlight .Inner $lang $opts -}}
+{{- $html | safeHTML -}}
+
+

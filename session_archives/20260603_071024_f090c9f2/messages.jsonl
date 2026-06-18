@@ -1,5 +1,0 @@
-{"id": 9788, "role": "user", "content": "帮我看看 NVIDIA还有啥免费的大模型", "timestamp": 1780470668.9108012}
-{"id": 9794, "role": "assistant", "content": "NVIDIA 免费模型清单（2026-06）：\n\n**通用对话 / 推理**\n- meta/llama-3.2-1b-instruct — 最小量级，快速响应\n- meta/llama-3.2-3b-instruct — 轻量实用\n- google/gemma-2-2b-it — Google 小杯\n..."}
-{"id": 9796, "role": "user", "content": "你觉得的这里哪个好", "timestamp": 1780470738.0748878}
-{"id": 9838, "role": "user", "content": "升级版本会发生啥", "timestamp": 1780474594.4113867}
-{"id": 9839, "role": "assistant", "content": "升级 Hermes 过程中：\n\n**保留的东西**\n- config.yaml 配置\n- .env（API keys）\n- skills/ 技能库\n- sessions/ 历史记录\n- state.db 会话数据库\n\n**可能的影响**\n- Gateway 会重启，期间 Telegram 会断连几秒\n..."}

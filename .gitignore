@@ -1,9 +1,0 @@
-.DS_Store
-*.swp
-*.tmp
-Thumbs.db
-_incoming/
-_reasonix/
-_private/
-# Local Reasonix state
-.reasonix/

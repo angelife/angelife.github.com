@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Kindle on 安知生 angelife</title><link>https://angelife.github.io/tags/Kindle/</link><description>Recent content in Kindle on 安知生 angelife</description><generator>Hugo -- 0.147.4</generator><language>zh-cn</language><copyright>2009–2026 angelife / 安知生</copyright><lastBuildDate>Thu, 11 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://angelife.github.io/tags/Kindle/index.xml" rel="self" type="application/rss+xml"/><item><title>Kindle Keyboard K3W 越狱安装 KOReader 完整指南（2026年）</title><link>https://angelife.github.io/posts/kindle-k3w-koreader-2026/</link><pubDate>Thu, 11 Jun 2026 00:00:00 +0000</pubDate><guid>https://angelife.github.io/posts/kindle-k3w-koreader-2026/</guid><description>&lt;blockquote>
-&lt;p>适用设备：Kindle Keyboard 3rd Generation WiFi（序列号 B008 开头）&lt;br>
-适用固件：FW 3.3 → 目标 FW 3.4&lt;br>
-撰写时间：2026年6月&lt;br>
-环境：Docker Hermes → Mac Execution Bridge → Kindle USB 挂载&lt;/p>&lt;/blockquote>
-&lt;hr>
-&lt;h2 id="背景">背景&lt;/h2>
-&lt;p>网上关于 Kindle K3 越狱的资料大多来自 2012–2016 年，散落在 MobileRead 论坛的各个帖子里，互相引用、信息过时。2025 年 4 月 17 日，KUAL 的开发者证书过期，导致大量旧教程失效。本文记录 2026 年实际可用的完整流程，包含越狱、证书修复、KOReader 部署到文件级校验的全链条经验。&lt;/p></description></item><item><title>Kindle、KOReader 与 AI：新的阅读闭环</title><link>https://angelife.github.io/series/ai-bu-yin/kindle-koreader-ai-reading-loop/</link><pubDate>Wed, 27 May 2026 01:00:00 +0800</pubDate><guid>https://angelife.github.io/series/ai-bu-yin/kindle-koreader-ai-reading-loop/</guid><description>电子书设备的价值不只是便宜或护眼，而是帮助人建立低干扰、可沉淀、可输出的阅读系统。</description></item></channel></rss>
