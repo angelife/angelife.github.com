@@ -1,5 +1,6 @@
 ---
 title: "发布链路测试"
+slug: 2026-06-19-publish-pipeline-test
 date: 2026-06-19T10:00:00+08:00
 draft: false
 categories:

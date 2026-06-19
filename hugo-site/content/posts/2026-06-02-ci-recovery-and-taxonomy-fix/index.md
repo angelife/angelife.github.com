@@ -1,5 +1,6 @@
 ---
 title: "2026-06-02 今日總結：一場關於 CI 路徑錯配與特製檔案的搶救複盤"
+slug: 2026-06-02-ci-recovery-and-taxonomy-fix
 date: 2026-06-02T23:45:00+08:00
 series: ["information-judgment"]
 tags: ["運維", "Hugo", "GitHub Actions", "taxonomy", "故障複盤"]
