@@ -1,5 +1,6 @@
 ---
 
+
 title: "Kindle Keyboard K3W 越狱安装 KOReader 完整指南（2026年）"
 date: 2026-06-11
 draft: false
@@ -16,7 +17,12 @@ tags:
   - 教程
 cover: []
 
+
 ---
+
+## 题记
+
+> > 适用设备：Kindle Keyboard 3rd Generation WiFi（序列号 B008 开头）
 
 > 适用设备：Kindle Keyboard 3rd Generation WiFi（序列号 B008 开头）  
 > 适用固件：FW 3.3 → 目标 FW 3.4  
