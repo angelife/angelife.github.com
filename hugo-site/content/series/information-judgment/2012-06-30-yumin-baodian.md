@@ -2,6 +2,7 @@
 
 
 
+
 title: "驭民宝典"
 slug: "驭民宝典"
 date: 2012-06-30T03:21:00.000-07:00
@@ -22,6 +23,7 @@ cover:
 
 ---
 
+
 可以和东方闪电的精神操纵手法对比参考
 
 
@@ -29,7 +31,6 @@ cover:
 
 [http://www.tudou.com/l/EGze_goeM4U/&resourceId=0_05_05_99&iid=52182021&bid=05/v.swf](http://www.tudou.com/l/EGze_goeM4U/&resourceId=0_05_05_99&iid=52182021&bid=05/v.swf)
 
-
 ## 结语
 
-关于「"驭民宝典"」，需要在实践中检验认识，在行动中深化理解。
+「"驭民宝典"」涉及多个层面。关键是行动与反思的结合，在具体情境中验证判断。

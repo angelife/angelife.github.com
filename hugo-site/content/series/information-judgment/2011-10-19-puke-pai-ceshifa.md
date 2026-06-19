@@ -2,6 +2,7 @@
 
 
 
+
 title: "扑克牌测试法"
 slug: "扑克牌测试法"
 date: 2011-10-19T17:32:00.000-07:00
@@ -21,6 +22,7 @@ cover:
   alt: "扑克牌测试法"
 
 ---
+
 
 [caption id="attachment_169" align="alignnone" width="150" caption="正面因素"][![]( http://angelife-wordpress.stor.sinaapp.com/uploads/2011/10/正面因素-150x150.png )](http://angelife-wordpress.stor.sinaapp.com/uploads/2011/10/正面因素.png)[/caption]
 
@@ -55,7 +57,6 @@ R=红桃，Y=黑桃，蓝=方片，绿=草花。
 [心灵家园]http://angelife.sinaapp.com/
 文章转载请注明出处，尊重他人劳动成果
 
-
 ## 结语
 
-关于「"扑克牌测试法"」，需要在实践中检验认识，在行动中深化理解。
+「"扑克牌测试法"」涉及多个层面。关键是行动与反思的结合，在具体情境中验证判断。

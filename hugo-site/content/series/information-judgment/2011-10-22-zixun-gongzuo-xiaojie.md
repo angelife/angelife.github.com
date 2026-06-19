@@ -2,6 +2,7 @@
 
 
 
+
 title: "咨询工作小结"
 slug: "咨询工作小结"
 date: 2011-10-22T19:23:00.000-07:00
@@ -21,6 +22,7 @@ cover:
   alt: "咨询工作小结"
 
 ---
+
 
 ## 题记
 
@@ -51,7 +53,6 @@ cover:
 A certain amount of care or pain or trouble is necessary for every man at all times .A ship without a ballast is unstable and will not go straight. (Arthur Schopenhauer. Geman philosopher)
 一定的忧愁、痛苦或烦恼，对每个人都是时时必需的。一艘船如果没有压舱物，便不会稳定，不能朝着目的地一直前进。(德国哲学家 叔本华 A)
 
-
 ## 结语
 
-关于「"咨询工作小结"」，需要在实践中检验认识，在行动中深化理解。
+「"咨询工作小结"」涉及多个层面。关键是行动与反思的结合，在具体情境中验证判断。

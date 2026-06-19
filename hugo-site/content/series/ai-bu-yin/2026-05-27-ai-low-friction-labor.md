@@ -2,6 +2,7 @@
 
 
 
+
 title: "AI 时代，真正赢的不是免费，而是低摩擦地组织劳动力"
 slug: "2026-05-27-ai-low-friction-labor"
 date: 2026-05-27T20:30:00+08:00
@@ -30,9 +31,8 @@ cover:
   caption: "从工资人到系统主控"
 ---
 
-## 题记
 
-在信息与经验之间，真正的瓶颈不是数据本身，而是判断与组织的能力。
+## 题记
 
 ## 零、本文结构
 
@@ -216,5 +216,6 @@ AI 时代，真正赢的不是苹果、Linux、微软、开源、免费、资本
 - [R. Kikuo Johnson, “Tech Support”, The New Yorker, 2017-10-16](https://www.newyorker.com/culture/cover-story/cover-story-2017-10-23)
 - [R. Kikuo Johnson — Tech Support](https://www.rkikuojohnson.com/tech-support)
 
-
 ## 结语
+
+本文从12个角度探讨了「"AI 时代，真正赢的不是免费，而是低摩擦地组织劳动力"」。信息过载时代，真正的能力不在于掌握更多数据，而在于判断的准确性。
