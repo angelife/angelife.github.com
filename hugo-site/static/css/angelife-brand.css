@@ -893,6 +893,17 @@ article.post-single .post-content blockquote {
   background: transparent;
 }
 
+article.post-single .post-content pre {
+  padding: 1rem;
+  overflow-x: auto;
+  border-radius: 10px;
+  background: #f6f8fa;
+}
+
+article.post-single .post-content pre code {
+  background: transparent;
+}
+
 article.post-single .post-content img {
   display: block;
   max-width: 100%;
@@ -926,6 +937,23 @@ article.post-single > .entry-cover figcaption {
   article.post-single .post-content {
     font-size: 17px;
     line-height: 1.86;
+  }
+
+  article.post-single .post-content h2 {
+    margin-top: 2.2em;
+    font-size: 1.55rem;
+  }
+
+  article.post-single .post-content h3 {
+    margin-top: 1.8em;
+  }
+
+  article.post-single .post-content pre {
+    padding: 0.85rem;
+  }
+
+  article.post-single .post-content blockquote {
+    padding: 0.85rem 1.1rem;
   }
 }
 
