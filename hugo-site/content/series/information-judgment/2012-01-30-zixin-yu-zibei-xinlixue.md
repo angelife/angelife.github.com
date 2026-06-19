@@ -1,4 +1,5 @@
 ---
+
 title: "自信与自卑心理学"
 slug: "自信与自卑心理学"
 date: 2012-01-30T06:54:00.000-08:00
@@ -18,7 +19,6 @@ cover:
   alt: "自信与自卑心理学"
 
 ---
-
 | 
  | 自信与自卑心理学
 
@@ -53,5 +53,12 @@ cover:
  
 
  
+
+## 结语
+
+关于「"自信与自卑心理学"」，需要在实践中检验认识，在行动中深化理解。
+
+
+
 
 [http://lf.lnu.edu.cn/education/read.jsp?id=28747](http://lf.lnu.edu.cn/education/read.jsp?id=28747)

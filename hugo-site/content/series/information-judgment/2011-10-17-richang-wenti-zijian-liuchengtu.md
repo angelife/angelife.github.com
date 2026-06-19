@@ -1,4 +1,5 @@
 ---
+
 title: "日常问题自检流程图"
 slug: "日常问题自检流程图"
 date: 2011-10-17T22:11:00.000-07:00
@@ -18,7 +19,6 @@ cover:
   alt: "日常问题自检流程图"
 
 ---
-
 - 事实描述用椭圆形表示
 
 	- 行动方案用矩形表示
@@ -28,6 +28,13 @@ cover:
 	- 箭头代表流动方向
 [
 ](http://angelife-wordpress.stor.sinaapp.com/uploads/2011/10/diagram1.png)
+
+## 结语
+
+关于「"日常问题自检流程图"」，需要在实践中检验认识，在行动中深化理解。
+
+
+
 
 退教心理咨询
 [心灵家园]http://angelife.sinaapp.com/

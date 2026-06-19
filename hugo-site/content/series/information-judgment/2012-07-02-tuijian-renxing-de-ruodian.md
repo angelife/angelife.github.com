@@ -1,4 +1,5 @@
 ---
+
 title: "[推荐]人性的弱点"
 slug: "推荐-人性的弱点"
 date: 2012-07-02T15:38:00.000-07:00
@@ -18,7 +19,6 @@ cover:
   alt: "[推荐]人性的弱点"
 
 ---
-
 ![人性的弱点](http://img3.douban.com/lpic/s1083685.jpg)
  
 
@@ -32,5 +32,12 @@ cover:
 
 [![]( http://angelife.org/wp-content/uploads/2012/07/人性的弱点-300x216.png )](http://angelife.org/wp-content/uploads/2012/07/人性的弱点.png)
 [下载地址](http://ishare.iask.sina.com.cn/search.php?key=%C8%CB%D0%D4%B5%C4%C8%F5%B5%E3%C8%AB%BC%AF)
+
+## 结语
+
+关于「"[推荐]人性的弱点"」，需要在实践中检验认识，在行动中深化理解。
+
+
+
 
 人性的弱点 第2集 [http://www.haokan5.com/play/?3124-0-1.html](http://www.haokan5.com/play/?3124-0-1.html)

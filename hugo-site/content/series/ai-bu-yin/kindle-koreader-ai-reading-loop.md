@@ -1,4 +1,5 @@
 ---
+
 title: "Kindle、KOReader 与 AI：新的阅读闭环"
 date: 2026-05-27T01:00:00+08:00
 draft: false
@@ -9,6 +10,20 @@ summary: "电子书设备的价值不只是便宜或护眼，而是帮助人建�
 tags: ["Kindle", "KOReader", "AI阅读", "知识管理"]
 series: ["ai-bu-yin"]
 slug: "kindle-koreader-ai-reading-loop"
+---
+## 题记
+
+在信息与经验之间，真正的瓶颈不是数据本身，而是判断与组织的能力。
+
+## 零、本文结构
+
+本文分为 4 个部分：
+
+1、买的不是硬件
+2、核心判断
+3、怎么做
+4、结语
+
 ---
 
 买电子书设备，买的不是硬件，而是一种阅读环境。

@@ -1,4 +1,5 @@
 ---
+
 title: "扑克牌测试法"
 slug: "扑克牌测试法"
 date: 2011-10-19T17:32:00.000-07:00
@@ -18,7 +19,6 @@ cover:
   alt: "扑克牌测试法"
 
 ---
-
 [caption id="attachment_169" align="alignnone" width="150" caption="正面因素"][![]( http://angelife-wordpress.stor.sinaapp.com/uploads/2011/10/正面因素-150x150.png )](http://angelife-wordpress.stor.sinaapp.com/uploads/2011/10/正面因素.png)[/caption]
 
 [caption id="attachment_170" align="alignnone" width="150" caption="负面因素"][![]( http://angelife-wordpress.stor.sinaapp.com/uploads/2011/10/负面因素-150x150.png )](http://angelife-wordpress.stor.sinaapp.com/uploads/2011/10/负面因素.png)[/caption]
@@ -44,6 +44,13 @@ R=红桃，Y=黑桃，蓝=方片，绿=草花。
 辅助道具
 
 扑克牌 [微盘下载](http://t.cn/SvtWl6) [DBank下载](http://dl.dbank.com/c0bk6amx61)
+
+## 结语
+
+关于「"扑克牌测试法"」，需要在实践中检验认识，在行动中深化理解。
+
+
+
 
 退教心理咨询
 [心灵家园]http://angelife.sinaapp.com/
