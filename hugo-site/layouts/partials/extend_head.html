@@ -1,10 +1,10 @@
-{{- /* extend_head.html — Stage 3G: naosense 排版严格对照 */ -}}
+{{- /* extend_head.html — UI 装饰层（不含排版） */ -}}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
 
 <style>
-/* ===== Stage 3G: naosense 极简对照排版 ===== */
+/* ===== UI 装饰层：banner / nav / footer / 首页布局 / 主题变量 ===== */
 
 /* —— Banner: 站名 + 主导航 —— */
 .s3g-banner {
@@ -44,7 +44,7 @@
   color: #333 !important;
 }
 
-/* —— Archive / List 页：严格 naosense 风格 —— */
+/* —— Archive / List 页布局 —— */
 .archive {
   max-width: 760px;
   margin: 0 auto;
@@ -123,7 +123,7 @@
   margin-top: 30px;
 }
 
-/* —— 文章页 / 单页 —— */
+/* —— 文章页 / 单页布局 —— */
 .single, article {
   max-width: 760px;
   margin: 0 auto;
@@ -152,17 +152,14 @@
   letter-spacing: 0.08em;
 }
 
-/* —— 首页（保持 home-* 体系不动），但 footer 也用 s3g 翻转规则 —— */
+/* —— 首页 footer 样式 —— */
 .home-root .s3g-footer,
 body.home .s3g-footer {
   border-top: none;
   margin-top: 30px;
 }
 
-/* —— 隐藏旧的左右上下杂项 —— */
-.archive .post-item time.post-date { /* 已上面定义 */ }
-
-/* —— 首页极简毛笔风（图3 极简启动页效果） —— */
+/* —— 首页极简毛笔风 —— */
 .home .info .logo {
   font-family: "Ma Shan Zheng", "STKaiti", "KaiTi", "楷体", serif !important;
   font-size: 56px !important;
@@ -188,17 +185,7 @@ body.home .s3g-footer {
   color: #555 !important;
 }
 
-/* —— s3g-extra-typography: H1 大字 + 系列标签 + section 副标题 —— */
-.post-single .article-title,
-.post-title .article-title,
-.post .article-title {
-  font-size: 36px !important;
-  font-weight: 700 !important;
-  line-height: 1.35 !important;
-  color: #1a1a1a !important;
-  margin: 32px 0 8px 0 !important;
-  letter-spacing: 0.01em;
-}
+/* —— 系列标签 & 副标题 —— */
 .post-category {
   font-size: 13px;
   color: #999;
@@ -219,8 +206,7 @@ body.home .s3g-footer {
   margin-bottom: 8px !important;
 }
 
-
-/* —— s3g-theme-vars-override: 锁死主题 CSS 变量到暖纸色板，禁用 dark mode 切换 —— */
+/* —— 主题色变量锁定 —— */
 :root,
 html[data-theme="light"],
 html[data-theme="dark"],
@@ -232,20 +218,19 @@ html:not([data-theme]) {
   --c-heading-border: #ECECEA !important;
   --c-border: #ECECEA !important;
   --c-border-soft: #F0EFEC !important;
-  --c-muted: #6B6B6B !important;
+  --c-muted: #4a4a52 !important;
   --c-muted-2: #999999 !important;
-  --c-subtitle: #6B6B6B !important;
+  --c-subtitle: #4a4a52 !important;
   --c-hr: #ECECEA !important;
   --c-panel: #F4F2EC !important;
-  --c-pre-bg: #F4F2EC !important;
+  --c-pre-bg: #EDE9DF !important;
   --c-inline-code-bg: #F4F2EC !important;
-  --c-quote-text: #6B6B6B !important;
-  --c-quote-bg: #F4F2EC !important;
-  --c-quote-border: #999999 !important;
-  --c-toggle: #999999 !important;
+  --c-quote-text: #4a4a52 !important;
+  --c-quote-bg: #F0EBE0 !important;
+  --c-quote-border: #8a8a8a !important;
   --c-archive-hover: #1a1a1a !important;
 }
-/* 容器底色强制（防止主题在 dark 模式下把 .container 染黑） */
+/* 容器底色强制 */
 .container,
 .container.container-post,
 main,
@@ -258,7 +243,7 @@ article,
 .archive {
   background: #FAFAF7 !important;
 }
-/* 暗色模式偏好下也强制亮色（禁用主题的自动切换） */
+/* 暗色模式偏好下也强制亮色 */
 @media (prefers-color-scheme: dark) {
   :root, html, html[data-theme="dark"] {
     --c-bg: #FAFAF7 !important;
@@ -268,103 +253,28 @@ article,
   html, body, .container { background: #FAFAF7 !important; color: #1a1a1a !important; }
 }
 
-/* —— s3g-color-unify v2: 暖纸感色板（按图3）—— */
+/* —— 暖纸感色板 —— */
 :root {
-  --al-bg: #FAFAF7;        /* 暖灰白纸感 */
-  --al-ink: #1a1a1a;       /* 主黑（H1/banner 用） */
-  --al-ink-soft: #222222;  /* 副黑（文章标题/正文用） */
-  --al-mute: #ACACAC;      /* 浅中灰（菜单/日期/©） */
-  --al-mute-deep: #9C9C9C; /* 中灰（副标题用，比菜单稍深） */
-  --al-slogan: #3F3C37;    /* 墨灰暖（毛笔 slogan 用） */
-  --al-line: #ECECEA;      /* 极浅灰分隔线 */
+  --al-bg: #FAFAF7;
+  --al-ink: #1a1a1a;
+  --al-ink-soft: #222222;
+  --al-mute: #ACACAC;
+  --al-mute-deep: #9C9C9C;
+  --al-slogan: #3F3C37;
+  --al-line: #ECECEA;
 }
 html, body {
   background: #FAFAF7 !important;
   color: #1a1a1a !important;
 }
-/* banner */
-.s3g-banner,
-.s3g-banner a,
-.s3g-sitename,
-.s3g-sitename a {
-  background: transparent !important;
-  color: #1a1a1a !important;
-  border-bottom: none !important;
-}
-/* nav */
-.s3g-nav a {
-  color: #999999 !important;
-}
-.s3g-nav a:hover,
-.s3g-nav a.active {
-  color: #1a1a1a !important;
-}
-/* H1 主标题 */
-.article-title,
-.post-single .article-title,
-.post-title .article-title,
-.archive .article-title {
-  color: #1a1a1a !important;
-}
-/* 文章列表标题 — 用稍浅的副黑 */
-.post-archive .post-title,
-.post-archive .post-title:link,
-.post-archive .post-title:visited {
-  color: #222222 !important;
-}
-.post-archive .post-title:hover {
-  color: #000000 !important;
-}
-.post-archive .post-date {
-  color: #A8A8A8 !important;
-  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif !important;
-  font-variant-numeric: tabular-nums;
-}
-/* 副标题 — 比菜单稍深 */
-.section-subtitle {
-  color: #6B6B6B !important;
-}
-/* 文章页系列标签 */
-.post-category {
-  color: #ACACAC !important;
-}
-/* 正文 */
-.post-content {
-  color: #222222 !important;
-  background: transparent !important;
-}
-.post-content a {
-  color: #1a1a1a;
-}
-/* 页脚分隔线 */
+
+/* —— 页脚分隔线 —— */
 .s3g-footer {
   border-top: 1px solid #ECECEA !important;
   background: transparent !important;
 }
-/* 页脚 ©版权 — 浅灰 */
-.s3g-footer .s3g-copy {
-  color: #A0A0A0 !important;
-  font-weight: 400 !important;
-}
-/* 页脚 slogan — 墨灰暖（毛笔字风格，要深要有墨韵） */
-.s3g-footer .s3g-slogan {
-  color: #2A2A2A !important;
-  font-weight: 400 !important;
-  font-size: 16px !important;
-  letter-spacing: 0.02em;
-}
-/* 文章页底部 meta */
-.post-footer .post-time {
-  color: #A8A8A8 !important;
-}
-.post-footer .top {
-  color: #A8A8A8 !important;
-}
-.post-footer .top:hover {
-  color: #1a1a1a !important;
-}
 
-/* —— s3g-post-cover: 文章页 280px 封面块 —— */
+/* —— 封面图块 —— */
 .post-cover {
   margin: 1.6em auto 1.4em;
   max-width: 100%;
@@ -389,35 +299,7 @@ html, body {
   letter-spacing: 0.02em;
 }
 
-
-/* —— s3g-contract-align: 按 SITE_CHANGELOG.md 设计契约对齐 —— */
-/* 1) 内容宽度 760 → 820 */
-.archive,
-.single,
-article,
-.s3g-footer {
-  max-width: 820px !important;
-}
-
-/* 2) 正文字号 18 → 20 / 行高 1.9 */
-.post-content,
-.post-content p,
-.post-content li,
-article p,
-article li,
-.single p,
-.single li {
-  font-size: 20px !important;
-  line-height: 1.9 !important;
-}
-
-/* 4) 五行+归档+搜索+关于 全部保留（已是网站灵魂分类） */
-/* 5) 文章页封面：守 280px 契约（已有规则；这里仅保留 fallback） */
-.post-cover img {
-  max-height: 280px;
-}
-
-/* 6) Header 毛玻璃（如果未来粘性导航开启） */
+/* —— Header 毛玻璃（粘性导航预留） —— */
 .s3g-banner.sticky {
   position: sticky;
   top: 0;
@@ -427,8 +309,7 @@ article li,
   z-index: 10;
 }
 
-
-/* —— s3g-search-box: 搜索页输入框对齐契约（暖底/极简边框） —— */
+/* —— 搜索页 —— */
 .search-page {
   max-width: 820px !important;
   margin: 0 auto;
@@ -467,9 +348,7 @@ article li,
   font-size: 16px;
 }
 
-/* —— 首页极简 v4：整组垂直居中（对齐用户参考图）——
-   关键：用 .container 作为 flex 容器，让 .home + footer 作为一个内容组居中
-   参考图测量：三组元素整体居中，五行→版权间距 ~24px，无分隔线 */
+/* —— 首页极简 v4 垂直居中 —— */
 body:has(.home) {
   margin: 0;
 }
@@ -477,7 +356,7 @@ body:has(.home) .container {
   min-height: 100vh;
   display: flex !important;
   flex-direction: column;
-  justify-content: center;       /* 整组垂直居中 */
+  justify-content: center;
   align-items: center;
   padding: 0 24px;
 }
@@ -491,13 +370,13 @@ body:has(.home) .home {
   width: 100%;
 }
 body:has(.home) .home .info {
-  display: block !important;        /* 主题默认 table-cell 把 info 锁成窄列 */
+  display: block !important;
   width: 100% !important;
   text-align: center;
 }
 body:has(.home) .home .info .logo {
   display: inline-block;
-  margin-bottom: 12px;            /* 安知生 → 五行（对齐参考图~33px视觉间距） */
+  margin-bottom: 12px;
 }
 body:has(.home) .home .info .sns {
   margin: 0;
@@ -506,9 +385,9 @@ body:has(.home) .s3g-footer .s3g-slogan { display: none !important; }
 body:has(.home) .s3g-footer {
   justify-content: center !important;
   text-align: center !important;
-  margin: 24px 0 0 0 !important;  /* 五行 → 版权：24px */
+  margin: 24px 0 0 0 !important;
   padding: 0 !important;
-  border: none !important;        /* 去掉分隔线 */
+  border: none !important;
   background: transparent !important;
 }
 body:has(.home) .s3g-footer .s3g-copy {
