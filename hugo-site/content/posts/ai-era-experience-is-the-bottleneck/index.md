@@ -1,13 +1,13 @@
 ---
 title: "AI时代，经验才是最大的瓶颈"
-slug: "ai-era-experience-is-the-bottleneck"
 date: 2026-05-28T12:40:00+08:00
 draft: false
-description: "AI时代答案越来越便宜，真正稀缺的不是知识，而是经验。AI可以生成方案，却不能替人踩坑；未来人与人的差距，将体现在谁能更快验证答案、筛选路径，并把经验结构化为方法论。"
+slug: "ai-era-experience-is-the-bottleneck"
 categories:
   - "火·AI"
   - "AI时代"
-series: ["ai-bu-yin"]
+series:
+  - ai-bu-yin
 tags:
   - "AI"
   - "经验"
@@ -15,12 +15,7 @@ tags:
   - "信息筛选"
   - "方法论"
   - "个人知识系统"
-cover:
-  image: "/images/posts/ai-era-experience-is-the-bottleneck/cover.png"
-  alt: "AI时代经验与判断力成为真正瓶颈"
-  caption: "答案变便宜以后，经验开始变贵"
-  relative: true
-comments: true
+cover: []
 ---
 
 AI时代最反直觉的一点是：答案越来越便宜，判断越来越昂贵；知识越来越容易获得，经验却越来越稀缺。

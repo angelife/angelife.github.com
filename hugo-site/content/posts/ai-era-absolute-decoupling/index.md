@@ -5,7 +5,8 @@ draft: false
 slug: ai-era-absolute-decoupling
 categories:
   - 火·AI
-series: ["ai-bu-yin"]
+series:
+  - ai-bu-yin
 tags:
   - AI
   - 财富

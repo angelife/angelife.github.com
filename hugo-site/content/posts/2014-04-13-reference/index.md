@@ -1,19 +1,18 @@
 ---
 title: "反操弄与家庭支持：简明原则"
-slug: "2014-04-13-reference"
 date: 2025-10-08
 draft: false
-description: "讨论家人陷入高控制关系、情绪操弄或信息骗局时，普通家庭可以如何保持冷静、降低冲突、保护财产与关系。"
-tags: [反操弄, 家庭支持, 信息判断]
+slug: "2014-04-13-reference"
 categories:
   - "金·判断"
   - "文章"
-series: ["information-judgment"]
-summary: "这篇文章由旧稿整理而来，讨论家人陷入高控制关系、情绪操弄或信息骗局时，普通家庭可以如何保持冷静、降低冲突、保护财产与关系，并逐步恢复现实生活。"
-cover:
-  image: /images/posts/2014-04-13-reference/cover.png
-  alt: "反操弄与家庭支持：简明原则"
-
+series:
+  - information-judgment
+tags:
+  - 反操弄
+  - 家庭支持
+  - 信息判断
+cover: []
 ---
 
 这篇文章由旧稿整理而来。旧稿写于多年以前，关注的是特定组织的问题。新版的重点不再放在某个标签上，而是关注更普遍的问题：当家人陷入高控制关系、情绪操弄或信息骗局时，普通家庭可以怎么做。

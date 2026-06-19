@@ -1,12 +1,12 @@
 ---
 title: "高速公路与泥巴地：AI时代的本土化生存"
-slug: "highway-and-muddy-road-ai-localization"
 date: 2026-05-28T15:00:00+08:00
 draft: false
-description: "在中国复杂环境里，最好的技术不一定最能生存。AI时代真正可靠的系统，不是单点性能最强的法拉利，而是能适应泥地、封锁、降级和替代的越野车。"
+slug: "highway-and-muddy-road-ai-localization"
 categories:
   - "火·AI"
-series: ["ai-bu-yin"]
+series:
+  - ai-bu-yin
 tags:
   - "AI工作流"
   - "本土化"
@@ -17,11 +17,7 @@ tags:
   - "系统韧性"
   - "系统思维"
   - "不失正见"
-comments: true
-cover:
-  image: "/images/posts/highway-and-muddy-road-ai-localization/cover.png"
-  alt: "高速公路上的超跑与泥泞山路上的越野车并置，象征 AI 时代技术性能与本土化生存能力的差异。"
-  caption: "最强的工具未必最能生存。复杂环境里，系统韧性比单点性能更重要。"
+cover: []
 ---
 
 在中国做技术，最容易误判的一点是：你以为自己在讨论产品，其实现实很快会把它变成环境问题、规则问题、政治问题，甚至身份问题。

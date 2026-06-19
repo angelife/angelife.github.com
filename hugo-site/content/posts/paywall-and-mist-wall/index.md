@@ -1,23 +1,19 @@
 ---
 title: "付费墙与迷雾墙：AI时代真正昂贵的是判断"
-slug: "paywall-and-mist-wall"
 date: 2026-05-28T14:05:00+08:00
 draft: false
-description: "AI降低了写作和答案获取成本，却没有降低现实世界的判断成本。西方更多面对付费墙，中国更多面对迷雾墙。真正稀缺的不是文字，而是经验、边界感和不失正见的判断力。"
+slug: "paywall-and-mist-wall"
 categories:
   - "火·AI"
-series: ["ai-bu-yin"]
+series:
+  - ai-bu-yin
 tags:
   - "AI写作"
   - "判断力"
   - "规则意识"
   - "现实规则"
   - "不失正见"
-comments: true
-cover:
-  image: "/images/posts/paywall-and-mist-wall/cover.png"
-  alt: "AI时代的付费墙与迷雾墙：一边是清晰的价格门槛，一边是模糊的现实边界。"
-  caption: "答案越来越便宜，判断越来越昂贵。"
+cover: []
 ---
 
 AI时代最容易让人误判的一点是：写作好像不需要人了，答案好像越来越便宜了。

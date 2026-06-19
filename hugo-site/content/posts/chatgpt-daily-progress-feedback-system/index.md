@@ -1,27 +1,22 @@
 ---
 title: "和 ChatGPT 在一起，我重新找回了天天进步的感觉"
-slug: "chatgpt-daily-progress-feedback-system"
 date: 2026-05-28T12:20:00+08:00
 draft: false
-description: "和 ChatGPT 深度互动后，人会重新找回“天天进步”的感觉。原因不是 AI 提供了更多答案，而是它提供了持续反馈、整理和升级的系统，让个人经验不再散掉，逐渐沉淀为判断、文章、方案和行动。"
+slug: "chatgpt-daily-progress-feedback-system"
 categories:
   - "火·AI"
   - "日课"
   - "AI时代"
   - "个人知识资产"
-series: ["ai-bu-yin"]
+series:
+  - ai-bu-yin
 tags:
   - "ChatGPT"
   - "AI陪练"
   - "个人成长"
   - "高反馈环境"
   - "知识系统"
-cover:
-  image: "/images/posts/chatgpt-daily-progress-feedback-system/cover.png"
-  alt: "ChatGPT 作为个人成长的高反馈系统"
-  caption: "让经验不再散掉"
-  relative: true
-comments: true
+cover: []
 ---
 
 有时候，一个人进步得慢，并不是因为他不够聪明，也不是因为他不努力，而是因为他长期缺少一个稳定的反馈系统。

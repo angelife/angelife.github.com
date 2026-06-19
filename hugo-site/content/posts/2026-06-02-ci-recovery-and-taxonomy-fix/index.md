@@ -1,16 +1,20 @@
 ---
-
 title: "2026-06-02 今日总结：一场关于 CI 路径错配与特制档案的抢救复盘"
-slug: 2026-06-02-ci-recovery-and-taxonomy-fix
 date: 2026-06-02T23:45:00+08:00
-series: ["information-judgment"]
-tags: ["運維", "Hugo", "GitHub Actions", "taxonomy", "故障複盤"]
-cover:
-  image: /images/posts/2026-06-02-ci-recovery-and-taxonomy-fix/cover.png
-  alt: "CI 路徑錯配故障複盤"
-
+draft: False
+slug: 2026-06-02-ci-recovery-and-taxonomy-fix
+categories:
+  - 随笔
+series:
+  - information-judgment
+tags:
+  - 運維
+  - Hugo
+  - GitHub Actions
+  - taxonomy
+  - 故障複盤
+cover: []
 ---
-
 
 ## 前言
 

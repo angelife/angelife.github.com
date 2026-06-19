@@ -6,7 +6,8 @@ slug: the-future-is-one-person-company
 categories:
   - "火·AI"
   - "一人公司"
-series: ["ai-bu-yin"]
+series:
+  - ai-bu-yin
 tags:
   - 一人公司
   - 大衍神君
@@ -15,9 +16,7 @@ tags:
   - 智能体
   - 马斯克
   - 凡人修仙
-cover:
-  image: /images/posts/the-future-is-one-person-company.png
-  alt: "大衍神君孤身立于虚空，万千机械傀儡环绕发光"
+cover: []
 ---
 
 ## 开头

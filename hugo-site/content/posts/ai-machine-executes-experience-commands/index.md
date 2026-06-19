@@ -1,13 +1,13 @@
 ---
 title: "机器执行，经验指挥：AI 时代真正昂贵的东西"
-slug: "ai-machine-executes-experience-commands"
 date: 2026-05-28T13:05:00+08:00
 draft: false
-description: "AI 时代，机器越来越便宜，执行越来越自动化。真正稀缺的不再是工具，而是能把 AI、Codex、自动化和发布流程组织成系统的经验。未来的核心竞争力，不是亲自做完所有事，而是设计流程、判断结果、守住方向。"
+slug: "ai-machine-executes-experience-commands"
 categories:
   - "火·AI"
   - "AI时代"
-series: ["ai-bu-yin"]
+series:
+  - ai-bu-yin
 tags:
   - "AI工作流"
   - "自动化"
@@ -15,11 +15,7 @@ tags:
   - "AI时代"
   - "个人系统"
   - "托管人生"
-comments: true
-cover:
-  image: /images/posts/ai-machine-executes-experience-commands/cover.png
-  alt: "机器执行，经验指挥：AI 时代真正昂贵的东西"
-
+cover: []
 ---
 
 我最近越来越强烈地感到，AI 时代的工作节奏已经变了。

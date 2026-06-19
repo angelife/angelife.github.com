@@ -6,7 +6,8 @@ slug: "ai-self-distillation-electronic-donkey"
 categories:
   - "火·AI"
   - "AI时代"
-series: ["ai-bu-yin"]
+series:
+  - ai-bu-yin
 tags:
   - "AI写作"
   - "电子驴"
@@ -19,11 +20,7 @@ tags:
   - "自动化"
   - "自我蒸馏"
   - "不失正见"
-description: "AI 时代最讽刺的地方是，人正在自费训练一头更便宜、更勤快、更稳定的电子驴来替代自己。工具放大的不只是能力，也放大了人的依赖、外包和自我蒸馏。"
-cover:
-  image: "/images/posts/ai-self-distillation-electronic-donkey/cover.png"
-  alt: "一名疲惫的人正在教一头发光的电子驴工作，数据、文章、代码和金币从他身上流向机器，远处规则制定者在高处观察。"
-  caption: "AI 不是简单替你干活，它也在学习如何替代你。"
+cover: []
 ---
 
 # 自费蒸馏：我们正在花钱训练替代自己的人

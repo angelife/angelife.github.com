@@ -1,16 +1,16 @@
 ---
 title: "AI 时代，真正赢的不是免费，而是低摩擦地组织劳动力"
-slug: "2026-05-27-ai-low-friction-labor"
 date: 2026-05-27T20:30:00+08:00
 draft: false
-description: "AI 时代真正改变的不是谁会聊天，而是谁能用最低摩擦组织 AI 劳动力，把自己从工资人升级成系统主控。"
+slug: "2026-05-27-ai-low-friction-labor"
 categories:
   - "火·AI"
   - "日课"
   - "AI时代"
   - "系统主控"
   - "个人知识资产"
-series: ["ai-bu-yin"]
+series:
+  - ai-bu-yin
 tags:
   - "AI工作流"
   - "一人公司"
@@ -21,11 +21,7 @@ tags:
   - "低摩擦"
   - "知识资产"
   - "系统主控"
-cover:
-  image: "/images/posts/2026-05-27-ai-low-friction-labor/cover.png"
-  alt: "AI 时代低摩擦组织劳动力"
-  caption: "从工资人到系统主控"
-  relative: true
+cover: []
 ---
 
 ## 机器人喝咖啡，人类要饭：AI 收益归谁？

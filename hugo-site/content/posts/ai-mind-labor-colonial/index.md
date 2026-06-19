@@ -5,7 +5,8 @@ draft: false
 slug: ai-mind-labor-colonial
 categories:
   - 火·AI
-series: ["ai-bu-yin"]
+series:
+  - ai-bu-yin
 tags:
   - AI
   - 科技殖民

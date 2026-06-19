@@ -5,16 +5,15 @@ draft: false
 slug: nvidia-autonomous-maintenance-log
 categories:
   - "火·AI"
-series: ["ai-bu-yin"]
+series:
+  - ai-bu-yin
 tags:
   - NVIDIA
   - 一人公司
   - AI时代
   - 自动化施工
   - 大衍神君
-cover:
-  image: /images/posts/nvidia-autonomous-maintenance-log/cover.png
-  alt: "AI 独立维护网站的施工日志"
+cover: []
 ---
 
 ## 开头

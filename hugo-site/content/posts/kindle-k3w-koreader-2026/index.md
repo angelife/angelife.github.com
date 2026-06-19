@@ -5,16 +5,15 @@ draft: false
 slug: kindle-k3w-koreader-2026
 categories:
   - "水·技术"
+series:
+  - kindle-hacks
 tags:
   - Kindle
   - K3
   - KOReader
   - 越狱
   - 教程
-series: []
-cover:
-  image: /images/posts/kindle-k3w-koreader-2026/cover.png
-  alt: "Kindle Keyboard K3W 与 KOReader"
+cover: []
 ---
 
 > 适用设备：Kindle Keyboard 3rd Generation WiFi（序列号 B008 开头）  

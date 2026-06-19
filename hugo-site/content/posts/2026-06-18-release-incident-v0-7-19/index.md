@@ -1,12 +1,12 @@
 ---
-
 title: "2026-06-18 发布事故复盘 v0.7.19：rsync 又把仓库吃了一次，但这次完整恢复"
 date: 2026-06-18T19:30:00+08:00
 draft: false
 slug: 2026-06-18-release-incident-v0-7-19
 categories:
   - "火·AI"
-series: ["ai-bu-yin"]
+series:
+  - ai-bu-yin
 tags:
   - 故障複盤
   - rsync
@@ -15,12 +15,8 @@ tags:
   - 災難恢復
   - 運維
   - release
-cover:
-  image: /images/posts/2026-06-18-release-incident-v0-7-19/cover.png
-  alt: "rsync 災難恢復複盤"
-
+cover: []
 ---
-
 
 ## 前言
 

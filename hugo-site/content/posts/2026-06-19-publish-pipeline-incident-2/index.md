@@ -1,20 +1,18 @@
 ---
-
 title: "发布事故复盘（二）：当一切都正常时，我们仍然以为系统坏了"
 date: 2026-06-19T10:00:00+08:00
 draft: false
 slug: 2026-06-19-publish-pipeline-incident-2
 categories:
   - 火·AI
-series: ["ai-bu-yin"]
+series:
+  - ai-bu-yin
 tags:
   - 故障複盤
   - 發布
   - 認知偏差
   - 調試方法論
-
 ---
-
 
 摘要
 

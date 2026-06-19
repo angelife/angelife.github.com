@@ -1,3 +1,16 @@
+---
+title: anti-cult-recovery-guide.md
+date: 2026-06-19T09:00:00+08:00
+draft: False
+slug: anti-cult-recovery-guide
+categories:
+  - 反操弄
+series:
+  - anti-cult
+tags:
+  - anti-cult
+---
+
 +++
 title = "拒绝虚假叙事：反邪教泥沼中的「退教修仙」与心智重塑指南"
 date = 2026-06-02T20:45:00+08:00

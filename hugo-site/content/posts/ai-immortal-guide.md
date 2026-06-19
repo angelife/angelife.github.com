@@ -1,3 +1,16 @@
+---
+title: AI 时代的「底层修仙」指南：在异化、谎言与技术泡沫中觉醒与生存
+date: 2026-06-19T09:00:00+08:00
+draft: False
+slug: ai-immortal-guide
+categories:
+  - 人工智能
+series:
+  - ai-era
+tags:
+  - ai
+---
+
 +++
 title = "AI 时代的「底层修仙」指南：在异化、谎言与技术泡沫中觉醒与生存"
 date = 2026-06-02T19:00:00+08:00
