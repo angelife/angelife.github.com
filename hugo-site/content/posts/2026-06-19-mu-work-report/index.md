@@ -1,7 +1,7 @@
 ---
 title: "2026-06-19 木同学工作报告"
 date: 2026-06-19
-draft: true
+draft: false
 categories:
   - "木·蝉识"
 tags:
