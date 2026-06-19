@@ -1,5 +1,7 @@
 ---
 
+
+
 title: "和 ChatGPT 在一起，我重新找回了天天进步的感觉"
 slug: "chatgpt-daily-progress-feedback-system"
 date: 2026-05-28T12:20:00+08:00
@@ -23,6 +25,7 @@ cover:
   caption: "让经验不再散掉"
 comments: true
 ---
+
 ## 题记
 
 关于「"和 ChatGPT 在一起，我重新找回了天天进步的感觉"」，需要回到问题的基本面来思考。
@@ -78,6 +81,7 @@ AI 改变的地方就在这里。
 ## 结语
 
 关于「"和 ChatGPT 在一起，我重新找回了天天进步的感觉"」，需要在实践中检验认识，在行动中深化理解。
+
 
 
 

@@ -1,5 +1,7 @@
 ---
 
+
+
 title: "[推荐]懂得爱"
 slug: "推荐-懂得爱"
 date: 2012-06-17T10:25:00.000-07:00
@@ -19,6 +21,7 @@ cover:
   alt: "[推荐]懂得爱"
 
 ---
+
 ![懂得爱](http://img5.douban.com/mpic/s2525459.jpg)
 
  
@@ -38,11 +41,12 @@ cover:
 [http://book.douban.com/review/1454494/](http://book.douban.com/review/1454494/)
  
 
-## 结语
-
-关于「"[推荐]懂得爱"」，需要在实践中检验认识，在行动中深化理解。
-
 
 
 
 下载地址 [下载地址一](http://ishare.iask.sina.com.cn/search.php?from=douban&key=%B6%AE%B5%C3%B0%AE)
+
+
+## 结语
+
+关于「"[推荐]懂得爱"」，需要在实践中检验认识，在行动中深化理解。

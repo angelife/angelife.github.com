@@ -1,5 +1,7 @@
 ---
 
+
+
 title: "胡适：在不健全的中国，如何不堕落"
 slug: "胡适-在不健全的中国-如何不堕落"
 date: 2012-02-06T06:12:00.000-08:00
@@ -19,11 +21,5 @@ cover:
   alt: "胡适：在不健全的中国，如何不堕落"
 
 ---
-## 结语
-
-关于「"胡适：在不健全的中国，如何不堕落"」，需要在实践中检验认识，在行动中深化理解。
-
-
-
 
 [http://www.tudou.com/v/tnXVtleJOJE/&rpid=41575171&resourceId=41575171_05_05_99/v.swf](http://www.tudou.com/v/tnXVtleJOJE/&rpid=41575171&resourceId=41575171_05_05_99/v.swf)
