@@ -222,12 +222,26 @@ html:not([data-theme]) {
   --c-muted-2: #999999 !important;
   --c-subtitle: #4a4a52 !important;
   --c-hr: #ECECEA !important;
-  --c-panel: #EDE9DF !important;
-  --c-pre-bg: #EDE9DF !important;
-  --c-inline-code-bg: #F4F2EC !important;
-  --c-quote-text: #4a4a52 !important;
-  --c-quote-bg: #F0EBE0 !important;
-  --c-quote-border: #8a8a8a !important;
+  --c-panel: #f7f7f7 !important;
+  --c-pre-bg: #f7f7f7 !important;
+  --c-inline-code-bg: #f7f7f7 !important;
+  --c-quote-text: #777 !important;
+  --c-quote-bg: transparent !important;
+  --c-quote-border: #ddd !important;
+  --c-code-text: #4d4d4c !important;
+
+  /* naosense 风格：代码块外观 */
+  --syn-comment: #8e908c;
+  --syn-keyword: #8959a8;
+  --syn-string: #718c00;
+  --syn-number: #f5871f;
+  --syn-func: #4271ae;
+  --syn-type: #f5871f;
+  --syn-ident: #4d4d4c;
+  --syn-var: #c82829;
+  --syn-tag: #c82829;
+  --syn-punct: #4d4d4c;
+  --syn-error: #c82829;
   --c-archive-hover: #1a1a1a !important;
 }
 /* 容器底色强制 */
@@ -393,5 +407,47 @@ body:has(.home) .s3g-footer {
 body:has(.home) .s3g-footer .s3g-copy {
   font-size: 12px !important;
   color: #BFBFBF !important;
+}
+
+/* —— 代码块直接覆盖（naosense 风格：#f7f7f7 + #ccc 边框）—— */
+.highlight,
+.post .highlight,
+.post .highlight pre,
+.post .highlight pre.chroma {
+  background: #f7f7f7 !important;
+}
+.post .highlight pre.chroma {
+  border: 1px solid #ccc !important;
+  border-radius: 0 !important;
+}
+/* 行号列 */
+.post .highlight .chroma .lntd:first-child,
+.post .highlight .chroma .ln {
+  display: none !important;
+}
+/* 行悬停高亮（浅灰） */
+.post .highlight .chroma .line:hover {
+  background: rgba(0,0,0,0.04) !important;
+}
+/* 代码文字色 */
+.post .highlight,
+.post .highlight pre,
+.post .highlight pre.chroma code {
+  color: #4d4d4c !important;
+}
+/* 行内代码 */
+.post code {
+  background: #f7f7f7 !important;
+  border: 1px solid #d6d6d6 !important;
+  border-radius: 3px !important;
+  padding: 0 1px !important;
+}
+/* blockquote（naosense 风格） */
+.post blockquote {
+  color: #777 !important;
+  border-left: 4px solid #ddd !important;
+  background: transparent !important;
+  margin: 0 !important;
+  padding: 0 15px !important;
 }
 </style>
