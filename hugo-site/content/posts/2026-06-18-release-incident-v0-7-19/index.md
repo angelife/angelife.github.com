@@ -1,4 +1,5 @@
 ---
+
 title: "2026-06-18 发布事故复盘 v0.7.19：rsync 又把仓库吃了一次，但这次完整恢复"
 date: 2026-06-18T19:30:00+08:00
 draft: false
@@ -16,7 +17,14 @@ tags:
   - 運維
   - release
 cover: []
+
 ---
+
+## 题记
+
+> 1. **发前备份足够**——5 份冗余备份散布在 4 个位置，没有一份缺失或损坏。
+
+
 
 ## 前言
 
@@ -335,3 +343,7 @@ rsync -a --delete \
 **Commit：** [`f073bee`](https://github.com/angelife/angelife.github.com/commit/f073bee)
 **操作员：** NVIDIA（Docker Hermes）
 **最终裁定：** Tse 确认验收通过
+
+## 结语
+
+（以上为本文核心观点，供进一步思考。）

@@ -1,4 +1,5 @@
 ---
+
 title: "Kindle Keyboard K3W 越狱安装 KOReader 完整指南（2026年）"
 date: 2026-06-11
 draft: false
@@ -14,6 +15,7 @@ tags:
   - 越狱
   - 教程
 cover: []
+
 ---
 
 > 适用设备：Kindle Keyboard 3rd Generation WiFi（序列号 B008 开头）  
@@ -295,5 +297,9 @@ Kindle USB 写入约 2-3MB/s，39MB zip 解压需 30-60 秒。建议：
 - [KOReader GitHub Releases](https://github.com/koreader/koreader/releases) — KOReader 下载
 
 ---
+
+*本文由 Hermes Agent 编写，2026-06-11。越狱及安装经验来源于实际操作验证，KOReader 部署经过 1021 文件全量校验。感谢 NiLuJe、kindlemodding.org 社区及 MobileRead 论坛的开发者们。*
+
+## 结语
 
 *本文由 Hermes Agent 编写，2026-06-11。越狱及安装经验来源于实际操作验证，KOReader 部署经过 1021 文件全量校验。感谢 NiLuJe、kindlemodding.org 社区及 MobileRead 论坛的开发者们。*
