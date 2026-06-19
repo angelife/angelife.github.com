@@ -54,9 +54,16 @@
   <link rel="shortcut icon" type="image/x-icon" href="{{ . }}">
   {{- end -}}
 
-  {{- $rss := .OutputFormats.Get "RSS" -}}
-  {{- if $rss -}}
-  <link rel="alternate" type="application/atom+xml" href="{{ $rss.Permalink }}" title="{{ $.Site.Title }}">
+  {{- $rssPermalink := "" -}}
+  {{- if .IsHome -}}
+    {{- with .OutputFormats.Get "RSS" -}}
+      {{- $rssPermalink = .Permalink -}}
+    {{- end -}}
+  {{- else -}}
+    {{- $rssPermalink = printf "%sindex.xml" $.Site.BaseURL -}}
+  {{- end -}}
+  {{- if $rssPermalink -}}
+  <link rel="alternate" type="application/atom+xml" href="{{ $rssPermalink }}" title="{{ $.Site.Title }} RSS">
   {{- end -}}
 
   <link rel="stylesheet" href="/css/style.css?v={{ now.Unix }}">
