@@ -54,8 +54,9 @@
   <link rel="shortcut icon" type="image/x-icon" href="{{ . }}">
   {{- end -}}
 
-  {{- with .Site.Params.rss -}}
-  <link rel="alternate" href="{{ . }}" title="{{ $.Site.Title }}" type="application/atom+xml">
+  {{- $rss := .OutputFormats.Get "RSS" -}}
+  {{- if $rss -}}
+  <link rel="alternate" type="application/atom+xml" href="{{ $rss.Permalink }}" title="{{ $.Site.Title }}">
   {{- end -}}
 
   <link rel="stylesheet" href="/css/style.css?v={{ now.Unix }}">
