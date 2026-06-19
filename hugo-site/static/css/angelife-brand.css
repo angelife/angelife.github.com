@@ -841,6 +841,13 @@ article.post-single .post-title {
   line-height: 1.2;
 }
 
+/* PaperMod base h1 { font-size: 2em } causes child h1 to double.
+   Truncate the inheritance chain here. */
+h1.article-title {
+  font-size: clamp(1.8rem, 3vw, 2.2rem) !important;
+  line-height: 1.25;
+}
+
 article.post-single .post-description {
   margin-top: 0.7rem;
   color: var(--al-muted);
