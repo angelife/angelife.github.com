@@ -34,6 +34,11 @@ disablePathToLower = true
     permalinkable = true
     noUgly = true
 
+  [outputFormats.RSS]
+    mediaType = "application/rss+xml"
+    baseName = "index"
+    isPlainText = true
+
 [params]
   defaultTheme = "light"
   ShowBreadCrumbs = false
