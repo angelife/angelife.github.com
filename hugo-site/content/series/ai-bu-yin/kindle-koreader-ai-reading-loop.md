@@ -3,7 +3,7 @@
 
 
 
-title: "Kindle、KOReader 与 AI：新的阅读闭环"
+title: "KOReader与AI"
 date: 2026-05-27T01:00:00+08:00
 draft: false
 cover:

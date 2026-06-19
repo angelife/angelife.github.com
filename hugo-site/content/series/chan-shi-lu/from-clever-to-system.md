@@ -3,7 +3,7 @@
 
 
 
-title: "从聪明到系统化：真正的分水岭"
+title: "从聪明到系统"
 date: 2026-05-27T01:40:00+08:00
 draft: false
 cover:

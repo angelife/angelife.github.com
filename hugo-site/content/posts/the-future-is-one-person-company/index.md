@@ -2,7 +2,7 @@
 
 
 
-title: "大衍神君的第一人"
+title: "大衍第一人"
 date: 2026-05-29
 draft: false
 slug: the-future-is-one-person-company

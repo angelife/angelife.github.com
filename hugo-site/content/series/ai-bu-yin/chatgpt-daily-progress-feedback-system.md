@@ -3,7 +3,7 @@
 
 
 
-title: "和 ChatGPT 在一起，我重新找回了天天进步的感觉"
+title: "AI日日反馈"
 slug: "chatgpt-daily-progress-feedback-system"
 date: 2026-05-28T12:20:00+08:00
 draft: false

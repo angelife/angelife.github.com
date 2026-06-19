@@ -3,7 +3,7 @@
 
 
 
-title: AI 时代的「底层修仙」指南：在异化、谎言与技术泡沫中觉醒与生存
+title: "AI底层修仙"
 date: 2026-06-19T09:00:00+08:00
 draft: False
 slug: ai-immortal-guide

@@ -2,7 +2,7 @@
 
 
 
-title: "自费蒸馏：我们正在花钱训练替代自己的人"
+title: "自费蒸馏者"
 date: 2026-05-28
 draft: false
 slug: "ai-self-distillation-electronic-donkey"

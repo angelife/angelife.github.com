@@ -3,7 +3,7 @@
 
 
 
-title: "用你的脑，割你的韭菜：全球科技殖民的闭环悲剧"
+title: "脑力劳动殖民"
 date: 2026-06-19T12:00:00+08:00
 draft: false
 slug: ai-mind-labor-colonial

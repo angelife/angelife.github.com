@@ -3,7 +3,7 @@
 
 
 
-title: "NVIDIA 独立施工日志：一人公司的第一次完整维护"
+title: "NVIDIA独显日志"
 date: 2026-05-29T16:45:00-07:00
 draft: false
 slug: nvidia-autonomous-maintenance-log

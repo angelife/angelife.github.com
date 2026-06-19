@@ -5,7 +5,7 @@
 
 
 
-title: "机器执行，经验指挥：AI 时代真正昂贵的东西"
+title: "机器执行经验"
 date: 2026-05-28T13:05:00+08:00
 draft: false
 slug: "ai-machine-executes-experience-commands"

@@ -5,7 +5,7 @@
 
 
 
-title: "付费墙与迷雾墙：AI时代真正昂贵的是判断"
+title: "付费墙迷雾墙"
 date: 2026-05-28T14:05:00+08:00
 draft: false
 slug: "paywall-and-mist-wall"

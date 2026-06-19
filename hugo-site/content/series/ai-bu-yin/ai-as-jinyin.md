@@ -2,7 +2,7 @@
 
 
 
-title: "AI 补印：把 AI 当作后天系统能力"
+title: "AI作后天力"
 date: 2026-05-26
 tags: ["AI补印", "方法论", "Obsidian"]
 categories: ["AI补印"]

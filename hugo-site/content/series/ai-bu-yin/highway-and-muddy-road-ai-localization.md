@@ -3,7 +3,7 @@
 
 
 
-title: "高速公路与泥巴地：AI时代的本土化生存"
+title: "高速与泥地"
 slug: "highway-and-muddy-road-ai-localization"
 date: 2026-05-28T15:00:00+08:00
 draft: false

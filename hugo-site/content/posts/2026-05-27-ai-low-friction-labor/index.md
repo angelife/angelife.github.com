@@ -5,7 +5,7 @@
 
 
 
-title: "AI 时代，真正赢的不是免费，而是低摩擦地组织劳动力"
+title: "AI低摩擦劳动力"
 date: 2026-05-27T20:30:00+08:00
 draft: false
 slug: "2026-05-27-ai-low-friction-labor"

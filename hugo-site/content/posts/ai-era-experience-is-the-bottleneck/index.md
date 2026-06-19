@@ -5,7 +5,7 @@
 
 
 
-title: "AI时代，经验才是最大的瓶颈"
+title: "AI经验瓶颈"
 date: 2026-05-28T12:40:00+08:00
 draft: false
 slug: "ai-era-experience-is-the-bottleneck"

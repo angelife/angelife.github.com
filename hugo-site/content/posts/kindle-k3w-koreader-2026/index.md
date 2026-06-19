@@ -4,7 +4,7 @@
 
 
 
-title: "Kindle Keyboard K3W 越狱安装 KOReader 完整指南（2026年）"
+title: "Kindle越狱装KO"
 date: 2026-06-11
 draft: false
 slug: kindle-k3w-koreader-2026

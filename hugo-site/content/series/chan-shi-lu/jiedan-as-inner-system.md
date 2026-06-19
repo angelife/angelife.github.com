@@ -3,7 +3,7 @@
 
 
 
-title: "结丹隐喻：从散乱经验到稳定内核"
+title: "结丹与内核"
 date: 2026-05-27T01:00:00+08:00
 draft: false
 cover:

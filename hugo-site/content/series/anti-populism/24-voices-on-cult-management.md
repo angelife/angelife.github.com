@@ -3,7 +3,7 @@
 
 
 
-title: "24人邪教论争笔记：总论"
+title: "24人邪教论"
 date: 2026-06-14
 draft: false
 slug: 24-voices-on-cult-management

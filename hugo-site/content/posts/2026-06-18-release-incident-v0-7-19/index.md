@@ -2,7 +2,7 @@
 
 
 
-title: "2026-06-18 发布事故复盘 v0.7.19：rsync 又把仓库吃了一次，但这次完整恢复"
+title: "rsync事故复盘"
 date: 2026-06-18T19:30:00+08:00
 draft: false
 slug: 2026-06-18-release-incident-v0-7-19

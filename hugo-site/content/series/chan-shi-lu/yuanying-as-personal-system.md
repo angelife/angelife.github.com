@@ -3,7 +3,7 @@
 
 
 
-title: "元婴隐喻：从个人作品到个人系统"
+title: "元婴与系统"
 date: 2026-05-27T01:00:00+08:00
 draft: false
 cover:

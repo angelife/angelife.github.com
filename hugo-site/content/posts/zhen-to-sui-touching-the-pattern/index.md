@@ -5,7 +5,7 @@
 
 
 
-title: "震之随六五：在惊动中摸到规律"
+title: "震之随六五"
 date: 2026-05-29T00:00:00-07:00
 draft: false
 slug: "zhen-to-sui-touching-the-pattern"

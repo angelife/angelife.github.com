@@ -3,7 +3,7 @@
 
 
 
-title: "AI时代，一个普通人的重新开局"
+title: "AI普通人重启"
 date: 2026-05-27T01:30:00+08:00
 draft: false
 cover:

@@ -3,7 +3,7 @@
 
 
 
-title: "绝对解耦的时代：财富的幻觉、隐私的消亡与两年奇点倒计时"
+title: "AI绝对解耦"
 date: 2026-06-19T10:00:00+08:00
 draft: false
 slug: ai-era-absolute-decoupling

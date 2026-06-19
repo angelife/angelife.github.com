@@ -3,7 +3,7 @@
 
 
 
-title: "不失正见：复杂时代的个人守则"
+title: "不失正见"
 date: 2026-05-27T01:00:00+08:00
 draft: false
 cover:

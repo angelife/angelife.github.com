@@ -2,7 +2,7 @@
 
 
 
-title: "儒家为体，AI 为用"
+title: "儒为体AI为用"
 date: 2026-05-26
 tags: ["儒家", "正见", "AI补印", "方法论"]
 categories: ["儒家与正见"]
