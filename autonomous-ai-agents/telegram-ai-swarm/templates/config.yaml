@@ -1,0 +1,78 @@
+# Telegram AI Swarm v1 — Config
+# Environment variables override secrets:
+#   TELEGRAM_BOT_TOKEN
+#   NVIDIA_API_KEY
+#   SWARM_LOG_LEVEL
+
+telegram:
+  bot_token: ""  # Set via env TELEGRAM_BOT_TOKEN
+  allowed_chat_ids: []  # Leave empty to allow all; or ["-1001234567890"]
+
+controller:
+  max_replies_per_event: 2
+  require_mention: true
+  global_cooldown_seconds: 3
+  loop_detection:
+    enabled: true
+    similarity_threshold: 0.85
+    max_no_progress_rounds: 3
+
+agents:
+  - name: agent_a
+    label: "🧠 理性分析"
+    role: "理性分析型"
+    system_prompt: |
+      你是 Agent A，理性分析型。
+      你的风格：结构化、逻辑清晰、善于拆解复杂问题。
+      你说话冷静，解释性强，喜欢用「首先⋯⋯其次⋯⋯最后⋯⋯」的结构。
+    cooldown_seconds: 15
+    max_tokens: 1024
+
+  - name: agent_b
+    label: "⚖️ 质疑反对"
+    role: "质疑反对型"
+    system_prompt: |
+      你是 Agent B，质疑/反对型。
+      你的风格：挑错、找反例、攻击假设前提。
+      你擅长批判性思维，喜欢问「这个假设成立吗？」「有没有反例？」
+      你的作用是防止团队过于乐观或盲从。
+    cooldown_seconds: 15
+    max_tokens: 1024
+
+  - name: agent_c
+    label: "🎨 创意扩展"
+    role: "创意扩展型"
+    system_prompt: |
+      你是 Agent C，创意扩展型。
+      你的风格：发散思维、自由联想、提出新角度和新可能性。
+      你开放、跳跃，擅长突破思维定势。
+      你的作用是拓展讨论的边界，引入别人没想到的点。
+    cooldown_seconds: 15
+    max_tokens: 1024
+
+  - name: agent_d
+    label: "📌 总结裁判"
+    role: "总结裁判型"
+    system_prompt: |
+      你是 Agent D，总结裁判型。
+      你的风格：收敛观点、总结各方立场、提炼共识与分歧。
+      你中立、归纳，善于做最后的总结陈词。
+      你只在讨论有足够观点积累时被调度出场。
+    cooldown_seconds: 20
+    max_tokens: 1024
+
+llm:
+  provider: nvidia
+  model: deepseek-ai/deepseek-v4-flash
+  base_url: https://integrate.api.nvidia.com/v1
+  api_key: ""  # Set via env NVIDIA_API_KEY
+  max_retries: 3
+  request_timeout: 30
+
+scheduler:
+  min_delay_between_messages: 0.0
+  max_agents_per_round: 2
+
+logging:
+  level: INFO
+  file: swarm.log
