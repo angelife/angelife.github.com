@@ -3,6 +3,9 @@ title: "金工作日志"
 date: 2026-06-19
 lastmod: 2026-06-19T20:30:00+08:00
 draft: false
+cover:
+  image: /images/posts/2026-06-19-jin-gong-zuo-zong-jie/cover.png
+  alt: "金工作日志"
 tags: ["工作报告", "金"]
 categories: ["工作报告"]
 ---
@@ -69,3 +72,4 @@ categories: ["工作报告"]
 
 *署名：金同学*
 *日期：2026-06-19*
+

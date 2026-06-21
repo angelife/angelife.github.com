@@ -7,6 +7,9 @@ title: "AI绝对解耦"
 date: 2026-06-19T10:00:00+08:00
 draft: false
 slug: ai-era-absolute-decoupling
+cover:
+  image: /images/posts/ai-era-absolute-decoupling/cover.png
+  alt: "AI绝对解耦"
 categories:
   - 火·AI
 series:
@@ -19,10 +22,7 @@ tags:
   - 权力
   - 解耦
   - 社会批判
-
-
 ---
-
 ## 题记
 
 > 绝对解耦。

@@ -7,6 +7,9 @@ title: "脑力劳动殖民"
 date: 2026-06-19T12:00:00+08:00
 draft: false
 slug: ai-mind-labor-colonial
+cover:
+  image: /images/posts/ai-mind-labor-colonial/cover.png
+  alt: "脑力劳动殖民"
 categories:
   - 火·AI
 series:
@@ -18,9 +21,7 @@ tags:
   - 奇点
   - 结构困境
   - 社会批判
-
 ---
-
 
 ## 零、序
 

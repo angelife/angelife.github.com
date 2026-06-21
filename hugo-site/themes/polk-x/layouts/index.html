@@ -13,7 +13,7 @@
       {{- $p := .Paginate $filtered -}}
       {{- range $p.Pages -}}
         <li class="post-item">
-          <time class="post-date">{{ .Date.Format "2006-01-02" }}</time>
+          <time class="post-date">{{ .Date.Format "2006-01-02 15:04" }}</time>
           <a class="post-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
         </li>
       {{- end -}}

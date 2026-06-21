@@ -8,7 +8,7 @@
     {{- range .Data.Pages -}}
     <article class="entry-item">
       <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
-      <time>{{ .Date.Format "2006-01-02" }}</time>
+      <time>{{ .Date.Format "2006-01-02 15:04" }}</time>
       {{- if .Description -}}<p>{{ .Description }}</p>{{- end -}}
     </article>
     {{- end -}}
@@ -26,7 +26,7 @@
     {{- range sort $matched "Date" -}}
     <article class="entry-item">
       <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
-      <time>{{ .Date.Format "2006-01-02" }}</time>
+      <time>{{ .Date.Format "2006-01-02 15:04" }}</time>
       {{- if .Description -}}<p>{{ .Description }}</p>{{- end -}}
     </article>
     {{- end -}}

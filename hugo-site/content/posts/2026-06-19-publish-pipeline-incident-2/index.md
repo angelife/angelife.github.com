@@ -1,4 +1,5 @@
 ---
+---
 
 
 
@@ -10,6 +11,9 @@ title: "发布事故复盘二"
 date: 2026-06-19T10:00:00+08:00
 draft: false
 slug: 2026-06-19-publish-pipeline-incident-2
+cover:
+  image: /images/posts/2026-06-19-publish-pipeline-incident-2/cover.png
+  alt: "发布事故复盘二"
 categories:
   - 火·AI
 series:
@@ -23,7 +27,6 @@ tags:
 
 
 
----
 
 
 ## 题记
@@ -113,3 +116,4 @@ tags:
 如果假设错了。
 越努力排查。
 离真相反而越远。
+

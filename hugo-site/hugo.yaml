@@ -20,7 +20,7 @@ params:
   showPostNavLinks: false
   showCodeCopyButtons: false
   showReadingTime: false
-  dateFormat: "2006-01-02"
+  dateFormat: "2006-01-02 15:04"
   disableSpecial1stPost: true
   fuseOpts:
     keys:

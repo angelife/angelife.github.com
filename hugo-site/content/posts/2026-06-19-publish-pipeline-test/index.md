@@ -1,4 +1,7 @@
 ---
+cover:
+  image: /images/posts/2026-06-19-publish-pipeline-test/cover.png
+  alt: "发布链路测试"
 
 
 

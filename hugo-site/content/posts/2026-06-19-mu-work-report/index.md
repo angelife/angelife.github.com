@@ -2,6 +2,9 @@
 title: "2026-06-19 木同学工作报告"
 date: 2026-06-19
 draft: false
+cover:
+  image: /images/posts/2026-06-19-mu-work-report/cover.png
+  alt: "2026-06-19 木同学工作报告"
 categories:
   - "木·蝉识"
 tags:

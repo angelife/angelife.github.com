@@ -24,7 +24,7 @@
     <article class="kindle-entry">
       <h2><a href="/kindle/posts/{{ $slug }}/">{{ .Title }}</a></h2>
       <div class="kindle-entry-meta">
-        <time>{{ .Date.Format "2006-01-02" }}</time>
+        <time>{{ .Date.Format "2006-01-02 15:04" }}</time>
         {{ with .Params.categories }}
         <span class="kindle-entry-categories">
           {{ range $i, $cat := . }}{{ if $i }} / {{ end }}{{ $cat }}{{ end }}
