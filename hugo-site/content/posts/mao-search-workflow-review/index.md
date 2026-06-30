@@ -1,5 +1,6 @@
 ---
 title: "MoA 多引擎搜索与整合流程 — 设计评审"
+slug: "mao-search-workflow-review"
 date: 2026-06-30
 lastmod: 2026-06-30 19:00:00
 draft: false
