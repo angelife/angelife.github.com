@@ -1,7 +1,481 @@
-<!doctype html><html lang=en><head><meta charset=UTF-8><meta http-equiv=X-UA-Compatible content="IE=Edge,chrome=1"><title>2026-06-02 今日總結：一場關於 CI 路徑錯配與特製檔案的搶救複盤 - 安知生 angelife</title>
-<meta name=viewport content="width=device-width,initial-scale=1"><script>(()=>{const t="theme";let e=null;try{e=localStorage.getItem(t)}catch{}const s=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(e==="system"){try{localStorage.removeItem(t)}catch{}e=null}e!=="dark"&&e!=="light"&&(e=null);const n=e?e:s?"dark":"light";document.documentElement.dataset.themePref=e?n:"system",document.documentElement.dataset.theme=n})()</script><meta name=keywords content="運維,Hugo,GitHub Actions,taxonomy,故障複盤"><link rel=stylesheet href="/css/style.css?v=1781781190"><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel=stylesheet><style>.s3g-banner{text-align:center;padding:18px 0 0;margin-bottom:8px}.s3g-sitename{font-family:ma shan zheng,stkaiti,kaiti,楷体,serif;font-size:32px;font-weight:400;letter-spacing:.06em;margin:0 0 14px}.s3g-sitename a{color:#000!important;text-decoration:none;border-bottom:none!important}.s3g-nav{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;font-size:16px;margin-bottom:24px}.s3g-nav a{color:#999!important;text-decoration:none;border-bottom:none!important;transition:color .2s}.s3g-nav a:hover{color:#333!important}.archive{max-width:760px;margin:0 auto;padding:0 20px}.archive .article-title{font-size:32px;font-weight:700;color:#223;margin:10px 0 22px;text-align:left;border:none}.archive .archive-description{font-size:14px;color:#888;margin:-10px 0 24px;line-height:1.6}.archive .archive-section-title{font-size:18px;font-weight:700;color:#555;margin:28px 0 10px}.archive .post-archive{list-style:none!important;padding-left:0!important;margin:20px 0 0}.archive .post-archive .post-item{list-style:none!important;margin:6px 0;padding:0;line-height:24px;display:block}.archive .post-archive .post-item::before{content:none!important}.archive .post-archive .post-title{font-size:16px;color:#000!important;text-decoration:none!important;border-bottom:none!important;line-height:24px}.archive .post-archive .post-title:hover{color:#c00!important;text-decoration:none!important}.archive .post-archive .post-date{font-size:13px;color:#aaa;margin-left:10px}.archive .archive-legacy{margin-top:28px}.archive .archive-legacy summary{font-size:14px;color:#888;cursor:pointer;margin-bottom:8px}.archive .archive-empty{font-size:15px;color:#888;line-height:1.8;margin-top:30px}.single,article{max-width:760px;margin:0 auto;padding:0 20px}.s3g-footer{max-width:760px;margin:60px auto 30px;padding:18px 20px 0;border-top:1px solid #eee;display:flex;justify-content:space-between;align-items:baseline;font-size:13px;color:#999}.s3g-footer .s3g-copy{font-family:-apple-system,segoe ui,Helvetica,Arial,sans-serif}.s3g-footer .s3g-slogan{font-family:ma shan zheng,stkaiti,kaiti,楷体,serif;font-size:18px;color:#555;letter-spacing:.08em}.home-root .s3g-footer,body.home .s3g-footer{border-top:none;margin-top:30px}.archive .post-item time.post-date{}.home .info .logo{font-family:ma shan zheng,stkaiti,kaiti,楷体,serif!important;font-size:56px!important;font-weight:400!important;letter-spacing:.12em;color:#1a1a1a!important;text-decoration:none!important;border-bottom:none!important}.home .info .sns{margin-top:24px!important}.home .info .sns a{width:auto!important;font-size:14px!important;color:#aaa!important;margin:0 14px!important;letter-spacing:.08em;text-decoration:none!important;border-bottom:none!important}.home .info .sns a:hover{color:#555!important}.post-single .article-title,.post-title .article-title,.post .article-title{font-size:36px!important;font-weight:700!important;line-height:1.35!important;color:#1a1a1a!important;margin:32px 0 8px!important;letter-spacing:.01em}.post-category{font-size:13px;color:#999;margin:0 0 32px;letter-spacing:.08em}.section-subtitle{text-align:left;color:#999;font-size:14px;margin:0 0 36px;line-height:1.7;max-width:760px;margin-left:auto;margin-right:auto}.archive .article-title{margin-bottom:8px!important}:root,html[data-theme=light],html[data-theme=dark],html:not([data-theme]){--c-bg:#FAFAF7 !important;--c-text:#1a1a1a !important;--c-link:#1a1a1a !important;--c-heading:#1a1a1a !important;--c-heading-border:#ECECEA !important;--c-border:#ECECEA !important;--c-border-soft:#F0EFEC !important;--c-muted:#6B6B6B !important;--c-muted-2:#999999 !important;--c-subtitle:#6B6B6B !important;--c-hr:#ECECEA !important;--c-panel:#F4F2EC !important;--c-pre-bg:#F4F2EC !important;--c-inline-code-bg:#F4F2EC !important;--c-quote-text:#6B6B6B !important;--c-quote-bg:#F4F2EC !important;--c-quote-border:#999999 !important;--c-toggle:#999999 !important;--c-archive-hover:#1a1a1a !important}.container,.container.container-post,main,.main,article,.post,.page,.s3g-banner,.s3g-footer,.archive{background:#fafaf7!important}@media(prefers-color-scheme:dark){:root,html,html[data-theme=dark]{--c-bg:#FAFAF7 !important;--c-text:#1a1a1a !important;color-scheme:light!important}html,body,.container{background:#fafaf7!important;color:#1a1a1a!important}}:root{--al-bg:#FAFAF7;--al-ink:#1a1a1a;--al-ink-soft:#222222;--al-mute:#ACACAC;--al-mute-deep:#9C9C9C;--al-slogan:#3F3C37;--al-line:#ECECEA}html,body{background:#fafaf7!important;color:#1a1a1a!important}.s3g-banner,.s3g-banner a,.s3g-sitename,.s3g-sitename a{background:0 0!important;color:#1a1a1a!important;border-bottom:none!important}.s3g-nav a{color:#999!important}.s3g-nav a:hover,.s3g-nav a.active{color:#1a1a1a!important}.article-title,.post-single .article-title,.post-title .article-title,.archive .article-title{color:#1a1a1a!important}.post-archive .post-title,.post-archive .post-title:link,.post-archive .post-title:visited{color:#222!important}.post-archive .post-title:hover{color:#000!important}.post-archive .post-date{color:#a8a8a8!important;font-family:-apple-system,segoe ui,Helvetica,Arial,sans-serif!important;font-variant-numeric:tabular-nums}.section-subtitle{color:#6b6b6b!important}.post-category{color:#acacac!important}.post-content{color:#222!important;background:0 0!important}.post-content a{color:#1a1a1a}.s3g-footer{border-top:1px solid #ececea!important;background:0 0!important}.s3g-footer .s3g-copy{color:#a0a0a0!important;font-weight:400!important}.s3g-footer .s3g-slogan{color:#2a2a2a!important;font-weight:400!important;font-size:16px!important;letter-spacing:.02em}.post-footer .post-time{color:#a8a8a8!important}.post-footer .top{color:#a8a8a8!important}.post-footer .top:hover{color:#1a1a1a!important}.post-cover{margin:1.6em auto 1.4em;max-width:100%;text-align:center}.post-cover img{display:block;margin:0 auto;max-width:100%;max-height:280px;width:auto;height:auto;object-fit:cover;border-radius:2px;background:#ececea}.post-cover figcaption{margin-top:.6em;font-size:13px;color:#999;font-style:italic;letter-spacing:.02em}.archive,.single,article,.s3g-footer{max-width:820px!important}.post-content,.post-content p,.post-content li,article p,article li,.single p,.single li{font-size:20px!important;line-height:1.9!important}.post-cover img{max-height:280px}.s3g-banner.sticky{position:sticky;top:0;background:rgba(250,250,248,.88);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);z-index:10}.search-page{max-width:820px!important;margin:0 auto;padding:0 20px}.search-page .article-title{font-size:32px;font-weight:700;color:#1a1a1a;margin:10px 0 22px}.search-box{margin-top:24px}.search-box #search-input{width:100%;font-size:18px;padding:12px 14px;background:var(--c-bg,#FAFAF7);color:var(--c-text,#1a1a1a);border:1px solid #ececea;border-radius:2px;outline:none;transition:border-color .2s;box-sizing:border-box;font-family:inherit}.search-box #search-input:focus{border-color:#999}.search-box #search-input::placeholder{color:#aaa}.search-box #results{margin-top:16px;font-size:16px}body:has(.home){margin:0}body:has(.home) .container{min-height:100vh;display:flex!important;flex-direction:column;justify-content:center;align-items:center;padding:0 24px}body:has(.home) .home{display:block!important;height:auto!important;min-height:0!important;padding:0!important;margin:0!important;text-align:center;width:100%}body:has(.home) .home .info{display:block!important;width:100%!important;text-align:center}body:has(.home) .home .info .logo{display:inline-block;margin-bottom:12px}body:has(.home) .home .info .sns{margin:0}body:has(.home) .s3g-footer .s3g-slogan{display:none!important}body:has(.home) .s3g-footer{justify-content:center!important;text-align:center!important;margin:24px 0 0!important;padding:0!important;border:none!important;background:0 0!important}body:has(.home) .s3g-footer .s3g-copy{font-size:12px!important;color:#bfbfbf!important}</style></head><body id=top><div class="container container-post"><header class=s3g-banner><div class=s3g-sitename><a href=/>安知生</a></div><nav class=s3g-nav><a href=/series/information-judgment/>金</a><a href=/series/chan-shi-lu/>木</a><a href=/series/yi-notes/>水</a><a href=/series/ai-bu-yin/>火</a><a href=/series/confucian-framework/>土</a><a href=/archives/>归档</a><a href=/search/>搜索</a><a href=/about/>关于</a></nav></header><div class=kindle-topbar><span class=kindle-topbar-site><a href=/>安知生 angelife</a></span>
-<span class=kindle-topbar-sep>／</span>
-<span class=kindle-topbar-section><a href=/kindle/>Kindle 阅读版</a></span></div><article class=kindle-article><header class=kindle-article-header><h1 class=kindle-article-title>2026-06-02 今日總結：一場關於 CI 路徑錯配與特製檔案的搶救複盤</h1><div class=kindle-article-meta><time>2026-06-02</time></div></header><div class=kindle-article-content><h2 id=前言>前言</h2><p>今天發生了一起典型的「本地完美、線上出錯」故障。表面症狀是 GitHub Pages 部署成功但分類頁面只剩下 2 篇文章，而本地 Hugo 編譯顯示一切正常。這篇記錄完整的破案過程，留給未來接手的人參考。</p><hr><h2 id=一故障現場分類頁面縮水詭異事件>一、故障現場：分類頁面縮水詭異事件</h2><p>上線完成後，taxonomy 頁面（<code>/series/information-judgment/</code> 等）全部顯示為 0 篇或極少文章，與本地編譯結果差異極大。</p><p><strong>本地編譯結果（完美）：</strong></p><ul><li><code>information-judgment/</code> taxonomy：42 篇文章，5 頁分頁</li><li>整站共 229 個頁面</li><li>sitemap 收錄 122 個 URL</li></ul><p><strong>線上 CI 構建結果（縮水）：</strong></p><ul><li>taxonomy 頁面：0 篇</li><li>sitemap：3 個 URL</li><li>build success 但 Pages 內容與本地天差地別</li></ul><hr><h2 id=二深度破案三層錯誤交織>二、深度破案：三層錯誤交織</h2><h3 id=第一層hugo-項目路徑盲盒>第一層：Hugo 項目路徑盲盒</h3><p>項目佈局如下：</p><pre tabindex=0><code>angelife.github.com/
+<!DOCTYPE html>
+<html lang="en">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><title>2026-06-02 今日總結：一場關於 CI 路徑錯配與特製檔案的搶救複盤 - 安知生 angelife</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script>
+    (() => {
+      const storageKey = 'theme';
+      let saved = null;
+      try {
+        saved = localStorage.getItem(storageKey);
+      } catch {}
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (saved === 'system') {
+        try {
+          localStorage.removeItem(storageKey);
+        } catch {}
+        saved = null;
+      }
+      if (saved !== 'dark' && saved !== 'light') saved = null;
+
+      const theme = saved ? saved : prefersDark ? 'dark' : 'light';
+      document.documentElement.dataset.themePref = saved ? theme : 'system';
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script><meta name="keywords" content="運維,Hugo,GitHub Actions,taxonomy,故障複盤"><link rel="stylesheet" href="/css/style.css?v=1781840326">
+  <link rel="stylesheet" href="/css/angelife-brand.css?v=1781840326">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+
+<style>
+ 
+
+ 
+.s3g-banner {
+  text-align: center;
+  padding: 18px 0 0 0;
+  margin-bottom: 8px;
+}
+
+.s3g-sitename {
+  font-family: "Ma Shan Zheng", "STKaiti", "KaiTi", "楷体", serif;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  margin: 0 0 14px 0;
+}
+.s3g-sitename a {
+  color: #000 !important;
+  text-decoration: none;
+  border-bottom: none !important;
+}
+
+.s3g-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+.s3g-nav a {
+  color: #999 !important;
+  text-decoration: none;
+  border-bottom: none !important;
+  transition: color 0.2s;
+}
+.s3g-nav a:hover {
+  color: #333 !important;
+}
+
+ 
+.archive {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.archive .article-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #223;
+  margin: 10px 0 22px 0;
+  text-align: left;
+  border: none;
+}
+
+.archive .archive-description {
+  font-size: 14px;
+  color: #888;
+  margin: -10px 0 24px 0;
+  line-height: 1.6;
+}
+
+.archive .archive-section-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #555;
+  margin: 28px 0 10px 0;
+}
+
+.archive .post-archive {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin: 20px 0 0 0;
+}
+.archive .post-archive .post-item {
+  list-style: none !important;
+  margin: 6px 0;
+  padding: 0;
+  line-height: 24px;
+  display: block;
+}
+.archive .post-archive .post-item::before {
+  content: none !important;
+}
+.archive .post-archive .post-title {
+  font-size: 16px;
+  color: #000 !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
+  line-height: 24px;
+}
+.archive .post-archive .post-title:hover {
+  color: #c00 !important;
+  text-decoration: none !important;
+}
+.archive .post-archive .post-date {
+  font-size: 13px;
+  color: #aaa;
+  margin-left: 10px;
+}
+
+.archive .archive-legacy {
+  margin-top: 28px;
+}
+.archive .archive-legacy summary {
+  font-size: 14px;
+  color: #888;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+.archive .archive-empty {
+  font-size: 15px;
+  color: #888;
+  line-height: 1.8;
+  margin-top: 30px;
+}
+
+ 
+.single, article {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+ 
+.s3g-footer {
+  max-width: 760px;
+  margin: 60px auto 30px auto;
+  padding: 18px 20px 0 20px;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 13px;
+  color: #999;
+}
+.s3g-footer .s3g-copy {
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+.s3g-footer .s3g-slogan {
+  font-family: "Ma Shan Zheng", "STKaiti", "KaiTi", "楷体", serif;
+  font-size: 18px;
+  color: #555;
+  letter-spacing: 0.08em;
+}
+
+ 
+.home-root .s3g-footer,
+body.home .s3g-footer {
+  border-top: none;
+  margin-top: 30px;
+}
+
+ 
+.home .info .logo {
+  font-family: "Ma Shan Zheng", "STKaiti", "KaiTi", "楷体", serif !important;
+  font-size: 56px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.12em;
+  color: #1a1a1a !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+.home .info .sns {
+  margin-top: 24px !important;
+}
+.home .info .sns a {
+  width: auto !important;
+  font-size: 14px !important;
+  color: #aaa !important;
+  margin: 0 14px !important;
+  letter-spacing: 0.08em;
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+.home .info .sns a:hover {
+  color: #555 !important;
+}
+
+ 
+.post-category {
+  font-size: 13px;
+  color: #999;
+  margin: 0 0 32px 0;
+  letter-spacing: 0.08em;
+}
+.section-subtitle {
+  text-align: left;
+  color: #999;
+  font-size: 14px;
+  margin: 0 0 36px 0;
+  line-height: 1.7;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.archive .article-title {
+  margin-bottom: 8px !important;
+}
+
+ 
+:root,
+html[data-theme="light"],
+html[data-theme="dark"],
+html:not([data-theme]) {
+  --c-bg: #FAFAF7 !important;
+  --c-text: #1a1a1a !important;
+  --c-link: #1a1a1a !important;
+  --c-heading: #1a1a1a !important;
+  --c-heading-border: #ECECEA !important;
+  --c-border: #ECECEA !important;
+  --c-border-soft: #F0EFEC !important;
+  --c-muted: #6B6B6B !important;
+  --c-muted-2: #999999 !important;
+  --c-subtitle: #6B6B6B !important;
+  --c-hr: #ECECEA !important;
+  --c-panel: #F4F2EC !important;
+  --c-pre-bg: #F4F2EC !important;
+  --c-inline-code-bg: #F4F2EC !important;
+  --c-quote-text: #6B6B6B !important;
+  --c-quote-bg: #F4F2EC !important;
+  --c-quote-border: #999999 !important;
+  --c-toggle: #999999 !important;
+  --c-archive-hover: #1a1a1a !important;
+}
+ 
+.container,
+.container.container-post,
+main,
+.main,
+article,
+.post,
+.page,
+.s3g-banner,
+.s3g-footer,
+.archive {
+  background: #FAFAF7 !important;
+}
+ 
+@media (prefers-color-scheme: dark) {
+  :root, html, html[data-theme="dark"] {
+    --c-bg: #FAFAF7 !important;
+    --c-text: #1a1a1a !important;
+    color-scheme: light !important;
+  }
+  html, body, .container { background: #FAFAF7 !important; color: #1a1a1a !important; }
+}
+
+ 
+:root {
+  --al-bg: #FAFAF7;
+  --al-ink: #1a1a1a;
+  --al-ink-soft: #222222;
+  --al-mute: #ACACAC;
+  --al-mute-deep: #9C9C9C;
+  --al-slogan: #3F3C37;
+  --al-line: #ECECEA;
+}
+html, body {
+  background: #FAFAF7 !important;
+  color: #1a1a1a !important;
+}
+
+ 
+.s3g-footer {
+  border-top: 1px solid #ECECEA !important;
+  background: transparent !important;
+}
+
+ 
+.post-cover {
+  margin: 1.6em auto 1.4em;
+  max-width: 100%;
+  text-align: center;
+}
+.post-cover img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 280px;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  border-radius: 2px;
+  background: #ECECEA;
+}
+.post-cover figcaption {
+  margin-top: 0.6em;
+  font-size: 13px;
+  color: #999999;
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+
+ 
+.s3g-banner.sticky {
+  position: sticky;
+  top: 0;
+  background: rgba(250, 250, 248, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 10;
+}
+
+ 
+.search-page {
+  max-width: 820px !important;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.search-page .article-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 10px 0 22px 0;
+}
+.search-box {
+  margin-top: 24px;
+}
+.search-box #search-input {
+  width: 100%;
+  font-size: 18px;
+  padding: 12px 14px;
+  background: var(--c-bg, #FAFAF7);
+  color: var(--c-text, #1a1a1a);
+  border: 1px solid #ECECEA;
+  border-radius: 2px;
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+.search-box #search-input:focus {
+  border-color: #999;
+}
+.search-box #search-input::placeholder {
+  color: #aaa;
+}
+.search-box #results {
+  margin-top: 16px;
+  font-size: 16px;
+}
+
+ 
+body:has(.home) {
+  margin: 0;
+}
+body:has(.home) .container {
+  min-height: 100vh;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 24px;
+}
+body:has(.home) .home {
+  display: block !important;
+  height: auto !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  text-align: center;
+  width: 100%;
+}
+body:has(.home) .home .info {
+  display: block !important;
+  width: 100% !important;
+  text-align: center;
+}
+body:has(.home) .home .info .logo {
+  display: inline-block;
+  margin-bottom: 12px;
+}
+body:has(.home) .home .info .sns {
+  margin: 0;
+}
+body:has(.home) .s3g-footer .s3g-slogan { display: none !important; }
+body:has(.home) .s3g-footer {
+  justify-content: center !important;
+  text-align: center !important;
+  margin: 24px 0 0 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  background: transparent !important;
+}
+body:has(.home) .s3g-footer .s3g-copy {
+  font-size: 12px !important;
+  color: #BFBFBF !important;
+}
+</style>
+
+</head>
+
+  <body id="top">
+    <div class="container container-post">
+      <header class="s3g-banner"><div class="s3g-sitename">
+    <a href="/">安知生</a>
+  </div>
+  <nav class="s3g-nav"><a href="/series/information-judgment/">金</a><a href="/series/chan-shi-lu/">木</a><a href="/series/yi-notes/">水</a><a href="/series/ai-bu-yin/">火</a><a href="/series/confucian-framework/">土</a><a href="/archives/">归档</a><a href="/search/">搜索</a><a href="/about/">关于</a></nav></header>
+
+      
+<div class="kindle-topbar">
+  <span class="kindle-topbar-site"><a href="/">安知生 angelife</a></span>
+  <span class="kindle-topbar-sep">／</span>
+  <span class="kindle-topbar-section"><a href="/kindle/">Kindle 阅读版</a></span>
+</div>
+
+<article class="kindle-article">
+  <header class="kindle-article-header">
+    <h1 class="kindle-article-title">2026-06-02 今日總結：一場關於 CI 路徑錯配與特製檔案的搶救複盤</h1>
+    <div class="kindle-article-meta">
+      <time>2026-06-02</time>
+      
+    </div>
+  </header>
+
+  
+
+  <div class="kindle-article-content">
+    <h2 id="前言">前言</h2>
+<p>今天發生了一起典型的「本地完美、線上出錯」故障。表面症狀是 GitHub Pages 部署成功但分類頁面只剩下 2 篇文章，而本地 Hugo 編譯顯示一切正常。這篇記錄完整的破案過程，留給未來接手的人參考。</p>
+<hr>
+<h2 id="一故障現場分類頁面縮水詭異事件">一、故障現場：分類頁面縮水詭異事件</h2>
+<p>上線完成後，taxonomy 頁面（<code>/series/information-judgment/</code> 等）全部顯示為 0 篇或極少文章，與本地編譯結果差異極大。</p>
+<p><strong>本地編譯結果（完美）：</strong></p>
+<ul>
+<li><code>information-judgment/</code> taxonomy：42 篇文章，5 頁分頁</li>
+<li>整站共 229 個頁面</li>
+<li>sitemap 收錄 122 個 URL</li>
+</ul>
+<p><strong>線上 CI 構建結果（縮水）：</strong></p>
+<ul>
+<li>taxonomy 頁面：0 篇</li>
+<li>sitemap：3 個 URL</li>
+<li>build success 但 Pages 內容與本地天差地別</li>
+</ul>
+<hr>
+<h2 id="二深度破案三層錯誤交織">二、深度破案：三層錯誤交織</h2>
+<h3 id="第一層hugo-項目路徑盲盒">第一層：Hugo 項目路徑盲盒</h3>
+<p>項目佈局如下：</p>
+<pre tabindex="0"><code>angelife.github.com/
 ├── .github/workflows/hugo.yml   ← CI 配置文件
 ├── hugo-site/                   ← Hugo 項目根目錄
 │   ├── hugo.toml
@@ -9,20 +483,197 @@
 │   │   ├── posts/               ← 82 篇文章（index.md）
 │   │   └── series/               ← 183 篇系列文章（PRIMARY）
 │   └── public/                   ← Hugo 產出
-└── posts/                        ← rsync 過去的靜態頁面</code></pre><p><strong>問題所在：</strong> GitHub Actions 的 <code>actions-hugo</code> 預設在 repo 根目錄執行 <code>hugo</code> 命令，但 Hugo 項目位於 <code>hugo-site/</code> 子目錄。在根目錄執行 <code>hugo</code> 等於對空目錄做編譯，幾乎不輸出任何頁面。</p><p><strong>代價：</strong> 因為 CI 在錯誤位置 build，無論 <code>mainSections</code> 配置多正確，都無法產生正確的 taxonomy 內容。</p><p><strong>修復方案：</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=line><span class=cl>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Build</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>working-directory</span><span class=p>:</span><span class=w> </span><span class=l>hugo-site  </span><span class=w> </span><span class=c># ← 關鍵：指定 Hugo 項目目錄</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>run</span><span class=p>:</span><span class=w> </span><span class=l>hugo --cleanDestinationDir --minify</span></span></span></code></pre></div><p>同樣地，<code>actions/upload-pages-artifact</code> 的上傳路徑也要調整：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=line><span class=cl>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Upload artifact</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>uses</span><span class=p>:</span><span class=w> </span><span class=l>actions/upload-pages-artifact@v4</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>with</span><span class=p>:</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>path</span><span class=p>:</span><span class=w> </span><span class=l>hugo-site/public       </span><span class=w> </span><span class=c># ← Hugo 產出在子目錄中</span></span></span></code></pre></div><h3 id=第二層mainsections-配置丟失>第二層：mainSections 配置丟失</h3><p>Hugo 主配置（<code>hugo-site/hugo.toml</code>）的 <code>mainSections</code> 控制哪些目錄被視為「主要內容區」：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-toml data-lang=toml><span class=line><span class=cl><span class=nx>mainSections</span> <span class=p>=</span> <span class=p>[</span><span class=s2>&#34;columns&#34;</span><span class=p>,</span> <span class=s2>&#34;posts&#34;</span><span class=p>]</span>  <span class=c># ← 原始配置，漏掉了 &#34;series&#34;</span></span></span></code></pre></div><p>PaperMod 主題依賴 <code>mainSections</code> 來過濾哪些文章應出現在 taxonomy 列表頁。漏掉 <code>series</code> 導致即使 <code>series/</code> 目錄下有 183 篇文章，taxonomy 頁面依然空空如也。</p><p><strong>修復方案：</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-toml data-lang=toml><span class=line><span class=cl><span class=nx>mainSections</span> <span class=p>=</span> <span class=p>[</span><span class=s2>&#34;columns&#34;</span><span class=p>,</span> <span class=s2>&#34;posts&#34;</span><span class=p>,</span> <span class=s2>&#34;series&#34;</span><span class=p>]</span>  <span class=c># ← 加入 &#34;series&#34;</span></span></span></code></pre></div><h3 id=第三層誤將-primary-檔案當髒數據抹除>第三層：誤將 PRIMARY 檔案當髒數據抹除</h3><p>還原操作前的清理階段發現 <code>content/series/</code> 目錄下有 31 個 <code>.md.md</code> 污染文件（由 organize 腳本錯誤生成的重複檔案），同時發現 <code>content/series/</code> 下還有大量中文名的 <code>.md</code> 檔案——初步判斷這些是 organize 腳本生成的冗餘 flat files，與 <code>posts/</code> 中的 <code>index.md</code> 重複。</p><p><strong>錯誤判斷：</strong> 誤認為 <code>series/</code> 下的 173 個中文檔案與 <code>posts/</code> 內容完全一致，屬於臃腫的重複數據，果斷執行 <code>git rm</code> 批量刪除。</p><p><strong>真相：</strong> <code>series/</code> 下的 PRIMARY 檔案與 <code>posts/</code> 的 <code>index.md</code> <strong>並非完全相同</strong>。兩者 MD5 不同，series 版本是專門為 series taxonomy 展示而特製的版本——它們有獨立的 frontmatter 配置、不同的 slug、專屬的 series 欄目元數據。刪除這些檔案等於刪除了 173 篇精心維護的原創文章。</p><p><strong>搶救方案：</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># 定點還原：只還原 series/ 目錄，不動其他修改</span>
-</span></span><span class=line><span class=cl>git checkout fd8c614^ -- hugo-site/content/series/</span></span></code></pre></div><p>利用 <code>git checkout</code> 的精確路徑控制，精準還原了 183 個 article 檔案（<code>information-judgment/</code> 恢復 97 個、<code>chan-shi-lu/</code> 40 個、<code>confucian-framework/</code> 20 個、<code>ai-bu-yin/</code> 19 個、<code>yi-notes/</code> 7 個），同時保留了 CI workflow 的正確修改。</p><hr><h2 id=三時空救援手術刀式定點還原的技術細節>三、時空救援：手術刀式定點還原的技術細節</h2><h3 id=為什麼不暴力回滾>為什麼不暴力回滾？</h3><p>直接 <code>git revert</code> 或 <code>git reset --hard</code> 會撤銷 CI workflow 的正確修改（<code>working-directory: hugo-site</code> 補丁），讓修復前功盡棄。</p><h3 id=定點還原的原理>定點還原的原理</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># 找到誤刪檔案的上一個乾淨 commit</span>
-</span></span><span class=line><span class=cl>git log --oneline -10
-</span></span><span class=line><span class=cl><span class=c1># 顯示：fd8c614 delete 173 duplicate files ← 這是問題 commit</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=c1># 精準還原 series/ 目錄到 fd8c614^（誤刪之前）</span>
-</span></span><span class=line><span class=cl>git checkout fd8c614^ -- hugo-site/content/series/</span></span></code></pre></div><ul><li><code>fd8c614^</code> = fd8c614 的父 commit（誤刪之前）</li><li><code>--</code> 後面跟路徑 = 只還原該路徑</li><li>其他文件（workflow、hugo.toml）保持現狀不變</li></ul><h3 id=還原後驗證清單>還原後驗證清單</h3><table><thead><tr><th>檢查項</th><th>預期</th><th>實際</th></tr></thead><tbody><tr><td><code>information-judgment/</code> .md 數量</td><td>97（96 articles + _index.md）</td><td>✅ 97</td></tr><tr><td><code>chan-shi-lu/</code> .md 數量</td><td>40</td><td>✅ 40</td></tr><tr><td><code>confucian-framework/</code> .md 數量</td><td>20</td><td>✅ 20</td></tr><tr><td><code>ai-bu-yin/</code> .md 數量</td><td>19</td><td>✅ 19</td></tr><tr><td><code>yi-notes/</code> .md 數量</td><td>7</td><td>✅ 7</td></tr><tr><td>Hugo 本地 build</td><td>402 pages，0 errors</td><td>✅ 402 pages</td></tr><tr><td>sitemap URLs</td><td>122+</td><td>✅ 122</td></tr></tbody></table><hr><h2 id=四nodejs-版本警告修復>四、Node.js 版本警告修復</h2><p>GitHub Actions 日誌中出現 Node.js 20 棄用警告（2026 年 6 月 16 日後將強制執行 Node.js 24）。通過升級 Actions 插件版本解決：</p><table><thead><tr><th>插件</th><th>舊版</th><th>新版</th><th>目的</th></tr></thead><tbody><tr><td><code>actions/upload-pages-artifact</code></td><td>v3</td><td><strong>v4</strong></td><td>消除 Node 20 棄用警告</td></tr><tr><td><code>actions/deploy-pages</code></td><td>v4</td><td><strong>v5</strong></td><td>兼容最新運行時</td></tr></tbody></table><div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=line><span class=cl><span class=c># 升級後的 workflow 配置</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w></span>- <span class=nt>uses</span><span class=p>:</span><span class=w> </span><span class=l>actions/upload-pages-artifact@v4  </span><span class=w> </span><span class=c># 舊 v3</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w></span>- <span class=nt>uses</span><span class=p>:</span><span class=w> </span><span class=l>actions/deploy-pages@v5           </span><span class=w> </span><span class=c># 舊 v4</span></span></span></code></pre></div><hr><h2 id=五教訓沉澱>五、教訓沉澱</h2><ol><li><p><strong>CI 的盲盒特性</strong>：本地 build 完美不等於 CI build 正確。任何改動（路徑、配置）都必須以 CI rebuild 的實際輸出為準，不能以本地結果推斷線上結果。</p></li><li><p><strong>PRIMARY 檔案判斷準則</strong>：不能僅以「文件內容相似」或「目錄結構重疊」來判斷是否冗餘。必須檢查 MD5、指紋、元數據差異。series/ 下的文章是經過特製的 PRIMARY 資產，不是 posts/ 的分身。</p></li><li><p><strong>定點還原勝過暴力回滾</strong>：<code>git checkout &lt;commit>^ -- &lt;path></code> 是精準手術刀，可以只救目標路徑而不影響其他修復。</p></li><li><p><strong>mainSections 是生命線</strong>：PaperMod 主題的 taxonomy 列表依賴 <code>mainSections</code> 配置。任何新增的內容目錄（<code>series</code>、<code>columns</code> 等）必須同步加入 <code>mainSections</code>，否則 theme 會過濾掉這些內容。</p></li></ol><hr><h2 id=六修改的文件清單>六、修改的文件清單</h2><table><thead><tr><th>檔案</th><th>操作</th></tr></thead><tbody><tr><td><code>.github/workflows/hugo.yml</code></td><td>升級 upload-pages-artifact@v4、deploy-pages@v5，修復 working-directory</td></tr><tr><td><code>hugo-site/hugo.toml</code></td><td>mainSections 加入 <code>"series"</code></td></tr><tr><td><code>hugo-site/content/series/</code></td><td>定點還原 183 個 PRIMARY article 檔案</td></tr><tr><td><code>SITE_CHANGELOG.md</code></td><td>新增 v0.6.34 版本記錄</td></tr></tbody></table><hr><h2 id=七下次接手注意>七、下次接手注意</h2><p>遇到「本地完美、CI 縮水」問題時，按以下順序排查：</p><ol><li>CI workflow 是否指定了正確的 <code>working-directory</code>（Hugo 項目不一定在 repo 根目錄）</li><li><code>hugo.toml</code> 的 <code>mainSections</code> 是否覆蓋了所有內容目錄</li><li>CI artifact 的實際大小是否合理（空 build 的 public/ 目錄極小）</li><li>taxonomy 頁面的 <code>mainSections</code> 配置</li></ol><p>作者：NVIDIA（Docker Hermes 獨立實例）<br>日期：2026-06-02</p></div><nav class=kindle-article-nav><div class=kindle-nav-back><a href=/kindle/>← Kindle 目录</a></div><div class=kindle-nav-prevnext><span class=kindle-nav-prev>上一篇：<a href=/kindle/posts/%E6%8B%92%E7%B5%95%E8%99%9B%E5%81%87%E6%95%98%E4%BA%8B%E5%8F%8D%E9%82%AA%E6%95%99%E6%B3%A5%E6%B2%BC%E4%B8%AD%E7%9A%84%E9%80%80%E6%95%99%E4%BF%AE%E4%BB%99%E8%88%87%E5%BF%83%E6%99%BA%E9%87%8D%E5%A1%91%E6%8C%87%E5%8D%97/>拒絕虛假敘事：反邪教泥沼中的「退教修仙」與心智重塑指南</a></span>
-<span class=kindle-nav-next>下一篇：<a href=/kindle/posts/kindle-k3w-koreader-2026/>Kindle Keyboard K3W 越狱安装 KOReader 完整指南（2026年）</a></span></div></nav></article><div class=kindle-footer><p><a href=/kindle/>← Kindle 目录</a>
-· <a href="/posts//?normal=1">本文图文版</a>
-· <a href=/>返回首页</a></p><p class=kindle-footer-copy>© 2009–2026 angelife / 安知生</p></div></div><script src=/js/main.js defer></script></body></html>
+└── posts/                        ← rsync 過去的靜態頁面</code></pre><p><strong>問題所在：</strong> GitHub Actions 的 <code>actions-hugo</code> 預設在 repo 根目錄執行 <code>hugo</code> 命令，但 Hugo 項目位於 <code>hugo-site/</code> 子目錄。在根目錄執行 <code>hugo</code> 等於對空目錄做編譯，幾乎不輸出任何頁面。</p>
+<p><strong>代價：</strong> 因為 CI 在錯誤位置 build，無論 <code>mainSections</code> 配置多正確，都無法產生正確的 taxonomy 內容。</p>
+<p><strong>修復方案：</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl">- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Build</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">working-directory</span><span class="p">:</span><span class="w"> </span><span class="l">hugo-site  </span><span class="w"> </span><span class="c"># ← 關鍵：指定 Hugo 項目目錄</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l">hugo --cleanDestinationDir --minify</span></span></span></code></pre></div><p>同樣地，<code>actions/upload-pages-artifact</code> 的上傳路徑也要調整：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl">- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Upload artifact</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">actions/upload-pages-artifact@v4</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l">hugo-site/public       </span><span class="w"> </span><span class="c"># ← Hugo 產出在子目錄中</span></span></span></code></pre></div><h3 id="第二層mainsections-配置丟失">第二層：mainSections 配置丟失</h3>
+<p>Hugo 主配置（<code>hugo-site/hugo.toml</code>）的 <code>mainSections</code> 控制哪些目錄被視為「主要內容區」：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">mainSections</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;columns&#34;</span><span class="p">,</span> <span class="s2">&#34;posts&#34;</span><span class="p">]</span>  <span class="c"># ← 原始配置，漏掉了 &#34;series&#34;</span></span></span></code></pre></div><p>PaperMod 主題依賴 <code>mainSections</code> 來過濾哪些文章應出現在 taxonomy 列表頁。漏掉 <code>series</code> 導致即使 <code>series/</code> 目錄下有 183 篇文章，taxonomy 頁面依然空空如也。</p>
+<p><strong>修復方案：</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">mainSections</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;columns&#34;</span><span class="p">,</span> <span class="s2">&#34;posts&#34;</span><span class="p">,</span> <span class="s2">&#34;series&#34;</span><span class="p">]</span>  <span class="c"># ← 加入 &#34;series&#34;</span></span></span></code></pre></div><h3 id="第三層誤將-primary-檔案當髒數據抹除">第三層：誤將 PRIMARY 檔案當髒數據抹除</h3>
+<p>還原操作前的清理階段發現 <code>content/series/</code> 目錄下有 31 個 <code>.md.md</code> 污染文件（由 organize 腳本錯誤生成的重複檔案），同時發現 <code>content/series/</code> 下還有大量中文名的 <code>.md</code> 檔案——初步判斷這些是 organize 腳本生成的冗餘 flat files，與 <code>posts/</code> 中的 <code>index.md</code> 重複。</p>
+<p><strong>錯誤判斷：</strong> 誤認為 <code>series/</code> 下的 173 個中文檔案與 <code>posts/</code> 內容完全一致，屬於臃腫的重複數據，果斷執行 <code>git rm</code> 批量刪除。</p>
+<p><strong>真相：</strong> <code>series/</code> 下的 PRIMARY 檔案與 <code>posts/</code> 的 <code>index.md</code> <strong>並非完全相同</strong>。兩者 MD5 不同，series 版本是專門為 series taxonomy 展示而特製的版本——它們有獨立的 frontmatter 配置、不同的 slug、專屬的 series 欄目元數據。刪除這些檔案等於刪除了 173 篇精心維護的原創文章。</p>
+<p><strong>搶救方案：</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 定點還原：只還原 series/ 目錄，不動其他修改</span>
+</span></span><span class="line"><span class="cl">git checkout fd8c614^ -- hugo-site/content/series/</span></span></code></pre></div><p>利用 <code>git checkout</code> 的精確路徑控制，精準還原了 183 個 article 檔案（<code>information-judgment/</code> 恢復 97 個、<code>chan-shi-lu/</code> 40 個、<code>confucian-framework/</code> 20 個、<code>ai-bu-yin/</code> 19 個、<code>yi-notes/</code> 7 個），同時保留了 CI workflow 的正確修改。</p>
+<hr>
+<h2 id="三時空救援手術刀式定點還原的技術細節">三、時空救援：手術刀式定點還原的技術細節</h2>
+<h3 id="為什麼不暴力回滾">為什麼不暴力回滾？</h3>
+<p>直接 <code>git revert</code> 或 <code>git reset --hard</code> 會撤銷 CI workflow 的正確修改（<code>working-directory: hugo-site</code> 補丁），讓修復前功盡棄。</p>
+<h3 id="定點還原的原理">定點還原的原理</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 找到誤刪檔案的上一個乾淨 commit</span>
+</span></span><span class="line"><span class="cl">git log --oneline -10
+</span></span><span class="line"><span class="cl"><span class="c1"># 顯示：fd8c614 delete 173 duplicate files ← 這是問題 commit</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 精準還原 series/ 目錄到 fd8c614^（誤刪之前）</span>
+</span></span><span class="line"><span class="cl">git checkout fd8c614^ -- hugo-site/content/series/</span></span></code></pre></div><ul>
+<li><code>fd8c614^</code> = fd8c614 的父 commit（誤刪之前）</li>
+<li><code>--</code> 後面跟路徑 = 只還原該路徑</li>
+<li>其他文件（workflow、hugo.toml）保持現狀不變</li>
+</ul>
+<h3 id="還原後驗證清單">還原後驗證清單</h3>
+<table>
+  <thead>
+      <tr>
+          <th>檢查項</th>
+          <th>預期</th>
+          <th>實際</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>information-judgment/</code> .md 數量</td>
+          <td>97（96 articles + _index.md）</td>
+          <td>✅ 97</td>
+      </tr>
+      <tr>
+          <td><code>chan-shi-lu/</code> .md 數量</td>
+          <td>40</td>
+          <td>✅ 40</td>
+      </tr>
+      <tr>
+          <td><code>confucian-framework/</code> .md 數量</td>
+          <td>20</td>
+          <td>✅ 20</td>
+      </tr>
+      <tr>
+          <td><code>ai-bu-yin/</code> .md 數量</td>
+          <td>19</td>
+          <td>✅ 19</td>
+      </tr>
+      <tr>
+          <td><code>yi-notes/</code> .md 數量</td>
+          <td>7</td>
+          <td>✅ 7</td>
+      </tr>
+      <tr>
+          <td>Hugo 本地 build</td>
+          <td>402 pages，0 errors</td>
+          <td>✅ 402 pages</td>
+      </tr>
+      <tr>
+          <td>sitemap URLs</td>
+          <td>122+</td>
+          <td>✅ 122</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="四nodejs-版本警告修復">四、Node.js 版本警告修復</h2>
+<p>GitHub Actions 日誌中出現 Node.js 20 棄用警告（2026 年 6 月 16 日後將強制執行 Node.js 24）。通過升級 Actions 插件版本解決：</p>
+<table>
+  <thead>
+      <tr>
+          <th>插件</th>
+          <th>舊版</th>
+          <th>新版</th>
+          <th>目的</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>actions/upload-pages-artifact</code></td>
+          <td>v3</td>
+          <td><strong>v4</strong></td>
+          <td>消除 Node 20 棄用警告</td>
+      </tr>
+      <tr>
+          <td><code>actions/deploy-pages</code></td>
+          <td>v4</td>
+          <td><strong>v5</strong></td>
+          <td>兼容最新運行時</td>
+      </tr>
+  </tbody>
+</table>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="c"># 升級後的 workflow 配置</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">actions/upload-pages-artifact@v4  </span><span class="w"> </span><span class="c"># 舊 v3</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">actions/deploy-pages@v5           </span><span class="w"> </span><span class="c"># 舊 v4</span></span></span></code></pre></div><hr>
+<h2 id="五教訓沉澱">五、教訓沉澱</h2>
+<ol>
+<li>
+<p><strong>CI 的盲盒特性</strong>：本地 build 完美不等於 CI build 正確。任何改動（路徑、配置）都必須以 CI rebuild 的實際輸出為準，不能以本地結果推斷線上結果。</p>
+</li>
+<li>
+<p><strong>PRIMARY 檔案判斷準則</strong>：不能僅以「文件內容相似」或「目錄結構重疊」來判斷是否冗餘。必須檢查 MD5、指紋、元數據差異。series/ 下的文章是經過特製的 PRIMARY 資產，不是 posts/ 的分身。</p>
+</li>
+<li>
+<p><strong>定點還原勝過暴力回滾</strong>：<code>git checkout &lt;commit&gt;^ -- &lt;path&gt;</code> 是精準手術刀，可以只救目標路徑而不影響其他修復。</p>
+</li>
+<li>
+<p><strong>mainSections 是生命線</strong>：PaperMod 主題的 taxonomy 列表依賴 <code>mainSections</code> 配置。任何新增的內容目錄（<code>series</code>、<code>columns</code> 等）必須同步加入 <code>mainSections</code>，否則 theme 會過濾掉這些內容。</p>
+</li>
+</ol>
+<hr>
+<h2 id="六修改的文件清單">六、修改的文件清單</h2>
+<table>
+  <thead>
+      <tr>
+          <th>檔案</th>
+          <th>操作</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>.github/workflows/hugo.yml</code></td>
+          <td>升級 upload-pages-artifact@v4、deploy-pages@v5，修復 working-directory</td>
+      </tr>
+      <tr>
+          <td><code>hugo-site/hugo.toml</code></td>
+          <td>mainSections 加入 <code>&quot;series&quot;</code></td>
+      </tr>
+      <tr>
+          <td><code>hugo-site/content/series/</code></td>
+          <td>定點還原 183 個 PRIMARY article 檔案</td>
+      </tr>
+      <tr>
+          <td><code>SITE_CHANGELOG.md</code></td>
+          <td>新增 v0.6.34 版本記錄</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="七下次接手注意">七、下次接手注意</h2>
+<p>遇到「本地完美、CI 縮水」問題時，按以下順序排查：</p>
+<ol>
+<li>CI workflow 是否指定了正確的 <code>working-directory</code>（Hugo 項目不一定在 repo 根目錄）</li>
+<li><code>hugo.toml</code> 的 <code>mainSections</code> 是否覆蓋了所有內容目錄</li>
+<li>CI artifact 的實際大小是否合理（空 build 的 public/ 目錄極小）</li>
+<li>taxonomy 頁面的 <code>mainSections</code> 配置</li>
+</ol>
+<p>作者：NVIDIA（Docker Hermes 獨立實例）<br>
+日期：2026-06-02</p>
+
+  </div>
+
+  <nav class="kindle-article-nav">
+    <div class="kindle-nav-back">
+      <a href="/kindle/">← Kindle 目录</a>
+    </div>
+    <div class="kindle-nav-prevnext">
+      
+      <span class="kindle-nav-prev">上一篇：<a href="/kindle/posts/%E6%8B%92%E7%B5%95%E8%99%9B%E5%81%87%E6%95%98%E4%BA%8B%E5%8F%8D%E9%82%AA%E6%95%99%E6%B3%A5%E6%B2%BC%E4%B8%AD%E7%9A%84%E9%80%80%E6%95%99%E4%BF%AE%E4%BB%99%E8%88%87%E5%BF%83%E6%99%BA%E9%87%8D%E5%A1%91%E6%8C%87%E5%8D%97/">拒絕虛假敘事：反邪教泥沼中的「退教修仙」與心智重塑指南</a></span>
+      
+      
+      <span class="kindle-nav-next">下一篇：<a href="/kindle/posts/kindle-k3w-koreader-2026/">Kindle Keyboard K3W 越狱安装 KOReader 完整指南（2026年）</a></span>
+      
+    </div>
+  </nav>
+</article>
+
+<div class="kindle-footer">
+  <p><a href="/kindle/">← Kindle 目录</a>
+     · <a href="/posts//?normal=1">本文图文版</a>
+     · <a href="/">返回首页</a></p>
+  <p class="kindle-footer-copy">© 2009–2026 angelife / 安知生</p>
+</div>
+    </div>
+    <script src="/js/main.js" defer></script>
+  </body>
+</html>

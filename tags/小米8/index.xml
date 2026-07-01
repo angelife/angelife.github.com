@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>小米8 on 安知生 angelife</title><link>https://angelife.github.io/tags/%E5%B0%8F%E7%B1%B38/</link><description>Recent content in 小米8 on 安知生 angelife</description><generator>Hugo -- 0.147.4</generator><language>zh-cn</language><copyright>2009–2026 angelife / 安知生</copyright><lastBuildDate>Wed, 01 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://angelife.github.io/tags/%E5%B0%8F%E7%B1%B38/index.xml" rel="self" type="application/rss+xml"/><item><title>Xray 连接池爆炸 + USB 网卡踩坑：一次移动端网络排障全记录</title><link>https://angelife.github.io/posts/Xray-%E8%BF%9E%E6%8E%A5%E6%B1%A0%E7%88%86%E7%82%B8--USB-%E7%BD%91%E5%8D%A1%E8%B8%A9%E5%9D%91%E4%B8%80%E6%AC%A1%E7%A7%BB%E5%8A%A8%E7%AB%AF%E7%BD%91%E7%BB%9C%E6%8E%92%E9%9A%9C%E5%85%A8%E8%AE%B0%E5%BD%95/</link><pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate><guid>https://angelife.github.io/posts/Xray-%E8%BF%9E%E6%8E%A5%E6%B1%A0%E7%88%86%E7%82%B8--USB-%E7%BD%91%E5%8D%A1%E8%B8%A9%E5%9D%91%E4%B8%80%E6%AC%A1%E7%A7%BB%E5%8A%A8%E7%AB%AF%E7%BD%91%E7%BB%9C%E6%8E%92%E9%9A%9C%E5%85%A8%E8%AE%B0%E5%BD%95/</guid><description>&lt;h2 id="前因">前因&lt;/h2>
+&lt;p>给小米 8（LineageOS 22.2, kernel 4.9.337）配 USB 有线网卡以解决 WiFi 不稳的问题。&lt;/p>
+&lt;p>&lt;strong>先快速排障，然后……」断网了。&lt;/strong>&lt;/p>
+&lt;h2 id="事故时间线">事故时间线&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>时间&lt;/th>
+&lt;th>事件&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>2026-07-01&lt;/td>
+&lt;td>接入 RTL8152 USB 网卡测试速度&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>→&lt;/td>
+&lt;td>RTL8152 直插 Mac：6.97 MB/s ✅&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>→&lt;/td>
+&lt;td>RTL8152 过 Hub → Mi8：&lt;strong>5 KB/s ❌&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>→&lt;/td>
+&lt;td>连测多次 curl/speed，&lt;strong>连接暴涨&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>→&lt;/td>
+&lt;td>断网，仅&lt;strong>删除全部 xray 配置 + 重启&lt;/strong>恢复&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>恢复操作附带误删了一些网络偏好设置，但至少网络正常了。&lt;/p></description></item><item><title>小米 8（SD845）外接 USB 网卡全面踩坑：四款芯片无一幸免</title><link>https://angelife.github.io/posts/%E5%B0%8F%E7%B1%B3-8SD845%E5%A4%96%E6%8E%A5-USB-%E7%BD%91%E5%8D%A1%E5%85%A8%E9%9D%A2%E8%B8%A9%E5%9D%91%E5%9B%9B%E6%AC%BE%E8%8A%AF%E7%89%87%E6%97%A0%E4%B8%80%E5%B9%B8%E5%85%8D/</link><pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate><guid>https://angelife.github.io/posts/%E5%B0%8F%E7%B1%B3-8SD845%E5%A4%96%E6%8E%A5-USB-%E7%BD%91%E5%8D%A1%E5%85%A8%E9%9D%A2%E8%B8%A9%E5%9D%91%E5%9B%9B%E6%AC%BE%E8%8A%AF%E7%89%87%E6%97%A0%E4%B8%80%E5%B9%B8%E5%85%8D/</guid><description>&lt;h2 id="背景">背景&lt;/h2>
+&lt;p>小米 8（代号 dipper，骁龙 845）长期插电当服务器用，WiFi 不稳定，4G 流量要钱。想通过 USB 外接有线网卡解决网络问题，结果踩遍了市面上主流 USB 网卡芯片的坑。&lt;/p>
+&lt;p>环境：LineageOS 22.2（Android 15），内核 4.9.337，USB-C 接口实测为 USB 2.0（未焊 SuperSpeed 差分对）。&lt;/p></description></item></channel></rss>

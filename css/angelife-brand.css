@@ -841,6 +841,13 @@ article.post-single .post-title {
   line-height: 1.2;
 }
 
+/* PaperMod base h1 { font-size: 2em } causes child h1 to double.
+   Truncate the inheritance chain here. */
+h1.article-title {
+  font-size: clamp(1.8rem, 3vw, 2.2rem) !important;
+  line-height: 1.25;
+}
+
 article.post-single .post-description {
   margin-top: 0.7rem;
   color: var(--al-muted);
@@ -893,6 +900,17 @@ article.post-single .post-content blockquote {
   background: transparent;
 }
 
+article.post-single .post-content pre {
+  padding: 1rem;
+  overflow-x: auto;
+  border-radius: 10px;
+  background: #f6f8fa;
+}
+
+article.post-single .post-content pre code {
+  background: transparent;
+}
+
 article.post-single .post-content img {
   display: block;
   max-width: 100%;
@@ -926,6 +944,23 @@ article.post-single > .entry-cover figcaption {
   article.post-single .post-content {
     font-size: 17px;
     line-height: 1.86;
+  }
+
+  article.post-single .post-content h2 {
+    margin-top: 2.2em;
+    font-size: 1.55rem;
+  }
+
+  article.post-single .post-content h3 {
+    margin-top: 1.8em;
+  }
+
+  article.post-single .post-content pre {
+    padding: 0.85rem;
+  }
+
+  article.post-single .post-content blockquote {
+    padding: 0.85rem 1.1rem;
   }
 }
 

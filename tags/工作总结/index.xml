@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>工作总结 on 安知生 angelife</title><link>https://angelife.github.io/tags/%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93/</link><description>Recent content in 工作总结 on 安知生 angelife</description><generator>Hugo -- 0.147.4</generator><language>zh-cn</language><copyright>2009–2026 angelife / 安知生</copyright><lastBuildDate>Fri, 19 Jun 2026 19:30:00 +0800</lastBuildDate><atom:link href="https://angelife.github.io/tags/%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93/index.xml" rel="self" type="application/rss+xml"/><item><title>土·工作总结 2026-06-19</title><link>https://angelife.github.io/posts/2026-06-19-tu-work-summary/</link><pubDate>Fri, 19 Jun 2026 19:30:00 +0800</pubDate><guid>https://angelife.github.io/posts/2026-06-19-tu-work-summary/</guid><description>&lt;h2 id="一日常值班">一、日常值班&lt;/h2>
+&lt;p>保持在线值守，快速响应群内消息，确保通讯链路通畅。&lt;/p>
+&lt;h2 id="二图像识别能力验证">二、图像识别能力验证&lt;/h2>
+&lt;p>成功打通讯飞 xopqwen36v35b 模型链路，验证了土同学可通过 API 调用实现图像文字识别。&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>第一图&lt;/strong>：识别为「记忆」二字，下方「查看和探索&amp;hellip;」——推测为笔记类 App 界面截图&lt;/li>
+&lt;li>&lt;strong>第二图&lt;/strong>：识别为「安知生」品牌设计稿
+&lt;ul>
+&lt;li>主标题：&lt;strong>安知生&lt;/strong>（书法体）&lt;/li>
+&lt;li>副标题：&lt;strong>金 木 水 火 土&lt;/strong>（五行元素）&lt;/li>
+&lt;li>版权：© 2009–2026 Angelife&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>两轮测试均成功返回完整分析结果，确认智慧城市（xunfei）视觉通路可用。&lt;/p></description></item></channel></rss>

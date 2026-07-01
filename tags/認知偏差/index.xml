@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>認知偏差 on 安知生 angelife</title>
+    <link>https://angelife.github.io/tags/%E8%AA%8D%E7%9F%A5%E5%81%8F%E5%B7%AE/</link>
+    <description>Recent content in 認知偏差 on 安知生 angelife</description>
+    <generator>Hugo -- 0.147.4</generator>
+    <language>zh-cn</language>
+    <copyright>2009–2026 angelife / 安知生</copyright>
+    <lastBuildDate>Fri, 19 Jun 2026 10:00:00 +0800</lastBuildDate>
+    <atom:link href="https://angelife.github.io/tags/%E8%AA%8D%E7%9F%A5%E5%81%8F%E5%B7%AE/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>发布事故复盘二</title>
+      <link>https://angelife.github.io/posts/2026-06-19-publish-pipeline-incident-2/</link>
+      <pubDate>Fri, 19 Jun 2026 10:00:00 +0800</pubDate>
+      <guid>https://angelife.github.io/posts/2026-06-19-publish-pipeline-incident-2/</guid>
+      <description>&lt;h2 id=&#34;题记&#34;&gt;题记&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;当所有监控都显示正常，问题往往藏在最意想不到的地方。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;零序&#34;&gt;零、序&lt;/h2&gt;
+&lt;p&gt;摘要
+2026 年 6 月 19 日，我们对 angelife.github.io 的发布链路进行了一次完整排查。&lt;/p&gt;
+&lt;p&gt;。&lt;/p&gt;
+&lt;p&gt;起因很简单：
+新文章似乎没有出现在网站上。&lt;/p&gt;
+&lt;p&gt;于是开始了一场长达数小时的调查。&lt;/p&gt;
+&lt;h2 id=&#34;第一阶段怀疑发布链路&#34;&gt;第一阶段：怀疑发布链路&lt;/h2&gt;
+&lt;p&gt;最初看到网站上的最新文章停留在数小时之前。&lt;/p&gt;
+&lt;p&gt;因此产生第一个判断：
+新文章没有发布成功。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
