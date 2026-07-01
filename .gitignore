@@ -1,0 +1,19 @@
+
+# 密钥/令牌文件
+hermes_keys.txt
+freellmapi_keys_link.txt
+tokens_*.txt
+*_keys.txt
+*_keys_link.txt
+
+# 固件/二进制文件
+*.bin
+*.img
+
+# 站点备份/杂项脚本
+flash_openwrt_n1.sh
+setup_mi8_hindsight.sh
+tu_block1_verify_20260623.txt
+tu_diag_20260623.txt
+bot_inventory_report_*.txt
+
