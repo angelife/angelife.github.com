@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>災難恢復 on 安知生 angelife</title><link>https://angelife.github.io/tags/%E7%81%BD%E9%9B%A3%E6%81%A2%E5%BE%A9/</link><description>Recent content in 災難恢復 on 安知生 angelife</description><generator>Hugo -- 0.147.4</generator><language>zh-cn</language><copyright>2009–2026 angelife / 安知生</copyright><lastBuildDate>Thu, 18 Jun 2026 19:30:00 +0800</lastBuildDate><atom:link href="https://angelife.github.io/tags/%E7%81%BD%E9%9B%A3%E6%81%A2%E5%BE%A9/index.xml" rel="self" type="application/rss+xml"/><item><title>rsync事故复盘</title><link>https://angelife.github.io/posts/2026-06-18-release-incident-v0-7-19/</link><pubDate>Thu, 18 Jun 2026 19:30:00 +0800</pubDate><guid>https://angelife.github.io/posts/2026-06-18-release-incident-v0-7-19/</guid><description>&lt;h2 id="题记">题记&lt;/h2>
-&lt;blockquote>
-&lt;ol>
-&lt;li>&lt;strong>发前备份足够&lt;/strong>——5 份冗余备份散布在 4 个位置，没有一份缺失或损坏。&lt;/li>
-&lt;/ol>&lt;/blockquote>
-&lt;h2 id="前言">前言&lt;/h2>
-&lt;p>这是 angelife 网站第二次被自家发布脚本吃掉。第一次是 5 月底的 &lt;code>angelife.github.com.broken.20260528-225754&lt;/code>、&lt;code>.public-wiped.20260529-182010&lt;/code> 那批残骸，今天轮到 v0.7.19。&lt;/p></description></item></channel></rss>
