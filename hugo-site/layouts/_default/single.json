@@ -1,0 +1,10 @@
+{{- $items := slice -}}
+{{- range $i, $p := .Site.RegularPages -}}
+  {{- $cbn := "" -}}
+  {{- with $p.File }}{{ $cbn = .ContentBaseName }}{{ end -}}
+  {{- if or (in $p.RelPermalink "顿悟") (in $p.RelPermalink "亲密关系") -}}
+    {{- $items = $items | append (dict "path" $p.File.Path "cbn" $cbn "rel" $p.RelPermalink "section" $p.Section "title" $p.Title "date" $p.Date) -}}
+  {{- end -}}
+{{- end -}}
+{{- $payload := dict "items" $items -}}
+{{ $payload | jsonify (dict "prefix" "" "indent" "  ") }}
