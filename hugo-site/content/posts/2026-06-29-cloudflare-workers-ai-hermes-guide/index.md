@@ -1,5 +1,5 @@
 ---
-title: "Cloudflare Workers AI 零成本接入 Hermes Agent 完整教程"
+title: "WorkerAI指南"
 date: 2026-06-29T12:00:00+08:00
 draft: false
 slug: cloudflare-workers-ai-hermes-guide

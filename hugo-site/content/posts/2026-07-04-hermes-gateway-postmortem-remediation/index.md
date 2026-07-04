@@ -1,5 +1,5 @@
 ---
-title: "Hermes Gateway 二次崩溃排障复盘：不是“又崩了”，而是四层叠加故障"
+title: "GW复盘"
 date: 2026-07-04
 draft: false
 categories: ["土·正见"]

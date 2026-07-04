@@ -1,5 +1,5 @@
 ---
-title: "土·工作日志 2026-06-29: 坚果 Pro3 诊断与刷机准备"
+title: "坚果Pro3日志"
 date: 2026-06-29T22:00:00+08:00
 draft: false
 description: "坚果 Pro3（DT1902A/delta）异常重启诊断、Smartisan ROM 评估、EDL 线刷 GSI 准备工作全记录"

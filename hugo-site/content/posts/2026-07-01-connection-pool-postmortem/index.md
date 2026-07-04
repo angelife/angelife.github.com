@@ -1,5 +1,5 @@
 ---
-title: "Xray 连接池爆炸 + USB 网卡踩坑：一次移动端网络排障全记录"
+title: "连接池排障"
 date: 2026-07-01
 draft: false
 categories: ["土·正见"]

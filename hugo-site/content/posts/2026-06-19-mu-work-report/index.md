@@ -1,5 +1,5 @@
 ---
-title: "2026-06-19 木同学工作报告"
+title: "木工作报告"
 date: 2026-06-19
 draft: false
 cover:

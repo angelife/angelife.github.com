@@ -1,5 +1,5 @@
 ---
-title: "Mi8 + AX88179 USB 网卡重启后不识别：PD/VBUS 深度调试"
+title: "USB调试"
 date: 2026-07-01
 draft: false
 categories: ["土·正见"]

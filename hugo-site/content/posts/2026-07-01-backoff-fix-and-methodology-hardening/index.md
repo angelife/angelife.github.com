@@ -1,5 +1,5 @@
 ---
-title: "Gateway 重连退避修复与诊断规则硬化：修一个 bug，补一个体系"
+title: "退避修复"
 date: 2026-07-01
 draft: false
 categories: ["土·正见"]

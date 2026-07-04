@@ -1,5 +1,5 @@
 ---
-title: "坚果 Pro3 刷 LineageOS GSI 完整记录"
+title: "Pro3刷机"
 date: 2026-06-29T20:30:00+08:00
 draft: false
 description: "从诊断异常重启到准备刷机——Smartisan Nut Pro 3（delta）EDL 线刷 GSI 路线全记录"

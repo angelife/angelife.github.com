@@ -4,7 +4,7 @@
 
 
 
-title: "Kindle越狱装KO"
+title: "Kindle越狱"
 date: 2026-06-11
 draft: false
 slug: kindle-k3w-koreader-2026

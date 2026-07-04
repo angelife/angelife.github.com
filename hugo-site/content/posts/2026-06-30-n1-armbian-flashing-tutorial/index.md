@@ -1,5 +1,5 @@
 ---
-title: "斐讯 N1 盒子刷 Armbian 完全教程（2026 版）"
+title: "N1刷机"
 slug: "n1-armbian-flashing-tutorial"
 date: 2026-06-30T12:00:00.000+08:00
 draft: false

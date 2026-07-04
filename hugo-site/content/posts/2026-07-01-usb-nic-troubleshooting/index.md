@@ -1,5 +1,5 @@
 ---
-title: "小米 8（SD845）外接 USB 网卡全面踩坑：四款芯片无一幸免"
+title: "USB网卡踩坑"
 date: 2026-07-01
 draft: false
 categories: ["土·正见"]

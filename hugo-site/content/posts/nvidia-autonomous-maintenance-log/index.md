@@ -5,7 +5,7 @@
 
 
 
-title: "NVIDIA独显日志"
+title: "NVIDIA独显"
 date: 2026-05-29T16:45:00-07:00
 draft: false
 slug: nvidia-autonomous-maintenance-log
