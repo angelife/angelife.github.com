@@ -7,14 +7,13 @@
     {{- $pool := where site.RegularPages "Section" "in" (slice "posts" "series") }}
     {{- $pool = where $pool "Params.draft" "!=" true }}
     {{- $pool = where $pool "Date.Year" "!=" 1 }}
-    {{- /* 去重：以 ContentBaseName 为 key，先到先得（posts 在 series 之前） */ -}}
+    {{- /* 去重：以标题+时间为 key，先到先得（posts 在 series 之前） */ -}}
     {{- $sortedPool := sort $pool "Section" "asc" }}
     {{- $seen := slice }}
     {{- $deduped := slice }}
     {{- range $sortedPool }}
-      {{- $key := "" }}
-      {{- with .File }}{{ $key = .ContentBaseName }}{{ end }}
-      {{- if and $key (not (in $seen $key)) }}
+      {{- $key := printf "%s|%s" .Title (.Date.Format "2006-01-02 15:04") }}
+      {{- if not (in $seen $key) }}
         {{- $seen = $seen | append $key }}
         {{- $deduped = $deduped | append . }}
       {{- end }}
