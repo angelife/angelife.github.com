@@ -53,11 +53,11 @@ disablePathToLower = true
     ignoreLocation = true
 
   [params.giscus]
-    enabled = false
+    enabled = true
     repo = "angelife/angelife.github.com"
-    repoId = ""
+    repoId = "MDEwOlJlcG9zaXRvcnkyOTMyMTIw"
     category = "General"
-    categoryId = ""
+    categoryId = "DIC_kwDOACy9mM4DAgq0"
     mapping = "pathname"
     strict = "0"
     reactionsEnabled = "1"
@@ -66,6 +66,20 @@ disablePathToLower = true
     theme = "preferred_color_scheme"
     lang = "zh-CN"
     loading = "lazy"
+
+  [params.valine]
+    enabled = false
+    appId = ""
+    appKey = ""
+    avatar = "mp"
+    placeholder = "说点什么..."
+    visitor = true
+    recordIP = true
+    enableQQ = false
+    emojiCDN = ""
+    emojiMaps = ""
+    lang = "zh-CN"
+    serverURLs = ""
 
 [[menu.main]]
   name = "金"

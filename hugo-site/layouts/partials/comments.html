@@ -1,6 +1,27 @@
 {{- $giscus := site.Params.giscus -}}
+{{- $valine := site.Params.valine -}}
 {{- $enabled := false -}}
-{{- with $giscus }}{{ $enabled = .enabled }}{{ end -}}
+{{- $use := "none" -}}
+{{- $giscusReady := false -}}
+{{- with $giscus -}}
+  {{- $gEnabled := .enabled -}}
+  {{- $rid := or (index . "repoId") (index . "repoid") "" -}}
+  {{- $cid := or (index . "categoryId") (index . "categoryid") "" -}}
+  {{- if and $gEnabled $rid $cid -}}
+    {{- $enabled = true -}}
+    {{- $use = "giscus" -}}
+    {{- $giscusReady = true -}}
+  {{- end -}}
+{{- end -}}
+{{- if not $giscusReady -}}
+  {{- with $valine -}}
+    {{- $vEnabled := or .enabled false -}}
+    {{- if and $vEnabled .appId .appKey -}}
+      {{- $enabled = true -}}
+      {{- $use = "valine" -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
 {{- $repoId := "" -}}
 {{- $categoryId := "" -}}
 {{- with $giscus -}}
@@ -8,8 +29,9 @@
   {{- $categoryId = or (index . "categoryId") (index . "categoryid") "" -}}
 {{- end -}}
 {{- $isArticle := and .IsPage (not .IsHome) (not (in (slice "search" "changelog") .Layout)) (not (in (slice "search" "changelog" "site-workflow") .File.BaseFileName)) -}}
-{{- if and $enabled $repoId $categoryId $isArticle (ne .Params.comments false) -}}
+{{- if and $enabled $isArticle (ne .Params.comments false) -}}
 <section class="post-comments" aria-label="comments">
+  {{- if eq $use "giscus" -}}
   <script src="https://giscus.app/client.js"
     data-repo="{{ $giscus.repo }}"
     data-repo-id="{{ $repoId }}"
@@ -26,5 +48,29 @@
     crossorigin="anonymous"
     async>
   </script>
+  {{- else if eq $use "valine" -}}
+  <div id="vcomments"></div>
+  <script>
+    window.VALINE = window.VALINE || {};
+    (function(){
+      if (document.getElementById('vcomments')) {
+        new Valine({
+          el: '#vcomments',
+          appId: '{{ $valine.appId }}',
+          appKey: '{{ $valine.appKey }}',
+          avatar: '{{ $valine.avatar | default "mp" }}',
+          placeholder: '{{ $valine.placeholder | default "说点什么..." }}',
+          visitor: {{ if $valine.visitor }}true{{ else }}false{{ end }},
+          recordIP: {{ if $valine.recordIP }}true{{ else }}false{{ end }},
+          enableQQ: {{ if $valine.enableQQ }}true{{ else }}false{{ end }},
+          emojiCDN: '{{ $valine.emojiCDN | default "" }}',
+          emojiMaps: {{ $valine.emojiMaps | default "{}" }},
+          lang: '{{ $valine.lang | default "zh-CN" }}',
+          serverURLs: {{ $valine.serverURLs | default "{}" }}
+        });
+      }
+    })();
+  </script>
+  {{- end -}}
 </section>
 {{- end -}}
