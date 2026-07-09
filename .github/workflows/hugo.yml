@@ -44,6 +44,10 @@ jobs:
           echo "=== Build complete ==="
           echo "Total HTML files: $(find public -name '*.html' | wc -l)"
 
+      - name: Extend search index with old-site entries
+        run: |
+          python3 .scripts/extend-search-index.py
+
       - name: Verify build output
         run: |
           echo "=== Taxonomy verification ==="

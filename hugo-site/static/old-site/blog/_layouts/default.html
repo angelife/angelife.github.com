@@ -28,6 +28,11 @@
     <script src="{{ site.url }}/static/js/jquery.js" type="text/javascript"></script>
 </head>
 <body itemscope itemtype="http://schema.org/WebPage" class="home blog lotus index">
+<div style="background:#fff8e1;border-bottom:1px solid #ffe082;padding:8px 16px;text-align:center;font:14px/1.5 -apple-system,BlinkMacSystemFont,sans-serif">
+  <a href="https://angelife.github.io/" style="color:#b8860b;text-decoration:none;font-weight:600">← 返回安知生新站</a>
+  <span style="color:#aaa;margin:0 10px">|</span>
+  <a href="https://angelife.github.io/search/" style="color:#b8860b;text-decoration:none" onclick="var q=prompt('搜索全站（含旧站）：');if(q)location.href='https://angelife.github.io/search/?q='+encodeURIComponent(q);return false">🔍 搜索全站</a>
+</div>
     <nav class="lotus-nav">
         <ul>
             {% for link in site.nav %}
