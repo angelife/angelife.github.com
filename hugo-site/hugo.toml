@@ -121,6 +121,11 @@ disablePathToLower = true
   url = "/about/"
   weight = 30
 
+[[menu.main]]
+  name = "旧站"
+  url = "/old-site/"
+  weight = 40
+
 # Footer has minimal links (archives, search, about)
 
 [markup]
