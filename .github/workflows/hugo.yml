@@ -34,6 +34,7 @@ jobs:
       - name: Generate Kindle old-site list partial (pre-build)
         run: |
           python3 .scripts/extend-search-index.py
+          echo "pre-build: kindle partial generated"
 
       - name: Build
         working-directory: hugo-site
