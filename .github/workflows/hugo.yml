@@ -31,6 +31,10 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
+      - name: Generate Kindle old-site list partial (pre-build)
+        run: |
+          python3 .scripts/extend-search-index.py
+
       - name: Build
         working-directory: hugo-site
         env:
@@ -44,7 +48,7 @@ jobs:
           echo "=== Build complete ==="
           echo "Total HTML files: $(find public -name '*.html' | wc -l)"
 
-      - name: Extend search index with old-site entries
+      - name: Extend search index with old-site entries (post-build)
         run: |
           python3 .scripts/extend-search-index.py
 

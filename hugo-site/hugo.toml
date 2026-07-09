@@ -126,6 +126,11 @@ disablePathToLower = true
   url = "/old-site/"
   weight = 40
 
+[[menu.main]]
+  name = "📖 Kindle"
+  url = "/kindle/"
+  weight = 45
+
 # Footer has minimal links (archives, search, about)
 
 [markup]
