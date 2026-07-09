@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
-"""Extend Hugo's index.json with old-site page entries for unified search."""
-import os, glob, json, re
+"""Extend Hugo's index.json with old-site page entries for unified search.
+Usage: python3 extend-search-index.py [hugo-site/public/ path]
+Defaults to ./hugo-site/public/ relative to CWD."""
+import os, glob, json, re, sys
 
-PUBLIC = os.path.expanduser("~/angelife.github.com/hugo-site/public")
+PUBLIC = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.getcwd(), "hugo-site", "public")
 OLD_SITE = os.path.join(PUBLIC, "old-site")
 INDEX_PATH = os.path.join(PUBLIC, "index.json")
 
-# Read existing index
+print(f"Reading index from: {INDEX_PATH}")
+print(f"Scanning old-site:  {OLD_SITE}")
+
 with open(INDEX_PATH, "r", encoding="utf-8") as f:
     index = json.load(f)
 
@@ -17,18 +21,15 @@ for html_path in sorted(glob.glob(os.path.join(OLD_SITE, "**", "*.html"), recurs
     with open(html_path, "r", encoding="utf-8") as f:
         content = f.read()
 
-    # Extract title
     m = re.search(r'<title>(.*?)</title>', content, re.DOTALL)
     title = m.group(1).strip() if m else os.path.basename(html_path)
 
-    # Build permalink (relative to old-site/)
     rel_path = os.path.relpath(html_path, PUBLIC)
     permalink = f"https://angelife.github.io/{rel_path}"
 
     if permalink in existing_urls:
         continue
 
-    # Extract first meaningful text as summary
     summary = ""
     body_m = re.search(r'<body[^>]*>(.*?)</body>', content, re.DOTALL)
     if body_m:
