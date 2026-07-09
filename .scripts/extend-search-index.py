@@ -46,8 +46,8 @@ with open(KINDLE_PARTIAL, "w", encoding="utf-8") as f:
 print("Kindle partial: {} entries -> {}".format(len(old_pages), KINDLE_PARTIAL))
 
 # ── 2. Extend index.json (from build output) ──
-if not os.path.exists(PUBLIC_OLD):
-    print("Skipping index extend: {} not found (pre-build mode)".format(PUBLIC_OLD))
+if not os.path.exists(INDEX_PATH):
+    print("Skipping index extend: {} not found (pre-build mode)".format(INDEX_PATH))
     sys.exit(0)
 
 with open(INDEX_PATH, "r", encoding="utf-8") as f:
