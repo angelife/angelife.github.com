@@ -9,6 +9,8 @@ categories:
 series:
   - confucian-framework
 description: "一次网站技术债清理的反思：从追新评估到流程驱动的转变，以及 Google Web.dev Baseline 框架如何帮我们避免不必要的重构。"
+cover:
+  image: /images/posts/web-maintenance-baseline-2026/cover.png
 ---
 
 ## 缘起
