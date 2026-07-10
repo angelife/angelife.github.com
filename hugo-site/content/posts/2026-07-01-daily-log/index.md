@@ -12,8 +12,11 @@ tags:
   - USB网卡
   - xray
   - 连接池
-  - gateway
-  - 排障
+cover:
+  image: /images/posts/daily-log/cover.png
+---
+
+## 概述
 ---
 
 ## 土 · 正见
