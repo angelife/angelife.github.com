@@ -58,7 +58,5 @@ entry 修复后，Desktop 日志明确出现：
 切分标准模式实验、toolPolicy 实验、日志取证。
 逻辑上最有信息增益的是：标准模式是否能复现 29 工具。
 
-## 结语
-
 最难的是区分“ observed limitation”和“ actual limitation”。
 这一章结束时，Hindsight 的真实状态已经是：**29 个工具，3P managed 模式可用，已恢复 clean baseline**。下一章写最终验证结果和可恢复过程。

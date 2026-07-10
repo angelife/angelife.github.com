@@ -89,7 +89,3 @@ Claude Desktop 的 managed MCP，不是 `mcpServers` object，而是 `managedMcp
 先找 Desktop 实际读哪份 config。
 再用最小字段改动验证，不要一上来重建整个配置。
 拿到日志证据再下结论，不要凭 UI 列表判断成败。
-
-## 结语
-
-根因不是 Hindsight 服务问题，不是 bridge 问题，而是 managed config schema 用错了。下一章谈：entry 连上之后，为什么一度看起来只有 1 个工具可用。

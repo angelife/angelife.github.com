@@ -56,8 +56,3 @@ slug: "claude-desktop-mcp-debug-03-final-verification-and-rollback"
 - UI 展示层与 runtime registry 的状态同步机制
 
 这些不再影响当前可用性，如果后续需要，可单独作为新题目追踪。
-
-## 结语
-
-最难的阶段不是写配置，而是区分“ observed limitation”和“ actual limitation”。
-当服务端、连接层、调用层都给出正向证据时，先相信系统已经工作，再设计实验验证，是更稳的做法。

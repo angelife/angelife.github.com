@@ -63,7 +63,3 @@ cover:
 
 
 [http://lf.lnu.edu.cn/education/read.jsp?id=28747](http://lf.lnu.edu.cn/education/read.jsp?id=28747)
-
-## 结语
-
-「"自信与自卑心理学"」涉及多个层面。关键是行动与反思的结合，在具体情境中验证判断。
