@@ -19,7 +19,9 @@ tags:
   - 智能体
   - 马斯克
   - 凡人修仙
-cover: []
+cover:
+  image: /images/posts/the-future-is-one-person-company/cover.png
+image: /images/posts/the-future-is-one-person-company/cover.png
 
 ---
 

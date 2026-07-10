@@ -18,7 +18,9 @@ tags:
   - 災難恢復
   - 運維
   - release
-cover: []
+cover:
+  image: /images/posts/2026-06-18-release-incident-v0-7-19/cover.png
+image: /images/posts/2026-06-18-release-incident-v0-7-19/cover.png
 
 ---
 

@@ -21,7 +21,9 @@ tags:
   - 判断力
   - AI时代
   - 不失正见
-cover: []
+cover:
+  image: /images/posts/zhen-to-sui-touching-the-pattern/cover.png
+image: /images/posts/zhen-to-sui-touching-the-pattern/cover.png
 
 
 

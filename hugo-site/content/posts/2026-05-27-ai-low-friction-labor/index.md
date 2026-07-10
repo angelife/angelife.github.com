@@ -27,7 +27,9 @@ tags:
   - "低摩擦"
   - "知识资产"
   - "系统主控"
-cover: []
+cover:
+  image: /images/posts/2026-05-27-ai-low-friction-labor/cover.png
+image: /images/posts/2026-05-27-ai-low-friction-labor/cover.png
 
 
 

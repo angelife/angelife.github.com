@@ -18,7 +18,9 @@ tags:
   - 反操弄
   - 信息判断
   - 家庭修复
-cover: []
+cover:
+  image: /images/posts/2014-04-16-ref2/cover.png
+image: /images/posts/2014-04-16-ref2/cover.png
 
 
 

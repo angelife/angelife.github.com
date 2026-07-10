@@ -21,7 +21,9 @@ tags:
   - "AI时代"
   - "个人系统"
   - "托管人生"
-cover: []
+cover:
+  image: /images/posts/ai-machine-executes-experience-commands/cover.png
+image: /images/posts/ai-machine-executes-experience-commands/cover.png
 
 
 

@@ -25,7 +25,9 @@ tags:
   - "自动化"
   - "自我蒸馏"
   - "不失正见"
-cover: []
+cover:
+  image: /images/posts/ai-self-distillation-electronic-donkey/cover.png
+image: /images/posts/ai-self-distillation-electronic-donkey/cover.png
 
 
 

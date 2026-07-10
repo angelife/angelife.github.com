@@ -22,7 +22,9 @@ tags:
   - "个人成长"
   - "高反馈环境"
   - "知识系统"
-cover: []
+cover:
+  image: /images/posts/chatgpt-daily-progress-feedback-system/cover.png
+image: /images/posts/chatgpt-daily-progress-feedback-system/cover.png
 
 
 

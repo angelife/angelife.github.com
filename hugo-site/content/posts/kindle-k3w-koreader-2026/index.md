@@ -18,7 +18,9 @@ tags:
   - KOReader
   - 越狱
   - 教程
-cover: []
+cover:
+  image: /images/posts/kindle-k3w-koreader-2026/cover.png
+image: /images/posts/kindle-k3w-koreader-2026/cover.png
 
 
 ---

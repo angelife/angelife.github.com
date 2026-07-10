@@ -23,7 +23,9 @@ tags:
   - "系统韧性"
   - "系统思维"
   - "不失正见"
-cover: []
+cover:
+  image: /images/posts/highway-and-muddy-road-ai-localization/cover.png
+image: /images/posts/highway-and-muddy-road-ai-localization/cover.png
 
 
 

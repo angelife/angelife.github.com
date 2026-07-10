@@ -18,7 +18,9 @@ tags:
   - 反操弄
   - 家庭支持
   - 信息判断
-cover: []
+cover:
+  image: /images/posts/2014-04-13-reference/cover.png
+image: /images/posts/2014-04-13-reference/cover.png
 
 
 

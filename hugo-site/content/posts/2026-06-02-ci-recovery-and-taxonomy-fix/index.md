@@ -17,7 +17,9 @@ tags:
   - GitHub Actions
   - taxonomy
   - 故障複盤
-cover: []
+cover:
+  image: /images/posts/2026-06-02-ci-recovery-and-taxonomy-fix/cover.png
+image: /images/posts/2026-06-02-ci-recovery-and-taxonomy-fix/cover.png
 
 ---
 

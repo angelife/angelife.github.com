@@ -13,7 +13,8 @@ tags:
   - Hermes
   - OpenAI
   - 教程
-cover: []
+cover:
+  image: /images/posts/2026-06-29-cloudflare-workers-ai-hermes-guide/cover.png
 ---
 
 最近发现 Cloudflare Workers AI 提供了一个不错的免费推理额度：**每天 10,000 Neurons**（约等于数百万 token），支持通义千问、Llama、Gemini 等多种模型，而且走的是标准 OpenAI API 兼容接口，可以直接接入 Hermes Agent 多模型框架。

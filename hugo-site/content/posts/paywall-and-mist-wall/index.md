@@ -19,7 +19,9 @@ tags:
   - "规则意识"
   - "现实规则"
   - "不失正见"
-cover: []
+cover:
+  image: /images/posts/paywall-and-mist-wall/cover.png
+image: /images/posts/paywall-and-mist-wall/cover.png
 
 
 

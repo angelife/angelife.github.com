@@ -21,7 +21,9 @@ tags:
   - "信息筛选"
   - "方法论"
   - "个人知识系统"
-cover: []
+cover:
+  image: /images/posts/ai-era-experience-is-the-bottleneck/cover.png
+image: /images/posts/ai-era-experience-is-the-bottleneck/cover.png
 
 
 
