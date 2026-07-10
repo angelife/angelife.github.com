@@ -5,6 +5,8 @@ draft: false
 categories: ["土·正见"]
 tags: ["排障", "Telegram", "gateway", "连接池", "方法论"]
 slug: "2026-07-01-backoff-fix-and-methodology-hardening"
+cover:
+  image: /images/posts/backoff-fix-and-methodology-hardening/cover.png
 ---
 
 ## 背景
