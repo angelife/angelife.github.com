@@ -68,6 +68,8 @@ def start_hugo_server(
     ]
     if base_url:
         cmd.extend(["--baseURL", base_url])
+    else:
+        cmd.extend(["--baseURL", f"http://127.0.0.1:{port}"])
 
     print(f"   Starting Hugo server on 127.0.0.1:{port}...")
 

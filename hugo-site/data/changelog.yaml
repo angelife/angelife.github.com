@@ -1,3 +1,19 @@
+- version: "v0.7.20"
+  date: "2026-07-11"
+  title: "site_audit v1.0 RC — 160 测试全通过，评分 80/100，0 严重/0 主要问题"
+  commit: "（待发布时填写）"
+  tag: "v0.7.20"
+  summary:
+    - "site_audit 排版体检系统达到 v1.0 RC 里程碑。"
+    - "160 项 pytest 测试全部通过（100%，1.67s，22 个测试文件），覆盖 CSS 解析、选择器匹配、对比度、变量解析、补丁生成、证据模型等全部核心模块。"
+    - "全站审计评分 80/100，0 严重问题、0 主要问题，6,763 个次要问题（5,522 个中西文间距 + 1,241 个标题空行，均为格式偏好）。"
+    - "证据模型 v1.0 定型：50 个证据 JSON 文件（2,689 元素），含 URL + elements 顶层结构，向后兼容旧 Issue 格式。"
+    - "已知问题：6,763 个次要问题均为格式偏好（CJK 间距 81.6%、标题空行 18.4%），不影响功能，可批量自动修复。"
+  changed:
+    - "site_audit/（v1.0 RC 定型）"
+    - "hugo-site/data/changelog.yaml"
+  rollback_note: "可通过 Git tag v0.7.20 回退：git checkout v0.7.20 -- . && git commit -m 'Rollback site to v0.7.20' && git push origin master"
+
 - version: "v0.7.19"
   date: "2026-06-18"
   title: "极简首页 + 暖纸色板 + 文章页 280px cover + 五行栏目对账"

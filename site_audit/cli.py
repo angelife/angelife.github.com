@@ -89,7 +89,7 @@ Examples:
     if not args.skip_render:
         print("\n\U0001f5a5\ufe0f  Render Layer Audit...")
         try:
-            from .renderer.server import start_hugo_server, stop_hugo_server, build_hugo
+            from .renderer.server import start_hugo_server, stop_hugo_server
             from .renderer.browser import launch_browser, close_browser, get_page_urls
             from .renderer.contrast import check_contrast, check_font_size
             from .renderer.overflow import check_overflow
@@ -101,12 +101,6 @@ Examples:
             if args.url:
                 base_url = args.url.rstrip("/")
             else:
-                print("   Building Hugo site...")
-                try:
-                    build_hugo(args.path)
-                except Exception as e:
-                    print(f"   \u26a0\ufe0f Hugo build: {e}")
-
                 print("   Starting Hugo server...")
                 server, port = start_hugo_server(args.path, port=0)
                 base_url = f"http://127.0.0.1:{port}"

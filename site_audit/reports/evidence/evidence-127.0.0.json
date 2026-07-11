@@ -1,0 +1,740 @@
+{
+  "url": "http://127.0.0.1:1314",
+  "elements": [
+    {
+      "id": "",
+      "kind": "visual",
+      "analyzer": "contrast",
+      "page": "",
+      "viewport": "",
+      "theme": "light",
+      "timestamp": "",
+      "element": {
+        "tag": "a",
+        "id": "",
+        "classes": [
+          "logo"
+        ],
+        "css_path": "div.container > div.home > div.info > a.logo",
+        "ancestor_chain": [
+          {
+            "tag": "div",
+            "id": "",
+            "classes": [
+              "info"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "classes": [
+              "home"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "classes": [
+              "container"
+            ]
+          }
+        ]
+      },
+      "computed": {
+        "property": "",
+        "value": "",
+        "color": "rgb(26, 26, 26)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "font_size": "56px",
+        "font_weight": "400",
+        "opacity": "1",
+        "line_height": "29.6px"
+      },
+      "source": {
+        "css_file": "",
+        "selector": "",
+        "property": "",
+        "value": "",
+        "variable_chain": [],
+        "resolved_value": "",
+        "specificity": "",
+        "line": 0
+      },
+      "finding": {
+        "rule": "",
+        "severity": "info",
+        "confidence": "low",
+        "message": "",
+        "suggestion": ""
+      },
+      "recommendation": {
+        "patch": "",
+        "file": "",
+        "line": 0,
+        "description": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "",
+      "kind": "visual",
+      "analyzer": "contrast",
+      "page": "",
+      "viewport": "",
+      "theme": "light",
+      "timestamp": "",
+      "element": {
+        "tag": "a",
+        "id": "",
+        "classes": [],
+        "css_path": "div.container > div.home > div.info > div.sns > a",
+        "ancestor_chain": [
+          {
+            "tag": "div",
+            "id": "",
+            "classes": [
+              "sns"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "classes": [
+              "info"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "classes": [
+              "home"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "classes": [
+              "container"
+            ]
+          }
+        ]
+      },
+      "computed": {
+        "property": "",
+        "value": "",
+        "color": "rgb(170, 170, 170)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "font_size": "14px",
+        "font_weight": "400",
+        "opacity": "1",
+        "line_height": "29.6px"
+      },
+      "source": {
+        "css_file": "",
+        "selector": "",
+        "property": "",
+        "value": "",
+        "variable_chain": [],
+        "resolved_value": "",
+        "specificity": "",
+        "line": 0
+      },
+      "finding": {
+        "rule": "",
+        "severity": "info",
+        "confidence": "low",
+        "message": "",
+        "suggestion": ""
+      },
+      "recommendation": {
+        "patch": "",
+        "file": "",
+        "line": 0,
+        "description": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "",
+      "kind": "visual",
+      "analyzer": "contrast",
+      "page": "",
+      "viewport": "",
+      "theme": "light",
+      "timestamp": "",
+      "element": {
+        "tag": "a",
+        "id": "",
+        "classes": [],
+        "css_path": "div.container > div.home > div.info > div.sns > a",
+        "ancestor_chain": [
+          {
+            "tag": "div",
+            "id": "",
+            "classes": [
+              "sns"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "classes": [
+              "info"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "classes": [
+              "home"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "classes": [
+              "container"
+            ]
+          }
+        ]
+      },
+      "computed": {
+        "property": "",
+        "value": "",
+        "color": "rgb(170, 170, 170)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "font_size": "14px",
+        "font_weight": "400",
+        "opacity": "1",
+        "line_height": "29.6px"
+      },
+      "source": {
+        "css_file": "",
+        "selector": "",
+        "property": "",
+        "value": "",
+        "variable_chain": [],
+        "resolved_value": "",
+        "specificity": "",
+        "line": 0
+      },
+      "finding": {
+        "rule": "",
+        "severity": "info",
+        "confidence": "low",
+        "message": "",
+        "suggestion": ""
+      },
+      "recommendation": {
+        "patch": "",
+        "file": "",
+        "line": 0,
+        "description": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "",
+      "kind": "visual",
+      "analyzer": "contrast",
+      "page": "",
+      "viewport": "",
+      "theme": "light",
+      "timestamp": "",
+      "element": {
+        "tag": "a",
+        "id": "",
+        "classes": [],
+        "css_path": "div.container > div.home > div.info > div.sns > a",
+        "ancestor_chain": [
+          {
+            "tag": "div",
+            "id": "",
+            "classes": [
+              "sns"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "classes": [
+              "info"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "classes": [
+              "home"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "classes": [
+              "container"
+            ]
+          }
+        ]
+      },
+      "computed": {
+        "property": "",
+        "value": "",
+        "color": "rgb(170, 170, 170)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "font_size": "14px",
+        "font_weight": "400",
+        "opacity": "1",
+        "line_height": "29.6px"
+      },
+      "source": {
+        "css_file": "",
+        "selector": "",
+        "property": "",
+        "value": "",
+        "variable_chain": [],
+        "resolved_value": "",
+        "specificity": "",
+        "line": 0
+      },
+      "finding": {
+        "rule": "",
+        "severity": "info",
+        "confidence": "low",
+        "message": "",
+        "suggestion": ""
+      },
+      "recommendation": {
+        "patch": "",
+        "file": "",
+        "line": 0,
+        "description": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "",
+      "kind": "visual",
+      "analyzer": "contrast",
+      "page": "",
+      "viewport": "",
+      "theme": "light",
+      "timestamp": "",
+      "element": {
+        "tag": "a",
+        "id": "",
+        "classes": [],
+        "css_path": "div.container > div.home > div.info > div.sns > a",
+        "ancestor_chain": [
+          {
+            "tag": "div",
+            "id": "",
+            "classes": [
+              "sns"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "classes": [
+              "info"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "classes": [
+              "home"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "classes": [
+              "container"
+            ]
+          }
+        ]
+      },
+      "computed": {
+        "property": "",
+        "value": "",
+        "color": "rgb(170, 170, 170)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "font_size": "14px",
+        "font_weight": "400",
+        "opacity": "1",
+        "line_height": "29.6px"
+      },
+      "source": {
+        "css_file": "",
+        "selector": "",
+        "property": "",
+        "value": "",
+        "variable_chain": [],
+        "resolved_value": "",
+        "specificity": "",
+        "line": 0
+      },
+      "finding": {
+        "rule": "",
+        "severity": "info",
+        "confidence": "low",
+        "message": "",
+        "suggestion": ""
+      },
+      "recommendation": {
+        "patch": "",
+        "file": "",
+        "line": 0,
+        "description": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "",
+      "kind": "visual",
+      "analyzer": "contrast",
+      "page": "",
+      "viewport": "",
+      "theme": "light",
+      "timestamp": "",
+      "element": {
+        "tag": "a",
+        "id": "",
+        "classes": [],
+        "css_path": "div.container > div.home > div.info > div.sns > a",
+        "ancestor_chain": [
+          {
+            "tag": "div",
+            "id": "",
+            "classes": [
+              "sns"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "classes": [
+              "info"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "classes": [
+              "home"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "classes": [
+              "container"
+            ]
+          }
+        ]
+      },
+      "computed": {
+        "property": "",
+        "value": "",
+        "color": "rgb(170, 170, 170)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "font_size": "14px",
+        "font_weight": "400",
+        "opacity": "1",
+        "line_height": "29.6px"
+      },
+      "source": {
+        "css_file": "",
+        "selector": "",
+        "property": "",
+        "value": "",
+        "variable_chain": [],
+        "resolved_value": "",
+        "specificity": "",
+        "line": 0
+      },
+      "finding": {
+        "rule": "",
+        "severity": "info",
+        "confidence": "low",
+        "message": "",
+        "suggestion": ""
+      },
+      "recommendation": {
+        "patch": "",
+        "file": "",
+        "line": 0,
+        "description": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "",
+      "kind": "visual",
+      "analyzer": "contrast",
+      "page": "",
+      "viewport": "",
+      "theme": "light",
+      "timestamp": "",
+      "element": {
+        "tag": "a",
+        "id": "",
+        "classes": [],
+        "css_path": "div.container > div.home-feed > a",
+        "ancestor_chain": [
+          {
+            "tag": "div",
+            "id": "",
+            "classes": [
+              "home-feed"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "classes": [
+              "container"
+            ]
+          }
+        ]
+      },
+      "computed": {
+        "property": "",
+        "value": "",
+        "color": "rgb(26, 26, 26)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "font_size": "16px",
+        "font_weight": "400",
+        "opacity": "1",
+        "line_height": "29.6px"
+      },
+      "source": {
+        "css_file": "",
+        "selector": "",
+        "property": "",
+        "value": "",
+        "variable_chain": [],
+        "resolved_value": "",
+        "specificity": "",
+        "line": 0
+      },
+      "finding": {
+        "rule": "",
+        "severity": "info",
+        "confidence": "low",
+        "message": "",
+        "suggestion": ""
+      },
+      "recommendation": {
+        "patch": "",
+        "file": "",
+        "line": 0,
+        "description": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "",
+      "kind": "visual",
+      "analyzer": "contrast",
+      "page": "",
+      "viewport": "",
+      "theme": "light",
+      "timestamp": "",
+      "element": {
+        "tag": "span",
+        "id": "",
+        "classes": [
+          "s3g-copy"
+        ],
+        "css_path": "div.container > footer.s3g-footer > span.s3g-copy",
+        "ancestor_chain": [
+          {
+            "tag": "footer",
+            "id": "",
+            "classes": [
+              "s3g-footer"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "classes": [
+              "container"
+            ]
+          }
+        ]
+      },
+      "computed": {
+        "property": "",
+        "value": "",
+        "color": "rgb(191, 191, 191)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "font_size": "12px",
+        "font_weight": "400",
+        "opacity": "1",
+        "line_height": "29.6px"
+      },
+      "source": {
+        "css_file": "",
+        "selector": "",
+        "property": "",
+        "value": "",
+        "variable_chain": [],
+        "resolved_value": "",
+        "specificity": "",
+        "line": 0
+      },
+      "finding": {
+        "rule": "",
+        "severity": "info",
+        "confidence": "low",
+        "message": "",
+        "suggestion": ""
+      },
+      "recommendation": {
+        "patch": "",
+        "file": "",
+        "line": 0,
+        "description": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "",
+      "kind": "visual",
+      "analyzer": "contrast",
+      "page": "",
+      "viewport": "",
+      "theme": "light",
+      "timestamp": "",
+      "element": {
+        "tag": "span",
+        "id": "",
+        "classes": [
+          "s3g-slogan"
+        ],
+        "css_path": "div.container > footer.s3g-footer > span.s3g-slogan",
+        "ancestor_chain": [
+          {
+            "tag": "footer",
+            "id": "",
+            "classes": [
+              "s3g-footer"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "classes": [
+              "container"
+            ]
+          }
+        ]
+      },
+      "computed": {
+        "property": "",
+        "value": "",
+        "color": "rgb(85, 85, 85)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "font_size": "18px",
+        "font_weight": "400",
+        "opacity": "1",
+        "line_height": "29.6px"
+      },
+      "source": {
+        "css_file": "",
+        "selector": "",
+        "property": "",
+        "value": "",
+        "variable_chain": [],
+        "resolved_value": "",
+        "specificity": "",
+        "line": 0
+      },
+      "finding": {
+        "rule": "",
+        "severity": "info",
+        "confidence": "low",
+        "message": "",
+        "suggestion": ""
+      },
+      "recommendation": {
+        "patch": "",
+        "file": "",
+        "line": 0,
+        "description": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "",
+      "kind": "visual",
+      "analyzer": "contrast",
+      "page": "",
+      "viewport": "",
+      "theme": "light",
+      "timestamp": "",
+      "element": {
+        "tag": "a",
+        "id": "",
+        "classes": [
+          "s3g-rss"
+        ],
+        "css_path": "div.container > footer.s3g-footer > a.s3g-rss",
+        "ancestor_chain": [
+          {
+            "tag": "footer",
+            "id": "",
+            "classes": [
+              "s3g-footer"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "classes": [
+              "container"
+            ]
+          }
+        ]
+      },
+      "computed": {
+        "property": "",
+        "value": "",
+        "color": "rgb(26, 26, 26)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "font_size": "13px",
+        "font_weight": "400",
+        "opacity": "1",
+        "line_height": "29.6px"
+      },
+      "source": {
+        "css_file": "",
+        "selector": "",
+        "property": "",
+        "value": "",
+        "variable_chain": [],
+        "resolved_value": "",
+        "specificity": "",
+        "line": 0
+      },
+      "finding": {
+        "rule": "",
+        "severity": "info",
+        "confidence": "low",
+        "message": "",
+        "suggestion": ""
+      },
+      "recommendation": {
+        "patch": "",
+        "file": "",
+        "line": 0,
+        "description": ""
+      },
+      "metadata": {}
+    }
+  ]
+}
