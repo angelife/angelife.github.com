@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Angelife 知识系统架构 v2 · +Emacs</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: #020617;
+  color: #e2e8f0;
+  font-family: 'JetBrains Mono', monospace;
+  display: flex; flex-direction: column; align-items: center;
+  padding: 40px 20px;
+}
+.container {
+  max-width: 1200px;
+  width: 100%;
+}
+.header {
+  text-align: center; margin-bottom: 40px;
+}
+.header h1 {
+  font-size: 28px; font-weight: 700;
+  background: linear-gradient(135deg, #22d3ee, #a78bfa);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.header .subtitle {
+  font-size: 13px; color: #64748b; margin-top: 6px;
+}
+.header .pulse {
+  display: inline-block; width: 10px; height: 10px;
+  background: #34d399; border-radius: 50%;
+  margin-right: 10px;
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.4); }
+  50% { opacity: 0.6; box-shadow: 0 0 0 8px rgba(52, 211, 153, 0); }
+}
+.card {
+  background: #0f172a; border: 1px solid #1e293b; border-radius: 12px;
+  padding: 30px; margin-bottom: 24px;
+}
+.card-header {
+  display: flex; align-items: center; gap: 10px; margin-bottom: 16px;
+}
+.card-dot {
+  width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0;
+}
+.card-dot.cyan { background: #22d3ee; }
+.card-dot.emerald { background: #34d399; }
+.card-dot.violet { background: #a78bfa; }
+.card-dot.amber { background: #fbbf24; }
+.card-dot.rose { background: #fb7185; }
+.card-dot.orange { background: #fb923c; }
+.card h3 { font-size: 14px; font-weight: 600; }
+.card ul { list-style: none; font-size: 12px; line-height: 1.8; color: #94a3b8; }
+.card ul li::before { content: "› "; color: #475569; }
+
+svg text { font-family: 'JetBrains Mono', monospace; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="pulse"></span>Angelife 知识系统架构 v2</h1>
+    <div class="subtitle">Hermes Runtime v2 · 五行舰队 · NotebookLM · Obsidian · Hugo · <span style="color:#fb7185;">Doom Emacs</span></div>
+  </div>
+
+  <div class="card">
+    <div style="text-align:center;">
+      <svg viewBox="0 0 1100 940" width="1100" height="940" style="max-width:100%;height:auto;">
+        <defs>
+          <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+          </pattern>
+
+          <!-- Arrow markers -->
+          <marker id="arrow-cyan" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10" fill="#22d3ee"/>
+          </marker>
+          <marker id="arrow-emerald" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10" fill="#34d399"/>
+          </marker>
+          <marker id="arrow-violet" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10" fill="#a78bfa"/>
+          </marker>
+          <marker id="arrow-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10" fill="#fbbf24"/>
+          </marker>
+          <marker id="arrow-slate" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10" fill="#94a3b8"/>
+          </marker>
+          <marker id="arrow-orange" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10" fill="#fb923c"/>
+          </marker>
+          <marker id="arrow-rose" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10" fill="#fb7185"/>
+          </marker>
+        </defs>
+
+        <!-- Background -->
+        <rect width="1100" height="940" fill="#020617"/>
+        <rect width="1100" height="940" fill="url(#grid)"/>
+
+        <!-- ═══ LAYER BOUNDARIES ═══ -->
+
+        <!-- Input Layer -->
+        <rect x="20" y="55" width="240" height="690" rx="10" fill="rgba(8,51,68,0.08)" stroke="#22d3ee" stroke-width="1" stroke-dasharray="6,4" opacity="0.5"/>
+        <text x="140" y="38" text-anchor="middle" fill="#22d3ee" font-size="11" font-weight="600" opacity="0.7">输入层 · INPUT</text>
+
+        <!-- Processing Layer -->
+        <rect x="290" y="55" width="360" height="690" rx="10" fill="rgba(6,78,59,0.08)" stroke="#34d399" stroke-width="1" stroke-dasharray="6,4" opacity="0.5"/>
+        <text x="470" y="38" text-anchor="middle" fill="#34d399" font-size="11" font-weight="600" opacity="0.7">处理层 · PROCESSING</text>
+
+        <!-- Knowledge Layer -->
+        <rect x="680" y="55" width="220" height="690" rx="10" fill="rgba(76,29,149,0.08)" stroke="#a78bfa" stroke-width="1" stroke-dasharray="6,4" opacity="0.5"/>
+        <text x="790" y="38" text-anchor="middle" fill="#a78bfa" font-size="11" font-weight="600" opacity="0.7">知识层 · KNOWLEDGE</text>
+
+        <!-- Output Layer -->
+        <rect x="930" y="55" width="150" height="690" rx="10" fill="rgba(120,53,15,0.08)" stroke="#fbbf24" stroke-width="1" stroke-dasharray="6,4" opacity="0.5"/>
+        <text x="1005" y="38" text-anchor="middle" fill="#fbbf24" font-size="11" font-weight="600" opacity="0.7">输出层 · OUTPUT</text>
+
+        <!-- Editing Surface Layer (NEW in v2) -->
+        <rect x="290" y="790" width="790" height="120" rx="10" fill="rgba(244,63,94,0.06)" stroke="#fb7185" stroke-width="1" stroke-dasharray="6,4" opacity="0.5"/>
+        <text x="685" y="780" text-anchor="middle" fill="#fb7185" font-size="11" font-weight="600" opacity="0.7">编辑工作面 · EDITING SURFACE</text>
+
+        <!-- ═══ INPUT COMPONENTS ═══ -->
+        <!-- WeChat -->
+        <rect x="35" y="75" width="210" height="50" rx="6" fill="#0f172a"/>
+        <rect x="35" y="75" width="210" height="50" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+        <text x="140" y="100" text-anchor="middle" fill="#22d3ee" font-size="12" font-weight="600">微信公众号 · 群聊</text>
+        <text x="140" y="115" text-anchor="middle" fill="#64748b" font-size="8">pull_wechat.sh → ADB USB 解密</text>
+
+        <!-- Telegram -->
+        <rect x="35" y="140" width="210" height="50" rx="6" fill="#0f172a"/>
+        <rect x="35" y="140" width="210" height="50" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+        <text x="140" y="165" text-anchor="middle" fill="#22d3ee" font-size="12" font-weight="600">Telegram · 群聊私信</text>
+        <text x="140" y="180" text-anchor="middle" fill="#64748b" font-size="8">Hermes Gateway 实时接入</text>
+
+        <!-- Voice Pipeline -->
+        <rect x="35" y="205" width="210" height="50" rx="6" fill="#0f172a"/>
+        <rect x="35" y="205" width="210" height="50" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+        <text x="140" y="230" text-anchor="middle" fill="#22d3ee" font-size="12" font-weight="600">语音笔记管线</text>
+        <text x="140" y="245" text-anchor="middle" fill="#64748b" font-size="8">faster-whisper → silero-vad</text>
+
+        <!-- Web / Articles -->
+        <rect x="35" y="270" width="210" height="50" rx="6" fill="#0f172a"/>
+        <rect x="35" y="270" width="210" height="50" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+        <text x="140" y="295" text-anchor="middle" fill="#22d3ee" font-size="12" font-weight="600">网页 · 公众号文章</text>
+        <text x="140" y="310" text-anchor="middle" fill="#64748b" font-size="8">OpenBridge · omnireach 搜索</text>
+
+        <!-- Kindle Annotations -->
+        <rect x="35" y="335" width="210" height="50" rx="6" fill="#0f172a"/>
+        <rect x="35" y="335" width="210" height="50" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+        <text x="140" y="360" text-anchor="middle" fill="#22d3ee" font-size="12" font-weight="600">Kindle 标注 · 阅读</text>
+        <text x="140" y="375" text-anchor="middle" fill="#64748b" font-size="8">KOReader → Mac Web Bridge</text>
+
+        <!-- Manual Input -->
+        <rect x="35" y="400" width="210" height="50" rx="6" fill="#0f172a"/>
+        <rect x="35" y="400" width="210" height="50" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+        <text x="140" y="425" text-anchor="middle" fill="#22d3ee" font-size="12" font-weight="600">手动输入 · 提问</text>
+        <text x="140" y="440" text-anchor="middle" fill="#64748b" font-size="8">Telegram / WeChat 直接对话</text>
+
+        <!-- ═══ ARROWS: INPUT → PROCESSING ═══ -->
+        <!-- WeChat → Hermes -->
+        <line x1="245" y1="100" x2="290" y2="100" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
+        <!-- Telegram → Hermes -->
+        <line x1="245" y1="165" x2="290" y2="155" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
+        <!-- Voice → Hermes -->
+        <line x1="245" y1="230" x2="290" y2="210" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
+        <!-- Web → Hermes -->
+        <line x1="245" y1="295" x2="290" y2="265" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
+        <!-- Kindle → Hermes -->
+        <line x1="245" y1="360" x2="290" y2="320" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
+
+        <!-- ═══ PROCESSING COMPONENTS ═══ -->
+
+        <!-- Hermes Runtime v2 (top, wide) -->
+        <rect x="305" y="75" width="330" height="70" rx="8" fill="#0f172a"/>
+        <rect x="305" y="75" width="330" height="70" rx="8" fill="rgba(6,78,59,0.5)" stroke="#34d399" stroke-width="1.5"/>
+        <text x="470" y="100" text-anchor="middle" fill="#34d399" font-size="14" font-weight="700">Hermes Runtime v2</text>
+        <text x="470" y="118" text-anchor="middle" fill="#64748b" font-size="8">Context Manager · Capability Registry · Event Bus</text>
+        <text x="470" y="132" text-anchor="middle" fill="#64748b" font-size="8">Learning Pipeline · NLI Layer · Kanban 调度</text>
+
+        <!-- 五行舰队 -->
+        <rect x="305" y="165" width="330" height="60" rx="6" fill="#0f172a"/>
+        <rect x="305" y="165" width="330" height="60" rx="6" fill="rgba(251,146,60,0.2)" stroke="#fb923c" stroke-width="1.5"/>
+        <text x="470" y="188" text-anchor="middle" fill="#fb923c" font-size="11" font-weight="600">五行舰队 · 智能体联邦</text>
+        <text x="470" y="205" text-anchor="middle" fill="#94a3b8" font-size="8">土(调度) · 金(内容消费/Kindle) · 水(协调/索引) · 火(计算/后端)</text>
+        <text x="470" y="218" text-anchor="middle" fill="#64748b" font-size="7">各自独立 Kanban · Event Bus 通信</text>
+
+        <!-- MCP Servers -->
+        <rect x="305" y="245" width="155" height="68" rx="6" fill="#0f172a"/>
+        <rect x="305" y="245" width="155" height="68" rx="6" fill="rgba(76,29,149,0.3)" stroke="#a78bfa" stroke-width="1.5"/>
+        <text x="382" y="268" text-anchor="middle" fill="#a78bfa" font-size="10" font-weight="600">MCP Servers</text>
+        <text x="382" y="284" text-anchor="middle" fill="#94a3b8" font-size="8">notebooklm-mcp</text>
+        <text x="382" y="296" text-anchor="middle" fill="#94a3b8" font-size="8">gemini-web-mcp</text>
+        <text x="382" y="308" text-anchor="middle" fill="#94a3b8" font-size="8">gflow-mcp (Imagen+Veo)</text>
+
+        <!-- OpenBridge -->
+        <rect x="480" y="245" width="155" height="55" rx="6" fill="#0f172a"/>
+        <rect x="480" y="245" width="155" height="55" rx="6" fill="rgba(251,146,60,0.25)" stroke="#fb923c" stroke-width="1.5"/>
+        <text x="557" y="268" text-anchor="middle" fill="#fb923c" font-size="10" font-weight="600">OpenBridge</text>
+        <text x="557" y="284" text-anchor="middle" fill="#94a3b8" font-size="8">Chrome CDP 桥接</text>
+        <text x="557" y="296" text-anchor="middle" fill="#94a3b8" font-size="8">端口 10088</text>
+
+        <!-- LLM Providers -->
+        <rect x="305" y="320" width="330" height="55" rx="6" fill="#0f172a"/>
+        <rect x="305" y="320" width="330" height="55" rx="6" fill="rgba(120,53,15,0.25)" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="470" y="343" text-anchor="middle" fill="#fbbf24" font-size="10" font-weight="600">LLM 推理层</text>
+        <text x="470" y="358" text-anchor="middle" fill="#94a3b8" font-size="8">OmniRoute (127.0.0.1:20128) · NVIDIA 免费池</text>
+        <text x="470" y="370" text-anchor="middle" fill="#94a3b8" font-size="8">智谱 glm-4v · Gemini Web (1M ctx)</text>
+
+        <!-- Memory / Hindsight -->
+        <rect x="305" y="395" width="330" height="55" rx="6" fill="#0f172a"/>
+        <rect x="305" y="395" width="330" height="55" rx="6" fill="rgba(76,29,149,0.3)" stroke="#a78bfa" stroke-width="1.5"/>
+        <text x="470" y="418" text-anchor="middle" fill="#a78bfa" font-size="10" font-weight="600">Hindsight 记忆层</text>
+        <text x="470" y="433" text-anchor="middle" fill="#94a3b8" font-size="8">个人经验 · 踩坑记录 · 决策日志</text>
+        <text x="470" y="445" text-anchor="middle" fill="#64748b" font-size="7">向量存储 · 本地 SQLite (127.0.0.1:8888)</text>
+
+        <!-- ═══ ARROWS: PROCESSING → KNOWLEDGE ═══ -->
+        <!-- Hermes → NotebookLM -->
+        <line x1="635" y1="100" x2="680" y2="100" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrow-violet)"/>
+        <!-- Hermes → Obsidian -->
+        <line x1="635" y1="155" x2="680" y2="170" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrow-violet)"/>
+
+        <!-- ═══ KNOWLEDGE COMPONENTS ═══ -->
+
+        <!-- NotebookLM -->
+        <rect x="695" y="75" width="190" height="70" rx="6" fill="#0f172a"/>
+        <rect x="695" y="75" width="190" height="70" rx="6" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+        <text x="790" y="98" text-anchor="middle" fill="#a78bfa" font-size="11" font-weight="600">NotebookLM</text>
+        <text x="790" y="115" text-anchor="middle" fill="#94a3b8" font-size="8">研究层 · 外部资料 RAG</text>
+        <text x="790" y="130" text-anchor="middle" fill="#64748b" font-size="7">4 本笔记本 · CLI+MCP 接入</text>
+
+        <!-- Obsidian -->
+        <rect x="695" y="160" width="190" height="70" rx="6" fill="#0f172a"/>
+        <rect x="695" y="160" width="190" height="70" rx="6" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+        <text x="790" y="183" text-anchor="middle" fill="#a78bfa" font-size="11" font-weight="600">Obsidian</text>
+        <text x="790" y="200" text-anchor="middle" fill="#94a3b8" font-size="8">知识层 · 个人笔记 · LLM Wiki</text>
+        <text x="790" y="215" text-anchor="middle" fill="#64748b" font-size="7">双向链接 · 知识图谱 · 每日记录</text>
+
+        <!-- ═══ ARROWS: KNOWLEDGE → OUTPUT ═══ -->
+        <!-- NotebookLM → Audio -->
+        <line x1="885" y1="100" x2="930" y2="140" stroke="#fbbf24" stroke-width="1.5" marker-end="url(#arrow-amber)"/>
+        <!-- Obsidian → Hugo -->
+        <line x1="885" y1="170" x2="930" y2="205" stroke="#fbbf24" stroke-width="1.5" marker-end="url(#arrow-amber)"/>
+
+        <!-- ═══ OUTPUT COMPONENTS ═══ -->
+
+        <!-- Hugo Site -->
+        <rect x="945" y="190" width="125" height="55" rx="6" fill="#0f172a"/>
+        <rect x="945" y="190" width="125" height="55" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="1007" y="213" text-anchor="middle" fill="#fbbf24" font-size="10" font-weight="600">Hugo 博客</text>
+        <text x="1007" y="230" text-anchor="middle" fill="#94a3b8" font-size="8">angelife.github.com</text>
+        <text x="1007" y="242" text-anchor="middle" fill="#64748b" font-size="7">PaperMod 主题</text>
+
+        <!-- Kindle Dashboard -->
+        <rect x="945" y="260" width="125" height="55" rx="6" fill="#0f172a"/>
+        <rect x="945" y="260" width="125" height="55" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="1007" y="283" text-anchor="middle" fill="#fbbf24" font-size="10" font-weight="600">Kindle 舰桥</text>
+        <text x="1007" y="300" text-anchor="middle" fill="#94a3b8" font-size="8">:28080 Dashboard</text>
+        <text x="1007" y="312" text-anchor="middle" fill="#64748b" font-size="7">待决策队列</text>
+
+        <!-- Audio / Podcast -->
+        <rect x="945" y="330" width="125" height="55" rx="6" fill="#0f172a"/>
+        <rect x="945" y="330" width="125" height="55" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="1007" y="353" text-anchor="middle" fill="#fbbf24" font-size="10" font-weight="600">播客 · 音频</text>
+        <text x="1007" y="370" text-anchor="middle" fill="#94a3b8" font-size="8">NotebookLM 生成</text>
+        <text x="1007" y="382" text-anchor="middle" fill="#64748b" font-size="7">双人对谈</text>
+
+        <!-- Responses -->
+        <rect x="945" y="400" width="125" height="55" rx="6" fill="#0f172a"/>
+        <rect x="945" y="400" width="125" height="55" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="1007" y="423" text-anchor="middle" fill="#fbbf24" font-size="10" font-weight="600">即时回复</text>
+        <text x="1007" y="440" text-anchor="middle" fill="#94a3b8" font-size="8">Telegram · WeChat</text>
+        <text x="1007" y="452" text-anchor="middle" fill="#64748b" font-size="7">Gateway 分发</text>
+
+        <!-- Image / Video -->
+        <rect x="945" y="470" width="125" height="55" rx="6" fill="#0f172a"/>
+        <rect x="945" y="470" width="125" height="55" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="1007" y="493" text-anchor="middle" fill="#fbbf24" font-size="10" font-weight="600">图片 · 视频</text>
+        <text x="1007" y="510" text-anchor="middle" fill="#94a3b8" font-size="8">Imagen 4 / Veo 3.1</text>
+        <text x="1007" y="522" text-anchor="middle" fill="#64748b" font-size="7">gflow-cli · Google Flow</text>
+
+        <!-- gflow MCP → Image/Video -->
+        <line x1="460" y1="278" x2="927" y2="278" stroke="#fbbf24" stroke-width="1" stroke-dasharray="4,3" marker-end="none" opacity="0.6"/>
+        <line x1="927" y1="278" x2="927" y2="497" stroke="#fbbf24" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow-amber)" opacity="0.6"/>
+
+        <!-- ═══ RETURN FLOWS (dashed) ═══ -->
+        <!-- Hindsight → Hermes -->
+        <path d="M 470 450 L 470 550 L 245 550 L 245 450" fill="none" stroke="#a78bfa" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow-violet)" opacity="0.5"/>
+        <text x="360" y="542" text-anchor="middle" fill="#a78bfa" font-size="7" opacity="0.6">记忆召回 → 上下文注入</text>
+
+        <!-- Obsidian → Hermes -->
+        <path d="M 695 195 L 290 195" fill="none" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow-slate)" opacity="0.4"/>
+        <text x="490" y="188" text-anchor="middle" fill="#94a3b8" font-size="7" opacity="0.5">fsnotify 变更事件</text>
+
+        <!-- ═══ EDITING SURFACE — v2 NEW ═══ -->
+
+        <!-- Knowledge → Emacs (笔记/研究资料引用) -->
+        <path d="M 885 230 L 920 230 L 920 650 L 680 650 L 680 840" fill="none" stroke="#fb7185" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow-rose)" opacity="0.7"/>
+        <text x="800" y="642" text-anchor="middle" fill="#fb7185" font-size="7" opacity="0.7">引用笔记/资料 → 写入上下文</text>
+
+        <!-- Emacs → Processing (eshell 控制) -->
+        <path d="M 310 840 L 270 840 L 270 600 L 400 600 L 400 450" fill="none" stroke="#34d399" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow-emerald)" opacity="0.7"/>
+        <text x="320" y="630" text-anchor="middle" fill="#34d399" font-size="7" opacity="0.7">eshell · 命令行操作</text>
+
+        <!-- Emacs → Hugo (文章编辑 → 发布) -->
+        <path d="M 660 840 L 900 840 L 900 600 L 1007 600 L 1007 245" fill="none" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow-amber)" opacity="0.7"/>
+        <text x="950" y="640" text-anchor="middle" fill="#fbbf24" font-size="7" opacity="0.7">编辑 → 发布</text>
+
+        <!-- Doom Emacs -->
+        <rect x="305" y="820" width="360" height="70" rx="6" fill="#0f172a"/>
+        <rect x="305" y="820" width="360" height="70" rx="6" fill="rgba(244,63,94,0.15)" stroke="#fb7185" stroke-width="1.5"/>
+        <text x="485" y="845" text-anchor="middle" fill="#fb7185" font-size="12" font-weight="700">Doom Emacs · 编辑工作面</text>
+        <text x="485" y="862" text-anchor="middle" fill="#94a3b8" font-size="8">eshell · M-x 调一切 · org-mode · vterm</text>
+        <text x="485" y="878" text-anchor="middle" fill="#64748b" font-size="7">写 Hugo · 改配置 · 编码 · Git · 日志</text>
+
+        <!-- ═══ LEGEND (updated for v2) ═══ -->
+        <rect x="35" y="482" width="200" height="130" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+        <text x="135" y="502" text-anchor="middle" fill="#e2e8f0" font-size="10" font-weight="600">图例 · LEGEND</text>
+        <rect x="50" y="514" width="12" height="12" rx="3" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+        <text x="70" y="524" fill="#94a3b8" font-size="9">输入层 (数据源)</text>
+        <rect x="50" y="534" width="12" height="12" rx="3" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+        <text x="70" y="544" fill="#94a3b8" font-size="9">处理层 (Hermes Fleet)</text>
+        <rect x="50" y="554" width="12" height="12" rx="3" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+        <text x="70" y="564" fill="#94a3b8" font-size="9">知识层 (记忆/笔记)</text>
+        <rect x="50" y="574" width="12" height="12" rx="3" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="70" y="584" fill="#94a3b8" font-size="9">输出层 (发布/推送)</text>
+        <rect x="50" y="594" width="12" height="12" rx="3" fill="rgba(244,63,94,0.15)" stroke="#fb7185" stroke-width="1.5"/>
+        <text x="70" y="604" fill="#94a3b8" font-size="9">编辑工作面 (Doom Emacs)</text>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Summary Cards (updated for v2) -->
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;">
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-dot cyan"></div>
+        <h3>数据流</h3>
+      </div>
+      <ul>
+        <li>微信/Telegram/Kindle → Hermes 实时接入</li>
+        <li>MCP 工具调 NotebookLM 查研究资料</li>
+        <li>提炼洞察 → 结构化存入 Obsidian</li>
+        <li>Obsidian/NotebookLM → Emacs 写作引用</li>
+        <li>Emacs → Hugo 直接编辑发布</li>
+        <li>eshell 在 Emacs 内执行 Hermes CLI</li>
+        <li>Hindsight 记忆自动召回注入上下文</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-dot violet"></div>
+        <h3>组件</h3>
+      </div>
+      <ul>
+        <li>Hermes Runtime v2 — 联邦调度</li>
+        <li>MCP (NotebookLM+Gemini+gflow) — 研究+媒体接口</li>
+        <li>OpenBridge — Web 自动化桥接</li>
+        <li>Hindsight — 个人经验向量记忆</li>
+        <li>NotebookLM — 外部资料 RAG</li>
+        <li>Obsidian — 知识图谱 + 笔记</li>
+        <li style="color:#fb7185;">Doom Emacs — 编辑工作面 (v2 新增)</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-dot amber"></div>
+        <h3>出力</h3>
+      </div>
+      <ul>
+        <li>angelife.github.com 博客（Emacs 编辑）</li>
+        <li>播客音频 (NotebookLM 生成)</li>
+        <li>配图/配视频 (Imagen 4 + Veo 3.1)</li>
+        <li>Kindle Dashboard 待决策队列</li>
+        <li>Telegram/微信即时回复</li>
+        <li>LLM Wiki (Obsidian 发布)</li>
+        <li>系统状态报告 · 项目跟踪</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin-top:20px;font-size:10px;color:#475569;">
+    Angelife Knowledge Architecture v2 · 2026-07-15 · +Emacs 编辑工作面 🪨
+  </div>
+  <div style="text-align:center;margin-top:4px;font-size:9px;color:#334155;">
+    <a href="knowledge-architecture.html" style="color:#64748b;">← v1 原版</a>
+  </div>
+</div>
+</body>
+</html>

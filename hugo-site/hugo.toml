@@ -107,6 +107,11 @@ disablePathToLower = true
   weight = 5
 
 [[menu.main]]
+  name = "🕸️ 架构"
+  url = "/knowledge-architecture/"
+  weight = 6
+
+[[menu.main]]
   name = "归档"
   url = "/archives/"
   weight = 10
