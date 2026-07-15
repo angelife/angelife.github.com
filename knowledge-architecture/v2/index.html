@@ -343,6 +343,10 @@ svg text { font-family: 'JetBrains Mono', monospace; }
         <text x="70" y="584" fill="#94a3b8" font-size="9">输出层 (发布/推送)</text>
         <rect x="50" y="594" width="12" height="12" rx="3" fill="rgba(244,63,94,0.15)" stroke="#fb7185" stroke-width="1.5"/>
         <text x="70" y="604" fill="#94a3b8" font-size="9">编辑工作面 (Doom Emacs)</text>
+        <rect x="50" y="614" width="12" height="12" rx="3" fill="rgba(52,211,153,0.2)" stroke="#34d399" stroke-width="1"/>
+        <text x="70" y="624" fill="#94a3b8" font-size="9">已完成</text>
+        <rect x="120" y="614" width="12" height="12" rx="3" fill="rgba(251,191,36,0.2)" stroke="#fbbf24" stroke-width="1"/>
+        <text x="140" y="624" fill="#94a3b8" font-size="9">在建</text>
       </svg>
     </div>
   </div>
@@ -396,6 +400,81 @@ svg text { font-family: 'JetBrains Mono', monospace; }
         <li>LLM Wiki (Obsidian 发布)</li>
         <li>系统状态报告 · 项目跟踪</li>
       </ul>
+    </div>
+  </div>
+
+  <!-- ═══ 完成度明细 v2 NEW ═══ -->
+  <div style="margin-top:24px;">
+    <div class="card-header">
+      <div class="card-dot emerald"></div>
+      <h3>完成度明细</h3>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;font-size:11px;">
+
+      <!-- 输入层 -->
+      <div class="card" style="padding:16px;">
+        <div style="color:#22d3ee;font-weight:600;margin-bottom:8px;">📥 输入层</div>
+        <table style="width:100%;border-collapse:collapse;font-size:10px;">
+          <tr style="color:#64748b;"><td style="padding:2px 4px;">公众号</td><td style="padding:2px 4px;color:#34d399;">● 稳定</td><td style="padding:2px 4px;color:#475569;">pull_wechat.sh → ADB USB</td></tr>
+          <tr style="color:#64748b;"><td style="padding:2px 4px;">Telegram</td><td style="padding:2px 4px;color:#34d399;">● 稳定</td><td style="padding:2px 4px;color:#475569;">Gateway 实时接入</td></tr>
+          <tr style="color:#64748b;"><td style="padding:2px 4px;">语音笔记</td><td style="padding:2px 4px;color:#fbbf24;">○ 在建</td><td style="padding:2px 4px;color:#475569;">whisper+vad 已配，使用率低</td></tr>
+          <tr style="color:#64748b;"><td style="padding:2px 4px;">网页/文章</td><td style="padding:2px 4px;color:#34d399;">● 稳定</td><td style="padding:2px 4px;color:#475569;">OpenBridge + omnireach</td></tr>
+          <tr style="color:#64748b;"><td style="padding:2px 4px;">Kindle</td><td style="padding:2px 4px;color:#34d399;">● 稳定</td><td style="padding:2px 4px;color:#475569;">KOReader Web Bridge</td></tr>
+          <tr style="color:#64748b;"><td style="padding:2px 4px;">手动输入</td><td style="padding:2px 4px;color:#34d399;">● 稳定</td><td style="padding:2px 4px;color:#475569;">TG/微信直接对话</td></tr>
+        </table>
+      </div>
+
+      <!-- 处理层 -->
+      <div class="card" style="padding:16px;">
+        <div style="color:#34d399;font-weight:600;margin-bottom:8px;">⚙️ 处理层</div>
+        <table style="width:100%;border-collapse:collapse;font-size:10px;">
+          <tr style="color:#64748b;"><td style="padding:2px 4px;">Hermes Runtime</td><td style="padding:2px 4px;color:#34d399;">● 稳定</td><td style="padding:2px 4px;color:#475569;">Context/Event/NLI/Kanban</td></tr>
+          <tr style="color:#64748b;"><td style="padding:2px 4px;">五行·土</td><td style="padding:2px 4px;color:#34d399;">● 稳定</td><td style="padding:2px 4px;color:#475569;">调度/路由</td></tr>
+          <tr style="color:#64748b;"><td style="padding:2px 4px;">五行·金</td><td style="padding:2px 4px;color:#fbbf24;">○ 在建</td><td style="padding:2px 4px;color:#475569;">内容消费/Kindle</td></tr>
+          <tr style="color:#64748b;"><td style="padding:2px 4px;">五行·水</td><td style="padding:2px 4px;color:#fbbf24;">○ 在建</td><td style="padding:2px 4px;color:#475569;">协调/索引</td></tr>
+          <tr style="color:#64748b;"><td style="padding:2px 4px;">五行·火</td><td style="padding:2px 4px;color:#fbbf24;">○ 在建</td><td style="padding:2px 4px;color:#475569;">计算/后端/安全</td></tr>
+          <tr style="color:#64748b;"><td style="padding:2px 4px;">MCP: notebooklm</td><td style="padding:2px 4px;color:#34d399;">● 稳定</td><td style="padding:2px 4px;color:#475569;">CLI+MCP 已通</td></tr>
+          <tr style="color:#64748b;"><td style="padding:2px 4px;">MCP: gemini-web</td><td style="padding:2px 4px;color:#fbbf24;">○ 在建</td><td style="padding:2px 4px;color:#475569;">调试中，历史会话污染</td></tr>
+          <tr style="color:#64748b;"><td style="padding:2px 4px;">MCP: gflow</td><td style="padding:2px 4px;color:#34d399;">● 稳定</td><td style="padding:2px 4px;color:#475569;">Imagen+Veo 已通</td></tr>
+          <tr style="color:#64748b;"><td style="padding:2px 4px;">OpenBridge</td><td style="padding:2px 4px;color:#34d399;">● 稳定</td><td style="padding:2px 4px;color:#475569;">端口 10088 运行中</td></tr>
+          <tr style="color:#64748b;"><td style="padding:2px 4px;">LLM 推理层</td><td style="padding:2px 4px;color:#34d399;">● 稳定</td><td style="padding:2px 4px;color:#475569;">多 provider 已配</td></tr>
+          <tr style="color:#64748b;"><td style="padding:2px 4px;">Hindsight 记忆</td><td style="padding:2px 4px;color:#34d399;">● 稳定</td><td style="padding:2px 4px;color:#475569;">本地 SQLite 运行中</td></tr>
+        </table>
+      </div>
+
+      <!-- 知识层 -->
+      <div class="card" style="padding:16px;">
+        <div style="color:#a78bfa;font-weight:600;margin-bottom:8px;">📚 知识层</div>
+        <table style="width:100%;border-collapse:collapse;font-size:10px;">
+          <tr style="color:#64748b;"><td style="padding:2px 4px;">NotebookLM</td><td style="padding:2px 4px;color:#34d399;">● 稳定</td><td style="padding:2px 4px;color:#475569;">CLI+MCP，4 本笔记本</td></tr>
+          <tr style="color:#64748b;"><td style="padding:2px 4px;">Obsidian·笔记</td><td style="padding:2px 4px;color:#34d399;">● 稳定</td><td style="padding:2px 4px;color:#475569;">双向链接·知识图谱</td></tr>
+          <tr style="color:#64748b;"><td style="padding:2px 4px;">Obsidian·LLM Wiki</td><td style="padding:2px 4px;color:#fbbf24;">○ 在建</td><td style="padding:2px 4px;color:#475569;">增量式知识编译中</td></tr>
+        </table>
+      </div>
+
+      <!-- 输出层 -->
+      <div class="card" style="padding:16px;">
+        <div style="color:#fbbf24;font-weight:600;margin-bottom:8px;">📤 输出层</div>
+        <table style="width:100%;border-collapse:collapse;font-size:10px;">
+          <tr style="color:#64748b;"><td style="padding:2px 4px;">Hugo 博客</td><td style="padding:2px 4px;color:#34d399;">● 稳定</td><td style="padding:2px 4px;color:#475569;">PaperMod · 双版发布</td></tr>
+          <tr style="color:#64748b;"><td style="padding:2px 4px;">Kindle 舰桥</td><td style="padding:2px 4px;color:#fbbf24;">○ 在建</td><td style="padding:2px 4px;color:#475569;">Dashboard 已部署，功能增强中</td></tr>
+          <tr style="color:#64748b;"><td style="padding:2px 4px;">播客/音频</td><td style="padding:2px 4px;color:#fbbf24;">○ 在建</td><td style="padding:2px 4px;color:#475569;">NotebookLM 可生成，非日常</td></tr>
+          <tr style="color:#64748b;"><td style="padding:2px 4px;">即时回复</td><td style="padding:2px 4px;color:#34d399;">● 稳定</td><td style="padding:2px 4px;color:#475569;">TG + WeChat</td></tr>
+          <tr style="color:#64748b;"><td style="padding:2px 4px;">图片/视频</td><td style="padding:2px 4px;color:#fbbf24;">○ 在建</td><td style="padding:2px 4px;color:#475569;">gflow 已通，自动化流程待完善</td></tr>
+        </table>
+      </div>
+
+      <!-- 编辑工作面 -->
+      <div class="card" style="padding:16px;grid-column:1/-1;">
+        <div style="color:#fb7185;font-weight:600;margin-bottom:8px;">✏️ 编辑工作面</div>
+        <table style="width:100%;border-collapse:collapse;font-size:10px;">
+          <tr style="color:#64748b;"><td style="padding:2px 4px;">Doom Emacs</td><td style="padding:2px 4px;color:#34d399;">● 稳定</td><td style="padding:2px 4px;color:#475569;">155 包/0 error，项目配置齐备</td></tr>
+          <tr style="color:#64748b;"><td style="padding:2px 4px;">eshell</td><td style="padding:2px 4px;color:#34d399;">● 稳定</td><td style="padding:2px 4px;color:#475569;">Emacs 内终端</td></tr>
+          <tr style="color:#64748b;"><td style="padding:2px 4px;">org-mode</td><td style="padding:2px 4px;color:#34d399;">● 稳定</td><td style="padding:2px 4px;color:#475569;">笔记/GTD</td></tr>
+          <tr style="color:#64748b;"><td style="padding:2px 4px;">vterm</td><td style="padding:2px 4px;color:#34d399;">● 稳定</td><td style="padding:2px 4px;color:#475569;">编译通过</td></tr>
+        </table>
+      </div>
+
     </div>
   </div>
 
