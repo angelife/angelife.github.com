@@ -18,7 +18,7 @@ description: ""
 
 ## 链接
 
-[关于](/about/)
+[关于](/knowledge-architecture/v2/)
 [更新记录](/changelog/)
 [Kindle版](/kindle/)
 [搜索](/search/)
