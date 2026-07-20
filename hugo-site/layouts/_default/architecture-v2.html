@@ -42,11 +42,10 @@
   <div class="page-content">
 
     <div class="arch-hero">
-      <h1>Angelife 知识系统架构</h1>
-      <div class="subtitle">Hermes Runtime v2 · 五行舰队 · NotebookLM · Obsidian · Hugo · Doom Emacs</div>
+      <h1>Angelife 系统架构 v3</h1>
+      <div class="subtitle">五行舰队 · 三台主力 · QwenPaw ↔ Hermes · 无人化自动闭环</div>
     </div>
 
-    <!-- 关于安知生 -->
     <div class="arch-card">
       <h3>关于安知生</h3>
       <p>安知生（angelife）是一个长期知识系统的公开入口。以 AI 为工具，以儒家为体，以易理为象，以技术为器，以作品为证。本站不是普通博客，而是一个把阅读笔记、技术实践、人生复盘逐步整理为系统性作品的站点。整个站点运行在下面这套 AI 驱动知识系统之上——从输入到处理、知识、编辑再到输出，全链路自动化。</p>
@@ -54,213 +53,210 @@
 
     <!-- SVG 架构图 -->
     <div class="svg-wrap">
-      <svg viewBox="0 0 1100 780" width="1100" height="780">
+      <svg viewBox="0 0 1100 800" width="1100" height="800">
         <defs>
           <pattern id="grid-light" width="40" height="40" patternUnits="userSpaceOnUse">
             <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#e2e8f0" stroke-width="0.5"/>
           </pattern>
-          <marker id="arrow-cyan-l" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
-            <path d="M 0 0 L 10 5 L 0 10" fill="#0891b2"/>
+
+          <!-- Arrow markers -->
+          <marker id="arrow-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10" fill="#3b82f6"/>
           </marker>
-          <marker id="arrow-emerald-l" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+          <marker id="arrow-emerald" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
             <path d="M 0 0 L 10 5 L 0 10" fill="#059669"/>
           </marker>
-          <marker id="arrow-violet-l" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+          <marker id="arrow-cyan" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10" fill="#0891b2"/>
+          </marker>
+          <marker id="arrow-violet" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
             <path d="M 0 0 L 10 5 L 0 10" fill="#7c3aed"/>
           </marker>
-          <marker id="arrow-amber-l" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+          <marker id="arrow-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
             <path d="M 0 0 L 10 5 L 0 10" fill="#d97706"/>
           </marker>
-          <marker id="arrow-slate-l" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
-            <path d="M 0 0 L 10 5 L 0 10" fill="#64748b"/>
-          </marker>
-          <marker id="arrow-rose-l" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
-            <path d="M 0 0 L 10 5 L 0 10" fill="#e11d48"/>
-          </marker>
+
+          <!-- Drop shadow filter -->
+          <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+            <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.08"/>
+          </filter>
         </defs>
 
-        <rect width="1100" height="780" fill="#fff"/>
-        <rect width="1100" height="780" fill="url(#grid-light)"/>
+        <rect width="1100" height="800" fill="#fff"/>
+        <rect width="1100" height="800" fill="url(#grid-light)"/>
 
-        <!-- Layer boundaries -->
-        <rect x="20" y="55" width="240" height="500" rx="10" fill="rgba(8,145,178,0.04)" stroke="#0891b2" stroke-width="1" stroke-dasharray="6,4" opacity="0.5"/>
-        <text x="140" y="38" text-anchor="middle" fill="#0891b2" font-size="11" font-weight="600" opacity="0.7">输入层 · INPUT</text>
+        <!-- ============ TIER 1: CLOUD ============ -->
+        <rect x="30" y="55" width="1040" height="165" rx="12" fill="rgba(59,130,246,0.04)" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.7"/>
+        <rect x="42" y="42" width="120" height="24" rx="12" fill="#3b82f6" opacity="0.9"/>
+        <text x="102" y="58" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">云端 · 24×7</text>
+        <text x="210" y="58" fill="#3b82f6" font-size="9" opacity="0.6">Cloud Tier — 无需关机</text>
 
-        <rect x="290" y="55" width="360" height="500" rx="10" fill="rgba(5,150,105,0.04)" stroke="#059669" stroke-width="1" stroke-dasharray="6,4" opacity="0.5"/>
-        <text x="470" y="38" text-anchor="middle" fill="#059669" font-size="11" font-weight="600" opacity="0.7">处理层 · PROCESSING</text>
+        <!-- Cloud: 木同学 -->
+        <rect x="100" y="85" width="210" height="110" rx="10" fill="#fff" stroke="#3b82f6" stroke-width="1.5" filter="url(#shadow)"/>
+        <rect x="100" y="85" width="210" height="24" rx="10" fill="#3b82f6"/>
+        <rect x="100" y="99" width="210" height="10" fill="#3b82f6"/>
+        <text x="205" y="101" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">木同学 · 云端监工</text>
+        <text x="205" y="125" text-anchor="middle" fill="#3b82f6" font-size="10" font-weight="600">QwenPaw Cloud Agent</text>
+        <text x="205" y="142" text-anchor="middle" fill="#64748b" font-size="8">24h 在线 · 任务监督</text>
+        <text x="205" y="156" text-anchor="middle" fill="#64748b" font-size="8">发现卡顿 → 推动重启</text>
+        <text x="205" y="170" text-anchor="middle" fill="#64748b" font-size="8">跨系统对话调度</text>
+        <text x="205" y="186" text-anchor="middle" fill="#94a3b8" font-size="7">云端沙箱 · 外网浏览器</text>
 
-        <rect x="680" y="55" width="220" height="500" rx="10" fill="rgba(124,58,237,0.04)" stroke="#7c3aed" stroke-width="1" stroke-dasharray="6,4" opacity="0.5"/>
-        <text x="790" y="38" text-anchor="middle" fill="#7c3aed" font-size="11" font-weight="600" opacity="0.7">知识层 · KNOWLEDGE</text>
+        <!-- Cloud: 水同学 -->
+        <rect x="420" y="85" width="210" height="110" rx="10" fill="#fff" stroke="#60a5fa" stroke-width="1.5" filter="url(#shadow)"/>
+        <rect x="420" y="85" width="210" height="24" rx="10" fill="#60a5fa"/>
+        <rect x="420" y="99" width="210" height="10" fill="#60a5fa"/>
+        <text x="525" y="101" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">水同学 · 桥梁</text>
+        <text x="525" y="125" text-anchor="middle" fill="#3b82f6" font-size="10" font-weight="600">QwenPaw Cloud Agent</text>
+        <text x="525" y="142" text-anchor="middle" fill="#64748b" font-size="8">与木同学同系统对话</text>
+        <text x="525" y="156" text-anchor="middle" fill="#64748b" font-size="8">接收木指令 → 控制土机</text>
+        <text x="525" y="170" text-anchor="middle" fill="#64748b" font-size="8">任务进度反馈</text>
+        <text x="525" y="186" text-anchor="middle" fill="#94a3b8" font-size="7">云端沙箱 · 接收端</text>
 
-        <rect x="930" y="55" width="150" height="500" rx="10" fill="rgba(217,119,6,0.04)" stroke="#d97706" stroke-width="1" stroke-dasharray="6,4" opacity="0.5"/>
-        <text x="1005" y="38" text-anchor="middle" fill="#d97706" font-size="11" font-weight="600" opacity="0.7">输出层 · OUTPUT</text>
+        <!-- Cloud: 金同学 -->
+        <rect x="740" y="85" width="210" height="110" rx="10" fill="#fff" stroke="#60a5fa" stroke-width="1.5" filter="url(#shadow)"/>
+        <rect x="740" y="85" width="210" height="24" rx="10" fill="#60a5fa"/>
+        <rect x="740" y="99" width="210" height="10" fill="#60a5fa"/>
+        <text x="845" y="101" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">金同学 · 桥梁</text>
+        <text x="845" y="125" text-anchor="middle" fill="#3b82f6" font-size="10" font-weight="600">QwenPaw Cloud Agent</text>
+        <text x="845" y="142" text-anchor="middle" fill="#64748b" font-size="8">与木同学同系统对话</text>
+        <text x="845" y="156" text-anchor="middle" fill="#64748b" font-size="8">接收木指令 → 控制火机</text>
+        <text x="845" y="170" text-anchor="middle" fill="#64748b" font-size="8">任务进度反馈</text>
+        <text x="845" y="186" text-anchor="middle" fill="#94a3b8" font-size="7">云端沙箱 · 接收端</text>
 
-        <rect x="290" y="650" width="790" height="100" rx="10" fill="rgba(225,29,72,0.04)" stroke="#e11d48" stroke-width="1" stroke-dasharray="6,4" opacity="0.5"/>
-        <text x="685" y="640" text-anchor="middle" fill="#e11d48" font-size="11" font-weight="600" opacity="0.7">编辑工作面 · EDITING SURFACE</text>
+        <!-- QwenPaw internal arrows -->
+        <line x1="310" y1="140" x2="415" y2="140" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrow-blue)" opacity="0.7"/>
+        <line x1="630" y1="140" x2="735" y2="140" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrow-blue)" opacity="0.7"/>
+        <text x="365" y="133" text-anchor="middle" fill="#3b82f6" font-size="8" font-weight="600" opacity="0.7">QwenPaw 内通</text>
+        <text x="682" y="133" text-anchor="middle" fill="#3b82f6" font-size="8" font-weight="600" opacity="0.7">QwenPaw 内通</text>
 
-        <!-- INPUT: WeChat -->
-        <rect x="35" y="75" width="210" height="46" rx="6" fill="#f8fafc" stroke="#0891b2" stroke-width="1.5"/>
-        <text x="140" y="96" text-anchor="middle" fill="#0891b2" font-size="11" font-weight="600">微信公众号 · 群聊</text>
-        <text x="140" y="112" text-anchor="middle" fill="#64748b" font-size="8">pull_wechat.sh → ADB USB 解密</text>
+        <!-- ============ TIER 2: LOCAL ============ -->
+        <rect x="30" y="250" width="1040" height="260" rx="12" fill="rgba(5,150,105,0.04)" stroke="#059669" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.7"/>
+        <rect x="42" y="237" width="120" height="24" rx="12" fill="#059669" opacity="0.9"/>
+        <text x="102" y="253" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">本地 · 随行</text>
+        <text x="210" y="253" fill="#059669" font-size="9" opacity="0.6">Local Tier — 随身携带</text>
 
-        <!-- INPUT: Telegram -->
-        <rect x="35" y="135" width="210" height="46" rx="6" fill="#f8fafc" stroke="#0891b2" stroke-width="1.5"/>
-        <text x="140" y="156" text-anchor="middle" fill="#0891b2" font-size="11" font-weight="600">Telegram · 群聊私信</text>
-        <text x="140" y="172" text-anchor="middle" fill="#64748b" font-size="8">Hermes Gateway 实时接入</text>
+        <!-- Cloud-to-Local arrows -->
+        <line x1="525" y1="195" x2="525" y2="280" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arrow-blue)" opacity="0.5"/>
+        <line x1="845" y1="195" x2="845" y2="280" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arrow-blue)" opacity="0.5"/>
+        <text x="545" y="248" fill="#3b82f6" font-size="8" opacity="0.5">云端→本地</text>
+        <text x="868" y="235" fill="#3b82f6" font-size="8" opacity="0.5">云端→本地</text>
 
-        <!-- INPUT: Voice -->
-        <rect x="35" y="195" width="210" height="46" rx="6" fill="#f8fafc" stroke="#0891b2" stroke-width="1.5"/>
-        <text x="140" y="216" text-anchor="middle" fill="#0891b2" font-size="11" font-weight="600">语音笔记管线</text>
-        <text x="140" y="232" text-anchor="middle" fill="#64748b" font-size="8">faster-whisper → silero-vad</text>
+        <!-- Local: 土同学 -->
+        <rect x="100" y="280" width="400" height="200" rx="12" fill="#fff" stroke="#059669" stroke-width="1.5" filter="url(#shadow)"/>
+        <rect x="100" y="280" width="400" height="28" rx="12" fill="#059669"/>
+        <rect x="100" y="298" width="400" height="10" fill="#059669"/>
+        <text x="300" y="300" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">土同学 · 中枢调度</text>
 
-        <!-- INPUT: Web -->
-        <rect x="35" y="255" width="210" height="46" rx="6" fill="#f8fafc" stroke="#0891b2" stroke-width="1.5"/>
-        <text x="140" y="276" text-anchor="middle" fill="#0891b2" font-size="11" font-weight="600">网页 · 公众号文章</text>
-        <text x="140" y="292" text-anchor="middle" fill="#64748b" font-size="8">OpenBridge · omnireach 搜索</text>
+        <!-- 土同学: QwenPaw sub-box -->
+        <rect x="120" y="320" width="170" height="95" rx="8" fill="rgba(59,130,246,0.06)" stroke="#60a5fa" stroke-width="1.2"/>
+        <text x="205" y="340" text-anchor="middle" fill="#3b82f6" font-size="10" font-weight="600">水 · QwenPaw</text>
+        <text x="205" y="357" text-anchor="middle" fill="#64748b" font-size="8">与木同学直接对话</text>
+        <text x="205" y="373" text-anchor="middle" fill="#64748b" font-size="8">接收云端指令</text>
+        <text x="205" y="389" text-anchor="middle" fill="#64748b" font-size="8">控制本机 Hermes</text>
+        <text x="205" y="405" text-anchor="middle" fill="#94a3b8" font-size="7">水 token</text>
 
-        <!-- INPUT: Kindle -->
-        <rect x="35" y="315" width="210" height="46" rx="6" fill="#f8fafc" stroke="#0891b2" stroke-width="1.5"/>
-        <text x="140" y="336" text-anchor="middle" fill="#0891b2" font-size="11" font-weight="600">Kindle 标注 · 阅读</text>
-        <text x="140" y="352" text-anchor="middle" fill="#64748b" font-size="8">KOReader → Mac Web Bridge</text>
+        <!-- 土同学: Hermes sub-box -->
+        <rect x="310" y="320" width="170" height="95" rx="8" fill="rgba(5,150,105,0.06)" stroke="#059669" stroke-width="1.2"/>
+        <text x="395" y="340" text-anchor="middle" fill="#059669" font-size="10" font-weight="600">土 · Hermes</text>
+        <text x="395" y="357" text-anchor="middle" fill="#64748b" font-size="8">调度路由</text>
+        <text x="395" y="373" text-anchor="middle" fill="#64748b" font-size="8">Hugo 站点 · 运维</text>
+        <text x="395" y="389" text-anchor="middle" fill="#64748b" font-size="8">Hindsight 记忆</text>
+        <text x="395" y="405" text-anchor="middle" fill="#94a3b8" font-size="7">本地执行</text>
 
-        <!-- INPUT: Manual -->
-        <rect x="35" y="375" width="210" height="46" rx="6" fill="#f8fafc" stroke="#0891b2" stroke-width="1.5"/>
-        <text x="140" y="396" text-anchor="middle" fill="#0891b2" font-size="11" font-weight="600">手动输入 · 提问</text>
-        <text x="140" y="412" text-anchor="middle" fill="#64748b" font-size="8">Telegram / WeChat 直接对话</text>
+        <!-- QwenPaw ↔ Hermes arrow -->
+        <line x1="290" y1="368" x2="308" y2="368" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow-emerald)" opacity="0.6"/>
 
-        <!-- Arrows: INPUT → PROCESSING -->
-        <line x1="245" y1="98" x2="290" y2="98" stroke="#0891b2" stroke-width="1.5" marker-end="url(#arrow-cyan-l)"/>
-        <line x1="245" y1="158" x2="290" y2="148" stroke="#0891b2" stroke-width="1.5" marker-end="url(#arrow-cyan-l)"/>
-        <line x1="245" y1="218" x2="290" y2="198" stroke="#0891b2" stroke-width="1.5" marker-end="url(#arrow-cyan-l)"/>
-        <line x1="245" y1="278" x2="290" y2="248" stroke="#0891b2" stroke-width="1.5" marker-end="url(#arrow-cyan-l)"/>
-        <line x1="245" y1="338" x2="290" y2="298" stroke="#0891b2" stroke-width="1.5" marker-end="url(#arrow-cyan-l)"/>
+        <!-- 土同学 底部 info -->
+        <text x="300" y="445" text-anchor="middle" fill="#64748b" font-size="8">环境自适应：切换 IP → 自动同步 → 继续干活</text>
+        <text x="300" y="462" text-anchor="middle" fill="#94a3b8" font-size="7">本机 (Mac) · 图书馆 192.168.0.x / 家 192.168.1.x</text>
 
-        <!-- PROCESSING: Hermes Runtime -->
-        <rect x="305" y="75" width="330" height="65" rx="8" fill="#f0fdf4" stroke="#059669" stroke-width="1.5"/>
-        <text x="470" y="96" text-anchor="middle" fill="#059669" font-size="13" font-weight="700">Hermes Runtime v2</text>
-        <text x="470" y="112" text-anchor="middle" fill="#64748b" font-size="8">Context Manager · Capability Registry · Event Bus</text>
-        <text x="470" y="124" text-anchor="middle" fill="#64748b" font-size="8">Learning Pipeline · NLI Layer · Kanban 调度</text>
+        <!-- Local: 火同学 -->
+        <rect x="580" y="280" width="400" height="200" rx="12" fill="#fff" stroke="#059669" stroke-width="1.5" filter="url(#shadow)"/>
+        <rect x="580" y="280" width="400" height="28" rx="12" fill="#059669"/>
+        <rect x="580" y="298" width="400" height="10" fill="#059669"/>
+        <text x="780" y="300" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">火同学 · 网络算力</text>
 
-        <!-- PROCESSING: 五行 -->
-        <rect x="305" y="158" width="330" height="55" rx="6" fill="#fff7ed" stroke="#f59e0b" stroke-width="1.5"/>
-        <text x="470" y="178" text-anchor="middle" fill="#f59e0b" font-size="11" font-weight="600">五行舰队 · 智能体联邦</text>
-        <text x="470" y="194" text-anchor="middle" fill="#64748b" font-size="8">土(调度) · 金(内容消费/Kindle) · 水(协调/索引) · 火(计算/后端)</text>
-        <text x="470" y="207" text-anchor="middle" fill="#94a3b8" font-size="7">各自独立 Kanban · Event Bus 通信</text>
+        <!-- 火同学: QwenPaw sub-box -->
+        <rect x="600" y="320" width="170" height="95" rx="8" fill="rgba(59,130,246,0.06)" stroke="#60a5fa" stroke-width="1.2"/>
+        <text x="685" y="340" text-anchor="middle" fill="#3b82f6" font-size="10" font-weight="600">金 · QwenPaw</text>
+        <text x="685" y="357" text-anchor="middle" fill="#64748b" font-size="8">与木同学直接对话</text>
+        <text x="685" y="373" text-anchor="middle" fill="#64748b" font-size="8">接收云端指令</text>
+        <text x="685" y="389" text-anchor="middle" fill="#64748b" font-size="8">控制本机 Hermes</text>
+        <text x="685" y="405" text-anchor="middle" fill="#94a3b8" font-size="7">金 token</text>
 
-        <!-- PROCESSING: MCP -->
-        <rect x="305" y="230" width="155" height="62" rx="6" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.5"/>
-        <text x="382" y="250" text-anchor="middle" fill="#7c3aed" font-size="10" font-weight="600">MCP Servers</text>
-        <text x="382" y="265" text-anchor="middle" fill="#64748b" font-size="8">notebooklm-mcp</text>
-        <text x="382" y="278" text-anchor="middle" fill="#64748b" font-size="8">gemini-web-mcp</text>
-        <text x="382" y="288" text-anchor="middle" fill="#64748b" font-size="8">gflow-mcp (Imagen+Veo)</text>
+        <!-- 火同学: Hermes sub-box -->
+        <rect x="790" y="320" width="170" height="95" rx="8" fill="rgba(5,150,105,0.06)" stroke="#059669" stroke-width="1.2"/>
+        <text x="875" y="340" text-anchor="middle" fill="#059669" font-size="10" font-weight="600">火 · Hermes</text>
+        <text x="875" y="357" text-anchor="middle" fill="#64748b" font-size="8">V2Ray 代理</text>
+        <text x="875" y="373" text-anchor="middle" fill="#64748b" font-size="8">QwenPaw 运行时</text>
+        <text x="875" y="389" text-anchor="middle" fill="#64748b" font-size="8">公网服务</text>
+        <text x="875" y="405" text-anchor="middle" fill="#94a3b8" font-size="7">本地执行</text>
 
-        <!-- PROCESSING: OpenBridge -->
-        <rect x="480" y="230" width="155" height="50" rx="6" fill="#fff7ed" stroke="#f59e0b" stroke-width="1.5"/>
-        <text x="557" y="250" text-anchor="middle" fill="#f59e0b" font-size="10" font-weight="600">OpenBridge</text>
-        <text x="557" y="265" text-anchor="middle" fill="#64748b" font-size="8">Chrome CDP 桥接</text>
-        <text x="557" y="278" text-anchor="middle" fill="#94a3b8" font-size="8">端口 10088</text>
+        <!-- QwenPaw ↔ Hermes arrow -->
+        <line x1="770" y1="368" x2="788" y2="368" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow-emerald)" opacity="0.6"/>
 
-        <!-- PROCESSING: LLM -->
-        <rect x="305" y="305" width="330" height="50" rx="6" fill="#fffbeb" stroke="#d97706" stroke-width="1.5"/>
-        <text x="470" y="325" text-anchor="middle" fill="#d97706" font-size="10" font-weight="600">LLM 推理层</text>
-        <text x="470" y="340" text-anchor="middle" fill="#64748b" font-size="8">OmniRoute (127.0.0.1:20128) · NVIDIA 免费池</text>
-        <text x="470" y="352" text-anchor="middle" fill="#94a3b8" font-size="8">智谱 glm-4v · Gemini Web (1M ctx)</text>
+        <!-- 火同学 底部 info -->
+        <text x="780" y="445" text-anchor="middle" fill="#64748b" font-size="8">Clash Verge 代理 · 同网段直连 / 跨网段 SSH 隧道</text>
+        <text x="780" y="462" text-anchor="middle" fill="#94a3b8" font-size="7">另一台 Mac · 192.168.1.12</text>
 
-        <!-- PROCESSING: Hindsight -->
-        <rect x="305" y="370" width="330" height="50" rx="6" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.5"/>
-        <text x="470" y="390" text-anchor="middle" fill="#7c3aed" font-size="10" font-weight="600">Hindsight 记忆层</text>
-        <text x="470" y="405" text-anchor="middle" fill="#64748b" font-size="8">个人经验 · 踩坑记录 · 决策日志</text>
-        <text x="470" y="418" text-anchor="middle" fill="#94a3b8" font-size="7">向量存储 · 本地 SQLite (127.0.0.1:8888)</text>
+        <!-- 土 ↔ 火 arrow -->
+        <line x1="500" y1="380" x2="578" y2="380" stroke="#059669" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow-emerald)" opacity="0.5"/>
+        <text x="540" y="373" text-anchor="middle" fill="#059669" font-size="8" opacity="0.6">LAN / SSH 隧道</text>
 
-        <!-- Arrows: PROCESSING → KNOWLEDGE -->
-        <line x1="635" y1="98" x2="680" y2="98" stroke="#7c3aed" stroke-width="1.5" marker-end="url(#arrow-violet-l)"/>
-        <line x1="635" y1="148" x2="680" y2="158" stroke="#7c3aed" stroke-width="1.5" marker-end="url(#arrow-violet-l)"/>
+        <!-- ============ TIER 3: INFRASTRUCTURE ============ -->
+        <rect x="30" y="540" width="1040" height="120" rx="12" fill="rgba(100,116,139,0.04)" stroke="#64748b" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.5"/>
+        <rect x="42" y="527" width="140" height="24" rx="12" fill="#64748b" opacity="0.7"/>
+        <text x="112" y="543" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">基础设施</text>
+        <text x="240" y="543" fill="#64748b" font-size="9" opacity="0.6">Infrastructure</text>
 
-        <!-- KNOWLEDGE: NotebookLM -->
-        <rect x="695" y="75" width="190" height="65" rx="6" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.5"/>
-        <text x="790" y="96" text-anchor="middle" fill="#7c3aed" font-size="11" font-weight="600">NotebookLM</text>
-        <text x="790" y="112" text-anchor="middle" fill="#64748b" font-size="8">研究层 · 外部资料 RAG</text>
-        <text x="790" y="125" text-anchor="middle" fill="#94a3b8" font-size="7">4 本笔记本 · CLI+MCP 接入</text>
+        <!-- Local → Infra arrows -->
+        <path d="M 300 482 L 300 530 L 205 530 L 205 555" fill="none" stroke="#64748b" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow-amber)" opacity="0.4"/>
+        <path d="M 780 482 L 780 530 L 845 530 L 845 555" fill="none" stroke="#64748b" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow-amber)" opacity="0.4"/>
 
-        <!-- KNOWLEDGE: Obsidian -->
-        <rect x="695" y="155" width="190" height="65" rx="6" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.5"/>
-        <text x="790" y="176" text-anchor="middle" fill="#7c3aed" font-size="11" font-weight="600">Obsidian</text>
-        <text x="790" y="192" text-anchor="middle" fill="#64748b" font-size="8">知识层 · 个人笔记 · LLM Wiki</text>
-        <text x="790" y="205" text-anchor="middle" fill="#94a3b8" font-size="7">双向链接 · 知识图谱 · 每日记录</text>
+        <!-- N1 旁路由 -->
+        <rect x="120" y="565" width="240" height="75" rx="8" fill="#fff" stroke="#64748b" stroke-width="1.2" filter="url(#shadow)"/>
+        <text x="240" y="588" text-anchor="middle" fill="#64748b" font-size="11" font-weight="600">N1 旁路由</text>
+        <text x="240" y="605" text-anchor="middle" fill="#64748b" font-size="8">24h 代理 · OpenWrt</text>
+        <text x="240" y="620" text-anchor="middle" fill="#94a3b8" font-size="7">解决全屋代理问题</text>
 
-        <!-- Arrows: KNOWLEDGE → OUTPUT -->
-        <line x1="885" y1="98" x2="930" y2="130" stroke="#d97706" stroke-width="1.5" marker-end="url(#arrow-amber-l)"/>
-        <line x1="885" y1="158" x2="930" y2="180" stroke="#d97706" stroke-width="1.5" marker-end="url(#arrow-amber-l)"/>
+        <!-- AI 盒子 -->
+        <rect x="420" y="565" width="240" height="75" rx="8" fill="#fff" stroke="#64748b" stroke-width="1.2" filter="url(#shadow)"/>
+        <text x="540" y="588" text-anchor="middle" fill="#64748b" font-size="11" font-weight="600">AI 盒子</text>
+        <text x="540" y="605" text-anchor="middle" fill="#64748b" font-size="8">本地推理 / 服务托管</text>
+        <text x="540" y="620" text-anchor="middle" fill="#94a3b8" font-size="7">备用节点</text>
 
-        <!-- OUTPUT: Hugo -->
-        <rect x="945" y="175" width="125" height="50" rx="6" fill="#fffbeb" stroke="#d97706" stroke-width="1.5"/>
-        <text x="1007" y="195" text-anchor="middle" fill="#d97706" font-size="10" font-weight="600">Hugo 博客</text>
-        <text x="1007" y="210" text-anchor="middle" fill="#64748b" font-size="8">angelife.github.com</text>
-        <text x="1007" y="222" text-anchor="middle" fill="#94a3b8" font-size="7">PaperMod 主题</text>
+        <!-- 电视 -->
+        <rect x="720" y="565" width="240" height="75" rx="8" fill="#fff" stroke="#64748b" stroke-width="1.2" filter="url(#shadow)"/>
+        <text x="840" y="588" text-anchor="middle" fill="#64748b" font-size="11" font-weight="600">Kodi 电视</text>
+        <text x="840" y="605" text-anchor="middle" fill="#64748b" font-size="8">媒体中心</text>
+        <text x="840" y="620" text-anchor="middle" fill="#94a3b8" font-size="7">Arch Linux · 已稳定</text>
 
-        <!-- OUTPUT: Kindle Dashboard -->
-        <rect x="945" y="240" width="125" height="50" rx="6" fill="#fffbeb" stroke="#d97706" stroke-width="1.5"/>
-        <text x="1007" y="260" text-anchor="middle" fill="#d97706" font-size="10" font-weight="600">Kindle 舰桥</text>
-        <text x="1007" y="275" text-anchor="middle" fill="#64748b" font-size="8">:28080 Dashboard</text>
-        <text x="1007" y="287" text-anchor="middle" fill="#94a3b8" font-size="7">待决策队列</text>
+        <!-- ============ DATA FLOW BAR ============ -->
+        <rect x="30" y="690" width="1040" height="30" rx="6" fill="rgba(8,145,178,0.06)" stroke="#0891b2" stroke-width="0.8" opacity="0.6"/>
+        <text x="550" y="710" text-anchor="middle" fill="#64748b" font-size="9">
+          输入层: 微信 · Telegram · Kindle · 语音 · 网页
+          → 处理层: Hermes + QwenPaw + MCP + Hindsight
+          → 知识层: NotebookLM · Obsidian
+          → 输出层: Hugo · Telegram · 播客 · 视频
+          ← 编辑工作面: Doom Emacs
+        </text>
 
-        <!-- OUTPUT: Audio -->
-        <rect x="945" y="305" width="125" height="50" rx="6" fill="#fffbeb" stroke="#d97706" stroke-width="1.5"/>
-        <text x="1007" y="325" text-anchor="middle" fill="#d97706" font-size="10" font-weight="600">播客 · 音频</text>
-        <text x="1007" y="340" text-anchor="middle" fill="#64748b" font-size="8">NotebookLM 生成</text>
-        <text x="1007" y="352" text-anchor="middle" fill="#94a3b8" font-size="7">双人对谈</text>
-
-        <!-- OUTPUT: Responses -->
-        <rect x="945" y="370" width="125" height="50" rx="6" fill="#fffbeb" stroke="#d97706" stroke-width="1.5"/>
-        <text x="1007" y="390" text-anchor="middle" fill="#d97706" font-size="10" font-weight="600">即时回复</text>
-        <text x="1007" y="405" text-anchor="middle" fill="#64748b" font-size="8">Telegram · WeChat</text>
-        <text x="1007" y="417" text-anchor="middle" fill="#94a3b8" font-size="7">Gateway 分发</text>
-
-        <!-- OUTPUT: Image/Video -->
-        <rect x="945" y="435" width="125" height="50" rx="6" fill="#fffbeb" stroke="#d97706" stroke-width="1.5"/>
-        <text x="1007" y="455" text-anchor="middle" fill="#d97706" font-size="10" font-weight="600">图片 · 视频</text>
-        <text x="1007" y="470" text-anchor="middle" fill="#64748b" font-size="8">Imagen 4 / Veo 3.1</text>
-        <text x="1007" y="482" text-anchor="middle" fill="#94a3b8" font-size="7">gflow-cli · Google Flow</text>
-
-        <!-- MCP ↔ Image/Video -->
-        <line x1="460" y1="260" x2="927" y2="260" stroke="#d97706" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
-        <line x1="927" y1="260" x2="927" y2="460" stroke="#d97706" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow-amber-l)" opacity="0.5"/>
-
-        <!-- Return flow: Hindsight → Hermes -->
-        <path d="M 470 420 L 470 510 L 245 510 L 245 420" fill="none" stroke="#7c3aed" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow-violet-l)" opacity="0.4"/>
-        <text x="360" y="503" text-anchor="middle" fill="#7c3aed" font-size="7" opacity="0.5">记忆召回 → 上下文注入</text>
-
-        <!-- Return flow: Obsidian → Hermes -->
-        <path d="M 695 185 L 290 185" fill="none" stroke="#64748b" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow-slate-l)" opacity="0.3"/>
-        <text x="490" y="178" text-anchor="middle" fill="#64748b" font-size="7" opacity="0.4">fsnotify 变更事件</text>
-
-        <!-- EDITING SURFACE -->
-        <path d="M 885 210 L 920 210 L 920 560 L 680 560 L 680 690" fill="none" stroke="#e11d48" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow-rose-l)" opacity="0.6"/>
-        <text x="800" y="553" text-anchor="middle" fill="#e11d48" font-size="7" opacity="0.6">引用笔记/资料 → 写入上下文</text>
-
-        <path d="M 310 690 L 270 690 L 270 510 L 400 510 L 400 420" fill="none" stroke="#059669" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow-emerald-l)" opacity="0.6"/>
-        <text x="320" y="540" text-anchor="middle" fill="#059669" font-size="7" opacity="0.6">eshell · 命令行操作</text>
-
-        <path d="M 660 690 L 900 690 L 900 510 L 1007 510 L 1007 225" fill="none" stroke="#d97706" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow-amber-l)" opacity="0.6"/>
-        <text x="950" y="550" text-anchor="middle" fill="#d97706" font-size="7" opacity="0.6">编辑 → 发布</text>
-
-        <!-- Emacs -->
-        <rect x="305" y="675" width="360" height="60" rx="6" fill="#fff1f2" stroke="#e11d48" stroke-width="1.5"/>
-        <text x="485" y="697" text-anchor="middle" fill="#e11d48" font-size="12" font-weight="700">Doom Emacs · 编辑工作面</text>
-        <text x="485" y="713" text-anchor="middle" fill="#64748b" font-size="8">eshell · M-x 调一切 · org-mode · vterm</text>
-        <text x="485" y="726" text-anchor="middle" fill="#94a3b8" font-size="7">写 Hugo · 改配置 · 编码 · Git · 日志</text>
-
-        <!-- LEGEND -->
-        <rect x="35" y="440" width="200" height="100" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
-        <text x="135" y="458" text-anchor="middle" fill="#333" font-size="10" font-weight="600">图例 · LEGEND</text>
-        <rect x="50" y="470" width="12" height="12" rx="3" fill="rgba(8,145,178,0.08)" stroke="#0891b2" stroke-width="1.5"/>
-        <text x="70" y="480" fill="#64748b" font-size="9">输入层 (数据源)</text>
-        <rect x="50" y="488" width="12" height="12" rx="3" fill="rgba(5,150,105,0.08)" stroke="#059669" stroke-width="1.5"/>
-        <text x="70" y="498" fill="#64748b" font-size="9">处理层 (Hermes Fleet)</text>
-        <rect x="50" y="506" width="12" height="12" rx="3" fill="rgba(124,58,237,0.08)" stroke="#7c3aed" stroke-width="1.5"/>
-        <text x="70" y="516" fill="#64748b" font-size="9">知识层 (记忆/笔记)</text>
-        <rect x="50" y="524" width="12" height="12" rx="3" fill="rgba(217,119,6,0.08)" stroke="#d97706" stroke-width="1.5"/>
-        <text x="70" y="534" fill="#64748b" font-size="9">输出层 (发布/推送)</text>
+        <!-- ============ LEGEND ============ -->
+        <rect x="30" y="735" width="1040" height="50" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+        <text x="60" y="755" fill="#333" font-size="9" font-weight="600">图例</text>
+        <rect x="110" y="746" width="10" height="10" rx="2" fill="#3b82f6"/>
+        <text x="125" y="755" fill="#64748b" font-size="8">QwenPaw Agent</text>
+        <rect x="230" y="746" width="10" height="10" rx="2" fill="#059669"/>
+        <text x="245" y="755" fill="#64748b" font-size="8">Hermes Agent</text>
+        <line x1="360" y1="751" x2="395" y2="751" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="5,3"/>
+        <text x="400" y="755" fill="#64748b" font-size="8">QwenPaw 内通</text>
+        <line x1="530" y1="751" x2="565" y2="751" stroke="#059669" stroke-width="1.5"/>
+        <text x="570" y="755" fill="#64748b" font-size="8">系统控制</text>
+        <line x1="670" y1="751" x2="705" y2="751" stroke="#059669" stroke-width="1.5" stroke-dasharray="5,3"/>
+        <text x="710" y="755" fill="#64748b" font-size="8">LAN/SSH</text>
+        <rect x="800" y="746" width="10" height="10" rx="2" fill="#64748b"/>
+        <text x="815" y="755" fill="#64748b" font-size="8">基础设施</text>
       </svg>
     </div>
 
@@ -281,7 +277,8 @@
       <div class="arch-card">
         <h3>组件</h3>
         <ul>
-          <li>Hermes Runtime v2 — 联邦调度</li>
+          <li>木/水/金 — QwenPaw Cloud Agent（云端 24h）</li>
+          <li>土/火 — Hermes Runtime（本地执行）</li>
           <li>MCP (NotebookLM+Gemini+gflow) — 研究+媒体接口</li>
           <li>OpenBridge — Web 自动化桥接</li>
           <li>Hindsight — 个人经验向量记忆</li>
@@ -313,10 +310,11 @@
           <h4 style="color:#059669;">⚙️ 处理层</h4>
           <table class="arch-table">
             <tr><td>Hermes Runtime</td><td><span class="tag tag-stable">● 稳定</span></td><td>Context/Event/NLI/Kanban</td></tr>
-            <tr><td>五行·土</td><td><span class="tag tag-stable">● 稳定</span></td><td>调度/路由</td></tr>
-            <tr><td>五行·金</td><td><span class="tag tag-wip">○ 在建</span></td><td>内容消费/Kindle</td></tr>
-            <tr><td>五行·水</td><td><span class="tag tag-wip">○ 在建</span></td><td>协调/索引</td></tr>
-            <tr><td>五行·火</td><td><span class="tag tag-wip">○ 在建</span></td><td>计算/后端/安全</td></tr>
+            <tr><td>木同学 (云端)</td><td><span class="tag tag-stable">● 稳定</span></td><td>QwenPaw · 24h 监督调度</td></tr>
+            <tr><td>土同学 (本地)</td><td><span class="tag tag-stable">● 稳定</span></td><td>Hermes · 中枢调度/运维</td></tr>
+            <tr><td>火同学 (本地)</td><td><span class="tag tag-stable">● 稳定</span></td><td>QwenPaw+Hermes · 网络/算力</td></tr>
+            <tr><td>水同学 (云端)</td><td><span class="tag tag-wip">○ 调试中</span></td><td>QwenPaw · 桥接土↔木</td></tr>
+            <tr><td>金同学 (云端)</td><td><span class="tag tag-wip">○ 调试中</span></td><td>QwenPaw · 桥接火↔木</td></tr>
             <tr><td>MCP: notebooklm</td><td><span class="tag tag-stable">● 稳定</span></td><td>CLI+MCP 已通</td></tr>
             <tr><td>MCP: gemini-web</td><td><span class="tag tag-wip">○ 在建</span></td><td>调试中</td></tr>
             <tr><td>MCP: gflow</td><td><span class="tag tag-stable">● 稳定</span></td><td>Imagen+Veo 已通</td></tr>
