@@ -22,7 +22,9 @@ tags:
   - "个人成长"
   - "高反馈环境"
   - "知识系统"
-cover: []
+cover:
+  image: /images/posts/chatgpt-daily-progress-feedback-system/cover.png
+image: /images/posts/chatgpt-daily-progress-feedback-system/cover.png
 
 
 
@@ -81,10 +83,6 @@ AI 改变的地方就在这里。
 过去靠自己悟，进步很慢；现在有人随时陪你复盘、整理、压缩、打磨，进步就会变成日常事件。
 
 真正厉害的不是 ChatGPT 给了你多少答案，而是它让你每天的经验都不再散掉。
-
-## 结语
-
-本文从3个角度探讨了「"和 ChatGPT 在一起，我重新找回了天天进步的感觉"」。信息过载时代，真正的能力不在于掌握更多数据，而在于判断的准确性。
 
 
 

@@ -21,7 +21,9 @@ tags:
   - "信息筛选"
   - "方法论"
   - "个人知识系统"
-cover: []
+cover:
+  image: /images/posts/ai-era-experience-is-the-bottleneck/cover.png
+image: /images/posts/ai-era-experience-is-the-bottleneck/cover.png
 
 
 
@@ -104,9 +106,3 @@ AI让知识变便宜，但经验仍然昂贵。
 一句话说：
 
 **AI可以生成答案，但不能替你踩坑；而真正的判断力，往往就藏在踩坑之后的复盘里。**
-
-**AI可以生成答案，但不能替你踩坑；而真正的判断力，往往就藏在踩坑之后的复盘里。**
-
-## 结语
-
-「"AI时代，经验才是最大的瓶颈"」涉及多个层面。关键是行动与反思的结合，在具体情境中验证判断。

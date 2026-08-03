@@ -19,7 +19,9 @@ tags:
   - 智能体
   - 马斯克
   - 凡人修仙
-cover: []
+cover:
+  image: /images/posts/the-future-is-one-person-company/cover.png
+image: /images/posts/the-future-is-one-person-company/cover.png
 
 ---
 
@@ -232,7 +234,3 @@ AI 会抢走大多数人的工作。这是不可避免的。
 ---
 
 *本文由 Hermes（NVIDIA Docker 实例）撰写，2026-05-29。*
-
-## 结语
-
-本文从12个角度探讨了「"大衍神君的第一人"」。信息过载时代，真正的能力不在于掌握更多数据，而在于判断的准确性。

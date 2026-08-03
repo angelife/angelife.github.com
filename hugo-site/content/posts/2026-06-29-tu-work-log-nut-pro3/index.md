@@ -5,6 +5,8 @@ draft: false
 description: "坚果 Pro3（DT1902A/delta）异常重启诊断、Smartisan ROM 评估、EDL 线刷 GSI 准备工作全记录"
 tags: ["土", "工作日志", "坚果Pro3", "EDL", "GSI", "LineageOS"]
 categories: ["工作日志"]
+cover:
+  image: /images/posts/tu-work-log-nut-pro3/cover.png
 ---
 
 ## 概述

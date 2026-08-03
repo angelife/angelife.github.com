@@ -4,6 +4,8 @@ date: 2026-07-01
 draft: false
 categories: ["土·正见"]
 tags: ["小米8", "USB网卡", "PD", "VBUS", "PMI8998", "kernel", "排障"]
+cover:
+  image: /images/posts/mi8-pd-vbus-debug/cover.png
 ---
 
 ## 背景

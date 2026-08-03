@@ -16,6 +16,13 @@ document.addEventListener('DOMContentLoaded', function() {
           url: p.permalink || p.url
         });
       });
+      // If ?q= param present, trigger search on load
+      var qs = new URLSearchParams(window.location.search);
+      var qval = qs.get('q');
+      if (qval) {
+        input.value = qval;
+        doSearch(qval);
+      }
     })
     .catch(function(err) { console.error('Search index load failed', err); });
 
@@ -24,6 +31,14 @@ document.addEventListener('DOMContentLoaded', function() {
     text = (text || '').toLowerCase();
     query = query.toLowerCase();
     return text.indexOf(query) !== -1;
+  }
+
+  function doSearch(q) {
+    if (q.length === 0) { results.innerHTML = ''; return; }
+    var matches = entries.filter(function(e) {
+      return fuzzyMatch(e.title, q) || fuzzyMatch(e.summary, q);
+    }).slice(0, 30);
+    displayResults(matches);
   }
 
   function displayResults(matches) {
@@ -42,11 +57,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   input.addEventListener('input', function() {
-    var q = input.value.trim();
-    if (q.length === 0) { results.innerHTML = ''; return; }
-    var matches = entries.filter(function(e) {
-      return fuzzyMatch(e.title, q) || fuzzyMatch(e.summary, q);
-    }).slice(0, 30);
-    displayResults(matches);
+    doSearch(input.value.trim());
   });
 });

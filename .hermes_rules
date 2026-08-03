@@ -1,0 +1,15 @@
+# Hermes System Constraints for angelife.github.com
+
+## 1. Modern Web Engineering Standard (Process-Driven)
+- **拒绝追新强迫症**：严禁为了使用新特性而盲目推翻现有清晰（Clear）、显式（Explicit）、可调试的业务逻辑。现有的稳定实现通常就是最现代的。
+- **Baseline 动态审查机制**：在推荐或引入任何"现代化" Web 能力前，必须先通过底层工具或访问 [Web.dev Baseline](https://web.dev/baseline) 检查其真实兼容性状态。
+- **重构准则**：只有当新方案能够显著降低代码复杂度（如消灭复杂的第三方依赖）、且其技术指标已达到 Baseline 的 Widely Available（广泛可用）标准时，才允许提出重构建议。任何 Newly Available（新近可用）的特性必须提供完备的 Polyfill 或降级兜底方案。
+
+## 2. File Search & Safety Constraints (CRITICAL)
+- 当你使用 `file:search_files` 或全项目匹配技能时，必须显式排除 `node_modules`、`.git`、`dist` 和 `build` 目录。
+- 在对代码进行任何实质性修改前，必须先在终端列出你所有匹配到的相关文件（包含完整后缀名，如 `Dockerfile` 和 `api.Dockerfile`），确保没有文件因超出体积而被系统默默截断（truncate）。
+- 如果发现搜索数据被截断，立刻停止并向用户报告，严禁假装完美匹配。
+
+## 3. Test Verification
+- 完成逻辑修改后，必须编写或更新对应的自动化测试。
+- 严禁盲信自己生成的测试用例！在交付前，请口头提示用户手动修改某一业务数据，以验证测试是否会切实"变红（Fail）"。

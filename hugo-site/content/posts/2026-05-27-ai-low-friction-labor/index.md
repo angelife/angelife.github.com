@@ -27,7 +27,9 @@ tags:
   - "低摩擦"
   - "知识资产"
   - "系统主控"
-cover: []
+cover:
+  image: /images/posts/2026-05-27-ai-low-friction-labor/cover.png
+image: /images/posts/2026-05-27-ai-low-friction-labor/cover.png
 
 
 
@@ -208,9 +210,3 @@ AI 时代，真正赢的不是苹果、Linux、微软、开源、免费、资本
 
 - [R. Kikuo Johnson, “Tech Support”, The New Yorker, 2017-10-16](https://www.newyorker.com/culture/cover-story/cover-story-2017-10-23)
 - [R. Kikuo Johnson — Tech Support](https://www.rkikuojohnson.com/tech-support)
-
-- [R. Kikuo Johnson — Tech Support](https://www.rkikuojohnson.com/tech-support)
-
-## 结语
-
-本文从12个角度探讨了「"AI 时代，真正赢的不是免费，而是低摩擦地组织劳动力"」。信息过载时代，真正的能力不在于掌握更多数据，而在于判断的准确性。

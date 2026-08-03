@@ -21,7 +21,9 @@ tags:
   - 判断力
   - AI时代
   - 不失正见
-cover: []
+cover:
+  image: /images/posts/zhen-to-sui-touching-the-pattern/cover.png
+image: /images/posts/zhen-to-sui-touching-the-pattern/cover.png
 
 
 
@@ -112,10 +114,6 @@ cover: []
 内容可以自动化生产，但正见不能自动化外包。  
 工具可以越来越强，但人必须越来越清醒。  
 时代可以震动，但主线不能丢。
-
-## 结语
-
-本文从4个角度探讨了「"震之随六五：在惊动中摸到规律"」。信息过载时代，真正的能力不在于掌握更多数据，而在于判断的准确性。
 
 
 

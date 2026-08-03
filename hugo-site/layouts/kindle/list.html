@@ -13,7 +13,8 @@
     {{ end }}
   </header>
 
-  <section class="kindle-article-list" aria-label="article list">
+  <section class="kindle-article-list" aria-label="新站文章">
+    <h2 id="new-site" class="kindle-subsection-title">新站文章</h2>
     {{ $pages := where site.RegularPages "Type" "in" (slice "posts") }}
     {{ $pages = sort $pages "Date" "desc" }}
     {{ range $pages }}
@@ -38,10 +39,19 @@
     </article>
     {{ end }}
   </section>
+
+  <section class="kindle-old-site-section" aria-label="旧站存档">
+    <h2 id="old-site" class="kindle-subsection-title">旧站存档</h2>
+    {{ partial "kindle-old-site-list.html" . }}
+  </section>
 </section>
 
 <div class="kindle-footer">
-  <p><a href="/?normal=1">返回首页图文版</a> · <a href="/">返回首页</a></p>
+  <p>
+    <a href="/?normal=1">返回首页图文版</a> ·
+    <a href="/old-site/">浏览旧站</a> ·
+    <a href="/">返回首页</a>
+  </p>
   <p class="kindle-footer-copy">© 2009–2026 angelife / 安知生</p>
 </div>
 {{ end }}

@@ -6,6 +6,8 @@ lastmod: 2026-06-30 19:00:00
 draft: false
 tags: [moa, multi-agent, search, workflow, review]
 description: "通用 MoA 问题搜索与方案整合工作流的设计文档。涵盖 4 阶段工作流、插件式搜索引擎架构、7 个待评审决策点。"
+cover:
+  image: /images/posts/mao-search-workflow-review/cover.png
 ---
 
 # MoA 多引擎搜索与整合流程 — 评审用文档

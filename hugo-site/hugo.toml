@@ -107,6 +107,11 @@ disablePathToLower = true
   weight = 5
 
 [[menu.main]]
+  name = "🕸️ 架构"
+  url = "/knowledge-architecture/"
+  weight = 6
+
+[[menu.main]]
   name = "归档"
   url = "/archives/"
   weight = 10
@@ -118,8 +123,18 @@ disablePathToLower = true
 
 [[menu.main]]
   name = "关于"
-  url = "/about/"
+  url = "/knowledge-architecture/v2/"
   weight = 30
+
+[[menu.main]]
+  name = "旧站"
+  url = "/old-site/"
+  weight = 40
+
+[[menu.main]]
+  name = "📖 Kindle"
+  url = "/kindle/"
+  weight = 45
 
 # Footer has minimal links (archives, search, about)
 

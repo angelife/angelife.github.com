@@ -25,7 +25,9 @@ tags:
   - "自动化"
   - "自我蒸馏"
   - "不失正见"
-cover: []
+cover:
+  image: /images/posts/ai-self-distillation-electronic-donkey/cover.png
+image: /images/posts/ai-self-distillation-electronic-donkey/cover.png
 
 
 
@@ -407,10 +409,6 @@ AI 时代最危险的不是机器学会了人的能力。
 最后能留下来的，不是那些最会投币摇杆的人，而是那些在机器轰鸣里，仍然知道自己是谁、要什么、不能丢什么的人。
 
 它可以替你完成任务，但不能替你经历学徒期；它可以给你结果，但不能替你长出手感、骨头和判断。
-
-## 结语
-
-本文从12个角度探讨了「"自费蒸馏：我们正在花钱训练替代自己的人"」。信息过载时代，真正的能力不在于掌握更多数据，而在于判断的准确性。
 
 
 

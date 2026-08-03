@@ -4,6 +4,8 @@ date: 2026-07-04
 draft: false
 categories: ["土·正见"]
 tags: ["排障", "Hermes", "Gateway", "Telegram", "可观测性", "配置漂移"]
+cover:
+  image: /images/posts/hermes-gateway-postmortem-remediation/cover.png
 ---
 
 ## 这件事为什么值得单独写一期

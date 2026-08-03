@@ -5,6 +5,8 @@ draft: false
 description: "从诊断异常重启到准备刷机——Smartisan Nut Pro 3（delta）EDL 线刷 GSI 路线全记录"
 tags: ["坚果Pro3", "Smartisan", "EDL", "GSI", "LineageOS", "9008", "刷机"]
 categories: ["刷机"]
+cover:
+  image: /images/posts/nut-pro3-flashing-guide/cover.png
 ---
 
 ## 前言

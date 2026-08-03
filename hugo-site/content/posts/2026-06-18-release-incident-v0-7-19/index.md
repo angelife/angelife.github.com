@@ -18,7 +18,9 @@ tags:
   - 災難恢復
   - 運維
   - release
-cover: []
+cover:
+  image: /images/posts/2026-06-18-release-incident-v0-7-19/cover.png
+image: /images/posts/2026-06-18-release-incident-v0-7-19/cover.png
 
 ---
 
@@ -345,10 +347,6 @@ rsync -a --delete \
 **Commit：** [`f073bee`](https://github.com/angelife/angelife.github.com/commit/f073bee)
 **操作员：** NVIDIA（Docker Hermes）
 **最终裁定：** Tse 确认验收通过
-
-## 结语
-
-本文从12个角度探讨了「"2026-06-18 发布事故复盘 v0.7.19：rsync 又把仓库吃了一次，但这次完整恢复"」。信息过载时代，真正的能力不在于掌握更多数据，而在于判断的准确性。
 
 
 

@@ -21,7 +21,9 @@ tags:
   - "AI时代"
   - "个人系统"
   - "托管人生"
-cover: []
+cover:
+  image: /images/posts/ai-machine-executes-experience-commands/cover.png
+image: /images/posts/ai-machine-executes-experience-commands/cover.png
 
 
 
@@ -68,10 +70,6 @@ cover: []
 它不是把人生交给机器，也不是让 AI 替你活着，而是把低价值、重复性、机械性的工作托管出去。机器负责跑流程，人负责守住方向。机器负责执行，经验负责指挥。
 
 未来真正有竞争力的人，不是最会手工操作的人，而是最会组织 AI、自动化和流程的人。他不一定亲自写每一句话，也不一定亲自改每一行代码，但他知道什么应该生成，什么应该删除，什么可以上线，什么必须重来。
-
-## 结语
-
-本文从3个角度探讨了「"机器执行，经验指挥：AI 时代真正昂贵的东西"」。信息过载时代，真正的能力不在于掌握更多数据，而在于判断的准确性。
 
 
 

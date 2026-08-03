@@ -19,7 +19,9 @@ tags:
   - "规则意识"
   - "现实规则"
   - "不失正见"
-cover: []
+cover:
+  image: /images/posts/paywall-and-mist-wall/cover.png
+image: /images/posts/paywall-and-mist-wall/cover.png
 
 
 
@@ -125,7 +127,3 @@ AI时代，最值钱的人不是最会让AI写文章的人，而是能把AI工�
 答案越来越便宜，判断越来越昂贵。
 工具越来越强，现实越来越考验人。
 真正的门槛，从来不是AI会不会写，而是人能不能看清规则之后，仍然不失正见。
-
-## 结语
-
-本文从8个角度探讨了「"付费墙与迷雾墙：AI时代真正昂贵的是判断"」。信息过载时代，真正的能力不在于掌握更多数据，而在于判断的准确性。

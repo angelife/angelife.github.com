@@ -12,7 +12,8 @@ tags:
   - "Armbian"
   - "刷机教程"
   - "开源硬件"
-
+cover:
+  image: /images/posts/n1-armbian-flashing-tutorial/cover.png
 ---
 
 # 斐讯 N1 盒子刷 Armbian 完全教程（2026 版）

@@ -4,6 +4,8 @@ date: 2026-07-01
 draft: false
 categories: ["土·正见"]
 tags: ["排障", "xray", "USB网卡", "小米8", "连接池", "内核调试"]
+cover:
+  image: /images/posts/connection-pool-postmortem/cover.png
 ---
 
 ## 前因

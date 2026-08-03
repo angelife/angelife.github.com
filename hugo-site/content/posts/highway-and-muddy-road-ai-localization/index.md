@@ -23,7 +23,9 @@ tags:
   - "系统韧性"
   - "系统思维"
   - "不失正见"
-cover: []
+cover:
+  image: /images/posts/highway-and-muddy-road-ai-localization/cover.png
+image: /images/posts/highway-and-muddy-road-ai-localization/cover.png
 
 
 
@@ -128,10 +130,6 @@ Hermes 能打通时，用它做本地命令行入口；
 不要被"爱国""本地""国产"这些口号带偏，也不要天真地以为技术能自动战胜地形。
 
 真正的强者，是既看得见高速公路，也看得见泥巴地；既承认外部技术的先进，也理解本地环境的约束；既不被民粹裹挟，也不失现实判断。
-
-## 结语
-
-本文从8个角度探讨了「"高速公路与泥巴地：AI时代的本土化生存"」。信息过载时代，真正的能力不在于掌握更多数据，而在于判断的准确性。
 
 
 

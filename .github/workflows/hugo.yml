@@ -3,7 +3,7 @@ name: Deploy Hugo site to Pages
 on:
   push:
     branches:
-      - master
+      - main
   workflow_dispatch:
 
 permissions:
@@ -31,6 +31,11 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
+      - name: Generate Kindle old-site list partial (pre-build)
+        run: |
+          python3 .scripts/extend-search-index.py
+          echo "pre-build: kindle partial generated"
+
       - name: Build
         working-directory: hugo-site
         env:
@@ -43,6 +48,10 @@ jobs:
           hugo --gc --minify --cleanDestinationDir
           echo "=== Build complete ==="
           echo "Total HTML files: $(find public -name '*.html' | wc -l)"
+
+      - name: Extend search index with old-site entries (post-build)
+        run: |
+          python3 .scripts/extend-search-index.py
 
       - name: Verify build output
         run: |
